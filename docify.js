@@ -3,6 +3,7 @@ const INPUT_DIR    = "node_modules/bancor-contracts/solidity/contracts";
 const CONFIG_DIR   = "docify";
 const OUTPUT_DIR   = "docify/docs";
 const EXCLUDE_FILE = "docify/exclude.txt";
+const README_FILE  = "docify/README.md";
 const SUMMARY_FILE = "docify/SUMMARY.md";
 
 const fs        = require("fs");
@@ -44,8 +45,9 @@ function fix(pathName) {
 fs.writeFileSync (SUMMARY_FILE, "# Summary\n");
 fs.writeFileSync (".gitbook.yaml", "root: ./\n");
 fs.appendFileSync(".gitbook.yaml", "structure:\n");
-fs.appendFileSync(".gitbook.yaml", "  readme: README.md\n");
+fs.appendFileSync(".gitbook.yaml", "  readme: " + README_FILE + "\n");
 fs.appendFileSync(".gitbook.yaml", "  summary: " + SUMMARY_FILE + "\n");
+fs.copyFileSync  ("node_modules/bancor-contracts/README.md", README_FILE);
 
 scan(INPUT_DIR, "");
 
