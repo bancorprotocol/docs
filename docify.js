@@ -2,9 +2,9 @@ const NODE_DIR     = "node_modules";
 const INPUT_DIR    = "node_modules/bancor-contracts/solidity/contracts";
 const CONFIG_DIR   = "docify";
 const OUTPUT_DIR   = "docify/contracts";
-const EXCLUDE_FILE = "docify/exclude.txt";
 const README_FILE  = "docify/README.md";
 const SUMMARY_FILE = "docify/SUMMARY.md";
+const EXCLUDE_FILE = "docify/exclude.txt";
 
 const fs        = require("fs");
 const path      = require("path");
