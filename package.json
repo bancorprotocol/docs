@@ -10,10 +10,10 @@
     "npm": "^3.0.0"
   },
   "scripts": {
-    "docify": "node docify.js"
+    "start": "node start.js"
   },
   "dependencies": {
-    "bancor-contracts": "0.5.5",
+    "bancor-contracts": "^0.5.5",
     "solidity-docgen": "0.3.11"
   }
 }

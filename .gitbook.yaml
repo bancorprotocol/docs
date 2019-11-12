@@ -1,4 +1,4 @@
 root: ./
 structure:
-  readme: docify/README.md
-  summary: docify/SUMMARY.md
+  readme: solidity/README.md
+  summary: solidity/SUMMARY.md

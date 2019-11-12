@@ -11,4 +11,4 @@
 
 ## Execution
 
-* `npm run docify`
+* `npm start`
