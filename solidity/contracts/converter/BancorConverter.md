@@ -2,9 +2,9 @@ Bancor Converter
 
 The Bancor converter allows for conversions between a Smart Token and other ERC20 tokens and between different ERC20 tokens and themselves. 
 
-The ERC20 reserve balance can be virtual, meaning that the calculations are based on the virtual balance instead of relying on the actual reserve balance.
+The ERC20 reserve balance can be virtual, meaning that conversions between reserve tokens are based on the virtual balance instead of relying on the actual reserve balance.
 
-This is a security mechanism that prevents the need to keep a very large (and valuable) balance in a single contract. 
+This mechanism opens the possibility to create different financial tools (for example, lower slippage in conversions).
 
 The converter is upgradable (just like any SmartTokenController) and all upgrades are opt-in. 
 
@@ -52,9 +52,11 @@ Other potential solutions might include a commit/reveal based schemes
 
 - [`upgrade()`](#BancorConverter-upgrade--)
 
-- [`addReserve(contract IERC20Token _token, uint32 _ratio, bool _enableVirtualBalance)`](#BancorConverter-addReserve-contract-IERC20Token-uint32-bool-)
+- [`addReserve(contract IERC20Token _token, uint32 _ratio)`](#BancorConverter-addReserve-contract-IERC20Token-uint32-)
 
-- [`updateReserve(contract IERC20Token _reserveToken, uint32 _ratio, bool _enableVirtualBalance, uint256 _virtualBalance)`](#BancorConverter-updateReserve-contract-IERC20Token-uint32-bool-uint256-)
+- [`updateReserveVirtualBalance(contract IERC20Token _reserveToken, uint256 _virtualBalance)`](#BancorConverter-updateReserveVirtualBalance-contract-IERC20Token-uint256-)
+
+- [`enableVirtualBalances(uint16 _scaleFactor)`](#BancorConverter-enableVirtualBalances-uint16-)
 
 - [`disableReserveSale(contract IERC20Token _reserveToken, bool _disable)`](#BancorConverter-disableReserveSale-contract-IERC20Token-bool-)
 
@@ -98,9 +100,9 @@ Other potential solutions might include a commit/reveal based schemes
 
 - [`connectorTokenCount()`](#BancorConverter-connectorTokenCount--)
 
-- [`addConnector(contract IERC20Token _token, uint32 _weight, bool _enableVirtualBalance)`](#BancorConverter-addConnector-contract-IERC20Token-uint32-bool-)
+- [`addConnector(contract IERC20Token _token, uint32 _weight, bool)`](#BancorConverter-addConnector-contract-IERC20Token-uint32-bool-)
 
-- [`updateConnector(contract IERC20Token _connectorToken, uint32 _weight, bool _enableVirtualBalance, uint256 _virtualBalance)`](#BancorConverter-updateConnector-contract-IERC20Token-uint32-bool-uint256-)
+- [`updateConnector(contract IERC20Token _connectorToken, uint32, bool, uint256 _virtualBalance)`](#BancorConverter-updateConnector-contract-IERC20Token-uint32-bool-uint256-)
 
 - [`disableConnectorSale(contract IERC20Token _connectorToken, bool _disable)`](#BancorConverter-disableConnectorSale-contract-IERC20Token-bool-)
 
@@ -117,6 +119,8 @@ Other potential solutions might include a commit/reveal based schemes
 - [`ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)`](#BancorConverter-ConversionFeeUpdate-uint32-uint32-)
 
 - [`ConversionsEnable(bool _conversionsEnabled)`](#BancorConverter-ConversionsEnable-bool-)
+
+- [`VirtualBalancesEnable(bool _enabled)`](#BancorConverter-VirtualBalancesEnable-bool-)
 
 # Function `constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee, contract IERC20Token _reserveToken, uint32 _reserveRatio)` {#BancorConverter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-contract-IERC20Token-uint32-}
 
@@ -262,7 +266,7 @@ can only be called by the owner
 
 note that the owner needs to call acceptOwnership/acceptManagement on the new converter after the upgrade
 
-# Function `addReserve(contract IERC20Token _token, uint32 _ratio, bool _enableVirtualBalance)` {#BancorConverter-addReserve-contract-IERC20Token-uint32-bool-}
+# Function `addReserve(contract IERC20Token _token, uint32 _ratio)` {#BancorConverter-addReserve-contract-IERC20Token-uint32-}
 
 defines a new reserve for the token
 
@@ -276,25 +280,39 @@ note that prior to version 17, you should use 'addConnector' instead
 
 - `_ratio`:                  constant reserve ratio, represented in ppm, 1-1000000
 
-- `_enableVirtualBalance`:   true to enable virtual balance for the reserve, false to disable it
+# Function `updateReserveVirtualBalance(contract IERC20Token _reserveToken, uint256 _virtualBalance)` {#BancorConverter-updateReserveVirtualBalance-contract-IERC20Token-uint256-}
 
-# Function `updateReserve(contract IERC20Token _reserveToken, uint32 _ratio, bool _enableVirtualBalance, uint256 _virtualBalance)` {#BancorConverter-updateReserve-contract-IERC20Token-uint32-bool-uint256-}
+updates a reserve's virtual balance
 
-updates one of the token reserves
+only used during an upgrade process
 
-can only be called by the owner
+can only be called by the contract owner while the owner is the converter upgrader contract
 
 note that prior to version 17, you should use 'updateConnector' instead
 
 ## Parameters:
 
-- `_reserveToken`:           address of the reserve token
+- `_reserveToken`:    address of the reserve token
 
-- `_ratio`:                  constant reserve ratio, represented in ppm, 1-1000000
+- `_virtualBalance`:  new reserve virtual balance, or 0 to disable virtual balance
 
-- `_enableVirtualBalance`:   true to enable virtual balance for the reserve, false to disable it
+# Function `enableVirtualBalances(uint16 _scaleFactor)` {#BancorConverter-enableVirtualBalances-uint16-}
 
-- `_virtualBalance`:         new reserve's virtual balance
+enables virtual balance for the reserves
+
+virtual balance only affects conversions between reserve tokens
+
+virtual balance of all reserves can only scale by the same factor, to keep the ratio between them the same
+
+note that the balance is determined during the execution of this function and set statically -
+
+meaning that it's not calculated dynamically based on the factor after each conversion
+
+can only be called by the contract owner while the converter is active
+
+## Parameters:
+
+- `_scaleFactor`:  percentage, 100-1000 (100 = no virtual balance, 1000 = virtual balance = actual balance * 10)
 
 # Function `disableReserveSale(contract IERC20Token _reserveToken, bool _disable)` {#BancorConverter-disableReserveSale-contract-IERC20Token-bool-}
 
@@ -598,11 +616,11 @@ deprecated, backward compatibility
 
 deprecated, backward compatibility
 
-# Function `addConnector(contract IERC20Token _token, uint32 _weight, bool _enableVirtualBalance)` {#BancorConverter-addConnector-contract-IERC20Token-uint32-bool-}
+# Function `addConnector(contract IERC20Token _token, uint32 _weight, bool)` {#BancorConverter-addConnector-contract-IERC20Token-uint32-bool-}
 
 deprecated, backward compatibility
 
-# Function `updateConnector(contract IERC20Token _connectorToken, uint32 _weight, bool _enableVirtualBalance, uint256 _virtualBalance)` {#BancorConverter-updateConnector-contract-IERC20Token-uint32-bool-uint256-}
+# Function `updateConnector(contract IERC20Token _connectorToken, uint32, bool, uint256 _virtualBalance)` {#BancorConverter-updateConnector-contract-IERC20Token-uint32-bool-uint256-}
 
 deprecated, backward compatibility
 
@@ -667,3 +685,11 @@ triggered when conversions are enabled/disabled
 ## Parameters:
 
 - `_conversionsEnabled`: true if conversions are enabled, false if not
+
+# Event `VirtualBalancesEnable(bool _enabled)` {#BancorConverter-VirtualBalancesEnable-bool-}
+
+triggered when virtual balances are enabled/disabled
+
+## Parameters:
+
+- `_enabled`: true if virtual balances are enabled, false if not
