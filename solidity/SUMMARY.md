@@ -7,7 +7,6 @@
     * [BancorConverter](contracts/converter/BancorConverter.md)
     * [BancorConverterFactory](contracts/converter/BancorConverterFactory.md)
     * [BancorConverterRegistry](contracts/converter/BancorConverterRegistry.md)
-    * [BancorConverterRegistryData](contracts/converter/BancorConverterRegistryData.md)
     * [BancorConverterUpgrader](contracts/converter/BancorConverterUpgrader.md)
     * [BancorFormula](contracts/converter/BancorFormula.md)
     * [BancorGasPriceLimit](contracts/converter/BancorGasPriceLimit.md)
