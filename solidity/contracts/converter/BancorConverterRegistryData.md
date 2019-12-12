@@ -1,3 +1,17 @@
+The BancorConverterRegistryData contract is an integral part of the Bancor converter registry
+
+as it serves as the database contract that holds all registry data.
+
+The registry is separated into two different contracts for upgradability - the data contract
+
+is harder to upgrade as it requires migrating all registry data into a new contract, while
+
+the registry contract itself can be easily upgraded.
+
+For that same reason, the data contract is simple and contains no logic beyond the basic data
+
+access utilities that it exposes.
+
 # Functions:
 
 - [`constructor(contract IContractRegistry _registry)`](#BancorConverterRegistryData-constructor-contract-IContractRegistry-)
