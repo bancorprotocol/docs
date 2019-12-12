@@ -1,6 +1,7 @@
 bancorx/interfaces
 bancorx/XTransferRerouter.sol
 converter/interfaces
+converter/BancorConverterRegistryData
 crowdsale
 helpers
 legacy
