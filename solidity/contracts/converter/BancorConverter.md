@@ -28,12 +28,6 @@ Other potential solutions might include a commit/reveal based schemes
 
 - [`constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee, contract IERC20Token _reserveToken, uint32 _reserveRatio)`](#BancorConverter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-contract-IERC20Token-uint32-)
 
-- [`updateRegistry()`](#BancorConverter-updateRegistry--)
-
-- [`restoreRegistry()`](#BancorConverter-restoreRegistry--)
-
-- [`disableRegistryUpdate(bool _disable)`](#BancorConverter-disableRegistryUpdate-bool-)
-
 - [`reserveTokenCount()`](#BancorConverter-reserveTokenCount--)
 
 - [`setConversionWhitelist(contract IWhitelist _whitelist)`](#BancorConverter-setConversionWhitelist-contract-IWhitelist-)
@@ -137,28 +131,6 @@ initializes a new BancorConverter instance
 - `_reserveToken`:       optional, initial reserve, allows defining the first reserve at deployment time
 
 - `_reserveRatio`:       optional, ratio for the initial reserve
-
-# Function `updateRegistry()` {#BancorConverter-updateRegistry--}
-
-sets the contract registry to whichever address the current registry is pointing to
-
-# Function `restoreRegistry()` {#BancorConverter-restoreRegistry--}
-
-security mechanism allowing the converter owner to revert to the previous registry,
-
-to be used in emergency scenario
-
-# Function `disableRegistryUpdate(bool _disable)` {#BancorConverter-disableRegistryUpdate-bool-}
-
-disables the registry update functionality
-
-this is a safety mechanism in case of a emergency
-
-can only be called by the manager or owner
-
-## Parameters:
-
-- `_disable`:    true to disable registry updates, false to re-enable them
 
 # Function `reserveTokenCount() → uint16` {#BancorConverter-reserveTokenCount--}
 
@@ -564,7 +536,7 @@ for example, if the caller increases the supply by 10%,
 
 then it will cost an amount equal to 10% of each reserve token balance
 
-note that the function can be called only if the total ratio is 100% and conversions are enabled
+note that the function can be called only when conversions are enabled
 
 ## Parameters:
 
@@ -578,7 +550,7 @@ for example, if the holder sells 10% of the supply,
 
 then they will receive 10% of each reserve token balance in return
 
-note that the function can be called only if the total ratio is 100%
+note that the function can be called also when conversions are disabled
 
 ## Parameters:
 

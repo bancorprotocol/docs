@@ -28,6 +28,8 @@
 
 - [`connectorTokens(uint256 _index)`](#IBancorConverter-connectorTokens-uint256-)
 
+- [`connectorTokenCount()`](#IBancorConverter-connectorTokenCount--)
+
 # Function `getReturn(contract IERC20Token _fromToken, contract IERC20Token _toToken, uint256 _amount) → uint256, uint256` {#IBancorConverter-getReturn-contract-IERC20Token-contract-IERC20Token-uint256-}
 
 No description
@@ -81,5 +83,9 @@ No description
 No description
 
 # Function `connectorTokens(uint256 _index) → contract IERC20Token` {#IBancorConverter-connectorTokens-uint256-}
+
+No description
+
+# Function `connectorTokenCount() → uint16` {#IBancorConverter-connectorTokenCount--}
 
 No description

@@ -1,13 +1,13 @@
 # Summary
 * contracts
   * [BancorNetwork](contracts/BancorNetwork.md)
-  * [BancorNetworkPathFinder](contracts/BancorNetworkPathFinder.md)
   * bancorx
     * [BancorX](contracts/bancorx/BancorX.md)
   * converter
     * [BancorConverter](contracts/converter/BancorConverter.md)
     * [BancorConverterFactory](contracts/converter/BancorConverterFactory.md)
     * [BancorConverterRegistry](contracts/converter/BancorConverterRegistry.md)
+    * [BancorConverterRegistryData](contracts/converter/BancorConverterRegistryData.md)
     * [BancorConverterUpgrader](contracts/converter/BancorConverterUpgrader.md)
     * [BancorFormula](contracts/converter/BancorFormula.md)
     * [BancorGasPriceLimit](contracts/converter/BancorGasPriceLimit.md)
@@ -19,6 +19,7 @@
   * utility
     * [ContractFeatures](contracts/utility/ContractFeatures.md)
     * [ContractRegistry](contracts/utility/ContractRegistry.md)
+    * [ContractRegistryClient](contracts/utility/ContractRegistryClient.md)
     * [Managed](contracts/utility/Managed.md)
     * [NonStandardTokenRegistry](contracts/utility/NonStandardTokenRegistry.md)
     * [Owned](contracts/utility/Owned.md)

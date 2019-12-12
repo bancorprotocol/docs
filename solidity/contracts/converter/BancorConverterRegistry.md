@@ -1,167 +1,319 @@
-Bancor Converter Registry
-
-The Bancor Converter Registry keeps converter addresses by token addresses and vice versa. The owner can update converter addresses so that the token address always points to the updated list of converters for each token. 
-
-The contract is also able to iterate through all the tokens in the network. 
-
-Note that converter addresses for each token are returned in ascending order (from oldest to newest).
-
 # Functions:
 
-- [`constructor()`](#BancorConverterRegistry-constructor--)
+- [`constructor(contract IContractRegistry _registry)`](#BancorConverterRegistry-constructor-contract-IContractRegistry-)
 
-- [`tokenCount()`](#BancorConverterRegistry-tokenCount--)
+- [`addConverter(contract IBancorConverter _converter)`](#BancorConverterRegistry-addConverter-contract-IBancorConverter-)
 
-- [`converterCount(address _token)`](#BancorConverterRegistry-converterCount-address-)
+- [`removeConverter(contract IBancorConverter _converter)`](#BancorConverterRegistry-removeConverter-contract-IBancorConverter-)
 
-- [`converterAddress(address _token, uint32 _index)`](#BancorConverterRegistry-converterAddress-address-uint32-)
+- [`getSmartTokenCount()`](#BancorConverterRegistry-getSmartTokenCount--)
 
-- [`latestConverterAddress(address _token)`](#BancorConverterRegistry-latestConverterAddress-address-)
+- [`getSmartTokens()`](#BancorConverterRegistry-getSmartTokens--)
 
-- [`tokenAddress(address _converter)`](#BancorConverterRegistry-tokenAddress-address-)
+- [`getSmartToken(uint256 _index)`](#BancorConverterRegistry-getSmartToken-uint256-)
 
-- [`registerConverter(address _token, address _converter)`](#BancorConverterRegistry-registerConverter-address-address-)
+- [`isSmartToken(address _value)`](#BancorConverterRegistry-isSmartToken-address-)
 
-- [`unregisterConverter(address _token, uint32 _index)`](#BancorConverterRegistry-unregisterConverter-address-uint32-)
+- [`getLiquidityPoolCount()`](#BancorConverterRegistry-getLiquidityPoolCount--)
+
+- [`getLiquidityPools()`](#BancorConverterRegistry-getLiquidityPools--)
+
+- [`getLiquidityPool(uint256 _index)`](#BancorConverterRegistry-getLiquidityPool-uint256-)
+
+- [`isLiquidityPool(address _value)`](#BancorConverterRegistry-isLiquidityPool-address-)
+
+- [`getConvertibleTokenCount()`](#BancorConverterRegistry-getConvertibleTokenCount--)
+
+- [`getConvertibleTokens()`](#BancorConverterRegistry-getConvertibleTokens--)
+
+- [`getConvertibleToken(uint256 _index)`](#BancorConverterRegistry-getConvertibleToken-uint256-)
+
+- [`isConvertibleToken(address _value)`](#BancorConverterRegistry-isConvertibleToken-address-)
+
+- [`getConvertibleTokenSmartTokenCount(address _convertibleToken)`](#BancorConverterRegistry-getConvertibleTokenSmartTokenCount-address-)
+
+- [`getConvertibleTokenSmartTokens(address _convertibleToken)`](#BancorConverterRegistry-getConvertibleTokenSmartTokens-address-)
+
+- [`getConvertibleTokenSmartToken(address _convertibleToken, uint256 _index)`](#BancorConverterRegistry-getConvertibleTokenSmartToken-address-uint256-)
+
+- [`isConvertibleTokenSmartToken(address _convertibleToken, address _value)`](#BancorConverterRegistry-isConvertibleTokenSmartToken-address-address-)
+
+- [`isConverterValid(contract IBancorConverter _converter)`](#BancorConverterRegistry-isConverterValid-contract-IBancorConverter-)
 
 # Events:
 
-- [`TokenAddition(address _token)`](#BancorConverterRegistry-TokenAddition-address-)
+- [`SmartTokenAdded(address _smartToken)`](#BancorConverterRegistry-SmartTokenAdded-address-)
 
-- [`TokenRemoval(address _token)`](#BancorConverterRegistry-TokenRemoval-address-)
+- [`SmartTokenRemoved(address _smartToken)`](#BancorConverterRegistry-SmartTokenRemoved-address-)
 
-- [`ConverterAddition(address _token, address _address)`](#BancorConverterRegistry-ConverterAddition-address-address-)
+- [`LiquidityPoolAdded(address _liquidityPool)`](#BancorConverterRegistry-LiquidityPoolAdded-address-)
 
-- [`ConverterRemoval(address _token, address _address)`](#BancorConverterRegistry-ConverterRemoval-address-address-)
+- [`LiquidityPoolRemoved(address _liquidityPool)`](#BancorConverterRegistry-LiquidityPoolRemoved-address-)
 
-# Function `constructor()` {#BancorConverterRegistry-constructor--}
+- [`ConvertibleTokenAdded(address _convertibleToken, address _smartToken)`](#BancorConverterRegistry-ConvertibleTokenAdded-address-address-)
+
+- [`ConvertibleTokenRemoved(address _convertibleToken, address _smartToken)`](#BancorConverterRegistry-ConvertibleTokenRemoved-address-address-)
+
+# Function `constructor(contract IContractRegistry _registry)` {#BancorConverterRegistry-constructor-contract-IContractRegistry-}
 
 initializes a new BancorConverterRegistry instance
 
-# Function `tokenCount() → uint256` {#BancorConverterRegistry-tokenCount--}
+## Parameters:
 
-returns the number of tokens in the registry
+- `_registry`: address of a contract registry contract
+
+# Function `addConverter(contract IBancorConverter _converter)` {#BancorConverterRegistry-addConverter-contract-IBancorConverter-}
+
+adds a converter to the registry
+
+anyone can add a converter to the registry, as long as the converter is active and valid
+
+## Parameters:
+
+- `_converter`: converter
+
+# Function `removeConverter(contract IBancorConverter _converter)` {#BancorConverterRegistry-removeConverter-contract-IBancorConverter-}
+
+removes a converter from the registry
+
+anyone can remove invalid or inactive converters from the registry
+
+note that the owner can also remove valid converters
+
+## Parameters:
+
+- `_converter`: converter
+
+# Function `getSmartTokenCount() → uint256` {#BancorConverterRegistry-getSmartTokenCount--}
+
+returns the number of smart tokens in the registry
 
 ## Return Values:
 
-- number of tokens
+- number of smart tokens
 
-# Function `converterCount(address _token) → uint256` {#BancorConverterRegistry-converterCount-address-}
+# Function `getSmartTokens() → address[]` {#BancorConverterRegistry-getSmartTokens--}
 
-returns the number of converters associated with the given token
-
-or 0 if the token isn't registered
-
-## Parameters:
-
-- `_token`:   token address
+returns the list of smart tokens in the registry
 
 ## Return Values:
 
-- number of converters
+- list of smart tokens
 
-# Function `converterAddress(address _token, uint32 _index) → address` {#BancorConverterRegistry-converterAddress-address-uint32-}
+# Function `getSmartToken(uint256 _index) → address` {#BancorConverterRegistry-getSmartToken-uint256-}
 
-returns the converter address associated with the given token
-
-or zero address if no such converter exists
+returns the smart token at a given index
 
 ## Parameters:
 
-- `_token`:   token address
-
-- `_index`:   converter index
+- `_index`: index
 
 ## Return Values:
 
-- converter address
+- smart token at the given index
 
-# Function `latestConverterAddress(address _token) → address` {#BancorConverterRegistry-latestConverterAddress-address-}
+# Function `isSmartToken(address _value) → bool` {#BancorConverterRegistry-isSmartToken-address-}
 
-returns the latest converter address associated with the given token
-
-or zero address if no such converter exists
+checks whether or not a given value is a smart token
 
 ## Parameters:
 
-- `_token`:   token address
+- `_value`: value
 
 ## Return Values:
 
-- latest converter address
+- true if the given value is a smart token, false if not
 
-# Function `tokenAddress(address _converter) → address` {#BancorConverterRegistry-tokenAddress-address-}
+# Function `getLiquidityPoolCount() → uint256` {#BancorConverterRegistry-getLiquidityPoolCount--}
 
-returns the token address associated with the given converter
-
-or zero address if no such converter exists
-
-## Parameters:
-
-- `_converter`:   converter address
+returns the number of liquidity pools in the registry
 
 ## Return Values:
 
-- token address
+- number of liquidity pools
 
-# Function `registerConverter(address _token, address _converter)` {#BancorConverterRegistry-registerConverter-address-address-}
+# Function `getLiquidityPools() → address[]` {#BancorConverterRegistry-getLiquidityPools--}
 
-adds a new converter address for a given token to the registry
+returns the list of liquidity pools in the registry
 
-throws if the converter is already registered
+## Return Values:
 
-## Parameters:
+- list of liquidity pools
 
-- `_token`:       token address
+# Function `getLiquidityPool(uint256 _index) → address` {#BancorConverterRegistry-getLiquidityPool-uint256-}
 
-- `_converter`:   converter address
-
-# Function `unregisterConverter(address _token, uint32 _index)` {#BancorConverterRegistry-unregisterConverter-address-uint32-}
-
-removes an existing converter from the registry
-
-note that the function doesn't scale and might be needed to be called
-
-multiple times when removing an older converter from a large converter list
+returns the liquidity pool at a given index
 
 ## Parameters:
 
-- `_token`:   token address
+- `_index`: index
 
-- `_index`:   converter index
+## Return Values:
 
-# Event `TokenAddition(address _token)` {#BancorConverterRegistry-TokenAddition-address-}
+- liquidity pool at the given index
 
-triggered when a token is added to the registry
+# Function `isLiquidityPool(address _value) → bool` {#BancorConverterRegistry-isLiquidityPool-address-}
 
-## Parameters:
-
-- `_token`:   token
-
-# Event `TokenRemoval(address _token)` {#BancorConverterRegistry-TokenRemoval-address-}
-
-triggered when a token is removed from the registry
+checks whether or not a given value is a liquidity pool
 
 ## Parameters:
 
-- `_token`:   token
+- `_value`: value
 
-# Event `ConverterAddition(address _token, address _address)` {#BancorConverterRegistry-ConverterAddition-address-address-}
+## Return Values:
 
-triggered when a converter is added to the registry
+- true if the given value is a liquidity pool, false if not
+
+# Function `getConvertibleTokenCount() → uint256` {#BancorConverterRegistry-getConvertibleTokenCount--}
+
+returns the number of convertible tokens in the registry
+
+## Return Values:
+
+- number of convertible tokens
+
+# Function `getConvertibleTokens() → address[]` {#BancorConverterRegistry-getConvertibleTokens--}
+
+returns the list of convertible tokens in the registry
+
+## Return Values:
+
+- list of convertible tokens
+
+# Function `getConvertibleToken(uint256 _index) → address` {#BancorConverterRegistry-getConvertibleToken-uint256-}
+
+returns the convertible token at a given index
 
 ## Parameters:
 
-- `_token`:   token
+- `_index`: index
 
-- `_address`: converter
+## Return Values:
 
-# Event `ConverterRemoval(address _token, address _address)` {#BancorConverterRegistry-ConverterRemoval-address-address-}
+- convertible token at the given index
 
-triggered when a converter is removed from the registry
+# Function `isConvertibleToken(address _value) → bool` {#BancorConverterRegistry-isConvertibleToken-address-}
+
+checks whether or not a given value is a convertible token
 
 ## Parameters:
 
-- `_token`:   token
+- `_value`: value
 
-- `_address`: converter
+## Return Values:
+
+- true if the given value is a convertible token, false if not
+
+# Function `getConvertibleTokenSmartTokenCount(address _convertibleToken) → uint256` {#BancorConverterRegistry-getConvertibleTokenSmartTokenCount-address-}
+
+returns the number of smart tokens associated with a given convertible token
+
+## Parameters:
+
+- `_convertibleToken`: convertible token
+
+## Return Values:
+
+- number of smart tokens associated with the given convertible token
+
+# Function `getConvertibleTokenSmartTokens(address _convertibleToken) → address[]` {#BancorConverterRegistry-getConvertibleTokenSmartTokens-address-}
+
+returns the list of smart tokens associated with a given convertible token
+
+## Parameters:
+
+- `_convertibleToken`: convertible token
+
+## Return Values:
+
+- list of smart tokens associated with the given convertible token
+
+# Function `getConvertibleTokenSmartToken(address _convertibleToken, uint256 _index) → address` {#BancorConverterRegistry-getConvertibleTokenSmartToken-address-uint256-}
+
+returns the smart token associated with a given convertible token at a given index
+
+## Parameters:
+
+- `_index`: index
+
+## Return Values:
+
+- smart token associated with the given convertible token at the given index
+
+# Function `isConvertibleTokenSmartToken(address _convertibleToken, address _value) → bool` {#BancorConverterRegistry-isConvertibleTokenSmartToken-address-address-}
+
+checks whether or not a given value is a smart token of a given convertible token
+
+## Parameters:
+
+- `_convertibleToken`: convertible token
+
+- `_value`: value
+
+## Return Values:
+
+- true if the given value is a smart token of the given convertible token, false if not
+
+# Function `isConverterValid(contract IBancorConverter _converter) → bool` {#BancorConverterRegistry-isConverterValid-contract-IBancorConverter-}
+
+checks whether or not a given converter is valid
+
+## Parameters:
+
+- `_converter`: converter
+
+## Return Values:
+
+- true if the given converter is valid, false if not
+
+# Event `SmartTokenAdded(address _smartToken)` {#BancorConverterRegistry-SmartTokenAdded-address-}
+
+triggered when a smart token is added to the registry
+
+## Parameters:
+
+- `_smartToken`: smart token
+
+# Event `SmartTokenRemoved(address _smartToken)` {#BancorConverterRegistry-SmartTokenRemoved-address-}
+
+triggered when a smart token is removed from the registry
+
+## Parameters:
+
+- `_smartToken`: smart token
+
+# Event `LiquidityPoolAdded(address _liquidityPool)` {#BancorConverterRegistry-LiquidityPoolAdded-address-}
+
+triggered when a liquidity pool is added to the registry
+
+## Parameters:
+
+- `_liquidityPool`: liquidity pool
+
+# Event `LiquidityPoolRemoved(address _liquidityPool)` {#BancorConverterRegistry-LiquidityPoolRemoved-address-}
+
+triggered when a liquidity pool is removed from the registry
+
+## Parameters:
+
+- `_liquidityPool`: liquidity pool
+
+# Event `ConvertibleTokenAdded(address _convertibleToken, address _smartToken)` {#BancorConverterRegistry-ConvertibleTokenAdded-address-address-}
+
+triggered when a convertible token is added to the registry
+
+## Parameters:
+
+- `_convertibleToken`: convertible token
+
+- `_smartToken`: associated smart token
+
+# Event `ConvertibleTokenRemoved(address _convertibleToken, address _smartToken)` {#BancorConverterRegistry-ConvertibleTokenRemoved-address-address-}
+
+triggered when a convertible token is removed from the registry
+
+## Parameters:
+
+- `_convertibleToken`: convertible token
+
+- `_smartToken`: associated smart token

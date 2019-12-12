@@ -22,8 +22,6 @@ and then the upgrader 'upgrade' function should be executed directly.
 
 - [`constructor(contract IContractRegistry _registry)`](#BancorConverterUpgrader-constructor-contract-IContractRegistry-)
 
-- [`setRegistry(contract IContractRegistry _registry)`](#BancorConverterUpgrader-setRegistry-contract-IContractRegistry-)
-
 - [`upgrade(bytes32 _version)`](#BancorConverterUpgrader-upgrade-bytes32-)
 
 - [`upgrade(uint16 _version)`](#BancorConverterUpgrader-upgrade-uint16-)
@@ -40,13 +38,9 @@ and then the upgrader 'upgrade' function should be executed directly.
 
 initializes a new BancorConverterUpgrader instance
 
-# Function `setRegistry(contract IContractRegistry _registry)` {#BancorConverterUpgrader-setRegistry-contract-IContractRegistry-}
-
-allows the owner to update the contract registry contract address
-
 ## Parameters:
 
-- `_registry`:   address of a contract registry contract
+- `_registry`:    address of a contract registry contract
 
 # Function `upgrade(bytes32 _version)` {#BancorConverterUpgrader-upgrade-bytes32-}
 

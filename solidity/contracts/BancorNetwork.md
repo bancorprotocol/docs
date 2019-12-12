@@ -24,8 +24,6 @@ Format:
 
 - [`setMaxAffiliateFee(uint256 _maxAffiliateFee)`](#BancorNetwork-setMaxAffiliateFee-uint256-)
 
-- [`setRegistry(contract IContractRegistry _registry)`](#BancorNetwork-setRegistry-contract-IContractRegistry-)
-
 - [`setSignerAddress(address _signerAddress)`](#BancorNetwork-setSignerAddress-address-)
 
 - [`registerEtherToken(contract IEtherToken _token, bool _register)`](#BancorNetwork-registerEtherToken-contract-IEtherToken-bool-)
@@ -81,14 +79,6 @@ allows the owner to update the maximum affiliate-fee
 ## Parameters:
 
 - `_maxAffiliateFee`:   maximum affiliate-fee
-
-# Function `setRegistry(contract IContractRegistry _registry)` {#BancorNetwork-setRegistry-contract-IContractRegistry-}
-
-allows the owner to update the contract registry contract address
-
-## Parameters:
-
-- `_registry`:   address of a contract registry contract
 
 # Function `setSignerAddress(address _signerAddress)` {#BancorNetwork-setSignerAddress-address-}
 

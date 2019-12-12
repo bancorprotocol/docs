@@ -14,8 +14,6 @@ Note that contract names are limited to 32 bytes UTF8 encoded ASCII strings to o
 
 # Functions:
 
-- [`constructor()`](#ContractRegistry-constructor--)
-
 - [`itemCount()`](#ContractRegistry-itemCount--)
 
 - [`addressOf(bytes32 _contractName)`](#ContractRegistry-addressOf-bytes32-)
@@ -29,10 +27,6 @@ Note that contract names are limited to 32 bytes UTF8 encoded ASCII strings to o
 # Events:
 
 - [`AddressUpdate(bytes32 _contractName, address _contractAddress)`](#ContractRegistry-AddressUpdate-bytes32-address-)
-
-# Function `constructor()` {#ContractRegistry-constructor--}
-
-initializes a new ContractRegistry instance
 
 # Function `itemCount() → uint256` {#ContractRegistry-itemCount--}
 

@@ -12,7 +12,7 @@ callers are required to report a transfer before tokens are released to the targ
 
 # Functions:
 
-- [`constructor(uint256 _maxLockLimit, uint256 _maxReleaseLimit, uint256 _minLimit, uint256 _limitIncPerBlock, uint256 _minRequiredReports, address _registry, contract IERC20Token _token, bool _isSmartToken)`](#BancorX-constructor-uint256-uint256-uint256-uint256-uint256-address-contract-IERC20Token-bool-)
+- [`constructor(uint256 _maxLockLimit, uint256 _maxReleaseLimit, uint256 _minLimit, uint256 _limitIncPerBlock, uint256 _minRequiredReports, contract IContractRegistry _registry, contract IERC20Token _token, bool _isSmartToken)`](#BancorX-constructor-uint256-uint256-uint256-uint256-uint256-contract-IContractRegistry-contract-IERC20Token-bool-)
 
 - [`setMaxLockLimit(uint256 _maxLockLimit)`](#BancorX-setMaxLockLimit-uint256-)
 
@@ -29,12 +29,6 @@ callers are required to report a transfer before tokens are released to the targ
 - [`enableXTransfers(bool _enable)`](#BancorX-enableXTransfers-bool-)
 
 - [`enableReporting(bool _enable)`](#BancorX-enableReporting-bool-)
-
-- [`disableRegistryUpdate(bool _disable)`](#BancorX-disableRegistryUpdate-bool-)
-
-- [`updateRegistry()`](#BancorX-updateRegistry--)
-
-- [`restoreRegistry()`](#BancorX-restoreRegistry--)
 
 - [`upgrade(address[] _reporters)`](#BancorX-upgrade-address---)
 
@@ -62,7 +56,7 @@ callers are required to report a transfer before tokens are released to the targ
 
 - [`XTransferComplete(address _to, uint256 _id)`](#BancorX-XTransferComplete-address-uint256-)
 
-# Function `constructor(uint256 _maxLockLimit, uint256 _maxReleaseLimit, uint256 _minLimit, uint256 _limitIncPerBlock, uint256 _minRequiredReports, address _registry, contract IERC20Token _token, bool _isSmartToken)` {#BancorX-constructor-uint256-uint256-uint256-uint256-uint256-address-contract-IERC20Token-bool-}
+# Function `constructor(uint256 _maxLockLimit, uint256 _maxReleaseLimit, uint256 _minLimit, uint256 _limitIncPerBlock, uint256 _minRequiredReports, contract IContractRegistry _registry, contract IERC20Token _token, bool _isSmartToken)` {#BancorX-constructor-uint256-uint256-uint256-uint256-uint256-contract-IContractRegistry-contract-IERC20Token-bool-}
 
 initializes a new BancorX instance
 
@@ -149,28 +143,6 @@ allows the owner enable/disable the reportTransaction method
 ## Parameters:
 
 - `_enable`:     true to enable, false to disable
-
-# Function `disableRegistryUpdate(bool _disable)` {#BancorX-disableRegistryUpdate-bool-}
-
-disables the registry update functionality
-
-this is a safety mechanism in case of a emergency
-
-can only be called by the manager or owner
-
-## Parameters:
-
-- `_disable`:    true to disable registry updates, false to re-enable them
-
-# Function `updateRegistry()` {#BancorX-updateRegistry--}
-
-sets the contract registry to whichever address the current registry is pointing to
-
-# Function `restoreRegistry()` {#BancorX-restoreRegistry--}
-
-security mechanism allowing the converter owner to revert to the previous registry,
-
-to be used in emergency scenario
 
 # Function `upgrade(address[] _reporters)` {#BancorX-upgrade-address---}
 

@@ -6,6 +6,10 @@
 
 - [`calculateCrossReserveReturn(uint256 _fromReserveBalance, uint32 _fromReserveRatio, uint256 _toReserveBalance, uint32 _toReserveRatio, uint256 _amount)`](#BancorFormula-calculateCrossReserveReturn-uint256-uint32-uint256-uint32-uint256-)
 
+- [`calculateFundCost(uint256 _supply, uint256 _reserveBalance, uint32 _totalRatio, uint256 _amount)`](#BancorFormula-calculateFundCost-uint256-uint256-uint32-uint256-)
+
+- [`calculateLiquidateReturn(uint256 _supply, uint256 _reserveBalance, uint32 _totalRatio, uint256 _amount)`](#BancorFormula-calculateLiquidateReturn-uint256-uint256-uint32-uint256-)
+
 - [`calculateCrossConnectorReturn(uint256 _fromConnectorBalance, uint32 _fromConnectorWeight, uint256 _toConnectorBalance, uint32 _toConnectorWeight, uint256 _amount)`](#BancorFormula-calculateCrossConnectorReturn-uint256-uint32-uint256-uint32-uint256-)
 
 # Function `calculatePurchaseReturn(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _depositAmount) → uint256` {#BancorFormula-calculatePurchaseReturn-uint256-uint256-uint32-uint256-}
@@ -83,6 +87,54 @@ Return = _toReserveBalance * (1 - (_fromReserveBalance / (_fromReserveBalance + 
 ## Return Values:
 
 - second reserve amount
+
+# Function `calculateFundCost(uint256 _supply, uint256 _reserveBalance, uint32 _totalRatio, uint256 _amount) → uint256` {#BancorFormula-calculateFundCost-uint256-uint256-uint32-uint256-}
+
+given a smart token supply, reserve balance, total ratio and an amount of requested smart tokens,
+
+calculates the amount of reserve tokens required for purchasing the given amount of smart tokens
+
+Formula:
+
+Return = _reserveBalance * (((_supply + _amount) / _supply) ^ (MAX_RATIO / _totalRatio) - 1)
+
+## Parameters:
+
+- `_supply`:              smart token supply
+
+- `_reserveBalance`:      reserve token balance
+
+- `_totalRatio`:          total ratio, represented in ppm, 2-2000000
+
+- `_amount`:              requested amount of smart tokens
+
+## Return Values:
+
+- amount of reserve tokens
+
+# Function `calculateLiquidateReturn(uint256 _supply, uint256 _reserveBalance, uint32 _totalRatio, uint256 _amount) → uint256` {#BancorFormula-calculateLiquidateReturn-uint256-uint256-uint32-uint256-}
+
+given a smart token supply, reserve balance, total ratio and an amount of smart tokens to liquidate,
+
+calculates the amount of reserve tokens received for selling the given amount of smart tokens
+
+Formula:
+
+Return = _reserveBalance * ((_supply / (_supply - _amount)) ^ (MAX_RATIO / _totalRatio) - 1)
+
+## Parameters:
+
+- `_supply`:              smart token supply
+
+- `_reserveBalance`:      reserve token balance
+
+- `_totalRatio`:          total ratio, represented in ppm, 2-2000000
+
+- `_amount`:              amount of smart tokens to liquidate
+
+## Return Values:
+
+- amount of reserve tokens
 
 # Function `calculateCrossConnectorReturn(uint256 _fromConnectorBalance, uint32 _fromConnectorWeight, uint256 _toConnectorBalance, uint32 _toConnectorWeight, uint256 _amount) → uint256` {#BancorFormula-calculateCrossConnectorReturn-uint256-uint32-uint256-uint32-uint256-}
 
