@@ -1,8 +1,6 @@
 The BancorConverterRegistry maintains a list of all active converters in the Bancor Network.
 
-Since converters can be upgraded and thus their address can change, the registry actually
-
-keeps smart tokens internally and not the converters themselves.
+Since converters can be upgraded and thus their address can change, the registry actually keeps smart tokens internally and not the converters themselves.
 
 The active converter for each smart token can be easily accessed by querying the smart token owner.
 
@@ -60,7 +58,11 @@ The contract is upgradable.
 
 - [`isConvertibleTokenSmartToken(address _convertibleToken, address _value)`](#BancorConverterRegistry-isConvertibleTokenSmartToken-address-address-)
 
+- [`getConvertersBySmartTokens(address[] _smartTokens)`](#BancorConverterRegistry-getConvertersBySmartTokens-address---)
+
 - [`isConverterValid(contract IBancorConverter _converter)`](#BancorConverterRegistry-isConverterValid-contract-IBancorConverter-)
+
+- [`getLiquidityPoolByReserveConfig(address[] _reserveTokens, uint256[] _reserveRatios)`](#BancorConverterRegistry-getLiquidityPoolByReserveConfig-address---uint256---)
 
 # Events:
 
@@ -89,6 +91,8 @@ initializes a new BancorConverterRegistry instance
 adds a converter to the registry
 
 anyone can add a converter to the registry, as long as the converter is active and valid
+
+note that a liquidity pool converter can only be added if there's no existing pool with the same reserve configuration
 
 ## Parameters:
 
@@ -276,6 +280,20 @@ checks whether or not a given value is a smart token of a given convertible toke
 
 - true if the given value is a smart token of the given convertible token, false if not
 
+# Function `getConvertersBySmartTokens(address[] _smartTokens) → address[]` {#BancorConverterRegistry-getConvertersBySmartTokens-address---}
+
+returns a list of converters for a given list of smart tokens
+
+this is a utility function that can be used to reduce the number of calls to the contract
+
+## Parameters:
+
+- `_smartTokens`: list of smart tokens
+
+## Return Values:
+
+- list of converters
+
 # Function `isConverterValid(contract IBancorConverter _converter) → bool` {#BancorConverterRegistry-isConverterValid-contract-IBancorConverter-}
 
 checks whether or not a given converter is valid
@@ -287,6 +305,20 @@ checks whether or not a given converter is valid
 ## Return Values:
 
 - true if the given converter is valid, false if not
+
+# Function `getLiquidityPoolByReserveConfig(address[] _reserveTokens, uint256[] _reserveRatios) → contract IBancorConverter` {#BancorConverterRegistry-getLiquidityPoolByReserveConfig-address---uint256---}
+
+searches for a liquidity pool with specific reserve tokens / ratios
+
+## Parameters:
+
+- `_reserveTokens`:   reserve tokens
+
+- `_reserveRatios`:   reserve ratios
+
+## Return Values:
+
+- the converter of the liquidity pool, or zero if no such liquidity pool exists
 
 # Event `SmartTokenAdded(address _smartToken)` {#BancorConverterRegistry-SmartTokenAdded-address-}
 

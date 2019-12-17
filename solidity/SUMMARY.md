@@ -1,6 +1,7 @@
 # Summary
 * contracts
   * [BancorNetwork](contracts/BancorNetwork.md)
+  * [BancorNetworkPathFinder](contracts/BancorNetworkPathFinder.md)
   * bancorx
     * [BancorX](contracts/bancorx/BancorX.md)
   * converter

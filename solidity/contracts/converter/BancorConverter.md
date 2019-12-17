@@ -54,6 +54,8 @@ Other potential solutions might include a commit/reveal based schemes
 
 - [`disableReserveSale(contract IERC20Token _reserveToken, bool _disable)`](#BancorConverter-disableReserveSale-contract-IERC20Token-bool-)
 
+- [`getReserveRatio(contract IERC20Token _reserveToken)`](#BancorConverter-getReserveRatio-contract-IERC20Token-)
+
 - [`getReserveBalance(contract IERC20Token _reserveToken)`](#BancorConverter-getReserveBalance-contract-IERC20Token-)
 
 - [`getReturn(contract IERC20Token _fromToken, contract IERC20Token _toToken, uint256 _amount)`](#BancorConverter-getReturn-contract-IERC20Token-contract-IERC20Token-uint256-)
@@ -301,6 +303,20 @@ note that prior to version 17, you should use 'disableConnectorSale' instead
 - `_reserveToken`:    reserve token contract address
 
 - `_disable`:         true to disable the token, false to re-enable it
+
+# Function `getReserveRatio(contract IERC20Token _reserveToken) → uint256` {#BancorConverter-getReserveRatio-contract-IERC20Token-}
+
+returns the reserve's ratio
+
+added in version 22
+
+## Parameters:
+
+- `_reserveToken`:    reserve token contract address
+
+## Return Values:
+
+- reserve ratio
 
 # Function `getReserveBalance(contract IERC20Token _reserveToken) → uint256` {#BancorConverter-getReserveBalance-contract-IERC20Token-}
 

@@ -6,6 +6,8 @@
 
 - [`quickConvert2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee)`](#IBancorConverter-quickConvert2-contract-IERC20Token---uint256-uint256-address-uint256-)
 
+- [`conversionsEnabled()`](#IBancorConverter-conversionsEnabled--)
+
 - [`conversionWhitelist()`](#IBancorConverter-conversionWhitelist--)
 
 - [`conversionFee()`](#IBancorConverter-conversionFee--)
@@ -39,6 +41,10 @@ No description
 No description
 
 # Function `quickConvert2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#IBancorConverter-quickConvert2-contract-IERC20Token---uint256-uint256-address-uint256-}
+
+No description
+
+# Function `conversionsEnabled() → bool` {#IBancorConverter-conversionsEnabled--}
 
 No description
 
