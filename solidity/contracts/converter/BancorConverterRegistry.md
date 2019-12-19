@@ -306,7 +306,7 @@ checks whether or not a given converter is valid
 
 - true if the given converter is valid, false if not
 
-# Function `getLiquidityPoolByReserveConfig(address[] _reserveTokens, uint256[] _reserveRatios) → contract IBancorConverter` {#BancorConverterRegistry-getLiquidityPoolByReserveConfig-address---uint256---}
+# Function `getLiquidityPoolByReserveConfig(address[] _reserveTokens, uint256[] _reserveRatios) → contract ISmartToken` {#BancorConverterRegistry-getLiquidityPoolByReserveConfig-address---uint256---}
 
 searches for a liquidity pool with specific reserve tokens / ratios
 
@@ -318,7 +318,7 @@ searches for a liquidity pool with specific reserve tokens / ratios
 
 ## Return Values:
 
-- the converter of the liquidity pool, or zero if no such liquidity pool exists
+- the liquidity pool, or zero if no such liquidity pool exists
 
 # Event `SmartTokenAdded(address _smartToken)` {#BancorConverterRegistry-SmartTokenAdded-address-}
 

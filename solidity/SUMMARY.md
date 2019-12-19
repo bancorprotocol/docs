@@ -21,7 +21,6 @@
     * [ContractRegistry](contracts/utility/ContractRegistry.md)
     * [ContractRegistryClient](contracts/utility/ContractRegistryClient.md)
     * [Managed](contracts/utility/Managed.md)
-    * [NonStandardTokenRegistry](contracts/utility/NonStandardTokenRegistry.md)
     * [Owned](contracts/utility/Owned.md)
     * [SafeMath](contracts/utility/SafeMath.md)
     * [TokenHolder](contracts/utility/TokenHolder.md)
