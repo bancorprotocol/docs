@@ -7,10 +7,12 @@
 * [Design Principles](../design-principles.md)
 * [Network Architecture](../network-architecture/README.md)
   * [BancorX](../network-architecture/bancorx.md)
-* [Smart Contract Architecture](../smart-contract-architecture.md)
 
 ## Ethereum Contracts
 
+* [Smart Contract Architecture](../ethereum-contracts/smart-contract-architecture.md)
+* [Bancor Network](../ethereum-contracts/bancornetwork.md)
+* [Bancor Network Path Finder](../ethereum-contracts/bancornetworkpathfinder.md)
 * [BancorX](../ethereum-contracts/bancorx-1.md)
 * [Converters](../ethereum-contracts/converter/README.md)
   * [Bancor Converter](../ethereum-contracts/converter/bancorconverter.md)
@@ -34,8 +36,6 @@
   * [EtherToken](../ethereum-contracts/token/ethertoken.md)
   * [SmartToken](../ethereum-contracts/token/smarttoken.md)
   * [SmartTokenController](../ethereum-contracts/token/smarttokencontroller.md)
-* [Bancor Network](../ethereum-contracts/bancornetwork.md)
-* [Bancor Network Path Finder](../ethereum-contracts/bancornetworkpathfinder.md)
 
 ## User Guides <a id="bancorx"></a>
 
