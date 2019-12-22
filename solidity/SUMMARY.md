@@ -6,13 +6,13 @@
 
 * [Introduction](../introduction.md)
 * [Design Principles](../design-principles.md)
-* [Network Architecture](../network-architecture.md)
+* [Network Architecture](../network-architecture/README.md)
+  * [BancorX](../network-architecture/bancorx.md)
 * [Smart Contract Architecture](../smart-contract-architecture.md)
 
 ## Ethereum Contracts
 
-* [BancorX](../ethereum-contracts/bancorx/README.md)
-  * [BancorX](../ethereum-contracts/bancorx/bancorx-1.md)
+* [BancorX](../ethereum-contracts/bancorx-1.md)
 * [Converters](../ethereum-contracts/converter/README.md)
   * [Bancor Converter](../ethereum-contracts/converter/bancorconverter.md)
   * [Bancor Converter Factory](../ethereum-contracts/converter/bancorconverterfactory.md)
