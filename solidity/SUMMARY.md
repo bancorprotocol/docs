@@ -4,7 +4,6 @@
 
 ## Getting Started
 
-* [Introduction](../introduction.md)
 * [Design Principles](../design-principles.md)
 * [Network Architecture](../network-architecture/README.md)
   * [BancorX](../network-architecture/bancorx.md)
