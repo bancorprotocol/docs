@@ -1,7 +1,7 @@
 ---
 description: >-
-  This guide will assist you with step by step instructions on how to transfer
-  the ownership of a Bancor Liquidity Pool.
+  This guide provides step-by-step instructions on how to transfer the ownership
+  of a Bancor Liquidity Pool.
 ---
 
 # How to Transfer Ownership of a Bancor Liquidity Pool

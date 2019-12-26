@@ -1,6 +1,6 @@
 ---
 description: >-
-  This guide will show you how a token owner should accept ownership of a Bancor
+  This guide instructs how a new owner can accept ownership of a Bancor
   liquidity pool.
 ---
 

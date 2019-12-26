@@ -1,5 +1,5 @@
 ---
-description: This page describes how to upgrade the converter of a liquidity pool
+description: This guide outlines how to upgrade the converter of a liquidity pool
 ---
 
 # How to Upgrade A Liquidity Pool Converter

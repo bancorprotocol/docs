@@ -1,10 +1,8 @@
 ---
-description: The guide below will cover how to add Bancor's affiliate widget to your app.
+description: The guide outlines how to add Bancor's affiliate widget to your app.
 ---
 
 # How to Create an Affiliate Widget
-
-
 
 Any developer can now generate revenue \(up to 3% on each transaction\) by adding Bancor conversions into their product.
 

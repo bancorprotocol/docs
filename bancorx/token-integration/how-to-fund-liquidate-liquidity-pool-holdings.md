@@ -1,7 +1,7 @@
 ---
 description: >-
-  This article outlines how a liquidity provider can add liquidity to or
-  liquidate their pool tokens for Bancor liquidity pools. For ERC-20 token only.
+  This guide outlines how a liquidity provider can add liquidity to or liquidate
+  their pool tokens for Bancor liquidity pools. For ERC-20 token only.
 ---
 
 # How to Fund / Liquidate Liquidity Pool Holdings

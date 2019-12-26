@@ -1,7 +1,7 @@
 ---
 description: >-
-  This is a step-by-step guide that explains how to temporarily enable or
-  disable conversions of an ERC-20 Bancor liquidity pool
+  This guide outlines how to temporarily enable or disable conversions of an
+  ERC-20 Bancor liquidity pool
 ---
 
 # How to Enable/Disable a Bancor Pool

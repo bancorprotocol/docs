@@ -1,7 +1,7 @@
 ---
 description: >-
-  This page provides a step-by-step guide to how to create a Bancor liquidity
-  pool.
+  This guide provides step-by-step instruction for to how to create a Bancor
+  liquidity pool.
 ---
 
 # How to Create a Bancor Liquidity Pool

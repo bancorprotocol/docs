@@ -40,6 +40,7 @@
 ## User Guides <a id="bancorx"></a>
 
 * [Token Integration](../bancorx/token-integration/README.md)
+  * [How to Mint USDB](../bancorx/token-integration/how-to-mint-usdb.md)
   * [How to Create a Bancor Liquidity Pool](../bancorx/token-integration/how-to-create-a-bancor-liquidity-pool.md)
   * [How to Fund / Liquidate Liquidity Pool Holdings](../bancorx/token-integration/how-to-fund-liquidate-liquidity-pool-holdings.md)
   * [How to Transfer Ownership of a Bancor Liquidity Pool](../bancorx/token-integration/how-to-transfer-ownership-of-a-bancor-liquidity-pool.md)
