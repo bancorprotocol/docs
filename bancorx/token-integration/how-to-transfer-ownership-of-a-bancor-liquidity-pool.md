@@ -43,7 +43,7 @@ c.  Select the option you wish in order to access your wallet \(make sure you ar
 
 d.  Log into your account     
 
-e. Click “Write” to proceed with the “AcceptOwnership” action and move to the next step of executing it. ![Screen\_Shot\_2018-11-27\_at\_17.58.22.png](https://support.bancor.network/hc/article_attachments/360016044511/Screen_Shot_2018-11-27_at_17.58.22.png) 
+e. Click “Write” to proceed with the “transferOwnership” action and move to the next step of executing it. ![Screen\_Shot\_2018-11-27\_at\_17.58.22.png](https://support.bancor.network/hc/article_attachments/360016044511/Screen_Shot_2018-11-27_at_17.58.22.png) 
 
 ## Step 3:
 
