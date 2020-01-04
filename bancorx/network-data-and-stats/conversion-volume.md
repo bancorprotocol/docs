@@ -31,7 +31,7 @@ On Ethereum it's possible to simply query the converter registry to get all the 
 
 Bancor currently doesn't provide an on-chain converter registry on EOS yet, so the values should be hardcoded for the time being.
 
-See the full list on the [EOS Converter List page](https://app.gitbook.com/@bancor-network/s/bancor-network/~/drafts/-Lxk-PPQTzo32LiVpRpY/bancorx/network-data-and-stats/eos-converter-list).
+See the full list on the [EOS Converter List page](https://docs.bancor.network/bancorx/network-data-and-stats/eos-converter-list).
 
 ### Step 2 - Get Conversion Events
 
