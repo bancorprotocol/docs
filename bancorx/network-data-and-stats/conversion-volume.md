@@ -41,7 +41,7 @@ Once you have the full list of converters on the blockchain, you can query all `
 
 `events = converterContract.getPastEvents('Conversion', { fromBlock: 9200000, toBlock: 9200100})`
 
-For each conversion event, get the amount converted. Note that you can get the value in both the `source` token and the `target` token. See the [Conversion](https://docs.bancor.network/ethereum-contracts/converter/bancorconverter#BancorConverter-Conversion-address-address-address-uint256-uint256-int256-) event documentation for details.
+For each conversion event, get the amount converted. Note that you can get the value in both the source token and the target token. See the [Conversion](https://docs.bancor.network/ethereum-contracts/converter/bancorconverter#BancorConverter-Conversion-address-address-address-uint256-uint256-int256-) event documentation for details.
 
 #### EOS
 
