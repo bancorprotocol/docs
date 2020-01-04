@@ -48,4 +48,7 @@
   * [How to Enable/Disable a Bancor Pool](../bancorx/token-integration/how-to-enable-disable-a-bancor-pool.md)
   * [How to Upgrade A Liquidity Pool Converter](../bancorx/token-integration/how-to-upgrade-a-liquidity-pool-converter.md)
   * [How to Create an Affiliate Widget](../bancorx/token-integration/how-to-create-an-affiliate-widget.md)
+* [Network Data & Stats](../bancorx/network-data-and-stats/README.md)
+  * [Conversion Volume](../bancorx/network-data-and-stats/conversion-volume.md)
+  * [EOS Converter List](../bancorx/network-data-and-stats/eos-converter-list.md)
 
