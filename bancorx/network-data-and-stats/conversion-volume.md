@@ -25,7 +25,7 @@ On Ethereum it's possible to simply query the BancorNetwork contract to get all 
 * `bancorNetwork = ContractRegistry.addressOf('BancorNetwork')` // get the BancorNetwork contract address from the contract registry
 * `events = bancorNetwork.getPastEvents('Conversion', { fromBlock: 9200000, toBlock: 9200100})`
 
-For each conversion event, get the amount converted. Note that you can get the value in both the source token and the target token. See the [Conversion](https://docs.bancor.network/ethereum-contracts/converter/bancorconverter#BancorConverter-Conversion-address-address-address-uint256-uint256-int256-) event documentation for details.
+For each conversion event, get the amount converted. Note that you can get the value in both the source token and the target token. See the [Conversion](../../ethereum-contracts/bancornetwork.md#event-conversionaddress-smarttoken-address-fromtoken-address-totoken-uint256-fromamount-uint256-toamount-address-trader-bancornetwork-conversion-address-address-address-uint256-uint256-address) event documentation for details.
 
 #### Step 2 - Normalize Values
 
@@ -47,7 +47,7 @@ For the simplest aggregation, sum the values up in each required timeframe.
 
 Bancor currently doesn't provide an on-chain converter registry on EOS yet, so the values should be hardcoded for the time being.
 
-See the full list on the [EOS Converter List page](https://docs.bancor.network/bancorx/network-data-and-stats/eos-converter-list).
+See the full list on the [EOS Converter List page](eos-converter-list.md).
 
 #### Step 1 - Get Conversion Events
 
