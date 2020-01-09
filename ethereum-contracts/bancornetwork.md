@@ -1,5 +1,7 @@
 # Bancor Network
 
+
+
 The BancorNetwork contract is the main entry point for Bancor token conversions.
 
 It also allows for the conversion of any token in the Bancor Network to any other token in a single transaction by providing a conversion path.
@@ -22,28 +24,32 @@ Format:
 
 ## Functions:
 
-* [`constructor(contract IContractRegistry _registry)`](bancornetwork.md#BancorNetwork-constructor-contract-IContractRegistry-)
-* [`setMaxAffiliateFee(uint256 _maxAffiliateFee)`](bancornetwork.md#BancorNetwork-setMaxAffiliateFee-uint256-)
-* [`setSignerAddress(address _signerAddress)`](bancornetwork.md#BancorNetwork-setSignerAddress-address-)
-* [`registerEtherToken(contract IEtherToken _token, bool _register)`](bancornetwork.md#BancorNetwork-registerEtherToken-contract-IEtherToken-bool-)
-* [`convertFor2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-convertFor2-contract-IERC20Token---uint256-uint256-address-address-uint256-)
-* [`convertForPrioritized4(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256[] _signature, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-convertForPrioritized4-contract-IERC20Token---uint256-uint256-address-uint256---address-uint256-)
-* [`xConvert2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-xConvert2-contract-IERC20Token---uint256-uint256-bytes32-bytes32-uint256-address-uint256-)
-* [`xConvertPrioritized3(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId, uint256[] _signature, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-xConvertPrioritized3-contract-IERC20Token---uint256-uint256-bytes32-bytes32-uint256-uint256---address-uint256-)
-* [`getReturnByPath(contract IERC20Token[] _path, uint256 _amount)`](bancornetwork.md#BancorNetwork-getReturnByPath-contract-IERC20Token---uint256-)
-* [`claimAndConvertFor2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-claimAndConvertFor2-contract-IERC20Token---uint256-uint256-address-address-uint256-)
-* [`convert2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-convert2-contract-IERC20Token---uint256-uint256-address-uint256-)
-* [`claimAndConvert2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-claimAndConvert2-contract-IERC20Token---uint256-uint256-address-uint256-)
-* [`convert(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn)`](bancornetwork.md#BancorNetwork-convert-contract-IERC20Token---uint256-uint256-)
-* [`claimAndConvert(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn)`](bancornetwork.md#BancorNetwork-claimAndConvert-contract-IERC20Token---uint256-uint256-)
-* [`convertFor(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for)`](bancornetwork.md#BancorNetwork-convertFor-contract-IERC20Token---uint256-uint256-address-)
-* [`claimAndConvertFor(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for)`](bancornetwork.md#BancorNetwork-claimAndConvertFor-contract-IERC20Token---uint256-uint256-address-)
-* [`xConvert(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId)`](bancornetwork.md#BancorNetwork-xConvert-contract-IERC20Token---uint256-uint256-bytes32-bytes32-uint256-)
-* [`xConvertPrioritized2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId, uint256[] _signature)`](bancornetwork.md#BancorNetwork-xConvertPrioritized2-contract-IERC20Token---uint256-uint256-bytes32-bytes32-uint256-uint256---)
-* [`xConvertPrioritized(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId, uint256 _block, uint8 _v, bytes32 _r, bytes32 _s)`](bancornetwork.md#BancorNetwork-xConvertPrioritized-contract-IERC20Token---uint256-uint256-bytes32-bytes32-uint256-uint256-uint8-bytes32-bytes32-)
-* [`convertForPrioritized3(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _customVal, uint256 _block, uint8 _v, bytes32 _r, bytes32 _s)`](bancornetwork.md#BancorNetwork-convertForPrioritized3-contract-IERC20Token---uint256-uint256-address-uint256-uint256-uint8-bytes32-bytes32-)
-* [`convertForPrioritized2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _block, uint8 _v, bytes32 _r, bytes32 _s)`](bancornetwork.md#BancorNetwork-convertForPrioritized2-contract-IERC20Token---uint256-uint256-address-uint256-uint8-bytes32-bytes32-)
-* [`convertForPrioritized(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _block, uint256 _nonce, uint8 _v, bytes32 _r, bytes32 _s)`](bancornetwork.md#BancorNetwork-convertForPrioritized-contract-IERC20Token---uint256-uint256-address-uint256-uint256-uint8-bytes32-bytes32-)
+* [`constructor(contract IContractRegistry _registry)`]()
+* [`setMaxAffiliateFee(uint256 _maxAffiliateFee)`]()
+* [`setSignerAddress(address _signerAddress)`]()
+* [`registerEtherToken(contract IEtherToken _token, bool _register)`]()
+* [`convertFor2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, address _affiliateAccount, uint256 _affiliateFee)`]()
+* [`convertForPrioritized4(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256[] _signature, address _affiliateAccount, uint256 _affiliateFee)`]()
+* [`xConvert2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId, address _affiliateAccount, uint256 _affiliateFee)`]()
+* [`xConvertPrioritized3(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId, uint256[] _signature, address _affiliateAccount, uint256 _affiliateFee)`]()
+* [`getReturnByPath(contract IERC20Token[] _path, uint256 _amount)`]()
+* [`claimAndConvertFor2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, address _affiliateAccount, uint256 _affiliateFee)`]()
+* [`convert2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee)`]()
+* [`claimAndConvert2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee)`]()
+* [`convert(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn)`]()
+* [`claimAndConvert(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn)`]()
+* [`convertFor(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for)`]()
+* [`claimAndConvertFor(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for)`]()
+* [`xConvert(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId)`]()
+* [`xConvertPrioritized2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId, uint256[] _signature)`]()
+* [`xConvertPrioritized(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, bytes32 _toBlockchain, bytes32 _to, uint256 _conversionId, uint256 _block, uint8 _v, bytes32 _r, bytes32 _s)`]()
+* [`convertForPrioritized3(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _customVal, uint256 _block, uint8 _v, bytes32 _r, bytes32 _s)`]()
+* [`convertForPrioritized2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _block, uint8 _v, bytes32 _r, bytes32 _s)`]()
+* [`convertForPrioritized(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _block, uint256 _nonce, uint8 _v, bytes32 _r, bytes32 _s)`]()
+
+## Events:
+
+* [`Conversion(address _smartToken, address _fromToken, address _toToken, uint256 _fromAmount, uint256 _toAmount, address _trader)`]()
 
 ## Function `constructor(contract IContractRegistry _registry)` <a id="BancorNetwork-constructor-contract-IContractRegistry-"></a>
 
@@ -324,4 +330,17 @@ deprecated, backward compatibility
 ## Function `convertForPrioritized(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _block, uint256 _nonce, uint8 _v, bytes32 _r, bytes32 _s) → uint256` <a id="BancorNetwork-convertForPrioritized-contract-IERC20Token---uint256-uint256-address-uint256-uint256-uint8-bytes32-bytes32-"></a>
 
 deprecated, backward compatibility
+
+## Event `Conversion(address _smartToken, address _fromToken, address _toToken, uint256 _fromAmount, uint256 _toAmount, address _trader)` <a id="BancorNetwork-Conversion-address-address-address-uint256-uint256-address-"></a>
+
+triggered when a conversion between two tokens occurs
+
+### Parameters:
+
+* `_smartToken`: smart token governed by the converter
+* `_fromToken`: ERC20 token converted from
+* `_toToken`: ERC20 token converted to
+* `_fromAmount`: amount converted, in fromToken
+* `_toAmount`: amount returned, minus conversion fee
+* `_trader`: wallet that initiated the trade
 
