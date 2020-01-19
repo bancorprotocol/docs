@@ -5,9 +5,9 @@
 ## Getting Started
 
 * [Design Principles](../getting-started/design-principles.md)
-* [Network Architecture](../getting-started/introduction/README.md)
-  * [BancorX](../getting-started/introduction/bancorx.md)
-  * [ethereum](../getting-started/introduction/ethereum.md)
+* [Network Architecture](../getting-started/network-architecture/README.md)
+  * [BancorX](../getting-started/network-architecture/bancorx.md)
+  * [ethereum](../getting-started/network-architecture/ethereum.md)
 
 ## User Guides
 
