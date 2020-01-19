@@ -1,4 +1,4 @@
 root: ./
 structure:
-  readme: solidity/README.md
-  summary: solidity/SUMMARY.md
+  readme: bancor-network/README.md
+  summary: bancor-network/SUMMARY.md
