@@ -45,6 +45,10 @@ Format:
 * [`convertForPrioritized2(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _block, uint8 _v, bytes32 _r, bytes32 _s)`](bancornetwork.md#BancorNetwork-convertForPrioritized2-contract-IERC20Token---uint256-uint256-address-uint256-uint8-bytes32-bytes32-)
 * [`convertForPrioritized(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _block, uint256 _nonce, uint8 _v, bytes32 _r, bytes32 _s)`](bancornetwork.md#BancorNetwork-convertForPrioritized-contract-IERC20Token---uint256-uint256-address-uint256-uint256-uint8-bytes32-bytes32-)
 
+## Events: <a id="events"></a>
+
+* \`\`[`Conversion(address _smartToken, address _fromToken, address _toToken, uint256 _fromAmount, uint256 _toAmount, address _trader)`](bancornetwork.md#event-conversionaddress-smarttoken-address-fromtoken-address-totoken-uint256-fromamount-uint256-toamount-address-trader-bancornetwork-conversion-address-address-address-uint256-uint256-address)\`\`
+
 ## Function `constructor(contract IContractRegistry _registry)` <a id="BancorNetwork-constructor-contract-IContractRegistry-"></a>
 
 initializes a new BancorNetwork instance
@@ -324,4 +328,17 @@ deprecated, backward compatibility
 ## Function `convertForPrioritized(contract IERC20Token[] _path, uint256 _amount, uint256 _minReturn, address _for, uint256 _block, uint256 _nonce, uint8 _v, bytes32 _r, bytes32 _s) → uint256` <a id="BancorNetwork-convertForPrioritized-contract-IERC20Token---uint256-uint256-address-uint256-uint256-uint8-bytes32-bytes32-"></a>
 
 deprecated, backward compatibility
+
+## Event `Conversion(address _smartToken, address _fromToken, address _toToken, uint256 _fromAmount, uint256 _toAmount, address _trader)` <a id="event-conversionaddress-smarttoken-address-fromtoken-address-totoken-uint256-fromamount-uint256-toamount-address-trader-bancornetwork-conversion-address-address-address-uint256-uint256-address"></a>
+
+triggered when a conversion between two tokens occurs
+
+### Parameters: <a id="parameters-12"></a>
+
+* `_smartToken`: smart token governed by the converter
+* `_fromToken`: ERC20 token converted from
+* `_toToken`: ERC20 token converted to
+* `_fromAmount`: amount converted, in fromToken
+* `_toAmount`: amount returned, minus conversion fee
+* `_trader`: wallet that initiated the trade
 
