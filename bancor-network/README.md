@@ -6,11 +6,9 @@ description: >-
 
 # Introduction
 
-## 
-
 ![](../.gitbook/assets/graph-3-1.png)
 
-The Bancor Protocol is a fully on-chain liquidity protocol that can be implemented on any smart contract enabled blockchain. The Bancor Protocol is an open-source standard for liquidity pools, which in turn provide one endpoint for automated market-making \(buying / selling tokens\) against a smart contract. 
+The Bancor Protocol is a fully on-chain liquidity protocol that can be implemented on any smart contract enabled blockchain. The Bancor Protocol is an open-source standard for liquidity pools, which in turn provide one endpoint for automated market-making \(buying / selling tokens\) against a smart contract.
 
 * Bancor Network currently operates on the Ethereum and EOS blockchains, but the Bancor Protocol is designed to be interoperable for additional blockchains. 
 * Our implementation can be easily integrated into any application enabling value exchanges. 
