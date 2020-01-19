@@ -72,6 +72,3 @@ For each conversion event, the data needs to be normalized into a single common 
 Once you have all conversion amounts in a single value, the values can be aggregated based on the required timeframe.
 
 For the simplest aggregation, sum the values up in each required timeframe.
-
-\`\`
-
