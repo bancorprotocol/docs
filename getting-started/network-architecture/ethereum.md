@@ -4,7 +4,7 @@ description: >-
   overview of the key entities
 ---
 
-# ethereum
+# Ethereum
 
 The Bancor Network consists of a modular and upgradable smart contract design, while providing users with a simple interface they can interact with to either convert tokens or manage liquidity pools via a public API or a public interface for Dapp integrations. The Bancor Network smart contracts are open and accessible to network participants. Once new contracts are created, network participants can build interfaces atop the contracts, or interact with the contracts directly.
 
