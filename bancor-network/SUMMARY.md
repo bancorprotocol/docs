@@ -7,7 +7,7 @@
 * [Design Principles](../getting-started/design-principles.md)
 * [Network Architecture](../getting-started/network-architecture/README.md)
   * [BancorX](../getting-started/network-architecture/bancorx.md)
-  * [ethereum](../getting-started/network-architecture/ethereum.md)
+  * [Ethereum](../getting-started/network-architecture/ethereum.md)
 
 ## User Guides
 
