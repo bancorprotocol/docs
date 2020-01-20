@@ -25,5 +25,5 @@
   * [EOS Converter List](../user-guides/network-data-and-stats/eos-converter-list.md)
   * [Conversion Volume](../user-guides/network-data-and-stats/conversion-volume.md)
 
-## [API Reference](./SUMMARY2.md)
+## [API Reference](SUMMARY2.md)
 
