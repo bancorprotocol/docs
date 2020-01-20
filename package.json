@@ -9,8 +9,13 @@
   "engines": {
     "npm": "^3.0.0"
   },
+  "scripts": {
+    "install": "doxygen --download"
+  },
   "dependencies": {
     "bancor-contracts": "0.5.13",
+    "bancor-contracts_eos": "0.0.7",
+    "doxygen": "0.3.2",
     "solidity-docgen": "0.3.11"
   }
 }
