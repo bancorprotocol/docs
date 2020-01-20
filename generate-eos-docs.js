@@ -13,7 +13,7 @@ if (pythonResult.stderr.length > 0)
     throw new Error(pythonResult.stderr);
 
 for (const fileName of fs.readdirSync("api-reference/eos-smart-contracts"))
-    if (!fileName.startsWith("group__"))
+    if (!/^(modules|structmemo__x__transfer|group__.*).md$/.test(fileName))
         fs.unlinkSync("api-reference/eos-smart-contracts/" + fileName);
 
 function remove(pathName) {
