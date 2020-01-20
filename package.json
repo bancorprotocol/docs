@@ -10,11 +10,11 @@
     "npm": "^3.0.0"
   },
   "scripts": {
-    "install": "doxygen --download"
+    "postinstall": "doxygen --download"
   },
   "dependencies": {
-    "bancor-contracts": "0.5.13",
-    "bancor-contracts_eos": "0.0.7",
+    "bancor-contracts": "git+https://git@github.com/bancorprotocol/contracts",
+    "bancor-contracts_eos": "git+https://git@github.com/bancorprotocol/contracts_eos",
     "doxygen": "0.3.2",
     "solidity-docgen": "0.3.11"
   }
