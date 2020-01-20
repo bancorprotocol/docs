@@ -1,21 +1,21 @@
 * [Ethereum Smart Contracts](../api-reference/ethereum-smart-contracts/README.md)
   * [BancorNetwork](../api-reference/ethereum-smart-contracts/bancornetwork.md)
   * [BancorNetworkPathFinder](../api-reference/ethereum-smart-contracts/bancornetworkpathfinder.md)
-  * [bancorx](../api-reference/ethereum-smart-contracts/bancorx/README.md)
+  * bancorx
     * [BancorX](../api-reference/ethereum-smart-contracts/bancorx/bancorx.md)
-  * [converter](../api-reference/ethereum-smart-contracts/converter/README.md)
+  * converter
     * [BancorConverter](../api-reference/ethereum-smart-contracts/converter/bancorconverter.md)
     * [BancorConverterFactory](../api-reference/ethereum-smart-contracts/converter/bancorconverterfactory.md)
     * [BancorConverterRegistry](../api-reference/ethereum-smart-contracts/converter/bancorconverterregistry.md)
     * [BancorConverterUpgrader](../api-reference/ethereum-smart-contracts/converter/bancorconverterupgrader.md)
     * [BancorFormula](../api-reference/ethereum-smart-contracts/converter/bancorformula.md)
     * [BancorGasPriceLimit](../api-reference/ethereum-smart-contracts/converter/bancorgaspricelimit.md)
-  * [token](../api-reference/ethereum-smart-contracts/token/README.md)
+  * token
     * [ERC20Token](../api-reference/ethereum-smart-contracts/token/erc20token.md)
     * [EtherToken](../api-reference/ethereum-smart-contracts/token/ethertoken.md)
     * [SmartToken](../api-reference/ethereum-smart-contracts/token/smarttoken.md)
     * [SmartTokenController](../api-reference/ethereum-smart-contracts/token/smarttokencontroller.md)
-  * [utility](../api-reference/ethereum-smart-contracts/utility/README.md)
+  * utility
     * [ContractFeatures](../api-reference/ethereum-smart-contracts/utility/contractfeatures.md)
     * [ContractRegistry](../api-reference/ethereum-smart-contracts/utility/contractregistry.md)
     * [ContractRegistryClient](../api-reference/ethereum-smart-contracts/utility/contractregistryclient.md)
