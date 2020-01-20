@@ -28,4 +28,5 @@ function fix(pathName) {
 
 fix("api-reference/ethereum-smart-contracts");
 
-fs.copyFileSync("node_modules/bancor-contracts/README.md", "api-reference/ethereum-smart-contracts/README.md");
+for (const pathName of ["README.md", "solidity/python/README.md", "solidity/utils/README.md"])
+    fs.copyFileSync("node_modules/bancor-contracts/" + pathName, "api-reference/ethereum-smart-contracts/" + pathName);
