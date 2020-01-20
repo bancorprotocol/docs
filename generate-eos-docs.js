@@ -16,6 +16,19 @@ for (const fileName of fs.readdirSync("api-reference/eos-smart-contracts"))
     if (fileName.startsWith("_") || fileName.startsWith("dir_"))
         fs.unlinkSync("api-reference/eos-smart-contracts/" + fileName);
 
+function remove(pathName) {
+    if (fs.lstatSync(pathName).isDirectory()) {
+        for (const fileName of fs.readdirSync(pathName))
+            remove(pathName + "/" + fileName);
+        fs.rmdirSync(pathName);
+    }
+    else {
+        fs.unlinkSync(pathName);
+    }
+}
+
+remove("tmp");
+
 fs.unlinkSync("api-reference/eos-smart-contracts/pages.md");
 fs.unlinkSync("api-reference/eos-smart-contracts/files.md");
 fs.unlinkSync("api-reference/eos-smart-contracts/macros.md");
