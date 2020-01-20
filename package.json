@@ -9,9 +9,6 @@
   "engines": {
     "npm": "^3.0.0"
   },
-  "scripts": {
-    "start": "node start.js"
-  },
   "dependencies": {
     "bancor-contracts": "0.5.13",
     "solidity-docgen": "0.3.11"

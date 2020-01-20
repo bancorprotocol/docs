@@ -1,43 +1,43 @@
-# BancorNetworkPathFinder
-
 The BancorNetworkPathFinder contract allows generating a conversion path between any token pair in the Bancor Network.
 
 The path can then be used in various functions in the BancorNetwork contract.
 
 See the BancorNetwork contract for conversion path format.
 
-## Functions:
+# Functions:
 
-* [`constructor(contract IContractRegistry _registry)`](bancornetworkpathfinder.md#BancorNetworkPathFinder-constructor-contract-IContractRegistry-)
-* [`setAnchorToken(address _anchorToken)`](bancornetworkpathfinder.md#BancorNetworkPathFinder-setAnchorToken-address-)
-* [`generatePath(address _sourceToken, address _targetToken)`](bancornetworkpathfinder.md#BancorNetworkPathFinder-generatePath-address-address-)
+- [`constructor(contract IContractRegistry _registry)`](#BancorNetworkPathFinder-constructor-contract-IContractRegistry-)
 
-## Function `constructor(contract IContractRegistry _registry)` <a id="BancorNetworkPathFinder-constructor-contract-IContractRegistry-"></a>
+- [`setAnchorToken(address _anchorToken)`](#BancorNetworkPathFinder-setAnchorToken-address-)
+
+- [`generatePath(address _sourceToken, address _targetToken)`](#BancorNetworkPathFinder-generatePath-address-address-)
+
+# Function `constructor(contract IContractRegistry _registry)` {#BancorNetworkPathFinder-constructor-contract-IContractRegistry-}
 
 initializes a new BancorNetworkPathFinder instance
 
-### Parameters:
+## Parameters:
 
-* `_registry`: address of a contract registry contract
+- `_registry`: address of a contract registry contract
 
-## Function `setAnchorToken(address _anchorToken)` <a id="BancorNetworkPathFinder-setAnchorToken-address-"></a>
+# Function `setAnchorToken(address _anchorToken)` {#BancorNetworkPathFinder-setAnchorToken-address-}
 
 updates the anchor token
 
-### Parameters:
+## Parameters:
 
-* `_anchorToken`: address of the anchor token
+- `_anchorToken`: address of the anchor token
 
-## Function `generatePath(address _sourceToken, address _targetToken) → address[]` <a id="BancorNetworkPathFinder-generatePath-address-address-"></a>
+# Function `generatePath(address _sourceToken, address _targetToken) → address[]` {#BancorNetworkPathFinder-generatePath-address-address-}
 
 generates and returns the conversion path between a given token pair in the Bancor Network
 
-### Parameters:
+## Parameters:
 
-* `_sourceToken`: address of the source token
-* `_targetToken`: address of the target token
+- `_sourceToken`: address of the source token
 
-### Return Values:
+- `_targetToken`: address of the target token
 
-* path from the source token to the target token
+## Return Values:
 
+- path from the source token to the target token

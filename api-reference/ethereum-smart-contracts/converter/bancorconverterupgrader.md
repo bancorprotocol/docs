@@ -1,8 +1,6 @@
-# BancorConverterUpgrader
-
 Bancor Converter Upgrader
 
-The Bancor converter upgrader contract allows upgrading an older Bancor converter contract \(0.4 and up\)
+The Bancor converter upgrader contract allows upgrading an older Bancor converter contract (0.4 and up)
 
 to the latest version.
 
@@ -20,43 +18,31 @@ be transferred manually to the ConverterUpgrader contract using the 'transferOwn
 
 and then the upgrader 'upgrade' function should be executed directly.
 
-## Functions:
+# Functions:
 
-* [`constructor(contract IContractRegistry _registry)`](bancorconverterupgrader.md#BancorConverterUpgrader-constructor-contract-IContractRegistry-)
-* [`upgrade(bytes32 _version)`](bancorconverterupgrader.md#BancorConverterUpgrader-upgrade-bytes32-)
-* [`upgrade(uint16 _version)`](bancorconverterupgrader.md#BancorConverterUpgrader-upgrade-uint16-)
-* [`upgradeOld(contract IBancorConverter _converter, bytes32 _version)`](bancorconverterupgrader.md#BancorConverterUpgrader-upgradeOld-contract-IBancorConverter-bytes32-)
+- [`constructor(contract IContractRegistry _registry)`](#BancorConverterUpgrader-constructor-contract-IContractRegistry-)
 
-## Events:
+- [`upgrade(bytes32 _version)`](#BancorConverterUpgrader-upgrade-bytes32-)
 
-* [`ConverterOwned(address _converter, address _owner)`](bancorconverterupgrader.md#BancorConverterUpgrader-ConverterOwned-address-address-)
-* [`ConverterUpgrade(address _oldConverter, address _newConverter)`](bancorconverterupgrader.md#BancorConverterUpgrader-ConverterUpgrade-address-address-)
+- [`upgrade(uint16 _version)`](#BancorConverterUpgrader-upgrade-uint16-)
 
-## Function `constructor(contract IContractRegistry _registry)` <a id="BancorConverterUpgrader-constructor-contract-IContractRegistry-"></a>
+- [`upgradeOld(contract IBancorConverter _converter, bytes32 _version)`](#BancorConverterUpgrader-upgradeOld-contract-IBancorConverter-bytes32-)
+
+# Events:
+
+- [`ConverterOwned(address _converter, address _owner)`](#BancorConverterUpgrader-ConverterOwned-address-address-)
+
+- [`ConverterUpgrade(address _oldConverter, address _newConverter)`](#BancorConverterUpgrader-ConverterUpgrade-address-address-)
+
+# Function `constructor(contract IContractRegistry _registry)` {#BancorConverterUpgrader-constructor-contract-IContractRegistry-}
 
 initializes a new BancorConverterUpgrader instance
 
-### Parameters:
+## Parameters:
 
-* `_registry`:    address of a contract registry contract
+- `_registry`:    address of a contract registry contract
 
-## Function `upgrade(bytes32 _version)` <a id="BancorConverterUpgrader-upgrade-bytes32-"></a>
-
-upgrades an old converter to the latest version
-
-will throw if ownership wasn't transferred to the upgrader before calling this function.
-
-ownership of the new converter will be transferred back to the original owner.
-
-fires the ConverterUpgrade event upon success.
-
-can only be called by a converter
-
-### Parameters:
-
-* `_version`: old converter version
-
-## Function `upgrade(uint16 _version)` <a id="BancorConverterUpgrader-upgrade-uint16-"></a>
+# Function `upgrade(bytes32 _version)` {#BancorConverterUpgrader-upgrade-bytes32-}
 
 upgrades an old converter to the latest version
 
@@ -68,11 +54,11 @@ fires the ConverterUpgrade event upon success.
 
 can only be called by a converter
 
-### Parameters:
+## Parameters:
 
-* `_version`: old converter version
+- `_version`: old converter version
 
-## Function `upgradeOld(contract IBancorConverter _converter, bytes32 _version)` <a id="BancorConverterUpgrader-upgradeOld-contract-IBancorConverter-bytes32-"></a>
+# Function `upgrade(uint16 _version)` {#BancorConverterUpgrader-upgrade-uint16-}
 
 upgrades an old converter to the latest version
 
@@ -82,26 +68,44 @@ ownership of the new converter will be transferred back to the original owner.
 
 fires the ConverterUpgrade event upon success.
 
-### Parameters:
+can only be called by a converter
 
-* `_converter`: old converter contract address
-* `_version`: old converter version
+## Parameters:
 
-## Event `ConverterOwned(address _converter, address _owner)` <a id="BancorConverterUpgrader-ConverterOwned-address-address-"></a>
+- `_version`: old converter version
+
+# Function `upgradeOld(contract IBancorConverter _converter, bytes32 _version)` {#BancorConverterUpgrader-upgradeOld-contract-IBancorConverter-bytes32-}
+
+upgrades an old converter to the latest version
+
+will throw if ownership wasn't transferred to the upgrader before calling this function.
+
+ownership of the new converter will be transferred back to the original owner.
+
+fires the ConverterUpgrade event upon success.
+
+## Parameters:
+
+- `_converter`:   old converter contract address
+
+- `_version`:     old converter version
+
+# Event `ConverterOwned(address _converter, address _owner)` {#BancorConverterUpgrader-ConverterOwned-address-address-}
 
 triggered when the contract accept a converter ownership
 
-### Parameters:
+## Parameters:
 
-* `_converter`: converter address
-* `_owner`: new owner - local upgrader address
+- `_converter`:   converter address
 
-## Event `ConverterUpgrade(address _oldConverter, address _newConverter)` <a id="BancorConverterUpgrader-ConverterUpgrade-address-address-"></a>
+- `_owner`:       new owner - local upgrader address
+
+# Event `ConverterUpgrade(address _oldConverter, address _newConverter)` {#BancorConverterUpgrader-ConverterUpgrade-address-address-}
 
 triggered when the upgrading process is done
 
-### Parameters:
+## Parameters:
 
-* `_oldConverter`: old converter address
-* `_newConverter`: new converter address
+- `_oldConverter`:    old converter address
 
+- `_newConverter`:    new converter address
