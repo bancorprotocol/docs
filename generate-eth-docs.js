@@ -28,5 +28,10 @@ function fix(pathName) {
 
 fix("api-reference/ethereum-smart-contracts");
 
-for (const pathName of ["README.md", "solidity/python/README.md", "solidity/utils/README.md"])
-    fs.copyFileSync("node_modules/bancor-contracts/" + pathName, "api-reference/ethereum-smart-contracts/" + pathName);
+let data = fs.readFileSync("node_modules/bancor-contracts/README.md", {encoding: "utf8"});
+data = data.split("solidity/utils/").join("solidity_utils_");
+data = data.split("solidity/python/").join("solidity_python_");
+fs.writeFileSync("api-reference/ethereum-smart-contracts/README.md", data, {encoding: "utf8"});
+
+fs.copyFileSync("node_modules/bancor-contracts/solidity/utils/README.md", "api-reference/ethereum-smart-contracts/solidity_utils_README.md");
+fs.copyFileSync("node_modules/bancor-contracts/solidity/python/README.md", "api-reference/ethereum-smart-contracts/solidity_python_README.md");
