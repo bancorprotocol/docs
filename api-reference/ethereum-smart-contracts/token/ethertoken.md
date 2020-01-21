@@ -10,6 +10,8 @@ Ether tokenization contract
 
 - [`withdraw(uint256 _amount)`](#EtherToken-withdraw-uint256-)
 
+- [`depositTo(address _to)`](#EtherToken-depositTo-address-)
+
 - [`withdrawTo(address _to, uint256 _amount)`](#EtherToken-withdrawTo-address-uint256-)
 
 - [`transfer(address _to, uint256 _value)`](#EtherToken-transfer-address-uint256-)
@@ -30,19 +32,27 @@ initializes a new EtherToken instance
 
 # Function `deposit()` {#EtherToken-deposit--}
 
-deposit ether in the account
+deposit ether on behalf of the sender
 
 # Function `withdraw(uint256 _amount)` {#EtherToken-withdraw-uint256-}
 
-withdraw ether from the account
+withdraw ether to the sender's account
 
 ## Parameters:
 
 - `_amount`:  amount of ether to withdraw
 
+# Function `depositTo(address _to)` {#EtherToken-depositTo-address-}
+
+deposit ether to be entitled for a given account
+
+## Parameters:
+
+- `_to`:      account to be entitled for the ether
+
 # Function `withdrawTo(address _to, uint256 _amount)` {#EtherToken-withdrawTo-address-uint256-}
 
-withdraw ether from the account to a target account
+withdraw ether entitled by the sender to a given account
 
 ## Parameters:
 

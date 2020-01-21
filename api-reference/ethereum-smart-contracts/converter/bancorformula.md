@@ -44,7 +44,7 @@ calculates the return for a given conversion (in the reserve token)
 
 Formula:
 
-Return = _reserveBalance * (1 - (1 - _sellAmount / _supply) ^ (1 / (_reserveRatio / 1000000)))
+Return = _reserveBalance * (1 - (1 - _sellAmount / _supply) ^ (1000000 / _reserveRatio))
 
 ## Parameters:
 
@@ -120,7 +120,7 @@ calculates the amount of reserve tokens received for selling the given amount of
 
 Formula:
 
-Return = _reserveBalance * ((_supply / (_supply - _amount)) ^ (MAX_RATIO / _totalRatio) - 1)
+Return = _reserveBalance * (1 - ((_supply - _amount) / _supply) ^ (MAX_RATIO / _totalRatio))
 
 ## Parameters:
 
