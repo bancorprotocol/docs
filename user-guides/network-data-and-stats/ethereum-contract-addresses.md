@@ -38,7 +38,7 @@ Below are the Bancor Network contract addresses that cannot be retrieved from th
 | :--- | :--- |
 | [ContractRegistry](../../api-reference/ethereum-smart-contracts/utility/contractregistry.md) | 0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4 |
 | [BNT Token](../../api-reference/ethereum-smart-contracts/token/smarttoken.md) | 0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C |
-| [ETH Token](../../api-reference/ethereum-smart-contracts/token/ethertoken.md) | 0xc0829421C1d260BD3cB3E0F06cfE2D52db2cE315 |
+| ETH Token | 0xc0829421C1d260BD3cB3E0F06cfE2D52db2cE315 |
 
 ### Ropsten
 

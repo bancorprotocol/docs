@@ -54,7 +54,6 @@
     * [TokenHolder](../api-reference/ethereum-smart-contracts/utility/tokenholder.md)
     * [Utils](../api-reference/ethereum-smart-contracts/utility/utils.md)
     * [Whitelist](../api-reference/ethereum-smart-contracts/utility/whitelist.md)
-
 * [EOS Smart Contracts](../api-reference/eos-smart-contracts/README.md)
   * [BancorConverter](../api-reference/eos-smart-contracts/group___bancor_converter.md)
     * [Reserves Table](../api-reference/eos-smart-contracts/group___converter___reserves___table.md)
@@ -76,3 +75,4 @@
     * [Converters Table](../api-reference/eos-smart-contracts/group___converters___table.md)
     * [Reserves Table](../api-reference/eos-smart-contracts/group___multi_converter___reserves___table.md)
     * [Settings Table](../api-reference/eos-smart-contracts/group___multi_converter___settings___table.md)
+
