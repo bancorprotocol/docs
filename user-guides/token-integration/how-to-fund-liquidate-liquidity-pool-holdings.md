@@ -34,20 +34,9 @@ You will need:
 
 For each reserve wallet:
 
-1. 1. Paste the following:
-      1. **Contract Address: \[Reserve Token Address\]**
-      2. **ABI / JSON Interface:** 
-         1. Copy/paste the ABI from this URL:
-         2. [https://etherscan.io/address/\*\*\[Reserve](https://etherscan.io/address/**[Reserve) Token Address\]\*\*\#code 
-      3. Click **“Access”**
-   2. Scroll down to the next step
-   3. Select the **“approve”** function from the drop down
-   4. Enter the **\[Converter Address\]** in the \_spender field.
-   5. Enter the amount that you’d like to fund with under \_value \(the name might be slightly different depending on the specific token\). The amount should be enough to cover the required pool amount \(you can put a higher amount if you’re not sure\)
-   6. Sign in to your wallet \(this must be the wallet that holds the reserve tokens\)
-   7. Click **“Write”**
-
+1. Once the permissions are in place, it’s time to do the actual funding.
    Once the permissions are in place, it’s time to do the actual funding.
+
 2. Paste the following: 1. **Contract Address: \[Converter Address\]** 2. **ABI / JSON Interface:** 1. Copy/paste the ABI from this URL: 2. [https://etherscan.io/address/\*\*\[Converter](https://etherscan.io/address/**[Converter) Address\]**\#code 3. Click** “Access”\*\*
 3. Scroll down to the next step
 4. Select the **“fund”** function from the drop down
