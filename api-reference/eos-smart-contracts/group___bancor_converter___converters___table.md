@@ -1,9 +1,9 @@
 
-# Group Converters\_Table
+# Group BancorConverter\_Converters\_Table
 
 
 [**Modules**](modules.md)
- **>** [**Converters\_Table**](group___converters___table.md)
+ **>** [**BancorConverter\_Converters\_Table**](group___bancor_converter___converters___table.md)
 
 
 
@@ -26,10 +26,10 @@ _This table stores the key information about all converters in this contract._ [
 
 | Type | Name |
 | ---: | :--- |
-|  symbol | [**currency**](group___converters___table.md#variable-currency)  <br>_symbol of the smart token_  _representing a share in the reserves of this converter_ |
-|  uint64\_t | [**fee**](group___converters___table.md#variable-fee)  <br>_conversion fee for this converter, applied on every hop_  |
-|  name | [**owner**](group___converters___table.md#variable-owner)  <br>_creator of the converter_  |
-|  bool | [**stake\_enabled**](group___converters___table.md#variable-stake-enabled)  <br>_toggle boolean to enable/disable this staking and voting for this converter_  |
+|  symbol | [**currency**](group___bancor_converter___converters___table.md#variable-currency)  <br>_symbol of the smart token_  _representing a share in the reserves of this converter_ |
+|  uint64\_t | [**fee**](group___bancor_converter___converters___table.md#variable-fee)  <br>_conversion fee for this converter, applied on every hop_  |
+|  name | [**owner**](group___bancor_converter___converters___table.md#variable-owner)  <br>_creator of the converter_  |
+|  bool | [**stake\_enabled**](group___bancor_converter___converters___table.md#variable-stake-enabled)  <br>_toggle boolean to enable/disable this staking and voting for this converter_  |
 
 
 

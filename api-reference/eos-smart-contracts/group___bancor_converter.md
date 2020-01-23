@@ -21,12 +21,12 @@ _Bancor BancorConverter._ [More...](#detailed-description)
 
 | Type | Name |
 | ---: | :--- |
-| module | [**Accounts Table**](group___accounts___table.md) <br>_This table stores "temporary balances" that are transfered in by liquidity providers before they can get added to their respective reserves._  |
+| module | [**Accounts Table**](group___bancor_converter___accounts___table.md) <br>_This table stores "temporary balances" that are transfered in by liquidity providers before they can get added to their respective reserves._  |
+| module | [**Converters Table**](group___bancor_converter___converters___table.md) <br>_This table stores the key information about all converters in this contract._  |
 | module | [**Reserves Table**](group___bancor_converter___reserves___table.md) <br>_This table stores the reserve balances and related information for the reserves of every converter in this contract._  |
 | module | [**Settings Table**](group___bancor_converter___settings___table.md) <br>_This table stores the global settings affecting all the converters in this contract._  |
 | module | [**Reserves Table**](group___converter___reserves___table.md) <br>_This table stores stats on the reserves of the converter, the actual balance is owned by converter account within the accounts._  |
 | module | [**Settings Table**](group___converter___settings___table.md) <br>_This table stores stats on the settings of the converter._  |
-| module | [**Converters Table**](group___converters___table.md) <br>_This table stores the key information about all converters in this contract._  |
 
 
 
