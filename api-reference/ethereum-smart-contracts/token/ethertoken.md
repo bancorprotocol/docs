@@ -4,7 +4,7 @@ Ether tokenization contract
 
 # Functions:
 
-- [`constructor()`](#EtherToken-constructor--)
+- [`constructor(string _name, string _symbol)`](#EtherToken-constructor-string-string-)
 
 - [`deposit()`](#EtherToken-deposit--)
 
@@ -26,9 +26,15 @@ Ether tokenization contract
 
 - [`Destruction(uint256 _amount)`](#EtherToken-Destruction-uint256-)
 
-# Function `constructor()` {#EtherToken-constructor--}
+# Function `constructor(string _name, string _symbol)` {#EtherToken-constructor-string-string-}
 
 initializes a new EtherToken instance
+
+## Parameters:
+
+- `_name`:        token name
+
+- `_symbol`:      token symbol
 
 # Function `deposit()` {#EtherToken-deposit--}
 
