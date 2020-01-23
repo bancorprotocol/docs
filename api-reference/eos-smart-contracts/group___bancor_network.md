@@ -35,6 +35,7 @@ _The BancorNetwork contract is the main entry point for Bancor token conversions
 | ---: | :--- |
 |  void | [**on\_transfer**](group___bancor_network.md#function-on-transfer) (name from, name to, asset quantity, string memo) <br>_transfer intercepts_  |
 |  ACTION | [**setmaxfee**](group___bancor_network.md#function-setmaxfee) (uint64\_t max\_affiliate\_fee) <br>_set the maximum affliate fee for all chained BNT conversions_  |
+|  ACTION | [**setnettoken**](group___bancor_network.md#function-setnettoken) (name network\_token) <br>_sets the network token contract_  |
 
 
 
@@ -104,6 +105,27 @@ ACTION setmaxfee (
 
 
 * `max_affiliate_fee` - what network owner determines to be the maximum 
+
+
+
+        
+
+### <a href="#function-setnettoken" id="function-setnettoken">function setnettoken </a>
+
+
+```cpp
+ACTION setnettoken (
+    name network_token
+) 
+```
+
+
+
+
+**Parameters:**
+
+
+* `network_token` - network token contract account 
 
 
 

@@ -27,6 +27,7 @@ _This table stores the settings for the entire Bancor network._
 | Type | Name |
 | ---: | :--- |
 |  uint64\_t | [**max\_fee**](group___network___settings___table.md#variable-max-fee)  <br>_maximum affiliate fee possible for multiConverters to collect_  |
+|  name | [**network\_token**](group___network___settings___table.md#variable-network-token)  <br>_network token contract name_  |
 
 
 
@@ -45,6 +46,15 @@ _This table stores the settings for the entire Bancor network._
 
 ```cpp
 uint64_t max_fee;
+```
+
+
+
+### <a href="#variable-network-token" id="variable-network-token">variable network\_token </a>
+
+
+```cpp
+name network_token;
 ```
 
 
