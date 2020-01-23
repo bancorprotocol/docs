@@ -1,32 +1,37 @@
-const fs        = require("fs");
-const spawnSync = require("child_process").spawnSync;
+require("download-git-repo")("bancorprotocol/contracts_eos", "node_modules/bancor-contracts_eos", function (error) {
+    if (error)
+        throw error;
 
-const nodeArgs   = ["node_modules/doxygen/bin/nodeDoxygen.js", "--docs", "--configPath=config/eos-smart-contracts/Doxyfile"];
-const pythonArgs = ["-m", "doxybook", "-i=tmp/xml", "-o=api-reference/eos-smart-contracts", "-t=gitbook"];
+    const fs        = require("fs");
+    const spawnSync = require("child_process").spawnSync;
 
-const nodeResult = spawnSync("node", nodeArgs, {stdio: ["inherit", "inherit", "pipe"]});
-if (nodeResult.stderr.length > 0)
-    throw new Error(nodeResult.stderr);
+    const nodeArgs   = ["node_modules/doxygen/bin/nodeDoxygen.js", "--docs", "--configPath=config/eos-smart-contracts/Doxyfile"];
+    const pythonArgs = ["-m", "doxybook", "-i=tmp/xml", "-o=api-reference/eos-smart-contracts", "-t=gitbook"];
 
-const pythonResult = spawnSync("python", pythonArgs, {stdio: ["inherit", "inherit", "pipe"]});
-if (pythonResult.stderr.length > 0)
-    throw new Error(pythonResult.stderr);
+    const nodeResult = spawnSync("node", nodeArgs, {stdio: ["inherit", "inherit", "pipe"]});
+    if (nodeResult.stderr.length > 0)
+        throw new Error(nodeResult.stderr);
 
-for (const fileName of fs.readdirSync("api-reference/eos-smart-contracts"))
-    if (!/^(modules|structmemo__x__transfer|group__.*).md$/.test(fileName))
-        fs.unlinkSync("api-reference/eos-smart-contracts/" + fileName);
+    const pythonResult = spawnSync("python", pythonArgs, {stdio: ["inherit", "inherit", "pipe"]});
+    if (pythonResult.stderr.length > 0)
+        throw new Error(pythonResult.stderr);
 
-function remove(pathName) {
-    if (fs.lstatSync(pathName).isDirectory()) {
-        for (const fileName of fs.readdirSync(pathName))
-            remove(pathName + "/" + fileName);
-        fs.rmdirSync(pathName);
+    for (const fileName of fs.readdirSync("api-reference/eos-smart-contracts"))
+        if (!/^(modules|structmemo__x__transfer|group__.*).md$/.test(fileName))
+            fs.unlinkSync("api-reference/eos-smart-contracts/" + fileName);
+
+    function remove(pathName) {
+        if (fs.lstatSync(pathName).isDirectory()) {
+            for (const fileName of fs.readdirSync(pathName))
+                remove(pathName + "/" + fileName);
+            fs.rmdirSync(pathName);
+        }
+        else {
+            fs.unlinkSync(pathName);
+        }
     }
-    else {
-        fs.unlinkSync(pathName);
-    }
-}
 
-remove("tmp");
+    remove("tmp");
 
-fs.copyFileSync("node_modules/bancor-contracts_eos/README.md", "api-reference/eos-smart-contracts/README.md");
+    fs.copyFileSync("node_modules/bancor-contracts_eos/README.md", "api-reference/eos-smart-contracts/README.md");
+});

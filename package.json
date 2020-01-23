@@ -13,9 +13,9 @@
     "postinstall": "doxygen --download"
   },
   "dependencies": {
-    "bancor-contracts": "git+https://git@github.com/bancorprotocol/contracts",
-    "bancor-contracts_eos": "git+https://git@github.com/bancorprotocol/contracts_eos",
+    "download-git-repo": "3.0.2",
     "doxygen": "0.3.2",
-    "solidity-docgen": "0.3.11"
+    "solidity-docgen": "0.3.11",
+    "truffle": "4.1.16"
   }
 }
