@@ -72,3 +72,4 @@
     * [Settings Table](../api-reference/eos-smart-contracts/group___x_settings___table.md)
   * [XTransferRerouter](../api-reference/eos-smart-contracts/group___bancor_xtransfer.md)
     * [Settings Table](../api-reference/eos-smart-contracts/group___xtransfer___settings___table.md)
+

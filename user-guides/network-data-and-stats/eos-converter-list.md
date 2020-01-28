@@ -17,7 +17,6 @@ description: Below you will find the Bancor Network EOS Converter List.
 | HVT | bancorc11131 |
 | OCT | bancorc11132 |
 | MEV | bancorc11134 |
-| ZKS | bancorc11142 |
 | CUSD | bancorc11144 |
 | TAEL | bancorc11145 |
 | ZOS | bancorc11151 |
@@ -26,7 +25,6 @@ description: Below you will find the Bancor Network EOS Converter List.
 | DAPP | bancorc11154 |
 | CHEX | bancorc11155 |
 | FINX | bancorc11211 |
-| STUFF | bancorc11212 |
 | EMT | bancorc11213 |
 | PIXEOS | bancorc11214 |
 | NUT | bancorc11215 |
