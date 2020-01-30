@@ -17,7 +17,6 @@ description: Below you will find the Bancor Network EOS Converter List.
 | HVT | bancorc11131 |
 | OCT | bancorc11132 |
 | MEV | bancorc11134 |
-| CUSD | bancorc11144 |
 | TAEL | bancorc11145 |
 | ZOS | bancorc11151 |
 | EQUA | bancorc11152 |
