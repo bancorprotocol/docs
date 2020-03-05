@@ -168,7 +168,7 @@ note that token ownership can only be accepted if its total-supply is greater th
 
 updates the current conversion fee
 
-can only be called by the manager
+can only be called by the contract owner
 
 ## Parameters:
 
@@ -212,7 +212,7 @@ upgrades the converter to the latest version
 
 can only be called by the owner
 
-note that the owner needs to call acceptOwnership/acceptManagement on the new converter after the upgrade
+note that the owner needs to call acceptOwnership on the new converter after the upgrade
 
 # Function `addReserve(contract IERC20Token _token, uint32 _ratio)` {#BancorConverter-addReserve-contract-IERC20Token-uint32-}
 

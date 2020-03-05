@@ -62,7 +62,7 @@ The contract is upgradable.
 
 - [`isConverterValid(contract IBancorConverter _converter)`](#BancorConverterRegistry-isConverterValid-contract-IBancorConverter-)
 
-- [`getLiquidityPoolByReserveConfig(address[] _reserveTokens, uint256[] _reserveRatios)`](#BancorConverterRegistry-getLiquidityPoolByReserveConfig-address---uint256---)
+- [`getLiquidityPoolByReserveConfig(contract IBancorConverter _converter)`](#BancorConverterRegistry-getLiquidityPoolByReserveConfig-contract-IBancorConverter-)
 
 # Events:
 
@@ -306,15 +306,13 @@ checks whether or not a given converter is valid
 
 - true if the given converter is valid, false if not
 
-# Function `getLiquidityPoolByReserveConfig(address[] _reserveTokens, uint256[] _reserveRatios) → contract ISmartToken` {#BancorConverterRegistry-getLiquidityPoolByReserveConfig-address---uint256---}
+# Function `getLiquidityPoolByReserveConfig(contract IBancorConverter _converter) → contract ISmartToken` {#BancorConverterRegistry-getLiquidityPoolByReserveConfig-contract-IBancorConverter-}
 
-searches for a liquidity pool with specific reserve tokens / ratios
+searches for a liquidity pool with specific reserve tokens/ratios
 
 ## Parameters:
 
-- `_reserveTokens`:   reserve tokens
-
-- `_reserveRatios`:   reserve ratios
+- `_converter`: converter with specific reserve tokens/ratios
 
 ## Return Values:
 

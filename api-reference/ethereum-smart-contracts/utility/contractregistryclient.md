@@ -6,7 +6,7 @@ Base contract for ContractRegistry clients
 
 - [`restoreRegistry()`](#ContractRegistryClient-restoreRegistry--)
 
-- [`restrictRegistryUpdate(bool _adminOnly)`](#ContractRegistryClient-restrictRegistryUpdate-bool-)
+- [`restrictRegistryUpdate(bool _onlyOwnerCanUpdateRegistry)`](#ContractRegistryClient-restrictRegistryUpdate-bool-)
 
 # Function `updateRegistry()` {#ContractRegistryClient-updateRegistry--}
 
@@ -16,10 +16,10 @@ updates to the new contract-registry
 
 restores the previous contract-registry
 
-# Function `restrictRegistryUpdate(bool _adminOnly)` {#ContractRegistryClient-restrictRegistryUpdate-bool-}
+# Function `restrictRegistryUpdate(bool _onlyOwnerCanUpdateRegistry)` {#ContractRegistryClient-restrictRegistryUpdate-bool-}
 
 restricts the permission to update the contract-registry
 
 ## Parameters:
 
-- `_adminOnly`:    indicates whether or not permission is restricted to administrator only
+- `_onlyOwnerCanUpdateRegistry`:  indicates whether or not permission is restricted to owner only
