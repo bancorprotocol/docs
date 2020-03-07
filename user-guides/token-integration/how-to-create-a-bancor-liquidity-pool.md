@@ -45,7 +45,7 @@ Next step is to deploy the converter that will handle the actual conversions.
   * \_token - address of the pool token created in the previous step.
   * \_registry - address of the token registry contract.
   * \_maxConversionFee - 30000 \(3%\) - recommended value.
-  * \_reserveToken - it's possible to add the first reserve upon creation by providing its address here - this can also be done as a separate step later.
+  * \_reserveToken - it's possible to add the first reserve upon creation by providing its ERC20 address here - this can also be done as a separate step later.
   * \_reserveRatio - ratio of the first reserve if it's defined upon creation, 500,000 \(50%\) can be used when creating a pool with 2 identical reserves \(50% each\).
 
 ### Step \#4: Reserve Definition
@@ -57,7 +57,7 @@ The first reserve can also be created upon creation in the previous step. Other 
 Note that since BNT or USDB serve as anchors that connect all pools in the Bancor Network, one of them should be added to the pool to ensure that the pool is actually connected and that tokens in the pool are convertible to other tokens in the network.
 
 * New converter - execute **addReserve**, args:
-  * \_token - address of the reserve token.
+  * \_token - address of the ERC20 reserve token.
   * \_ratio - reserve ratio, 500,000 \(50%\) can be used when creating a pool with 2 identical reserves \(50% each\), but any ratio can be define as long as the total reserve ratio \(of all reserves\) doesn't exceed 100%.
 * Repeat this step for any reserve you'd like to add. Any number of reserves can be added as long as the total reserve ratio doesn't exceed 100%
 
