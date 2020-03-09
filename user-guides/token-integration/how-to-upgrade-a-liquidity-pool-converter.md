@@ -19,7 +19,7 @@ New converter upgrades will be announced in the [Bancor Developers Telegram Grou
 * Access to the wallet that owns the original converter
 * \[BancorConverterUpgrader\] contract address
 * Go to our registry [https://etherscan.io/address/0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4\#readContract](https://etherscan.io/address/0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4#readContract)
-* Scroll to point 3 and enter “BancorConverterUpgrader” to receive the latest address to use:
+* Scroll to point 3 and enter “0x42616e636f72436f6e7665727465725570677261646572” \(bytes32 representation of 'BancorConverterUpgrader'\) to receive the latest address to use:
 
 ![Bancor Coverter Address ](https://support.bancor.network/hc/article_attachments/360006541380/pic_2.png)
 
@@ -37,7 +37,7 @@ First step is to transfer the converter ownership to the BancorConverterUpgrader
    3. Click “**Access**”
 4. Scroll down to the next step
 5. Select the “**transferOwnership**” function from the drop down
-6. Enter the “BancorConverterUpgrader” contract address under \_newOwner: **\[BancorConverterUpgrader\]** ![pic\_4.png](https://support.bancor.network/hc/article_attachments/360006559919/pic_4.png)
+6. Enter the Converter Upgrader contract address under \_newOwner:![pic\_4.png](https://support.bancor.network/hc/article_attachments/360006559919/pic_4.png)
 7. Sign in to your wallet \(this must be the wallet that owns the converter\)
 8. Click “**Write**”
 9. Proceed to **Step 2**
