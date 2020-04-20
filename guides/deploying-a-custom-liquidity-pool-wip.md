@@ -11,9 +11,9 @@ description: >-
 
 We strongly advise you have the right software development and blockchain knowledge before entering into the process. Mistakes and errors on your behalf in the process of deploying and activating a liquidity pool could result in your financial loss and other related damages.
 
-_Permissionless listing portals can be found here:_
+_Self-service listing portals can be found here:_
 
-ERC-20 Tokens: [CoTrader Portal](https://bancor.cotrader.com/) \| EOS Tokens: [EOS Nation](https://bancor.eosnation.io/)
+ERC-20 Tokens: [Katana Pools](https://katanapools.com/pool/create) \| EOS Tokens: [EOS Nation](https://bancor.eosnation.io/)
 
 ## A Note on Liquidity Pools
 

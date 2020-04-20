@@ -6,9 +6,9 @@ description: >-
 
 # Minting USDB
 
-USDB, a stable token backed by BNT, can be used to create stable liquidity pools on [Bancor CoTrader](https://bancor.cotrader.com/).
+USDB, a stable token backed by BNT, can be used to create stable liquidity pools on [Katana Pools](https://katanapools.com/).
 
-**Stable:Stable** pools \(e.g., **DAI:USDB** or **USDT:USDB**\) eliminate price movements in the pool’s assets, eliminating impermanent loss and maximizing the profitability of conversion fees.
+**Stable:Stable** pools \(e.g., **DAI:USDB** or **USDT:USDB**\) eliminate price movements in the pool’s assets, eliminating impermanent loss arising from normal token fluctuations and maximizing the profitability of conversion fees.
 
 ### Step \#1: Unlock BNT
 
