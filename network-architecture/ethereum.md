@@ -10,7 +10,7 @@ The Bancor Network consists of a modular and upgradable smart contract design, w
 
 The main components in the network are the **BancorNetwork** contract, the **SmartToken** contract and the **BancorConverter** contract.
 
-![Bancor Network Smart Contract Architecture ](../.gitbook/assets/graph-1-4.png)
+![](../.gitbook/assets/graph-1.png)
 
 ## Entities
 

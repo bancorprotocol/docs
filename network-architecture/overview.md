@@ -28,9 +28,9 @@ Every liquidity pool is managed by a **BancorConverter** contract, and liquidity
 
 Every liquidity pool in Bancor Network is registered in the **BancorConverterRegistry** contract, a global registry to allow for easy discovery. Liquidity providers use the registry to find or create new pools where they might want to deploy capital. Users/traders use the registry to determine which tokens can be converted by the network and to determine which path a conversion might take.
 
-Liquidity providers can call the `registerConverter` or `unregisterConverter` functions to add or remove a liquidity pool to/from the registry.
+Liquidity providers can call the `addConverter` or `removeConverter` functions to add or remove a liquidity pool to/from the registry.
 
-Users can also call the `tokens` function to iterate through all the available tokens / liquidity pools in the registry.
+Users can also call the `getConvertibleTokens` function to iterate through all the available tokens / liquidity pools in the registry.
 
 ### Cross-Chain Bridge \(BancorX\)
 
