@@ -1,0 +1,2 @@
+# Currency Stats Table
+

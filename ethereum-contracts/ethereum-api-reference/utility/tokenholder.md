@@ -1,3 +1,5 @@
+# TokenHolder
+
 We consider every contract to be a 'token holder' since it's currently not possible
 
 for a contract to deny receiving tokens.
@@ -10,28 +12,26 @@ Note that we use the non standard ERC-20 interface which has no return value for
 
 in order to support both non standard as well as standard token contracts.
 
-see https://github.com/ethereum/solidity/issues/4116
+see [https://github.com/ethereum/solidity/issues/4116](https://github.com/ethereum/solidity/issues/4116)
 
-# Functions:
+## Functions:
 
-- [`constructor()`](#TokenHolder-constructor--)
+* [`constructor()`](tokenholder.md#TokenHolder-constructor--)
+* [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](tokenholder.md#TokenHolder-withdrawTokens-contract-IERC20Token-address-uint256-)
 
-- [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](#TokenHolder-withdrawTokens-contract-IERC20Token-address-uint256-)
-
-# Function `constructor()` {#TokenHolder-constructor--}
+## Function `constructor()` <a id="TokenHolder-constructor--"></a>
 
 initializes a new TokenHolder instance
 
-# Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#TokenHolder-withdrawTokens-contract-IERC20Token-address-uint256-}
+## Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` <a id="TokenHolder-withdrawTokens-contract-IERC20Token-address-uint256-"></a>
 
 withdraws tokens held by the contract and sends them to an account
 
 can only be called by the owner
 
-## Parameters:
+### Parameters:
 
-- `_token`:   ERC20 token contract address
+* `_token`: ERC20 token contract address
+* `_to`: account to receive the new amount
+* `_amount`: amount to withdraw
 
-- `_to`:      account to receive the new amount
-
-- `_amount`:  amount to withdraw

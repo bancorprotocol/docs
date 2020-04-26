@@ -1,24 +1,24 @@
+# Managed
+
 Provides support and utilities for contract management
 
 Note that a managed contract must also have an owner
 
-# Functions:
+## Functions:
 
-- [`constructor()`](#Managed-constructor--)
+* [`constructor()`](managed.md#Managed-constructor--)
+* [`transferManagement(address _newManager)`](managed.md#Managed-transferManagement-address-)
+* [`acceptManagement()`](managed.md#Managed-acceptManagement--)
 
-- [`transferManagement(address _newManager)`](#Managed-transferManagement-address-)
+## Events:
 
-- [`acceptManagement()`](#Managed-acceptManagement--)
+* [`ManagerUpdate(address _prevManager, address _newManager)`](managed.md#Managed-ManagerUpdate-address-address-)
 
-# Events:
-
-- [`ManagerUpdate(address _prevManager, address _newManager)`](#Managed-ManagerUpdate-address-address-)
-
-# Function `constructor()` {#Managed-constructor--}
+## Function `constructor()` <a id="Managed-constructor--"></a>
 
 initializes a new Managed instance
 
-# Function `transferManagement(address _newManager)` {#Managed-transferManagement-address-}
+## Function `transferManagement(address _newManager)` <a id="Managed-transferManagement-address-"></a>
 
 allows transferring the contract management
 
@@ -26,20 +26,20 @@ the new manager still needs to accept the transfer
 
 can only be called by the contract manager
 
-## Parameters:
+### Parameters:
 
-- `_newManager`:    new contract manager
+* `_newManager`:    new contract manager
 
-# Function `acceptManagement()` {#Managed-acceptManagement--}
+## Function `acceptManagement()` <a id="Managed-acceptManagement--"></a>
 
 used by a new manager to accept a management transfer
 
-# Event `ManagerUpdate(address _prevManager, address _newManager)` {#Managed-ManagerUpdate-address-address-}
+## Event `ManagerUpdate(address _prevManager, address _newManager)` <a id="Managed-ManagerUpdate-address-address-"></a>
 
 triggered when the manager is updated
 
-## Parameters:
+### Parameters:
 
-- `_prevManager`: previous manager
+* `_prevManager`: previous manager
+* `_newManager`: new manager
 
-- `_newManager`:  new manager
