@@ -12,11 +12,12 @@
   "scripts": {
     "postinstall": "doxygen --download"
   },
-  "dependencies": {
+  "devDependencies": {
     "download-git-repo": "3.0.2",
     "doxygen": "0.3.2",
     "solidity-docgen": "0.3.11",
     "truffle": "4.1.16",
-    "typedoc": "0.17.4"
+    "typedoc": "^0.17.4",
+    "typescript": "^3.8.3"
   }
 }
