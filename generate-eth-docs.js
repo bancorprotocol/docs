@@ -8,7 +8,7 @@ require("download-git-repo")("bancorprotocol/contracts", "node_modules/bancor-co
     const args = [
         "node_modules/solidity-docgen/dist/cli.js",
         "--input=node_modules/bancor-contracts/solidity/contracts",
-        "--output=api-reference/ethereum-smart-contracts",
+        "--output=ethereum-contracts/ethereum-api-reference",
         "--templates=config/ethereum-smart-contracts",
         "--solc-module=node_modules/truffle/node_modules/solc",
         "--solc-settings=" + JSON.stringify({optimizer: {enabled: true, runs: 200}}),
@@ -30,9 +30,9 @@ require("download-git-repo")("bancorprotocol/contracts", "node_modules/bancor-co
         }
     }
 
-    fix("api-reference/ethereum-smart-contracts");
+    fix("ethereum-contracts/ethereum-api-reference");
 
-    fs.copyFileSync("node_modules/bancor-contracts/README.md", "api-reference/ethereum-smart-contracts/README.md");
-    fs.copyFileSync("node_modules/bancor-contracts/solidity/utils/README.md", "api-reference/ethereum-smart-contracts/solidity/utils/README.md");
-    fs.copyFileSync("node_modules/bancor-contracts/solidity/python/README.md", "api-reference/ethereum-smart-contracts/solidity/python/README.md");
+    fs.copyFileSync("node_modules/bancor-contracts/README.md", "ethereum-contracts/ethereum-api-reference/README.md");
+    //fs.copyFileSync("node_modules/bancor-contracts/solidity/utils/README.md", "ethereum-contracts/ethereum-api-reference/utils/README.md");
+    //fs.copyFileSync("node_modules/bancor-contracts/solidity/python/README.md", "ethereum-contracts/ethereum-api-reference/python/README.md");
 });

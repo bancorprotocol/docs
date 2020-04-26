@@ -1,12 +1,9 @@
-# Utils
-
 Utilities & Common Modifiers
 
-## Functions:
+# Functions:
 
-* [`constructor()`](utils.md#Utils-constructor--)
+- [`constructor()`](#Utils-constructor--)
 
-## Function `constructor()` <a id="Utils-constructor--"></a>
+# Function `constructor()` {#Utils-constructor--}
 
 No description
-

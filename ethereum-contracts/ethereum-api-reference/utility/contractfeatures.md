@@ -1,5 +1,3 @@
-# ContractFeatures
-
 Contract Features
 
 Generic contract that allows every contract on the blockchain to define which features it supports.
@@ -14,66 +12,72 @@ Features can be only enabled/disabled by the contract they are defined for.
 
 Features should be defined by each contract type as bit flags, e.g. -
 
-uint256 public constant FEATURE1 = 1 &lt;&lt; 0;
+uint256 public constant FEATURE1 = 1 << 0;
 
-uint256 public constant FEATURE2 = 1 &lt;&lt; 1;
+uint256 public constant FEATURE2 = 1 << 1;
 
-uint256 public constant FEATURE3 = 1 &lt;&lt; 2;
+uint256 public constant FEATURE3 = 1 << 2;
 
 ...
 
-## Functions:
+# Functions:
 
-* [`constructor()`](contractfeatures.md#ContractFeatures-constructor--)
-* [`isSupported(address _contract, uint256 _features)`](contractfeatures.md#ContractFeatures-isSupported-address-uint256-)
-* [`enableFeatures(uint256 _features, bool _enable)`](contractfeatures.md#ContractFeatures-enableFeatures-uint256-bool-)
+- [`constructor()`](#ContractFeatures-constructor--)
 
-## Events:
+- [`isSupported(address _contract, uint256 _features)`](#ContractFeatures-isSupported-address-uint256-)
 
-* [`FeaturesAddition(address _address, uint256 _features)`](contractfeatures.md#ContractFeatures-FeaturesAddition-address-uint256-)
-* [`FeaturesRemoval(address _address, uint256 _features)`](contractfeatures.md#ContractFeatures-FeaturesRemoval-address-uint256-)
+- [`enableFeatures(uint256 _features, bool _enable)`](#ContractFeatures-enableFeatures-uint256-bool-)
 
-## Function `constructor()` <a id="ContractFeatures-constructor--"></a>
+# Events:
+
+- [`FeaturesAddition(address _address, uint256 _features)`](#ContractFeatures-FeaturesAddition-address-uint256-)
+
+- [`FeaturesRemoval(address _address, uint256 _features)`](#ContractFeatures-FeaturesRemoval-address-uint256-)
+
+# Function `constructor()` {#ContractFeatures-constructor--}
 
 initializes a new ContractFeatures instance
 
-## Function `isSupported(address _contract, uint256 _features) → bool` <a id="ContractFeatures-isSupported-address-uint256-"></a>
+# Function `isSupported(address _contract, uint256 _features) → bool` {#ContractFeatures-isSupported-address-uint256-}
 
-returns true if a given contract supports the given feature\(s\), false if not
+returns true if a given contract supports the given feature(s), false if not
 
-### Parameters:
+## Parameters:
 
-* `_contract`: contract address to check support for
-* `_features`: feature\(s\) to check for
+- `_contract`:    contract address to check support for
 
-### Return Values:
+- `_features`:    feature(s) to check for
 
-* true if the contract supports the feature\(s\), false if not
+## Return Values:
 
-## Function `enableFeatures(uint256 _features, bool _enable)` <a id="ContractFeatures-enableFeatures-uint256-bool-"></a>
+- true if the contract supports the feature(s), false if not
 
-allows a contract to enable/disable certain feature\(s\)
+# Function `enableFeatures(uint256 _features, bool _enable)` {#ContractFeatures-enableFeatures-uint256-bool-}
 
-### Parameters:
+allows a contract to enable/disable certain feature(s)
 
-* `_features`: feature\(s\) to enable/disable
-* `_enable`: true to enable the feature\(s\), false to disabled them
+## Parameters:
 
-## Event `FeaturesAddition(address _address, uint256 _features)` <a id="ContractFeatures-FeaturesAddition-address-uint256-"></a>
+- `_features`:    feature(s) to enable/disable
+
+- `_enable`:      true to enable the feature(s), false to disabled them
+
+# Event `FeaturesAddition(address _address, uint256 _features)` {#ContractFeatures-FeaturesAddition-address-uint256-}
 
 triggered when a contract notifies of features it supports
 
-### Parameters:
+## Parameters:
 
-* `_address`: contract address
-* `_features`: features supported
+- `_address`:     contract address
 
-## Event `FeaturesRemoval(address _address, uint256 _features)` <a id="ContractFeatures-FeaturesRemoval-address-uint256-"></a>
+- `_features`:    features supported
+
+# Event `FeaturesRemoval(address _address, uint256 _features)` {#ContractFeatures-FeaturesRemoval-address-uint256-}
 
 triggered when a contract notifies of features it no longer supports
 
-### Parameters:
+## Parameters:
 
-* `_address`: contract address
-* `_features`: features no longer supported
+- `_address`:     contract address
 
+- `_features`:    features no longer supported
