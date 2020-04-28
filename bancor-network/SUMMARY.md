@@ -90,8 +90,9 @@
 
 ## SDK
 * [API Reference](../sdk/sdk-api-reference/README.md)
+  * [Globals](../sdk/sdk-api-reference/globals.md)
   * [Classes](../sdk/sdk-api-reference/classes/README.md)
-    * [Main](../sdk/sdk-api-reference/classes/_index_.sdk.md)
+    * [SDK](../sdk/sdk-api-reference/classes/_index_.sdk.md)
     * [Pricing](../sdk/sdk-api-reference/classes/_pricing_.pricing.md)
     * [History](../sdk/sdk-api-reference/classes/_history_.history.md)
     * [Utils](../sdk/sdk-api-reference/classes/_utils_.utils.md)
@@ -104,7 +105,7 @@
     * [Settings](../sdk/sdk-api-reference/interfaces/_types_.settings.md)
     * [Token](../sdk/sdk-api-reference/interfaces/_types_.token.md)
   * [Modules](../sdk/sdk-api-reference/modules/README.md)
-    * [Main](../sdk/sdk-api-reference/modules/_index_.md)
+    * [SDK](../sdk/sdk-api-reference/modules/_index_.md)
     * [Pricing](../sdk/sdk-api-reference/modules/_pricing_.md)
     * [History](../sdk/sdk-api-reference/modules/_history_.md)
     * [Utils](../sdk/sdk-api-reference/modules/_utils_.md)
