@@ -1,4 +1,4 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [Settings](_types_.settings.md)
+[Bancor SDK](../README.md) › [Globals](../globals.md) › [Settings](settings.md)
 
 # Interface: Settings
 
@@ -12,8 +12,8 @@ SDK initialization settings interface
 
 ### Properties
 
-* [eosNodeEndpoint](_types_.settings.md#optional-eosnodeendpoint)
-* [ethereumNodeEndpoint](_types_.settings.md#optional-ethereumnodeendpoint)
+* [eosNodeEndpoint](settings.md#optional-eosnodeendpoint)
+* [ethereumNodeEndpoint](settings.md#optional-ethereumnodeendpoint)
 
 ## Properties
 

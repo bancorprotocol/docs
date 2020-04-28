@@ -105,9 +105,4 @@
     * [Converter](../sdk/sdk-api-reference/interfaces/_types_.converter.md)
     * [Settings](../sdk/sdk-api-reference/interfaces/_types_.settings.md)
     * [Token](../sdk/sdk-api-reference/interfaces/_types_.token.md)
-  * [Modules](../sdk/sdk-api-reference/modules/README.md)
-    * [SDK](../sdk/sdk-api-reference/modules/_index_.md)
-    * [Pricing](../sdk/sdk-api-reference/modules/_pricing_.md)
-    * [History](../sdk/sdk-api-reference/modules/_history_.md)
-    * [Utils](../sdk/sdk-api-reference/modules/_utils_.md)
-    * [Types](../sdk/sdk-api-reference/modules/_types_.md)
+  

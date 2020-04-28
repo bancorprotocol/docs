@@ -1,4 +1,4 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › ["index"](../modules/_index_.md) › [SDK](_index_.sdk.md)
+[Bancor SDK](../README.md) › [Globals](../globals.md) › [SDK](sdk.md)
 
 # Class: SDK
 
@@ -12,16 +12,16 @@ Main SDK object, should be instantiated using the `create` static method
 
 ### Properties
 
-* [_core](_index_.sdk.md#_core)
-* [history](_index_.sdk.md#history)
-* [pricing](_index_.sdk.md#pricing)
-* [utils](_index_.sdk.md#utils)
+* [_core](sdk.md#_core)
+* [history](sdk.md#history)
+* [pricing](sdk.md#pricing)
+* [utils](sdk.md#utils)
 
 ### Methods
 
-* [refresh](_index_.sdk.md#refresh)
-* [create](_index_.sdk.md#static-create)
-* [destroy](_index_.sdk.md#static-destroy)
+* [refresh](sdk.md#refresh)
+* [create](sdk.md#static-create)
+* [destroy](sdk.md#static-destroy)
 
 ## Properties
 
@@ -62,7 +62,7 @@ ___
 
 ### `Static` create
 
-▸ **create**(`settings`: [Settings](../interfaces/_types_.settings.md)): *Promise‹[SDK](_index_.sdk.md)›*
+▸ **create**(`settings`: [Settings](../interfaces/settings.md)): *Promise‹[SDK](sdk.md)›*
 
 creates and initializes a new SDK object
 should be called as the first step before using the SDK
@@ -71,9 +71,9 @@ should be called as the first step before using the SDK
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`settings` | [Settings](../interfaces/_types_.settings.md) | initialization settings  |
+`settings` | [Settings](../interfaces/settings.md) | initialization settings  |
 
-**Returns:** *Promise‹[SDK](_index_.sdk.md)›*
+**Returns:** *Promise‹[SDK](sdk.md)›*
 
 new SDK object
 
@@ -81,7 +81,7 @@ ___
 
 ### `Static` destroy
 
-▸ **destroy**(`sdk`: [SDK](_index_.sdk.md)): *Promise‹void›*
+▸ **destroy**(`sdk`: [SDK](sdk.md)): *Promise‹void›*
 
 cleans up and destroys an existing SDK object
 should be called as the last step after the SDK work is complete to free up resources
@@ -90,6 +90,6 @@ should be called as the last step after the SDK work is complete to free up reso
 
 Name | Type | Description |
 ------ | ------ | ------ |
-`sdk` | [SDK](_index_.sdk.md) | sdk object  |
+`sdk` | [SDK](sdk.md) | sdk object  |
 
 **Returns:** *Promise‹void›*
