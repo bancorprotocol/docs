@@ -4,21 +4,10 @@
 
 ## Index
 
-### Enumerations
+### Modules
 
-* [BlockchainType](enums/blockchaintype.md)
-
-### Classes
-
-* [History](classes/history.md)
-* [Pricing](classes/pricing.md)
-* [SDK](classes/sdk.md)
-* [Utils](classes/utils.md)
-
-### Interfaces
-
-* [Blockchain](interfaces/blockchain.md)
-* [ConversionEvent](interfaces/conversionevent.md)
-* [Converter](interfaces/converter.md)
-* [Settings](interfaces/settings.md)
-* [Token](interfaces/token.md)
+* ["history"](modules/_history_.md)
+* ["index"](modules/_index_.md)
+* ["pricing"](modules/_pricing_.md)
+* ["types"](modules/_types_.md)
+* ["utils"](modules/_utils_.md)
