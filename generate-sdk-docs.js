@@ -2,6 +2,9 @@ require("download-git-repo")("bancorprotocol/bancor-sdk", "node_modules/bancor-s
     if (error)
         throw error;
 
+    const fs = require("fs");
+    const path = require("path");
+
     const spawnSync = require("child_process").spawnSync;
 
     const args = [
@@ -28,4 +31,18 @@ require("download-git-repo")("bancorprotocol/bancor-sdk", "node_modules/bancor-s
 
     const res = spawnSync("node_modules/typedoc/bin/typedoc", args);
     console.log(String(res.stdout));
+
+    function addReadme(targetPath) {
+        const readmePath = path.join(targetPath, "README.md");
+        if (!fs.existsSync(readmePath))
+            fs.writeFileSync(readmePath, " # " + path.basename(targetPath));
+
+        for (const filename of fs.readdirSync(targetPath)) {
+            const childPath = path.join(targetPath, filename);
+            if (fs.lstatSync(childPath).isDirectory())
+                addReadme(childPath);
+        }
+    }
+
+    addReadme("sdk/sdk-api-reference");
 });
