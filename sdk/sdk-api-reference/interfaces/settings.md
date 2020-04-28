@@ -21,8 +21,12 @@ SDK initialization settings interface
 
 • **eosNodeEndpoint**? : *string*
 
+eosjs endpoint - optional, mandatory when interacting with an EOS blockchain
+
 ___
 
 ### `Optional` ethereumNodeEndpoint
 
 • **ethereumNodeEndpoint**? : *string | Object*
+
+web3 endpoint - optional, mandatory when interacting with an Ethereum blockchain

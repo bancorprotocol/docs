@@ -2,7 +2,7 @@
 
 # Interface: Blockchain
 
-Blockchain interface - defines the methods that each blockchain plugin should implement
+**`internal`** 
 
 ## Hierarchy
 

@@ -22,14 +22,20 @@ Token interface
 
 • **blockchainId**: *string*
 
+token blockchain id - address for Ethereum blockchain, account name for EOS blockchain
+
 ___
 
 ###  blockchainType
 
 • **blockchainType**: *[BlockchainType](../enums/blockchaintype.md)*
 
+token blockchain type
+
 ___
 
 ### `Optional` symbol
 
 • **symbol**? : *string*
+
+token symbol - optional, mandatory for EOS tokens

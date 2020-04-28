@@ -29,23 +29,31 @@ Main SDK object, should be instantiated using the `create` static method
 
 • **_core**: *Core‹›* = new Core()
 
+**`internal`** 
+
 ___
 
 ###  history
 
-• **history**: *any* = null
+• **history**: *[History](history.md)* = null
+
+History module
 
 ___
 
 ###  pricing
 
-• **pricing**: *any* = null
+• **pricing**: *[Pricing](pricing.md)* = null
+
+Pricing module
 
 ___
 
 ###  utils
 
-• **utils**: *any* = null
+• **utils**: *[Utils](utils.md)* = null
+
+Utils module
 
 ## Methods
 

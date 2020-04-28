@@ -22,14 +22,20 @@ Converter interface
 
 • **blockchainId**: *string*
 
+converter blockchain id - address for Ethereum blockchain, account name for EOS blockchain
+
 ___
 
 ###  blockchainType
 
 • **blockchainType**: *[BlockchainType](../enums/blockchaintype.md)*
 
+converter blockchain type
+
 ___
 
 ### `Optional` symbol
 
 • **symbol**? : *string*
+
+converter symbol - optional, mandatory for EOS tokens
