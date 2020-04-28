@@ -22,7 +22,8 @@ require("download-git-repo")("bancorprotocol/bancor-sdk", "node_modules/bancor-s
         "--mode", "modules",
         "--name", "Bancor SDK",
         "--hideGenerator",
-        "--out", "sdk/sdk-api-reference"
+        "--out", "sdk/sdk-api-reference",
+        "--plugin", "typedoc-plugin-markdown"
     ];
 
     const res = spawnSync("node_modules/typedoc/bin/typedoc", args);
