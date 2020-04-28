@@ -105,7 +105,7 @@ In this step, we'll circle back to the Smart Token we deployed in Step \#1. Navi
 
 Now that the system is configured, it’s time to activate it. Activation means transferring the pool token ownership to the converter.
 
-* On the `Smart Token` contract in our Remix window, execute the **transferOwnership** function with the following parameters:
+* On the `Smart Token` contract in our Etherscan, execute the **transferOwnership** function with the following parameters:
 
   * `_newOwner`: This is the address of the Converter contract we deployed earlier
 
