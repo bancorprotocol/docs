@@ -1,4 +1,4 @@
-require("download-git-repo")("bancorprotocol/bancor-sdk#redesign_and_cleanups", "node_modules/bancor-sdk", function (error) {
+require("download-git-repo")("bancorprotocol/bancor-sdk", "node_modules/bancor-sdk", function (error) {
     if (error)
         throw error;
 
