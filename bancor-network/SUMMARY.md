@@ -67,6 +67,7 @@
 
 ## EOS Contracts
 
+* [Converter List](../eos-contracts/converter-list.md)
 * [API Reference](../eos-contracts/eos-api-reference/README.md)
   * [BancorConverter](../eos-contracts/eos-api-reference/bancorconverter/README.md)
     * [Converters Table](../eos-contracts/eos-api-reference/bancorconverter/converters-table.md)
