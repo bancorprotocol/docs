@@ -8,6 +8,17 @@ require("download-git-repo")("bancorprotocol/bancor-sdk", "node_modules/bancor-s
     const spawnSync = require("child_process").spawnSync;
 
     const args = [
+        "--mode", "file",
+        "--name", "Bancor SDK",
+        "--disableSources",
+        "--stripInternal",
+        "--hideGenerator",
+        "--excludeExternals",
+        "--excludeNotExported",
+        "--excludePrivate",
+        "--excludeProtected",
+        "--out", "sdk/sdk-api-reference",
+        "--plugin", "typedoc-plugin-markdown",
         "--inputFiles", "node_modules/bancor-sdk/src/index.ts",
         "--inputFiles", "node_modules/bancor-sdk/src/conversion_paths.ts",
         "--inputFiles", "node_modules/bancor-sdk/src/history.ts",
@@ -17,17 +28,7 @@ require("download-git-repo")("bancorprotocol/bancor-sdk", "node_modules/bancor-s
         "--exclude", "**/blockchains/**/*.ts",
         "--exclude", "**/core.ts",
         "--exclude", "**/helpers.ts",
-        "--exclude", "**/sdk_module.ts",
-        "--excludeExternals",
-        "--excludeNotExported",
-        "--excludePrivate",
-        "--excludeProtected",
-        "--disableSources",
-        "--mode", "file",
-        "--name", "Bancor SDK",
-        "--hideGenerator",
-        "--out", "sdk/sdk-api-reference",
-        "--plugin", "typedoc-plugin-markdown"
+        "--exclude", "**/sdk_module.ts"        
     ];
 
     const res = spawnSync("node_modules/typedoc/bin/typedoc", args);

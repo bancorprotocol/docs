@@ -12,7 +12,6 @@ Main SDK object, should be instantiated using the `create` static method
 
 ### Properties
 
-* [_core](sdk.md#_core)
 * [history](sdk.md#history)
 * [pricing](sdk.md#pricing)
 * [utils](sdk.md#utils)
@@ -24,14 +23,6 @@ Main SDK object, should be instantiated using the `create` static method
 * [destroy](sdk.md#static-destroy)
 
 ## Properties
-
-###  _core
-
-• **_core**: *Core‹›* = new Core()
-
-**`internal`** 
-
-___
 
 ###  history
 

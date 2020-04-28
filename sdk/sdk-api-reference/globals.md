@@ -17,7 +17,6 @@
 
 ### Interfaces
 
-* [Blockchain](interfaces/blockchain.md)
 * [ConversionEvent](interfaces/conversionevent.md)
 * [Converter](interfaces/converter.md)
 * [Settings](interfaces/settings.md)
