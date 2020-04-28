@@ -1,4 +1,4 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › ["pricing"](../modules/_pricing_.md) › [Pricing](_pricing_.pricing.md)
+[bancor-sdk](../README.md) › [Globals](../globals.md) › ["pricing"](../modules/_pricing_.md) › [Pricing](_pricing_.pricing.md)
 
 # Class: Pricing
 

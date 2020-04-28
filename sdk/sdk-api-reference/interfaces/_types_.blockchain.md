@@ -1,4 +1,4 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [Blockchain](_types_.blockchain.md)
+[bancor-sdk](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [Blockchain](_types_.blockchain.md)
 
 # Interface: Blockchain
 

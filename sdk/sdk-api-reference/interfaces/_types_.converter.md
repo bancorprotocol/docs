@@ -1,4 +1,4 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [Converter](_types_.converter.md)
+[bancor-sdk](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [Converter](_types_.converter.md)
 
 # Interface: Converter
 

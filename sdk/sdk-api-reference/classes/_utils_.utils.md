@@ -1,4 +1,4 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › ["utils"](../modules/_utils_.md) › [Utils](_utils_.utils.md)
+[bancor-sdk](../README.md) › [Globals](../globals.md) › ["utils"](../modules/_utils_.md) › [Utils](_utils_.utils.md)
 
 # Class: Utils
 

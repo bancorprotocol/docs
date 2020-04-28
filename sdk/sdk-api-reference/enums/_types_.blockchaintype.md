@@ -1,4 +1,4 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [BlockchainType](_types_.blockchaintype.md)
+[bancor-sdk](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [BlockchainType](_types_.blockchaintype.md)
 
 # Enumeration: BlockchainType
 
