@@ -90,7 +90,6 @@
 
 ## SDK
 * [API Reference](../sdk/sdk-api-reference/README.md)
-  * [Globals](../sdk/sdk-api-reference/globals.md)
   * [Classes](../sdk/sdk-api-reference/classes/README.md)
     * [Main](../sdk/sdk-api-reference/classes/_index_.sdk.md)
     * [Pricing](../sdk/sdk-api-reference/classes/_pricing_.pricing.md)
