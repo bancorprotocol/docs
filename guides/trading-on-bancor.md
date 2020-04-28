@@ -10,3 +10,7 @@ Bancor is also integrated with several decentralized exchange aggregators like [
 
 Other ways to trade via Bancor include the Bancor Widget, which can be embedded by third parties on their sites, and via smart contract interface, where a third party developer has integrated Bancor into their smart contract.
 
+## Trading via Etherscan
+
+If you want to trade directly on the `BancorNetwork` contract, Etherscan's web UI makes it quite easy. Additionally, this guide will be helpful for developers looking to [interface with Bancor contracts](https://docs.bancor.network/guides/interfacing-with-bancor-contracts) via their own smart contract.
+
