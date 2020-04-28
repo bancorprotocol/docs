@@ -22,6 +22,7 @@ require("download-git-repo")("bancorprotocol/bancor-sdk", "node_modules/bancor-s
         "--excludeNotExported",
         "--excludePrivate",
         "--excludeProtected",
+        "--disableSources",
         "--mode", "modules",
         "--name", "Bancor SDK",
         "--hideGenerator",

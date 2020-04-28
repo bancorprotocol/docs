@@ -22,20 +22,14 @@ Converter interface
 
 • **blockchainId**: *string*
 
-Defined in types.ts:31
-
 ___
 
 ###  blockchainType
 
 • **blockchainType**: *[BlockchainType](../enums/_types_.blockchaintype.md)*
 
-Defined in types.ts:30
-
 ___
 
 ### `Optional` symbol
 
 • **symbol**? : *string*
-
-Defined in types.ts:32

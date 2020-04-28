@@ -26,15 +26,11 @@ ConversionEvent interface
 
 • **blockNumber**: *number*
 
-Defined in types.ts:39
-
 ___
 
 ### `Optional` conversionFee
 
 • **conversionFee**? : *string*
-
-Defined in types.ts:44
 
 ___
 
@@ -42,15 +38,11 @@ ___
 
 • **inputAmount**: *string*
 
-Defined in types.ts:42
-
 ___
 
 ###  outputAmount
 
 • **outputAmount**: *string*
-
-Defined in types.ts:43
 
 ___
 
@@ -58,20 +50,14 @@ ___
 
 • **sourceToken**: *string*
 
-Defined in types.ts:40
-
 ___
 
 ###  targetToken
 
 • **targetToken**: *string*
 
-Defined in types.ts:41
-
 ___
 
 ###  trader
 
 • **trader**: *string*
-
-Defined in types.ts:45

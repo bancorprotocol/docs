@@ -22,20 +22,14 @@ Token interface
 
 • **blockchainId**: *string*
 
-Defined in types.ts:22
-
 ___
 
 ###  blockchainType
 
 • **blockchainType**: *[BlockchainType](../enums/_types_.blockchaintype.md)*
 
-Defined in types.ts:21
-
 ___
 
 ### `Optional` symbol
 
 • **symbol**? : *string*
-
-Defined in types.ts:23

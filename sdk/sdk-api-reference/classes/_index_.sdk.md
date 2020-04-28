@@ -29,15 +29,11 @@ Main SDK object, should be instantiated using the `create` static method
 
 • **_core**: *Core‹›* = new Core()
 
-Defined in index.ts:14
-
 ___
 
 ###  history
 
 • **history**: *any* = null
-
-Defined in index.ts:11
 
 ___
 
@@ -45,23 +41,17 @@ ___
 
 • **pricing**: *any* = null
 
-Defined in index.ts:12
-
 ___
 
 ###  utils
 
 • **utils**: *any* = null
 
-Defined in index.ts:13
-
 ## Methods
 
 ###  refresh
 
 ▸ **refresh**(): *Promise‹void›*
-
-Defined in index.ts:50
 
 refreshes the local cache with data from the converter registry
 should be called periodically to support new pools
@@ -73,8 +63,6 @@ ___
 ### `Static` create
 
 ▸ **create**(`settings`: [Settings](../interfaces/_types_.settings.md)): *Promise‹[SDK](_index_.sdk.md)›*
-
-Defined in index.ts:24
 
 creates and initializes a new SDK object
 should be called as the first step before using the SDK
@@ -94,8 +82,6 @@ ___
 ### `Static` destroy
 
 ▸ **destroy**(`sdk`: [SDK](_index_.sdk.md)): *Promise‹void›*
-
-Defined in index.ts:39
 
 cleans up and destroys an existing SDK object
 should be called as the last step after the SDK work is complete to free up resources

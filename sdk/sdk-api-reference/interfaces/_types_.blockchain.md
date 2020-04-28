@@ -25,8 +25,6 @@ Blockchain interface - defines the methods that each blockchain plugin should im
 
 ▸ **getAnchorToken**(): *[Token](_types_.token.md)*
 
-Defined in types.ts:52
-
 **Returns:** *[Token](_types_.token.md)*
 
 ___
@@ -34,8 +32,6 @@ ___
 ###  getConversionEvents
 
 ▸ **getConversionEvents**(`token`: [Token](_types_.token.md), `fromBlock`: number, `toBlock`: number): *Promise‹[ConversionEvent](_types_.conversionevent.md)[]›*
-
-Defined in types.ts:56
 
 **Parameters:**
 
@@ -53,8 +49,6 @@ ___
 
 ▸ **getConversionEventsByTimestamp**(`token`: [Token](_types_.token.md), `fromTimestamp`: number, `toTimestamp`: number): *Promise‹[ConversionEvent](_types_.conversionevent.md)[]›*
 
-Defined in types.ts:57
-
 **Parameters:**
 
 Name | Type |
@@ -71,8 +65,6 @@ ___
 
 ▸ **getConverterVersion**(`converter`: [Converter](_types_.converter.md)): *Promise‹string›*
 
-Defined in types.ts:55
-
 **Parameters:**
 
 Name | Type |
@@ -86,8 +78,6 @@ ___
 ###  getPaths
 
 ▸ **getPaths**(`sourceToken`: [Token](_types_.token.md), `targetToken`: [Token](_types_.token.md)): *Promise‹[Token](_types_.token.md)[][]›*
-
-Defined in types.ts:53
 
 **Parameters:**
 
@@ -103,8 +93,6 @@ ___
 ###  getRates
 
 ▸ **getRates**(`tokenPaths`: [Token](_types_.token.md)[][], `tokenAmount`: string): *Promise‹string[]›*
-
-Defined in types.ts:54
 
 **Parameters:**
 

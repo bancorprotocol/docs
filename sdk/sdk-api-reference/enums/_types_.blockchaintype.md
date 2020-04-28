@@ -17,12 +17,8 @@ blockchain types supported by the SDK
 
 • **EOS**: = "eos"
 
-Defined in types.ts:6
-
 ___
 
 ###  Ethereum
 
 • **Ethereum**: = "ethereum"
-
-Defined in types.ts:5

@@ -32,8 +32,6 @@ The Utils module provides various utility and helper functions
 
 *Inherited from [History](_history_.history.md).[constructor](_history_.history.md#constructor)*
 
-Defined in sdk_module.ts:4
-
 **Parameters:**
 
 Name | Type |
@@ -50,15 +48,11 @@ Name | Type |
 
 *Inherited from [History](_history_.history.md).[core](_history_.history.md#core)*
 
-Defined in sdk_module.ts:4
-
 ## Methods
 
 ###  getConverterVersion
 
 ▸ **getConverterVersion**(`converter`: [Converter](../interfaces/_types_.converter.md)): *Promise‹string›*
-
-Defined in utils.ts:15
 
 returns the version number of a converter in the bancor network
 

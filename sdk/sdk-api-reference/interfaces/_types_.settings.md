@@ -21,12 +21,8 @@ SDK initialization settings interface
 
 • **eosNodeEndpoint**? : *string*
 
-Defined in types.ts:14
-
 ___
 
 ### `Optional` ethereumNodeEndpoint
 
 • **ethereumNodeEndpoint**? : *string | Object*
-
-Defined in types.ts:13

@@ -33,8 +33,6 @@ The Pricing module provides access to pricing and rates logic for tokens in the 
 
 *Inherited from [History](_history_.history.md).[constructor](_history_.history.md#constructor)*
 
-Defined in sdk_module.ts:4
-
 **Parameters:**
 
 Name | Type |
@@ -51,15 +49,11 @@ Name | Type |
 
 *Inherited from [History](_history_.history.md).[core](_history_.history.md#core)*
 
-Defined in sdk_module.ts:4
-
 ## Methods
 
 ###  getPathAndRate
 
 ▸ **getPathAndRate**(`sourceToken`: [Token](../interfaces/_types_.token.md), `targetToken`: [Token](../interfaces/_types_.token.md), `amount`: string): *Promise‹object›*
-
-Defined in pricing.ts:17
 
 returns the best conversion path and rate for a given pair of tokens in the bancor network
 
@@ -80,8 +74,6 @@ ___
 ###  getRateByPath
 
 ▸ **getRateByPath**(`path`: [Token](../interfaces/_types_.token.md)[], `amount`: string): *Promise‹string›*
-
-Defined in pricing.ts:29
 
 returns the rate for a given conversion path in the bancor network
 
