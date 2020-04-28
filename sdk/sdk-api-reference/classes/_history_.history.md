@@ -1,4 +1,4 @@
-[bancor-sdk](../README.md) › [Globals](../globals.md) › ["history"](../modules/_history_.md) › [History](_history_.history.md)
+[Bancor SDK](../README.md) › [Globals](../globals.md) › ["history"](../modules/_history_.md) › [History](_history_.history.md)
 
 # Class: History
 

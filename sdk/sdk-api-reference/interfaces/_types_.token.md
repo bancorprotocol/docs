@@ -1,4 +1,4 @@
-[bancor-sdk](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [Token](_types_.token.md)
+[Bancor SDK](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [Token](_types_.token.md)
 
 # Interface: Token
 

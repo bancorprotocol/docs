@@ -1,4 +1,4 @@
-[bancor-sdk](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [Settings](_types_.settings.md)
+[Bancor SDK](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [Settings](_types_.settings.md)
 
 # Interface: Settings
 

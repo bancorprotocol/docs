@@ -1,4 +1,4 @@
-[bancor-sdk](../README.md) › [Globals](../globals.md) › ["index"](../modules/_index_.md) › [SDK](_index_.sdk.md)
+[Bancor SDK](../README.md) › [Globals](../globals.md) › ["index"](../modules/_index_.md) › [SDK](_index_.sdk.md)
 
 # Class: SDK
 

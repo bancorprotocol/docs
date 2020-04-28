@@ -1,4 +1,4 @@
-[bancor-sdk](../README.md) › [Globals](../globals.md) › ["types"](_types_.md)
+[Bancor SDK](../README.md) › [Globals](../globals.md) › ["types"](_types_.md)
 
 # Module: "types"
 

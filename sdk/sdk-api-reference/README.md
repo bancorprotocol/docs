@@ -1,6 +1,6 @@
-[bancor-sdk](README.md) › [Globals](globals.md)
+[Bancor SDK](README.md) › [Globals](globals.md)
 
-# bancor-sdk
+# Bancor SDK
 
 # Bancor SDK v0.2 (beta)
 

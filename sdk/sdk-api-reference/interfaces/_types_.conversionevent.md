@@ -1,4 +1,4 @@
-[bancor-sdk](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [ConversionEvent](_types_.conversionevent.md)
+[Bancor SDK](../README.md) › [Globals](../globals.md) › ["types"](../modules/_types_.md) › [ConversionEvent](_types_.conversionevent.md)
 
 # Interface: ConversionEvent
 
