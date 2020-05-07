@@ -24,7 +24,6 @@
 ## Guides
 
 * [Trading on Bancor](../guides/trading-on-bancor.md)
-* [Using the Bancor SDK](../guides/using-the-bancor-sdk.md)
 * [Deploying a Standard Liquidity Pool](../guides/deploying-a-standard-liquidity-pool.md)
 * [Deploying a Custom Liquidity Pool](../guides/deploying-a-custom-liquidity-pool-wip.md)
 * [Adding and Removing Liquidity](../guides/adding-liquidity-to-a-pool.md)
@@ -91,6 +90,7 @@
 
 ## SDK
 
+* [Using the Bancor SDK](../sdk/using-the-bancor-sdk.md)
 * [API Reference](../sdk/sdk-api-reference/README.md)
   * [Globals](../sdk/sdk-api-reference/globals.md)
   * [Classes](../sdk/sdk-api-reference/classes/README.md)
