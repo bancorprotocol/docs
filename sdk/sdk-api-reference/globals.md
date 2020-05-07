@@ -1,23 +1,26 @@
-[Bancor SDK](README.md) › [Globals](globals.md)
+# Globals
 
-# Bancor SDK
+[Bancor SDK](./) › [Globals](globals.md)
 
-## Index
+## Bancor SDK
 
-### Enumerations
+### Index
+
+#### Enumerations
 
 * [BlockchainType](enums/blockchaintype.md)
 
-### Classes
+#### Classes
 
 * [History](classes/history.md)
 * [Pricing](classes/pricing.md)
 * [SDK](classes/sdk.md)
 * [Utils](classes/utils.md)
 
-### Interfaces
+#### Interfaces
 
 * [ConversionEvent](interfaces/conversionevent.md)
 * [Converter](interfaces/converter.md)
 * [Settings](interfaces/settings.md)
 * [Token](interfaces/token.md)
+

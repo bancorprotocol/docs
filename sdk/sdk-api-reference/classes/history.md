@@ -1,90 +1,91 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › [History](history.md)
+# History
 
-# Class: History
+[Bancor SDK](../) › [Globals](../globals.md) › [History](history.md)
+
+## Class: History
 
 The History module allows querying historical data in the bancor network
 
-## Hierarchy
+### Hierarchy
 
 * SDKModule
 
   ↳ **History**
 
-## Index
+### Index
 
-### Constructors
+#### Constructors
 
 * [constructor](history.md#constructor)
 
-### Properties
+#### Properties
 
 * [core](history.md#core)
 
-### Methods
+#### Methods
 
 * [getConversionEvents](history.md#getconversionevents)
 * [getConversionEventsByTimestamp](history.md#getconversioneventsbytimestamp)
 
-## Constructors
+### Constructors
 
-###  constructor
+#### constructor
 
-\+ **new History**(`core`: Core): *[History](history.md)*
++ **new History**\(`core`: Core\): [_History_](history.md)
 
-*Inherited from [History](history.md).[constructor](history.md#constructor)*
+_Inherited from_ [_History_](history.md)_._[_constructor_](history.md#constructor)
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`core` | Core |
+| Name | Type |
+| :--- | :--- |
+| `core` | Core |
 
-**Returns:** *[History](history.md)*
+**Returns:** [_History_](history.md)
 
-## Properties
+### Properties
 
-###  core
+#### core
 
-• **core**: *any* = null
+• **core**: _any_ = null
 
-*Inherited from [History](history.md).[core](history.md#core)*
+_Inherited from_ [_History_](history.md)_._[_core_](history.md#core)
 
-## Methods
+### Methods
 
-###  getConversionEvents
+#### getConversionEvents
 
-▸ **getConversionEvents**(`token`: [Token](../interfaces/token.md), `fromBlock`: number, `toBlock`: number): *Promise‹[ConversionEvent](../interfaces/conversionevent.md)[]›*
+▸ **getConversionEvents**\(`token`: [Token](../interfaces/token.md), `fromBlock`: number, `toBlock`: number\): _Promise‹_[_ConversionEvent_](../interfaces/conversionevent.md)_\[\]›_
 
 returns all Conversion events for a given liquidity pool / liquid token between two block numbers
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`token` | [Token](../interfaces/token.md) | smart token |
-`fromBlock` | number | start block number |
-`toBlock` | number | end block number  |
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `token` | [Token](../interfaces/token.md) | smart token |
+| `fromBlock` | number | start block number |
+| `toBlock` | number | end block number |
 
-**Returns:** *Promise‹[ConversionEvent](../interfaces/conversionevent.md)[]›*
+**Returns:** _Promise‹_[_ConversionEvent_](../interfaces/conversionevent.md)_\[\]›_
 
 list of Conversion events
 
-___
+#### getConversionEventsByTimestamp
 
-###  getConversionEventsByTimestamp
-
-▸ **getConversionEventsByTimestamp**(`token`: [Token](../interfaces/token.md), `fromTimestamp`: number, `toTimestamp`: number): *Promise‹[ConversionEvent](../interfaces/conversionevent.md)[]›*
+▸ **getConversionEventsByTimestamp**\(`token`: [Token](../interfaces/token.md), `fromTimestamp`: number, `toTimestamp`: number\): _Promise‹_[_ConversionEvent_](../interfaces/conversionevent.md)_\[\]›_
 
 returns all Conversion events for a given liquidity pool / liquid token between two points in time
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`token` | [Token](../interfaces/token.md) | smart token |
-`fromTimestamp` | number | start time |
-`toTimestamp` | number | end time  |
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `token` | [Token](../interfaces/token.md) | smart token |
+| `fromTimestamp` | number | start time |
+| `toTimestamp` | number | end time |
 
-**Returns:** *Promise‹[ConversionEvent](../interfaces/conversionevent.md)[]›*
+**Returns:** _Promise‹_[_ConversionEvent_](../interfaces/conversionevent.md)_\[\]›_
 
 list of Conversion events
+

@@ -24,10 +24,11 @@
 ## Guides
 
 * [Trading on Bancor](../guides/trading-on-bancor.md)
+* [Using the Bancor SDK](../guides/using-the-bancor-sdk.md)
 * [Deploying a Standard Liquidity Pool](../guides/deploying-a-standard-liquidity-pool.md)
 * [Deploying a Custom Liquidity Pool](../guides/deploying-a-custom-liquidity-pool-wip.md)
 * [Adding and Removing Liquidity](../guides/adding-liquidity-to-a-pool.md)
-* [Accepting Ownership of Liquidity Pools](../guides/accepting-ownership-of-liquidity-pools.md)
+* [Managing Ownership of Liquidity Pools](../guides/accepting-ownership-of-liquidity-pools.md)
 * [Upgrading a Converter Contract](../guides/upgrading-a-converter-contract.md)
 * [Interfacing with Bancor Contracts](../guides/interfacing-with-bancor-contracts.md)
 * [Minting USDB](../guides/minting-usdb.md)
@@ -104,3 +105,4 @@
     * [Token](../sdk/sdk-api-reference/interfaces/token.md)
   * [Enums](../sdk/sdk-api-reference/enums/README.md)
     * [BlockchainType](../sdk/sdk-api-reference/enums/blockchaintype.md)
+

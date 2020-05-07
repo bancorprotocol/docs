@@ -1,32 +1,33 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › [Settings](settings.md)
+# Settings
 
-# Interface: Settings
+[Bancor SDK](../) › [Globals](../globals.md) › [Settings](settings.md)
+
+## Interface: Settings
 
 SDK initialization settings interface
 
-## Hierarchy
+### Hierarchy
 
 * **Settings**
 
-## Index
+### Index
 
-### Properties
+#### Properties
 
 * [eosNodeEndpoint](settings.md#optional-eosnodeendpoint)
 * [ethereumNodeEndpoint](settings.md#optional-ethereumnodeendpoint)
 
-## Properties
+### Properties
 
-### `Optional` eosNodeEndpoint
+#### `Optional` eosNodeEndpoint
 
-• **eosNodeEndpoint**? : *string*
+• **eosNodeEndpoint**? : _string_
 
 eosjs endpoint - optional, mandatory when interacting with an EOS blockchain
 
-___
+#### `Optional` ethereumNodeEndpoint
 
-### `Optional` ethereumNodeEndpoint
-
-• **ethereumNodeEndpoint**? : *string | Object*
+• **ethereumNodeEndpoint**? : _string \| Object_
 
 web3 endpoint - optional, mandatory when interacting with an Ethereum blockchain
+

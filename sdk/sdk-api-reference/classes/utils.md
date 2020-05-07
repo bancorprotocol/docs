@@ -1,67 +1,70 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › [Utils](utils.md)
+# Utils
 
-# Class: Utils
+[Bancor SDK](../) › [Globals](../globals.md) › [Utils](utils.md)
+
+## Class: Utils
 
 The Utils module provides various utility and helper functions
 
-## Hierarchy
+### Hierarchy
 
 * SDKModule
 
   ↳ **Utils**
 
-## Index
+### Index
 
-### Constructors
+#### Constructors
 
 * [constructor](utils.md#constructor)
 
-### Properties
+#### Properties
 
 * [core](utils.md#core)
 
-### Methods
+#### Methods
 
 * [getConverterVersion](utils.md#getconverterversion)
 
-## Constructors
+### Constructors
 
-###  constructor
+#### constructor
 
-\+ **new Utils**(`core`: Core): *[Utils](utils.md)*
++ **new Utils**\(`core`: Core\): [_Utils_](utils.md)
 
-*Inherited from [History](history.md).[constructor](history.md#constructor)*
+_Inherited from_ [_History_](history.md)_._[_constructor_](history.md#constructor)
 
 **Parameters:**
 
-Name | Type |
------- | ------ |
-`core` | Core |
+| Name | Type |
+| :--- | :--- |
+| `core` | Core |
 
-**Returns:** *[Utils](utils.md)*
+**Returns:** [_Utils_](utils.md)
 
-## Properties
+### Properties
 
-###  core
+#### core
 
-• **core**: *any* = null
+• **core**: _any_ = null
 
-*Inherited from [History](history.md).[core](history.md#core)*
+_Inherited from_ [_History_](history.md)_._[_core_](history.md#core)
 
-## Methods
+### Methods
 
-###  getConverterVersion
+#### getConverterVersion
 
-▸ **getConverterVersion**(`converter`: [Converter](../interfaces/converter.md)): *Promise‹string›*
+▸ **getConverterVersion**\(`converter`: [Converter](../interfaces/converter.md)\): _Promise‹string›_
 
 returns the version number of a converter in the bancor network
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`converter` | [Converter](../interfaces/converter.md) | converter  |
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `converter` | [Converter](../interfaces/converter.md) | converter |
 
-**Returns:** *Promise‹string›*
+**Returns:** _Promise‹string›_
 
 converter version
+

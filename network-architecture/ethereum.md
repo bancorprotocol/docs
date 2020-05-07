@@ -24,15 +24,19 @@ The BancorNetwork contract accepts a source token and a conversion path - and fo
 
 The BancorNetwork contract also supports **affiliate fees**. The app operator or smart contract developer who integrates Bancor's conversion functions can choose to set and earn a small fee from each conversion routed via their reference. The fee is paid in BNT tokens, as the majority of conversions go through the BNT token as part of the conversion path.
 
-### Liquidity Pools
-
-Each liquidity pool in the Bancor Network consists of two separate smart contracts - a **Smart Token** contract and a **Bancor Converter** contract. Liquidity pools are managed by their owners \(the wallet that deployed the initial liquidity pool\) and liquidity providers and allow them to add/remove liquidity, upgrade the liquidity pool, decide on the fee in the pool etc.
-
 ### Smart Tokens
 
 Smart Tokens are standard tokens with dynamic supply that increases when the tokens are purchased and decreased when they are sold. Each Smart Token is managed by a single dedicated converter at any given point, though the address of that converter might change when it is upgraded.
 
 Smart tokens are the accounting basis for liquidity providers \(LP\), where each LP owns smart tokens proportional to their contribution to the pool.
+
+### Liquidity Pools
+
+Each liquidity pool in the Bancor Network consists of two separate smart contracts - a **Smart Token** contract and a **Bancor Converter** contract. Liquidity pools are managed by their owners \(the wallet that deployed the initial liquidity pool\) and liquidity providers and allow them to add/remove liquidity, upgrade the liquidity pool, decide on the fee in the pool etc.
+
+### Liquid Tokens
+
+Liquid Tokens are a derivative of Smart Tokens that are backed by only one reserve at a fractional ratio. While liquidity pools revolve around the underlying reserves that back the pool smart token, liquid tokens are focused on the smart token itself. Liquid tokens operate on a bonding curve where the reserve ratio is less than 100%. The price of tokens on bonding curves increase when supply increases and decrease when supply decreases, and liquid tokens are no different.
 
 ### Converters
 

@@ -1,94 +1,86 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › [SDK](sdk.md)
+# SDK
 
-# Class: SDK
+[Bancor SDK](../) › [Globals](../globals.md) › [SDK](sdk.md)
+
+## Class: SDK
 
 Main SDK object, should be instantiated using the `create` static method
 
-## Hierarchy
+### Hierarchy
 
 * **SDK**
 
-## Index
+### Index
 
-### Properties
+#### Properties
 
 * [history](sdk.md#history)
 * [pricing](sdk.md#pricing)
 * [utils](sdk.md#utils)
 
-### Methods
+#### Methods
 
 * [refresh](sdk.md#refresh)
 * [create](sdk.md#static-create)
 * [destroy](sdk.md#static-destroy)
 
-## Properties
+### Properties
 
-###  history
+#### history
 
-• **history**: *[History](history.md)* = null
+• **history**: [_History_](history.md) = null
 
 History module
 
-___
+#### pricing
 
-###  pricing
-
-• **pricing**: *[Pricing](pricing.md)* = null
+• **pricing**: [_Pricing_](pricing.md) = null
 
 Pricing module
 
-___
+#### utils
 
-###  utils
-
-• **utils**: *[Utils](utils.md)* = null
+• **utils**: [_Utils_](utils.md) = null
 
 Utils module
 
-## Methods
+### Methods
 
-###  refresh
+#### refresh
 
-▸ **refresh**(): *Promise‹void›*
+▸ **refresh**\(\): _Promise‹void›_
 
-refreshes the local cache with data from the converter registry
-should be called periodically to support new pools
+refreshes the local cache with data from the converter registry should be called periodically to support new pools
 
-**Returns:** *Promise‹void›*
+**Returns:** _Promise‹void›_
 
-___
+#### `Static` create
 
-### `Static` create
+▸ **create**\(`settings`: [Settings](../interfaces/settings.md)\): _Promise‹_[_SDK_](sdk.md)_›_
 
-▸ **create**(`settings`: [Settings](../interfaces/settings.md)): *Promise‹[SDK](sdk.md)›*
-
-creates and initializes a new SDK object
-should be called as the first step before using the SDK
+creates and initializes a new SDK object should be called as the first step before using the SDK
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`settings` | [Settings](../interfaces/settings.md) | initialization settings  |
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `settings` | [Settings](../interfaces/settings.md) | initialization settings |
 
-**Returns:** *Promise‹[SDK](sdk.md)›*
+**Returns:** _Promise‹_[_SDK_](sdk.md)_›_
 
 new SDK object
 
-___
+#### `Static` destroy
 
-### `Static` destroy
+▸ **destroy**\(`sdk`: [SDK](sdk.md)\): _Promise‹void›_
 
-▸ **destroy**(`sdk`: [SDK](sdk.md)): *Promise‹void›*
-
-cleans up and destroys an existing SDK object
-should be called as the last step after the SDK work is complete to free up resources
+cleans up and destroys an existing SDK object should be called as the last step after the SDK work is complete to free up resources
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`sdk` | [SDK](sdk.md) | sdk object  |
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| `sdk` | [SDK](sdk.md) | sdk object |
 
-**Returns:** *Promise‹void›*
+**Returns:** _Promise‹void›_
+

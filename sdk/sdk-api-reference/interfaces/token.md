@@ -1,41 +1,40 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › [Token](token.md)
+# Token
 
-# Interface: Token
+[Bancor SDK](../) › [Globals](../globals.md) › [Token](token.md)
+
+## Interface: Token
 
 Token interface
 
-## Hierarchy
+### Hierarchy
 
 * **Token**
 
-## Index
+### Index
 
-### Properties
+#### Properties
 
 * [blockchainId](token.md#blockchainid)
 * [blockchainType](token.md#blockchaintype)
 * [symbol](token.md#optional-symbol)
 
-## Properties
+### Properties
 
-###  blockchainId
+#### blockchainId
 
-• **blockchainId**: *string*
+• **blockchainId**: _string_
 
 token blockchain id - address for Ethereum blockchain, account name for EOS blockchain
 
-___
+#### blockchainType
 
-###  blockchainType
-
-• **blockchainType**: *[BlockchainType](../enums/blockchaintype.md)*
+• **blockchainType**: [_BlockchainType_](../enums/blockchaintype.md)
 
 token blockchain type
 
-___
+#### `Optional` symbol
 
-### `Optional` symbol
-
-• **symbol**? : *string*
+• **symbol**? : _string_
 
 token symbol - optional, mandatory for EOS tokens
+

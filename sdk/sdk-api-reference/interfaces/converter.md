@@ -1,41 +1,40 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › [Converter](converter.md)
+# Converter
 
-# Interface: Converter
+[Bancor SDK](../) › [Globals](../globals.md) › [Converter](converter.md)
+
+## Interface: Converter
 
 Converter interface
 
-## Hierarchy
+### Hierarchy
 
 * **Converter**
 
-## Index
+### Index
 
-### Properties
+#### Properties
 
 * [blockchainId](converter.md#blockchainid)
 * [blockchainType](converter.md#blockchaintype)
 * [symbol](converter.md#optional-symbol)
 
-## Properties
+### Properties
 
-###  blockchainId
+#### blockchainId
 
-• **blockchainId**: *string*
+• **blockchainId**: _string_
 
 converter blockchain id - address for Ethereum blockchain, account name for EOS blockchain
 
-___
+#### blockchainType
 
-###  blockchainType
-
-• **blockchainType**: *[BlockchainType](../enums/blockchaintype.md)*
+• **blockchainType**: [_BlockchainType_](../enums/blockchaintype.md)
 
 converter blockchain type
 
-___
+#### `Optional` symbol
 
-### `Optional` symbol
-
-• **symbol**? : *string*
+• **symbol**? : _string_
 
 converter symbol - optional, mandatory for EOS tokens
+

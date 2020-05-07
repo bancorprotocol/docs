@@ -1,24 +1,25 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › [BlockchainType](blockchaintype.md)
+# BlockchainType
 
-# Enumeration: BlockchainType
+[Bancor SDK](../) › [Globals](../globals.md) › [BlockchainType](blockchaintype.md)
+
+## Enumeration: BlockchainType
 
 blockchain types supported by the SDK
 
-## Index
+### Index
 
-### Enumeration members
+#### Enumeration members
 
 * [EOS](blockchaintype.md#eos)
 * [Ethereum](blockchaintype.md#ethereum)
 
-## Enumeration members
+### Enumeration members
 
-###  EOS
+#### EOS
 
 • **EOS**: = "eos"
 
-___
-
-###  Ethereum
+#### Ethereum
 
 • **Ethereum**: = "ethereum"
+

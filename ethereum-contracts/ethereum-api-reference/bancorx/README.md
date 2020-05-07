@@ -1,2 +1,2 @@
-# bancorx
+# BancorX
 

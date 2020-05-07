@@ -1,16 +1,18 @@
-[Bancor SDK](../README.md) › [Globals](../globals.md) › [ConversionEvent](conversionevent.md)
+# ConversionEvent
 
-# Interface: ConversionEvent
+[Bancor SDK](../) › [Globals](../globals.md) › [ConversionEvent](conversionevent.md)
+
+## Interface: ConversionEvent
 
 ConversionEvent interface
 
-## Hierarchy
+### Hierarchy
 
 * **ConversionEvent**
 
-## Index
+### Index
 
-### Properties
+#### Properties
 
 * [blockNumber](conversionevent.md#blocknumber)
 * [conversionFee](conversionevent.md#optional-conversionfee)
@@ -20,44 +22,33 @@ ConversionEvent interface
 * [targetToken](conversionevent.md#targettoken)
 * [trader](conversionevent.md#trader)
 
-## Properties
+### Properties
 
-###  blockNumber
+#### blockNumber
 
-• **blockNumber**: *number*
+• **blockNumber**: _number_
 
-___
+#### `Optional` conversionFee
 
-### `Optional` conversionFee
+• **conversionFee**? : _string_
 
-• **conversionFee**? : *string*
+#### inputAmount
 
-___
+• **inputAmount**: _string_
 
-###  inputAmount
+#### outputAmount
 
-• **inputAmount**: *string*
+• **outputAmount**: _string_
 
-___
+#### sourceToken
 
-###  outputAmount
+• **sourceToken**: _string_
 
-• **outputAmount**: *string*
+#### targetToken
 
-___
+• **targetToken**: _string_
 
-###  sourceToken
+#### trader
 
-• **sourceToken**: *string*
+• **trader**: _string_
 
-___
-
-###  targetToken
-
-• **targetToken**: *string*
-
-___
-
-###  trader
-
-• **trader**: *string*

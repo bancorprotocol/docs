@@ -37,8 +37,7 @@ contract MyContract {
 
 * `_path`: Network path between sourceToken and toToken
 
-  * **example path**: \[source token, smart token, to token, smart token, to token...\]
-  * **\[need better explanation of how to derive this\]**
+  * The `getPathAndRate` function on the [Bancor SDK](https://github.com/bancorprotocol/bancor-sdk) will generate the optimal path for this parameter
 
 * `_amount`: Source token input amount
 * `_minReturn`: To token minimum return
@@ -47,18 +46,18 @@ contract MyContract {
 
 ```text
 contract IBancorNetwork {
+    // call when sending eth
     function convert(
-        contract IERC20Token[] _path, 
+        IERC20Token[] _path, 
         uint256 _amount, 
         uint256 _minReturn
     ) external returns(uint256 returnAmount);
     
-    function convert2(
-        contract IERC20Token[] _path, 
+    // call when sending tokens
+    function claimAndConvert(
+        IERC20Token[] _path,
         uint256 _amount, 
-        uint256 _minReturn, 
-        address _affiliateAccount, 
-        uint256 _affiliateFee
+        uint256 _minReturn
     ) external returns(uint256 returnAmount);
 }
 
@@ -70,13 +69,28 @@ contract MyContract {
     address contractRegistryAddress = 0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4;
     bytes32 contractName = 0x42616e636f724e6574776f726b; // "BancorNetwork"
         
-    function trade() public {
+    function trade(
+        IERC20Token[] _path,
+        uint256 _minReturn
+    ) external payable {
         IContractRegistry contractRegistry = IContractRegistry(contractRegistryAddress);
         address bancorNetworkAddress = IContractRegistry.addressOf(contractName);
         IBancorNetwork bancorNetwork = IBancorNetwork(bancorNetworkAddress);
         
-        bancorNetwork.convert(<...>)
+        bancorNetwork.convert(_path, msg.value, _minReturn);
     }    
+    
+    function tradeToken(
+        IERC20Token[] _path,
+        uint256 _amount, 
+        uint256 _minReturn
+    ) external payable {
+        IContractRegistry contractRegistry = IContractRegistry(contractRegistryAddress);
+        address bancorNetworkAddress = IContractRegistry.addressOf(contractName);
+        IBancorNetwork bancorNetwork = IBancorNetwork(bancorNetworkAddress);
+        
+        bancorNetwork.convert(_path, _amount, _minReturn);
+    }   
     
 }
 ```

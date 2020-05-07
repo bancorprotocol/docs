@@ -1,16 +1,14 @@
-# API Reference
+---
+description: Interacting with Bancor in your JavaScript code
+---
 
-[Bancor SDK](./) › [Globals](globals.md)
+# Using the Bancor SDK
 
-## Bancor SDK
+Bancor's new SDK allows you to interact with the Bancor Network using JavaScript. It can be used independently of the network smart contracts for grabbing data or \(soon\) submitting a transaction. Or it can be used as an accessory to the smart contract logic in your Dapp, generating smart contract inputs off-chain in a convenient, user-friendly way.
 
-## Bancor SDK v0.2 \(beta\)
+To **initialize** the Bancor SDK in your JavaScript code:
 
-Javascript API that provides utilities and access to the Bancor Network mainnet contracts across the different blockchains using a unified & simplified interface.
-
-### Initialization
-
-```javascript
+```text
 const BancorSDK = require('bancor-sdk').SDK;
 
 const settings = {
@@ -23,11 +21,9 @@ const settings = {
 let bancorSDK = await BancorSDK.create(settings);
 ```
 
-### Usage
+To **generate a conversion path** and the **expected rate of return** of a trade:
 
-`getPathAndRate` - returns the best conversion path and rate between any two tokens in the Bancor Network. Note that the source token and the target token can reside on two different blockchains. In addition, input/output amounts format is a decimal string \(as opposed to wei\) since the function is blockchain agnostic.
-
-```javascript
+```text
 // get the path/rate between DAI and ENJ
 const sourceToken = {
     blockchainType: 'ethereum',
@@ -54,23 +50,5 @@ const res = await bancorSDK.pricing.getPathAndRate(sourceToken, targetToken, "1.
 }
 ```
 
-### Cleanup
-
-```javascript
-await BancorSDK.destroy(bancorSDK);
-```
-
-### Features
-
-* Price discovery
-* Conversion path generation
-* Historical data
-* Utilities
-* Cross-chain support
-
-### Collaborators
-
-* [**Yudi Levi**](https://github.com/yudilevi)
-* [**Barak Manos**](https://github.com/barakman)
-* [**Omry Rozenfeld**](https://github.com/omryr)
+See full documentation on our [Github](https://github.com/bancorprotocol/bancor-sdk).
 
