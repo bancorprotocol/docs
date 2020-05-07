@@ -50,5 +50,5 @@ const res = await bancorSDK.pricing.getPathAndRate(sourceToken, targetToken, "1.
 }
 ```
 
-See full documentation on our [Github](https://github.com/bancorprotocol/bancor-sdk).
+See full [documentation](sdk-api-reference/).
 
