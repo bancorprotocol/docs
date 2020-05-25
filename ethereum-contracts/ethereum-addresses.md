@@ -6,29 +6,7 @@ description: >-
 
 # Addresses
 
-Bancor Network is composed of several smart contracts that work together to provide a complete solution to on-chain liquidity. Most of these contracts are upgraded occasionally and, for that reason their addresses change. 
-
-The network also includes a contract address discovery mechanism - a contract that servers as a registry for all the core contracts, that queries the latest contract addresses by their names.
-
-In order to stay up-to-date with the latest version and ensure that production code doesn't break, contract addresses should always be referenced by first querying the contract registry.
-
-The only exception is the contract registry itself, whose address rarely changes, if at all.
-
-For example, to get the latest contract address of the BancorNetwork contract, the following call should be used:
-
-`bancorNetwork = ContractRegistry.addressOf('BancorNetwork')`
-
-The `addressOf` function on the **ContractRegistry** [contract](https://etherscan.io/address/0x52ae12abe5d8bd778bd5397f99ca900624cfadd4#readContract) can receive any of the known contract names as an argument, in bytes32 format. Below is a list of all core contract names with their bytes32 representation:
-
-| **Contract Name** | bytes32 Representation |
-| :--- | :--- |
-| `BancorNetwork` | `0x42616e636f724e6574776f726b` |
-| `BancorConverterRegistry` | `0x42616e636f72436f6e7665727465725265676973747279` |
-| `BancorNetworkPathFinder` | `0x42616e636f724e6574776f726b5061746846696e646572` |
-| `BancorConverterUpgrader` | `0x42616e636f72436f6e7665727465725570677261646572` |
-| `BancorFormula` | `0x42616e636f72466f726d756c61` |
-
-Below are the Bancor Network contract addresses that cannot be retrieved from the contract registry:
+Below are the core Bancor Network contract addresses that are required to initiate any interaction with the network:
 
 ### Mainnet <a id="mainnet"></a>
 
@@ -36,7 +14,7 @@ Below are the Bancor Network contract addresses that cannot be retrieved from th
 | :--- | :--- |
 | `ContractRegistry​` | `0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4` |
 | `​BNT Token​` | `0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C` |
-| `ETH Token` | `0xc0829421C1d260BD3cB3E0F06cfE2D52db2cE315` |
+| `EtherToken` | `0xc0829421C1d260BD3cB3E0F06cfE2D52db2cE315` |
 
 ### Ropsten <a id="ropsten"></a>
 
@@ -44,8 +22,9 @@ Below are the Bancor Network contract addresses that cannot be retrieved from th
 | :--- | :--- |
 | ​`ContractRegistry​` | `0xFD95E724962fCfC269010A0c6700Aa09D5de3074` |
 | ​`BNT Token`​ | `0x62bd9D98d4E188e281D7B78e29334969bbE1053c` |
-| ​`ETH Token`​ | `0xD368b98d03855835E2923Dc000b3f9c2EBF1b27b` |
+| ​`EtherToken`​ | `0xD368b98d03855835E2923Dc000b3f9c2EBF1b27b`[ ](https://docs.bancor.network/user-guides/network-data-and-stats) |
 
-[  
-](https://docs.bancor.network/user-guides/network-data-and-stats)
+{% hint style="info" %}
+Follow the "[Working with Bancor Network](../guides/working-with-bancor-network.md)" guide to have a full view of the relevant contracts that make the network.
+{% endhint %}
 

@@ -23,6 +23,8 @@
 
 ## Guides
 
+* [Working with Bancor Network](../guides/working-with-bancor-network.md)
+* [ContractRegistry Contracts](../guides/contractregistry-contracts.md)
 * [Trading on Bancor](../guides/trading-on-bancor.md)
 * [Deploying a Standard Liquidity Pool](../guides/deploying-a-standard-liquidity-pool.md)
 * [Deploying a Custom Liquidity Pool](../guides/deploying-a-custom-liquidity-pool-wip.md)
