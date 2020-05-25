@@ -36,19 +36,13 @@ For scaling reasons, the BancorFormula is deployed outside each pool. This will 
 
 ### ContractFeatures
 
-no idea
-
 ### BNTConverter
-
-no idea
 
 ### BancorX
 
 BancorX contract is the contract used for moving BNT across blockchains. 
 
 ### NonStandardTokenRegistry
-
-no idea
 
 ### BancorConverterRegistry
 
@@ -63,8 +57,6 @@ Because contracts cannot interact with ETH directly, there is a need for "tokeni
 Due to the nature of the Bancor Network and the ability to convert any token to any token, we have deployed a contract that can provide easier access to the different available paths between two tokens. 
 
 ### BancorConverterRegistryData
-
-no idea
 
 
 
