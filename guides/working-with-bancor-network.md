@@ -55,7 +55,7 @@ ContractRegistry also indicates its own address, which means you should run the 
 
 | **Contract Name** | bytes32 Representation |
 | :--- | :--- |
-| `ContractRegistry` | `0x436f6e74726163745265676973747279z` |
+| `ContractRegistry` | `0x436f6e74726163745265676973747279` |
 | `BancorNetwork` | `0x42616e636f724e6574776f726b` |
 | `BancorFormula` | `0x42616e636f72466f726d756c61` |
 | `BancorConverterRegistry` | `0x42616e636f72436f6e7665727465725265676973747279` |
