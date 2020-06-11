@@ -7,6 +7,14 @@
 * [Resources](../getting-started/resources.md)
 * [What Can I Do With Bancor?](../getting-started/what-can-i-do-with-bancor.md)
 
+## Developer Quick Start
+
+* [Working with Bancor Network](../developer-quick-start/working-with-bancor-network.md)
+* [Trading with Bancor](../developer-quick-start/trading-with-bancor.md)
+* [Adding and Removing Liquidity](../developer-quick-start/adding-and-removing-liquidity.md)
+* [Deploying Liquidity Pools](../developer-quick-start/deploying-liquidity-pools.md)
+* [Deploying Bancor Contracts for Testing](../developer-quick-start/deploying-bancor-contracts-for-testing.md)
+
 ## Liquidity Pools
 
 * [Overview](../liquidity-pools/liquidity-overview.md)
@@ -15,20 +23,11 @@
 * [Slippage](../liquidity-pools/slippage.md)
 * [The Bancor Formula](../liquidity-pools/the-bancor-formula.md)
 
-## Network Architecture
+## Other Guides <a id="guides"></a>
 
-* [Overview](../network-architecture/overview.md)
-* [Ethereum](../network-architecture/ethereum.md)
-* [BancorX](../network-architecture/bancorx.md)
-
-## Guides
-
-* [Working with Bancor Network](../guides/working-with-bancor-network.md)
-* [ContractRegistry Contracts](../guides/contractregistry-contracts.md)
-* [Trading on Bancor](../guides/trading-on-bancor.md)
-* [Deploying a Standard Liquidity Pool](../guides/deploying-a-standard-liquidity-pool.md)
-* [Deploying a Custom Liquidity Pool](../guides/deploying-a-custom-liquidity-pool-wip.md)
-* [Adding and Removing Liquidity](../guides/adding-liquidity-to-a-pool.md)
+* [Trading on Bancor - General](../guides/trading-on-bancor-general.md)
+* [Deploying a Liquidity Pool for Testing](../guides/deploying-a-liquidity-pool-testing.md)
+* [Liquidity Provision - General](../guides/general-liquidity-provision.md)
 * [Managing Ownership of Liquidity Pools](../guides/accepting-ownership-of-liquidity-pools.md)
 * [Upgrading a Converter Contract](../guides/upgrading-a-converter-contract.md)
 * [Interfacing with Bancor Contracts](../guides/interfacing-with-bancor-contracts.md)
@@ -36,6 +35,12 @@
 * [Querying a Pool Contract](../guides/querying-a-pool-contract.md)
 * [Measuring Trading Volume](../guides/measuring-trading-volume.md)
 * [Creating an Affiliate Widget](../guides/creating-an-affiliate-widget.md)
+
+## Network Architecture
+
+* [Overview](../network-architecture/overview.md)
+* [Ethereum](../network-architecture/ethereum.md)
+* [BancorX](../network-architecture/bancorx.md)
 
 ## Ethereum Contracts
 

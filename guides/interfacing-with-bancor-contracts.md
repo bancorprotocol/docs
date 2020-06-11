@@ -51,7 +51,7 @@ contract IBancorNetwork {
         IERC20Token[] _path, 
         uint256 _amount, 
         uint256 _minReturn
-    ) external returns(uint256 returnAmount);
+    ) external payable returns(uint256 returnAmount);
     
     // call when sending tokens
     function claimAndConvert(

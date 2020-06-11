@@ -25,6 +25,6 @@ Below are the core Bancor Network contract addresses that are required to initia
 | ​`EtherToken`​ | `0xD368b98d03855835E2923Dc000b3f9c2EBF1b27b`[ ](https://docs.bancor.network/user-guides/network-data-and-stats) |
 
 {% hint style="info" %}
-Follow the "[Working with Bancor Network](../guides/working-with-bancor-network.md)" guide to have a full view of the relevant contracts that make the network.
+Follow the "[Working with Bancor Network](../developer-quick-start/working-with-bancor-network.md)" guide to have a full view of the relevant contracts that make the network.
 {% endhint %}
 

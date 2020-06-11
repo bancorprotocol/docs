@@ -53,12 +53,10 @@ First, let's find the address of your new converter.
 With the new converter address, open a new Etherscan `Write Contract` view. 
 
 * Execute the `acceptOwnership` function
-* Execute the `acceptManagement` function
 
 Now, return to your original converter address
 
 * Execute the `acceptOwnership` function
-* Execute the `acceptManagement` function
 
 Done!
 
