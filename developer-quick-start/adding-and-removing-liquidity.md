@@ -37,9 +37,13 @@ const settings = {
 };
 
 const bancorSDK = await BancorSDK.create(settings);
-const converterAddress = '<your converter address>';
 
-const version = await bancorSDK.utils.getConverterVersion(converterAddress);
+const converter = {
+    blockchainType: 'ethereum', // or 'eos'
+    blockchainId: '<your converter address>'
+}
+
+const version = await bancorSDK.utils.getConverterVersion(converter);
 ```
 
 ### Step \#2: Query for Converter Type \(version &gt;= 28\)
