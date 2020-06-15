@@ -1,37 +1,31 @@
 # Functions:
 
-- [`calculatePurchaseReturn(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _depositAmount)`](#IBancorFormula-calculatePurchaseReturn-uint256-uint256-uint32-uint256-)
+- [`purchaseRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](#IBancorFormula-purchaseRate-uint256-uint256-uint32-uint256-)
 
-- [`calculateSaleReturn(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _sellAmount)`](#IBancorFormula-calculateSaleReturn-uint256-uint256-uint32-uint256-)
+- [`saleRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](#IBancorFormula-saleRate-uint256-uint256-uint32-uint256-)
 
-- [`calculateCrossReserveReturn(uint256 _fromReserveBalance, uint32 _fromReserveRatio, uint256 _toReserveBalance, uint32 _toReserveRatio, uint256 _amount)`](#IBancorFormula-calculateCrossReserveReturn-uint256-uint32-uint256-uint32-uint256-)
+- [`crossReserveRate(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount)`](#IBancorFormula-crossReserveRate-uint256-uint32-uint256-uint32-uint256-)
 
-- [`calculateFundCost(uint256 _supply, uint256 _reserveBalance, uint32 _totalRatio, uint256 _amount)`](#IBancorFormula-calculateFundCost-uint256-uint256-uint32-uint256-)
+- [`fundCost(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](#IBancorFormula-fundCost-uint256-uint256-uint32-uint256-)
 
-- [`calculateLiquidateReturn(uint256 _supply, uint256 _reserveBalance, uint32 _totalRatio, uint256 _amount)`](#IBancorFormula-calculateLiquidateReturn-uint256-uint256-uint32-uint256-)
+- [`liquidateRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](#IBancorFormula-liquidateRate-uint256-uint256-uint32-uint256-)
 
-- [`calculateCrossConnectorReturn(uint256 _fromConnectorBalance, uint32 _fromConnectorWeight, uint256 _toConnectorBalance, uint32 _toConnectorWeight, uint256 _amount)`](#IBancorFormula-calculateCrossConnectorReturn-uint256-uint32-uint256-uint32-uint256-)
-
-# Function `calculatePurchaseReturn(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _depositAmount) → uint256` {#IBancorFormula-calculatePurchaseReturn-uint256-uint256-uint32-uint256-}
+# Function `purchaseRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount) → uint256` {#IBancorFormula-purchaseRate-uint256-uint256-uint32-uint256-}
 
 No description
 
-# Function `calculateSaleReturn(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _sellAmount) → uint256` {#IBancorFormula-calculateSaleReturn-uint256-uint256-uint32-uint256-}
+# Function `saleRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount) → uint256` {#IBancorFormula-saleRate-uint256-uint256-uint32-uint256-}
 
 No description
 
-# Function `calculateCrossReserveReturn(uint256 _fromReserveBalance, uint32 _fromReserveRatio, uint256 _toReserveBalance, uint32 _toReserveRatio, uint256 _amount) → uint256` {#IBancorFormula-calculateCrossReserveReturn-uint256-uint32-uint256-uint32-uint256-}
+# Function `crossReserveRate(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount) → uint256` {#IBancorFormula-crossReserveRate-uint256-uint32-uint256-uint32-uint256-}
 
 No description
 
-# Function `calculateFundCost(uint256 _supply, uint256 _reserveBalance, uint32 _totalRatio, uint256 _amount) → uint256` {#IBancorFormula-calculateFundCost-uint256-uint256-uint32-uint256-}
+# Function `fundCost(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount) → uint256` {#IBancorFormula-fundCost-uint256-uint256-uint32-uint256-}
 
 No description
 
-# Function `calculateLiquidateReturn(uint256 _supply, uint256 _reserveBalance, uint32 _totalRatio, uint256 _amount) → uint256` {#IBancorFormula-calculateLiquidateReturn-uint256-uint256-uint32-uint256-}
-
-No description
-
-# Function `calculateCrossConnectorReturn(uint256 _fromConnectorBalance, uint32 _fromConnectorWeight, uint256 _toConnectorBalance, uint32 _toConnectorWeight, uint256 _amount) → uint256` {#IBancorFormula-calculateCrossConnectorReturn-uint256-uint32-uint256-uint32-uint256-}
+# Function `liquidateRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount) → uint256` {#IBancorFormula-liquidateRate-uint256-uint256-uint32-uint256-}
 
 No description

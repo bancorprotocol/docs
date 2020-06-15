@@ -1,82 +1,79 @@
-# Whitelist
-
 The contract manages a list of whitelisted addresses
 
-## Functions:
+# Functions:
 
-* [`constructor()`](whitelist.md#Whitelist-constructor--)
-* [`isWhitelisted(address _address)`](whitelist.md#Whitelist-isWhitelisted-address-)
-* [`addAddress(address _address)`](whitelist.md#Whitelist-addAddress-address-)
-* [`addAddresses(address[] _addresses)`](whitelist.md#Whitelist-addAddresses-address---)
-* [`removeAddress(address _address)`](whitelist.md#Whitelist-removeAddress-address-)
-* [`removeAddresses(address[] _addresses)`](whitelist.md#Whitelist-removeAddresses-address---)
+- [`isWhitelisted(address _address)`](#Whitelist-isWhitelisted-address-)
 
-## Events:
+- [`addAddress(address _address)`](#Whitelist-addAddress-address-)
 
-* [`AddressAddition(address _address)`](whitelist.md#Whitelist-AddressAddition-address-)
-* [`AddressRemoval(address _address)`](whitelist.md#Whitelist-AddressRemoval-address-)
+- [`addAddresses(address[] _addresses)`](#Whitelist-addAddresses-address---)
 
-## Function `constructor()` <a id="Whitelist-constructor--"></a>
+- [`removeAddress(address _address)`](#Whitelist-removeAddress-address-)
 
-initializes a new Whitelist instance
+- [`removeAddresses(address[] _addresses)`](#Whitelist-removeAddresses-address---)
 
-## Function `isWhitelisted(address _address) → bool` <a id="Whitelist-isWhitelisted-address-"></a>
+# Events:
+
+- [`AddressAddition(address _address)`](#Whitelist-AddressAddition-address-)
+
+- [`AddressRemoval(address _address)`](#Whitelist-AddressRemoval-address-)
+
+# Function `isWhitelisted(address _address) → bool` {#Whitelist-isWhitelisted-address-}
 
 returns true if a given address is whitelisted, false if not
 
-### Parameters:
+## Parameters:
 
-* `_address`: address to check
+- `_address`: address to check
 
-### Return Values:
+## Return Values:
 
-* true if the address is whitelisted, false if not
+- true if the address is whitelisted, false if not
 
-## Function `addAddress(address _address)` <a id="Whitelist-addAddress-address-"></a>
+# Function `addAddress(address _address)` {#Whitelist-addAddress-address-}
 
 adds a given address to the whitelist
 
-### Parameters:
+## Parameters:
 
-* `_address`: address to add
+- `_address`: address to add
 
-## Function `addAddresses(address[] _addresses)` <a id="Whitelist-addAddresses-address---"></a>
+# Function `addAddresses(address[] _addresses)` {#Whitelist-addAddresses-address---}
 
 adds a list of addresses to the whitelist
 
-### Parameters:
+## Parameters:
 
-* `_addresses`: addresses to add
+- `_addresses`: addresses to add
 
-## Function `removeAddress(address _address)` <a id="Whitelist-removeAddress-address-"></a>
+# Function `removeAddress(address _address)` {#Whitelist-removeAddress-address-}
 
 removes a given address from the whitelist
 
-### Parameters:
+## Parameters:
 
-* `_address`: address to remove
+- `_address`: address to remove
 
-## Function `removeAddresses(address[] _addresses)` <a id="Whitelist-removeAddresses-address---"></a>
+# Function `removeAddresses(address[] _addresses)` {#Whitelist-removeAddresses-address---}
 
 removes a list of addresses from the whitelist
 
-### Parameters:
+## Parameters:
 
-* `_addresses`: addresses to remove
+- `_addresses`: addresses to remove
 
-## Event `AddressAddition(address _address)` <a id="Whitelist-AddressAddition-address-"></a>
+# Event `AddressAddition(address _address)` {#Whitelist-AddressAddition-address-}
 
 triggered when an address is added to the whitelist
 
-### Parameters:
+## Parameters:
 
-* `_address`: address that's added from the whitelist
+- `_address`: address that's added from the whitelist
 
-## Event `AddressRemoval(address _address)` <a id="Whitelist-AddressRemoval-address-"></a>
+# Event `AddressRemoval(address _address)` {#Whitelist-AddressRemoval-address-}
 
 triggered when an address is removed from the whitelist
 
-### Parameters:
+## Parameters:
 
-* `_address`: address that's removed from the whitelist
-
+- `_address`: address that's removed from the whitelist

@@ -16,7 +16,7 @@ initializes a new XTransferRerouter instance
 
 ## Parameters:
 
-- `_reroutingEnabled`:    intializes transactions routing to enabled/disabled   
+- `_reroutingEnabled`:    intializes transactions routing to enabled/disabled
 
 # Function `enableRerouting(bool _enable)` {#XTransferRerouter-enableRerouting-bool-}
 
