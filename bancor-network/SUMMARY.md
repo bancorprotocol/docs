@@ -46,7 +46,7 @@
 
 * [Addresses](../ethereum-contracts/ethereum-addresses.md)
 * [API Reference](../ethereum-contracts/ethereum-api-reference/README.md)
-  * [BancorNetwork](../ethereum-contracts/ethereum-api-reference/BancorNetwork.md)
+  * [BancorNetwork](../ethereum-contracts/ethereum-api-reference/bancornetwork.md)
   * [BancorX](../ethereum-contracts/ethereum-api-reference/bancorx/README.md)
     * [BancorX](../ethereum-contracts/ethereum-api-reference/bancorx/BancorX.md)
   * [Converter](../ethereum-contracts/ethereum-api-reference/converter/README.md)
