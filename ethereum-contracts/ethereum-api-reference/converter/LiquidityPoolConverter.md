@@ -1,6 +1,6 @@
 Liquidity Pool Converter
 
-The liquidity pool converter is the parent contract for specific types of converters that
+The liquidity pool converter is the base contract for specific types of converters that
 
 manage liquidity pools.
 

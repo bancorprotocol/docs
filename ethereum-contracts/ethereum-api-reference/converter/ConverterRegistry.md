@@ -8,7 +8,7 @@ The active converter for each anchor can be easily accessed by querying the anch
 
 The registry exposes 3 differnet lists that can be accessed and iterated, based on the use-case of the caller:
 
-- anchors - can be used to get all the latest / historical data in the network
+- Anchors - can be used to get all the latest / historical data in the network
 
 - Liquidity pools - can be used to get all liquidity pools for funding, liquidation etc.
 
