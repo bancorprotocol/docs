@@ -26,7 +26,6 @@ Below you will find the Bancor Network EOS Converter List.
 | PIXEOS | bancorc11214 |
 | NUT | bancorc11215 |
 | EOSDT | bancorc11222 |
-| DRAGON | bancorc11223 |
 | LUME | bancorc11225 |
 | SENSE | bancorc11231 |
 | USDT | bancorc11232 |
