@@ -55,9 +55,9 @@ Move on to Step \#3 if your converter version is 27 or lower.
 As of version 28, there will be. 
 
 * The `LiquidTokenConverter` has single reserve and manages a liquid token
-* The `LiquidityPoolConverter` has multiple reserves and is the base contract for converters that manage liquidity pools
+* The `LiquidityPoolV1Converter` has multiple reserves and is the base contract for converters that manage liquidity pools
 
-Each contract has a `converterType` function that will return `0` for a `LiquidTokenConverter` and `1` for a `LiquidityPoolConverter`. You'll only be able to add liquidity for the latter.
+Each contract has a `converterType` function that will return `0` for a `LiquidTokenConverter` and `1` for a `LiquidityPoolV1Converter`. You'll only be able to add liquidity for the latter.
 
 ### Step \#3a: Adding and Removing Liquidity \(version &gt;= 28\)
 
@@ -172,9 +172,9 @@ First, you'll need to identify the converter version as outlined in Step \#1 abo
 
 #### Versions 28 and Above
 
-First, copy the `LiquidityPoolConverter` ABI into your project. Note that converters of the `LiquidTokenConverter` type are not eligible for liquidity provision \(as outlined in Step \#2\). 
+First, copy the `LiquidityPoolV1Converter` ABI into your project. Note that converters of the `LiquidTokenConverter` type are not eligible for liquidity provision \(as outlined in Step \#2\). 
 
-Find the `LiquidityPoolConverter` ABI [**here**](https://raw.githubusercontent.com/bancorprotocol/contracts/0.6.0/solidity/build/LiquidityPoolConverter.abi).
+Find the `LiquidityPoolV1Converter` ABI [**here**](https://raw.githubusercontent.com/bancorprotocol/contracts/0.6.0/solidity/build/LiquidityPoolConverter.abi).
 
 Your Web3 code will look something like this:
 
