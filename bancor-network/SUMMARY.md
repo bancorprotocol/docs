@@ -44,7 +44,7 @@
 
 ## Ethereum Contracts
 
-* [Addresses](../ethereum-contracts/ethereum-addresses.md)
+* [Addresses](../ethereum-contracts/addresses.md)
 * [API Reference](../ethereum-contracts/ethereum-api-reference/README.md)
   * [BancorNetwork](../ethereum-contracts/ethereum-api-reference/BancorNetwork.md)
   * [Converter](../ethereum-contracts/ethereum-api-reference/converter/README.md)
