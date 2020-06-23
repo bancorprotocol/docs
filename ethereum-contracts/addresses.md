@@ -21,8 +21,8 @@ Below are the core Bancor Network contract addresses that are required to initia
 
 | **Contract Name** | Contract Address |
 | :--- | :--- |
-| ​`ContractRegistry​` | `0xFD95E724962fCfC269010A0c6700Aa09D5de3074` |
-| ​`BNT Token`​ | `0x62bd9D98d4E188e281D7B78e29334969bbE1053c` |
+| ​`ContractRegistry​` | `0x57547da3406cbA9f80a989497173F5bC5438BFCF` |
+| ​`BNT Token`​ | `0xD4F9CBC9db55E039BE979d88d15F57A57552f32d` |
 | `ETH Token` | `0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE` |
 | ​`EtherToken (Deprecated)`​ | `0xD368b98d03855835E2923Dc000b3f9c2EBF1b27b`[ ](https://docs.bancor.network/user-guides/network-data-and-stats) |
 
