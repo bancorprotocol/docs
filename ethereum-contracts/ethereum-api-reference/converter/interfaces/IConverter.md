@@ -6,7 +6,7 @@
 
 - [`isActive()`](#IConverter-isActive--)
 
-- [`rateAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](#IConverter-rateAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
+- [`targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](#IConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
 
 - [`convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address _beneficiary)`](#IConverter-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-)
 
@@ -60,7 +60,7 @@ No description
 
 No description
 
-# Function `rateAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#IConverter-rateAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
+# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#IConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
 
 No description
 

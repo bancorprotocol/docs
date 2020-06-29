@@ -1,40 +1,44 @@
-# LiquidTokenConverter
-
 Liquid Token Converter
 
 The liquid token converter is a specialized version of a converter that manages a liquid token.
 
 The converters govern a token with a single reserve and allow converting between the two.
 
-Liquid tokens usually have fractional reserve \(reserve ratio smaller than 100%\).
+Liquid tokens usually have fractional reserve (reserve ratio smaller than 100%).
 
-## Functions:
+# Functions:
 
-* [`constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)`](liquidtokenconverter.md#LiquidTokenConverter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-)
-* [`converterType()`](liquidtokenconverter.md#LiquidTokenConverter-converterType--)
-* [`acceptAnchorOwnership()`](liquidtokenconverter.md#LiquidTokenConverter-acceptAnchorOwnership--)
-* [`addReserve(contract IERC20Token _token, uint32 _weight)`](liquidtokenconverter.md#LiquidTokenConverter-addReserve-contract-IERC20Token-uint32-)
-* [`rateAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](liquidtokenconverter.md#LiquidTokenConverter-rateAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
+- [`constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)`](#LiquidTokenConverter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-)
 
-## Function `constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)` <a id="LiquidTokenConverter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-"></a>
+- [`converterType()`](#LiquidTokenConverter-converterType--)
+
+- [`acceptAnchorOwnership()`](#LiquidTokenConverter-acceptAnchorOwnership--)
+
+- [`addReserve(contract IERC20Token _token, uint32 _weight)`](#LiquidTokenConverter-addReserve-contract-IERC20Token-uint32-)
+
+- [`targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](#LiquidTokenConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
+
+# Function `constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)` {#LiquidTokenConverter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-}
 
 initializes a new LiquidTokenConverter instance
 
-### Parameters:
+## Parameters:
 
-* `_token`: liquid token governed by the converter
-* `_registry`: address of a contract registry contract
-* `_maxConversionFee`: maximum conversion fee, represented in ppm
+- `_token`:              liquid token governed by the converter
 
-## Function `converterType() → uint16` <a id="LiquidTokenConverter-converterType--"></a>
+- `_registry`:           address of a contract registry contract
+
+- `_maxConversionFee`:   maximum conversion fee, represented in ppm
+
+# Function `converterType() → uint16` {#LiquidTokenConverter-converterType--}
 
 returns the converter type
 
-### Return Values:
+## Return Values:
 
-* see the converter types in the the main contract doc
+- see the converter types in the the main contract doc
 
-## Function `acceptAnchorOwnership()` <a id="LiquidTokenConverter-acceptAnchorOwnership--"></a>
+# Function `acceptAnchorOwnership()` {#LiquidTokenConverter-acceptAnchorOwnership--}
 
 accepts ownership of the anchor after an ownership transfer
 
@@ -44,7 +48,7 @@ can only be called by the contract owner
 
 note that prior to version 28, you should use 'acceptTokenOwnership' instead
 
-## Function `addReserve(contract IERC20Token _token, uint32 _weight)` <a id="LiquidTokenConverter-addReserve-contract-IERC20Token-uint32-"></a>
+# Function `addReserve(contract IERC20Token _token, uint32 _weight)` {#LiquidTokenConverter-addReserve-contract-IERC20Token-uint32-}
 
 defines the reserve token for the converter
 
@@ -52,25 +56,28 @@ can only be called by the owner while the converter is inactive and the
 
 reserve wasn't defined yet
 
-### Parameters:
+## Parameters:
 
-* `_token`: address of the reserve token
-* `_weight`: reserve weight, represented in ppm, 1-1000000
+- `_token`:   address of the reserve token
 
-## Function `rateAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` <a id="LiquidTokenConverter-rateAndFee-contract-IERC20Token-contract-IERC20Token-uint256-"></a>
+- `_weight`:  reserve weight, represented in ppm, 1-1000000
 
-returns the expected rate of converting the source token to the
+# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#LiquidTokenConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
+
+returns the expected target amount of converting the source token to the
 
 target token along with the fee
 
-### Parameters:
+## Parameters:
 
-* `_sourceToken`: contract address of the source token
-* `_targetToken`: contract address of the target token
-* `_amount`: amount of tokens received from the user
+- `_sourceToken`: contract address of the source token
 
-### Return Values:
+- `_targetToken`: contract address of the target token
 
-* expected rate
-* expected fee
+- `_amount`:      amount of tokens received from the user
 
+## Return Values:
+
+- expected target amount
+
+- expected fee

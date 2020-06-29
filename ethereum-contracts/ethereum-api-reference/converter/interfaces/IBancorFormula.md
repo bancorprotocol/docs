@@ -1,24 +1,26 @@
 # Functions:
 
-- [`purchaseRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](#IBancorFormula-purchaseRate-uint256-uint256-uint32-uint256-)
+- [`purchaseTargetAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](#IBancorFormula-purchaseTargetAmount-uint256-uint256-uint32-uint256-)
 
-- [`saleRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](#IBancorFormula-saleRate-uint256-uint256-uint32-uint256-)
+- [`saleTargetAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](#IBancorFormula-saleTargetAmount-uint256-uint256-uint32-uint256-)
 
-- [`crossReserveRate(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount)`](#IBancorFormula-crossReserveRate-uint256-uint32-uint256-uint32-uint256-)
+- [`crossReserveTargetAmount(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount)`](#IBancorFormula-crossReserveTargetAmount-uint256-uint32-uint256-uint32-uint256-)
 
 - [`fundCost(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](#IBancorFormula-fundCost-uint256-uint256-uint32-uint256-)
 
-- [`liquidateRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](#IBancorFormula-liquidateRate-uint256-uint256-uint32-uint256-)
+- [`fundSupplyAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](#IBancorFormula-fundSupplyAmount-uint256-uint256-uint32-uint256-)
 
-# Function `purchaseRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount) → uint256` {#IBancorFormula-purchaseRate-uint256-uint256-uint32-uint256-}
+- [`liquidateReserveAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](#IBancorFormula-liquidateReserveAmount-uint256-uint256-uint32-uint256-)
 
-No description
-
-# Function `saleRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount) → uint256` {#IBancorFormula-saleRate-uint256-uint256-uint32-uint256-}
+# Function `purchaseTargetAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount) → uint256` {#IBancorFormula-purchaseTargetAmount-uint256-uint256-uint32-uint256-}
 
 No description
 
-# Function `crossReserveRate(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount) → uint256` {#IBancorFormula-crossReserveRate-uint256-uint32-uint256-uint32-uint256-}
+# Function `saleTargetAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount) → uint256` {#IBancorFormula-saleTargetAmount-uint256-uint256-uint32-uint256-}
+
+No description
+
+# Function `crossReserveTargetAmount(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount) → uint256` {#IBancorFormula-crossReserveTargetAmount-uint256-uint32-uint256-uint32-uint256-}
 
 No description
 
@@ -26,6 +28,10 @@ No description
 
 No description
 
-# Function `liquidateRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount) → uint256` {#IBancorFormula-liquidateRate-uint256-uint256-uint32-uint256-}
+# Function `fundSupplyAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount) → uint256` {#IBancorFormula-fundSupplyAmount-uint256-uint256-uint32-uint256-}
+
+No description
+
+# Function `liquidateReserveAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount) → uint256` {#IBancorFormula-liquidateReserveAmount-uint256-uint256-uint32-uint256-}
 
 No description

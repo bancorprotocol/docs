@@ -1,5 +1,3 @@
-# LiquidityPoolV1Converter
-
 Liquidity Pool v1 Converter
 
 The liquidity pool v1 converter is a specialized version of a converter that manages
@@ -10,43 +8,55 @@ Even though classic pools can have many reserves, the most common configuration 
 
 the pool has 2 reserves with 50%/50% weights.
 
-## Functions:
+# Functions:
 
-* [`constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-)
-* [`converterType()`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-converterType--)
-* [`acceptAnchorOwnership()`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-acceptAnchorOwnership--)
-* [`rateAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-rateAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
-* [`addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-addLiquidity-contract-IERC20Token---uint256---uint256-)
-* [`removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-removeLiquidity-uint256-contract-IERC20Token---uint256---)
-* [`fund(uint256 _amount)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-fund-uint256-)
-* [`liquidate(uint256 _amount)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-liquidate-uint256-)
-* [`decimalLength(uint256 _x)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-decimalLength-uint256-)
-* [`roundDiv(uint256 _n, uint256 _d)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-roundDiv-uint256-uint256-)
-* [`geometricMean(uint256[] _values)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-geometricMean-uint256---)
+- [`constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)`](#LiquidityPoolV1Converter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-)
 
-## Events:
+- [`converterType()`](#LiquidityPoolV1Converter-converterType--)
 
-* [`PriceDataUpdate(address _connectorToken, uint256 _tokenSupply, uint256 _connectorBalance, uint32 _connectorWeight)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-PriceDataUpdate-address-uint256-uint256-uint32-)
+- [`acceptAnchorOwnership()`](#LiquidityPoolV1Converter-acceptAnchorOwnership--)
 
-## Function `constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)` <a id="LiquidityPoolV1Converter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-"></a>
+- [`targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](#LiquidityPoolV1Converter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
+
+- [`addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn)`](#LiquidityPoolV1Converter-addLiquidity-contract-IERC20Token---uint256---uint256-)
+
+- [`removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts)`](#LiquidityPoolV1Converter-removeLiquidity-uint256-contract-IERC20Token---uint256---)
+
+- [`fund(uint256 _amount)`](#LiquidityPoolV1Converter-fund-uint256-)
+
+- [`liquidate(uint256 _amount)`](#LiquidityPoolV1Converter-liquidate-uint256-)
+
+- [`decimalLength(uint256 _x)`](#LiquidityPoolV1Converter-decimalLength-uint256-)
+
+- [`roundDiv(uint256 _n, uint256 _d)`](#LiquidityPoolV1Converter-roundDiv-uint256-uint256-)
+
+- [`geometricMean(uint256[] _values)`](#LiquidityPoolV1Converter-geometricMean-uint256---)
+
+# Events:
+
+- [`PriceDataUpdate(address _connectorToken, uint256 _tokenSupply, uint256 _connectorBalance, uint32 _connectorWeight)`](#LiquidityPoolV1Converter-PriceDataUpdate-address-uint256-uint256-uint32-)
+
+# Function `constructor(contract ISmartToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)` {#LiquidityPoolV1Converter-constructor-contract-ISmartToken-contract-IContractRegistry-uint32-}
 
 initializes a new LiquidityPoolV1Converter instance
 
-### Parameters:
+## Parameters:
 
-* `_token`: pool token governed by the converter
-* `_registry`: address of a contract registry contract
-* `_maxConversionFee`: maximum conversion fee, represented in ppm
+- `_token`:              pool token governed by the converter
 
-## Function `converterType() → uint16` <a id="LiquidityPoolV1Converter-converterType--"></a>
+- `_registry`:           address of a contract registry contract
+
+- `_maxConversionFee`:   maximum conversion fee, represented in ppm
+
+# Function `converterType() → uint16` {#LiquidityPoolV1Converter-converterType--}
 
 returns the converter type
 
-### Return Values:
+## Return Values:
 
-* see the converter types in the the main contract doc
+- see the converter types in the the main contract doc
 
-## Function `acceptAnchorOwnership()` <a id="LiquidityPoolV1Converter-acceptAnchorOwnership--"></a>
+# Function `acceptAnchorOwnership()` {#LiquidityPoolV1Converter-acceptAnchorOwnership--}
 
 accepts ownership of the anchor after an ownership transfer
 
@@ -56,46 +66,53 @@ can only be called by the contract owner
 
 note that prior to version 28, you should use 'acceptTokenOwnership' instead
 
-## Function `rateAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` <a id="LiquidityPoolV1Converter-rateAndFee-contract-IERC20Token-contract-IERC20Token-uint256-"></a>
+# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#LiquidityPoolV1Converter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
 
-returns the expected rate of converting one reserve to another along with the fee
+returns the expected target amount of converting one reserve to another along with the fee
 
-### Parameters:
+## Parameters:
 
-* `_sourceToken`: contract address of the source reserve token
-* `_targetToken`: contract address of the target reserve token
-* `_amount`: amount of tokens received from the user
+- `_sourceToken`: contract address of the source reserve token
 
-### Return Values:
+- `_targetToken`: contract address of the target reserve token
 
-* expected rate
-* expected fee
+- `_amount`:      amount of tokens received from the user
 
-## Function `addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn)` <a id="LiquidityPoolV1Converter-addLiquidity-contract-IERC20Token---uint256---uint256-"></a>
+## Return Values:
+
+- expected target amount
+
+- expected fee
+
+# Function `addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn)` {#LiquidityPoolV1Converter-addLiquidity-contract-IERC20Token---uint256---uint256-}
 
 increases the pool's liquidity and mints new shares in the pool to the caller
 
 note that prior to version 28, you should use 'fund' instead
 
-### Parameters:
+## Parameters:
 
-* `_reserveTokens`: address of each reserve token
-* `_reserveAmounts`: amount of each reserve token
-* `_minReturn`: token minimum return-amount
+- `_reserveTokens`:   address of each reserve token
 
-## Function `removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts)` <a id="LiquidityPoolV1Converter-removeLiquidity-uint256-contract-IERC20Token---uint256---"></a>
+- `_reserveAmounts`:  amount of each reserve token
+
+- `_minReturn`:       token minimum return-amount
+
+# Function `removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts)` {#LiquidityPoolV1Converter-removeLiquidity-uint256-contract-IERC20Token---uint256---}
 
 decreases the pool's liquidity and burns the caller's shares in the pool
 
 note that prior to version 28, you should use 'liquidate' instead
 
-### Parameters:
+## Parameters:
 
-* `_amount`: token amount
-* `_reserveTokens`: address of each reserve token
-* `_reserveMinReturnAmounts`: minimum return-amount of each reserve token
+- `_amount`:                  token amount
 
-## Function `fund(uint256 _amount)` <a id="LiquidityPoolV1Converter-fund-uint256-"></a>
+- `_reserveTokens`:           address of each reserve token
+
+- `_reserveMinReturnAmounts`: minimum return-amount of each reserve token
+
+# Function `fund(uint256 _amount)` {#LiquidityPoolV1Converter-fund-uint256-}
 
 increases the pool's liquidity and mints new shares in the pool to the caller
 
@@ -105,11 +122,11 @@ then it will cost an amount equal to 10% of each reserve token balance
 
 note that starting from version 28, you should use 'addLiquidity' instead
 
-### Parameters:
+## Parameters:
 
-* `_amount`:  amount to increase the supply by \(in the pool token\)
+- `_amount`:  amount to increase the supply by (in the pool token)
 
-## Function `liquidate(uint256 _amount)` <a id="LiquidityPoolV1Converter-liquidate-uint256-"></a>
+# Function `liquidate(uint256 _amount)` {#LiquidityPoolV1Converter-liquidate-uint256-}
 
 decreases the pool's liquidity and burns the caller's shares in the pool
 
@@ -119,57 +136,60 @@ then they will receive 10% of each reserve token balance in return
 
 note that starting from version 28, you should use 'removeLiquidity' instead
 
-### Parameters:
+## Parameters:
 
-* `_amount`:  amount to liquidate \(in the pool token\)
+- `_amount`:  amount to liquidate (in the pool token)
 
-## Function `decimalLength(uint256 _x) → uint256` <a id="LiquidityPoolV1Converter-decimalLength-uint256-"></a>
+# Function `decimalLength(uint256 _x) → uint256` {#LiquidityPoolV1Converter-decimalLength-uint256-}
 
 calculates the number of decimal digits in a given value
 
-### Parameters:
+## Parameters:
 
-* `_x`:   value \(assumed positive\)
+- `_x`:   value (assumed positive)
 
-### Return Values:
+## Return Values:
 
-* the number of decimal digits in the given value
+- the number of decimal digits in the given value
 
-## Function `roundDiv(uint256 _n, uint256 _d) → uint256` <a id="LiquidityPoolV1Converter-roundDiv-uint256-uint256-"></a>
+# Function `roundDiv(uint256 _n, uint256 _d) → uint256` {#LiquidityPoolV1Converter-roundDiv-uint256-uint256-}
 
 calculates the nearest integer to a given quotient
 
-### Parameters:
+## Parameters:
 
-* `_n`: quotient numerator
-* `_d`: quotient denominator
+- `_n`:   quotient numerator
 
-### Return Values:
+- `_d`:   quotient denominator
 
-* the nearest integer to the given quotient
+## Return Values:
 
-## Function `geometricMean(uint256[] _values) → uint256` <a id="LiquidityPoolV1Converter-geometricMean-uint256---"></a>
+- the nearest integer to the given quotient
+
+# Function `geometricMean(uint256[] _values) → uint256` {#LiquidityPoolV1Converter-geometricMean-uint256---}
 
 calculates the average number of decimal digits in a given list of values
 
-### Parameters:
+## Parameters:
 
-* `_values`:  list of values \(each of which assumed positive\)
+- `_values`:  list of values (each of which assumed positive)
 
-### Return Values:
+## Return Values:
 
-* the average number of decimal digits in the given list of values
+- the average number of decimal digits in the given list of values
 
-## Event `PriceDataUpdate(address _connectorToken, uint256 _tokenSupply, uint256 _connectorBalance, uint32 _connectorWeight)` <a id="LiquidityPoolV1Converter-PriceDataUpdate-address-uint256-uint256-uint32-"></a>
+# Event `PriceDataUpdate(address _connectorToken, uint256 _tokenSupply, uint256 _connectorBalance, uint32 _connectorWeight)` {#LiquidityPoolV1Converter-PriceDataUpdate-address-uint256-uint256-uint32-}
 
 triggered after a conversion with new price data
 
 deprecated, use `TokenRateUpdate` from version 28 and up
 
-### Parameters:
+## Parameters:
 
-* `_connectorToken`: reserve token
-* `_tokenSupply`: smart token supply
-* `_connectorBalance`: reserve balance
-* `_connectorWeight`: reserve weight
+- `_connectorToken`:     reserve token
 
+- `_tokenSupply`:        smart token supply
+
+- `_connectorBalance`:   reserve balance
+
+- `_connectorWeight`:    reserve weight
