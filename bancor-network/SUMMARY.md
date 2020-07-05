@@ -55,10 +55,9 @@
     * [ConverterRegistry](../ethereum-contracts/ethereum-api-reference/converter/converterregistry.md)
     * [ConverterUpgrader](../ethereum-contracts/ethereum-api-reference/converter/converterupgrader.md)
     * [BancorFormula](../ethereum-contracts/ethereum-api-reference/converter/bancorformula.md)
-  * [Token](../ethereum-contracts/ethereum-api-reference/token/README.md)
-    * [ERC20Token](../ethereum-contracts/ethereum-api-reference/token/erc20token.md)
-    * [EtherToken](../ethereum-contracts/ethereum-api-reference/token/ethertoken.md)
-    * [SmartToken](../ethereum-contracts/ethereum-api-reference/token/smarttoken.md)
+  * [Token](../eos-contracts/eos-api-reference/token/README.md)
+    * [Currency Stats Table](../eos-contracts/eos-api-reference/token/currency-stats-table.md)
+    * [Accounts Table](../eos-contracts/eos-api-reference/token/accounts-table.md)
   * [Utility](../ethereum-contracts/ethereum-api-reference/utility/README.md)
     * [ContractRegistry](../ethereum-contracts/ethereum-api-reference/utility/contractregistry.md)
     * [ContractRegistryClient](../ethereum-contracts/ethereum-api-reference/utility/contractregistryclient.md)
@@ -69,8 +68,11 @@
     * [Utils](../ethereum-contracts/ethereum-api-reference/utility/utils.md)
     * [SafeMath](../ethereum-contracts/ethereum-api-reference/utility/safemath.md)
     * [Whitelist](../ethereum-contracts/ethereum-api-reference/utility/whitelist.md)
-  * [BancorX](../ethereum-contracts/ethereum-api-reference/bancorx/README.md)
-    * [BancorX](../ethereum-contracts/ethereum-api-reference/bancorx/bancorx.md)
+  * [BancorX](../eos-contracts/eos-api-reference/bancorx/README.md)
+    * [Amounts Table](../eos-contracts/eos-api-reference/bancorx/amounts-table.md)
+    * [Reporters Table](../eos-contracts/eos-api-reference/bancorx/reporters-table.md)
+    * [Transfers Table](../eos-contracts/eos-api-reference/bancorx/transfers-table.md)
+    * [Settings Table](../eos-contracts/eos-api-reference/bancorx/settings-table.md)
 
 ## EOS Contracts
 

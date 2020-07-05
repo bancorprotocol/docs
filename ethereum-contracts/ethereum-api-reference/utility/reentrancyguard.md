@@ -1,7 +1,10 @@
+# ReentrancyGuard
+
 ReentrancyGuard
 
-The contract provides protection against re-entrancy - calling a function (directly or
+The contract provides protection against re-entrancy - calling a function \(directly or
 
-indirectly) from within itself.
+indirectly\) from within itself.
 
-# Functions:
+## Functions:
+

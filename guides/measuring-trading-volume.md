@@ -25,7 +25,7 @@ On Ethereum it's possible to simply query the **BancorNetwork** contract to get 
 * `bancorNetwork = ContractRegistry.addressOf('BancorNetwork')` This pulls the BancorNetwork contract address from the contract registry
 * `events = bancorNetwork.getPastEvents('Conversion', { fromBlock: 9200000, toBlock: 9200100})`
 
-For each conversion event, get the amount converted. Note that you can get the value in both the source token and the target token. See the [Conversion](https://github.com/bancorprotocol/docs/tree/6e6fc921006fa85e69dc01b70c8a657b8a5711bd/bancor-network/api-reference/ethereum/bancornetwork.md#event-conversionaddress-smarttoken-address-fromtoken-address-totoken-uint256-fromamount-uint256-toamount-address-trader-bancornetwork-conversion-address-address-address-uint256-uint256-address) event documentation for details.
+For each conversion event, get the amount converted. Note that you can get the value in both the source token and the target token. See the [Conversion](https://docs.bancor.network/sdk/sdk-api-reference/interfaces/conversionevent) event documentation for details.
 
 ### Step 2 - Normalize Values
 
