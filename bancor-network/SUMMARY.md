@@ -6,22 +6,22 @@
 
 * [Resources](../getting-started/resources.md)
 * [What Can I Do With Bancor?](../getting-started/what-can-i-do-with-bancor.md)
+* [The V2 Difference](../getting-started/the-v2-difference.md)
 
 ## Developer Quick Start
 
 * [Working with Bancor Network](../developer-quick-start/working-with-bancor-network.md)
 * [Trading with Bancor](../developer-quick-start/trading-with-bancor.md)
-* [Adding and Removing Liquidity](../developer-quick-start/adding-and-removing-liquidity.md)
+* [Adding Liquidity](../developer-quick-start/adding-and-removing-liquidity.md)
+* [Removing Liquidity](../developer-quick-start/removing-liquidity.md)
 * [Deploying Liquidity Pools](../developer-quick-start/deploying-liquidity-pools.md)
 * [Deploying Bancor Contracts for Testing](../developer-quick-start/deploying-bancor-contracts-for-testing.md)
 
-## Liquidity Pools
+## V2 LIQUIDITY POOLS
 
-* [Overview](../liquidity-pools/liquidity-overview.md)
-* [Mechanics](../liquidity-pools/liquidity-pool-mechanics.md)
-* [Impermanent Loss](../liquidity-pools/impermanent-loss.md)
-* [Slippage](../liquidity-pools/slippage.md)
-* [The Bancor Formula](../liquidity-pools/the-bancor-formula.md)
+* [Overview](../v2-liquidity-pools/overview.md)
+* [Balancing Mechanics](../v2-liquidity-pools/balancing-mechanics.md)
+* [Liquidity Amplification](../v2-liquidity-pools/liquidity-amplification.md)
 
 ## Other Guides <a id="guides"></a>
 
@@ -73,6 +73,7 @@
     * [Reporters Table](../eos-contracts/eos-api-reference/bancorx/reporters-table.md)
     * [Transfers Table](../eos-contracts/eos-api-reference/bancorx/transfers-table.md)
     * [Settings Table](../eos-contracts/eos-api-reference/bancorx/settings-table.md)
+* [Security](../ethereum-contracts/security.md)
 
 ## EOS Contracts
 

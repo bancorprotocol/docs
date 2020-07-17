@@ -66,5 +66,3 @@ ContractRegistry also indicates its own address, which means you should run the 
 If you are not sure about the contract name or bytes32 representation, you can always trigger the function contractNames with a serial number as an input \(i.e. 0, 1, 2, etc\). The response will be the name of the available contract.
 {% endhint %}
 
-###  <a id="mainnet"></a>
-

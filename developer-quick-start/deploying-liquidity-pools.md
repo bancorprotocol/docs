@@ -14,6 +14,8 @@ The v0.6 release will go live in mid June. Until then, please refer to the **Dep
 This guide is for developers integrating Bancor into their dApp or smart contract. Other pool creators can use one of the community-managed front ends \(see: [Katana Pools](https://katanapools.com/)\) to customize and deploy their pools.
 {% endhint %}
 
+### Step \#1 - Deploying a new Liquidity Pool
+
 The **newConverter** function on the `ConverterRegistry` contract takes the following parameters:
 
 * `_type`: converter type
@@ -81,9 +83,9 @@ contract MyContract {
 | `Mainnet` | `0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4` |
 | `Ropsten` | `0xFD95E724962fCfC269010A0c6700Aa09D5de3074` |
 
-If you're developing with Web3, you'll first need to copy our `ContractRegistry` ABI into your project. Find that [**here**](https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/build/ContractRegistry.abi).
+If you're developing with Web3, you'll first need to copy our `ContractRegistry` ABI into your project. Find that [**here**](https://github.com/bancorprotocol/contracts-solidity/tree/master/solidity/contracts/converter).
 
-Then you can copy our `ConverterRegistry` ABI into your project. Find that [**here**](https://raw.githubusercontent.com/bancorprotocol/contracts/0.6.0/solidity/build/ConverterRegistry.abi). 
+Then you can copy our `ConverterRegistry` ABI into your project. Find that [**here**](https://github.com/bancorprotocol/contracts-solidity/tree/master/solidity/contracts/converter). 
 
 And your Web3 implementation would look something like this:
 
@@ -133,7 +135,37 @@ const deployConverter = async() => {
    
 ```
 
-### Accepting Ownership
+### Step \#2 - Adding Oracle and Activating the pool
+
+{% hint style="warning" %}
+This step is only relevant for Bancor V2 pools
+{% endhint %}
+
+Following pool creation, Bancor V2 pools require to set the relevant price oracles. Only once this function is called, the pool will be activated and can be used.
+
+```text
+function activate(
+    address _primaryReserveToken, 
+    address _primaryReserveOracle, 
+    address _secondaryReserveOracle
+    );
+```
+
+|  |  |
+| :--- | :--- |
+| `_primaryReserveToken` | `address of the pool's primary reserve token` |
+| `_primaryReserveOracle` | `address of a Chainlink price oracle for the primary reserve token` |
+| `_secondaryReserveOracle` | `address of a Chainlink price oracle for the secondary reserve token` |
+
+{% hint style="info" %}
+Make sure you use trusted oracles that are part of the white list
+{% endhint %}
+
+{% hint style="info" %}
+Oracles must use the same pair.  It is recommended to use oracles with price to ETH
+{% endhint %}
+
+### Step \#3 - Accepting Ownership
 
 As the capstone to the pool creation process, make sure to execute the `acceptOwnership` function on the new converter contract. Etherscan should have automatically verified your contract and this should be easily callable from their UI, or alternatively via your Web3 connection or smart contract interface.
 
