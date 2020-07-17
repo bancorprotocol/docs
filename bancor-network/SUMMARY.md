@@ -63,14 +63,14 @@
     * [ContractRegistry](../ethereum-contracts/ethereum-api-reference/utility/contractregistry.md)
     * [ContractRegistryClient](../ethereum-contracts/ethereum-api-reference/utility/contractregistryclient.md)
     * [Owned](../ethereum-contracts/ethereum-api-reference/utility/owned.md)
-    * [PriceOracle](../ethereum-contracts/ethereum-api-reference/utility/PriceOracle.md)
+    * [PriceOracle](../ethereum-contracts/ethereum-api-reference/utility/priceoracle.md)
     * [ReentrancyGuard](../ethereum-contracts/ethereum-api-reference/utility/reentrancyguard.md)
     * [SafeMath](../ethereum-contracts/ethereum-api-reference/utility/safemath.md)
     * [TokenHandler](../ethereum-contracts/ethereum-api-reference/utility/tokenhandler.md)
     * [TokenHolder](../ethereum-contracts/ethereum-api-reference/utility/tokenholder.md)
     * [Utils](../ethereum-contracts/ethereum-api-reference/utility/utils.md)
     * [Whitelist](../ethereum-contracts/ethereum-api-reference/utility/whitelist.md)
-  * [BancorX](../ethereum-contracts/ethereum-api-reference/bancorx/BancorX.md)
+  * [BancorX](../ethereum-contracts/ethereum-api-reference/bancorx/bancorx.md)
 * [Security](../ethereum-contracts/security.md)
 
 ## EOS Contracts
