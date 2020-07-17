@@ -63,7 +63,7 @@
     * [ContractRegistry](../ethereum-contracts/ethereum-api-reference/utility/contractregistry.md)
     * [ContractRegistryClient](../ethereum-contracts/ethereum-api-reference/utility/contractregistryclient.md)
     * [Owned](../ethereum-contracts/ethereum-api-reference/utility/owned.md)
-    * [PriceOracle](../ethereum-contracts/ethereum-api-reference/utility/priceoracle.md)
+    * [PriceOracle](../ethereum-contracts/ethereum-api-reference/utility/PriceOracle.md)
     * [ReentrancyGuard](../ethereum-contracts/ethereum-api-reference/utility/reentrancyguard.md)
     * [SafeMath](../ethereum-contracts/ethereum-api-reference/utility/safemath.md)
     * [TokenHandler](../ethereum-contracts/ethereum-api-reference/utility/tokenhandler.md)
