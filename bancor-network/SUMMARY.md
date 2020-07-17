@@ -70,11 +70,7 @@
     * [TokenHolder](../ethereum-contracts/ethereum-api-reference/utility/tokenholder.md)
     * [Utils](../ethereum-contracts/ethereum-api-reference/utility/utils.md)
     * [Whitelist](../ethereum-contracts/ethereum-api-reference/utility/whitelist.md)
-  * [BancorX](../eos-contracts/eos-api-reference/bancorx/README.md)
-    * [Amounts Table](../eos-contracts/eos-api-reference/bancorx/amounts-table.md)
-    * [Reporters Table](../eos-contracts/eos-api-reference/bancorx/reporters-table.md)
-    * [Transfers Table](../eos-contracts/eos-api-reference/bancorx/transfers-table.md)
-    * [Settings Table](../eos-contracts/eos-api-reference/bancorx/settings-table.md)
+  * [BancorX](../ethereum-contracts/ethereum-api-reference/bancorx/bancorx.md)
 * [Security](../ethereum-contracts/security.md)
 
 ## EOS Contracts
