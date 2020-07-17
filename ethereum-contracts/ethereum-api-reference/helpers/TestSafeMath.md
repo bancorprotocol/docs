@@ -6,6 +6,8 @@
 
 - [`testSafeMul(uint256 _x, uint256 _y)`](#TestSafeMath-testSafeMul-uint256-uint256-)
 
+- [`testSafeDiv(uint256 _x, uint256 _y)`](#TestSafeMath-testSafeDiv-uint256-uint256-)
+
 # Function `testSafeAdd(uint256 _x, uint256 _y) → uint256` {#TestSafeMath-testSafeAdd-uint256-uint256-}
 
 No description
@@ -15,5 +17,9 @@ No description
 No description
 
 # Function `testSafeMul(uint256 _x, uint256 _y) → uint256` {#TestSafeMath-testSafeMul-uint256-uint256-}
+
+No description
+
+# Function `testSafeDiv(uint256 _x, uint256 _y) → uint256` {#TestSafeMath-testSafeDiv-uint256-uint256-}
 
 No description

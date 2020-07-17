@@ -12,6 +12,8 @@
 
 - [`liquidateReserveAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](#IBancorFormula-liquidateReserveAmount-uint256-uint256-uint32-uint256-)
 
+- [`balancedWeights(uint256 _primaryReserveStakedBalance, uint256 _primaryReserveBalance, uint256 _secondaryReserveBalance, uint256 _reserveRateNumerator, uint256 _reserveRateDenominator)`](#IBancorFormula-balancedWeights-uint256-uint256-uint256-uint256-uint256-)
+
 # Function `purchaseTargetAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount) → uint256` {#IBancorFormula-purchaseTargetAmount-uint256-uint256-uint32-uint256-}
 
 No description
@@ -33,5 +35,9 @@ No description
 No description
 
 # Function `liquidateReserveAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount) → uint256` {#IBancorFormula-liquidateReserveAmount-uint256-uint256-uint32-uint256-}
+
+No description
+
+# Function `balancedWeights(uint256 _primaryReserveStakedBalance, uint256 _primaryReserveBalance, uint256 _secondaryReserveBalance, uint256 _reserveRateNumerator, uint256 _reserveRateDenominator) → uint32, uint32` {#IBancorFormula-balancedWeights-uint256-uint256-uint256-uint256-uint256-}
 
 No description

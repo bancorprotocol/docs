@@ -1,8 +1,10 @@
 # Functions:
 
+- [`registerTypedConverterFactory(contract ITypedConverterFactory _factory)`](#ConverterFactory-registerTypedConverterFactory-contract-ITypedConverterFactory-)
+
 - [`registerTypedConverterAnchorFactory(contract ITypedConverterAnchorFactory _factory)`](#ConverterFactory-registerTypedConverterAnchorFactory-contract-ITypedConverterAnchorFactory-)
 
-- [`registerTypedConverterFactory(contract ITypedConverterFactory _factory)`](#ConverterFactory-registerTypedConverterFactory-contract-ITypedConverterFactory-)
+- [`registerTypedConverterCustomFactory(contract ITypedConverterCustomFactory _factory)`](#ConverterFactory-registerTypedConverterCustomFactory-contract-ITypedConverterCustomFactory-)
 
 - [`createAnchor(uint16 _converterType, string _name, string _symbol, uint8 _decimals)`](#ConverterFactory-createAnchor-uint16-string-string-uint8-)
 
@@ -11,6 +13,16 @@
 # Events:
 
 - [`NewConverter(address _converter, address _owner)`](#ConverterFactory-NewConverter-address-address-)
+
+# Function `registerTypedConverterFactory(contract ITypedConverterFactory _factory)` {#ConverterFactory-registerTypedConverterFactory-contract-ITypedConverterFactory-}
+
+initializes the factory with a specific typed converter factory
+
+can only be called by the owner
+
+## Parameters:
+
+- `_factory`: typed converter factory
 
 # Function `registerTypedConverterAnchorFactory(contract ITypedConverterAnchorFactory _factory)` {#ConverterFactory-registerTypedConverterAnchorFactory-contract-ITypedConverterAnchorFactory-}
 
@@ -22,15 +34,15 @@ can only be called by the owner
 
 - `_factory`: typed converter anchor factory
 
-# Function `registerTypedConverterFactory(contract ITypedConverterFactory _factory)` {#ConverterFactory-registerTypedConverterFactory-contract-ITypedConverterFactory-}
+# Function `registerTypedConverterCustomFactory(contract ITypedConverterCustomFactory _factory)` {#ConverterFactory-registerTypedConverterCustomFactory-contract-ITypedConverterCustomFactory-}
 
-initializes the factory with a specific typed converter factory
+initializes the factory with a specific typed converter custom factory
 
 can only be called by the owner
 
 ## Parameters:
 
-- `_factory`: typed converter factory
+- `_factory`: typed converter custom factory
 
 # Function `createAnchor(uint16 _converterType, string _name, string _symbol, uint8 _decimals) → contract IConverterAnchor` {#ConverterFactory-createAnchor-uint16-string-string-uint8-}
 

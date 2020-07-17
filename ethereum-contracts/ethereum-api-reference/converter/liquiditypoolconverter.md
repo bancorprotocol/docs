@@ -1,5 +1,3 @@
-# LiquidityPoolConverter
-
 Liquidity Pool Converter
 
 The liquidity pool converter is the base contract for specific types of converters that
@@ -12,16 +10,17 @@ Note that TokenRateUpdate events are dispatched for pool tokens as well.
 
 The pool token is the first token in the event in that case.
 
-## Functions:
+# Functions:
 
-* [`acceptTokenOwnership()`](liquiditypoolconverter.md#LiquidityPoolConverter-acceptTokenOwnership--)
+- [`acceptTokenOwnership()`](#LiquidityPoolConverter-acceptTokenOwnership--)
 
-## Events:
+# Events:
 
-* [`LiquidityAdded(address _provider, address _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](liquiditypoolconverter.md#LiquidityPoolConverter-LiquidityAdded-address-address-uint256-uint256-uint256-)
-* [`LiquidityRemoved(address _provider, address _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](liquiditypoolconverter.md#LiquidityPoolConverter-LiquidityRemoved-address-address-uint256-uint256-uint256-)
+- [`LiquidityAdded(address _provider, address _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](#LiquidityPoolConverter-LiquidityAdded-address-address-uint256-uint256-uint256-)
 
-## Function `acceptTokenOwnership()` <a id="LiquidityPoolConverter-acceptTokenOwnership--"></a>
+- [`LiquidityRemoved(address _provider, address _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](#LiquidityPoolConverter-LiquidityRemoved-address-address-uint256-uint256-uint256-)
+
+# Function `acceptTokenOwnership()` {#LiquidityPoolConverter-acceptTokenOwnership--}
 
 accepts ownership of the anchor after an ownership transfer
 
@@ -31,27 +30,34 @@ can only be called by the contract owner
 
 note that prior to version 28, you should use 'acceptTokenOwnership' instead
 
-## Event `LiquidityAdded(address _provider, address _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` <a id="LiquidityPoolConverter-LiquidityAdded-address-address-uint256-uint256-uint256-"></a>
+# Event `LiquidityAdded(address _provider, address _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` {#LiquidityPoolConverter-LiquidityAdded-address-address-uint256-uint256-uint256-}
 
 triggered after liquidity is added
 
-### Parameters:
+## Parameters:
 
-* `_provider`: liquidity provider
-* `_reserveToken`: reserve token address
-* `_amount`: reserve token amount
-* `_newBalance`: reserve token new balance
-* `_newSupply`: pool token new supply
+- `_provider`:       liquidity provider
 
-## Event `LiquidityRemoved(address _provider, address _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` <a id="LiquidityPoolConverter-LiquidityRemoved-address-address-uint256-uint256-uint256-"></a>
+- `_reserveToken`:   reserve token address
+
+- `_amount`:         reserve token amount
+
+- `_newBalance`:     reserve token new balance
+
+- `_newSupply`:      pool token new supply
+
+# Event `LiquidityRemoved(address _provider, address _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` {#LiquidityPoolConverter-LiquidityRemoved-address-address-uint256-uint256-uint256-}
 
 triggered after liquidity is removed
 
-### Parameters:
+## Parameters:
 
-* `_provider`: liquidity provider
-* `_reserveToken`: reserve token address
-* `_amount`: reserve token amount
-* `_newBalance`: reserve token new balance
-* `_newSupply`: pool token new supply
+- `_provider`:       liquidity provider
 
+- `_reserveToken`:   reserve token address
+
+- `_amount`:         reserve token amount
+
+- `_newBalance`:     reserve token new balance
+
+- `_newSupply`:      pool token new supply

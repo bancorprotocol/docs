@@ -14,6 +14,12 @@
 
 - [`optimalExpTest(uint256 x)`](#TestBancorFormula-optimalExpTest-uint256-)
 
+- [`normalizedWeightsTest(uint256 _a, uint256 _b)`](#TestBancorFormula-normalizedWeightsTest-uint256-uint256-)
+
+- [`accurateWeightsTest(uint256 _a, uint256 _b)`](#TestBancorFormula-accurateWeightsTest-uint256-uint256-)
+
+- [`roundDivTest(uint256 _n, uint256 _d)`](#TestBancorFormula-roundDivTest-uint256-uint256-)
+
 # Function `powerTest(uint256 _baseN, uint256 _baseD, uint32 _expN, uint32 _expD) → uint256, uint8` {#TestBancorFormula-powerTest-uint256-uint256-uint32-uint32-}
 
 No description
@@ -39,5 +45,17 @@ No description
 No description
 
 # Function `optimalExpTest(uint256 x) → uint256` {#TestBancorFormula-optimalExpTest-uint256-}
+
+No description
+
+# Function `normalizedWeightsTest(uint256 _a, uint256 _b) → uint32, uint32` {#TestBancorFormula-normalizedWeightsTest-uint256-uint256-}
+
+No description
+
+# Function `accurateWeightsTest(uint256 _a, uint256 _b) → uint32, uint32` {#TestBancorFormula-accurateWeightsTest-uint256-uint256-}
+
+No description
+
+# Function `roundDivTest(uint256 _n, uint256 _d) → uint256` {#TestBancorFormula-roundDivTest-uint256-uint256-}
 
 No description
