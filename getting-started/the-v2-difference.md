@@ -6,8 +6,6 @@ description: How Bancor's V2 Update Takes AMMs to the Next Level‌
 
 ## A New Kind of AMM <a id="a-new-kind-of-amm"></a>
 
-‌
-
 When Bancor introduced the first Automated Market Maker \(AMM\) on Ethereum in 2017, the notion of an on-chain, order-book-less exchange was novel and experimental. Bancor v1 was designed to solve the `liquidity problem` where sparse order books struggled to guarantee liquidity to investors on both sides of the trade. Just a few years later, v1 has spurred an ecosystem of innovative AMMs which have generated billions of dollars in trading volume.‌
 
 But the success of the first generation of AMMs has exposed several key downsides of the initial model, affecting both traders and liquidity providers \(LPs\):‌
