@@ -16,13 +16,9 @@ But the success of the first generation of AMMs has exposed several key downside
 * `Slippage`
 * `Impermanent Loss`
 
-‌
-
 With the interests of both traders and LPs in mind, Bancor v2 offers solutions to all three of these problems.‌
 
 ### Single Token Staking <a id="single-token-staking"></a>
-
-‌
 
 Most first generation AMMs require LPs to contribute equal or determinate parts of each asset represented in the pool. This is both an inconvenience and a liability for many LPs who may hold only one of the assets and/or are only interested in exposure to that single asset. Bancor v2 breaks this paradigm, allowing LPs to contribute liquidity as they see fit. Due to single token staking, Bancor v2 now issues separate pool tokens for each asset in the pool, meaning that v2-enabled pools issue two pool tokens instead of one.‌
 
@@ -30,15 +26,11 @@ Most critically, when an LP stakes an asset on one side of the pool, that side's
 
 ### Moderating Slippage <a id="moderating-slippage"></a>
 
-‌
-
 For AMMs with fixed ratios, large trades likely come with high slippage, depending on the depth of the pool. However, Bancor's v2 pools - which dynamically adjust their weights when LPs add or remove liquidity - allow for much more flexibility on the pricing curve. V2 uses `liquidity amplification` to inflate the value of reserves when pricing a trade. Put another way, v2 pools can benefit from the effects of a deep pool without requiring the comparable levels of liquidity.‌
 
 Due to this arrangement, LPs are able to attract greater trading volume and users are able to trade with less slippage.‌
 
 ### Mitigating Impermanent Loss <a id="mitigating-impermanent-loss"></a>
-
-‌
 
 First generation AMMs, including Bancor v1, programmatically maintain a fixed weight of assets in a liquidity pool \(e.g. 50/50\). When the prices of the underlying assets diverge, the weights remain fixed, causing LPs to suffer from a financial deficit called `Impermanent Loss`. Typically, arbitrageurs will extract this value from the pool by trading the newly overvalued asset for the undervalued asset, resulting in a loss to LPs.‌
 
@@ -48,8 +40,6 @@ V2 protects LP capital by seeking to maintain the number of tokens staked to a p
 
 ## Limitations <a id="limitations"></a>
 
-‌
-
 In order to allow for the special properties of Bancor v2 pools, there are a few limitations relative to v1 pools.‌
 
 First, v2 only works for two-asset pools. Developers are still able to deploy legacy pools with more than two assets and custom weights.‌
@@ -57,8 +47,6 @@ First, v2 only works for two-asset pools. Developers are still able to deploy le
 Second, for v2's impermanent loss solution to be effective, there must be an oracle available for the second asset in the pool \(a BNT/ETH feed is available to price the BNT side of the pool\).‌
 
 ## Risks <a id="risks"></a>
-
-‌
 
 V2 is successful in mitigating the main risk of providing liquidity: impermanent loss. To do this, v2 pools require the use of an oracle operating externally to the protocol. While the team has developed a robust infrastructure to integrate with an external price feed, there is some risk that the oracle will fail from time to time. In this rare case, v2 pools have a failsafe where they regress to v1 pools and operate as before. Once the oracle corrects, the pool will update the weights to return the reserves to their proper state.‌
 

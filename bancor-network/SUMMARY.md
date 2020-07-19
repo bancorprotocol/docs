@@ -50,9 +50,9 @@
   * [Converter](../ethereum-contracts/ethereum-api-reference/converter/README.md)
     * [ConverterBase](../ethereum-contracts/ethereum-api-reference/converter/converterbase.md)
     * [LiquidityPoolConverter](../ethereum-contracts/ethereum-api-reference/converter/liquiditypoolconverter.md)
-    * [LiquidityPoolV1Converter](../ethereum-contracts/ethereum-api-reference/converter/types/liquidity-pool-v1/liquiditypoolv1converter.md)
-    * [LiquidityPoolV2Converter](../ethereum-contracts/ethereum-api-reference/converter/types/liquidity-pool-v2/liquiditypoolv2converter.md)
-    * [LiquidTokenConverter](../ethereum-contracts/ethereum-api-reference/converter/types/liquid-token/liquidtokenconverter.md)
+    * [LiquidityPoolV1Converter](../ethereum-contracts/ethereum-api-reference/converter/liquiditypoolv1converter.md)
+    * [LiquidityPoolV2Converter](../ethereum-contracts/ethereum-api-reference/converter/liquiditypoolv2converter.md)
+    * [LiquidTokenConverter](../ethereum-contracts/ethereum-api-reference/converter/liquidtokenconverter.md)
     * [ConverterRegistry](../ethereum-contracts/ethereum-api-reference/converter/converterregistry.md)
     * [ConverterUpgrader](../ethereum-contracts/ethereum-api-reference/converter/converterupgrader.md)
     * [BancorFormula](../ethereum-contracts/ethereum-api-reference/converter/bancorformula.md)
@@ -70,7 +70,7 @@
     * [TokenHolder](../ethereum-contracts/ethereum-api-reference/utility/tokenholder.md)
     * [Utils](../ethereum-contracts/ethereum-api-reference/utility/utils.md)
     * [Whitelist](../ethereum-contracts/ethereum-api-reference/utility/whitelist.md)
-  * [BancorX](../ethereum-contracts/ethereum-api-reference/bancorx/bancorx.md)
+  * [BancorX](../ethereum-contracts/ethereum-api-reference/bancorx.md)
 * [Security](../ethereum-contracts/security.md)
 
 ## EOS Contracts

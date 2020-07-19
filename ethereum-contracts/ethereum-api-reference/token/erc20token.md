@@ -1,70 +1,62 @@
+# ERC20Token
+
 ERC20 Standard Token implementation
 
-# Functions:
+## Functions:
 
-- [`constructor(string _name, string _symbol, uint8 _decimals, uint256 _totalSupply)`](#ERC20Token-constructor-string-string-uint8-uint256-)
+* [`constructor(string _name, string _symbol, uint8 _decimals, uint256 _totalSupply)`](erc20token.md#ERC20Token-constructor-string-string-uint8-uint256-)
+* [`transfer(address _to, uint256 _value)`](erc20token.md#ERC20Token-transfer-address-uint256-)
+* [`transferFrom(address _from, address _to, uint256 _value)`](erc20token.md#ERC20Token-transferFrom-address-address-uint256-)
+* [`approve(address _spender, uint256 _value)`](erc20token.md#ERC20Token-approve-address-uint256-)
 
-- [`transfer(address _to, uint256 _value)`](#ERC20Token-transfer-address-uint256-)
+## Events:
 
-- [`transferFrom(address _from, address _to, uint256 _value)`](#ERC20Token-transferFrom-address-address-uint256-)
+* [`Transfer(address _from, address _to, uint256 _value)`](erc20token.md#ERC20Token-Transfer-address-address-uint256-)
+* [`Approval(address _owner, address _spender, uint256 _value)`](erc20token.md#ERC20Token-Approval-address-address-uint256-)
 
-- [`approve(address _spender, uint256 _value)`](#ERC20Token-approve-address-uint256-)
-
-# Events:
-
-- [`Transfer(address _from, address _to, uint256 _value)`](#ERC20Token-Transfer-address-address-uint256-)
-
-- [`Approval(address _owner, address _spender, uint256 _value)`](#ERC20Token-Approval-address-address-uint256-)
-
-# Function `constructor(string _name, string _symbol, uint8 _decimals, uint256 _totalSupply)` {#ERC20Token-constructor-string-string-uint8-uint256-}
+## Function `constructor(string _name, string _symbol, uint8 _decimals, uint256 _totalSupply)` <a id="ERC20Token-constructor-string-string-uint8-uint256-"></a>
 
 initializes a new ERC20Token instance
 
-## Parameters:
+### Parameters:
 
-- `_name`:        token name
+* `_name`: token name
+* `_symbol`: token symbol
+* `_decimals`: decimal points, for display purposes
+* `_totalSupply`: total supply of token units
 
-- `_symbol`:      token symbol
-
-- `_decimals`:    decimal points, for display purposes
-
-- `_totalSupply`: total supply of token units
-
-# Function `transfer(address _to, uint256 _value) → bool success` {#ERC20Token-transfer-address-uint256-}
+## Function `transfer(address _to, uint256 _value) → bool success` <a id="ERC20Token-transfer-address-uint256-"></a>
 
 transfers tokens to a given address
 
 throws on any error rather then return a false flag to minimize user errors
 
-## Parameters:
+### Parameters:
 
-- `_to`:      target address
+* `_to`: target address
+* `_value`: transfer amount
 
-- `_value`:   transfer amount
+### Return Values:
 
-## Return Values:
+* true if the transfer was successful, false if it wasn't
 
-- true if the transfer was successful, false if it wasn't
-
-# Function `transferFrom(address _from, address _to, uint256 _value) → bool success` {#ERC20Token-transferFrom-address-address-uint256-}
+## Function `transferFrom(address _from, address _to, uint256 _value) → bool success` <a id="ERC20Token-transferFrom-address-address-uint256-"></a>
 
 transfers tokens to a given address on behalf of another address
 
 throws on any error rather then return a false flag to minimize user errors
 
-## Parameters:
+### Parameters:
 
-- `_from`:    source address
+* `_from`: source address
+* `_to`: target address
+* `_value`: transfer amount
 
-- `_to`:      target address
+### Return Values:
 
-- `_value`:   transfer amount
+* true if the transfer was successful, false if it wasn't
 
-## Return Values:
-
-- true if the transfer was successful, false if it wasn't
-
-# Function `approve(address _spender, uint256 _value) → bool success` {#ERC20Token-approve-address-uint256-}
+## Function `approve(address _spender, uint256 _value) → bool success` <a id="ERC20Token-approve-address-uint256-"></a>
 
 allows another account/contract to transfers tokens on behalf of the caller
 
@@ -72,40 +64,36 @@ throws on any error rather then return a false flag to minimize user errors
 
 also, to minimize the risk of the approve/transferFrom attack vector
 
-(see https://docs.google.com/document/d/1YLPtQxZu1UAvO9cZ1O2RPXBbT0mooh4DYKjA_jp-RLM/), approve has to be called twice
+\(see [https://docs.google.com/document/d/1YLPtQxZu1UAvO9cZ1O2RPXBbT0mooh4DYKjA\_jp-RLM/](https://docs.google.com/document/d/1YLPtQxZu1UAvO9cZ1O2RPXBbT0mooh4DYKjA_jp-RLM/)\), approve has to be called twice
 
 in 2 separate transactions - once to change the allowance to 0 and secondly to change it to the new allowance value
 
-## Parameters:
+### Parameters:
 
-- `_spender`: approved address
+* `_spender`: approved address
+* `_value`: allowance amount
 
-- `_value`:   allowance amount
+### Return Values:
 
-## Return Values:
+* true if the approval was successful, false if it wasn't
 
-- true if the approval was successful, false if it wasn't
-
-# Event `Transfer(address _from, address _to, uint256 _value)` {#ERC20Token-Transfer-address-address-uint256-}
+## Event `Transfer(address _from, address _to, uint256 _value)` <a id="ERC20Token-Transfer-address-address-uint256-"></a>
 
 triggered when tokens are transferred between wallets
 
-## Parameters:
+### Parameters:
 
-- `_from`:    source address
+* `_from`: source address
+* `_to`: target address
+* `_value`: transfer amount
 
-- `_to`:      target address
-
-- `_value`:   transfer amount
-
-# Event `Approval(address _owner, address _spender, uint256 _value)` {#ERC20Token-Approval-address-address-uint256-}
+## Event `Approval(address _owner, address _spender, uint256 _value)` <a id="ERC20Token-Approval-address-address-uint256-"></a>
 
 triggered when a wallet allows another wallet to transfer tokens from on its behalf
 
-## Parameters:
+### Parameters:
 
-- `_owner`:   wallet that approves the allowance
+* `_owner`: wallet that approves the allowance
+* `_spender`: wallet that receives the allowance
+* `_value`: allowance amount
 
-- `_spender`: wallet that receives the allowance
-
-- `_value`:   allowance amount
