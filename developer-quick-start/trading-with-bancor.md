@@ -92,8 +92,6 @@ Note that the example snippets below work both with trades that send Ether and t
 Note that we recommend using the `getPathAndRate` function on the Bancor SDK for determining the best conversion path. However, if you must calculate the path on chain, `conversionPath` is the correct approach.
 {% endhint %}
 
-
-
 ### Step \#2: Link Interfaces to your Contract
 
 The Bancor **ContractRegistry** is the entry point to the network of contracts and you should be using the `addressOf` function to identify the right interface address.

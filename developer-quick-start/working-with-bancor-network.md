@@ -50,8 +50,6 @@ For example, to get the latest contract address of the BancorNetwork contract, o
 ContractRegistry also indicates its own address, which means you should run the same process to make sure you are working with the latest version of the ContractRegistry
 {% endhint %}
 
-
-
 ### List of Contracts Names and Bytes32 Representation
 
 | **Contract Name** | bytes32 Representation |
