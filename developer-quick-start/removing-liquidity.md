@@ -36,7 +36,9 @@ const version = await bancorSDK.utils.getConverterVersion(converter);
 
 ### Step \#2: Query for Converter Type \(version &gt;= 28\) <a id="step-2-query-for-converter-type-version-greater-than-28"></a>
 
+{% hint style="info" %}
 Move on to Step \#3 if your converter version is 27 or lower.‌
+{% endhint %}
 
 As of version 28:‌
 
@@ -48,7 +50,9 @@ Each contract has a `converterType` function that will return `0` for a `LiquidT
 
 ### Step \#3a: Removing Liquidity from a V2 Pool <a id="step-3-a-removing-liquidity-from-a-v2-pool"></a>
 
+{% hint style="warning" %}
 Bancor V2 pools use a new interface for removing liquidity‌
+{% endhint %}
 
 The Bancor V2 `removeLiquidity` function is a departure from previous versions. It requires the developer to specify the pool token and, based on this input, the pool will know how to source the relevant reserve token. Recall, Bancor V2 pools issue a separate pool token for each reserve.‌
 
@@ -83,9 +87,11 @@ public view returns (uint256);​
 
 `removeLiquidityReturn` accepts the pool token address and the amount that the liquidity provider would like to remove and returns the reserve amount that the liquidity provider will receive at that given time.
 
+{% hint style="warning" %}
 LP will need to compare this returned value against the rate with no exit fee in order to calculate the exit fee.
 
 No fee return amount can be calculated as such: `(Liquidation Amount * StakedBalance) / PoolTokenSupply`‌
+{% endhint %}
 
 #### Step \#3a.3 - Remove liquidity <a id="step-3-a-3-remove-liquidity"></a>
 
@@ -118,7 +124,9 @@ converter.addLiquidity.value(msg.value)(
 
 `removeLiquidity` accepts the pool token address, the liquidity amount to remove, and a `minReturn` amount.
 
+{% hint style="info" %}
 `minReturn` value indicate the absolute minimum amount LP is willing to receive back as a result of the transaction. If the calculated return amount is smaller than `minReturn`, the transaction will revert.‌
+{% endhint %}
 
 Removing liquidity will result in the emission of an event:
 
@@ -198,7 +206,9 @@ contract MyContract {
 
 ## Removing Liquidity via Web3 <a id="removing-liquidity-via-web3"></a>
 
+{% hint style="info" %}
 Note that this demo assumes that you've already configured a Web3 connection via your preferred method‌
+{% endhint %}
 
 The process for adding and removing via Web3 or via smart contract is largely the same. Below is a walk-through.‌
 
