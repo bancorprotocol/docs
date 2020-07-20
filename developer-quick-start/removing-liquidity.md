@@ -98,11 +98,12 @@ Once the liquidation amount available is known and the pool is confirmed to be b
 ```text
 contract IConverter {    
     function removeLiquidity(        
-        address _poolToken,         
+        ISmartToken _poolToken         
         uint256 _amount,         
         uint256 _minReturn    
     ) external;    
-    
+}
+
 contract MyContract {    
     IConverter converter = IContractRegistry(<your converter address>);        
     function removeLiquidity(        
@@ -114,7 +115,8 @@ contract MyContract {
             _poolToken,            
             _poolAmount,            
             _minReturn        
-        );    
+        ); 
+    }   
 }
 ```
 
