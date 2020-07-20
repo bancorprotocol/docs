@@ -69,7 +69,7 @@ Recall that starting with version 28, LPs can directly contribute ETH using the 
 ```text
 contract IConverter {
     function addLiquidity(
-        IERC20 _reserveToken, 
+        IERC20Token _reserveToken, 
         uint256 _amount, 
         uint256 _minReturn
     ) external payable;
