@@ -67,8 +67,7 @@ Bancor V2 applies a variety of incentives in order to maintain the full staked t
 ```text
 function liquidationLimit(    
     address _poolToken
-    ) 
-public view returns (uint256);​
+) public view returns (uint256);​
 ```
 
 #### Step \#3a.2 - Check the pool state‌ <a id="step-3-a-2-check-the-pool-state"></a>
@@ -81,8 +80,7 @@ It is advised for LPs to wait until the arbitrage opportunity is closed \(which 
 function removeLiquidityReturn(    
     address _poolToken,     
     uint256 _amount
-    ) 
-public view returns (uint256);​
+) public view returns (uint256);​
 ```
 
 `removeLiquidityReturn` accepts the pool token address and the amount that the liquidity provider would like to remove and returns the reserve amount that the liquidity provider will receive at that given time.
@@ -103,22 +101,20 @@ contract IConverter {
         address _poolToken,         
         uint256 _amount,         
         uint256 _minReturn    
-        ) 
-    external payable;    
+    ) external payable;    
     
 contract MyContract {    
-IConverter converter = IContractRegistry(<your converter address>);        
+    IConverter converter = IContractRegistry(<your converter address>);        
     function removeLiquidity(        
-    IERC20Token[] memory _poolToken,
-    uint256[] memory _poolAmount,         
-    uint256 _minReturn    
-    ) 
-external payable {        
-converter.addLiquidity.value(msg.value)(            
-    _poolToken,            
-    _poolAmount,            
-    _minReturn        
-    );    
+        ISmartToken _poolToken,
+        uint256 _poolAmount,         
+        uint256 _minReturn    
+    ) external payable {        
+        converter.addLiquidity.value(msg.value)(            
+            _poolToken,            
+            _poolAmount,            
+            _minReturn        
+        );    
 }
 ```
 
