@@ -101,7 +101,7 @@ contract IConverter {
         address _poolToken,         
         uint256 _amount,         
         uint256 _minReturn    
-    ) external payable;    
+    ) external;    
     
 contract MyContract {    
     IConverter converter = IContractRegistry(<your converter address>);        
@@ -109,8 +109,8 @@ contract MyContract {
         ISmartToken _poolToken,
         uint256 _poolAmount,         
         uint256 _minReturn    
-    ) external payable {        
-        converter.addLiquidity.value(msg.value)(            
+    ) external {        
+        converter.removeLiquidity(            
             _poolToken,            
             _poolAmount,            
             _minReturn        
@@ -156,14 +156,13 @@ contract MyContract {
         uint256 _amount,         
         IERC20Token[] memory _reserveTokens,         
         uint256[] memory _reserveMinReturnAmounts    
-        ) 
-        external {        
-            converter.removeLiquidity(            
-                _amount,            
-                _reserveTokens,            
-                _reserveMinReturnAmounts        
-                );    
-        }
+    ) external {        
+        converter.removeLiquidity(            
+            _amount,            
+            _reserveTokens,            
+            _reserveMinReturnAmounts        
+        );    
+    }
 }‌
 ```
 
