@@ -20,6 +20,8 @@ This type of liquidity pool always has 2 reserves and the reserve weights are dy
 
 - [`reserveStakedBalance(contract IERC20Token _reserveToken)`](#LiquidityPoolV2Converter-reserveStakedBalance-contract-IERC20Token-)
 
+- [`reserveAmplifiedBalance(contract IERC20Token _reserveToken)`](#LiquidityPoolV2Converter-reserveAmplifiedBalance-contract-IERC20Token-)
+
 - [`setReserveStakedBalance(contract IERC20Token _reserveToken, uint256 _balance)`](#LiquidityPoolV2Converter-setReserveStakedBalance-contract-IERC20Token-uint256-)
 
 - [`setMaxStakedBalances(uint256 _reserve1MaxStakedBalance, uint256 _reserve2MaxStakedBalance)`](#LiquidityPoolV2Converter-setMaxStakedBalances-uint256-uint256-)
@@ -88,11 +90,27 @@ can only be called by the owner while the pool is inactive
 
 # Function `reserveStakedBalance(contract IERC20Token _reserveToken) → uint256` {#LiquidityPoolV2Converter-reserveStakedBalance-contract-IERC20Token-}
 
-returns the reserve's staked balance
+returns the staked balance of a given reserve token
 
 ## Parameters:
 
-- `_reserveToken`:    reserve's staked balance
+- `_reserveToken`:    reserve token address
+
+## Return Values:
+
+- staked balance
+
+# Function `reserveAmplifiedBalance(contract IERC20Token _reserveToken) → uint256` {#LiquidityPoolV2Converter-reserveAmplifiedBalance-contract-IERC20Token-}
+
+returns the amplified balance of a given reserve token
+
+## Parameters:
+
+- `_reserveToken`:   reserve token address
+
+## Return Values:
+
+- amplified balance
 
 # Function `setReserveStakedBalance(contract IERC20Token _reserveToken, uint256 _balance)` {#LiquidityPoolV2Converter-setReserveStakedBalance-contract-IERC20Token-uint256-}
 
@@ -188,7 +206,7 @@ returns the effective reserve tokens weights
 
 - reserve2 weight
 
-# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256 targetAmount, uint256 fee` {#LiquidityPoolV2Converter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
+# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#LiquidityPoolV2Converter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
 
 returns the expected target amount of converting one reserve to another along with the fee
 

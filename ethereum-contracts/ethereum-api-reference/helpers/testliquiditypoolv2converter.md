@@ -8,6 +8,8 @@
 
 - [`calculateAdjustedFeeTest(uint256 _primaryReserveStaked, uint256 _secondaryReserveStaked, uint256 _primaryReserveWeight, uint256 _secondaryReserveWeight, uint256 _primaryReserveRate, uint256 _secondaryReserveRate, uint256 _conversionFee)`](#TestLiquidityPoolV2Converter-calculateAdjustedFeeTest-uint256-uint256-uint256-uint256-uint256-uint256-uint256-)
 
+- [`setReserveWeight(contract IERC20Token _reserveToken, uint32 _weight)`](#TestLiquidityPoolV2Converter-setReserveWeight-contract-IERC20Token-uint32-)
+
 # Function `constructor(contract IPoolTokensContainer _token, contract IContractRegistry _registry, uint32 _maxConversionFee)` {#TestLiquidityPoolV2Converter-constructor-contract-IPoolTokensContainer-contract-IContractRegistry-uint32-}
 
 No description
@@ -21,5 +23,9 @@ No description
 No description
 
 # Function `calculateAdjustedFeeTest(uint256 _primaryReserveStaked, uint256 _secondaryReserveStaked, uint256 _primaryReserveWeight, uint256 _secondaryReserveWeight, uint256 _primaryReserveRate, uint256 _secondaryReserveRate, uint256 _conversionFee) → uint256` {#TestLiquidityPoolV2Converter-calculateAdjustedFeeTest-uint256-uint256-uint256-uint256-uint256-uint256-uint256-}
+
+No description
+
+# Function `setReserveWeight(contract IERC20Token _reserveToken, uint32 _weight)` {#TestLiquidityPoolV2Converter-setReserveWeight-contract-IERC20Token-uint32-}
 
 No description
