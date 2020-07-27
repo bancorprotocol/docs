@@ -44,6 +44,10 @@ First, v2 only works for two-asset pools. Developers are still able to deploy le
 
 Second, for v2's impermanent loss solution to be effective, there must be an oracle available for the second asset in the pool \(a BNT/ETH feed is available to price the BNT side of the pool\).‌
 
+{% hint style="danger" %}
+Third, v2 pools currently DO NOT support dynamically adjusting supply tokens that can control and adjust the token balances in users' wallets.
+{% endhint %}
+
 ## Risks <a id="risks"></a>
 
 V2 is successful in mitigating the main risk of providing liquidity: impermanent loss. To do this, v2 pools require the use of an oracle operating externally to the protocol. While the team has developed a robust infrastructure to integrate with an external price feed, there is some risk that the oracle will fail from time to time. In this rare case, v2 pools have a failsafe where they regress to v1 pools and operate as before. Once the oracle corrects, the pool will update the weights to return the reserves to their proper state.‌
