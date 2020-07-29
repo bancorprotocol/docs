@@ -2,9 +2,9 @@
 
 ### Audits & Formal Verification
 
-The Bancor V1 audit can be found [**here**](https://gist.github.com/Arachnid/c65fd1bd61a8e0294aef95a4808edc78). 
+Bancor V1 smart contract audit can be found [**here**](https://gist.github.com/Arachnid/c65fd1bd61a8e0294aef95a4808edc78). 
 
-Bancor V2 contracts are undergoing audits and testing by **Consensys Due Diligence** and **1inch.exchange**. Following the completion of these audits, they will be published here prior the Bancor V2 Mainnet release.
+Bancor V2 contracts are undergoing audits and formal verification. The final audits will be published here. 
 
 ### Bancor Bug Bounty
 
