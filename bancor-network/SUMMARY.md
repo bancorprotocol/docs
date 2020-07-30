@@ -51,7 +51,7 @@
     * [ConverterBase](../ethereum-contracts/ethereum-api-reference/converter/converterbase.md)
     * [LiquidityPoolConverter](../ethereum-contracts/ethereum-api-reference/converter/liquiditypoolconverter.md)
     * [LiquidityPoolV1Converter](../ethereum-contracts/ethereum-api-reference/converter/types/liquidity-pool-v1/liquiditypoolv1converter.md)
-    * [LiquidityPoolV2Converter](../ethereum-contracts/ethereum-api-reference/converter/types/liquidity-pool-v2liquiditypoolv2converter.md)
+    * [LiquidityPoolV2Converter](../ethereum-contracts/ethereum-api-reference/converter/types/liquidity-pool-v2/liquiditypoolv2converter.md)
     * [LiquidTokenConverter](../ethereum-contracts/ethereum-api-reference/converter/types/liquid-token/liquidtokenconverter.md)
     * [ConverterRegistry](../ethereum-contracts/ethereum-api-reference/converter/converterregistry.md)
     * [ConverterUpgrader](../ethereum-contracts/ethereum-api-reference/converter/converterupgrader.md)
