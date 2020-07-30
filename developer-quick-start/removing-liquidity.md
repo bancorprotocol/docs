@@ -86,9 +86,14 @@ function removeLiquidityReturn(
 `removeLiquidityReturn` accepts the pool token address and the amount that the liquidity provider would like to remove and returns the reserve amount that the liquidity provider will receive at that given time.
 
 {% hint style="warning" %}
-LP will need to compare this returned value against the rate with no exit fee in order to calculate the exit fee.
+How to calculate the exit fee?  
+![](../.gitbook/assets/image.png)
 
-No fee return amount can be calculated as such: `(Liquidation Amount * StakedBalance) / PoolTokenSupply`‌
+Where:  
+`XYZ staked balance amp =   
+    XYZ staked balance * liquidity amplification  
+XYZ current balance amp =   
+    XYZ staked balance amp - (XYZ staked balance - XYZ current balance)`
 {% endhint %}
 
 #### Step \#3a.3 - Remove liquidity <a id="step-3-a-3-remove-liquidity"></a>
