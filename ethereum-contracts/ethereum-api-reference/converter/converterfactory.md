@@ -12,7 +12,7 @@
 
 # Events:
 
-- [`NewConverter(address _converter, address _owner)`](#ConverterFactory-NewConverter-address-address-)
+- [`NewConverter(uint16 _type, address _converter, address _owner)`](#ConverterFactory-NewConverter-uint16-address-address-)
 
 # Function `registerTypedConverterFactory(contract ITypedConverterFactory _factory)` {#ConverterFactory-registerTypedConverterFactory-contract-ITypedConverterFactory-}
 
@@ -84,11 +84,13 @@ the ownership to the caller
 
 - new converter
 
-# Event `NewConverter(address _converter, address _owner)` {#ConverterFactory-NewConverter-address-address-}
+# Event `NewConverter(uint16 _type, address _converter, address _owner)` {#ConverterFactory-NewConverter-uint16-address-address-}
 
 triggered when a new converter is created
 
 ## Parameters:
+
+- `_type`:        converter type, see ConverterBase contract main doc
 
 - `_converter`:   new converter address
 

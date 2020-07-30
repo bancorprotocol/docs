@@ -16,6 +16,8 @@ This type of liquidity pool always has 2 reserves and the reserve weights are dy
 
 - [`isActive()`](#LiquidityPoolV2Converter-isActive--)
 
+- [`amplificationFactor()`](#LiquidityPoolV2Converter-amplificationFactor--)
+
 - [`activate(contract IERC20Token _primaryReserveToken, contract IChainlinkPriceOracle _primaryReserveOracle, contract IChainlinkPriceOracle _secondaryReserveOracle)`](#LiquidityPoolV2Converter-activate-contract-IERC20Token-contract-IChainlinkPriceOracle-contract-IChainlinkPriceOracle-)
 
 - [`reserveStakedBalance(contract IERC20Token _reserveToken)`](#LiquidityPoolV2Converter-reserveStakedBalance-contract-IERC20Token-)
@@ -44,7 +46,7 @@ This type of liquidity pool always has 2 reserves and the reserve weights are dy
 
 - [`removeLiquidity(contract ISmartToken _poolToken, uint256 _amount, uint256 _minReturn)`](#LiquidityPoolV2Converter-removeLiquidity-contract-ISmartToken-uint256-uint256-)
 
-- [`removeLiquidityReturn(contract ISmartToken _poolToken, uint256 _amount)`](#LiquidityPoolV2Converter-removeLiquidityReturn-contract-ISmartToken-uint256-)
+- [`removeLiquidityReturnAndFee(contract ISmartToken _poolToken, uint256 _amount)`](#LiquidityPoolV2Converter-removeLiquidityReturnAndFee-contract-ISmartToken-uint256-)
 
 # Function `constructor(contract IPoolTokensContainer _poolTokensContainer, contract IContractRegistry _registry, uint32 _maxConversionFee)` {#LiquidityPoolV2Converter-constructor-contract-IPoolTokensContainer-contract-IContractRegistry-uint32-}
 
@@ -69,6 +71,18 @@ returns the converter type
 # Function `isActive() → bool` {#LiquidityPoolV2Converter-isActive--}
 
 returns true if the converter is active, false otherwise
+
+## Return Values:
+
+- true if the converter is active, false otherwise
+
+# Function `amplificationFactor() → uint8` {#LiquidityPoolV2Converter-amplificationFactor--}
+
+returns the liquidity amplification factor in the pool
+
+## Return Values:
+
+- liquidity amplification factor
 
 # Function `activate(contract IERC20Token _primaryReserveToken, contract IChainlinkPriceOracle _primaryReserveOracle, contract IChainlinkPriceOracle _secondaryReserveOracle)` {#LiquidityPoolV2Converter-activate-contract-IERC20Token-contract-IChainlinkPriceOracle-contract-IChainlinkPriceOracle-}
 
@@ -256,9 +270,11 @@ decreases the pool's liquidity and burns the caller's shares in the pool
 
 - amount of liquidity removed
 
-# Function `removeLiquidityReturn(contract ISmartToken _poolToken, uint256 _amount) → uint256` {#LiquidityPoolV2Converter-removeLiquidityReturn-contract-ISmartToken-uint256-}
+# Function `removeLiquidityReturnAndFee(contract ISmartToken _poolToken, uint256 _amount) → uint256, uint256` {#LiquidityPoolV2Converter-removeLiquidityReturnAndFee-contract-ISmartToken-uint256-}
 
 calculates the amount of reserve tokens entitled for a given amount of pool tokens
+
+note that a fee is applied according to the equilibrium level of the primary reserve token
 
 ## Parameters:
 
@@ -268,4 +284,4 @@ calculates the amount of reserve tokens entitled for a given amount of pool toke
 
 ## Return Values:
 
-- amount of reserve tokens
+- amount after fee and fee, in reserve token units
