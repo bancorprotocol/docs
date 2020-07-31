@@ -1,3 +1,5 @@
+# ContractRegistry
+
 Contract Registry
 
 The contract registry keeps contract addresses by name.
@@ -12,70 +14,65 @@ addresses.
 
 Note that contract names are limited to 32 bytes UTF8 encoded ASCII strings to optimize gas costs
 
-# Functions:
+## Functions:
 
-- [`itemCount()`](#ContractRegistry-itemCount--)
+* [`itemCount()`](contractregistry.md#ContractRegistry-itemCount--)
+* [`addressOf(bytes32 _contractName)`](contractregistry.md#ContractRegistry-addressOf-bytes32-)
+* [`registerAddress(bytes32 _contractName, address _contractAddress)`](contractregistry.md#ContractRegistry-registerAddress-bytes32-address-)
+* [`unregisterAddress(bytes32 _contractName)`](contractregistry.md#ContractRegistry-unregisterAddress-bytes32-)
+* [`getAddress(bytes32 _contractName)`](contractregistry.md#ContractRegistry-getAddress-bytes32-)
 
-- [`addressOf(bytes32 _contractName)`](#ContractRegistry-addressOf-bytes32-)
+## Events:
 
-- [`registerAddress(bytes32 _contractName, address _contractAddress)`](#ContractRegistry-registerAddress-bytes32-address-)
+* [`AddressUpdate(bytes32 _contractName, address _contractAddress)`](contractregistry.md#ContractRegistry-AddressUpdate-bytes32-address-)
 
-- [`unregisterAddress(bytes32 _contractName)`](#ContractRegistry-unregisterAddress-bytes32-)
-
-- [`getAddress(bytes32 _contractName)`](#ContractRegistry-getAddress-bytes32-)
-
-# Events:
-
-- [`AddressUpdate(bytes32 _contractName, address _contractAddress)`](#ContractRegistry-AddressUpdate-bytes32-address-)
-
-# Function `itemCount() → uint256` {#ContractRegistry-itemCount--}
+## Function `itemCount() → uint256` <a id="ContractRegistry-itemCount--"></a>
 
 returns the number of items in the registry
 
-## Return Values:
+### Return Values:
 
-- number of items
+* number of items
 
-# Function `addressOf(bytes32 _contractName) → address` {#ContractRegistry-addressOf-bytes32-}
+## Function `addressOf(bytes32 _contractName) → address` <a id="ContractRegistry-addressOf-bytes32-"></a>
 
 returns the address associated with the given contract name
 
-## Parameters:
+### Parameters:
 
-- `_contractName`:    contract name
+* `_contractName`:    contract name
 
-## Return Values:
+### Return Values:
 
-- contract address
+* contract address
 
-# Function `registerAddress(bytes32 _contractName, address _contractAddress)` {#ContractRegistry-registerAddress-bytes32-address-}
+## Function `registerAddress(bytes32 _contractName, address _contractAddress)` <a id="ContractRegistry-registerAddress-bytes32-address-"></a>
 
 registers a new address for the contract name in the registry
 
-## Parameters:
+### Parameters:
 
-- `_contractName`:     contract name
+* `_contractName`: contract name
+* `_contractAddress`: contract address
 
-- `_contractAddress`:  contract address
-
-# Function `unregisterAddress(bytes32 _contractName)` {#ContractRegistry-unregisterAddress-bytes32-}
+## Function `unregisterAddress(bytes32 _contractName)` <a id="ContractRegistry-unregisterAddress-bytes32-"></a>
 
 removes an existing contract address from the registry
 
-## Parameters:
+### Parameters:
 
-- `_contractName`: contract name
+* `_contractName`: contract name
 
-# Function `getAddress(bytes32 _contractName) → address` {#ContractRegistry-getAddress-bytes32-}
+## Function `getAddress(bytes32 _contractName) → address` <a id="ContractRegistry-getAddress-bytes32-"></a>
 
 deprecated, backward compatibility
 
-# Event `AddressUpdate(bytes32 _contractName, address _contractAddress)` {#ContractRegistry-AddressUpdate-bytes32-address-}
+## Event `AddressUpdate(bytes32 _contractName, address _contractAddress)` <a id="ContractRegistry-AddressUpdate-bytes32-address-"></a>
 
 triggered when an address pointed to by a contract name is modified
 
-## Parameters:
+### Parameters:
 
-- `_contractName`:    contract name
+* `_contractName`: contract name
+* `_contractAddress`: new contract address
 
-- `_contractAddress`: new contract address
