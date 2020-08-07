@@ -191,22 +191,22 @@ Find the `LiquidityPoolV2Converter` ABI [**here**](https://github.com/bancorprot
 Your Web3 code will look something like this:
 
 ```text
-const LiquidTokenConverterABI = require('./LiquidTokenConverterABI.json')
-const LiquidTokenConverterAdress = '<your converter address>';
-const LiquidTokenConverterContract = new web3.eth.Contract(
-    LiquidTokenConverterABI,
-    LiquidTokenConverterAdress
+const LiquidityPoolV2ConverterABI = require('./LiquidityPoolV2ConverterABI.json')
+const LiquidityPoolV2ConverterAdress = '<your converter address>';
+const LiquidityPoolV2ConverterContract = new web3.eth.Contract(
+    LiquidityPoolV2ConverterABI,
+    LiquidityPoolV2ConverterAdress
 );
 
-const reserveTokens = [<token-address-1>, <token-address-2>]
-const reserveAmounts [<token-1-amount>, <token-2-amount>]
+const reserveToken = '<token-address>';
+const reserveAmount = <token-amount>;
 const minReturn = 3000000000000000000;
 
-await LiquidTokenConverterContract.methods.addLiquidity(
+await LiquidityPoolV2ConverterContract.methods.addLiquidity(
     reserveToken,
     reserveAmount,
     minReturn, {
-        value: <ETH value if one of reserve tokens is ETH>
+        value: <ETH value if the reserve token is ETH>
     }
 );
 ```
@@ -220,22 +220,22 @@ Find the `LiquidityPoolV1Converter` ABI [**here**](https://raw.githubusercontent
 Your Web3 code will look something like this:
 
 ```text
-const LiquidTokenConverterABI = require('./LiquidTokenConverterABI.json')
-const LiquidTokenConverterAdress = '<your converter address>';
-const LiquidTokenConverterContract = new web3.eth.Contract(
-    LiquidTokenConverterABI,
-    LiquidTokenConverterAdress
+const LiquidityPoolV1ConverterABI = require('./LiquidityPoolV1ConverterABI.json')
+const LiquidityPoolV1ConverterAdress = '<your converter address>';
+const LiquidityPoolV1ConverterContract = new web3.eth.Contract(
+    LiquidityPoolV1ConverterABI,
+    LiquidityPoolV1ConverterAdress
 );
 
-const reserveTokens = [<token-address-1>, <token-address-2>]
-const reserveAmounts [<token-1-amount>, <token-2-amount>]
+const reserveTokens = ['<token-1-address>', '<token-2-address>'];
+const reserveAmount = [<token-1-amount>, <token-2-amount>];
 const minReturn = 3000000000000000000;
 
-await LiquidTokenConverterContract.methods.addLiquidity(
+await LiquidityPoolV1ConverterContract.methods.addLiquidity(
     reserveTokens,
     reserveAmounts,
     minReturn, {
-        value: <ETH value if one of reserve tokens is ETH>
+        value: <ETH value if one of the reserve tokens is ETH>
     }
 );
 ```

@@ -232,16 +232,14 @@ const LiquidityPoolV2ConverterContract = new web3.eth.Contract(
     LiquidityPoolV2ConverterAdress
 );
 
-const reserveToken = '<token-address>';
-const reserveAmount = <token-amount>;
+const poolToken = '<token-address>';
+const amount = <token-amount>;
 const minReturn = 3000000000000000000;
 
-await LiquidityPoolV2ConverterContract.methods.addLiquidity(
-    reserveToken,
-    reserveAmount,
-    minReturn, {
-        value: <ETH value if the reserve token is ETH>
-    }
+await LiquidityPoolV2ConverterContract.methods.removeLiquidity(
+    poolToken,
+    amount,
+    minReturn
 );
 ```
 
@@ -261,16 +259,14 @@ const LiquidityPoolV1ConverterContract = new web3.eth.Contract(
     LiquidityPoolV1ConverterAdress
 );
 
+const amount = <pool-token-amount>;
 const reserveTokens = ['<token-1-address>', '<token-2-address>'];
-const reserveAmount = [<token-1-amount>, <token-2-amount>];
 const minReturn = 3000000000000000000;
 
-await LiquidityPoolV1ConverterContract.methods.addLiquidity(
+await LiquidityPoolV1ConverterContract.methods.removeLiquidity(
+    amount,
     reserveTokens,
-    reserveAmounts,
-    minReturn, {
-        value: <ETH value if one of the reserve tokens is ETH>
-    }
+    minReturn
 );
 ```
 
