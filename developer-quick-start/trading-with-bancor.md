@@ -25,7 +25,7 @@ contract IContractRegistry {
 
 contract IBancorNetwork {
     function convertByPath(
-        IERC20Token[] memory _path, 
+        address[] memory _path, 
         uint256 _amount, 
         uint256 _minReturn, 
         address _beneficiary, 
@@ -34,7 +34,7 @@ contract IBancorNetwork {
     ) external payable returns (uint256);
     
     function rateByPath(
-        IERC20Token[] memory _path, 
+        address[] memory _path, 
         uint256 _amount
     ) external view returns (uint256);
     
