@@ -32,12 +32,12 @@ contract IBancorNetwork {
         address _affiliateAccount, 
         uint256 _affiliateFee
     ) external payable returns (uint256);
-    
+
     function rateByPath(
         address[] memory _path, 
         uint256 _amount
     ) external view returns (uint256);
-    
+
     function conversionPath(
         IERC20Token _sourceToken, 
         IERC20Token _targetToken
@@ -65,7 +65,7 @@ contract IBancorNetwork {
   * `uint256`: return amount in destination token
 
 {% hint style="info" %}
-Note that when sending Ether value with this function, your `msg.value` must be exactly equal to your `_amount` value. 
+Note that when sending Ether value with this function, your `msg.value` must be exactly equal to your `_amount` value.
 {% endhint %}
 
 {% hint style="info" %}
@@ -105,11 +105,11 @@ The Bancor **ContractRegistry** is the entry point to the network of contracts a
 contract MyContract {
     IContractRegistry contractRegistry = IContractRegistry(0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4);
     bytes32 bancorNetworkName = 0x42616e636f724e6574776f726b; // "BancorNetwork"
-    
+
     function getBancorNetworkContract() public returns(IBancorNetwork){
         return IBancorNetwork(contractRegistry.addressOf(bancorNetworkName));
     }
-        
+
     // path and minReturn generated via SDK    
     function tradeWithInputs(
         IERC20[] memory _path,
@@ -126,7 +126,7 @@ contract MyContract {
             0
         );
     }
-    
+
     // path and minReturn generated on chain    
     function trade(
         address _sourceToken, 
@@ -142,7 +142,7 @@ contract MyContract {
             path,
             _amount
         );
-        
+
         returnAmount = bancorNetwork.convertByPath.value(msg.value)(
             path,
             _amount,
@@ -152,7 +152,7 @@ contract MyContract {
             0
         );
     }
-    
+
 }
 ```
 
@@ -198,7 +198,7 @@ const initializeSDK = async() => {
         // optional, mandatory when interacting with the EOS mainnet
         eosNodeEndpoint: '<eos node endpoint>'
     }
-    
+
     const bancorSDK = await BancorSDK.create(settings);
     return bancorSDK;
 }
@@ -215,13 +215,13 @@ const targetToken = {
 const trade = async(amount) => {
     const bancorNetworkAddress = await getBancorNetworkAddress();
     const BancorNetworkContract = new web3.eth.Contract(BancorNetworkABI, bancorNetworkAddress);
-    
+
     const sdk = await initializeSDK();
     const path = await sdk.pricing.getPathAndRate(sourceToken, targetToken, '1.0');
-    
+
     const minReturn = await BancorNetworkContract.methods.rateByPath(path, amount);
     const modifiedMinReturn = 
-    
+
     const returnAmount = await BancorNetworkContract.methods.convert(
         path,
         amount,
@@ -235,8 +235,6 @@ const trade = async(amount) => {
     );
     return returnAmount;
 }
-
-
 ```
 
 ## A Note on Trading ETH

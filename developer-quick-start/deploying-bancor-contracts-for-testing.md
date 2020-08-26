@@ -25,7 +25,7 @@ description: >-
 
 In the current directory, create a file named `config.json` . Add the token info and reserve settings necessary for your deployment \(find an example of the config file [here](https://github.com/bancorprotocol/contracts/blob/master/solidity/utils/README.md#deploy-network-emulation)\).
 
-Run `node deploy_network_emulation.js './config.json YOUR_NODE_ADDRESS YOUR_PRIVATE_KEY`
+Run `node test_deployment.js './config.json YOUR_NODE_ADDRESS YOUR_PRIVATE_KEY`
 
 Your node address would likely be an Infura url or the the url of a local node.
 
