@@ -1,7 +1,9 @@
+
+
 # Functions:
+- [`findPath(contract IERC20Token _sourceToken, contract IERC20Token _targetToken)`](#IConversionPathFinder-findPath-contract-IERC20Token-contract-IERC20Token-)
 
-- [`findPath(address _sourceToken, address _targetToken)`](#IConversionPathFinder-findPath-address-address-)
 
-# Function `findPath(address _sourceToken, address _targetToken) → address[]` {#IConversionPathFinder-findPath-address-address-}
-
+# Function `findPath(contract IERC20Token _sourceToken, contract IERC20Token _targetToken) → address[]` {#IConversionPathFinder-findPath-contract-IERC20Token-contract-IERC20Token-}
 No description
+
