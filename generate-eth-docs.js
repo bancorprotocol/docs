@@ -11,8 +11,7 @@ require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/
         "--output=ethereum-contracts/ethereum-api-reference",
         "--templates=config/ethereum-smart-contracts",
         "--solc-module=node_modules/solc",
-        "--solc-settings=" + JSON.stringify({optimizer: {enabled: true, runs: 200}}),
-        "--contract-pages"
+        "--solc-settings=" + JSON.stringify({optimizer: {enabled: true, runs: 200}})
     ];
 
     const result = spawnSync("node", args, {stdio: ["inherit", "inherit", "pipe"]});
