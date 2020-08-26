@@ -10,7 +10,7 @@ require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/
         "--input=node_modules/@bancor/contracts-solidity/solidity/contracts",
         "--output=ethereum-contracts/ethereum-api-reference",
         "--templates=config/ethereum-smart-contracts",
-        "--solc-module=node_modules/truffle/node_modules/solc",
+        "--solc-module=node_modules/solc",
         "--solc-settings=" + JSON.stringify({optimizer: {enabled: true, runs: 200}}),
         "--contract-pages"
     ];
