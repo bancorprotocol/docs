@@ -16,9 +16,9 @@
     "download-git-repo": "3.0.2",
     "doxygen": "0.3.2",
     "solidity-docgen": "0.3.11",
-    "truffle": "4.1.16",
-    "typedoc": "^0.17.6",
-    "typedoc-plugin-markdown": "^2.2.17",
-    "typescript": "^3.8.3"
+    "truffle": "5.1.36",
+    "typedoc": "^0.17.8",
+    "typedoc-plugin-markdown": "^2.4.2",
+    "typescript": "^3.9.7"
   }
 }
