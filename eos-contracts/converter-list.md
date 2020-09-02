@@ -16,14 +16,12 @@ Below you will find the Bancor Network EOS Converter List.
 | OCT | bancorc11132 |
 | MEV | bancorc11134 |
 | TAEL | bancorc11145 |
-| ZOS | bancorc11151 |
 | EQUA | bancorc11152 |
 | PEOS | bancorc11153 |
 | DAPP | bancorc11154 |
 | CHEX | bancorc11155 |
 | FINX | bancorc11211 |
 | EMT | bancorc11213 |
-| PIXEOS | bancorc11214 |
 | NUT | bancorc11215 |
 | EOSDT | bancorc11222 |
 | LUME | bancorc11225 |
