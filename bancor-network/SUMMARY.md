@@ -45,9 +45,9 @@
 ## Ethereum Contracts
 
 * [Addresses](../ethereum-contracts/addresses.md)
-* [Ethereum API Reference](../ethereum-contracts/ethereum-api-reference/README.md)
+* [API Reference](../ethereum-contracts/ethereum-api-reference/README.md)
   * [BancorNetwork](../ethereum-contracts/ethereum-api-reference/bancornetwork.md)
-  * [Converter](../ethereum-contracts/ethereum-api-reference/converter/README.md)
+  * [Converter]
     * [ConverterBase](../ethereum-contracts/ethereum-api-reference/converter/converterbase.md)
     * [LiquidityPoolConverter](../ethereum-contracts/ethereum-api-reference/converter/liquiditypoolconverter.md)
     * [LiquidityPoolV1Converter](../ethereum-contracts/ethereum-api-reference/converter/types/liquidity-pool-v1/liquiditypoolv1converter.md)
@@ -56,10 +56,10 @@
     * [ConverterRegistry](../ethereum-contracts/ethereum-api-reference/converter/converterregistry.md)
     * [ConverterUpgrader](../ethereum-contracts/ethereum-api-reference/converter/converterupgrader.md)
     * [BancorFormula](../ethereum-contracts/ethereum-api-reference/converter/bancorformula.md)
-  * [Token](../ethereum-contracts/ethereum-api-reference/token/README.md)
+  * [Token]
     * [ERC20Token](../ethereum-contracts/ethereum-api-reference/token/erc20token.md)
     * [DSToken](../ethereum-contracts/ethereum-api-reference/token/dstoken.md)
-  * [Utility](../ethereum-contracts/ethereum-api-reference/utility/README.md)
+  * [Utility]
     * [ContractRegistry](../ethereum-contracts/ethereum-api-reference/utility/contractregistry.md)
     * [ContractRegistryClient](../ethereum-contracts/ethereum-api-reference/utility/contractregistryclient.md)
     * [Owned](../ethereum-contracts/ethereum-api-reference/utility/owned.md)
@@ -76,7 +76,7 @@
 ## EOS Contracts
 
 * [Converter List](../eos-contracts/converter-list.md)
-* [EOS API Reference](../eos-contracts/eos-api-reference/README.md)
+* [API Reference](../eos-contracts/eos-api-reference/README.md)
   * [BancorConverter](../eos-contracts/eos-api-reference/bancorconverter/README.md)
     * [Converters Table](../eos-contracts/eos-api-reference/bancorconverter/converters-table.md)
     * [Reserves Table](../eos-contracts/eos-api-reference/bancorconverter/reserves-table.md)
