@@ -16,7 +16,7 @@
     "download-git-repo": "3.0.2",
     "doxygen": "0.3.2",
     "solc": "0.6.12",
-    "solidity-docgen": "0.5.4",
+    "solidity-docgen": "0.5.6",
     "typedoc": "^0.17.8",
     "typedoc-plugin-markdown": "^2.4.2",
     "typescript": "^3.9.7"
