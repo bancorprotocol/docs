@@ -70,7 +70,7 @@
     * [TokenHolder](../ethereum-contracts/ethereum-api-reference/utility/tokenholder.md)
     * [Utils](../ethereum-contracts/ethereum-api-reference/utility/utils.md)
     * [Whitelist](../ethereum-contracts/ethereum-api-reference/utility/whitelist.md)
-  * [BancorX (ETH)](../ethereum-contracts/ethereum-api-reference/bancorx.md)
+  * [BancorX (ETH)](../ethereum-contracts/ethereum-api-reference/bancorx/bancorx.md)
 * [Security](../ethereum-contracts/security.md)
 
 ## EOS Contracts
