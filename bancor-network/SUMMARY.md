@@ -45,7 +45,7 @@
 ## Ethereum Contracts
 
 * [Addresses](../ethereum-contracts/addresses.md)
-* [API Reference](../ethereum-contracts/ethereum-api-reference/README.md)
+* [Ethereum API Reference](../ethereum-contracts/ethereum-api-reference/README.md)
   * [BancorNetwork](../ethereum-contracts/ethereum-api-reference/bancornetwork.md)
   * [Converter](../ethereum-contracts/ethereum-api-reference/converter/README.md)
     * [ConverterBase](../ethereum-contracts/ethereum-api-reference/converter/converterbase.md)
@@ -76,7 +76,7 @@
 ## EOS Contracts
 
 * [Converter List](../eos-contracts/converter-list.md)
-* [API Reference](../eos-contracts/eos-api-reference/README.md)
+* [EOS API Reference](../eos-contracts/eos-api-reference/README.md)
   * [BancorConverter](../eos-contracts/eos-api-reference/bancorconverter/README.md)
     * [Converters Table](../eos-contracts/eos-api-reference/bancorconverter/converters-table.md)
     * [Reserves Table](../eos-contracts/eos-api-reference/bancorconverter/reserves-table.md)
