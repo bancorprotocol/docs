@@ -1,8 +1,10 @@
-require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/@bancor/contracts-solidity", function (error) {
-    if (error)
+require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/@bancor/contracts-solidity", async (error) => {
+    if (error) {
+        console.log(error);
         throw error;
+    }
 
-    const fs        = require("fs");
+    const fs = require("fs");
     const spawnSync = require("child_process").spawnSync;
 
     const args = [
@@ -11,12 +13,12 @@ require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/
         "--output=ethereum-contracts/ethereum-api-reference",
         "--templates=config/ethereum-smart-contracts",
         "--solc-module=node_modules/solc",
-        "--solc-settings=" + JSON.stringify({optimizer: {enabled: true, runs: 200}})
+        "--solc-settings=" + JSON.stringify({ optimizer: { enabled: true, runs: 200 }})
     ];
 
-    const result = spawnSync("node", args, {stdio: ["inherit", "inherit", "pipe"]});
-    if (result.stderr.length > 0)
-        throw new Error(result.stderr);
+    const result = spawnSync("node", args, { stdio: ["inherit", "inherit", "pipe"], encoding: 'utf8' });
+    /*if (result.stderr.length > 0)
+        throw new Error(result.stderr);*/
 
     function fix(pathName) {
         if (fs.lstatSync(pathName).isDirectory()) {
@@ -24,7 +26,7 @@ require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/
                 fix(pathName + "/" + fileName);
         }
         else if (pathName.endsWith(".md")) {
-            const lines = fs.readFileSync(pathName, {encoding: "utf8"}).split("\r").join("").split("\n");
+            const lines = fs.readFileSync(pathName, { encoding: "utf8" }).split("\r").join("").split("\n");
             fs.unlinkSync(pathName)
             fs.writeFileSync(pathName.toLowerCase(), lines.filter(line => line.trim().length > 0).join("\n\n") + "\n");
         }

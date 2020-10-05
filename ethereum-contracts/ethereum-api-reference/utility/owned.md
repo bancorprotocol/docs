@@ -1,39 +1,43 @@
-# Owned
-
 Provides support and utilities for contract ownership
 
-## Functions:
+# Functions:
 
-* [`constructor()`](owned.md#Owned-constructor--)
-* [`transferOwnership(address _newOwner)`](owned.md#Owned-transferOwnership-address-)
-* [`acceptOwnership()`](owned.md#Owned-acceptOwnership--)
+- [`constructor()`](#Owned-constructor--)
 
-## Events:
+- [`transferOwnership(address _newOwner)`](#Owned-transferOwnership-address-)
 
-* [`OwnerUpdate(address _prevOwner, address _newOwner)`](owned.md#Owned-OwnerUpdate-address-address-)
+- [`acceptOwnership()`](#Owned-acceptOwnership--)
 
-## Function `constructor()` <a id="Owned-constructor--"></a>
+# Events:
+
+- [`OwnerUpdate(address _prevOwner, address _newOwner)`](#Owned-OwnerUpdate-address-address-)
+
+# Function `constructor()` {#Owned-constructor--}
 
 initializes a new Owned instance
 
-## Function `transferOwnership(address _newOwner)` <a id="Owned-transferOwnership-address-"></a>
+# Function `transferOwnership(address _newOwner)` {#Owned-transferOwnership-address-}
 
-allows transferring the contract ownership the new owner still needs to accept the transfer can only be called by the contract owner
+allows transferring the contract ownership
 
-### Parameters:
+the new owner still needs to accept the transfer
 
-* `_newOwner`:    new contract owner
+can only be called by the contract owner
 
-  **Function `acceptOwnership()`**
+## Parameters:
 
-  used by a new owner to accept an ownership transfer
+- `_newOwner`:    new contract owner
 
-## Event `OwnerUpdate(address _prevOwner, address _newOwner)` <a id="Owned-OwnerUpdate-address-address-"></a>
+# Function `acceptOwnership()` {#Owned-acceptOwnership--}
+
+used by a new owner to accept an ownership transfer
+
+# Event `OwnerUpdate(address _prevOwner, address _newOwner)` {#Owned-OwnerUpdate-address-address-}
 
 triggered when the owner is updated
 
-### Parameters:
+## Parameters:
 
-* `_prevOwner`: previous owner
-* `_newOwner`: new owner
+- `_prevOwner`: previous owner
 
+- `_newOwner`:  new owner

@@ -1,289 +1,383 @@
-# ConverterBase
+ConverterBase
 
-ConverterBase The converter contains the main logic for conversions between different ERC20 tokens. It is also the upgradable part of the mechanism \(note that upgrades are opt-in\). The anchor must be set on construction and cannot be changed afterwards. Wrappers are provided for some of the anchor's functions, for easier access. Once the converter accepts ownership of the anchor, it becomes the anchor's sole controller and can execute any of its functions. To upgrade the converter, anchor ownership must be transferred to a new converter, along with any relevant data. Note that the converter can transfer anchor ownership to a new converter that doesn't allow upgrades anymore, for finalizing the relationship between the converter and the anchor. Converter types \(defined as uint16 type\) - 0 = liquid token converter 1 = liquidity pool v1 converter 2 = liquidity pool v2 converter Note that converters don't currently support tokens with transfer fees.
+The converter contains the main logic for conversions between different ERC20 tokens.
 
-## Functions:
+It is also the upgradable part of the mechanism (note that upgrades are opt-in).
 
-* [`receive()`](converterbase.md#ConverterBase-receive--)
-* [`withdrawETH(address payable _to)`](converterbase.md#ConverterBase-withdrawETH-address-payable-)
-* [`isV28OrHigher()`](converterbase.md#ConverterBase-isV28OrHigher--)
-* [`setConversionWhitelist(contract IWhitelist _whitelist)`](converterbase.md#ConverterBase-setConversionWhitelist-contract-IWhitelist-)
-* [`isActive()`](converterbase.md#ConverterBase-isActive--)
-* [`transferAnchorOwnership(address _newOwner)`](converterbase.md#ConverterBase-transferAnchorOwnership-address-)
-* [`acceptAnchorOwnership()`](converterbase.md#ConverterBase-acceptAnchorOwnership--)
-* [`withdrawFromAnchor(contract IERC20Token _token, address _to, uint256 _amount)`](converterbase.md#ConverterBase-withdrawFromAnchor-contract-IERC20Token-address-uint256-)
-* [`setConversionFee(uint32 _conversionFee)`](converterbase.md#ConverterBase-setConversionFee-uint32-)
-* [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](converterbase.md#ConverterBase-withdrawTokens-contract-IERC20Token-address-uint256-)
-* [`upgrade()`](converterbase.md#ConverterBase-upgrade--)
-* [`reserveTokenCount()`](converterbase.md#ConverterBase-reserveTokenCount--)
-* [`addReserve(contract IERC20Token _token, uint32 _weight)`](converterbase.md#ConverterBase-addReserve-contract-IERC20Token-uint32-)
-* [`reserveWeight(contract IERC20Token _reserveToken)`](converterbase.md#ConverterBase-reserveWeight-contract-IERC20Token-)
-* [`reserveBalance(contract IERC20Token _reserveToken)`](converterbase.md#ConverterBase-reserveBalance-contract-IERC20Token-)
-* [`hasETHReserve()`](converterbase.md#ConverterBase-hasETHReserve--)
-* [`convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary)`](converterbase.md#ConverterBase-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-)
-* [`token()`](converterbase.md#ConverterBase-token--)
-* [`transferTokenOwnership(address _newOwner)`](converterbase.md#ConverterBase-transferTokenOwnership-address-)
-* [`acceptTokenOwnership()`](converterbase.md#ConverterBase-acceptTokenOwnership--)
-* [`connectors(contract IERC20Token _address)`](converterbase.md#ConverterBase-connectors-contract-IERC20Token-)
-* [`connectorTokens(uint256 _index)`](converterbase.md#ConverterBase-connectorTokens-uint256-)
-* [`connectorTokenCount()`](converterbase.md#ConverterBase-connectorTokenCount--)
-* [`getConnectorBalance(contract IERC20Token _connectorToken)`](converterbase.md#ConverterBase-getConnectorBalance-contract-IERC20Token-)
-* [`getReturn(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](converterbase.md#ConverterBase-getReturn-contract-IERC20Token-contract-IERC20Token-uint256-)
+The anchor must be set on construction and cannot be changed afterwards.
 
-## Events:
+Wrappers are provided for some of the anchor's functions, for easier access.
 
-* [`Activation(uint16 _type, contract IConverterAnchor _anchor, bool _activated)`](converterbase.md#ConverterBase-Activation-uint16-contract-IConverterAnchor-bool-)
-* [`Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)`](converterbase.md#ConverterBase-Conversion-contract-IERC20Token-contract-IERC20Token-address-uint256-uint256-int256-)
-* [`TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)`](converterbase.md#ConverterBase-TokenRateUpdate-contract-IERC20Token-contract-IERC20Token-uint256-uint256-)
-* [`ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)`](converterbase.md#ConverterBase-ConversionFeeUpdate-uint32-uint32-)
+Once the converter accepts ownership of the anchor, it becomes the anchor's sole controller
 
-## Function `receive()` <a id="ConverterBase-receive--"></a>
+and can execute any of its functions.
 
-deposits ether can only be called if the converter has an ETH reserve
+To upgrade the converter, anchor ownership must be transferred to a new converter, along with
 
-## Function `withdrawETH(address payable _to)` <a id="ConverterBase-withdrawETH-address-payable-"></a>
+any relevant data.
 
-withdraws ether can only be called by the owner if the converter is inactive or by upgrader contract can only be called after the upgrader contract has accepted the ownership of this contract can only be called if the converter has an ETH reserve
+Note that the converter can transfer anchor ownership to a new converter that
 
-### Parameters:
+doesn't allow upgrades anymore, for finalizing the relationship between the converter
 
-* `_to`:  address to send the ETH to
+and the anchor.
 
-  **Function `isV28OrHigher() → bool`**
+Converter types (defined as uint16 type) -
 
-  checks whether or not the converter version is 28 or higher
+0 = liquid token converter
 
-### Return Values:
+1 = liquidity pool v1 converter
 
-* since the converter version is 28 or higher
+2 = liquidity pool v2 converter
 
-  **Function `setConversionWhitelist(contract IWhitelist _whitelist)`**
+Note that converters don't currently support tokens with transfer fees.
 
-  allows the owner to update & enable the conversion whitelist contract address
+# Functions:
 
-  when set, only addresses that are whitelisted are actually allowed to use the converter
+- [`converterType()`](#ConverterBase-converterType--)
 
-  note that the whitelist check is actually done by the BancorNetwork contract
+- [`targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](#ConverterBase-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
 
-### Parameters:
+- [`receive()`](#ConverterBase-receive--)
 
-* `_whitelist`:    address of a whitelist contract
+- [`withdrawETH(address payable _to)`](#ConverterBase-withdrawETH-address-payable-)
 
-  **Function `isActive() → bool`**
+- [`isV28OrHigher()`](#ConverterBase-isV28OrHigher--)
 
-  returns true if the converter is active, false otherwise
+- [`setConversionWhitelist(contract IWhitelist _whitelist)`](#ConverterBase-setConversionWhitelist-contract-IWhitelist-)
 
-### Return Values:
+- [`isActive()`](#ConverterBase-isActive--)
 
-* true if the converter is active, false otherwise
+- [`transferAnchorOwnership(address _newOwner)`](#ConverterBase-transferAnchorOwnership-address-)
 
-  **Function `transferAnchorOwnership(address _newOwner)`**
+- [`acceptAnchorOwnership()`](#ConverterBase-acceptAnchorOwnership--)
 
-  transfers the anchor ownership
+- [`setConversionFee(uint32 _conversionFee)`](#ConverterBase-setConversionFee-uint32-)
 
-  the new owner needs to accept the transfer
+- [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](#ConverterBase-withdrawTokens-contract-IERC20Token-address-uint256-)
 
-  can only be called by the converter upgrder while the upgrader is the owner
+- [`upgrade()`](#ConverterBase-upgrade--)
 
-  note that prior to version 28, you should use 'transferAnchorOwnership' instead
+- [`reserveTokenCount()`](#ConverterBase-reserveTokenCount--)
 
-### Parameters:
+- [`addReserve(contract IERC20Token _token, uint32 _weight)`](#ConverterBase-addReserve-contract-IERC20Token-uint32-)
 
-* `_newOwner`:    new token owner
+- [`reserveWeight(contract IERC20Token _reserveToken)`](#ConverterBase-reserveWeight-contract-IERC20Token-)
 
-  **Function `acceptAnchorOwnership()`**
+- [`reserveBalance(contract IERC20Token _reserveToken)`](#ConverterBase-reserveBalance-contract-IERC20Token-)
 
-  accepts ownership of the anchor after an ownership transfer
+- [`hasETHReserve()`](#ConverterBase-hasETHReserve--)
 
-  most converters are also activated as soon as they accept the anchor ownership
+- [`convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary)`](#ConverterBase-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-)
 
-  can only be called by the contract owner
+- [`token()`](#ConverterBase-token--)
 
-  note that prior to version 28, you should use 'acceptTokenOwnership' instead
+- [`transferTokenOwnership(address _newOwner)`](#ConverterBase-transferTokenOwnership-address-)
 
-  **Function `withdrawFromAnchor(contract IERC20Token _token, address _to, uint256 _amount)`**
+- [`acceptTokenOwnership()`](#ConverterBase-acceptTokenOwnership--)
 
-  withdraws tokens held by the anchor and sends them to an account
+- [`connectors(contract IERC20Token _address)`](#ConverterBase-connectors-contract-IERC20Token-)
 
-  can only be called by the owner
+- [`connectorTokens(uint256 _index)`](#ConverterBase-connectorTokens-uint256-)
 
-### Parameters:
+- [`connectorTokenCount()`](#ConverterBase-connectorTokenCount--)
 
-* `_token`: ERC20 token contract address
-* `_to`: account to receive the new amount
-* `_amount`: amount to withdraw
+- [`getConnectorBalance(contract IERC20Token _connectorToken)`](#ConverterBase-getConnectorBalance-contract-IERC20Token-)
 
-  **Function `setConversionFee(uint32 _conversionFee)`**
+- [`getReturn(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](#ConverterBase-getReturn-contract-IERC20Token-contract-IERC20Token-uint256-)
 
-  updates the current conversion fee can only be called by the contract owner
+# Events:
 
-### Parameters:
+- [`Activation(uint16 _type, contract IConverterAnchor _anchor, bool _activated)`](#ConverterBase-Activation-uint16-contract-IConverterAnchor-bool-)
 
-* `_conversionFee`: new conversion fee, represented in ppm
+- [`Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)`](#ConverterBase-Conversion-contract-IERC20Token-contract-IERC20Token-address-uint256-uint256-int256-)
 
-  **Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`**
+- [`TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)`](#ConverterBase-TokenRateUpdate-contract-IERC20Token-contract-IERC20Token-uint256-uint256-)
 
-  withdraws tokens held by the converter and sends them to an account
+- [`ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)`](#ConverterBase-ConversionFeeUpdate-uint32-uint32-)
 
-  can only be called by the owner
+# Function `converterType() → uint16` {#ConverterBase-converterType--}
 
-  note that reserve tokens can only be withdrawn by the owner while the converter is inactive
+No description
 
-  unless the owner is the converter upgrader contract
+# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#ConverterBase-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
 
-### Parameters:
+No description
 
-* `_token`: ERC20 token contract address
-* `_to`: account to receive the new amount
-* `_amount`: amount to withdraw
+# Function `receive()` {#ConverterBase-receive--}
 
-  **Function `upgrade()`**
+deposits ether
 
-  upgrades the converter to the latest version can only be called by the owner note that the owner needs to call acceptOwnership on the new converter after the upgrade
+can only be called if the converter has an ETH reserve
 
-  **Function `reserveTokenCount() → uint16`**
+# Function `withdrawETH(address payable _to)` {#ConverterBase-withdrawETH-address-payable-}
 
-  returns the number of reserve tokens defined note that prior to version 17, you should use 'connectorTokenCount' instead
+withdraws ether
 
-### Return Values:
+can only be called by the owner if the converter is inactive or by upgrader contract
 
-* number of reserve tokens
+can only be called after the upgrader contract has accepted the ownership of this contract
 
-  **Function `addReserve(contract IERC20Token _token, uint32 _weight)`**
+can only be called if the converter has an ETH reserve
 
-  defines a new reserve token for the converter
+## Parameters:
 
-  can only be called by the owner while the converter is inactive
+- `_to`:  address to send the ETH to
 
-### Parameters:
+# Function `isV28OrHigher() → bool` {#ConverterBase-isV28OrHigher--}
 
-* `_token`: address of the reserve token
-* `_weight`: reserve weight, represented in ppm, 1-1000000
+checks whether or not the converter version is 28 or higher
 
-  **Function `reserveWeight(contract IERC20Token _reserveToken) → uint32`**
+## Return Values:
 
-  returns the reserve's weight added in version 28
+- since the converter version is 28 or higher
 
-### Parameters:
+# Function `setConversionWhitelist(contract IWhitelist _whitelist)` {#ConverterBase-setConversionWhitelist-contract-IWhitelist-}
 
-* `_reserveToken`:    reserve token contract address
+allows the owner to update & enable the conversion whitelist contract address
 
-### Return Values:
+when set, only addresses that are whitelisted are actually allowed to use the converter
 
-* reserve weight
+note that the whitelist check is actually done by the BancorNetwork contract
 
-  **Function `reserveBalance(contract IERC20Token _reserveToken) → uint256`**
+## Parameters:
 
-  returns the reserve's balance
+- `_whitelist`:    address of a whitelist contract
 
-  note that prior to version 17, you should use 'getConnectorBalance' instead
+# Function `isActive() → bool` {#ConverterBase-isActive--}
 
-### Parameters:
+returns true if the converter is active, false otherwise
 
-* `_reserveToken`:    reserve token contract address
+## Return Values:
 
-### Return Values:
+- true if the converter is active, false otherwise
 
-* reserve balance
+# Function `transferAnchorOwnership(address _newOwner)` {#ConverterBase-transferAnchorOwnership-address-}
 
-  **Function `hasETHReserve() → bool`**
+transfers the anchor ownership
 
-  checks whether or not the converter has an ETH reserve
+the new owner needs to accept the transfer
 
-### Return Values:
+can only be called by the converter upgrder while the upgrader is the owner
 
-* true if the converter has an ETH reserve, false otherwise
+note that prior to version 28, you should use 'transferAnchorOwnership' instead
 
-  **Function `convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary) → uint256`**
+## Parameters:
 
-  converts a specific amount of source tokens to target tokens
+- `_newOwner`:    new token owner
 
-  can only be called by the bancor network contract
+# Function `acceptAnchorOwnership()` {#ConverterBase-acceptAnchorOwnership--}
 
-### Parameters:
+accepts ownership of the anchor after an ownership transfer
 
-* `_sourceToken`: source ERC20 token
-* `_targetToken`: target ERC20 token
-* `_amount`: amount of tokens to convert \(in units of the source token\)
-* `_trader`: address of the caller who executed the conversion
-* `_beneficiary`: wallet to receive the conversion result
+most converters are also activated as soon as they accept the anchor ownership
 
-### Return Values:
+can only be called by the contract owner
 
-* amount of tokens received \(in units of the target token\)
+note that prior to version 28, you should use 'acceptTokenOwnership' instead
 
-  **Function `token() → contract IConverterAnchor`**
+# Function `setConversionFee(uint32 _conversionFee)` {#ConverterBase-setConversionFee-uint32-}
 
-  deprecated since version 28, backward compatibility - use only for earlier versions
+updates the current conversion fee
 
-  **Function `transferTokenOwnership(address _newOwner)`**
+can only be called by the contract owner
 
-  deprecated, backward compatibility
+## Parameters:
 
-  **Function `acceptTokenOwnership()`**
+- `_conversionFee`: new conversion fee, represented in ppm
 
-  deprecated, backward compatibility
+# Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#ConverterBase-withdrawTokens-contract-IERC20Token-address-uint256-}
 
-  **Function `connectors(contract IERC20Token _address) → uint256, uint32, bool, bool, bool`**
+withdraws tokens held by the converter and sends them to an account
 
-  deprecated, backward compatibility
+can only be called by the owner
 
-  **Function `connectorTokens(uint256 _index) → contract IERC20Token`**
+note that reserve tokens can only be withdrawn by the owner while the converter is inactive
 
-  deprecated, backward compatibility
+unless the owner is the converter upgrader contract
 
-  **Function `connectorTokenCount() → uint16`**
+## Parameters:
 
-  deprecated, backward compatibility
+- `_token`:   ERC20 token contract address
 
-  **Function `getConnectorBalance(contract IERC20Token _connectorToken) → uint256`**
+- `_to`:      account to receive the new amount
 
-  deprecated, backward compatibility
+- `_amount`:  amount to withdraw
 
-  **Function `getReturn(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256`**
+# Function `upgrade()` {#ConverterBase-upgrade--}
 
-  deprecated, backward compatibility
+upgrades the converter to the latest version
 
-## Event `Activation(uint16 _type, contract IConverterAnchor _anchor, bool _activated)` <a id="ConverterBase-Activation-uint16-contract-IConverterAnchor-bool-"></a>
+can only be called by the owner
+
+note that the owner needs to call acceptOwnership on the new converter after the upgrade
+
+# Function `reserveTokenCount() → uint16` {#ConverterBase-reserveTokenCount--}
+
+returns the number of reserve tokens defined
+
+note that prior to version 17, you should use 'connectorTokenCount' instead
+
+## Return Values:
+
+- number of reserve tokens
+
+# Function `addReserve(contract IERC20Token _token, uint32 _weight)` {#ConverterBase-addReserve-contract-IERC20Token-uint32-}
+
+defines a new reserve token for the converter
+
+can only be called by the owner while the converter is inactive
+
+## Parameters:
+
+- `_token`:   address of the reserve token
+
+- `_weight`:  reserve weight, represented in ppm, 1-1000000
+
+# Function `reserveWeight(contract IERC20Token _reserveToken) → uint32` {#ConverterBase-reserveWeight-contract-IERC20Token-}
+
+returns the reserve's weight
+
+added in version 28
+
+## Parameters:
+
+- `_reserveToken`:    reserve token contract address
+
+## Return Values:
+
+- reserve weight
+
+# Function `reserveBalance(contract IERC20Token _reserveToken) → uint256` {#ConverterBase-reserveBalance-contract-IERC20Token-}
+
+returns the reserve's balance
+
+note that prior to version 17, you should use 'getConnectorBalance' instead
+
+## Parameters:
+
+- `_reserveToken`:    reserve token contract address
+
+## Return Values:
+
+- reserve balance
+
+# Function `hasETHReserve() → bool` {#ConverterBase-hasETHReserve--}
+
+checks whether or not the converter has an ETH reserve
+
+## Return Values:
+
+- true if the converter has an ETH reserve, false otherwise
+
+# Function `convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary) → uint256` {#ConverterBase-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-}
+
+converts a specific amount of source tokens to target tokens
+
+can only be called by the bancor network contract
+
+## Parameters:
+
+- `_sourceToken`: source ERC20 token
+
+- `_targetToken`: target ERC20 token
+
+- `_amount`:      amount of tokens to convert (in units of the source token)
+
+- `_trader`:      address of the caller who executed the conversion
+
+- `_beneficiary`: wallet to receive the conversion result
+
+## Return Values:
+
+- amount of tokens received (in units of the target token)
+
+# Function `token() → contract IConverterAnchor` {#ConverterBase-token--}
+
+deprecated since version 28, backward compatibility - use only for earlier versions
+
+# Function `transferTokenOwnership(address _newOwner)` {#ConverterBase-transferTokenOwnership-address-}
+
+deprecated, backward compatibility
+
+# Function `acceptTokenOwnership()` {#ConverterBase-acceptTokenOwnership--}
+
+deprecated, backward compatibility
+
+# Function `connectors(contract IERC20Token _address) → uint256, uint32, bool, bool, bool` {#ConverterBase-connectors-contract-IERC20Token-}
+
+deprecated, backward compatibility
+
+# Function `connectorTokens(uint256 _index) → contract IERC20Token` {#ConverterBase-connectorTokens-uint256-}
+
+deprecated, backward compatibility
+
+# Function `connectorTokenCount() → uint16` {#ConverterBase-connectorTokenCount--}
+
+deprecated, backward compatibility
+
+# Function `getConnectorBalance(contract IERC20Token _connectorToken) → uint256` {#ConverterBase-getConnectorBalance-contract-IERC20Token-}
+
+deprecated, backward compatibility
+
+# Function `getReturn(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#ConverterBase-getReturn-contract-IERC20Token-contract-IERC20Token-uint256-}
+
+deprecated, backward compatibility
+
+# Event `Activation(uint16 _type, contract IConverterAnchor _anchor, bool _activated)` {#ConverterBase-Activation-uint16-contract-IConverterAnchor-bool-}
 
 triggered when the converter is activated
 
-### Parameters:
+## Parameters:
 
-* `_type`: converter type
-* `_anchor`: converter anchor
-* `_activated`: true if the converter was activated, false if it was deactivated
+- `_type`:        converter type
 
-  **Event `Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)`**
+- `_anchor`:      converter anchor
 
-  triggered when a conversion between two tokens occurs
+- `_activated`:   true if the converter was activated, false if it was deactivated
 
-### Parameters:
+# Event `Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)` {#ConverterBase-Conversion-contract-IERC20Token-contract-IERC20Token-address-uint256-uint256-int256-}
 
-* `_fromToken`: source ERC20 token
-* `_toToken`: target ERC20 token
-* `_trader`: wallet that initiated the trade
-* `_amount`: amount converted, in the source token
-* `_return`: amount returned, minus conversion fee
-* `_conversionFee`: conversion fee
+triggered when a conversion between two tokens occurs
 
-  **Event `TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)`**
+## Parameters:
 
-  triggered when the rate between two tokens in the converter changes note that the event might be dispatched for rate updates between any two tokens in the converter note that prior to version 28, you should use the 'PriceDataUpdate' event instead
+- `_fromToken`:       source ERC20 token
 
-### Parameters:
+- `_toToken`:         target ERC20 token
 
-* `_token1`: address of the first token
-* `_token2`: address of the second token
-* `_rateN`: rate of 1 unit of `_token1` in `_token2` \(numerator\)
-* `_rateD`: rate of 1 unit of `_token1` in `_token2` \(denominator\)
+- `_trader`:          wallet that initiated the trade
 
-  **Event `ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)`**
+- `_amount`:          amount converted, in the source token
 
-  triggered when the conversion fee is updated
+- `_return`:          amount returned, minus conversion fee
 
-### Parameters:
+- `_conversionFee`:   conversion fee
 
-* `_prevFee`: previous fee percentage, represented in ppm
-* `_newFee`: new fee percentage, represented in ppm
+# Event `TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)` {#ConverterBase-TokenRateUpdate-contract-IERC20Token-contract-IERC20Token-uint256-uint256-}
 
+triggered when the rate between two tokens in the converter changes
+
+note that the event might be dispatched for rate updates between any two tokens in the converter
+
+note that prior to version 28, you should use the 'PriceDataUpdate' event instead
+
+## Parameters:
+
+- `_token1`: address of the first token
+
+- `_token2`: address of the second token
+
+- `_rateN`:  rate of 1 unit of `_token1` in `_token2` (numerator)
+
+- `_rateD`:  rate of 1 unit of `_token1` in `_token2` (denominator)
+
+# Event `ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)` {#ConverterBase-ConversionFeeUpdate-uint32-uint32-}
+
+triggered when the conversion fee is updated
+
+## Parameters:
+
+- `_prevFee`:    previous fee percentage, represented in ppm
+
+- `_newFee`:     new fee percentage, represented in ppm
