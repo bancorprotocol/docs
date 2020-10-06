@@ -5,6 +5,7 @@ require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/
     }
 
     const fs = require("fs");
+    const path = require("path");
     const spawnSync = require("child_process").spawnSync;
 
     const args = [
@@ -23,12 +24,20 @@ require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/
     function fix(pathName) {
         if (fs.lstatSync(pathName).isDirectory()) {
             for (const fileName of fs.readdirSync(pathName))
-                fix(pathName + "/" + fileName);
+                fix(path.join(pathName, fileName));
         }
         else if (pathName.endsWith(".md")) {
             const lines = fs.readFileSync(pathName, { encoding: "utf8" }).split("\r").join("").split("\n");
             fs.unlinkSync(pathName)
-            fs.writeFileSync(pathName.toLowerCase(), lines.filter(line => line.trim().length > 0).join("\n\n") + "\n");
+            
+            let newPath = pathName.toLowerCase();
+            if (newPath.indexOf(path.join('converter', 'types')) != -1) {
+                const parts = newPath.split(path.sep);
+                parts.splice(parts.length - 2, 1);
+                newPath = parts.join(path.sep);
+            }
+
+            fs.writeFileSync(newPath, lines.filter(line => line.trim().length > 0).join("\n\n") + "\n");
         }
     }
 
