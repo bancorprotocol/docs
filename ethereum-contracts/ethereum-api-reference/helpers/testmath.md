@@ -10,6 +10,12 @@
 
 - [`roundDivTest(uint256 _n, uint256 _d)`](#TestMath-roundDivTest-uint256-uint256-)
 
+- [`geometricMeanTest(uint256[] _values)`](#TestMath-geometricMeanTest-uint256---)
+
+- [`decimalLengthTest(uint256 _x)`](#TestMath-decimalLengthTest-uint256-)
+
+- [`roundDivUnsafeTest(uint256 _n, uint256 _d)`](#TestMath-roundDivUnsafeTest-uint256-uint256-)
+
 # Function `floorSqrtTest(uint256 _num) → uint256` {#TestMath-floorSqrtTest-uint256-}
 
 No description
@@ -27,5 +33,17 @@ No description
 No description
 
 # Function `roundDivTest(uint256 _n, uint256 _d) → uint256` {#TestMath-roundDivTest-uint256-uint256-}
+
+No description
+
+# Function `geometricMeanTest(uint256[] _values) → uint256` {#TestMath-geometricMeanTest-uint256---}
+
+No description
+
+# Function `decimalLengthTest(uint256 _x) → uint256` {#TestMath-decimalLengthTest-uint256-}
+
+No description
+
+# Function `roundDivUnsafeTest(uint256 _n, uint256 _d) → uint256` {#TestMath-roundDivUnsafeTest-uint256-uint256-}
 
 No description

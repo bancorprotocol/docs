@@ -60,6 +60,9 @@
   * Token (ETH)
     * [ERC20Token](../ethereum-contracts/ethereum-api-reference/token/erc20token.md)
     * [DSToken](../ethereum-contracts/ethereum-api-reference/token/dstoken.md)
+  * Liquidity Protection
+    * [LiquidityProtection](../ethereum-contracts/ethereum-api-reference/liquidity-protection/liquidityprotection.md)
+    * [LiquidityProtectionStore](../ethereum-contracts/ethereum-api-reference/liquidity-protection/liquidityprotectionstore.md)
   * [Utility](../ethereum-contracts/ethereum-api-reference/utility/README.md)
     * [ContractRegistry](../ethereum-contracts/ethereum-api-reference/utility/contractregistry.md)
     * [ContractRegistryClient](../ethereum-contracts/ethereum-api-reference/utility/contractregistryclient.md)

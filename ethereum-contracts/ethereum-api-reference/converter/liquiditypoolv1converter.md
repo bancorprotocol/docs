@@ -36,12 +36,6 @@ is 2 reserves with 50%/50% weights.
 
 - [`removeLiquidityReturn(uint256 _amount, contract IERC20Token[] _reserveTokens)`](#LiquidityPoolV1Converter-removeLiquidityReturn-uint256-contract-IERC20Token---)
 
-- [`decimalLength(uint256 _x)`](#LiquidityPoolV1Converter-decimalLength-uint256-)
-
-- [`roundDivUnsafe(uint256 _n, uint256 _d)`](#LiquidityPoolV1Converter-roundDivUnsafe-uint256-uint256-)
-
-- [`geometricMean(uint256[] _values)`](#LiquidityPoolV1Converter-geometricMean-uint256---)
-
 # Events:
 
 - [`PriceDataUpdate(contract IERC20Token _connectorToken, uint256 _tokenSupply, uint256 _connectorBalance, uint32 _connectorWeight)`](#LiquidityPoolV1Converter-PriceDataUpdate-contract-IERC20Token-uint256-uint256-uint32-)
@@ -249,46 +243,6 @@ returns the amount of each reserve token entitled for a given amount of pool tok
 ## Return Values:
 
 - the amount of each reserve token entitled for the given amount of pool tokens
-
-# Function `decimalLength(uint256 _x) → uint256` {#LiquidityPoolV1Converter-decimalLength-uint256-}
-
-returns the number of decimal digits in a given value
-
-## Parameters:
-
-- `_x`:   value (assumed positive)
-
-## Return Values:
-
-- the number of decimal digits in the given value
-
-# Function `roundDivUnsafe(uint256 _n, uint256 _d) → uint256` {#LiquidityPoolV1Converter-roundDivUnsafe-uint256-uint256-}
-
-returns the nearest integer to a given quotient
-
-the computation is overflow-safe assuming that the input is sufficiently small
-
-## Parameters:
-
-- `_n`:   quotient numerator
-
-- `_d`:   quotient denominator
-
-## Return Values:
-
-- the nearest integer to the given quotient
-
-# Function `geometricMean(uint256[] _values) → uint256` {#LiquidityPoolV1Converter-geometricMean-uint256---}
-
-returns the average number of decimal digits in a given list of values
-
-## Parameters:
-
-- `_values`:  list of values (each of which assumed positive)
-
-## Return Values:
-
-- the average number of decimal digits in the given list of values
 
 # Event `PriceDataUpdate(contract IERC20Token _connectorToken, uint256 _tokenSupply, uint256 _connectorBalance, uint32 _connectorWeight)` {#LiquidityPoolV1Converter-PriceDataUpdate-contract-IERC20Token-uint256-uint256-uint32-}
 
