@@ -1,8 +1,8 @@
 ---
-description: This guide outlines how to upgrade the converter of a liquidity pool
+description: This guide outlines how to upgrade a liquidity pool to the latest version
 ---
 
-# Upgrading a Converter Contract
+# Upgrading a Liquidity Pool
 
 For ERC-20 Tokens, we have created a smart contract that can be used to upgrade the converter of a Bancor liquidity pool in a single atomic action. All smart contract functions are public and all upgrades are opt-in. We highly recommend you upgrade your converters regularly for security reasons, and to support any other product improvements that could lead to gas cost reduction, etc.
 
@@ -11,6 +11,39 @@ New converter upgrades will be announced in the [Bancor Developers Telegram Grou
 {% hint style="info" %}
 Note that only the current owner of a pool will be able to upgrade the contract.
 {% endhint %}
+
+### New Pools
+
+Newer versions of liquidity pools have built-in support for upgrading and they can be upgraded using a quick two-step process.
+
+### Step \#1: Execute the Upgrade
+
+First, you'll need to find your current **Converter** contract.
+
+* Navigate to your **Pool Token** contract on Etherscan
+* Under the `Read Contract` tab, find the return value under the `owner` function. This is your converter address
+* Click the converter address to navigate to it
+* Find the `Write Contract` section
+* Look for the `upgrade` function - if the function doesn't exist, it means the pool is still using an older version - follow the [Old Pools](upgrading-a-converter-contract.md#old-pools) process
+* Execute the `upgrade` function
+* Click the `View Transaction` button to open it in a new tab and wait for it to complete
+
+### Step \#2: Accept Ownership
+
+At this stage, you'll need to accept the ownership over the new converter. 
+
+First, let's find the address of your new converter.
+
+* On the completed transaction page, you'll notice there are token transfers from the old converter to a new address
+* Click the new address and it will navigate to the new converter
+
+With the new converter address, open a new Etherscan `Write Contract` view. 
+
+* Execute the `acceptOwnership` function
+
+Done!
+
+### Old Pools
 
 ### Step \#1: Transfer Ownership
 
@@ -40,7 +73,7 @@ Rest assured that all the token weight, pool balance and conversion fee details 
   * `_converter`: This is your converter's old address, i.e., the address you just transferred ownership of.
   * `_version`: **0x0**
 
-### Step \#3: Accept Ownership and Management
+### Step \#3: Accept Ownership
 
 At this stage, you'll need to accept the ownership over the new converter from the Smart Contract. 
 
