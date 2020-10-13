@@ -4,9 +4,9 @@ description: This guide outlines how to upgrade a liquidity pool to the latest v
 
 # Upgrading a Liquidity Pool
 
-For ERC-20 Tokens, we have created a smart contract that can be used to upgrade the converter of a Bancor liquidity pool in a single atomic action. All smart contract functions are public and all upgrades are opt-in. We highly recommend you upgrade your converters regularly for security reasons, and to support any other product improvements that could lead to gas cost reduction, etc.
+For ERC-20 Tokens, we have created a smart contract that can be used to upgrade a Bancor liquidity pool in a single atomic action. All smart contract functions are public and all upgrades are opt-in. We highly recommend you upgrade your pools regularly for security reasons, and to support any other product improvements that could lead to gas cost reduction, etc.
 
-New converter upgrades will be announced in the [Bancor Developers Telegram Group.](https://t.me/BancorDevelopers)
+New pool versions will be announced in the [Bancor Developers Telegram Group.](https://t.me/BancorDevelopers)
 
 {% hint style="info" %}
 Note that only the current owner of a pool will be able to upgrade the contract.
@@ -21,10 +21,10 @@ Newer versions of liquidity pools have built-in support for upgrading and they c
 First, you'll need to find your current **Converter** contract.
 
 * Navigate to your **Pool Token** contract on Etherscan
-* Under the `Read Contract` tab, find the return value under the `owner` function. This is your converter address
+* Under the `Read Contract` tab \(under the `Contract` tab\), find the value of the `owner` property. This is your converter address
 * Click the converter address to navigate to it
-* Find the `Write Contract` section
-* Look for the `upgrade` function - if the function doesn't exist, it means the pool is still using an older version - follow the [Old Pools](upgrading-a-converter-contract.md#old-pools) process
+* Find the `Write Contract` section \(under the `Contract` tab\)
+* Look for the `upgrade` function - if the function doesn't exist, it means the pool is still using an older version - follow the [Old Pools](upgrading-a-converter-contract.md#old-pools) upgrade process
 * Execute the `upgrade` function
 * Click the `View Transaction` button to open it in a new tab and wait for it to complete
 
@@ -32,12 +32,12 @@ First, you'll need to find your current **Converter** contract.
 
 At this stage, you'll need to accept the ownership over the new converter. 
 
-First, let's find the address of your new converter.
+First, let's find the address of the new converter.
 
 * On the completed transaction page, you'll notice there are token transfers from the old converter to a new address
 * Click the new address and it will navigate to the new converter
 
-With the new converter address, open a new Etherscan `Write Contract` view. 
+With the new converter address, open a new Etherscan `Write Contract` \(under the `Contract`\) tab\) section. 
 
 * Execute the `acceptOwnership` function
 
