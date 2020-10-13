@@ -29,7 +29,7 @@
 * [Deploying a Liquidity Pool for Testing](../guides/deploying-a-liquidity-pool-testing.md)
 * [Liquidity Provision - General](../guides/general-liquidity-provision.md)
 * [Managing Ownership of Liquidity Pools](../guides/accepting-ownership-of-liquidity-pools.md)
-* [Upgrading a Liquidity Pool](../guides/upgrading-a-converter-contract.md)
+* [Upgrading a Liquidity Pool](../guides/upgrading-a-liquidity-pool.md)
 * [Interfacing with Bancor Contracts](../guides/interfacing-with-bancor-contracts.md)
 * [Minting USDB](../guides/minting-usdb.md)
 * [Querying a Pool Contract](../guides/querying-a-pool-contract.md)
