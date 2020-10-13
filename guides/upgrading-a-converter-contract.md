@@ -38,11 +38,11 @@ Rest assured that all the token weight, pool balance and conversion fee details 
 * Navigate to the Etherscan `Write Contract` page of the **BancorConverterUpgrader**. This is the addresses you queried for in the previous step.
 * Execute the `upgradeOld` function with the following parameters:
   * `_converter`: This is your converter's old address, i.e., the address you just transferred ownership of.
-  * `_version`: **0x302e37** - the latest version
+  * `_version`: **0x0**
 
 ### Step \#3: Accept Ownership and Management
 
-At this stage, you'll need to accept back the ownership over the converter \(both old and new\) from the Smart Contract. 
+At this stage, you'll need to accept the ownership over the new converter from the Smart Contract. 
 
 First, let's find the address of your new converter.
 
@@ -51,10 +51,6 @@ First, let's find the address of your new converter.
 * Your new address is in **topic2** in the event log. To extract the address currently from the topic value, copy the rightmost 40 characters and add "0x" to the beginning
 
 With the new converter address, open a new Etherscan `Write Contract` view. 
-
-* Execute the `acceptOwnership` function
-
-Now, return to your original converter address
 
 * Execute the `acceptOwnership` function
 
