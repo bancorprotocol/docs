@@ -12,7 +12,7 @@ New pool versions will be announced in the [Bancor Developers Telegram Group.](h
 Note that only the current owner of a pool will be able to upgrade the contract.
 {% endhint %}
 
-### New Pools
+### Upgrading New Pools
 
 Newer versions of liquidity pools have built-in support for upgrading and they can be upgraded using a quick two-step process.
 
@@ -43,7 +43,7 @@ With the new converter address, open a new Etherscan `Write Contract` \(under th
 
 Done!
 
-### Old Pools
+### Upgrading Old Pools
 
 ### Step \#1: Transfer Ownership
 
