@@ -24,7 +24,7 @@ First, you'll need to find your current **Converter** contract.
 * Under the `Read Contract` tab \(under the `Contract` tab\), find the value of the `owner` property. This is your converter address
 * Click the converter address to navigate to it
 * Find the `Write Contract` section \(under the `Contract` tab\)
-* Look for the `upgrade` function - if the function doesn't exist, it means the pool is still using an older version - follow the [Old Pools](upgrading-a-liquidity-pool.md#old-pools) upgrade process
+* Look for the `upgrade` function - if the function doesn't exist, it means the pool is still using an older version - follow the [Older Pools](upgrading-a-liquidity-pool.md#old-pools) upgrade process
 * Execute the `upgrade` function
 * Click the `View Transaction` button to open it in a new tab and wait for it to complete
 
@@ -43,7 +43,7 @@ With the new converter address, open a new Etherscan `Write Contract` \(under th
 
 Done!
 
-### Upgrading Old Pools
+### Upgrading Older Pools
 
 ### Step \#1: Transfer Ownership
 
