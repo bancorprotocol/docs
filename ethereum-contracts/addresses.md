@@ -31,8 +31,8 @@ Follow the "[Working with Bancor Network](../developer-quick-start/working-with-
 
 | **Contract Name** | Contract Address |
 | :--- | :--- |
-| ​`ContractRegistry​` | `0xFD95E724962fCfC269010A0c6700Aa09D5de3074` |
-| ​`BNT Token`​ | `0x62bd9D98d4E188e281D7B78e29334969bbE1053c` |
+| ​`ContractRegistry​` | `0xA6DB4B0963C37Bc959CbC0a874B5bDDf2250f26F` |
+| ​`BNT Token`​ | `0xF35cCfbcE1228014F66809EDaFCDB836BFE388f5` |
 | `ETH Token` | `0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE` |
-| ​`EtherToken (Deprecated)`​ | `0xD368b98d03855835E2923Dc000b3f9c2EBF1b27b`[ ](https://docs.bancor.network/user-guides/network-data-and-stats) |
+|  | \`\` |
 
