@@ -31,22 +31,39 @@ Format:
 ## Functions:
 
 * [`constructor(contract IContractRegistry _registry)`](bancornetwork.md#BancorNetwork-constructor-contract-IContractRegistry-)
+
 * [`setMaxAffiliateFee(uint256 _maxAffiliateFee)`](bancornetwork.md#BancorNetwork-setMaxAffiliateFee-uint256-)
+
 * [`registerEtherToken(contract IEtherToken _token, bool _register)`](bancornetwork.md#BancorNetwork-registerEtherToken-contract-IEtherToken-bool-)
+
 * [`conversionPath(contract IERC20Token _sourceToken, contract IERC20Token _targetToken)`](bancornetwork.md#BancorNetwork-conversionPath-contract-IERC20Token-contract-IERC20Token-)
+
 * [`rateByPath(address[] _path, uint256 _amount)`](bancornetwork.md#BancorNetwork-rateByPath-address---uint256-)
+
 * [`convertByPath(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-convertByPath-address---uint256-uint256-address-payable-address-uint256-)
+
 * [`xConvert(address[] _path, uint256 _amount, uint256 _minReturn, bytes32 _targetBlockchain, bytes32 _targetAccount, uint256 _conversionId)`](bancornetwork.md#BancorNetwork-xConvert-address---uint256-uint256-bytes32-bytes32-uint256-)
+
 * [`xConvert2(address[] _path, uint256 _amount, uint256 _minReturn, bytes32 _targetBlockchain, bytes32 _targetAccount, uint256 _conversionId, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-xConvert2-address---uint256-uint256-bytes32-bytes32-uint256-address-uint256-)
+
 * [`completeXConversion(address[] _path, contract IBancorX _bancorX, uint256 _conversionId, uint256 _minReturn, address payable _beneficiary)`](bancornetwork.md#BancorNetwork-completeXConversion-address---contract-IBancorX-uint256-uint256-address-payable-)
+
 * [`getReturnByPath(address[] _path, uint256 _amount)`](bancornetwork.md#BancorNetwork-getReturnByPath-address---uint256-)
+
 * [`convert(address[] _path, uint256 _amount, uint256 _minReturn)`](bancornetwork.md#BancorNetwork-convert-address---uint256-uint256-)
+
 * [`convert2(address[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-convert2-address---uint256-uint256-address-uint256-)
+
 * [`convertFor(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary)`](bancornetwork.md#BancorNetwork-convertFor-address---uint256-uint256-address-payable-)
+
 * [`convertFor2(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-convertFor2-address---uint256-uint256-address-payable-address-uint256-)
+
 * [`claimAndConvert(address[] _path, uint256 _amount, uint256 _minReturn)`](bancornetwork.md#BancorNetwork-claimAndConvert-address---uint256-uint256-)
+
 * [`claimAndConvert2(address[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-claimAndConvert2-address---uint256-uint256-address-uint256-)
+
 * [`claimAndConvertFor(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary)`](bancornetwork.md#BancorNetwork-claimAndConvertFor-address---uint256-uint256-address-payable-)
+
 * [`claimAndConvertFor2(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary, address _affiliateAccount, uint256 _affiliateFee)`](bancornetwork.md#BancorNetwork-claimAndConvertFor2-address---uint256-uint256-address-payable-address-uint256-)
 
 ## Events:
@@ -76,6 +93,7 @@ allows the owner to register/unregister ether tokens
 ### Parameters:
 
 * `_token`: ether token contract address
+
 * `_register`: true to register, false to unregister
 
 ## Function `conversionPath(contract IERC20Token _sourceToken, contract IERC20Token _targetToken) → address[]` <a id="BancorNetwork-conversionPath-contract-IERC20Token-contract-IERC20Token-"></a>
@@ -87,6 +105,7 @@ note that this method is quite expensive in terms of gas and should generally be
 ### Parameters:
 
 * `_sourceToken`: source token address
+
 * `_targetToken`: target token address
 
 ### Return Values:
@@ -102,6 +121,7 @@ note that there is no support for circular paths
 ### Parameters:
 
 * `_path`: conversion path \(see conversion path format above\)
+
 * `_amount`: amount of \_path\[0\] tokens received from the sender
 
 ### Return Values:
@@ -121,10 +141,15 @@ note that the network should already have been given allowance of the source tok
 ### Parameters:
 
 * `_path`: conversion path, see conversion path format above
+
 * `_amount`: amount to convert from, in the source token
+
 * `_minReturn`: if the conversion results in an amount smaller than the minimum return - it is cancelled, must be greater than zero
+
 * `_beneficiary`: account that will receive the conversion result or 0x0 to send the result to the sender account
+
 * `_affiliateAccount`: wallet address to receive the affiliate fee or 0x0 to disable affiliate fee
+
 * `_affiliateFee`: affiliate fee in PPM or 0 to disable affiliate fee
 
 ### Return Values:
@@ -142,10 +167,15 @@ note that the network should already have been given allowance of the source tok
 ### Parameters:
 
 * `_path`: conversion path, see conversion path format above
+
 * `_amount`: amount to convert from, in the source token
+
 * `_minReturn`: if the conversion results in an amount smaller than the minimum return - it is cancelled, must be greater than zero
+
 * `_targetBlockchain`: blockchain BNT will be issued on
+
 * `_targetAccount`: address/account on the target blockchain to send the BNT to
+
 * `_conversionId`: pre-determined unique \(if non zero\) id which refers to this transaction
 
 ### Return Values:
@@ -163,12 +193,19 @@ note that the network should already have been given allowance of the source tok
 ### Parameters:
 
 * `_path`: conversion path, see conversion path format above
+
 * `_amount`: amount to convert from, in the source token
+
 * `_minReturn`: if the conversion results in an amount smaller than the minimum return - it is cancelled, must be greater than zero
+
 * `_targetBlockchain`: blockchain BNT will be issued on
+
 * `_targetAccount`: address/account on the target blockchain to send the BNT to
+
 * `_conversionId`: pre-determined unique \(if non zero\) id which refers to this transaction
+
 * `_affiliateAccount`: affiliate account
+
 * `_affiliateFee`: affiliate fee in PPM
 
 ### Return Values:
@@ -190,9 +227,13 @@ BancorX contract directly by specifying the conversion id
 ### Parameters:
 
 * `_path`: conversion path
+
 * `_bancorX`: address of the BancorX contract for the source token
+
 * `_conversionId`: pre-determined unique \(if non zero\) id which refers to this conversion
+
 * `_minReturn`: if the conversion results in an amount smaller than the minimum return - it is cancelled, must be nonzero
+
 * `_beneficiary`: wallet to receive the conversion result
 
 ### Return Values:
@@ -242,9 +283,13 @@ triggered when a conversion between two tokens occurs
 ### Parameters:
 
 * `_smartToken`: anchor governed by the converter
-* `_fromToken`: source ERC20 token
-* `_toToken`: target ERC20 token
-* `_fromAmount`: amount converted, in the source token
-* `_toAmount`: amount returned, minus conversion fee
-* `_trader`: wallet that initiated the trade
 
+* `_fromToken`: source ERC20 token
+
+* `_toToken`: target ERC20 token
+
+* `_fromAmount`: amount converted, in the source token
+
+* `_toAmount`: amount returned, minus conversion fee
+
+* `_trader`: wallet that initiated the trade

@@ -37,37 +37,65 @@ Note that converters don't currently support tokens with transfer fees.
 ## Functions:
 
 * [`converterType()`](converterbase.md#ConverterBase-converterType--)
+
 * [`targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](converterbase.md#ConverterBase-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
+
 * [`receive()`](converterbase.md#ConverterBase-receive--)
+
 * [`withdrawETH(address payable _to)`](converterbase.md#ConverterBase-withdrawETH-address-payable-)
+
 * [`isV28OrHigher()`](converterbase.md#ConverterBase-isV28OrHigher--)
+
 * [`setConversionWhitelist(contract IWhitelist _whitelist)`](converterbase.md#ConverterBase-setConversionWhitelist-contract-IWhitelist-)
+
 * [`isActive()`](converterbase.md#ConverterBase-isActive--)
+
 * [`transferAnchorOwnership(address _newOwner)`](converterbase.md#ConverterBase-transferAnchorOwnership-address-)
+
 * [`acceptAnchorOwnership()`](converterbase.md#ConverterBase-acceptAnchorOwnership--)
+
 * [`setConversionFee(uint32 _conversionFee)`](converterbase.md#ConverterBase-setConversionFee-uint32-)
+
 * [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](converterbase.md#ConverterBase-withdrawTokens-contract-IERC20Token-address-uint256-)
+
 * [`upgrade()`](converterbase.md#ConverterBase-upgrade--)
+
 * [`reserveTokenCount()`](converterbase.md#ConverterBase-reserveTokenCount--)
+
 * [`addReserve(contract IERC20Token _token, uint32 _weight)`](converterbase.md#ConverterBase-addReserve-contract-IERC20Token-uint32-)
+
 * [`reserveWeight(contract IERC20Token _reserveToken)`](converterbase.md#ConverterBase-reserveWeight-contract-IERC20Token-)
+
 * [`reserveBalance(contract IERC20Token _reserveToken)`](converterbase.md#ConverterBase-reserveBalance-contract-IERC20Token-)
+
 * [`hasETHReserve()`](converterbase.md#ConverterBase-hasETHReserve--)
+
 * [`convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary)`](converterbase.md#ConverterBase-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-)
+
 * [`token()`](converterbase.md#ConverterBase-token--)
+
 * [`transferTokenOwnership(address _newOwner)`](converterbase.md#ConverterBase-transferTokenOwnership-address-)
+
 * [`acceptTokenOwnership()`](converterbase.md#ConverterBase-acceptTokenOwnership--)
+
 * [`connectors(contract IERC20Token _address)`](converterbase.md#ConverterBase-connectors-contract-IERC20Token-)
+
 * [`connectorTokens(uint256 _index)`](converterbase.md#ConverterBase-connectorTokens-uint256-)
+
 * [`connectorTokenCount()`](converterbase.md#ConverterBase-connectorTokenCount--)
+
 * [`getConnectorBalance(contract IERC20Token _connectorToken)`](converterbase.md#ConverterBase-getConnectorBalance-contract-IERC20Token-)
+
 * [`getReturn(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](converterbase.md#ConverterBase-getReturn-contract-IERC20Token-contract-IERC20Token-uint256-)
 
 ## Events:
 
 * [`Activation(uint16 _type, contract IConverterAnchor _anchor, bool _activated)`](converterbase.md#ConverterBase-Activation-uint16-contract-IConverterAnchor-bool-)
+
 * [`Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)`](converterbase.md#ConverterBase-Conversion-contract-IERC20Token-contract-IERC20Token-address-uint256-uint256-int256-)
+
 * [`TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)`](converterbase.md#ConverterBase-TokenRateUpdate-contract-IERC20Token-contract-IERC20Token-uint256-uint256-)
+
 * [`ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)`](converterbase.md#ConverterBase-ConversionFeeUpdate-uint32-uint32-)
 
 ## Function `converterType() → uint16` <a id="ConverterBase-converterType--"></a>
@@ -173,7 +201,9 @@ unless the owner is the converter upgrader contract
 ### Parameters:
 
 * `_token`: ERC20 token contract address
+
 * `_to`: account to receive the new amount
+
 * `_amount`: amount to withdraw
 
 ## Function `upgrade()` <a id="ConverterBase-upgrade--"></a>
@@ -203,6 +233,7 @@ can only be called by the owner while the converter is inactive
 ### Parameters:
 
 * `_token`: address of the reserve token
+
 * `_weight`: reserve weight, represented in ppm, 1-1000000
 
 ## Function `reserveWeight(contract IERC20Token _reserveToken) → uint32` <a id="ConverterBase-reserveWeight-contract-IERC20Token-"></a>
@@ -250,9 +281,13 @@ can only be called by the bancor network contract
 ### Parameters:
 
 * `_sourceToken`: source ERC20 token
+
 * `_targetToken`: target ERC20 token
+
 * `_amount`: amount of tokens to convert \(in units of the source token\)
+
 * `_trader`: address of the caller who executed the conversion
+
 * `_beneficiary`: wallet to receive the conversion result
 
 ### Return Values:
@@ -298,7 +333,9 @@ triggered when the converter is activated
 ### Parameters:
 
 * `_type`: converter type
+
 * `_anchor`: converter anchor
+
 * `_activated`: true if the converter was activated, false if it was deactivated
 
 ## Event `Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)` <a id="ConverterBase-Conversion-contract-IERC20Token-contract-IERC20Token-address-uint256-uint256-int256-"></a>
@@ -308,10 +345,15 @@ triggered when a conversion between two tokens occurs
 ### Parameters:
 
 * `_fromToken`: source ERC20 token
+
 * `_toToken`: target ERC20 token
+
 * `_trader`: wallet that initiated the trade
+
 * `_amount`: amount converted, in the source token
+
 * `_return`: amount returned, minus conversion fee
+
 * `_conversionFee`: conversion fee
 
 ## Event `TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)` <a id="ConverterBase-TokenRateUpdate-contract-IERC20Token-contract-IERC20Token-uint256-uint256-"></a>
@@ -325,8 +367,11 @@ note that prior to version 28, you should use the 'PriceDataUpdate' event instea
 ### Parameters:
 
 * `_token1`: address of the first token
+
 * `_token2`: address of the second token
+
 * `_rateN`: rate of 1 unit of `_token1` in `_token2` \(numerator\)
+
 * `_rateD`: rate of 1 unit of `_token1` in `_token2` \(denominator\)
 
 ## Event `ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)` <a id="ConverterBase-ConversionFeeUpdate-uint32-uint32-"></a>
@@ -336,5 +381,5 @@ triggered when the conversion fee is updated
 ### Parameters:
 
 * `_prevFee`: previous fee percentage, represented in ppm
-* `_newFee`: new fee percentage, represented in ppm
 
+* `_newFee`: new fee percentage, represented in ppm

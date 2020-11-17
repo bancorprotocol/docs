@@ -27,6 +27,7 @@ can only be called by the owner
 ### Parameters:
 
 * `_token`: ERC20 token contract address
-* `_to`: account to receive the new amount
-* `_amount`: amount to withdraw
 
+* `_to`: account to receive the new amount
+
+* `_amount`: amount to withdraw

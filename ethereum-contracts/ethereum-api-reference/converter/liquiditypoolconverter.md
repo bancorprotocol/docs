@@ -19,6 +19,7 @@ The pool token is the first token in the event in that case.
 ## Events:
 
 * [`LiquidityAdded(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](liquiditypoolconverter.md#LiquidityPoolConverter-LiquidityAdded-address-contract-IERC20Token-uint256-uint256-uint256-)
+
 * [`LiquidityRemoved(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](liquiditypoolconverter.md#LiquidityPoolConverter-LiquidityRemoved-address-contract-IERC20Token-uint256-uint256-uint256-)
 
 ## Function `acceptAnchorOwnership()` <a id="LiquidityPoolConverter-acceptAnchorOwnership--"></a>
@@ -38,9 +39,13 @@ triggered after liquidity is added
 ### Parameters:
 
 * `_provider`: liquidity provider
+
 * `_reserveToken`: reserve token address
+
 * `_amount`: reserve token amount
+
 * `_newBalance`: reserve token new balance
+
 * `_newSupply`: pool token new supply
 
 ## Event `LiquidityRemoved(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` <a id="LiquidityPoolConverter-LiquidityRemoved-address-contract-IERC20Token-uint256-uint256-uint256-"></a>
@@ -50,8 +55,11 @@ triggered after liquidity is removed
 ### Parameters:
 
 * `_provider`: liquidity provider
-* `_reserveToken`: reserve token address
-* `_amount`: reserve token amount
-* `_newBalance`: reserve token new balance
-* `_newSupply`: pool token new supply
 
+* `_reserveToken`: reserve token address
+
+* `_amount`: reserve token amount
+
+* `_newBalance`: reserve token new balance
+
+* `_newSupply`: pool token new supply

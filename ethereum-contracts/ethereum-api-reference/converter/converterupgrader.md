@@ -23,13 +23,17 @@ and then the upgrader 'upgrade' function should be executed directly.
 ## Functions:
 
 * [`constructor(contract IContractRegistry _registry, contract IEtherToken _etherToken)`](converterupgrader.md#ConverterUpgrader-constructor-contract-IContractRegistry-contract-IEtherToken-)
+
 * [`upgrade(bytes32 _version)`](converterupgrader.md#ConverterUpgrader-upgrade-bytes32-)
+
 * [`upgrade(uint16 _version)`](converterupgrader.md#ConverterUpgrader-upgrade-uint16-)
+
 * [`upgradeOld(contract IConverter _converter, bytes32 _version)`](converterupgrader.md#ConverterUpgrader-upgradeOld-contract-IConverter-bytes32-)
 
 ## Events:
 
 * [`ConverterOwned(contract IConverter _converter, address _owner)`](converterupgrader.md#ConverterUpgrader-ConverterOwned-contract-IConverter-address-)
+
 * [`ConverterUpgrade(address _oldConverter, address _newConverter)`](converterupgrader.md#ConverterUpgrader-ConverterUpgrade-address-address-)
 
 ## Function `constructor(contract IContractRegistry _registry, contract IEtherToken _etherToken)` <a id="ConverterUpgrader-constructor-contract-IContractRegistry-contract-IEtherToken-"></a>
@@ -85,6 +89,7 @@ fires the ConverterUpgrade event upon success.
 ### Parameters:
 
 * `_converter`: old converter contract address
+
 * `_version`: old converter version
 
 ## Event `ConverterOwned(contract IConverter _converter, address _owner)` <a id="ConverterUpgrader-ConverterOwned-contract-IConverter-address-"></a>
@@ -94,6 +99,7 @@ triggered when the contract accept a converter ownership
 ### Parameters:
 
 * `_converter`: converter address
+
 * `_owner`: new owner - local upgrader address
 
 ## Event `ConverterUpgrade(address _oldConverter, address _newConverter)` <a id="ConverterUpgrader-ConverterUpgrade-address-address-"></a>
@@ -103,5 +109,5 @@ triggered when the upgrading process is done
 ### Parameters:
 
 * `_oldConverter`: old converter address
-* `_newConverter`: new converter address
 
+* `_newConverter`: new converter address

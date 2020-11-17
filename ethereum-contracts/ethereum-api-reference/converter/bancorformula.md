@@ -3,22 +3,39 @@
 ## Functions:
 
 * [`init()`](bancorformula.md#BancorFormula-init--)
+
 * [`purchaseTargetAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-purchaseTargetAmount-uint256-uint256-uint32-uint256-)
+
 * [`saleTargetAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-saleTargetAmount-uint256-uint256-uint32-uint256-)
+
 * [`crossReserveTargetAmount(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-crossReserveTargetAmount-uint256-uint32-uint256-uint32-uint256-)
+
 * [`fundCost(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](bancorformula.md#BancorFormula-fundCost-uint256-uint256-uint32-uint256-)
+
 * [`fundSupplyAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](bancorformula.md#BancorFormula-fundSupplyAmount-uint256-uint256-uint32-uint256-)
+
 * [`liquidateReserveAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](bancorformula.md#BancorFormula-liquidateReserveAmount-uint256-uint256-uint32-uint256-)
+
 * [`balancedWeights(uint256 _primaryReserveStakedBalance, uint256 _primaryReserveBalance, uint256 _secondaryReserveBalance, uint256 _reserveRateNumerator, uint256 _reserveRateDenominator)`](bancorformula.md#BancorFormula-balancedWeights-uint256-uint256-uint256-uint256-uint256-)
+
 * [`calculatePurchaseReturn(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-calculatePurchaseReturn-uint256-uint256-uint32-uint256-)
+
 * [`calculateSaleReturn(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-calculateSaleReturn-uint256-uint256-uint32-uint256-)
+
 * [`calculateCrossReserveReturn(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-calculateCrossReserveReturn-uint256-uint32-uint256-uint32-uint256-)
+
 * [`calculateCrossConnectorReturn(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-calculateCrossConnectorReturn-uint256-uint32-uint256-uint32-uint256-)
+
 * [`calculateFundCost(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](bancorformula.md#BancorFormula-calculateFundCost-uint256-uint256-uint32-uint256-)
+
 * [`calculateLiquidateReturn(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](bancorformula.md#BancorFormula-calculateLiquidateReturn-uint256-uint256-uint32-uint256-)
+
 * [`purchaseRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-purchaseRate-uint256-uint256-uint32-uint256-)
+
 * [`saleRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-saleRate-uint256-uint256-uint32-uint256-)
+
 * [`crossReserveRate(uint256 _sourceReserveBalance, uint32 _sourceReserveWeight, uint256 _targetReserveBalance, uint32 _targetReserveWeight, uint256 _amount)`](bancorformula.md#BancorFormula-crossReserveRate-uint256-uint32-uint256-uint32-uint256-)
+
 * [`liquidateRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount)`](bancorformula.md#BancorFormula-liquidateRate-uint256-uint256-uint32-uint256-)
 
 ## Function `init()` <a id="BancorFormula-init--"></a>
@@ -38,8 +55,11 @@ return = \_supply \* \(\(1 + \_amount / \_reserveBalance\) ^ \(\_reserveWeight /
 ### Parameters:
 
 * `_supply`: liquid token supply
+
 * `_reserveBalance`: reserve balance
+
 * `_reserveWeight`: reserve weight, represented in ppm \(1-1000000\)
+
 * `_amount`: amount of reserve tokens to get the target amount for
 
 ## Function `saleTargetAmount(uint256 _supply, uint256 _reserveBalance, uint32 _reserveWeight, uint256 _amount) → uint256` <a id="BancorFormula-saleTargetAmount-uint256-uint256-uint32-uint256-"></a>
@@ -55,8 +75,11 @@ return = \_reserveBalance \* \(1 - \(1 - \_amount / \_supply\) ^ \(1000000 / \_r
 ### Parameters:
 
 * `_supply`: liquid token supply
+
 * `_reserveBalance`: reserve balance
+
 * `_reserveWeight`: reserve weight, represented in ppm \(1-1000000\)
+
 * `_amount`: amount of liquid tokens to get the target amount for
 
 ### Return Values:
@@ -76,9 +99,13 @@ return = \_targetReserveBalance \* \(1 - \(\_sourceReserveBalance / \(\_sourceRe
 ### Parameters:
 
 * `_sourceReserveBalance`: source reserve balance
+
 * `_sourceReserveWeight`: source reserve weight, represented in ppm \(1-1000000\)
+
 * `_targetReserveBalance`: target reserve balance
+
 * `_targetReserveWeight`: target reserve weight, represented in ppm \(1-1000000\)
+
 * `_amount`: source reserve amount
 
 ### Return Values:
@@ -98,8 +125,11 @@ return = \_reserveBalance \* \(\(\(\_supply + \_amount\) / \_supply\) ^ \(MAX\_W
 ### Parameters:
 
 * `_supply`: pool token supply
+
 * `_reserveBalance`: reserve balance
+
 * `_reserveRatio`: reserve ratio, represented in ppm \(2-2000000\)
+
 * `_amount`: requested amount of pool tokens
 
 ### Return Values:
@@ -119,8 +149,11 @@ return = \_supply \* \(\(\_amount / \_reserveBalance + 1\) ^ \(\_reserveRatio / 
 ### Parameters:
 
 * `_supply`: pool token supply
+
 * `_reserveBalance`: reserve balance
+
 * `_reserveRatio`: reserve ratio, represented in ppm \(2-2000000\)
+
 * `_amount`: amount of reserve tokens to fund with
 
 ### Return Values:
@@ -140,8 +173,11 @@ return = \_reserveBalance \* \(1 - \(\(\_supply - \_amount\) / \_supply\) ^ \(MA
 ### Parameters:
 
 * `_supply`: pool token supply
+
 * `_reserveBalance`: reserve balance
+
 * `_reserveRatio`: reserve ratio, represented in ppm \(2-2000000\)
+
 * `_amount`: amount of pool tokens to liquidate
 
 ### Return Values:
@@ -159,9 +195,13 @@ In other words, we want the arbitrager to convert the difference between the res
 Formula input:
 
 * let t denote the primary reserve token staked balance
+
 * let s denote the primary reserve token balance
+
 * let r denote the secondary reserve token balance
+
 * let q denote the numerator of the rate between the tokens
+
 * let p denote the denominator of the rate between the tokens
 
 Where p primary tokens are equal to q secondary tokens
@@ -169,7 +209,9 @@ Where p primary tokens are equal to q secondary tokens
 Formula output:
 
 * compute x = W\(t / r  _q / p_  log\(s / t\)\) / log\(s / t\)
+
 * return x / \(1 + x\) as the weight of the primary reserve token
+
 * return 1 / \(1 + x\) as the weight of the secondary reserve token
 
 Where W is the Lambert W Function
@@ -177,6 +219,7 @@ Where W is the Lambert W Function
 If the rate-provider provides the rates for a common unit, for example:
 
 * P = 2 ==&gt; 2 primary reserve tokens = 1 ether
+
 * Q = 3 ==&gt; 3 secondary reserve tokens = 1 ether
 
 Then you can simply use p = P and q = Q
@@ -184,6 +227,7 @@ Then you can simply use p = P and q = Q
 If the rate-provider provides the rates for a single unit, for example:
 
 * P = 2 ==&gt; 1 primary reserve token = 2 ethers
+
 * Q = 3 ==&gt; 1 secondary reserve token = 3 ethers
 
 Then you can simply use p = Q and q = P
@@ -191,9 +235,13 @@ Then you can simply use p = Q and q = P
 ### Parameters:
 
 * `_primaryReserveStakedBalance`: the primary reserve token staked balance
+
 * `_primaryReserveBalance`: the primary reserve token balance
+
 * `_secondaryReserveBalance`: the secondary reserve token balance
+
 * `_reserveRateNumerator`: the numerator of the rate between the tokens
+
 * `_reserveRateDenominator`: the denominator of the rate between the tokens
 
 Note that `numerator / denominator` should represent the amount of secondary tokens equal to one primary token
@@ -241,4 +289,3 @@ deprecated, backward compatibility
 ## Function `liquidateRate(uint256 _supply, uint256 _reserveBalance, uint32 _reserveRatio, uint256 _amount) → uint256` <a id="BancorFormula-liquidateRate-uint256-uint256-uint32-uint256-"></a>
 
 deprecated, backward compatibility
-
