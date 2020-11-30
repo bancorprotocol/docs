@@ -5,19 +5,14 @@ The contract manages a list of whitelisted addresses
 ## Functions:
 
 * [`isWhitelisted(address _address)`](whitelist.md#Whitelist-isWhitelisted-address-)
-
 * [`addAddress(address _address)`](whitelist.md#Whitelist-addAddress-address-)
-
 * [`addAddresses(address[] _addresses)`](whitelist.md#Whitelist-addAddresses-address---)
-
 * [`removeAddress(address _address)`](whitelist.md#Whitelist-removeAddress-address-)
-
 * [`removeAddresses(address[] _addresses)`](whitelist.md#Whitelist-removeAddresses-address---)
 
 ## Events:
 
 * [`AddressAddition(address _address)`](whitelist.md#Whitelist-AddressAddition-address-)
-
 * [`AddressRemoval(address _address)`](whitelist.md#Whitelist-AddressRemoval-address-)
 
 ## Function `isWhitelisted(address _address) → bool` <a id="Whitelist-isWhitelisted-address-"></a>
@@ -79,3 +74,4 @@ triggered when an address is removed from the whitelist
 ### Parameters:
 
 * `_address`: address that's removed from the whitelist
+

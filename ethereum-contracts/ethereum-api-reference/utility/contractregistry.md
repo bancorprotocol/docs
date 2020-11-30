@@ -17,13 +17,9 @@ Note that contract names are limited to 32 bytes UTF8 encoded ASCII strings to o
 ## Functions:
 
 * [`itemCount()`](contractregistry.md#ContractRegistry-itemCount--)
-
 * [`addressOf(bytes32 _contractName)`](contractregistry.md#ContractRegistry-addressOf-bytes32-)
-
 * [`registerAddress(bytes32 _contractName, address _contractAddress)`](contractregistry.md#ContractRegistry-registerAddress-bytes32-address-)
-
 * [`unregisterAddress(bytes32 _contractName)`](contractregistry.md#ContractRegistry-unregisterAddress-bytes32-)
-
 * [`getAddress(bytes32 _contractName)`](contractregistry.md#ContractRegistry-getAddress-bytes32-)
 
 ## Events:
@@ -57,7 +53,6 @@ registers a new address for the contract name in the registry
 ### Parameters:
 
 * `_contractName`: contract name
-
 * `_contractAddress`: contract address
 
 ## Function `unregisterAddress(bytes32 _contractName)` <a id="ContractRegistry-unregisterAddress-bytes32-"></a>
@@ -79,5 +74,5 @@ triggered when an address pointed to by a contract name is modified
 ### Parameters:
 
 * `_contractName`: contract name
-
 * `_contractAddress`: new contract address
+

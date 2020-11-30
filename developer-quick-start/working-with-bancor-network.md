@@ -44,7 +44,7 @@ For example, to get the latest contract address of the BancorNetwork contract, o
 | Network | Contract Address |
 | :--- | :--- |
 | `Mainnet​` | `0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4` |
-| `Ropsten` | `0xFD95E724962fCfC269010A0c6700Aa09D5de3074` |
+| `Ropsten` | `0xA6DB4B0963C37Bc959CbC0a874B5bDDf2250f26F` |
 
 {% hint style="info" %}
 ContractRegistry also indicates its own address, which means you should run the same process to make sure you are working with the latest version of the ContractRegistry

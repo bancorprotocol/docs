@@ -5,9 +5,7 @@ Provides support and utilities for contract ownership
 ## Functions:
 
 * [`constructor()`](owned.md#Owned-constructor--)
-
 * [`transferOwnership(address _newOwner)`](owned.md#Owned-transferOwnership-address-)
-
 * [`acceptOwnership()`](owned.md#Owned-acceptOwnership--)
 
 ## Events:
@@ -41,5 +39,5 @@ triggered when the owner is updated
 ### Parameters:
 
 * `_prevOwner`: previous owner
-
 * `_newOwner`: new owner
+

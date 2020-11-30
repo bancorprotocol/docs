@@ -5,9 +5,7 @@ Base contract for ContractRegistry clients
 ## Functions:
 
 * [`updateRegistry()`](contractregistryclient.md#ContractRegistryClient-updateRegistry--)
-
 * [`restoreRegistry()`](contractregistryclient.md#ContractRegistryClient-restoreRegistry--)
-
 * [`restrictRegistryUpdate(bool _onlyOwnerCanUpdateRegistry)`](contractregistryclient.md#ContractRegistryClient-restrictRegistryUpdate-bool-)
 
 ## Function `updateRegistry()` <a id="ContractRegistryClient-updateRegistry--"></a>
@@ -25,3 +23,4 @@ restricts the permission to update the contract-registry
 ### Parameters:
 
 * `_onlyOwnerCanUpdateRegistry`:  indicates whether or not permission is restricted to owner only
+

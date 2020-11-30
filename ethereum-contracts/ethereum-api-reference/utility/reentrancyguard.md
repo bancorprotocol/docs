@@ -7,3 +7,4 @@ The contract provides protection against re-entrancy - calling a function \(dire
 indirectly\) from within itself.
 
 ## Functions:
+
