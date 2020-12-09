@@ -18,11 +18,9 @@
 * [Deploying Liquidity Pools](../developer-quick-start/deploying-liquidity-pools.md)
 * [Deploying Bancor Contracts for Testing](../developer-quick-start/deploying-bancor-contracts-for-testing.md)
 
-## V2 LIQUIDITY POOLS
+## Bancor v2.1 <a id="v2-liquidity-pools"></a>
 
 * [Overview](../v2-liquidity-pools/overview.md)
-* [Balancing Mechanics](../v2-liquidity-pools/balancing-mechanics.md)
-* [Liquidity Amplification](../v2-liquidity-pools/liquidity-amplification.md)
 
 ## Other Guides <a id="guides"></a>
 
