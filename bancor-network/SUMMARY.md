@@ -1,12 +1,13 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [FAQs](../faqs.md)
 
 ## Getting Started
 
 * [Resources](../getting-started/resources.md)
 * [What Can I Do With Bancor?](../getting-started/what-can-i-do-with-bancor.md)
-* [The V2 Difference](../getting-started/the-v2-difference.md)
+* [The V2.1 Difference](../getting-started/the-v2-difference.md)
 
 ## Developer Quick Start
 
