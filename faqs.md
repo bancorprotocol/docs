@@ -4,6 +4,17 @@ description: Frequently asked questions about Bancor Protocol & Bancor v2.1.
 
 # FAQs
 
+FAQs below are divided into the following sections:
+
+1. **\[Impermanent Loss\] \(\#&lt;impermanent-loss&gt;\)**
+2. **Depositing / Withdrawing Liquidity**
+3. **BNT Liquidity Mining**
+4. **Pool management**
+5. **Helpful Links**
+6. **Further Resources**
+
+## **Impermanent Loss**
+
 ## **What is impermanent loss?**
 
 Simply put, impermanent loss is the difference between holding tokens in an automated market maker \(AMM\) liquidity pool and holding them in your wallet.
