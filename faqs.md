@@ -243,7 +243,7 @@ Currently, pool owners determine the pool's fee, however this is subject to chan
 
 * Telegram groups: [Bancor Protocol](https://t.me/bancor), [Bancor Devs](https://t.me/BancorDevelopers), [Bancor Traders](https://t.me/bancortraders)
 * [Bancor Discord](https://discord.gg/pe7EfaR)
-* Governance forum: [http://gov.bancor.network/](http://gov.bancor.network/)
+* Governance: [http://gov.bancor.network/](http://gov.bancor.network/)
 * Bancor blog: [https://medium.com/@bancor/](https://medium.com/@bancor/)
 * Bancor.network customer support: [ban.cr/support](www.ban.cr/support)
 * [BNT/REN telegram staking support](https://t.me/joinchat/BFCB_VbQ_fRI8SoNH7GpQw)
