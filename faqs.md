@@ -219,9 +219,7 @@ One place you will be able to claim the rewards in the protection tab in the ban
 
 2.Withdraw to your wallet: withdraw the BNTs directly to your wallet, resetting your multiplier for all of your LP positions, cutting your APY% by half.
 
-## What are compounding gains?
-
-Compounding gains means that the earnings are used to increase the size of the stake. Therefore, subsequent earnings are increased. Repeating the process creates exponential growth \(or a 'snowballing' effect\).
+More detailed guides will be shared once rewards are activated and go live in the bancor.network front-end.
 
 ## What is a rewards “multiplier”?
 
@@ -231,7 +229,7 @@ Liquidity providers who keep their rewards staked to the protocol receive a “B
 
 ## How to create a new pool to Bancor?
 
-Go to the “swap” tab and choose “Pool” \(top right\). You’ll then see a “+ Create pool” button at the center. Select the ratio \(we recommend 50/50 for possible future IL insurance and LM rewards\), select the tokens and click on continue. Note that this is a complex transaction which might cost more gas than a usual transaction.
+Go to [https://app.bancor.network/eth/pool/create](https://app.bancor.network/eth/pool/create). Select the ratio \(we recommend 50/50 as only 50/50 pools can currently become eligible for IL insurance, single-sided exposure and liquidity mining rewards\). Select the token and click continue. Note that this is a complex transaction which might cost more gas than a usual transaction.
 
 ## How to get a pool whitelisted for single-sided staking and impermanent loss protection?
 
@@ -239,25 +237,26 @@ Please check out this guide: [https://medium.com/@bancor/how-to-whitelist-a-toke
 
 ## Who manages the pool’s fee?
 
-Currently, pool owners are the ones who determine the fee, however this is subject to change due to the governance’s request. More information about can be found in Bancor's Discord and Governance forum.
+Currently, pool owners determine the pool's fee, however this is subject to change via governance, with the introduction of a standardized fee that is dynamic or the introduction of LP voting on each pool's fees. More information can be found in Bancor's Discord and Governance forum.
 
 ## 6. Helpful Links
 
-* Telegram: [Bancor Protocol](https://t.me/bancor), [Bancor Devs](https://t.me/BancorDevelopers), [Bancor Traders](https://t.me/bancortraders)
+* Telegram groups: [Bancor Protocol](https://t.me/bancor), [Bancor Devs](https://t.me/BancorDevelopers), [Bancor Traders](https://t.me/bancortraders)
 * [Bancor Discord](https://discord.gg/pe7EfaR)
-* Governance Forum: [http://gov.bancor.network/](http://gov.bancor.network/)
-* Medium: [https://medium.com/@bancor/](https://medium.com/@bancor/)
+* Governance forum: [http://gov.bancor.network/](http://gov.bancor.network/)
+* Bancor blog: [https://medium.com/@bancor/](https://medium.com/@bancor/)
 * Bancor.network customer support: [ban.cr/support](www.ban.cr/support)
-* BNT/REN telegram staking support: [https://t.me/joinchat/BFCB\_VbQ\_fRI8SoNH7GpQw](https://t.me/joinchat/BFCB_VbQ_fRI8SoNH7GpQw)
-* BNT/OCEAN telegram staking support: [https://t.me/joinchat/FBrMHUs2dBSuPSalm6ZntQ](https://t.me/joinchat/FBrMHUs2dBSuPSalm6ZntQ)
-* BNT Liquidity Mining general staking support: https://t.me/joinchat/Rd10hRzdd0hRSdySGhNk7Q
+* [BNT/REN telegram staking support](https://t.me/joinchat/BFCB_VbQ_fRI8SoNH7GpQw)
+* [BNT/OCEAN telegram staking support](https://t.me/joinchat/FBrMHUs2dBSuPSalm6ZntQ)
+* [BNT Liquidity Mining telegram support](https://t.me/joinchat/Rd10hRzdd0hRSdySGhNk7Q)
 
 ## 7. Further Resources
 
-* Bancor v2.1 Economic Analysis: [https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view)
-* Bancor v2.1 Technical Explainer: [https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view)
-* GUIDE:  Single-Sided Staking on Bancor V2.1: https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba
-* How Bancor V2.1 protects LPs from impermanent loss: https://bankless.substack.com/p/how-to-protect-yourself-from-impermanent
-* How to submit a BIP in Bancor Goverance: https://medium.com/@bancor/how-to-launch-a-bip-vote-with-bancor-governance-bc0887d8c923
-* How to Whitelist a Token on Bancor v2.1: https://medium.com/@bancor/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4 
+* [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view): 
+* [Bancor v2.1 Technical Explainer](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view)
+* [GUIDE: Single-Sided Staking on Bancor V2.1](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
+* [Bankless: How Bancor v2.1 protects LPs from impermanent loss](https://bankless.substack.com/p/how-to-protect-yourself-from-impermanent)
+* [How to submit a BIP in Bancor Goverance](https://medium.com/@bancor/how-to-launch-a-bip-vote-with-bancor-governance-bc0887d8c923)
+* [How to Whitelist a Token on Bancor v2.1](https://medium.com/@bancor/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)
+* [Bancor November 2020 progress update ](https://blog.bancor.network/bancor-progress-update-november-2020-2a32db170c8c)
 
