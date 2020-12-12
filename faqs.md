@@ -27,49 +27,43 @@ Why “impermanent”? Because as long as the relative prices of tokens in the A
 
 ## What causes impermanent loss?
 
-Liquidity pools consist of multiple tokens paired together in a pool. If one token price changes in the pool, an arbitrage opportunity emerges, incentivizing balancing of the pool \(and resulting in a loss for liquidity providers\). 
+Liquidity pools consist of multiple tokens paired together in a pool. If one of the tokens changes in price relative to its paired token\(s\), an arbitrage opportunity emerges, incentivizing re-balancing of the pool \(and resulting in a loss for liquidity providers\). 
 
 As one token’s price is rising relative to its paired asset, the pool is re-balancing by selling the rising token while buying the token whose price is falling. Once you withdraw your liquidity, you’re left holding less of the token that mooned, and more of the token that dumped.
 
-Swap fees may offset impermanent loss; however in many cases impermanent loss can exceed trading fees earned by an LP, leading to negative returns realized by a liquidity provider upon withdrawing their tokens from the pool. 
+Swap fees may offset impermanent loss; however in many cases impermanent loss can exceed swap fees earned by an LP, leading to negative returns realized by a liquidity provider upon withdrawing their tokens from the pool. 
 
-Bancor v2.1 is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited \(as if the HODL'd the tokens in their wallet\) plus trading fees using a novel mechanism called **Impermanent Loss Insurance**.
+Bancor v2.1 is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited \(as if they HODL'd the tokens in their wallet\) plus swap fees using a novel mechanism called **Impermanent Loss Insurance**.
 
 ## What is Impermanent Loss Insurance?
 
-Impermanent Loss Insurance is a unique feature offered by Bancor v2.1 that removes the risk of impermanent loss for liquidity providers. LPs can “set and forget” their tokens in a liquidity pool and generate fees without living in fear of volatility-induced arbitrage reducing the value of their stake.
+Impermanent Loss Insurance is a unique feature offered by Bancor v2.1 that removes the risk of impermanent loss for liquidity providers. LPs can “set and forget” their tokens in a pool and generate fees without living in fear of volatility-induced arbitrage reducing the value of their stake.
 
-Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection \(if you stake 1 ETH, even if ETH price doubles, you will get the equivalent value of 1 ETH back, plus trading fees\). Any IL incurred by your staked tokens is compensated by the Bancor protocol.
+Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection \(i.e., if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back, plus trading fees\). Any IL incurred by your staked tokens is compensated by the Bancor protocol.
 
 ## How does Impermanent Loss Insurance work?
 
 Contrary to other AMM protocols, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. By introducing an elastic BNT supply, the protocol is able to co-invest in pools alongside LPs and pay for the cost of impermanent loss with swap fees earned from its co-investments.
 
-BNT co-invested by the protocol is ultimately burned when an LP withdraws. Similarly, the cost of IL insurance is paid by the protocol when LP withdraws. The cost IL insurance may be less than fees earned from BNT co-invested by the protocol-invested, allowing the protocol to offset an LP’s IL without emitting new BNT.
+BNT co-invested by the protocol is ultimately burned when an LP withdraws. Similarly, the cost of IL insurance for a given stake is paid by the protocol when the stake's LP withdraws. The cost IL insurance may be less than fees earned from BNT co-invested by the protocol-invested, allowing the protocol to offset an LP’s IL without emitting new BNT.
 
 Impermanent loss insurance accrues over time, by 1% each day, until 100% insurance is achieved at 100 days. There is a 30-day cliff, which means that if a liquidity provider decides to withdraw their position before 30 days passes, they’d incur the same IL experienced in a normal, unprotected AMM. If an LP withdraws any time after 100 days, they receive 100% compensation for any loss that occurred in the first 100 days, or anytime thereafter. 
 
-If there are not sufficient tokens in the pool to fully compensate the LP for impermanent loss in the staked token, part of the insurance may be paid out in an equal value of BNT.
-
-Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view) and [**economic analysis**](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view).
+If there are not sufficient tokens in the pool to fully compensate the LP for impermanent loss in the staked token, part of the insurance may be paid out in an equal value of BNT. Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view) and [**economic analysis**](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view).
 
 ## **Could I lose profits before I reach the 30-day cliff**?
 
-Only if you withdraw your tokens. Impermanent loss insurance starts vesting immediately when you deposit. But you must be in the pool for at least 30 days until the cliff is reached and before the protection can be utilized.
+Only if you withdraw your tokens befor 30 days in the pool. Impermanent loss insurance starts vesting immediately when you deposit. But you must be in the pool for at least 30 days until the cliff is reached and before the insurance can be utilized.
 
 ## **Where can I track returns and see the current coverage on my liquidity pool position?**
 
-This information can be viewed in the [”Protection” tab](https://app.bancor.network/eth/protection), on the right side \(where you can also find a countdown timer for complete elimination of impermanent loss\). Each liquidity position has its own separate coverage, depending on when you deposited. Within the same pairs, there is no relation between different liquidity positions.
+This information can be viewed in the [”Protection” tab](https://app.bancor.network/eth/protection) of bancor.network, on the right side \(where you can also find a countdown timer for complete elimination of impermanent loss\). Each liquidity position has its own separate coverage, depending on when you deposited. Within the same pairs, there is no relation between different liquidity positions.
 
 ## **What is the difference between “protected” and “claimable” value?**
 
 Protected value is the amount of tokens you can withdraw with 100% protection + fees.
 
 Claimable value is the amount of tokens you can withdraw right now \(assuming you have not earned full IL protection and there has been IL, this value will be lower than Protected Value\).
-
-## **Where can I read more about how IL insurance works?**
-
-**Please look into our technical explainer by clicking** [**here**](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view) **and economic explainer by clicking** [**here**](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view)**.**
 
 ## **If I have staked liquidity to a pool multiple times, will withdrawing one of my stakes cancel the other stake’s insurance?**
 
@@ -85,9 +79,9 @@ Only if you withdraw. If you withdrew before the 30 day cliff, you are not eligi
 
 ## **Are all pools eligible for Impermanent Loss Protection?**
 
-Only pools voted into the Bancor v2.1 whitelist by Bancor governance are eligible to receive impermanent loss protection and single-sided exposure. Currently roughly 70 tokens are listed in the Bancor v2.1 whitelist. 
+Only pools voted into the Bancor v2.1 whitelist by Bancor governance are eligible to receive impermanent loss protection and single-sided exposure. Currently roughly 60 tokens are listed in the Bancor v2.1 whitelist. 
 
-[_Instructions on how to whitelist a token_](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)_._
+[_**Instructions on how to whitelist a token**_](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)_**.**_
 
 ## 2. Depositing / Withdrawing Liquidity
 
@@ -113,7 +107,7 @@ There are two ways to provide liquidity on Bancor - dual sided or single sided.
 
 **1. Single-asset staking \(single-sided exposure\)**: Bancor’s unique design gives you the option to remain 100% long on your favorite token while earning swap fees & liquidity mining rewards. In most liquidity pools, deposits require selling part of the staked tokens for ETH or another “reserve asset” like USDC, exposing the LP to a different asset during the staking period. With Bancor single-asset staking, you do not have to sell part of your tokens and be exposed to another token in the pool.
 
-Specifically for single-asset staking of BNT \(or any impermanent loss insurance paid out in BNT\), any BNT being withdrawn from the system is subject to a 24-hour lockup to guarantee the security of the protocol and its pools. e
+Specifically for single-asset staking of BNT \(or any impermanent loss insurance paid out in BNT\), any BNT being withdrawn from the system is subject to a 24-hour lockup to guarantee the security of the protocol and its pools.
 
 [**You can view a guide by clicking here.**](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
 
