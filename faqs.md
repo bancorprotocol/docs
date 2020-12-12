@@ -39,13 +39,13 @@ Bancor v2.1 is designed to ensure that a liquidity provider gets back the same v
 
 Impermanent Loss Insurance is a unique feature offered by Bancor v2.1 that removes the risk of impermanent loss for liquidity providers. LPs can “set and forget” their tokens in a pool and generate fees without living in fear of volatility-induced arbitrage reducing the value of their stake.
 
-Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection \(i.e., if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back, plus trading fees\). Any IL incurred by your staked tokens is compensated by the Bancor protocol.
+Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection. In other words, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back, plus trading fees.
 
 ## How does Impermanent Loss Insurance work?
 
 Contrary to other AMM protocols, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. By introducing an elastic BNT supply, the protocol is able to co-invest in pools alongside LPs and pay for the cost of impermanent loss with swap fees earned from its co-investments.
 
-BNT co-invested by the protocol is ultimately burned when an LP withdraws. Similarly, the cost of IL insurance for a given stake is paid by the protocol when the stake's LP withdraws. The cost IL insurance may be less than fees earned from BNT co-invested by the protocol-invested, allowing the protocol to offset an LP’s IL without emitting new BNT.
+BNT co-invested by the protocol is ultimately burned when an LP withdraws. Similarly, the cost of IL insurance is paid by the protocol when an LP withdraws. The cost of IL insurance may be less than fees earned from BNT co-invested by the protocol, allowing the protocol to offset an LP’s IL without emitting new BNT.
 
 Impermanent loss insurance accrues over time, by 1% each day, until 100% insurance is achieved at 100 days. There is a 30-day cliff, which means that if a liquidity provider decides to withdraw their position before 30 days passes, they’d incur the same IL experienced in a normal, unprotected AMM. If an LP withdraws any time after 100 days, they receive 100% compensation for any loss that occurred in the first 100 days, or anytime thereafter. 
 
