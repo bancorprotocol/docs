@@ -47,6 +47,8 @@ Contrary to other AMM protocols, Bancor uses its protocol token, BNT, as the cou
 
 BNT co-invested by the protocol is ultimately burned when an LP withdraws. Similarly, the cost of IL insurance is paid by the protocol when an LP withdraws. The cost of IL insurance may be less than fees earned from BNT co-invested by the protocol, allowing the protocol to offset an LP’s IL without emitting new BNT.
 
+![](.gitbook/assets/v21diagram.jpeg)
+
 Impermanent loss insurance accrues over time, by 1% each day, until 100% insurance is achieved at 100 days. There is a 30-day cliff, which means that if a liquidity provider decides to withdraw their position before 30 days passes, they’d incur the same IL experienced in a normal, unprotected AMM. If an LP withdraws any time after 100 days, they receive 100% compensation for any loss that occurred in the first 100 days, or anytime thereafter. 
 
 If there are not sufficient tokens in the pool to fully compensate the LP for impermanent loss in the staked token, part of the insurance may be paid out in an equal value of BNT. Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view) and [**economic analysis**](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view).
