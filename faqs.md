@@ -8,12 +8,12 @@ This a living document continuously updated by the community and therefore a wor
 
 FAQs below are divided into the following sections:
 
-1. **Impermanent Loss**
-2. **Depositing / Withdrawing Liquidity**
-3. **BNT Liquidity Mining**
-4. **Pool Management**
-5. **Helpful Links**
-6. **Further Resources**
+1. \*\*\*\*[**Impermanent Loss**](faqs.md#1-impermanent-loss)
+2. \*\*\*\*[**Depositing / Withdrawing Liquidity**](faqs.md#2-depositing-withdrawing-liquidity)
+3. \*\*\*\*[**BNT Liquidity Mining**](faqs.md#3-bnt-liquidity-mining)
+4. \*\*\*\*[**Pool Management**](faqs.md#4-pool-management)
+5. \*\*\*\*[**Helpful Links**](faqs.md#6-helpful-links)
+6. \*\*\*\*[**Further Resources**](faqs.md#7-further-resources)
 
 ## **1. Impermanent Loss**
 
