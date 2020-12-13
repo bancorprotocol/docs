@@ -12,8 +12,8 @@ FAQs below are divided into the following sections:
 2. \*\*\*\*[**Depositing / Withdrawing Liquidity**](faqs.md#2-depositing-withdrawing-liquidity)
 3. \*\*\*\*[**BNT Liquidity Mining**](faqs.md#3-bnt-liquidity-mining)
 4. \*\*\*\*[**Pool Management**](faqs.md#4-pool-management)
-5. \*\*\*\*[**Helpful Links**](faqs.md#6-helpful-links)
-6. \*\*\*\*[**Further Resources**](faqs.md#7-further-resources)
+5. \*\*\*\*[**Helpful Links**](faqs.md#5-helpful-links)
+6. \*\*\*\*[**Further Resources**](faqs.md#6-further-resources)
 
 ## **1. Impermanent Loss**
 
@@ -241,7 +241,7 @@ Please check out this guide: [https://medium.com/@bancor/how-to-whitelist-a-toke
 
 Currently, pool owners determine the pool's fee, however this is subject to change via governance, with the introduction of a standardized fee that is dynamic or the introduction of LP voting on each pool's fees. More information can be found in Bancor's Discord and Governance forum.
 
-## 6. Helpful Links
+## 5. Helpful Links
 
 * Telegram groups: [Bancor Protocol](https://t.me/bancor), [Bancor Devs](https://t.me/BancorDevelopers), [Bancor Traders](https://t.me/bancortraders)
 * [Bancor Discord](https://discord.gg/pe7EfaR)
@@ -252,7 +252,7 @@ Currently, pool owners determine the pool's fee, however this is subject to chan
 * [BNT/OCEAN telegram staking support](https://t.me/joinchat/FBrMHUs2dBSuPSalm6ZntQ)
 * [BNT Liquidity Mining telegram support](https://t.me/joinchat/Rd10hRzdd0hRSdySGhNk7Q)
 
-## 7. Further Resources
+## 6. Further Resources
 
 * [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view): 
 * [Bancor v2.1 Technical Explainer](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view)
