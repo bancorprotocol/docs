@@ -1,11 +1,5 @@
 # Functions:
 
-- [`addPoolToWhitelist(contract IConverterAnchor _anchor)`](#ILiquidityProtectionStore-addPoolToWhitelist-contract-IConverterAnchor-)
-
-- [`removePoolFromWhitelist(contract IConverterAnchor _anchor)`](#ILiquidityProtectionStore-removePoolFromWhitelist-contract-IConverterAnchor-)
-
-- [`isPoolWhitelisted(contract IConverterAnchor _anchor)`](#ILiquidityProtectionStore-isPoolWhitelisted-contract-IConverterAnchor-)
-
 - [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](#ILiquidityProtectionStore-withdrawTokens-contract-IERC20Token-address-uint256-)
 
 - [`protectedLiquidity(uint256 _id)`](#ILiquidityProtectionStore-protectedLiquidity-uint256-)
@@ -29,18 +23,6 @@
 - [`incSystemBalance(contract IERC20Token _poolToken, uint256 _poolAmount)`](#ILiquidityProtectionStore-incSystemBalance-contract-IERC20Token-uint256-)
 
 - [`decSystemBalance(contract IERC20Token _poolToken, uint256 _poolAmount)`](#ILiquidityProtectionStore-decSystemBalance-contract-IERC20Token-uint256-)
-
-# Function `addPoolToWhitelist(contract IConverterAnchor _anchor)` {#ILiquidityProtectionStore-addPoolToWhitelist-contract-IConverterAnchor-}
-
-No description
-
-# Function `removePoolFromWhitelist(contract IConverterAnchor _anchor)` {#ILiquidityProtectionStore-removePoolFromWhitelist-contract-IConverterAnchor-}
-
-No description
-
-# Function `isPoolWhitelisted(contract IConverterAnchor _anchor) → bool` {#ILiquidityProtectionStore-isPoolWhitelisted-contract-IConverterAnchor-}
-
-No description
 
 # Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#ILiquidityProtectionStore-withdrawTokens-contract-IERC20Token-address-uint256-}
 

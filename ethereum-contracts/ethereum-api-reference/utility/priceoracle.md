@@ -11,8 +11,11 @@ is equivalent to the rate of TokenA / TokenB
 ## Functions:
 
 * [`constructor(contract IERC20Token _tokenA, contract IERC20Token _tokenB, contract IChainlinkPriceOracle _tokenAOracle, contract IChainlinkPriceOracle _tokenBOracle)`](priceoracle.md#PriceOracle-constructor-contract-IERC20Token-contract-IERC20Token-contract-IChainlinkPriceOracle-contract-IChainlinkPriceOracle-)
+
 * [`latestRate(contract IERC20Token _tokenA, contract IERC20Token _tokenB)`](priceoracle.md#PriceOracle-latestRate-contract-IERC20Token-contract-IERC20Token-)
+
 * [`lastUpdateTime()`](priceoracle.md#PriceOracle-lastUpdateTime--)
+
 * [`latestRateAndUpdateTime(contract IERC20Token _tokenA, contract IERC20Token _tokenB)`](priceoracle.md#PriceOracle-latestRateAndUpdateTime-contract-IERC20Token-contract-IERC20Token-)
 
 ## Function `constructor(contract IERC20Token _tokenA, contract IERC20Token _tokenB, contract IChainlinkPriceOracle _tokenAOracle, contract IChainlinkPriceOracle _tokenBOracle)` <a id="PriceOracle-constructor-contract-IERC20Token-contract-IERC20Token-contract-IChainlinkPriceOracle-contract-IChainlinkPriceOracle-"></a>
@@ -24,8 +27,11 @@ note that the oracles must have the same common denominator \(USD, ETH etc.\)
 ### Parameters:
 
 * `_tokenA`: first token to support
+
 * `_tokenB`: second token to support
+
 * `_tokenAOracle`: first token price oracle
+
 * `_tokenBOracle`: second token price oracle
 
 ## Function `latestRate(contract IERC20Token _tokenA, contract IERC20Token _tokenB) → uint256, uint256` <a id="PriceOracle-latestRate-contract-IERC20Token-contract-IERC20Token-"></a>
@@ -41,6 +47,7 @@ the rate is returned as a fraction \(numerator / denominator\) for accuracy
 ### Parameters:
 
 * `_tokenA`: token to get the rate of 1 unit of
+
 * `_tokenB`: token to get the rate of 1 `_tokenA` against
 
 ## Function `lastUpdateTime() → uint256` <a id="PriceOracle-lastUpdateTime--"></a>
@@ -54,9 +61,9 @@ returns both the rate and the timestamp of the last update in a single call \(ga
 ### Parameters:
 
 * `_tokenA`: token to get the rate of 1 unit of
+
 * `_tokenB`: token to get the rate of 1 `_tokenA` against
 
 ### Return Values:
 
 * timestamp of the last update
-

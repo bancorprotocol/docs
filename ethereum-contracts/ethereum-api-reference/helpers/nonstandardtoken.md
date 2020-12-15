@@ -1,3 +1,5 @@
+ERC20 Non-Standard Token implementation
+
 # Functions:
 
 # Events:

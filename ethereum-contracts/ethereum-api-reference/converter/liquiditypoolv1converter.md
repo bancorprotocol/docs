@@ -1,6 +1,7 @@
 # LiquidityPoolV1Converter
 
 <<<<<<< HEAD
+
 Liquidity Pool v1 Converter
 
 The liquidity pool v1 converter is a specialized version of a converter that manages
@@ -262,5 +263,7 @@ deprecated, use `TokenRateUpdate` from version 28 and up
 * `_connectorBalance`: reserve balance
 
 * `_connectorWeight`: reserve weight
+
 =======
+
 >>>>>>> 373bdf703580eea9e98097aad83bb67afec1b315
