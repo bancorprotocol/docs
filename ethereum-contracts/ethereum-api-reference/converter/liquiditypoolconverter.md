@@ -1,4 +1,8 @@
-This contract is the base contract for specific types of converters that
+# LiquidityPoolConverter
+
+Liquidity Pool Converter
+
+The liquidity pool converter is the base contract for specific types of converters that
 
 manage liquidity pools.
 
@@ -8,17 +12,16 @@ Note that TokenRateUpdate events are dispatched for pool tokens as well.
 
 The pool token is the first token in the event in that case.
 
-# Functions:
+## Functions:
 
-- [`acceptAnchorOwnership()`](#LiquidityPoolConverter-acceptAnchorOwnership--)
+* [`acceptAnchorOwnership()`](liquiditypoolconverter.md#LiquidityPoolConverter-acceptAnchorOwnership--)
 
-# Events:
+## Events:
 
-- [`LiquidityAdded(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](#LiquidityPoolConverter-LiquidityAdded-address-contract-IERC20Token-uint256-uint256-uint256-)
+* [`LiquidityAdded(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](liquiditypoolconverter.md#LiquidityPoolConverter-LiquidityAdded-address-contract-IERC20Token-uint256-uint256-uint256-)
+* [`LiquidityRemoved(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](liquiditypoolconverter.md#LiquidityPoolConverter-LiquidityRemoved-address-contract-IERC20Token-uint256-uint256-uint256-)
 
-- [`LiquidityRemoved(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](#LiquidityPoolConverter-LiquidityRemoved-address-contract-IERC20Token-uint256-uint256-uint256-)
-
-# Function `acceptAnchorOwnership()` {#LiquidityPoolConverter-acceptAnchorOwnership--}
+## Function `acceptAnchorOwnership()` <a id="LiquidityPoolConverter-acceptAnchorOwnership--"></a>
 
 accepts ownership of the anchor after an ownership transfer
 
@@ -28,34 +31,27 @@ can only be called by the contract owner
 
 note that prior to version 28, you should use 'acceptTokenOwnership' instead
 
-# Event `LiquidityAdded(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` {#LiquidityPoolConverter-LiquidityAdded-address-contract-IERC20Token-uint256-uint256-uint256-}
+## Event `LiquidityAdded(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` <a id="LiquidityPoolConverter-LiquidityAdded-address-contract-IERC20Token-uint256-uint256-uint256-"></a>
 
 triggered after liquidity is added
 
-## Parameters:
+### Parameters:
 
-- `_provider`:       liquidity provider
+* `_provider`: liquidity provider
+* `_reserveToken`: reserve token address
+* `_amount`: reserve token amount
+* `_newBalance`: reserve token new balance
+* `_newSupply`: pool token new supply
 
-- `_reserveToken`:   reserve token address
-
-- `_amount`:         reserve token amount
-
-- `_newBalance`:     reserve token new balance
-
-- `_newSupply`:      pool token new supply
-
-# Event `LiquidityRemoved(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` {#LiquidityPoolConverter-LiquidityRemoved-address-contract-IERC20Token-uint256-uint256-uint256-}
+## Event `LiquidityRemoved(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` <a id="LiquidityPoolConverter-LiquidityRemoved-address-contract-IERC20Token-uint256-uint256-uint256-"></a>
 
 triggered after liquidity is removed
 
-## Parameters:
+### Parameters:
 
-- `_provider`:       liquidity provider
+* `_provider`: liquidity provider
+* `_reserveToken`: reserve token address
+* `_amount`: reserve token amount
+* `_newBalance`: reserve token new balance
+* `_newSupply`: pool token new supply
 
-- `_reserveToken`:   reserve token address
-
-- `_amount`:         reserve token amount
-
-- `_newBalance`:     reserve token new balance
-
-- `_newSupply`:      pool token new supply

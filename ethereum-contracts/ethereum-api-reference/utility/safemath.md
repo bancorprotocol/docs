@@ -1,3 +1,6 @@
-This library supports basic math operations with overflow/underflow protection.
+# SafeMath
 
-# Functions:
+Library for basic math operations with overflow/underflow protection
+
+## Functions:
+

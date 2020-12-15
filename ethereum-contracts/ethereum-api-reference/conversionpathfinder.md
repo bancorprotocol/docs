@@ -1,4 +1,4 @@
-This contract allows generating a conversion path between any token pair in the Bancor Network.
+The ConversionPathFinder contract allows generating a conversion path between any token pair in the Bancor Network.
 
 The path can then be used in various functions in the BancorNetwork contract.
 

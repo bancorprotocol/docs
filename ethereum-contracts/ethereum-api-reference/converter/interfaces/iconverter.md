@@ -10,6 +10,8 @@
 
 - [`convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary)`](#IConverter-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-)
 
+- [`conversionWhitelist()`](#IConverter-conversionWhitelist--)
+
 - [`conversionFee()`](#IConverter-conversionFee--)
 
 - [`maxConversionFee()`](#IConverter-maxConversionFee--)
@@ -23,6 +25,8 @@
 - [`acceptAnchorOwnership()`](#IConverter-acceptAnchorOwnership--)
 
 - [`setConversionFee(uint32 _conversionFee)`](#IConverter-setConversionFee-uint32-)
+
+- [`setConversionWhitelist(contract IWhitelist _whitelist)`](#IConverter-setConversionWhitelist-contract-IWhitelist-)
 
 - [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](#IConverter-withdrawTokens-contract-IERC20Token-address-uint256-)
 
@@ -44,16 +48,6 @@
 
 - [`connectorTokenCount()`](#IConverter-connectorTokenCount--)
 
-# Events:
-
-- [`Activation(uint16 _type, contract IConverterAnchor _anchor, bool _activated)`](#IConverter-Activation-uint16-contract-IConverterAnchor-bool-)
-
-- [`Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)`](#IConverter-Conversion-contract-IERC20Token-contract-IERC20Token-address-uint256-uint256-int256-)
-
-- [`TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)`](#IConverter-TokenRateUpdate-contract-IERC20Token-contract-IERC20Token-uint256-uint256-)
-
-- [`ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)`](#IConverter-ConversionFeeUpdate-uint32-uint32-)
-
 # Function `converterType() → uint16` {#IConverter-converterType--}
 
 No description
@@ -71,6 +65,10 @@ No description
 No description
 
 # Function `convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary) → uint256` {#IConverter-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-}
+
+No description
+
+# Function `conversionWhitelist() → contract IWhitelist` {#IConverter-conversionWhitelist--}
 
 No description
 
@@ -99,6 +97,10 @@ No description
 No description
 
 # Function `setConversionFee(uint32 _conversionFee)` {#IConverter-setConversionFee-uint32-}
+
+No description
+
+# Function `setConversionWhitelist(contract IWhitelist _whitelist)` {#IConverter-setConversionWhitelist-contract-IWhitelist-}
 
 No description
 
@@ -141,59 +143,3 @@ No description
 # Function `connectorTokenCount() → uint16` {#IConverter-connectorTokenCount--}
 
 No description
-
-# Event `Activation(uint16 _type, contract IConverterAnchor _anchor, bool _activated)` {#IConverter-Activation-uint16-contract-IConverterAnchor-bool-}
-
-triggered when the converter is activated
-
-## Parameters:
-
-- `_type`:        converter type
-
-- `_anchor`:      converter anchor
-
-- `_activated`:   true if the converter was activated, false if it was deactivated
-
-# Event `Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)` {#IConverter-Conversion-contract-IERC20Token-contract-IERC20Token-address-uint256-uint256-int256-}
-
-triggered when a conversion between two tokens occurs
-
-## Parameters:
-
-- `_fromToken`:       source ERC20 token
-
-- `_toToken`:         target ERC20 token
-
-- `_trader`:          wallet that initiated the trade
-
-- `_amount`:          input amount in units of the source token
-
-- `_return`:          output amount minus conversion fee in units of the target token
-
-- `_conversionFee`:   conversion fee in units of the target token
-
-# Event `TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)` {#IConverter-TokenRateUpdate-contract-IERC20Token-contract-IERC20Token-uint256-uint256-}
-
-triggered when the rate between two tokens in the converter changes
-
-note that the event might be dispatched for rate updates between any two tokens in the converter
-
-## Parameters:
-
-- `_token1`: address of the first token
-
-- `_token2`: address of the second token
-
-- `_rateN`:  rate of 1 unit of `_token1` in `_token2` (numerator)
-
-- `_rateD`:  rate of 1 unit of `_token1` in `_token2` (denominator)
-
-# Event `ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)` {#IConverter-ConversionFeeUpdate-uint32-uint32-}
-
-triggered when the conversion fee is updated
-
-## Parameters:
-
-- `_prevFee`:    previous fee percentage, represented in ppm
-
-- `_newFee`:     new fee percentage, represented in ppm

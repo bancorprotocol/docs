@@ -1,4 +1,4 @@
-This contract represents a token with dynamic supply.
+DSToken represents a token with dynamic supply.
 
 The owner of the token can mint/burn tokens to/from any account.
 
@@ -9,6 +9,10 @@ The owner of the token can mint/burn tokens to/from any account.
 - [`issue(address _to, uint256 _amount)`](#DSToken-issue-address-uint256-)
 
 - [`destroy(address _from, uint256 _amount)`](#DSToken-destroy-address-uint256-)
+
+- [`transfer(address _to, uint256 _value)`](#DSToken-transfer-address-uint256-)
+
+- [`transferFrom(address _from, address _to, uint256 _value)`](#DSToken-transferFrom-address-address-uint256-)
 
 # Events:
 
@@ -51,6 +55,44 @@ can only be called by the contract owner
 - `_from`:    account to remove the amount from
 
 - `_amount`:  amount to decrease the supply by
+
+# Function `transfer(address _to, uint256 _value) → bool` {#DSToken-transfer-address-uint256-}
+
+send coins
+
+throws on any error rather then return a false flag to minimize user errors
+
+in addition to the standard checks, the function throws if transfers are disabled
+
+## Parameters:
+
+- `_to`:      target address
+
+- `_value`:   transfer amount
+
+## Return Values:
+
+- true if the transfer was successful, false if it wasn't
+
+# Function `transferFrom(address _from, address _to, uint256 _value) → bool` {#DSToken-transferFrom-address-address-uint256-}
+
+an account/contract attempts to get the coins
+
+throws on any error rather then return a false flag to minimize user errors
+
+in addition to the standard checks, the function throws if transfers are disabled
+
+## Parameters:
+
+- `_from`:    source address
+
+- `_to`:      target address
+
+- `_value`:   transfer amount
+
+## Return Values:
+
+- true if the transfer was successful, false if it wasn't
 
 # Event `Issuance(uint256 _amount)` {#DSToken-Issuance-uint256-}
 
