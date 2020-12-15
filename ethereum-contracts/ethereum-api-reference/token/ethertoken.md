@@ -1,7 +1,5 @@
 Ether tokenization contract
 
-'Owned' is specified here for readability reasons
-
 # Functions:
 
 - [`constructor(string _name, string _symbol)`](#EtherToken-constructor-string-string-)

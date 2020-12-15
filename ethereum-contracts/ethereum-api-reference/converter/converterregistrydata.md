@@ -1,6 +1,6 @@
-The ConverterRegistryData contract is an integral part of the converter registry
+This contract is an integral part of the converter registry,
 
-as it serves as the database contract that holds all registry data.
+and it serves as the database contract that holds all registry data.
 
 The registry is separated into two different contracts for upgradability - the data contract
 

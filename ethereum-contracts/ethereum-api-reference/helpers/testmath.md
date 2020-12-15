@@ -2,6 +2,8 @@
 
 - [`floorSqrtTest(uint256 _num)`](#TestMath-floorSqrtTest-uint256-)
 
+- [`ceilSqrtTest(uint256 _num)`](#TestMath-ceilSqrtTest-uint256-)
+
 - [`reducedRatioTest(uint256 _n, uint256 _d, uint256 _max)`](#TestMath-reducedRatioTest-uint256-uint256-uint256-)
 
 - [`normalizedRatioTest(uint256 _a, uint256 _b, uint256 _scale)`](#TestMath-normalizedRatioTest-uint256-uint256-uint256-)
@@ -17,6 +19,10 @@
 - [`roundDivUnsafeTest(uint256 _n, uint256 _d)`](#TestMath-roundDivUnsafeTest-uint256-uint256-)
 
 # Function `floorSqrtTest(uint256 _num) → uint256` {#TestMath-floorSqrtTest-uint256-}
+
+No description
+
+# Function `ceilSqrtTest(uint256 _num) → uint256` {#TestMath-ceilSqrtTest-uint256-}
 
 No description
 
