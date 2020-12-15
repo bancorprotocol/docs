@@ -1,5 +1,6 @@
 # LiquidTokenConverter
 
+<<<<<<< HEAD
 Liquid Token Converter
 
 The liquid token converter is a specialized version of a converter that manages a liquid token.
@@ -83,3 +84,5 @@ target token along with the fee
 * expected target amount
 
 * expected fee
+=======
+>>>>>>> 373bdf703580eea9e98097aad83bb67afec1b315
