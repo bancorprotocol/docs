@@ -1,6 +1,5 @@
-require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/@bancor/contracts-solidity", async (error) => {
+require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/@bancor/contracts-solidity", (error) => {
     if (error) {
-        console.log(error);
         throw error;
     }
 
@@ -13,13 +12,14 @@ require("download-git-repo")("bancorprotocol/contracts-solidity", "node_modules/
         "--input=node_modules/@bancor/contracts-solidity/solidity/contracts",
         "--output=ethereum-contracts/ethereum-api-reference",
         "--templates=config/ethereum-smart-contracts",
-        "--solc-module=node_modules/solc",
+        "--solc-module=solc",
         "--solc-settings=" + JSON.stringify({ optimizer: { enabled: true, runs: 200 }})
     ];
 
     const result = spawnSync("node", args, { stdio: ["inherit", "inherit", "pipe"], encoding: 'utf8' });
-    /*if (result.stderr.length > 0)
-        throw new Error(result.stderr);*/
+    if (result.stderr.length > 0) {
+        throw new Error(result.stderr);
+    }
 
     function fix(pathName) {
         if (fs.lstatSync(pathName).isDirectory()) {
