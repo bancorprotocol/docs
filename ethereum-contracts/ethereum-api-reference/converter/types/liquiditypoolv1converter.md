@@ -1,3 +1,5 @@
+# LiquidityPoolV1Converter
+
 This contract is a specialized version of a converter that manages
 
 a classic bancor liquidity pool.
@@ -6,55 +8,41 @@ Even though pools can have many reserves, the standard pool configuration
 
 is 2 reserves with 50%/50% weights.
 
-# Functions:
+## Functions:
 
-- [`constructor(contract IDSToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)`](#LiquidityPoolV1Converter-constructor-contract-IDSToken-contract-IContractRegistry-uint32-)
+* [`constructor(contract IDSToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-constructor-contract-IDSToken-contract-IContractRegistry-uint32-)
+* [`converterType()`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-converterType--)
+* [`acceptAnchorOwnership()`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-acceptAnchorOwnership--)
+* [`addReserve(contract IERC20Token _token, uint32 _weight)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-addReserve-contract-IERC20Token-uint32-)
+* [`targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
+* [`recentAverageRate(contract IERC20Token _token)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-recentAverageRate-contract-IERC20Token-)
+* [`addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-addLiquidity-contract-IERC20Token---uint256---uint256-)
+* [`removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-removeLiquidity-uint256-contract-IERC20Token---uint256---)
+* [`fund(uint256 _amount)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-fund-uint256-)
+* [`liquidate(uint256 _amount)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-liquidate-uint256-)
+* [`addLiquidityCost(contract IERC20Token[] _reserveTokens, uint256 _reserveTokenIndex, uint256 _reserveAmount)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-addLiquidityCost-contract-IERC20Token---uint256-uint256-)
+* [`addLiquidityReturn(contract IERC20Token _reserveToken, uint256 _reserveAmount)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-addLiquidityReturn-contract-IERC20Token-uint256-)
+* [`removeLiquidityReturn(uint256 _amount, contract IERC20Token[] _reserveTokens)`](liquiditypoolv1converter.md#LiquidityPoolV1Converter-removeLiquidityReturn-uint256-contract-IERC20Token---)
 
-- [`converterType()`](#LiquidityPoolV1Converter-converterType--)
-
-- [`acceptAnchorOwnership()`](#LiquidityPoolV1Converter-acceptAnchorOwnership--)
-
-- [`addReserve(contract IERC20Token _token, uint32 _weight)`](#LiquidityPoolV1Converter-addReserve-contract-IERC20Token-uint32-)
-
-- [`targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](#LiquidityPoolV1Converter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
-
-- [`recentAverageRate(contract IERC20Token _token)`](#LiquidityPoolV1Converter-recentAverageRate-contract-IERC20Token-)
-
-- [`addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn)`](#LiquidityPoolV1Converter-addLiquidity-contract-IERC20Token---uint256---uint256-)
-
-- [`removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts)`](#LiquidityPoolV1Converter-removeLiquidity-uint256-contract-IERC20Token---uint256---)
-
-- [`fund(uint256 _amount)`](#LiquidityPoolV1Converter-fund-uint256-)
-
-- [`liquidate(uint256 _amount)`](#LiquidityPoolV1Converter-liquidate-uint256-)
-
-- [`addLiquidityCost(contract IERC20Token[] _reserveTokens, uint256 _reserveTokenIndex, uint256 _reserveAmount)`](#LiquidityPoolV1Converter-addLiquidityCost-contract-IERC20Token---uint256-uint256-)
-
-- [`addLiquidityReturn(contract IERC20Token _reserveToken, uint256 _reserveAmount)`](#LiquidityPoolV1Converter-addLiquidityReturn-contract-IERC20Token-uint256-)
-
-- [`removeLiquidityReturn(uint256 _amount, contract IERC20Token[] _reserveTokens)`](#LiquidityPoolV1Converter-removeLiquidityReturn-uint256-contract-IERC20Token---)
-
-# Function `constructor(contract IDSToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)` {#LiquidityPoolV1Converter-constructor-contract-IDSToken-contract-IContractRegistry-uint32-}
+## Function `constructor(contract IDSToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)` <a id="LiquidityPoolV1Converter-constructor-contract-IDSToken-contract-IContractRegistry-uint32-"></a>
 
 initializes a new LiquidityPoolV1Converter instance
 
-## Parameters:
+### Parameters:
 
-- `_token`:              pool token governed by the converter
+* `_token`: pool token governed by the converter
+* `_registry`: address of a contract registry contract
+* `_maxConversionFee`: maximum conversion fee, represented in ppm
 
-- `_registry`:           address of a contract registry contract
-
-- `_maxConversionFee`:   maximum conversion fee, represented in ppm
-
-# Function `converterType() → uint16` {#LiquidityPoolV1Converter-converterType--}
+## Function `converterType() → uint16` <a id="LiquidityPoolV1Converter-converterType--"></a>
 
 returns the converter type
 
-## Return Values:
+### Return Values:
 
-- see the converter types in the the main contract doc
+* see the converter types in the the main contract doc
 
-# Function `acceptAnchorOwnership()` {#LiquidityPoolV1Converter-acceptAnchorOwnership--}
+## Function `acceptAnchorOwnership()` <a id="LiquidityPoolV1Converter-acceptAnchorOwnership--"></a>
 
 accepts ownership of the anchor after an ownership transfer
 
@@ -64,89 +52,80 @@ can only be called by the contract owner
 
 note that prior to version 28, you should use 'acceptTokenOwnership' instead
 
-# Function `addReserve(contract IERC20Token _token, uint32 _weight)` {#LiquidityPoolV1Converter-addReserve-contract-IERC20Token-uint32-}
+## Function `addReserve(contract IERC20Token _token, uint32 _weight)` <a id="LiquidityPoolV1Converter-addReserve-contract-IERC20Token-uint32-"></a>
 
 defines a new reserve token for the converter
 
 can only be called by the owner while the converter is inactive
 
-## Parameters:
+### Parameters:
 
-- `_token`:   address of the reserve token
+* `_token`: address of the reserve token
+* `_weight`: reserve weight, represented in ppm, 1-1000000
 
-- `_weight`:  reserve weight, represented in ppm, 1-1000000
-
-# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#LiquidityPoolV1Converter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
+## Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` <a id="LiquidityPoolV1Converter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-"></a>
 
 returns the expected target amount of converting one reserve to another along with the fee
 
-## Parameters:
+### Parameters:
 
-- `_sourceToken`: contract address of the source reserve token
+* `_sourceToken`: contract address of the source reserve token
+* `_targetToken`: contract address of the target reserve token
+* `_amount`: amount of tokens received from the user
 
-- `_targetToken`: contract address of the target reserve token
+### Return Values:
 
-- `_amount`:      amount of tokens received from the user
+* expected target amount
+* expected fee
 
-## Return Values:
-
-- expected target amount
-
-- expected fee
-
-# Function `recentAverageRate(contract IERC20Token _token) → uint256, uint256` {#LiquidityPoolV1Converter-recentAverageRate-contract-IERC20Token-}
+## Function `recentAverageRate(contract IERC20Token _token) → uint256, uint256` <a id="LiquidityPoolV1Converter-recentAverageRate-contract-IERC20Token-"></a>
 
 returns the recent average rate of 1 `_token` in the other reserve token units
 
 note that the rate can only be queried for reserves in a standard pool
 
-## Parameters:
+### Parameters:
 
-- `_token`:   token to get the rate for
+* `_token`:   token to get the rate for
 
-## Return Values:
+### Return Values:
 
-- recent average rate between the reserves (numerator)
+* recent average rate between the reserves \(numerator\)
+* recent average rate between the reserves \(denominator\)
 
-- recent average rate between the reserves (denominator)
-
-# Function `addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn) → uint256` {#LiquidityPoolV1Converter-addLiquidity-contract-IERC20Token---uint256---uint256-}
+## Function `addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn) → uint256` <a id="LiquidityPoolV1Converter-addLiquidity-contract-IERC20Token---uint256---uint256-"></a>
 
 increases the pool's liquidity and mints new shares in the pool to the caller
 
 note that prior to version 28, you should use 'fund' instead
 
-## Parameters:
+### Parameters:
 
-- `_reserveTokens`:   address of each reserve token
+* `_reserveTokens`: address of each reserve token
+* `_reserveAmounts`: amount of each reserve token
+* `_minReturn`: token minimum return-amount
 
-- `_reserveAmounts`:  amount of each reserve token
+### Return Values:
 
-- `_minReturn`:       token minimum return-amount
+* amount of pool tokens issued
 
-## Return Values:
-
-- amount of pool tokens issued
-
-# Function `removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts) → uint256[]` {#LiquidityPoolV1Converter-removeLiquidity-uint256-contract-IERC20Token---uint256---}
+## Function `removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts) → uint256[]` <a id="LiquidityPoolV1Converter-removeLiquidity-uint256-contract-IERC20Token---uint256---"></a>
 
 decreases the pool's liquidity and burns the caller's shares in the pool
 
 note that prior to version 28, you should use 'liquidate' instead
 
-## Parameters:
+### Parameters:
 
-- `_amount`:                  token amount
+* `_amount`: token amount
+* `_reserveTokens`: address of each reserve token
+* `_reserveMinReturnAmounts`: minimum return-amount of each reserve token
 
-- `_reserveTokens`:           address of each reserve token
+### Return Values:
 
-- `_reserveMinReturnAmounts`: minimum return-amount of each reserve token
+* the amount of each reserve token granted for the given amount of pool tokens
 
-## Return Values:
-
-- the amount of each reserve token granted for the given amount of pool tokens
-
-# Function `fund(uint256 _amount) → uint256` {#LiquidityPoolV1Converter-fund-uint256-}
+## Function `fund(uint256 _amount) → uint256` <a id="LiquidityPoolV1Converter-fund-uint256-"></a>
 
 increases the pool's liquidity and mints new shares in the pool to the caller
 
@@ -156,15 +135,15 @@ then it will cost an amount equal to 10% of each reserve token balance
 
 note that starting from version 28, you should use 'addLiquidity' instead
 
-## Parameters:
+### Parameters:
 
-- `_amount`:  amount to increase the supply by (in the pool token)
+* `_amount`:  amount to increase the supply by \(in the pool token\)
 
-## Return Values:
+### Return Values:
 
-- amount of pool tokens issued
+* amount of pool tokens issued
 
-# Function `liquidate(uint256 _amount) → uint256[]` {#LiquidityPoolV1Converter-liquidate-uint256-}
+## Function `liquidate(uint256 _amount) → uint256[]` <a id="LiquidityPoolV1Converter-liquidate-uint256-"></a>
 
 decreases the pool's liquidity and burns the caller's shares in the pool
 
@@ -174,15 +153,15 @@ then they will receive 10% of each reserve token balance in return
 
 note that starting from version 28, you should use 'removeLiquidity' instead
 
-## Parameters:
+### Parameters:
 
-- `_amount`:  amount to liquidate (in the pool token)
+* `_amount`:  amount to liquidate \(in the pool token\)
 
-## Return Values:
+### Return Values:
 
-- the amount of each reserve token granted for the given amount of pool tokens
+* the amount of each reserve token granted for the given amount of pool tokens
 
-# Function `addLiquidityCost(contract IERC20Token[] _reserveTokens, uint256 _reserveTokenIndex, uint256 _reserveAmount) → uint256[]` {#LiquidityPoolV1Converter-addLiquidityCost-contract-IERC20Token---uint256-uint256-}
+## Function `addLiquidityCost(contract IERC20Token[] _reserveTokens, uint256 _reserveTokenIndex, uint256 _reserveAmount) → uint256[]` <a id="LiquidityPoolV1Converter-addLiquidityCost-contract-IERC20Token---uint256-uint256-"></a>
 
 given the amount of one of the reserve tokens to add liquidity of,
 
@@ -190,21 +169,19 @@ returns the required amount of each one of the other reserve tokens
 
 since an empty pool can be funded with any list of non-zero input amounts,
 
-this function assumes that the pool is not empty (has already been funded)
+this function assumes that the pool is not empty \(has already been funded\)
 
-## Parameters:
+### Parameters:
 
-- `_reserveTokens`:       address of each reserve token
+* `_reserveTokens`: address of each reserve token
+* `_reserveTokenIndex`: index of the relevant reserve token
+* `_reserveAmount`: amount of the relevant reserve token
 
-- `_reserveTokenIndex`:   index of the relevant reserve token
+### Return Values:
 
-- `_reserveAmount`:       amount of the relevant reserve token
+* the required amount of each one of the reserve tokens
 
-## Return Values:
-
-- the required amount of each one of the reserve tokens
-
-# Function `addLiquidityReturn(contract IERC20Token _reserveToken, uint256 _reserveAmount) → uint256` {#LiquidityPoolV1Converter-addLiquidityReturn-contract-IERC20Token-uint256-}
+## Function `addLiquidityReturn(contract IERC20Token _reserveToken, uint256 _reserveAmount) → uint256` <a id="LiquidityPoolV1Converter-addLiquidityReturn-contract-IERC20Token-uint256-"></a>
 
 given the amount of one of the reserve tokens to add liquidity of,
 
@@ -212,28 +189,27 @@ returns the amount of pool tokens entitled for it
 
 since an empty pool can be funded with any list of non-zero input amounts,
 
-this function assumes that the pool is not empty (has already been funded)
+this function assumes that the pool is not empty \(has already been funded\)
 
-## Parameters:
+### Parameters:
 
-- `_reserveToken`:    address of the reserve token
+* `_reserveToken`: address of the reserve token
+* `_reserveAmount`: amount of the reserve token
 
-- `_reserveAmount`:   amount of the reserve token
+### Return Values:
 
-## Return Values:
+* the amount of pool tokens entitled
 
-- the amount of pool tokens entitled
-
-# Function `removeLiquidityReturn(uint256 _amount, contract IERC20Token[] _reserveTokens) → uint256[]` {#LiquidityPoolV1Converter-removeLiquidityReturn-uint256-contract-IERC20Token---}
+## Function `removeLiquidityReturn(uint256 _amount, contract IERC20Token[] _reserveTokens) → uint256[]` <a id="LiquidityPoolV1Converter-removeLiquidityReturn-uint256-contract-IERC20Token---"></a>
 
 returns the amount of each reserve token entitled for a given amount of pool tokens
 
-## Parameters:
+### Parameters:
 
-- `_amount`:          amount of pool tokens
+* `_amount`: amount of pool tokens
+* `_reserveTokens`: address of each reserve token
 
-- `_reserveTokens`:   address of each reserve token
+### Return Values:
 
-## Return Values:
+* the amount of each reserve token entitled for the given amount of pool tokens
 
-- the amount of each reserve token entitled for the given amount of pool tokens
