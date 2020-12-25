@@ -27,17 +27,15 @@ Why “impermanent”? Because as long as the relative prices of tokens in the A
 
 ## What causes impermanent loss?
 
-Liquidity pools consist of multiple tokens paired together in a pool. If one of the tokens changes in price relative to its paired token\(s\), an arbitrage opportunity emerges, incentivizing re-balancing of the pool \(and resulting in a loss for liquidity providers\). 
+Liquidity pools consist of multiple tokens paired together in a pool. If one of the tokens changes in price relative to its paired token, an arbitrage opportunity emerges, incentivizing re-balancing of the pool \(and resulting in a loss for liquidity providers\). 
 
 As one token’s price is rising relative to its paired asset, the pool is re-balancing by selling the rising token while buying the token whose price is falling. Once you withdraw your liquidity, you’re left holding less of the token that mooned, and more of the token that dumped.
-
-Swap fees may offset impermanent loss; however in many cases impermanent loss can exceed swap fees earned by an LP, leading to negative returns realized by a liquidity provider upon withdrawing their tokens from the pool. 
 
 ## What is Impermanent Loss Insurance?
 
 Bancor v2.1 is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited \(as if they HODL'd the tokens in their wallet\) plus swap fees using a novel mechanism called **Impermanent Loss Insurance**.
 
-Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection. In other words, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back, plus trading fees.
+Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection. In other words, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back, plus trading fees/rewards.
 
 ## How does Impermanent Loss Insurance work?
 
