@@ -1,10 +1,10 @@
 # Functions:
 
-- [`converterType()`](#LiquidityPoolV2ConverterFactory-converterType--)
+- [`converterType()`](#StandardPoolConverterFactory-converterType--)
 
-- [`createConverter(contract IConverterAnchor _anchor, contract IContractRegistry _registry, uint32 _maxConversionFee)`](#LiquidityPoolV2ConverterFactory-createConverter-contract-IConverterAnchor-contract-IContractRegistry-uint32-)
+- [`createConverter(contract IConverterAnchor _anchor, contract IContractRegistry _registry, uint32 _maxConversionFee)`](#StandardPoolConverterFactory-createConverter-contract-IConverterAnchor-contract-IContractRegistry-uint32-)
 
-# Function `converterType() → uint16` {#LiquidityPoolV2ConverterFactory-converterType--}
+# Function `converterType() → uint16` {#StandardPoolConverterFactory-converterType--}
 
 returns the converter type the factory is associated with
 
@@ -12,7 +12,7 @@ returns the converter type the factory is associated with
 
 - converter type
 
-# Function `createConverter(contract IConverterAnchor _anchor, contract IContractRegistry _registry, uint32 _maxConversionFee) → contract IConverter` {#LiquidityPoolV2ConverterFactory-createConverter-contract-IConverterAnchor-contract-IContractRegistry-uint32-}
+# Function `createConverter(contract IConverterAnchor _anchor, contract IContractRegistry _registry, uint32 _maxConversionFee) → contract IConverter` {#StandardPoolConverterFactory-createConverter-contract-IConverterAnchor-contract-IContractRegistry-uint32-}
 
 creates a new converter with the given arguments and transfers
 
@@ -28,4 +28,4 @@ the ownership to the caller
 
 ## Return Values:
 
-- new converter
+- a new converter
