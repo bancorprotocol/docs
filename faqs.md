@@ -91,6 +91,10 @@ Only pools voted into the Bancor v2.1 whitelist by Bancor governance are eligibl
 
 You can swap or stake with Bancor protocol on bancor.network or any site integrated with Bancor smart contracts. Users connect via Web3 wallets such as MetaMask. Make sure your wallet is connected by checking the connection status in the upper right-hand corner of bancor.network.
 
+[**A video tutorial can be found here**](https://youtu.be/3P4vKIHcdas?t=477)\*\*\*\*
+
+[**Step by step guide can be found here.**](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
+
 ## I have a hardware wallet. Can that be used as well?
 
 Yes. MetaMask supports hardware wallets like Trezor and Ledger directly. There’s no need to keep it connected to your PC after you’ve finished with the interactions.
