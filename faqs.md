@@ -227,7 +227,7 @@ First, visit the[ Protection Tab](https://app.bancor.network/eth/protection). At
 
 Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. If you reset your multiplier by withdrawing your BNT rewards or by withdrawing your LP position, you will have to wait for four weeks to get the 2x multiplier into full effect again \(0.25x added each week\).
 
-## Do I must restake or withdraw the rewards weekly?
+## Do I must restake or withdraw the rewards on a weekly basis?
 
 No, the rewards are earned continuously. You can leave them untouched and continue receiving rewards and bonuses for the duration of the rewards program. The purpose of re-staking is to compound your gains. Re-staking your BNT rewards allows the rewards them to earn swap fees and additional rewards, without having any impact on the bonus multipliers of your live stakes.
 
