@@ -178,11 +178,11 @@ You can read about it in the [Medium blogpost](https://blog.bancor.network/annou
 
 ## When did it start, and for how long does the LM program last?
 
-The program started on November 16, however rewards will be sent retroactively once the restaking/claiming mechanism is live. It will last for a year and a half - 72 weeks total.
+The program started on November 16 and the rewards accrue continuously. It will last for a year and a half - 72 weeks total.
 
 ## How long does a selected rewards pool receive rewards?
 
-A pool that is selected for LM rewards receives it for 84 consecutive days \(12 weeks\). It may get voted again once its reward cycle ends, subject to the governance decision.  
+Initially a pool that is selected for LM rewards receives it for 84 consecutive days \(12 weeks\). It may get voted again once or before its reward cycle ends, subject to the governance decision.  
 
 
 ## Which pools are eligible for rewards?
@@ -191,17 +191,15 @@ Only whitelisted pools are eligible for rewards. Of the rewards pool, the progra
 
 **Large caps:** ETH,WBTC,USDT,USDC,DAI,LINK
 
-**Mid caps:** OCEAN, renBTC
+**Mid caps:** OCEAN,renBTC
 
-[REN & YFI were picked](https://blog.bancor.network/bancor-progress-update-november-2020-2a32db170c8c?postPublishedType=repub) as additional two new mid cap pools for LM rewards on December 3rd. 
+REN YFI AAVE & SNX were picked as additional four new mid cap pools for LM rewards.
 
-Governance voting for new tokens to be added to the BNT liquidity mining rewards program will take place every two weeks.
-
-This is subject to change if the governance deem it necessary \(i.e., mid cap pool becomes very liquid, and gets voted to become a large cap pool\).
+Voting for new tokens to be added to the BNT liquidity mining rewards program is subject to the community and the BancorDAO. 
 
 ## How do I get my favorite token to receive LM rewards?
 
-Every two weeks, two new tokens can be added to the program. Once activated, a token’s pool will receive BNT rewards for 12 consecutive weeks. If your token is whitelisted, it can be proposed as a pool that can receive LM.
+If your token is whitelisted, it can be proposed as a pool that can receive LM. Reach out to the governance via our[ Discord chat!](https://discord.gg/pe7EfaR)
 
 ## What is a whitelisted pool?
 
@@ -211,7 +209,7 @@ _AAVE, ALEPH, ANT, BAL, BAND, BAT, BNB, BUSD, BZRX, CEL, CHERRY, COMP, CRO, CRV,
 
 ## How are BNT liquidity mining rewards distributed?
 
-BNT liquidity mining rewards will be distributed as follows: 70% to the BNT side of the liquidity pool and 30% to the base ERC20 token side of the pool. Rewards are distributed on a weekly basis.
+BNT liquidity mining rewards will be distributed as follows: 70% to the BNT side of the liquidity pool and 30% to the base ERC20 token side of the pool. Rewards are distributed continuously since January.
 
 ## What token do I receive the rewards in?
 
@@ -219,17 +217,15 @@ The rewards from the LM program are provided in BNT only. This is unrelated to t
 
 ## How can I claim the rewards?
 
-One place you will be able to claim the rewards in the protection tab in the bancor.network front-end. You will have two options available:
+First, visit the[ Protection Tab](https://app.bancor.network/eth/protection). At the top right side you will see a Rewards dashboard, showing total rewards to date, and the claimable amount you currently can re-stake or withdraw. From there, you have two options:
 
-1.Claim and re-stake: You will be able to choose a pool to direct your BNT rewards to, increasing the protocol’s and the relevant pool’s liquidity depth, compound your gains and maintain the 2x multiplier.
+1.Re-stake: You will be able to choose a pool to direct your BNT rewards to, increasing that pool’s liquidity depth, compounding your rewards and maintain the **2x multiplier**.
 
-2.Withdraw to your wallet: withdraw the BNTs directly to your wallet, resetting your multiplier for all of your LP positions, cutting your APY% by half.
+2.Withdraw: Withdrawing the rewards directly to your wallet, **resetting your multiplier** for all of your existing LP positions, cutting your APY% by half.
 
-More detailed guides will be shared once rewards are activated and go live in the bancor.network front-end.
+## What is the rewards “multiplier”?
 
-## What is a rewards “multiplier”?
-
-Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. If you reset your multiplier by withdrawing your BNT rewards or by withdrawing your LP position, you will have to wait for four weeks to get the 2x multiplier into full effect \(0.25x added each week\).
+Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. If you reset your multiplier by withdrawing your BNT rewards or by withdrawing your LP position, you will have to wait for four weeks to get the 2x multiplier into full effect again \(0.25x added each week\).
 
 ## 4. Pool management
 
