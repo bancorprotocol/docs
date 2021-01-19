@@ -180,9 +180,9 @@ You can read about it in the [Medium blogpost](https://blog.bancor.network/annou
 
 The program started on November 16 and the rewards accrue continuously. It will last for a year and a half - 72 weeks total.
 
-## How long does a selected rewards pool receive rewards?
+## How long does a selected LM pool receive rewards?
 
-Initially a pool that is selected for LM rewards receives it for 84 consecutive days \(12 weeks\). It may get voted again once or before its reward cycle ends, subject to the governance decision.  
+Initially a pool that is selected for LM rewards receives it for 84 consecutive days \(12 weeks\). It may get voted again once or before its reward cycle ends, subject to the governance decision via on-chain voting.  
 
 
 ## Which pools are eligible for rewards?
@@ -219,13 +219,17 @@ The rewards from the LM program are provided in BNT only. This is unrelated to t
 
 First, visit the[ Protection Tab](https://app.bancor.network/eth/protection). At the top right side you will see a Rewards dashboard, showing total rewards to date, and the claimable amount you currently can re-stake or withdraw. From there, you have two options:
 
-1.Re-stake: You will be able to choose a pool to direct your BNT rewards to, increasing that pool’s liquidity depth, compounding your rewards and maintain the **2x multiplier**.
+1.Re-stake: You will be able to choose a pool to direct your BNT rewards to. Re-staking your BNT rewards allow the rewards to earn swap fees and additional rewards, while maintaining the **2x multiplier**.
 
 2.Withdraw: Withdrawing the rewards directly to your wallet, **resetting your multiplier** for all of your existing LP positions, cutting your APY% by half.
 
 ## What is the rewards “multiplier”?
 
 Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. If you reset your multiplier by withdrawing your BNT rewards or by withdrawing your LP position, you will have to wait for four weeks to get the 2x multiplier into full effect again \(0.25x added each week\).
+
+## Do I must restake or withdraw the rewards weekly?
+
+No, the rewards are earned continuously. You can leave them untouched and continue receiving rewards and bonuses for the duration of the rewards program. The purpose of re-staking is to compound your gains. Re-staking your BNT rewards allows the rewards them to earn swap fees and additional rewards, without having any impact on the bonus multipliers of your live stakes.
 
 ## 4. Pool management
 
