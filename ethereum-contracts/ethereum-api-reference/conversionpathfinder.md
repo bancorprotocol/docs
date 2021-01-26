@@ -12,7 +12,7 @@ See the BancorNetwork contract for conversion path format.
 
 - [`findPath(contract IERC20Token _sourceToken, contract IERC20Token _targetToken)`](#ConversionPathFinder-findPath-contract-IERC20Token-contract-IERC20Token-)
 
-# Function `constructor(contract IContractRegistry _registry)` {#ConversionPathFinder-constructor-contract-IContractRegistry-}
+## Function `constructor(contract IContractRegistry _registry)` {#ConversionPathFinder-constructor-contract-IContractRegistry-}
 
 initializes a new ConversionPathFinder instance
 
@@ -20,7 +20,7 @@ initializes a new ConversionPathFinder instance
 
 - `_registry`: address of a contract registry contract
 
-# Function `setAnchorToken(contract IERC20Token _anchorToken)` {#ConversionPathFinder-setAnchorToken-contract-IERC20Token-}
+## Function `setAnchorToken(contract IERC20Token _anchorToken)` {#ConversionPathFinder-setAnchorToken-contract-IERC20Token-}
 
 updates the anchor token
 
@@ -28,7 +28,7 @@ updates the anchor token
 
 - `_anchorToken`: address of the anchor token
 
-# Function `findPath(contract IERC20Token _sourceToken, contract IERC20Token _targetToken) → address[]` {#ConversionPathFinder-findPath-contract-IERC20Token-contract-IERC20Token-}
+## Function `findPath(contract IERC20Token _sourceToken, contract IERC20Token _targetToken) → address[]` {#ConversionPathFinder-findPath-contract-IERC20Token-contract-IERC20Token-}
 
 generates a conversion path between a given pair of tokens in the Bancor Network
 

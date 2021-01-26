@@ -24,7 +24,7 @@ Ether tokenization contract
 
 - [`Destruction(uint256 _amount)`](#EtherToken-Destruction-uint256-)
 
-# Function `constructor(string _name, string _symbol)` {#EtherToken-constructor-string-string-}
+## Function `constructor(string _name, string _symbol)` {#EtherToken-constructor-string-string-}
 
 initializes a new EtherToken instance
 
@@ -34,11 +34,11 @@ initializes a new EtherToken instance
 
 - `_symbol`:      token symbol
 
-# Function `deposit()` {#EtherToken-deposit--}
+## Function `deposit()` {#EtherToken-deposit--}
 
 deposit ether on behalf of the sender
 
-# Function `withdraw(uint256 _amount)` {#EtherToken-withdraw-uint256-}
+## Function `withdraw(uint256 _amount)` {#EtherToken-withdraw-uint256-}
 
 withdraw ether to the sender's account
 
@@ -46,7 +46,7 @@ withdraw ether to the sender's account
 
 - `_amount`:  amount of ether to withdraw
 
-# Function `depositTo(address _to)` {#EtherToken-depositTo-address-}
+## Function `depositTo(address _to)` {#EtherToken-depositTo-address-}
 
 deposit ether to be entitled for a given account
 
@@ -54,7 +54,7 @@ deposit ether to be entitled for a given account
 
 - `_to`:      account to be entitled for the ether
 
-# Function `withdrawTo(address payable _to, uint256 _amount)` {#EtherToken-withdrawTo-address-payable-uint256-}
+## Function `withdrawTo(address payable _to, uint256 _amount)` {#EtherToken-withdrawTo-address-payable-uint256-}
 
 withdraw ether entitled by the sender to a given account
 
@@ -64,7 +64,7 @@ withdraw ether entitled by the sender to a given account
 
 - `_amount`:  amount of ether to withdraw
 
-# Function `transfer(address _to, uint256 _value) → bool` {#EtherToken-transfer-address-uint256-}
+## Function `transfer(address _to, uint256 _value) → bool` {#EtherToken-transfer-address-uint256-}
 
 send coins
 
@@ -80,7 +80,7 @@ throws on any error rather then return a false flag to minimize user errors
 
 - true if the transfer was successful, false if it wasn't
 
-# Function `transferFrom(address _from, address _to, uint256 _value) → bool` {#EtherToken-transferFrom-address-address-uint256-}
+## Function `transferFrom(address _from, address _to, uint256 _value) → bool` {#EtherToken-transferFrom-address-address-uint256-}
 
 an account/contract attempts to get the coins
 
@@ -98,11 +98,11 @@ throws on any error rather then return a false flag to minimize user errors
 
 - true if the transfer was successful, false if it wasn't
 
-# Function `receive()` {#EtherToken-receive--}
+## Function `receive()` {#EtherToken-receive--}
 
 deposit ether in the account
 
-# Event `Issuance(uint256 _amount)` {#EtherToken-Issuance-uint256-}
+## Event `Issuance(uint256 _amount)` {#EtherToken-Issuance-uint256-}
 
 triggered when the total supply is increased
 
@@ -110,7 +110,7 @@ triggered when the total supply is increased
 
 - `_amount`:  amount that gets added to the supply
 
-# Event `Destruction(uint256 _amount)` {#EtherToken-Destruction-uint256-}
+## Event `Destruction(uint256 _amount)` {#EtherToken-Destruction-uint256-}
 
 triggered when the total supply is decreased
 

@@ -108,7 +108,7 @@ The contract is upgradable.
 
 - [`SmartTokenRemoved(contract IConverterAnchor _smartToken)`](#ConverterRegistry-SmartTokenRemoved-contract-IConverterAnchor-)
 
-# Function `constructor(contract IContractRegistry _registry)` {#ConverterRegistry-constructor-contract-IContractRegistry-}
+## Function `constructor(contract IContractRegistry _registry)` {#ConverterRegistry-constructor-contract-IContractRegistry-}
 
 initializes a new ConverterRegistry instance
 
@@ -116,7 +116,7 @@ initializes a new ConverterRegistry instance
 
 - `_registry`: address of a contract registry contract
 
-# Function `newConverter(uint16 _type, string _name, string _symbol, uint8 _decimals, uint32 _maxConversionFee, contract IERC20Token[] _reserveTokens, uint32[] _reserveWeights) → contract IConverter` {#ConverterRegistry-newConverter-uint16-string-string-uint8-uint32-contract-IERC20Token---uint32---}
+## Function `newConverter(uint16 _type, string _name, string _symbol, uint8 _decimals, uint32 _maxConversionFee, contract IERC20Token[] _reserveTokens, uint32[] _reserveWeights) → contract IConverter` {#ConverterRegistry-newConverter-uint16-string-string-uint8-uint32-contract-IERC20Token---uint32---}
 
 creates a zero supply liquid token / empty liquidity pool and adds its converter to the registry
 
@@ -140,7 +140,7 @@ creates a zero supply liquid token / empty liquidity pool and adds its converter
 
 - new converter
 
-# Function `addConverter(contract IConverter _converter)` {#ConverterRegistry-addConverter-contract-IConverter-}
+## Function `addConverter(contract IConverter _converter)` {#ConverterRegistry-addConverter-contract-IConverter-}
 
 adds an existing converter to the registry
 
@@ -150,7 +150,7 @@ can only be called by the owner
 
 - `_converter`: converter
 
-# Function `removeConverter(contract IConverter _converter)` {#ConverterRegistry-removeConverter-contract-IConverter-}
+## Function `removeConverter(contract IConverter _converter)` {#ConverterRegistry-removeConverter-contract-IConverter-}
 
 removes a converter from the registry
 
@@ -162,7 +162,7 @@ note that the owner can also remove valid converters
 
 - `_converter`: converter
 
-# Function `getAnchorCount() → uint256` {#ConverterRegistry-getAnchorCount--}
+## Function `getAnchorCount() → uint256` {#ConverterRegistry-getAnchorCount--}
 
 returns the number of converter anchors in the registry
 
@@ -170,7 +170,7 @@ returns the number of converter anchors in the registry
 
 - number of anchors
 
-# Function `getAnchors() → address[]` {#ConverterRegistry-getAnchors--}
+## Function `getAnchors() → address[]` {#ConverterRegistry-getAnchors--}
 
 returns the list of converter anchors in the registry
 
@@ -178,7 +178,7 @@ returns the list of converter anchors in the registry
 
 - list of anchors
 
-# Function `getAnchor(uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getAnchor-uint256-}
+## Function `getAnchor(uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getAnchor-uint256-}
 
 returns the converter anchor at a given index
 
@@ -190,7 +190,7 @@ returns the converter anchor at a given index
 
 - anchor at the given index
 
-# Function `isAnchor(address _value) → bool` {#ConverterRegistry-isAnchor-address-}
+## Function `isAnchor(address _value) → bool` {#ConverterRegistry-isAnchor-address-}
 
 checks whether or not a given value is a converter anchor
 
@@ -202,7 +202,7 @@ checks whether or not a given value is a converter anchor
 
 - true if the given value is an anchor, false if not
 
-# Function `getLiquidityPoolCount() → uint256` {#ConverterRegistry-getLiquidityPoolCount--}
+## Function `getLiquidityPoolCount() → uint256` {#ConverterRegistry-getLiquidityPoolCount--}
 
 returns the number of liquidity pools in the registry
 
@@ -210,7 +210,7 @@ returns the number of liquidity pools in the registry
 
 - number of liquidity pools
 
-# Function `getLiquidityPools() → address[]` {#ConverterRegistry-getLiquidityPools--}
+## Function `getLiquidityPools() → address[]` {#ConverterRegistry-getLiquidityPools--}
 
 returns the list of liquidity pools in the registry
 
@@ -218,7 +218,7 @@ returns the list of liquidity pools in the registry
 
 - list of liquidity pools
 
-# Function `getLiquidityPool(uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getLiquidityPool-uint256-}
+## Function `getLiquidityPool(uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getLiquidityPool-uint256-}
 
 returns the liquidity pool at a given index
 
@@ -230,7 +230,7 @@ returns the liquidity pool at a given index
 
 - liquidity pool at the given index
 
-# Function `isLiquidityPool(address _value) → bool` {#ConverterRegistry-isLiquidityPool-address-}
+## Function `isLiquidityPool(address _value) → bool` {#ConverterRegistry-isLiquidityPool-address-}
 
 checks whether or not a given value is a liquidity pool
 
@@ -242,7 +242,7 @@ checks whether or not a given value is a liquidity pool
 
 - true if the given value is a liquidity pool, false if not
 
-# Function `getConvertibleTokenCount() → uint256` {#ConverterRegistry-getConvertibleTokenCount--}
+## Function `getConvertibleTokenCount() → uint256` {#ConverterRegistry-getConvertibleTokenCount--}
 
 returns the number of convertible tokens in the registry
 
@@ -250,7 +250,7 @@ returns the number of convertible tokens in the registry
 
 - number of convertible tokens
 
-# Function `getConvertibleTokens() → address[]` {#ConverterRegistry-getConvertibleTokens--}
+## Function `getConvertibleTokens() → address[]` {#ConverterRegistry-getConvertibleTokens--}
 
 returns the list of convertible tokens in the registry
 
@@ -258,7 +258,7 @@ returns the list of convertible tokens in the registry
 
 - list of convertible tokens
 
-# Function `getConvertibleToken(uint256 _index) → contract IERC20Token` {#ConverterRegistry-getConvertibleToken-uint256-}
+## Function `getConvertibleToken(uint256 _index) → contract IERC20Token` {#ConverterRegistry-getConvertibleToken-uint256-}
 
 returns the convertible token at a given index
 
@@ -270,7 +270,7 @@ returns the convertible token at a given index
 
 - convertible token at the given index
 
-# Function `isConvertibleToken(address _value) → bool` {#ConverterRegistry-isConvertibleToken-address-}
+## Function `isConvertibleToken(address _value) → bool` {#ConverterRegistry-isConvertibleToken-address-}
 
 checks whether or not a given value is a convertible token
 
@@ -282,7 +282,7 @@ checks whether or not a given value is a convertible token
 
 - true if the given value is a convertible token, false if not
 
-# Function `getConvertibleTokenAnchorCount(contract IERC20Token _convertibleToken) → uint256` {#ConverterRegistry-getConvertibleTokenAnchorCount-contract-IERC20Token-}
+## Function `getConvertibleTokenAnchorCount(contract IERC20Token _convertibleToken) → uint256` {#ConverterRegistry-getConvertibleTokenAnchorCount-contract-IERC20Token-}
 
 returns the number of converter anchors associated with a given convertible token
 
@@ -294,7 +294,7 @@ returns the number of converter anchors associated with a given convertible toke
 
 - number of anchors associated with the given convertible token
 
-# Function `getConvertibleTokenAnchors(contract IERC20Token _convertibleToken) → address[]` {#ConverterRegistry-getConvertibleTokenAnchors-contract-IERC20Token-}
+## Function `getConvertibleTokenAnchors(contract IERC20Token _convertibleToken) → address[]` {#ConverterRegistry-getConvertibleTokenAnchors-contract-IERC20Token-}
 
 returns the list of aoncerter anchors associated with a given convertible token
 
@@ -306,7 +306,7 @@ returns the list of aoncerter anchors associated with a given convertible token
 
 - list of anchors associated with the given convertible token
 
-# Function `getConvertibleTokenAnchor(contract IERC20Token _convertibleToken, uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getConvertibleTokenAnchor-contract-IERC20Token-uint256-}
+## Function `getConvertibleTokenAnchor(contract IERC20Token _convertibleToken, uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getConvertibleTokenAnchor-contract-IERC20Token-uint256-}
 
 returns the converter anchor associated with a given convertible token at a given index
 
@@ -318,7 +318,7 @@ returns the converter anchor associated with a given convertible token at a give
 
 - anchor associated with the given convertible token at the given index
 
-# Function `isConvertibleTokenAnchor(contract IERC20Token _convertibleToken, address _value) → bool` {#ConverterRegistry-isConvertibleTokenAnchor-contract-IERC20Token-address-}
+## Function `isConvertibleTokenAnchor(contract IERC20Token _convertibleToken, address _value) → bool` {#ConverterRegistry-isConvertibleTokenAnchor-contract-IERC20Token-address-}
 
 checks whether or not a given value is a converter anchor of a given convertible token
 
@@ -332,7 +332,7 @@ checks whether or not a given value is a converter anchor of a given convertible
 
 - true if the given value is an anchor of the given convertible token, false if not
 
-# Function `getConvertersByAnchors(address[] _anchors) → contract IConverter[]` {#ConverterRegistry-getConvertersByAnchors-address---}
+## Function `getConvertersByAnchors(address[] _anchors) → contract IConverter[]` {#ConverterRegistry-getConvertersByAnchors-address---}
 
 returns a list of converters for a given list of anchors
 
@@ -346,7 +346,7 @@ this is a utility function that can be used to reduce the number of calls to the
 
 - list of converters
 
-# Function `isConverterValid(contract IConverter _converter) → bool` {#ConverterRegistry-isConverterValid-contract-IConverter-}
+## Function `isConverterValid(contract IConverter _converter) → bool` {#ConverterRegistry-isConverterValid-contract-IConverter-}
 
 checks whether or not a given converter is valid
 
@@ -358,7 +358,7 @@ checks whether or not a given converter is valid
 
 - true if the given converter is valid, false if not
 
-# Function `isSimilarLiquidityPoolRegistered(contract IConverter _converter) → bool` {#ConverterRegistry-isSimilarLiquidityPoolRegistered-contract-IConverter-}
+## Function `isSimilarLiquidityPoolRegistered(contract IConverter _converter) → bool` {#ConverterRegistry-isSimilarLiquidityPoolRegistered-contract-IConverter-}
 
 checks if a liquidity pool with given configuration is already registered
 
@@ -370,7 +370,7 @@ checks if a liquidity pool with given configuration is already registered
 
 - if a liquidity pool with the same configuration is already registered
 
-# Function `getLiquidityPoolByConfig(uint16 _type, contract IERC20Token[] _reserveTokens, uint32[] _reserveWeights) → contract IConverterAnchor` {#ConverterRegistry-getLiquidityPoolByConfig-uint16-contract-IERC20Token---uint32---}
+## Function `getLiquidityPoolByConfig(uint16 _type, contract IERC20Token[] _reserveTokens, uint32[] _reserveWeights) → contract IConverterAnchor` {#ConverterRegistry-getLiquidityPoolByConfig-uint16-contract-IERC20Token---uint32---}
 
 searches for a liquidity pool with specific configuration
 
@@ -386,47 +386,47 @@ searches for a liquidity pool with specific configuration
 
 - the liquidity pool, or zero if no such liquidity pool exists
 
-# Function `getSmartTokenCount() → uint256` {#ConverterRegistry-getSmartTokenCount--}
+## Function `getSmartTokenCount() → uint256` {#ConverterRegistry-getSmartTokenCount--}
 
 deprecated, backward compatibility, use `getAnchorCount`
 
-# Function `getSmartTokens() → address[]` {#ConverterRegistry-getSmartTokens--}
+## Function `getSmartTokens() → address[]` {#ConverterRegistry-getSmartTokens--}
 
 deprecated, backward compatibility, use `getAnchors`
 
-# Function `getSmartToken(uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getSmartToken-uint256-}
+## Function `getSmartToken(uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getSmartToken-uint256-}
 
 deprecated, backward compatibility, use `getAnchor`
 
-# Function `isSmartToken(address _value) → bool` {#ConverterRegistry-isSmartToken-address-}
+## Function `isSmartToken(address _value) → bool` {#ConverterRegistry-isSmartToken-address-}
 
 deprecated, backward compatibility, use `isAnchor`
 
-# Function `getConvertibleTokenSmartTokenCount(contract IERC20Token _convertibleToken) → uint256` {#ConverterRegistry-getConvertibleTokenSmartTokenCount-contract-IERC20Token-}
+## Function `getConvertibleTokenSmartTokenCount(contract IERC20Token _convertibleToken) → uint256` {#ConverterRegistry-getConvertibleTokenSmartTokenCount-contract-IERC20Token-}
 
 deprecated, backward compatibility, use `getConvertibleTokenAnchorCount`
 
-# Function `getConvertibleTokenSmartTokens(contract IERC20Token _convertibleToken) → address[]` {#ConverterRegistry-getConvertibleTokenSmartTokens-contract-IERC20Token-}
+## Function `getConvertibleTokenSmartTokens(contract IERC20Token _convertibleToken) → address[]` {#ConverterRegistry-getConvertibleTokenSmartTokens-contract-IERC20Token-}
 
 deprecated, backward compatibility, use `getConvertibleTokenAnchors`
 
-# Function `getConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getConvertibleTokenSmartToken-contract-IERC20Token-uint256-}
+## Function `getConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, uint256 _index) → contract IConverterAnchor` {#ConverterRegistry-getConvertibleTokenSmartToken-contract-IERC20Token-uint256-}
 
 deprecated, backward compatibility, use `getConvertibleTokenAnchor`
 
-# Function `isConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, address _value) → bool` {#ConverterRegistry-isConvertibleTokenSmartToken-contract-IERC20Token-address-}
+## Function `isConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, address _value) → bool` {#ConverterRegistry-isConvertibleTokenSmartToken-contract-IERC20Token-address-}
 
 deprecated, backward compatibility, use `isConvertibleTokenAnchor`
 
-# Function `getConvertersBySmartTokens(address[] _smartTokens) → contract IConverter[]` {#ConverterRegistry-getConvertersBySmartTokens-address---}
+## Function `getConvertersBySmartTokens(address[] _smartTokens) → contract IConverter[]` {#ConverterRegistry-getConvertersBySmartTokens-address---}
 
 deprecated, backward compatibility, use `getConvertersByAnchors`
 
-# Function `getLiquidityPoolByReserveConfig(contract IERC20Token[] _reserveTokens, uint32[] _reserveWeights) → contract IConverterAnchor` {#ConverterRegistry-getLiquidityPoolByReserveConfig-contract-IERC20Token---uint32---}
+## Function `getLiquidityPoolByReserveConfig(contract IERC20Token[] _reserveTokens, uint32[] _reserveWeights) → contract IConverterAnchor` {#ConverterRegistry-getLiquidityPoolByReserveConfig-contract-IERC20Token---uint32---}
 
 deprecated, backward compatibility, use `getLiquidityPoolByConfig`
 
-# Event `ConverterAnchorAdded(contract IConverterAnchor _anchor)` {#ConverterRegistry-ConverterAnchorAdded-contract-IConverterAnchor-}
+## Event `ConverterAnchorAdded(contract IConverterAnchor _anchor)` {#ConverterRegistry-ConverterAnchorAdded-contract-IConverterAnchor-}
 
 triggered when a converter anchor is added to the registry
 
@@ -434,7 +434,7 @@ triggered when a converter anchor is added to the registry
 
 - `_anchor`: anchor token
 
-# Event `ConverterAnchorRemoved(contract IConverterAnchor _anchor)` {#ConverterRegistry-ConverterAnchorRemoved-contract-IConverterAnchor-}
+## Event `ConverterAnchorRemoved(contract IConverterAnchor _anchor)` {#ConverterRegistry-ConverterAnchorRemoved-contract-IConverterAnchor-}
 
 triggered when a converter anchor is removed from the registry
 
@@ -442,7 +442,7 @@ triggered when a converter anchor is removed from the registry
 
 - `_anchor`: anchor token
 
-# Event `LiquidityPoolAdded(contract IConverterAnchor _liquidityPool)` {#ConverterRegistry-LiquidityPoolAdded-contract-IConverterAnchor-}
+## Event `LiquidityPoolAdded(contract IConverterAnchor _liquidityPool)` {#ConverterRegistry-LiquidityPoolAdded-contract-IConverterAnchor-}
 
 triggered when a liquidity pool is added to the registry
 
@@ -450,7 +450,7 @@ triggered when a liquidity pool is added to the registry
 
 - `_liquidityPool`: liquidity pool
 
-# Event `LiquidityPoolRemoved(contract IConverterAnchor _liquidityPool)` {#ConverterRegistry-LiquidityPoolRemoved-contract-IConverterAnchor-}
+## Event `LiquidityPoolRemoved(contract IConverterAnchor _liquidityPool)` {#ConverterRegistry-LiquidityPoolRemoved-contract-IConverterAnchor-}
 
 triggered when a liquidity pool is removed from the registry
 
@@ -458,7 +458,7 @@ triggered when a liquidity pool is removed from the registry
 
 - `_liquidityPool`: liquidity pool
 
-# Event `ConvertibleTokenAdded(contract IERC20Token _convertibleToken, contract IConverterAnchor _smartToken)` {#ConverterRegistry-ConvertibleTokenAdded-contract-IERC20Token-contract-IConverterAnchor-}
+## Event `ConvertibleTokenAdded(contract IERC20Token _convertibleToken, contract IConverterAnchor _smartToken)` {#ConverterRegistry-ConvertibleTokenAdded-contract-IERC20Token-contract-IConverterAnchor-}
 
 triggered when a convertible token is added to the registry
 
@@ -468,7 +468,7 @@ triggered when a convertible token is added to the registry
 
 - `_smartToken`: associated anchor token
 
-# Event `ConvertibleTokenRemoved(contract IERC20Token _convertibleToken, contract IConverterAnchor _smartToken)` {#ConverterRegistry-ConvertibleTokenRemoved-contract-IERC20Token-contract-IConverterAnchor-}
+## Event `ConvertibleTokenRemoved(contract IERC20Token _convertibleToken, contract IConverterAnchor _smartToken)` {#ConverterRegistry-ConvertibleTokenRemoved-contract-IERC20Token-contract-IConverterAnchor-}
 
 triggered when a convertible token is removed from the registry
 
@@ -478,10 +478,10 @@ triggered when a convertible token is removed from the registry
 
 - `_smartToken`: associated anchor token
 
-# Event `SmartTokenAdded(contract IConverterAnchor _smartToken)` {#ConverterRegistry-SmartTokenAdded-contract-IConverterAnchor-}
+## Event `SmartTokenAdded(contract IConverterAnchor _smartToken)` {#ConverterRegistry-SmartTokenAdded-contract-IConverterAnchor-}
 
 deprecated, backward compatibility, use `ConverterAnchorAdded`
 
-# Event `SmartTokenRemoved(contract IConverterAnchor _smartToken)` {#ConverterRegistry-SmartTokenRemoved-contract-IConverterAnchor-}
+## Event `SmartTokenRemoved(contract IConverterAnchor _smartToken)` {#ConverterRegistry-SmartTokenRemoved-contract-IConverterAnchor-}
 
 deprecated, backward compatibility, use `ConverterAnchorRemoved`

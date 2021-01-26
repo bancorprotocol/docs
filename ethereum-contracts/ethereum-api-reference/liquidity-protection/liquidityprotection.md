@@ -34,7 +34,7 @@ This contract implements the liquidity protection mechanism.
 
 - [`EventSubscriberUpdated(contract ILiquidityProtectionEventsSubscriber _prevEventsSubscriber, contract ILiquidityProtectionEventsSubscriber _newEventsSubscriber)`](#LiquidityProtection-EventSubscriberUpdated-contract-ILiquidityProtectionEventsSubscriber-contract-ILiquidityProtectionEventsSubscriber-)
 
-# Function `constructor(contract ILiquidityProtectionSettings _settings, contract ILiquidityProtectionStore _store, contract ILiquidityProtectionStats _stats, contract ITokenGovernance _networkTokenGovernance, contract ITokenGovernance _govTokenGovernance, contract ICheckpointStore _lastRemoveCheckpointStore)` {#LiquidityProtection-constructor-contract-ILiquidityProtectionSettings-contract-ILiquidityProtectionStore-contract-ILiquidityProtectionStats-contract-ITokenGovernance-contract-ITokenGovernance-contract-ICheckpointStore-}
+## Function `constructor(contract ILiquidityProtectionSettings _settings, contract ILiquidityProtectionStore _store, contract ILiquidityProtectionStats _stats, contract ITokenGovernance _networkTokenGovernance, contract ITokenGovernance _govTokenGovernance, contract ICheckpointStore _lastRemoveCheckpointStore)` {#LiquidityProtection-constructor-contract-ILiquidityProtectionSettings-contract-ILiquidityProtectionStore-contract-ILiquidityProtectionStats-contract-ITokenGovernance-contract-ITokenGovernance-contract-ICheckpointStore-}
 
 initializes a new LiquidityProtection contract
 
@@ -52,13 +52,13 @@ initializes a new LiquidityProtection contract
 
 - `_lastRemoveCheckpointStore`: last liquidity removal/unprotection checkpoints store
 
-# Function `receive()` {#LiquidityProtection-receive--}
+## Function `receive()` {#LiquidityProtection-receive--}
 
 accept ETH
 
 used when removing liquidity from ETH converters
 
-# Function `transferStoreOwnership(address _newOwner)` {#LiquidityProtection-transferStoreOwnership-address-}
+## Function `transferStoreOwnership(address _newOwner)` {#LiquidityProtection-transferStoreOwnership-address-}
 
 transfers the ownership of the store
 
@@ -68,17 +68,17 @@ can only be called by the contract owner
 
 - `_newOwner`:    the new owner of the store
 
-# Function `acceptStoreOwnership()` {#LiquidityProtection-acceptStoreOwnership--}
+## Function `acceptStoreOwnership()` {#LiquidityProtection-acceptStoreOwnership--}
 
 accepts the ownership of the store
 
 can only be called by the contract owner
 
-# Function `setEventsSubscriber(contract ILiquidityProtectionEventsSubscriber _eventsSubscriber)` {#LiquidityProtection-setEventsSubscriber-contract-ILiquidityProtectionEventsSubscriber-}
+## Function `setEventsSubscriber(contract ILiquidityProtectionEventsSubscriber _eventsSubscriber)` {#LiquidityProtection-setEventsSubscriber-contract-ILiquidityProtectionEventsSubscriber-}
 
 sets the events subscriber
 
-# Function `addLiquidityFor(address _owner, contract IConverterAnchor _poolAnchor, contract IERC20Token _reserveToken, uint256 _amount) → uint256` {#LiquidityProtection-addLiquidityFor-address-contract-IConverterAnchor-contract-IERC20Token-uint256-}
+## Function `addLiquidityFor(address _owner, contract IConverterAnchor _poolAnchor, contract IERC20Token _reserveToken, uint256 _amount) → uint256` {#LiquidityProtection-addLiquidityFor-address-contract-IConverterAnchor-contract-IERC20Token-uint256-}
 
 adds protected liquidity to a pool for a specific recipient
 
@@ -98,7 +98,7 @@ also mints new governance tokens for the caller if the caller adds network token
 
 - new protected liquidity id
 
-# Function `addLiquidity(contract IConverterAnchor _poolAnchor, contract IERC20Token _reserveToken, uint256 _amount) → uint256` {#LiquidityProtection-addLiquidity-contract-IConverterAnchor-contract-IERC20Token-uint256-}
+## Function `addLiquidity(contract IConverterAnchor _poolAnchor, contract IERC20Token _reserveToken, uint256 _amount) → uint256` {#LiquidityProtection-addLiquidity-contract-IConverterAnchor-contract-IERC20Token-uint256-}
 
 adds protected liquidity to a pool
 
@@ -116,7 +116,7 @@ also mints new governance tokens for the caller if the caller adds network token
 
 - new protected liquidity id
 
-# Function `poolAvailableSpace(contract IConverterAnchor _poolAnchor) → uint256, uint256` {#LiquidityProtection-poolAvailableSpace-contract-IConverterAnchor-}
+## Function `poolAvailableSpace(contract IConverterAnchor _poolAnchor) → uint256, uint256` {#LiquidityProtection-poolAvailableSpace-contract-IConverterAnchor-}
 
 returns the single-side staking limits of a given pool
 
@@ -130,7 +130,7 @@ returns the single-side staking limits of a given pool
 
 - maximum amount of network tokens that can be single-side staked in the pool
 
-# Function `baseTokenAvailableSpace(contract IConverterAnchor _poolAnchor) → uint256` {#LiquidityProtection-baseTokenAvailableSpace-contract-IConverterAnchor-}
+## Function `baseTokenAvailableSpace(contract IConverterAnchor _poolAnchor) → uint256` {#LiquidityProtection-baseTokenAvailableSpace-contract-IConverterAnchor-}
 
 returns the base-token staking limits of a given pool
 
@@ -142,7 +142,7 @@ returns the base-token staking limits of a given pool
 
 - maximum amount of base tokens that can be single-side staked in the pool
 
-# Function `networkTokenAvailableSpace(contract IConverterAnchor _poolAnchor) → uint256` {#LiquidityProtection-networkTokenAvailableSpace-contract-IConverterAnchor-}
+## Function `networkTokenAvailableSpace(contract IConverterAnchor _poolAnchor) → uint256` {#LiquidityProtection-networkTokenAvailableSpace-contract-IConverterAnchor-}
 
 returns the network-token staking limits of a given pool
 
@@ -154,7 +154,7 @@ returns the network-token staking limits of a given pool
 
 - maximum amount of network tokens that can be single-side staked in the pool
 
-# Function `removeLiquidityReturn(uint256 _id, uint32 _portion, uint256 _removeTimestamp) → uint256, uint256, uint256` {#LiquidityProtection-removeLiquidityReturn-uint256-uint32-uint256-}
+## Function `removeLiquidityReturn(uint256 _id, uint32 _portion, uint256 _removeTimestamp) → uint256, uint256, uint256` {#LiquidityProtection-removeLiquidityReturn-uint256-uint32-uint256-}
 
 returns the expected/actual amounts the provider will receive for removing liquidity
 
@@ -178,7 +178,7 @@ for the return at that given point
 
 - compensation in the network token
 
-# Function `removeLiquidity(uint256 _id, uint32 _portion)` {#LiquidityProtection-removeLiquidity-uint256-uint32-}
+## Function `removeLiquidity(uint256 _id, uint32 _portion)` {#LiquidityProtection-removeLiquidity-uint256-uint32-}
 
 removes protected liquidity from a pool
 
@@ -190,7 +190,7 @@ also burns governance tokens from the caller if the caller removes network token
 
 - `_portion`: portion of liquidity to remove, in PPM
 
-# Function `claimBalance(uint256 _startIndex, uint256 _endIndex)` {#LiquidityProtection-claimBalance-uint256-uint256-}
+## Function `claimBalance(uint256 _startIndex, uint256 _endIndex)` {#LiquidityProtection-claimBalance-uint256-uint256-}
 
 allows the caller to claim network token balance that is no longer locked
 
@@ -202,7 +202,7 @@ note that the function can revert if the range is too large
 
 - `_endIndex`:    end index in the caller's list of locked balances (exclusive)
 
-# Function `poolROI(contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _reserveAmount, uint256 _poolRateN, uint256 _poolRateD, uint256 _reserveRateN, uint256 _reserveRateD) → uint256` {#LiquidityProtection-poolROI-contract-IDSToken-contract-IERC20Token-uint256-uint256-uint256-uint256-uint256-}
+## Function `poolROI(contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _reserveAmount, uint256 _poolRateN, uint256 _poolRateD, uint256 _reserveRateN, uint256 _reserveRateD) → uint256` {#LiquidityProtection-poolROI-contract-IDSToken-contract-IERC20Token-uint256-uint256-uint256-uint256-uint256-}
 
 returns the ROI for removing liquidity in the current state after providing liquidity with the given args
 
@@ -230,7 +230,7 @@ return value is in PPM and can be larger than PPM_RESOLUTION for positive ROI, 1
 
 - ROI in PPM
 
-# Event `EventSubscriberUpdated(contract ILiquidityProtectionEventsSubscriber _prevEventsSubscriber, contract ILiquidityProtectionEventsSubscriber _newEventsSubscriber)` {#LiquidityProtection-EventSubscriberUpdated-contract-ILiquidityProtectionEventsSubscriber-contract-ILiquidityProtectionEventsSubscriber-}
+## Event `EventSubscriberUpdated(contract ILiquidityProtectionEventsSubscriber _prevEventsSubscriber, contract ILiquidityProtectionEventsSubscriber _newEventsSubscriber)` {#LiquidityProtection-EventSubscriberUpdated-contract-ILiquidityProtectionEventsSubscriber-contract-ILiquidityProtectionEventsSubscriber-}
 
 updates the event subscriber
 

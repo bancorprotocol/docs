@@ -26,7 +26,7 @@ This contract aggregates the statistics of the liquidity protection mechanism.
 
 - [`seedProviderPools(address[] providers, contract IDSToken[] poolTokens)`](#LiquidityProtectionStats-seedProviderPools-address---contract-IDSToken---)
 
-# Function `increaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#LiquidityProtectionStats-increaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
+## Function `increaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#LiquidityProtectionStats-increaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
 
 increases the total amounts
 
@@ -44,7 +44,7 @@ can only be executed only by an owner
 
 - `reserveAmount`:     reserve token amount
 
-# Function `decreaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#LiquidityProtectionStats-decreaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
+## Function `decreaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#LiquidityProtectionStats-decreaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
 
 decreases the total amounts
 
@@ -62,7 +62,7 @@ can only be executed only by an owner
 
 - `reserveAmount`:     reserve token amount
 
-# Function `addProviderPool(address provider, contract IDSToken poolToken) → bool` {#LiquidityProtectionStats-addProviderPool-address-contract-IDSToken-}
+## Function `addProviderPool(address provider, contract IDSToken poolToken) → bool` {#LiquidityProtectionStats-addProviderPool-address-contract-IDSToken-}
 
 adds a pool to the list of pools of a liquidity provider
 
@@ -74,7 +74,7 @@ can only be executed only by an owner
 
 - `poolToken`: pool token address
 
-# Function `removeProviderPool(address provider, contract IDSToken poolToken) → bool` {#LiquidityProtectionStats-removeProviderPool-address-contract-IDSToken-}
+## Function `removeProviderPool(address provider, contract IDSToken poolToken) → bool` {#LiquidityProtectionStats-removeProviderPool-address-contract-IDSToken-}
 
 removes a pool from the list of pools of a liquidity provider
 
@@ -86,7 +86,7 @@ can only be executed only by an owner
 
 - `poolToken`: pool token address
 
-# Function `totalPoolAmount(contract IDSToken poolToken) → uint256` {#LiquidityProtectionStats-totalPoolAmount-contract-IDSToken-}
+## Function `totalPoolAmount(contract IDSToken poolToken) → uint256` {#LiquidityProtectionStats-totalPoolAmount-contract-IDSToken-}
 
 returns the total amount of protected pool tokens
 
@@ -98,7 +98,7 @@ returns the total amount of protected pool tokens
 
 - total amount of protected pool tokens
 
-# Function `totalReserveAmount(contract IDSToken poolToken, contract IERC20Token reserveToken) → uint256` {#LiquidityProtectionStats-totalReserveAmount-contract-IDSToken-contract-IERC20Token-}
+## Function `totalReserveAmount(contract IDSToken poolToken, contract IERC20Token reserveToken) → uint256` {#LiquidityProtectionStats-totalReserveAmount-contract-IDSToken-contract-IERC20Token-}
 
 returns the total amount of protected reserve tokens
 
@@ -112,7 +112,7 @@ returns the total amount of protected reserve tokens
 
 - total amount of protected reserve tokens
 
-# Function `totalProviderAmount(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken) → uint256` {#LiquidityProtectionStats-totalProviderAmount-address-contract-IDSToken-contract-IERC20Token-}
+## Function `totalProviderAmount(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken) → uint256` {#LiquidityProtectionStats-totalProviderAmount-address-contract-IDSToken-contract-IERC20Token-}
 
 returns the total amount of a liquidity provider's protected reserve tokens
 
@@ -128,7 +128,7 @@ returns the total amount of a liquidity provider's protected reserve tokens
 
 - total amount of the liquidity provider's protected reserve tokens
 
-# Function `providerPools(address provider) → contract IDSToken[]` {#LiquidityProtectionStats-providerPools-address-}
+## Function `providerPools(address provider) → contract IDSToken[]` {#LiquidityProtectionStats-providerPools-address-}
 
 returns the list of pools of a liquidity provider
 
@@ -140,7 +140,7 @@ returns the list of pools of a liquidity provider
 
 - pool tokens
 
-# Function `seedPoolAmounts(contract IDSToken[] poolTokens, uint256[] poolAmounts)` {#LiquidityProtectionStats-seedPoolAmounts-contract-IDSToken---uint256---}
+## Function `seedPoolAmounts(contract IDSToken[] poolTokens, uint256[] poolAmounts)` {#LiquidityProtectionStats-seedPoolAmounts-contract-IDSToken---uint256---}
 
 seeds the total amount of protected pool tokens
 
@@ -152,7 +152,7 @@ can only be executed only by a seeder
 
 - `poolAmounts`:   pool token amounts
 
-# Function `seedReserveAmounts(contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)` {#LiquidityProtectionStats-seedReserveAmounts-contract-IDSToken---contract-IERC20Token---uint256---}
+## Function `seedReserveAmounts(contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)` {#LiquidityProtectionStats-seedReserveAmounts-contract-IDSToken---contract-IERC20Token---uint256---}
 
 seeds the total amount of protected reserve tokens
 
@@ -166,7 +166,7 @@ can only be executed only by a seeder
 
 - `reserveAmounts`:    reserve token amounts
 
-# Function `seedProviderAmounts(address[] providers, contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)` {#LiquidityProtectionStats-seedProviderAmounts-address---contract-IDSToken---contract-IERC20Token---uint256---}
+## Function `seedProviderAmounts(address[] providers, contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)` {#LiquidityProtectionStats-seedProviderAmounts-address---contract-IDSToken---contract-IERC20Token---uint256---}
 
 seeds the total amount of protected reserve tokens per liquidity provider
 
@@ -182,7 +182,7 @@ can only be executed only by a seeder
 
 - `reserveAmounts`:    reserve token amounts
 
-# Function `seedProviderPools(address[] providers, contract IDSToken[] poolTokens)` {#LiquidityProtectionStats-seedProviderPools-address---contract-IDSToken---}
+## Function `seedProviderPools(address[] providers, contract IDSToken[] poolTokens)` {#LiquidityProtectionStats-seedProviderPools-address---contract-IDSToken---}
 
 seeds the list of pools per liquidity provider
 

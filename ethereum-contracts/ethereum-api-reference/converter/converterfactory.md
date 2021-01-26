@@ -14,7 +14,7 @@
 
 - [`NewConverter(uint16 _type, contract IConverter _converter, address _owner)`](#ConverterFactory-NewConverter-uint16-contract-IConverter-address-)
 
-# Function `registerTypedConverterFactory(contract ITypedConverterFactory _factory)` {#ConverterFactory-registerTypedConverterFactory-contract-ITypedConverterFactory-}
+## Function `registerTypedConverterFactory(contract ITypedConverterFactory _factory)` {#ConverterFactory-registerTypedConverterFactory-contract-ITypedConverterFactory-}
 
 initializes the factory with a specific typed converter factory
 
@@ -24,7 +24,7 @@ can only be called by the owner
 
 - `_factory`: typed converter factory
 
-# Function `registerTypedConverterAnchorFactory(contract ITypedConverterAnchorFactory _factory)` {#ConverterFactory-registerTypedConverterAnchorFactory-contract-ITypedConverterAnchorFactory-}
+## Function `registerTypedConverterAnchorFactory(contract ITypedConverterAnchorFactory _factory)` {#ConverterFactory-registerTypedConverterAnchorFactory-contract-ITypedConverterAnchorFactory-}
 
 initializes the factory with a specific typed converter anchor factory
 
@@ -34,7 +34,7 @@ can only be called by the owner
 
 - `_factory`: typed converter anchor factory
 
-# Function `registerTypedConverterCustomFactory(contract ITypedConverterCustomFactory _factory)` {#ConverterFactory-registerTypedConverterCustomFactory-contract-ITypedConverterCustomFactory-}
+## Function `registerTypedConverterCustomFactory(contract ITypedConverterCustomFactory _factory)` {#ConverterFactory-registerTypedConverterCustomFactory-contract-ITypedConverterCustomFactory-}
 
 initializes the factory with a specific typed converter custom factory
 
@@ -44,7 +44,7 @@ can only be called by the owner
 
 - `_factory`: typed converter custom factory
 
-# Function `createAnchor(uint16 _converterType, string _name, string _symbol, uint8 _decimals) → contract IConverterAnchor` {#ConverterFactory-createAnchor-uint16-string-string-uint8-}
+## Function `createAnchor(uint16 _converterType, string _name, string _symbol, uint8 _decimals) → contract IConverterAnchor` {#ConverterFactory-createAnchor-uint16-string-string-uint8-}
 
 creates a new converter anchor with the given arguments and transfers
 
@@ -64,7 +64,7 @@ the ownership to the caller
 
 - new converter anchor
 
-# Function `createConverter(uint16 _type, contract IConverterAnchor _anchor, contract IContractRegistry _registry, uint32 _maxConversionFee) → contract IConverter` {#ConverterFactory-createConverter-uint16-contract-IConverterAnchor-contract-IContractRegistry-uint32-}
+## Function `createConverter(uint16 _type, contract IConverterAnchor _anchor, contract IContractRegistry _registry, uint32 _maxConversionFee) → contract IConverter` {#ConverterFactory-createConverter-uint16-contract-IConverterAnchor-contract-IContractRegistry-uint32-}
 
 creates a new converter with the given arguments and transfers
 
@@ -84,7 +84,7 @@ the ownership to the caller
 
 - new converter
 
-# Event `NewConverter(uint16 _type, contract IConverter _converter, address _owner)` {#ConverterFactory-NewConverter-uint16-contract-IConverter-address-}
+## Event `NewConverter(uint16 _type, contract IConverter _converter, address _owner)` {#ConverterFactory-NewConverter-uint16-contract-IConverter-address-}
 
 triggered when a new converter is created
 

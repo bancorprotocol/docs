@@ -54,95 +54,95 @@
 
 - [`ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)`](#IConverter-ConversionFeeUpdate-uint32-uint32-)
 
-# Function `converterType() → uint16` {#IConverter-converterType--}
+## Function `converterType() → uint16` {#IConverter-converterType--}
 
 No description
 
-# Function `anchor() → contract IConverterAnchor` {#IConverter-anchor--}
+## Function `anchor() → contract IConverterAnchor` {#IConverter-anchor--}
 
 No description
 
-# Function `isActive() → bool` {#IConverter-isActive--}
+## Function `isActive() → bool` {#IConverter-isActive--}
 
 No description
 
-# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#IConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
+## Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#IConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
 
 No description
 
-# Function `convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary) → uint256` {#IConverter-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-}
+## Function `convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary) → uint256` {#IConverter-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-}
 
 No description
 
-# Function `conversionFee() → uint32` {#IConverter-conversionFee--}
+## Function `conversionFee() → uint32` {#IConverter-conversionFee--}
 
 No description
 
-# Function `maxConversionFee() → uint32` {#IConverter-maxConversionFee--}
+## Function `maxConversionFee() → uint32` {#IConverter-maxConversionFee--}
 
 No description
 
-# Function `reserveBalance(contract IERC20Token _reserveToken) → uint256` {#IConverter-reserveBalance-contract-IERC20Token-}
+## Function `reserveBalance(contract IERC20Token _reserveToken) → uint256` {#IConverter-reserveBalance-contract-IERC20Token-}
 
 No description
 
-# Function `receive()` {#IConverter-receive--}
+## Function `receive()` {#IConverter-receive--}
 
 No description
 
-# Function `transferAnchorOwnership(address _newOwner)` {#IConverter-transferAnchorOwnership-address-}
+## Function `transferAnchorOwnership(address _newOwner)` {#IConverter-transferAnchorOwnership-address-}
 
 No description
 
-# Function `acceptAnchorOwnership()` {#IConverter-acceptAnchorOwnership--}
+## Function `acceptAnchorOwnership()` {#IConverter-acceptAnchorOwnership--}
 
 No description
 
-# Function `setConversionFee(uint32 _conversionFee)` {#IConverter-setConversionFee-uint32-}
+## Function `setConversionFee(uint32 _conversionFee)` {#IConverter-setConversionFee-uint32-}
 
 No description
 
-# Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#IConverter-withdrawTokens-contract-IERC20Token-address-uint256-}
+## Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#IConverter-withdrawTokens-contract-IERC20Token-address-uint256-}
 
 No description
 
-# Function `withdrawETH(address payable _to)` {#IConverter-withdrawETH-address-payable-}
+## Function `withdrawETH(address payable _to)` {#IConverter-withdrawETH-address-payable-}
 
 No description
 
-# Function `addReserve(contract IERC20Token _token, uint32 _ratio)` {#IConverter-addReserve-contract-IERC20Token-uint32-}
+## Function `addReserve(contract IERC20Token _token, uint32 _ratio)` {#IConverter-addReserve-contract-IERC20Token-uint32-}
 
 No description
 
-# Function `token() → contract IConverterAnchor` {#IConverter-token--}
+## Function `token() → contract IConverterAnchor` {#IConverter-token--}
 
 No description
 
-# Function `transferTokenOwnership(address _newOwner)` {#IConverter-transferTokenOwnership-address-}
+## Function `transferTokenOwnership(address _newOwner)` {#IConverter-transferTokenOwnership-address-}
 
 No description
 
-# Function `acceptTokenOwnership()` {#IConverter-acceptTokenOwnership--}
+## Function `acceptTokenOwnership()` {#IConverter-acceptTokenOwnership--}
 
 No description
 
-# Function `connectors(contract IERC20Token _address) → uint256, uint32, bool, bool, bool` {#IConverter-connectors-contract-IERC20Token-}
+## Function `connectors(contract IERC20Token _address) → uint256, uint32, bool, bool, bool` {#IConverter-connectors-contract-IERC20Token-}
 
 No description
 
-# Function `getConnectorBalance(contract IERC20Token _connectorToken) → uint256` {#IConverter-getConnectorBalance-contract-IERC20Token-}
+## Function `getConnectorBalance(contract IERC20Token _connectorToken) → uint256` {#IConverter-getConnectorBalance-contract-IERC20Token-}
 
 No description
 
-# Function `connectorTokens(uint256 _index) → contract IERC20Token` {#IConverter-connectorTokens-uint256-}
+## Function `connectorTokens(uint256 _index) → contract IERC20Token` {#IConverter-connectorTokens-uint256-}
 
 No description
 
-# Function `connectorTokenCount() → uint16` {#IConverter-connectorTokenCount--}
+## Function `connectorTokenCount() → uint16` {#IConverter-connectorTokenCount--}
 
 No description
 
-# Event `Activation(uint16 _type, contract IConverterAnchor _anchor, bool _activated)` {#IConverter-Activation-uint16-contract-IConverterAnchor-bool-}
+## Event `Activation(uint16 _type, contract IConverterAnchor _anchor, bool _activated)` {#IConverter-Activation-uint16-contract-IConverterAnchor-bool-}
 
 triggered when the converter is activated
 
@@ -154,7 +154,7 @@ triggered when the converter is activated
 
 - `_activated`:   true if the converter was activated, false if it was deactivated
 
-# Event `Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)` {#IConverter-Conversion-contract-IERC20Token-contract-IERC20Token-address-uint256-uint256-int256-}
+## Event `Conversion(contract IERC20Token _fromToken, contract IERC20Token _toToken, address _trader, uint256 _amount, uint256 _return, int256 _conversionFee)` {#IConverter-Conversion-contract-IERC20Token-contract-IERC20Token-address-uint256-uint256-int256-}
 
 triggered when a conversion between two tokens occurs
 
@@ -172,7 +172,7 @@ triggered when a conversion between two tokens occurs
 
 - `_conversionFee`:   conversion fee in units of the target token
 
-# Event `TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)` {#IConverter-TokenRateUpdate-contract-IERC20Token-contract-IERC20Token-uint256-uint256-}
+## Event `TokenRateUpdate(contract IERC20Token _token1, contract IERC20Token _token2, uint256 _rateN, uint256 _rateD)` {#IConverter-TokenRateUpdate-contract-IERC20Token-contract-IERC20Token-uint256-uint256-}
 
 triggered when the rate between two tokens in the converter changes
 
@@ -188,7 +188,7 @@ note that the event might be dispatched for rate updates between any two tokens 
 
 - `_rateD`:  rate of 1 unit of `_token1` in `_token2` (denominator)
 
-# Event `ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)` {#IConverter-ConversionFeeUpdate-uint32-uint32-}
+## Event `ConversionFeeUpdate(uint32 _prevFee, uint32 _newFee)` {#IConverter-ConversionFeeUpdate-uint32-uint32-}
 
 triggered when the conversion fee is updated
 

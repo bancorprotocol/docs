@@ -4,10 +4,10 @@
 
 - [`receive()`](#ConverterV28OrHigherWithFallback-receive--)
 
-# Function `isV28OrHigher() → bool` {#ConverterV28OrHigherWithFallback-isV28OrHigher--}
+## Function `isV28OrHigher() → bool` {#ConverterV28OrHigherWithFallback-isV28OrHigher--}
 
 No description
 
-# Function `receive()` {#ConverterV28OrHigherWithFallback-receive--}
+## Function `receive()` {#ConverterV28OrHigherWithFallback-receive--}
 
 No description

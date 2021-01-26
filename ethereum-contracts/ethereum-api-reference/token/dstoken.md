@@ -16,7 +16,7 @@ The owner of the token can mint/burn tokens to/from any account.
 
 - [`Destruction(uint256 _amount)`](#DSToken-Destruction-uint256-)
 
-# Function `constructor(string _name, string _symbol, uint8 _decimals)` {#DSToken-constructor-string-string-uint8-}
+## Function `constructor(string _name, string _symbol, uint8 _decimals)` {#DSToken-constructor-string-string-uint8-}
 
 initializes a new DSToken instance
 
@@ -28,7 +28,7 @@ initializes a new DSToken instance
 
 - `_decimals`:   for display purposes only
 
-# Function `issue(address _to, uint256 _amount)` {#DSToken-issue-address-uint256-}
+## Function `issue(address _to, uint256 _amount)` {#DSToken-issue-address-uint256-}
 
 increases the token supply and sends the new tokens to the given account
 
@@ -40,7 +40,7 @@ can only be called by the contract owner
 
 - `_amount`:  amount to increase the supply by
 
-# Function `destroy(address _from, uint256 _amount)` {#DSToken-destroy-address-uint256-}
+## Function `destroy(address _from, uint256 _amount)` {#DSToken-destroy-address-uint256-}
 
 removes tokens from the given account and decreases the token supply
 
@@ -52,7 +52,7 @@ can only be called by the contract owner
 
 - `_amount`:  amount to decrease the supply by
 
-# Event `Issuance(uint256 _amount)` {#DSToken-Issuance-uint256-}
+## Event `Issuance(uint256 _amount)` {#DSToken-Issuance-uint256-}
 
 triggered when the total supply is increased
 
@@ -60,7 +60,7 @@ triggered when the total supply is increased
 
 - `_amount`:  amount that gets added to the supply
 
-# Event `Destruction(uint256 _amount)` {#DSToken-Destruction-uint256-}
+## Event `Destruction(uint256 _amount)` {#DSToken-Destruction-uint256-}
 
 triggered when the total supply is decreased
 

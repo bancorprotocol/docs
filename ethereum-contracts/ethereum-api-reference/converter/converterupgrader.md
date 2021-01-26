@@ -32,7 +32,7 @@ and then the upgrader 'upgrade' function should be executed directly.
 
 - [`ConverterUpgrade(address _oldConverter, address _newConverter)`](#ConverterUpgrader-ConverterUpgrade-address-address-)
 
-# Function `constructor(contract IContractRegistry _registry)` {#ConverterUpgrader-constructor-contract-IContractRegistry-}
+## Function `constructor(contract IContractRegistry _registry)` {#ConverterUpgrader-constructor-contract-IContractRegistry-}
 
 initializes a new ConverterUpgrader instance
 
@@ -40,7 +40,7 @@ initializes a new ConverterUpgrader instance
 
 - `_registry`:    address of a contract registry contract
 
-# Function `upgrade(bytes32 _version)` {#ConverterUpgrader-upgrade-bytes32-}
+## Function `upgrade(bytes32 _version)` {#ConverterUpgrader-upgrade-bytes32-}
 
 upgrades an old converter to the latest version
 
@@ -56,7 +56,7 @@ can only be called by a converter
 
 - `_version`: old converter version
 
-# Function `upgrade(uint16 _version)` {#ConverterUpgrader-upgrade-uint16-}
+## Function `upgrade(uint16 _version)` {#ConverterUpgrader-upgrade-uint16-}
 
 upgrades an old converter to the latest version
 
@@ -72,7 +72,7 @@ can only be called by a converter
 
 - `_version`: old converter version
 
-# Function `upgradeOld(contract IConverter _converter, bytes32 _version)` {#ConverterUpgrader-upgradeOld-contract-IConverter-bytes32-}
+## Function `upgradeOld(contract IConverter _converter, bytes32 _version)` {#ConverterUpgrader-upgradeOld-contract-IConverter-bytes32-}
 
 upgrades an old converter to the latest version
 
@@ -88,7 +88,7 @@ fires the ConverterUpgrade event upon success.
 
 - `_version`:     old converter version
 
-# Event `ConverterOwned(contract IConverter _converter, address _owner)` {#ConverterUpgrader-ConverterOwned-contract-IConverter-address-}
+## Event `ConverterOwned(contract IConverter _converter, address _owner)` {#ConverterUpgrader-ConverterOwned-contract-IConverter-address-}
 
 triggered when the contract accept a converter ownership
 
@@ -98,7 +98,7 @@ triggered when the contract accept a converter ownership
 
 - `_owner`:       new owner - local upgrader address
 
-# Event `ConverterUpgrade(address _oldConverter, address _newConverter)` {#ConverterUpgrader-ConverterUpgrade-address-address-}
+## Event `ConverterUpgrade(address _oldConverter, address _newConverter)` {#ConverterUpgrader-ConverterUpgrade-address-address-}
 
 triggered when the upgrading process is done
 

@@ -16,7 +16,7 @@ see https://github.com/ethereum/solidity/issues/4116
 
 - [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](#TokenHolder-withdrawTokens-contract-IERC20Token-address-uint256-)
 
-# Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#TokenHolder-withdrawTokens-contract-IERC20Token-address-uint256-}
+## Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#TokenHolder-withdrawTokens-contract-IERC20Token-address-uint256-}
 
 withdraws tokens held by the contract and sends them to an account
 

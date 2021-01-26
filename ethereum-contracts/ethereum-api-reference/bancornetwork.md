@@ -68,7 +68,7 @@ Format:
 
 - [`Conversion(contract IConverterAnchor _smartToken, contract IERC20Token _fromToken, contract IERC20Token _toToken, uint256 _fromAmount, uint256 _toAmount, address _trader)`](#BancorNetwork-Conversion-contract-IConverterAnchor-contract-IERC20Token-contract-IERC20Token-uint256-uint256-address-)
 
-# Function `constructor(contract IContractRegistry _registry)` {#BancorNetwork-constructor-contract-IContractRegistry-}
+## Function `constructor(contract IContractRegistry _registry)` {#BancorNetwork-constructor-contract-IContractRegistry-}
 
 initializes a new BancorNetwork instance
 
@@ -76,7 +76,7 @@ initializes a new BancorNetwork instance
 
 - `_registry`:    address of a contract registry contract
 
-# Function `setMaxAffiliateFee(uint256 _maxAffiliateFee)` {#BancorNetwork-setMaxAffiliateFee-uint256-}
+## Function `setMaxAffiliateFee(uint256 _maxAffiliateFee)` {#BancorNetwork-setMaxAffiliateFee-uint256-}
 
 allows the owner to update the maximum affiliate-fee
 
@@ -84,7 +84,7 @@ allows the owner to update the maximum affiliate-fee
 
 - `_maxAffiliateFee`:   maximum affiliate-fee
 
-# Function `registerEtherToken(contract IEtherToken _token, bool _register)` {#BancorNetwork-registerEtherToken-contract-IEtherToken-bool-}
+## Function `registerEtherToken(contract IEtherToken _token, bool _register)` {#BancorNetwork-registerEtherToken-contract-IEtherToken-bool-}
 
 allows the owner to register/unregister ether tokens
 
@@ -94,7 +94,7 @@ allows the owner to register/unregister ether tokens
 
 - `_register`:    true to register, false to unregister
 
-# Function `conversionPath(contract IERC20Token _sourceToken, contract IERC20Token _targetToken) → address[]` {#BancorNetwork-conversionPath-contract-IERC20Token-contract-IERC20Token-}
+## Function `conversionPath(contract IERC20Token _sourceToken, contract IERC20Token _targetToken) → address[]` {#BancorNetwork-conversionPath-contract-IERC20Token-contract-IERC20Token-}
 
 returns the conversion path between two tokens in the network
 
@@ -110,7 +110,7 @@ note that this method is quite expensive in terms of gas and should generally be
 
 - conversion path between the two tokens
 
-# Function `rateByPath(address[] _path, uint256 _amount) → uint256` {#BancorNetwork-rateByPath-address---uint256-}
+## Function `rateByPath(address[] _path, uint256 _amount) → uint256` {#BancorNetwork-rateByPath-address---uint256-}
 
 returns the expected target amount of converting a given amount on a given path
 
@@ -126,7 +126,7 @@ note that there is no support for circular paths
 
 - expected target amount
 
-# Function `convertByPath(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-convertByPath-address---uint256-uint256-address-payable-address-uint256-}
+## Function `convertByPath(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-convertByPath-address---uint256-uint256-address-payable-address-uint256-}
 
 converts the token to any other token in the bancor network by following
 
@@ -154,7 +154,7 @@ note that the network should already have been given allowance of the source tok
 
 - amount of tokens received from the conversion
 
-# Function `xConvert(address[] _path, uint256 _amount, uint256 _minReturn, bytes32 _targetBlockchain, bytes32 _targetAccount, uint256 _conversionId) → uint256` {#BancorNetwork-xConvert-address---uint256-uint256-bytes32-bytes32-uint256-}
+## Function `xConvert(address[] _path, uint256 _amount, uint256 _minReturn, bytes32 _targetBlockchain, bytes32 _targetAccount, uint256 _conversionId) → uint256` {#BancorNetwork-xConvert-address---uint256-uint256-bytes32-bytes32-uint256-}
 
 converts any other token to BNT in the bancor network by following
 
@@ -180,7 +180,7 @@ note that the network should already have been given allowance of the source tok
 
 - the amount of BNT received from this conversion
 
-# Function `xConvert2(address[] _path, uint256 _amount, uint256 _minReturn, bytes32 _targetBlockchain, bytes32 _targetAccount, uint256 _conversionId, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-xConvert2-address---uint256-uint256-bytes32-bytes32-uint256-address-uint256-}
+## Function `xConvert2(address[] _path, uint256 _amount, uint256 _minReturn, bytes32 _targetBlockchain, bytes32 _targetAccount, uint256 _conversionId, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-xConvert2-address---uint256-uint256-bytes32-bytes32-uint256-address-uint256-}
 
 converts any other token to BNT in the bancor network by following
 
@@ -210,7 +210,7 @@ note that the network should already have been given allowance of the source tok
 
 - the amount of BNT received from this conversion
 
-# Function `completeXConversion(address[] _path, contract IBancorX _bancorX, uint256 _conversionId, uint256 _minReturn, address payable _beneficiary) → uint256` {#BancorNetwork-completeXConversion-address---contract-IBancorX-uint256-uint256-address-payable-}
+## Function `completeXConversion(address[] _path, contract IBancorX _bancorX, uint256 _conversionId, uint256 _minReturn, address payable _beneficiary) → uint256` {#BancorNetwork-completeXConversion-address---contract-IBancorX-uint256-uint256-address-payable-}
 
 allows a user to convert a token that was sent from another blockchain into any other
 
@@ -238,43 +238,43 @@ BancorX contract directly by specifying the conversion id
 
 - amount of tokens received from the conversion
 
-# Function `getReturnByPath(address[] _path, uint256 _amount) → uint256, uint256` {#BancorNetwork-getReturnByPath-address---uint256-}
+## Function `getReturnByPath(address[] _path, uint256 _amount) → uint256, uint256` {#BancorNetwork-getReturnByPath-address---uint256-}
 
 deprecated, backward compatibility
 
-# Function `convert(address[] _path, uint256 _amount, uint256 _minReturn) → uint256` {#BancorNetwork-convert-address---uint256-uint256-}
+## Function `convert(address[] _path, uint256 _amount, uint256 _minReturn) → uint256` {#BancorNetwork-convert-address---uint256-uint256-}
 
 deprecated, backward compatibility
 
-# Function `convert2(address[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-convert2-address---uint256-uint256-address-uint256-}
+## Function `convert2(address[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-convert2-address---uint256-uint256-address-uint256-}
 
 deprecated, backward compatibility
 
-# Function `convertFor(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary) → uint256` {#BancorNetwork-convertFor-address---uint256-uint256-address-payable-}
+## Function `convertFor(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary) → uint256` {#BancorNetwork-convertFor-address---uint256-uint256-address-payable-}
 
 deprecated, backward compatibility
 
-# Function `convertFor2(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-convertFor2-address---uint256-uint256-address-payable-address-uint256-}
+## Function `convertFor2(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-convertFor2-address---uint256-uint256-address-payable-address-uint256-}
 
 deprecated, backward compatibility
 
-# Function `claimAndConvert(address[] _path, uint256 _amount, uint256 _minReturn) → uint256` {#BancorNetwork-claimAndConvert-address---uint256-uint256-}
+## Function `claimAndConvert(address[] _path, uint256 _amount, uint256 _minReturn) → uint256` {#BancorNetwork-claimAndConvert-address---uint256-uint256-}
 
 deprecated, backward compatibility
 
-# Function `claimAndConvert2(address[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-claimAndConvert2-address---uint256-uint256-address-uint256-}
+## Function `claimAndConvert2(address[] _path, uint256 _amount, uint256 _minReturn, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-claimAndConvert2-address---uint256-uint256-address-uint256-}
 
 deprecated, backward compatibility
 
-# Function `claimAndConvertFor(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary) → uint256` {#BancorNetwork-claimAndConvertFor-address---uint256-uint256-address-payable-}
+## Function `claimAndConvertFor(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary) → uint256` {#BancorNetwork-claimAndConvertFor-address---uint256-uint256-address-payable-}
 
 deprecated, backward compatibility
 
-# Function `claimAndConvertFor2(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-claimAndConvertFor2-address---uint256-uint256-address-payable-address-uint256-}
+## Function `claimAndConvertFor2(address[] _path, uint256 _amount, uint256 _minReturn, address payable _beneficiary, address _affiliateAccount, uint256 _affiliateFee) → uint256` {#BancorNetwork-claimAndConvertFor2-address---uint256-uint256-address-payable-address-uint256-}
 
 deprecated, backward compatibility
 
-# Event `Conversion(contract IConverterAnchor _smartToken, contract IERC20Token _fromToken, contract IERC20Token _toToken, uint256 _fromAmount, uint256 _toAmount, address _trader)` {#BancorNetwork-Conversion-contract-IConverterAnchor-contract-IERC20Token-contract-IERC20Token-uint256-uint256-address-}
+## Event `Conversion(contract IConverterAnchor _smartToken, contract IERC20Token _fromToken, contract IERC20Token _toToken, uint256 _fromAmount, uint256 _toAmount, address _trader)` {#BancorNetwork-Conversion-contract-IConverterAnchor-contract-IERC20Token-contract-IERC20Token-uint256-uint256-address-}
 
 triggered when a conversion between two tokens occurs
 

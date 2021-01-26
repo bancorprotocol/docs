@@ -52,7 +52,7 @@ Liquidity Protection Settings contract
 
 - [`AverageRateMaxDeviationUpdated(uint32 _prevAverageRateMaxDeviation, uint32 _newAverageRateMaxDeviation)`](#LiquidityProtectionSettings-AverageRateMaxDeviationUpdated-uint32-uint32-)
 
-# Function `constructor(contract IERC20Token _networkToken, contract IContractRegistry _registry)` {#LiquidityProtectionSettings-constructor-contract-IERC20Token-contract-IContractRegistry-}
+## Function `constructor(contract IERC20Token _networkToken, contract IContractRegistry _registry)` {#LiquidityProtectionSettings-constructor-contract-IERC20Token-contract-IContractRegistry-}
 
 initializes a new LiquidityProtectionSettings contract
 
@@ -62,7 +62,7 @@ initializes a new LiquidityProtectionSettings contract
 
 - `_networkToken`: the network token
 
-# Function `addPoolToWhitelist(contract IConverterAnchor _poolAnchor)` {#LiquidityProtectionSettings-addPoolToWhitelist-contract-IConverterAnchor-}
+## Function `addPoolToWhitelist(contract IConverterAnchor _poolAnchor)` {#LiquidityProtectionSettings-addPoolToWhitelist-contract-IConverterAnchor-}
 
 adds a pool to the whitelist
 
@@ -72,7 +72,7 @@ can only be called by the contract owner
 
 - `_poolAnchor`: pool anchor
 
-# Function `removePoolFromWhitelist(contract IConverterAnchor _poolAnchor)` {#LiquidityProtectionSettings-removePoolFromWhitelist-contract-IConverterAnchor-}
+## Function `removePoolFromWhitelist(contract IConverterAnchor _poolAnchor)` {#LiquidityProtectionSettings-removePoolFromWhitelist-contract-IConverterAnchor-}
 
 removes a pool from the whitelist
 
@@ -82,7 +82,7 @@ can only be called by the contract owner
 
 - `_poolAnchor`: pool anchor
 
-# Function `isPoolWhitelisted(contract IConverterAnchor _poolAnchor) → bool` {#LiquidityProtectionSettings-isPoolWhitelisted-contract-IConverterAnchor-}
+## Function `isPoolWhitelisted(contract IConverterAnchor _poolAnchor) → bool` {#LiquidityProtectionSettings-isPoolWhitelisted-contract-IConverterAnchor-}
 
 checks whether a given pool is whitelisted
 
@@ -94,7 +94,7 @@ checks whether a given pool is whitelisted
 
 - true if the given pool is whitelisted, false otherwise
 
-# Function `poolWhitelist() → address[]` {#LiquidityProtectionSettings-poolWhitelist--}
+## Function `poolWhitelist() → address[]` {#LiquidityProtectionSettings-poolWhitelist--}
 
 returns pools whitelist
 
@@ -102,7 +102,7 @@ returns pools whitelist
 
 - pools whitelist
 
-# Function `setMinNetworkTokenLiquidityForMinting(uint256 _minimum)` {#LiquidityProtectionSettings-setMinNetworkTokenLiquidityForMinting-uint256-}
+## Function `setMinNetworkTokenLiquidityForMinting(uint256 _minimum)` {#LiquidityProtectionSettings-setMinNetworkTokenLiquidityForMinting-uint256-}
 
 updates the minimum amount of network token liquidity to allow minting
 
@@ -112,7 +112,7 @@ can only be called by the contract owner
 
 - `_minimum`:    new minimum
 
-# Function `setDefaultNetworkTokenMintingLimit(uint256 _limit)` {#LiquidityProtectionSettings-setDefaultNetworkTokenMintingLimit-uint256-}
+## Function `setDefaultNetworkTokenMintingLimit(uint256 _limit)` {#LiquidityProtectionSettings-setDefaultNetworkTokenMintingLimit-uint256-}
 
 updates the default network token amount the system can mint into each pool
 
@@ -122,7 +122,7 @@ can only be called by the contract owner
 
 - `_limit`:    new limit
 
-# Function `setNetworkTokenMintingLimit(contract IConverterAnchor _poolAnchor, uint256 _limit)` {#LiquidityProtectionSettings-setNetworkTokenMintingLimit-contract-IConverterAnchor-uint256-}
+## Function `setNetworkTokenMintingLimit(contract IConverterAnchor _poolAnchor, uint256 _limit)` {#LiquidityProtectionSettings-setNetworkTokenMintingLimit-contract-IConverterAnchor-uint256-}
 
 updates the amount of network tokens that the system can mint into a specific pool
 
@@ -134,7 +134,7 @@ can only be called by the contract owner
 
 - `_limit`:        new limit
 
-# Function `incNetworkTokensMinted(contract IConverterAnchor _poolAnchor, uint256 _amount)` {#LiquidityProtectionSettings-incNetworkTokensMinted-contract-IConverterAnchor-uint256-}
+## Function `incNetworkTokensMinted(contract IConverterAnchor _poolAnchor, uint256 _amount)` {#LiquidityProtectionSettings-incNetworkTokensMinted-contract-IConverterAnchor-uint256-}
 
 increases the amount of network tokens minted into a specific pool
 
@@ -146,7 +146,7 @@ can only be called by the minted tokens admin
 
 - `_amount`:       amount to increase the minted tokens by
 
-# Function `decNetworkTokensMinted(contract IConverterAnchor _poolAnchor, uint256 _amount)` {#LiquidityProtectionSettings-decNetworkTokensMinted-contract-IConverterAnchor-uint256-}
+## Function `decNetworkTokensMinted(contract IConverterAnchor _poolAnchor, uint256 _amount)` {#LiquidityProtectionSettings-decNetworkTokensMinted-contract-IConverterAnchor-uint256-}
 
 decreases the amount of network tokens minted into a specific pool
 
@@ -158,7 +158,7 @@ can only be called by the minted tokens admin
 
 - `_amount`:       amount to decrease the minted tokens by
 
-# Function `setProtectionDelays(uint256 _minProtectionDelay, uint256 _maxProtectionDelay)` {#LiquidityProtectionSettings-setProtectionDelays-uint256-uint256-}
+## Function `setProtectionDelays(uint256 _minProtectionDelay, uint256 _maxProtectionDelay)` {#LiquidityProtectionSettings-setProtectionDelays-uint256-uint256-}
 
 updates the protection delays
 
@@ -170,7 +170,7 @@ can only be called by the contract owner
 
 - `_maxProtectionDelay`:  seconds until full protection
 
-# Function `setMinNetworkCompensation(uint256 _minCompensation)` {#LiquidityProtectionSettings-setMinNetworkCompensation-uint256-}
+## Function `setMinNetworkCompensation(uint256 _minCompensation)` {#LiquidityProtectionSettings-setMinNetworkCompensation-uint256-}
 
 updates the minimum network token compensation
 
@@ -180,7 +180,7 @@ can only be called by the contract owner
 
 - `_minCompensation`: new minimum compensation
 
-# Function `setLockDuration(uint256 _lockDuration)` {#LiquidityProtectionSettings-setLockDuration-uint256-}
+## Function `setLockDuration(uint256 _lockDuration)` {#LiquidityProtectionSettings-setLockDuration-uint256-}
 
 updates the network token lock duration
 
@@ -190,7 +190,7 @@ can only be called by the contract owner
 
 - `_lockDuration`:    network token lock duration, in seconds
 
-# Function `setAverageRateMaxDeviation(uint32 _averageRateMaxDeviation)` {#LiquidityProtectionSettings-setAverageRateMaxDeviation-uint32-}
+## Function `setAverageRateMaxDeviation(uint32 _averageRateMaxDeviation)` {#LiquidityProtectionSettings-setAverageRateMaxDeviation-uint32-}
 
 sets the maximum deviation of the average rate from the spot rate
 
@@ -200,7 +200,7 @@ can only be called by the contract owner
 
 - `_averageRateMaxDeviation`: maximum deviation of the average rate from the spot rate
 
-# Function `isPoolSupported(contract IConverterAnchor _poolAnchor) → bool` {#LiquidityProtectionSettings-isPoolSupported-contract-IConverterAnchor-}
+## Function `isPoolSupported(contract IConverterAnchor _poolAnchor) → bool` {#LiquidityProtectionSettings-isPoolSupported-contract-IConverterAnchor-}
 
 checks if protection is supported for the given pool
 
@@ -216,7 +216,7 @@ note that the pool should still be whitelisted
 
 - true if the pool is supported, false otherwise
 
-# Event `PoolWhitelistUpdated(contract IConverterAnchor _poolAnchor, bool _added)` {#LiquidityProtectionSettings-PoolWhitelistUpdated-contract-IConverterAnchor-bool-}
+## Event `PoolWhitelistUpdated(contract IConverterAnchor _poolAnchor, bool _added)` {#LiquidityProtectionSettings-PoolWhitelistUpdated-contract-IConverterAnchor-bool-}
 
 triggered when the pool whitelist is updated
 
@@ -226,7 +226,7 @@ triggered when the pool whitelist is updated
 
 - `_added`:       true if the pool was added to the whitelist, false if it was removed
 
-# Event `MinNetworkTokenLiquidityForMintingUpdated(uint256 _prevMin, uint256 _newMin)` {#LiquidityProtectionSettings-MinNetworkTokenLiquidityForMintingUpdated-uint256-uint256-}
+## Event `MinNetworkTokenLiquidityForMintingUpdated(uint256 _prevMin, uint256 _newMin)` {#LiquidityProtectionSettings-MinNetworkTokenLiquidityForMintingUpdated-uint256-uint256-}
 
 triggered when the minimum amount of network token liquidity to allow minting is updated
 
@@ -236,7 +236,7 @@ triggered when the minimum amount of network token liquidity to allow minting is
 
 - `_newMin`:   new minimum amount of network token liquidity for minting
 
-# Event `DefaultNetworkTokenMintingLimitUpdated(uint256 _prevDefault, uint256 _newDefault)` {#LiquidityProtectionSettings-DefaultNetworkTokenMintingLimitUpdated-uint256-uint256-}
+## Event `DefaultNetworkTokenMintingLimitUpdated(uint256 _prevDefault, uint256 _newDefault)` {#LiquidityProtectionSettings-DefaultNetworkTokenMintingLimitUpdated-uint256-uint256-}
 
 triggered when the default network token minting limit is updated
 
@@ -246,7 +246,7 @@ triggered when the default network token minting limit is updated
 
 - `_newDefault`:   new default network token minting limit
 
-# Event `NetworkTokenMintingLimitUpdated(contract IConverterAnchor _poolAnchor, uint256 _prevLimit, uint256 _newLimit)` {#LiquidityProtectionSettings-NetworkTokenMintingLimitUpdated-contract-IConverterAnchor-uint256-uint256-}
+## Event `NetworkTokenMintingLimitUpdated(contract IConverterAnchor _poolAnchor, uint256 _prevLimit, uint256 _newLimit)` {#LiquidityProtectionSettings-NetworkTokenMintingLimitUpdated-contract-IConverterAnchor-uint256-uint256-}
 
 triggered when a pool network token minting limit is updated
 
@@ -258,7 +258,7 @@ triggered when a pool network token minting limit is updated
 
 - `_newLimit`:     new limit
 
-# Event `NetworkTokensMintedUpdated(contract IConverterAnchor _poolAnchor, uint256 _prevAmount, uint256 _newAmount)` {#LiquidityProtectionSettings-NetworkTokensMintedUpdated-contract-IConverterAnchor-uint256-uint256-}
+## Event `NetworkTokensMintedUpdated(contract IConverterAnchor _poolAnchor, uint256 _prevAmount, uint256 _newAmount)` {#LiquidityProtectionSettings-NetworkTokensMintedUpdated-contract-IConverterAnchor-uint256-uint256-}
 
 triggered when the amount of network tokens minted into a specific pool is updated
 
@@ -270,7 +270,7 @@ triggered when the amount of network tokens minted into a specific pool is updat
 
 - `_newAmount`:   new amount
 
-# Event `ProtectionDelaysUpdated(uint256 _prevMinProtectionDelay, uint256 _newMinProtectionDelay, uint256 _prevMaxProtectionDelay, uint256 _newMaxProtectionDelay)` {#LiquidityProtectionSettings-ProtectionDelaysUpdated-uint256-uint256-uint256-uint256-}
+## Event `ProtectionDelaysUpdated(uint256 _prevMinProtectionDelay, uint256 _newMinProtectionDelay, uint256 _prevMaxProtectionDelay, uint256 _newMaxProtectionDelay)` {#LiquidityProtectionSettings-ProtectionDelaysUpdated-uint256-uint256-uint256-uint256-}
 
 triggered when the protection delays are updated
 
@@ -284,7 +284,7 @@ triggered when the protection delays are updated
 
 - `_newMaxProtectionDelay`:   new seconds until full protection
 
-# Event `MinNetworkCompensationUpdated(uint256 _prevMinNetworkCompensation, uint256 _newMinNetworkCompensation)` {#LiquidityProtectionSettings-MinNetworkCompensationUpdated-uint256-uint256-}
+## Event `MinNetworkCompensationUpdated(uint256 _prevMinNetworkCompensation, uint256 _newMinNetworkCompensation)` {#LiquidityProtectionSettings-MinNetworkCompensationUpdated-uint256-uint256-}
 
 triggered when the minimum network token compensation is updated
 
@@ -294,7 +294,7 @@ triggered when the minimum network token compensation is updated
 
 - `_newMinNetworkCompensation`:   new minimum network token compensation
 
-# Event `LockDurationUpdated(uint256 _prevLockDuration, uint256 _newLockDuration)` {#LiquidityProtectionSettings-LockDurationUpdated-uint256-uint256-}
+## Event `LockDurationUpdated(uint256 _prevLockDuration, uint256 _newLockDuration)` {#LiquidityProtectionSettings-LockDurationUpdated-uint256-uint256-}
 
 triggered when the network token lock duration is updated
 
@@ -304,7 +304,7 @@ triggered when the network token lock duration is updated
 
 - `_newLockDuration`:   new network token lock duration, in seconds
 
-# Event `AverageRateMaxDeviationUpdated(uint32 _prevAverageRateMaxDeviation, uint32 _newAverageRateMaxDeviation)` {#LiquidityProtectionSettings-AverageRateMaxDeviationUpdated-uint32-uint32-}
+## Event `AverageRateMaxDeviationUpdated(uint32 _prevAverageRateMaxDeviation, uint32 _newAverageRateMaxDeviation)` {#LiquidityProtectionSettings-AverageRateMaxDeviationUpdated-uint32-uint32-}
 
 triggered when the maximum deviation of the average rate from the spot rate is updated
 

@@ -10,22 +10,22 @@
 
 - [`callback()`](#TestReentrancyGuardAttacker-callback--)
 
-# Function `constructor(contract TestReentrancyGuard _target)` {#TestReentrancyGuardAttacker-constructor-contract-TestReentrancyGuard-}
+## Function `constructor(contract TestReentrancyGuard _target)` {#TestReentrancyGuardAttacker-constructor-contract-TestReentrancyGuard-}
 
 No description
 
-# Function `setReentrancy(bool _reentrancy)` {#TestReentrancyGuardAttacker-setReentrancy-bool-}
+## Function `setReentrancy(bool _reentrancy)` {#TestReentrancyGuardAttacker-setReentrancy-bool-}
 
 No description
 
-# Function `setCallProtectedMethod(bool _callProtectedMethod)` {#TestReentrancyGuardAttacker-setCallProtectedMethod-bool-}
+## Function `setCallProtectedMethod(bool _callProtectedMethod)` {#TestReentrancyGuardAttacker-setCallProtectedMethod-bool-}
 
 No description
 
-# Function `run()` {#TestReentrancyGuardAttacker-run--}
+## Function `run()` {#TestReentrancyGuardAttacker-run--}
 
 No description
 
-# Function `callback()` {#TestReentrancyGuardAttacker-callback--}
+## Function `callback()` {#TestReentrancyGuardAttacker-callback--}
 
 No description

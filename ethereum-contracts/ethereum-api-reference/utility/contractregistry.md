@@ -26,7 +26,7 @@ Note that contract names are limited to 32 bytes UTF8 encoded ASCII strings to o
 
 - [`AddressUpdate(bytes32 _contractName, address _contractAddress)`](#ContractRegistry-AddressUpdate-bytes32-address-)
 
-# Function `itemCount() → uint256` {#ContractRegistry-itemCount--}
+## Function `itemCount() → uint256` {#ContractRegistry-itemCount--}
 
 returns the number of items in the registry
 
@@ -34,7 +34,7 @@ returns the number of items in the registry
 
 - number of items
 
-# Function `addressOf(bytes32 _contractName) → address` {#ContractRegistry-addressOf-bytes32-}
+## Function `addressOf(bytes32 _contractName) → address` {#ContractRegistry-addressOf-bytes32-}
 
 returns the address associated with the given contract name
 
@@ -46,7 +46,7 @@ returns the address associated with the given contract name
 
 - contract address
 
-# Function `registerAddress(bytes32 _contractName, address _contractAddress)` {#ContractRegistry-registerAddress-bytes32-address-}
+## Function `registerAddress(bytes32 _contractName, address _contractAddress)` {#ContractRegistry-registerAddress-bytes32-address-}
 
 registers a new address for the contract name in the registry
 
@@ -56,7 +56,7 @@ registers a new address for the contract name in the registry
 
 - `_contractAddress`:  contract address
 
-# Function `unregisterAddress(bytes32 _contractName)` {#ContractRegistry-unregisterAddress-bytes32-}
+## Function `unregisterAddress(bytes32 _contractName)` {#ContractRegistry-unregisterAddress-bytes32-}
 
 removes an existing contract address from the registry
 
@@ -64,11 +64,11 @@ removes an existing contract address from the registry
 
 - `_contractName`: contract name
 
-# Function `getAddress(bytes32 _contractName) → address` {#ContractRegistry-getAddress-bytes32-}
+## Function `getAddress(bytes32 _contractName) → address` {#ContractRegistry-getAddress-bytes32-}
 
 deprecated, backward compatibility
 
-# Event `AddressUpdate(bytes32 _contractName, address _contractAddress)` {#ContractRegistry-AddressUpdate-bytes32-address-}
+## Event `AddressUpdate(bytes32 _contractName, address _contractAddress)` {#ContractRegistry-AddressUpdate-bytes32-address-}
 
 triggered when an address pointed to by a contract name is modified
 

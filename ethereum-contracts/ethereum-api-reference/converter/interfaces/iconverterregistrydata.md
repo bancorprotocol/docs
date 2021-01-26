@@ -44,90 +44,90 @@
 
 - [`isConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, address _value)`](#IConverterRegistryData-isConvertibleTokenSmartToken-contract-IERC20Token-address-)
 
-# Function `addSmartToken(contract IConverterAnchor _anchor)` {#IConverterRegistryData-addSmartToken-contract-IConverterAnchor-}
+## Function `addSmartToken(contract IConverterAnchor _anchor)` {#IConverterRegistryData-addSmartToken-contract-IConverterAnchor-}
 
 No description
 
-# Function `removeSmartToken(contract IConverterAnchor _anchor)` {#IConverterRegistryData-removeSmartToken-contract-IConverterAnchor-}
+## Function `removeSmartToken(contract IConverterAnchor _anchor)` {#IConverterRegistryData-removeSmartToken-contract-IConverterAnchor-}
 
 No description
 
-# Function `addLiquidityPool(contract IConverterAnchor _liquidityPoolAnchor)` {#IConverterRegistryData-addLiquidityPool-contract-IConverterAnchor-}
+## Function `addLiquidityPool(contract IConverterAnchor _liquidityPoolAnchor)` {#IConverterRegistryData-addLiquidityPool-contract-IConverterAnchor-}
 
 No description
 
-# Function `removeLiquidityPool(contract IConverterAnchor _liquidityPoolAnchor)` {#IConverterRegistryData-removeLiquidityPool-contract-IConverterAnchor-}
+## Function `removeLiquidityPool(contract IConverterAnchor _liquidityPoolAnchor)` {#IConverterRegistryData-removeLiquidityPool-contract-IConverterAnchor-}
 
 No description
 
-# Function `addConvertibleToken(contract IERC20Token _convertibleToken, contract IConverterAnchor _anchor)` {#IConverterRegistryData-addConvertibleToken-contract-IERC20Token-contract-IConverterAnchor-}
+## Function `addConvertibleToken(contract IERC20Token _convertibleToken, contract IConverterAnchor _anchor)` {#IConverterRegistryData-addConvertibleToken-contract-IERC20Token-contract-IConverterAnchor-}
 
 No description
 
-# Function `removeConvertibleToken(contract IERC20Token _convertibleToken, contract IConverterAnchor _anchor)` {#IConverterRegistryData-removeConvertibleToken-contract-IERC20Token-contract-IConverterAnchor-}
+## Function `removeConvertibleToken(contract IERC20Token _convertibleToken, contract IConverterAnchor _anchor)` {#IConverterRegistryData-removeConvertibleToken-contract-IERC20Token-contract-IConverterAnchor-}
 
 No description
 
-# Function `getSmartTokenCount() → uint256` {#IConverterRegistryData-getSmartTokenCount--}
+## Function `getSmartTokenCount() → uint256` {#IConverterRegistryData-getSmartTokenCount--}
 
 No description
 
-# Function `getSmartTokens() → address[]` {#IConverterRegistryData-getSmartTokens--}
+## Function `getSmartTokens() → address[]` {#IConverterRegistryData-getSmartTokens--}
 
 No description
 
-# Function `getSmartToken(uint256 _index) → contract IConverterAnchor` {#IConverterRegistryData-getSmartToken-uint256-}
+## Function `getSmartToken(uint256 _index) → contract IConverterAnchor` {#IConverterRegistryData-getSmartToken-uint256-}
 
 No description
 
-# Function `isSmartToken(address _value) → bool` {#IConverterRegistryData-isSmartToken-address-}
+## Function `isSmartToken(address _value) → bool` {#IConverterRegistryData-isSmartToken-address-}
 
 No description
 
-# Function `getLiquidityPoolCount() → uint256` {#IConverterRegistryData-getLiquidityPoolCount--}
+## Function `getLiquidityPoolCount() → uint256` {#IConverterRegistryData-getLiquidityPoolCount--}
 
 No description
 
-# Function `getLiquidityPools() → address[]` {#IConverterRegistryData-getLiquidityPools--}
+## Function `getLiquidityPools() → address[]` {#IConverterRegistryData-getLiquidityPools--}
 
 No description
 
-# Function `getLiquidityPool(uint256 _index) → contract IConverterAnchor` {#IConverterRegistryData-getLiquidityPool-uint256-}
+## Function `getLiquidityPool(uint256 _index) → contract IConverterAnchor` {#IConverterRegistryData-getLiquidityPool-uint256-}
 
 No description
 
-# Function `isLiquidityPool(address _value) → bool` {#IConverterRegistryData-isLiquidityPool-address-}
+## Function `isLiquidityPool(address _value) → bool` {#IConverterRegistryData-isLiquidityPool-address-}
 
 No description
 
-# Function `getConvertibleTokenCount() → uint256` {#IConverterRegistryData-getConvertibleTokenCount--}
+## Function `getConvertibleTokenCount() → uint256` {#IConverterRegistryData-getConvertibleTokenCount--}
 
 No description
 
-# Function `getConvertibleTokens() → address[]` {#IConverterRegistryData-getConvertibleTokens--}
+## Function `getConvertibleTokens() → address[]` {#IConverterRegistryData-getConvertibleTokens--}
 
 No description
 
-# Function `getConvertibleToken(uint256 _index) → contract IERC20Token` {#IConverterRegistryData-getConvertibleToken-uint256-}
+## Function `getConvertibleToken(uint256 _index) → contract IERC20Token` {#IConverterRegistryData-getConvertibleToken-uint256-}
 
 No description
 
-# Function `isConvertibleToken(address _value) → bool` {#IConverterRegistryData-isConvertibleToken-address-}
+## Function `isConvertibleToken(address _value) → bool` {#IConverterRegistryData-isConvertibleToken-address-}
 
 No description
 
-# Function `getConvertibleTokenSmartTokenCount(contract IERC20Token _convertibleToken) → uint256` {#IConverterRegistryData-getConvertibleTokenSmartTokenCount-contract-IERC20Token-}
+## Function `getConvertibleTokenSmartTokenCount(contract IERC20Token _convertibleToken) → uint256` {#IConverterRegistryData-getConvertibleTokenSmartTokenCount-contract-IERC20Token-}
 
 No description
 
-# Function `getConvertibleTokenSmartTokens(contract IERC20Token _convertibleToken) → address[]` {#IConverterRegistryData-getConvertibleTokenSmartTokens-contract-IERC20Token-}
+## Function `getConvertibleTokenSmartTokens(contract IERC20Token _convertibleToken) → address[]` {#IConverterRegistryData-getConvertibleTokenSmartTokens-contract-IERC20Token-}
 
 No description
 
-# Function `getConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, uint256 _index) → contract IConverterAnchor` {#IConverterRegistryData-getConvertibleTokenSmartToken-contract-IERC20Token-uint256-}
+## Function `getConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, uint256 _index) → contract IConverterAnchor` {#IConverterRegistryData-getConvertibleTokenSmartToken-contract-IERC20Token-uint256-}
 
 No description
 
-# Function `isConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, address _value) → bool` {#IConverterRegistryData-isConvertibleTokenSmartToken-contract-IERC20Token-address-}
+## Function `isConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, address _value) → bool` {#IConverterRegistryData-isConvertibleTokenSmartToken-contract-IERC20Token-address-}
 
 No description

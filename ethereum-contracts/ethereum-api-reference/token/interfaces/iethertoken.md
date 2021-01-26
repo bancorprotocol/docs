@@ -8,18 +8,18 @@
 
 - [`withdrawTo(address payable _to, uint256 _amount)`](#IEtherToken-withdrawTo-address-payable-uint256-)
 
-# Function `deposit()` {#IEtherToken-deposit--}
+## Function `deposit()` {#IEtherToken-deposit--}
 
 No description
 
-# Function `withdraw(uint256 _amount)` {#IEtherToken-withdraw-uint256-}
+## Function `withdraw(uint256 _amount)` {#IEtherToken-withdraw-uint256-}
 
 No description
 
-# Function `depositTo(address _to)` {#IEtherToken-depositTo-address-}
+## Function `depositTo(address _to)` {#IEtherToken-depositTo-address-}
 
 No description
 
-# Function `withdrawTo(address payable _to, uint256 _amount)` {#IEtherToken-withdrawTo-address-payable-uint256-}
+## Function `withdrawTo(address payable _to, uint256 _amount)` {#IEtherToken-withdrawTo-address-payable-uint256-}
 
 No description

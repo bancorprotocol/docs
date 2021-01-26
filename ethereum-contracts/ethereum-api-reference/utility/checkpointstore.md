@@ -14,7 +14,7 @@ Time store contract
 
 - [`CheckpointUpdated(address _address, uint256 _time)`](#CheckpointStore-CheckpointUpdated-address-uint256-)
 
-# Function `addCheckpoint(address _address)` {#CheckpointStore-addCheckpoint-address-}
+## Function `addCheckpoint(address _address)` {#CheckpointStore-addCheckpoint-address-}
 
 adds a new data point to the store
 
@@ -24,7 +24,7 @@ can only be called by an owner
 
 - `_address`: the address we're collecting the data for
 
-# Function `addPastCheckpoint(address _address, uint256 _time)` {#CheckpointStore-addPastCheckpoint-address-uint256-}
+## Function `addPastCheckpoint(address _address, uint256 _time)` {#CheckpointStore-addPastCheckpoint-address-uint256-}
 
 adds a past checkpoint to the store
 
@@ -36,7 +36,7 @@ can only be called by a seeder
 
 - `_time`: the checkpoint
 
-# Function `addPastCheckpoints(address[] _addresses, uint256[] _times)` {#CheckpointStore-addPastCheckpoints-address---uint256---}
+## Function `addPastCheckpoints(address[] _addresses, uint256[] _times)` {#CheckpointStore-addPastCheckpoints-address---uint256---}
 
 adds past checkpoints to the store
 
@@ -48,7 +48,7 @@ can only be called by a seeder
 
 - `_times`: the checkpoints
 
-# Function `checkpoint(address _address) → uint256` {#CheckpointStore-checkpoint-address-}
+## Function `checkpoint(address _address) → uint256` {#CheckpointStore-checkpoint-address-}
 
 returns the store value for a specific address
 
@@ -60,7 +60,7 @@ returns the store value for a specific address
 
 - the checkpoint
 
-# Event `CheckpointUpdated(address _address, uint256 _time)` {#CheckpointStore-CheckpointUpdated-address-uint256-}
+## Event `CheckpointUpdated(address _address, uint256 _time)` {#CheckpointStore-CheckpointUpdated-address-uint256-}
 
 triggered when a new data point is being added
 

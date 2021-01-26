@@ -4,10 +4,10 @@
 
 - [`unprotectedMethod()`](#TestReentrancyGuard-unprotectedMethod--)
 
-# Function `protectedMethod()` {#TestReentrancyGuard-protectedMethod--}
+## Function `protectedMethod()` {#TestReentrancyGuard-protectedMethod--}
 
 No description
 
-# Function `unprotectedMethod()` {#TestReentrancyGuard-unprotectedMethod--}
+## Function `unprotectedMethod()` {#TestReentrancyGuard-unprotectedMethod--}
 
 No description

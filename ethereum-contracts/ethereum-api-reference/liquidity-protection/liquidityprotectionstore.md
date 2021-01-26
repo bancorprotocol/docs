@@ -54,7 +54,7 @@ It holds the data and tokens, and it is generally non-upgradable.
 
 - [`SystemBalanceUpdated(contract IERC20Token _token, uint256 _prevAmount, uint256 _newAmount)`](#LiquidityProtectionStore-SystemBalanceUpdated-contract-IERC20Token-uint256-uint256-)
 
-# Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#LiquidityProtectionStore-withdrawTokens-contract-IERC20Token-address-uint256-}
+## Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#LiquidityProtectionStore-withdrawTokens-contract-IERC20Token-address-uint256-}
 
 withdraws tokens held by the contract
 
@@ -68,7 +68,7 @@ can only be called by the contract owner
 
 - `_amount`:  amount to withdraw
 
-# Function `protectedLiquidityCount(address _provider) → uint256` {#LiquidityProtectionStore-protectedLiquidityCount-address-}
+## Function `protectedLiquidityCount(address _provider) → uint256` {#LiquidityProtectionStore-protectedLiquidityCount-address-}
 
 returns the number of protected liquidities for the given provider
 
@@ -80,7 +80,7 @@ returns the number of protected liquidities for the given provider
 
 - number of protected liquidities
 
-# Function `protectedLiquidityIds(address _provider) → uint256[]` {#LiquidityProtectionStore-protectedLiquidityIds-address-}
+## Function `protectedLiquidityIds(address _provider) → uint256[]` {#LiquidityProtectionStore-protectedLiquidityIds-address-}
 
 returns the list of protected liquidity ids for the given provider
 
@@ -92,7 +92,7 @@ returns the list of protected liquidity ids for the given provider
 
 - protected liquidity ids
 
-# Function `protectedLiquidityId(address _provider, uint256 _index) → uint256` {#LiquidityProtectionStore-protectedLiquidityId-address-uint256-}
+## Function `protectedLiquidityId(address _provider, uint256 _index) → uint256` {#LiquidityProtectionStore-protectedLiquidityId-address-uint256-}
 
 returns the id of a protected liquidity for the given provider at a specific index
 
@@ -106,7 +106,7 @@ returns the id of a protected liquidity for the given provider at a specific ind
 
 - protected liquidity id
 
-# Function `protectedLiquidity(uint256 _id) → address, contract IDSToken, contract IERC20Token, uint256, uint256, uint256, uint256, uint256` {#LiquidityProtectionStore-protectedLiquidity-uint256-}
+## Function `protectedLiquidity(uint256 _id) → address, contract IDSToken, contract IERC20Token, uint256, uint256, uint256, uint256, uint256` {#LiquidityProtectionStore-protectedLiquidity-uint256-}
 
 returns an existing protected liquidity details
 
@@ -130,7 +130,7 @@ returns an existing protected liquidity details
 
 - rate of 1 protected reserve token in units of the other reserve token (denominator)
 
-# Function `addProtectedLiquidity(address _provider, contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _poolAmount, uint256 _reserveAmount, uint256 _reserveRateN, uint256 _reserveRateD, uint256 _timestamp) → uint256` {#LiquidityProtectionStore-addProtectedLiquidity-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-uint256-uint256-uint256-}
+## Function `addProtectedLiquidity(address _provider, contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _poolAmount, uint256 _reserveAmount, uint256 _reserveRateN, uint256 _reserveRateD, uint256 _timestamp) → uint256` {#LiquidityProtectionStore-addProtectedLiquidity-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-uint256-uint256-uint256-}
 
 adds protected liquidity
 
@@ -158,7 +158,7 @@ can only be called by the contract owner
 
 - new protected liquidity id
 
-# Function `updateProtectedLiquidityAmounts(uint256 _id, uint256 _newPoolAmount, uint256 _newReserveAmount)` {#LiquidityProtectionStore-updateProtectedLiquidityAmounts-uint256-uint256-uint256-}
+## Function `updateProtectedLiquidityAmounts(uint256 _id, uint256 _newPoolAmount, uint256 _newReserveAmount)` {#LiquidityProtectionStore-updateProtectedLiquidityAmounts-uint256-uint256-uint256-}
 
 updates an existing protected liquidity pool/reserve amounts
 
@@ -172,7 +172,7 @@ can only be called by the contract owner
 
 - `_newReserveAmount`:    new reserve tokens amount
 
-# Function `removeProtectedLiquidity(uint256 _id)` {#LiquidityProtectionStore-removeProtectedLiquidity-uint256-}
+## Function `removeProtectedLiquidity(uint256 _id)` {#LiquidityProtectionStore-removeProtectedLiquidity-uint256-}
 
 removes protected liquidity
 
@@ -182,7 +182,7 @@ can only be called by the contract owner
 
 - `_id`:  protected liquidity id
 
-# Function `lockedBalanceCount(address _provider) → uint256` {#LiquidityProtectionStore-lockedBalanceCount-address-}
+## Function `lockedBalanceCount(address _provider) → uint256` {#LiquidityProtectionStore-lockedBalanceCount-address-}
 
 returns the number of network token locked balances for a given provider
 
@@ -194,7 +194,7 @@ returns the number of network token locked balances for a given provider
 
 - the number of network token locked balances
 
-# Function `lockedBalance(address _provider, uint256 _index) → uint256, uint256` {#LiquidityProtectionStore-lockedBalance-address-uint256-}
+## Function `lockedBalance(address _provider, uint256 _index) → uint256, uint256` {#LiquidityProtectionStore-lockedBalance-address-uint256-}
 
 returns an existing locked network token balance details
 
@@ -210,7 +210,7 @@ returns an existing locked network token balance details
 
 - lock expiration time
 
-# Function `lockedBalanceRange(address _provider, uint256 _startIndex, uint256 _endIndex) → uint256[], uint256[]` {#LiquidityProtectionStore-lockedBalanceRange-address-uint256-uint256-}
+## Function `lockedBalanceRange(address _provider, uint256 _startIndex, uint256 _endIndex) → uint256[], uint256[]` {#LiquidityProtectionStore-lockedBalanceRange-address-uint256-uint256-}
 
 returns a range of locked network token balances for a given provider
 
@@ -228,7 +228,7 @@ returns a range of locked network token balances for a given provider
 
 - expiration times
 
-# Function `addLockedBalance(address _provider, uint256 _amount, uint256 _expirationTime) → uint256` {#LiquidityProtectionStore-addLockedBalance-address-uint256-uint256-}
+## Function `addLockedBalance(address _provider, uint256 _amount, uint256 _expirationTime) → uint256` {#LiquidityProtectionStore-addLockedBalance-address-uint256-uint256-}
 
 adds new locked network token balance
 
@@ -246,7 +246,7 @@ can only be called by the contract owner
 
 - new locked balance index
 
-# Function `removeLockedBalance(address _provider, uint256 _index)` {#LiquidityProtectionStore-removeLockedBalance-address-uint256-}
+## Function `removeLockedBalance(address _provider, uint256 _index)` {#LiquidityProtectionStore-removeLockedBalance-address-uint256-}
 
 removes a locked network token balance
 
@@ -258,7 +258,7 @@ can only be called by the contract owner
 
 - `_index`:       index of the locked balance
 
-# Function `systemBalance(contract IERC20Token _token) → uint256` {#LiquidityProtectionStore-systemBalance-contract-IERC20Token-}
+## Function `systemBalance(contract IERC20Token _token) → uint256` {#LiquidityProtectionStore-systemBalance-contract-IERC20Token-}
 
 returns the system balance for a given token
 
@@ -270,7 +270,7 @@ returns the system balance for a given token
 
 - system balance
 
-# Function `incSystemBalance(contract IERC20Token _token, uint256 _amount)` {#LiquidityProtectionStore-incSystemBalance-contract-IERC20Token-uint256-}
+## Function `incSystemBalance(contract IERC20Token _token, uint256 _amount)` {#LiquidityProtectionStore-incSystemBalance-contract-IERC20Token-uint256-}
 
 increases the system balance for a given token
 
@@ -282,7 +282,7 @@ can only be called by the contract owner
 
 - `_amount`:  token amount
 
-# Function `decSystemBalance(contract IERC20Token _token, uint256 _amount)` {#LiquidityProtectionStore-decSystemBalance-contract-IERC20Token-uint256-}
+## Function `decSystemBalance(contract IERC20Token _token, uint256 _amount)` {#LiquidityProtectionStore-decSystemBalance-contract-IERC20Token-uint256-}
 
 decreases the system balance for a given token
 
@@ -294,7 +294,7 @@ can only be called by the contract owner
 
 - `_amount`:  token amount
 
-# Function `totalProtectedPoolAmount(contract IDSToken _poolToken) → uint256` {#LiquidityProtectionStore-totalProtectedPoolAmount-contract-IDSToken-}
+## Function `totalProtectedPoolAmount(contract IDSToken _poolToken) → uint256` {#LiquidityProtectionStore-totalProtectedPoolAmount-contract-IDSToken-}
 
 returns the total protected pool token amount for a given pool
 
@@ -306,7 +306,7 @@ returns the total protected pool token amount for a given pool
 
 - total protected amount
 
-# Function `totalProtectedReserveAmount(contract IDSToken _poolToken, contract IERC20Token _reserveToken) → uint256` {#LiquidityProtectionStore-totalProtectedReserveAmount-contract-IDSToken-contract-IERC20Token-}
+## Function `totalProtectedReserveAmount(contract IDSToken _poolToken, contract IERC20Token _reserveToken) → uint256` {#LiquidityProtectionStore-totalProtectedReserveAmount-contract-IDSToken-contract-IERC20Token-}
 
 returns the total protected reserve amount for a given pool
 
@@ -320,7 +320,7 @@ returns the total protected reserve amount for a given pool
 
 - total protected amount
 
-# Event `ProtectionAdded(address _provider, contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _poolAmount, uint256 _reserveAmount)` {#LiquidityProtectionStore-ProtectionAdded-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
+## Event `ProtectionAdded(address _provider, contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _poolAmount, uint256 _reserveAmount)` {#LiquidityProtectionStore-ProtectionAdded-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
 
 triggered when liquidity protection is added
 
@@ -336,7 +336,7 @@ triggered when liquidity protection is added
 
 - `_reserveAmount`:   amount of reserve tokens
 
-# Event `ProtectionUpdated(address _provider, uint256 _prevPoolAmount, uint256 _prevReserveAmount, uint256 _newPoolAmount, uint256 _newReserveAmount)` {#LiquidityProtectionStore-ProtectionUpdated-address-uint256-uint256-uint256-uint256-}
+## Event `ProtectionUpdated(address _provider, uint256 _prevPoolAmount, uint256 _prevReserveAmount, uint256 _newPoolAmount, uint256 _newReserveAmount)` {#LiquidityProtectionStore-ProtectionUpdated-address-uint256-uint256-uint256-uint256-}
 
 triggered when liquidity protection is updated
 
@@ -352,7 +352,7 @@ triggered when liquidity protection is updated
 
 - `_newReserveAmount`:    new amount of reserve tokens
 
-# Event `ProtectionRemoved(address _provider, contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _poolAmount, uint256 _reserveAmount)` {#LiquidityProtectionStore-ProtectionRemoved-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
+## Event `ProtectionRemoved(address _provider, contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _poolAmount, uint256 _reserveAmount)` {#LiquidityProtectionStore-ProtectionRemoved-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
 
 triggered when liquidity protection is removed
 
@@ -368,7 +368,7 @@ triggered when liquidity protection is removed
 
 - `_reserveAmount`:   amount of reserve tokens
 
-# Event `BalanceLocked(address _provider, uint256 _amount, uint256 _expirationTime)` {#LiquidityProtectionStore-BalanceLocked-address-uint256-uint256-}
+## Event `BalanceLocked(address _provider, uint256 _amount, uint256 _expirationTime)` {#LiquidityProtectionStore-BalanceLocked-address-uint256-uint256-}
 
 triggered when network tokens are locked
 
@@ -380,7 +380,7 @@ triggered when network tokens are locked
 
 - `_expirationTime`:  lock expiration time
 
-# Event `BalanceUnlocked(address _provider, uint256 _amount)` {#LiquidityProtectionStore-BalanceUnlocked-address-uint256-}
+## Event `BalanceUnlocked(address _provider, uint256 _amount)` {#LiquidityProtectionStore-BalanceUnlocked-address-uint256-}
 
 triggered when network tokens are unlocked
 
@@ -390,7 +390,7 @@ triggered when network tokens are unlocked
 
 - `_amount`:      amount of network tokens
 
-# Event `SystemBalanceUpdated(contract IERC20Token _token, uint256 _prevAmount, uint256 _newAmount)` {#LiquidityProtectionStore-SystemBalanceUpdated-contract-IERC20Token-uint256-uint256-}
+## Event `SystemBalanceUpdated(contract IERC20Token _token, uint256 _prevAmount, uint256 _newAmount)` {#LiquidityProtectionStore-SystemBalanceUpdated-contract-IERC20Token-uint256-uint256-}
 
 triggered when the system balance for a given token is updated
 

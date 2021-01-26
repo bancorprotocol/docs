@@ -18,7 +18,7 @@ This contract manages a list of whitelisted addresses.
 
 - [`AddressRemoval(address _address)`](#Whitelist-AddressRemoval-address-)
 
-# Function `isWhitelisted(address _address) → bool` {#Whitelist-isWhitelisted-address-}
+## Function `isWhitelisted(address _address) → bool` {#Whitelist-isWhitelisted-address-}
 
 returns true if a given address is whitelisted, false if not
 
@@ -30,7 +30,7 @@ returns true if a given address is whitelisted, false if not
 
 - true if the address is whitelisted, false if not
 
-# Function `addAddress(address _address)` {#Whitelist-addAddress-address-}
+## Function `addAddress(address _address)` {#Whitelist-addAddress-address-}
 
 adds a given address to the whitelist
 
@@ -38,7 +38,7 @@ adds a given address to the whitelist
 
 - `_address`: address to add
 
-# Function `addAddresses(address[] _addresses)` {#Whitelist-addAddresses-address---}
+## Function `addAddresses(address[] _addresses)` {#Whitelist-addAddresses-address---}
 
 adds a list of addresses to the whitelist
 
@@ -46,7 +46,7 @@ adds a list of addresses to the whitelist
 
 - `_addresses`: addresses to add
 
-# Function `removeAddress(address _address)` {#Whitelist-removeAddress-address-}
+## Function `removeAddress(address _address)` {#Whitelist-removeAddress-address-}
 
 removes a given address from the whitelist
 
@@ -54,7 +54,7 @@ removes a given address from the whitelist
 
 - `_address`: address to remove
 
-# Function `removeAddresses(address[] _addresses)` {#Whitelist-removeAddresses-address---}
+## Function `removeAddresses(address[] _addresses)` {#Whitelist-removeAddresses-address---}
 
 removes a list of addresses from the whitelist
 
@@ -62,7 +62,7 @@ removes a list of addresses from the whitelist
 
 - `_addresses`: addresses to remove
 
-# Event `AddressAddition(address _address)` {#Whitelist-AddressAddition-address-}
+## Event `AddressAddition(address _address)` {#Whitelist-AddressAddition-address-}
 
 triggered when an address is added to the whitelist
 
@@ -70,7 +70,7 @@ triggered when an address is added to the whitelist
 
 - `_address`: address that's added from the whitelist
 
-# Event `AddressRemoval(address _address)` {#Whitelist-AddressRemoval-address-}
+## Event `AddressRemoval(address _address)` {#Whitelist-AddressRemoval-address-}
 
 triggered when an address is removed from the whitelist
 
