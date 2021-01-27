@@ -47,15 +47,15 @@ If there are not sufficient tokens in the pool to fully compensate the LP for im
 
 ![](.gitbook/assets/v21diagram.jpeg)
 
-Impermanent loss insurance accrues over time, by 1% each day, until 100% insurance is achieved at 100 days. There is a 30-day cliff, which means that if a liquidity provider decides to withdraw their position before 30 days passes, they’d incur the same IL experienced in a normal, unprotected AMM. 
+By design, the insurance policies offered by Bancor are earned over time. When a user makes a new deposit, the cover offered by their insurance policy increases at a rate of 1% each day the stake remains live, and matures to full coverage after 100 days. 
 
-An LP who withdraws 100 days after their deposit receives 100% compensation for any loss that occurred in the first 100 days, or anytime thereafter. 
+After this period, any impermanent loss that occurred in the first 100 days or any time thereafter is covered by the protocol at the time of withdrawal. Withdrawals prior to the 100-day maturity are only eligible for partial compensation. For example, withdrawals after 60 days in the pool receive 60% compensation on any impermanent loss incurred. Also, there is no compensation offered at all for stakes withdrawn within the first 30 days.
 
 Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view) and [**economic analysis**](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view).
 
 ## **Could I lose profits before I reach the 30-day cliff**?
 
-Only if you withdraw your tokens befor 30 days in the pool. Impermanent loss insurance starts vesting immediately when you deposit. But you must be in the pool for at least 30 days until the cliff is reached and before the insurance can be utilized.
+Only if you withdraw your tokens before 30 days in the pool. Impermanent loss insurance starts vesting immediately when you deposit. But you must be in the pool for at least 30 days until the cliff is reached and before the insurance can be utilized.
 
 ## **Where can I track returns and see the current coverage on my liquidity pool position?**
 
