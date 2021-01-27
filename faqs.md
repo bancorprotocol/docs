@@ -107,17 +107,13 @@ Funds are sent to a smart contract that keeps record of the liquidity, but you a
 
 Your hardware wallet, like a ledger, is not a storage device; it is an encryption device. So when you 'move' coins into a ledger wallet, you are really just moving them to an address on the blockchain, that can only be decrypted by the ledger. Staking from the ledger just means that the ledger encrypted address will still maintain control of the coins. And interacting with the contract will require the ledger for cryptographic signing. This means that any interaction with the Bancor protocol will require the physical ledger device. i.e it is impossible for a hacker to do anything with your funds without the ledger in their hands.
 
-## I’m ready to stake my tokens as liquidity. What options do I have?
+## I’m ready to stake my tokens as liquidity. How to proceed?
 
-There are two ways to provide liquidity on Bancor - dual sided or single sided.
-
-**1. Single-asset staking \(single-sided exposure\)**: Bancor’s unique design gives you the option to remain 100% long on your favorite token while earning swap fees & liquidity mining rewards. In most liquidity pools, deposits require selling part of the staked tokens for ETH or another “reserve asset” like USDC, exposing the LP to a different asset during the staking period. With Bancor single-asset staking, you do not have to sell part of your tokens and be exposed to another token in the pool.
+**Single-asset staking \(single-sided exposure\)**: Bancor’s unique design gives you the option to remain 100% long on your favorite token while earning swap fees & liquidity mining rewards. In most liquidity pools, deposits require selling part of the staked tokens for ETH or another “reserve asset” like USDC, exposing the LP to a different asset during the staking period. With Bancor single-asset staking, you do not have to sell part of your tokens and be exposed to another token in the pool.
 
 Specifically for single-asset staking of BNT \(or any impermanent loss insurance paid out in BNT\), any BNT being withdrawn from the system is subject to a 24-hour lockup to guarantee the security of the protocol and its pools.
 
-[**You can view a guide by clicking here.**](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
-
-**2. Dual-sided staking \(available in non-whitelisted pools only\):** You provide both sides of the pair. i.e., TKN and BNT for the TKN/BNT pool. The TKNBNT token that you receive in your wallet represents your ownership of the pool, and is burned when you withdraw the associated liquidity from the pool.
+[**You can view a guide by clicking here**](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
 
 ## How does Bancor support single-sided staking?
 
@@ -164,7 +160,7 @@ Please check the [**protection tab**](https://app.bancor.network/eth/protection)
 
 ## What kind of fees can you earn?
 
-If you deposit dual-sided liquidity, you’ll get fees swaps in both direction. For single-sided, you’ll get the swap fees for swaps in one direction. The APY is dependent on trading activity, and fluctuates accordingly, as well as BNT liquidity mining rewards that Bancor governance has approved for distribution to the pool on a weekly basis.
+You will get the swap fees for swaps in one direction. The APY is dependent on trading activity, and fluctuates accordingly, as well as BNT liquidity mining rewards that Bancor governance has approved for distribution to the pool on a weekly basis.
 
 ## How can I see how much I’ve earned?
 
