@@ -210,9 +210,9 @@ Only whitelisted pools are eligible for rewards. Of the rewards pool, the progra
 
 **Large caps:** ETH,WBTC,USDT,USDC,DAI,LINK
 
-**Mid caps:** OCEAN,renBTC
+**Mid caps:** OCEAN, renBTC
 
-REN YFI AAVE & SNX were picked as additional four new mid cap pools for LM rewards.
+REN YFI AAVE & SNX have since been added as additional mid cap pools for LM rewards.
 
 Voting for new tokens to be added to the BNT liquidity mining rewards program is subject to the community and the BancorDAO. 
 
@@ -238,15 +238,15 @@ The rewards from the LM program are provided in BNT only. This is unrelated to t
 
 First, visit the[ Protection Tab](https://app.bancor.network/eth/protection). At the top right side you will see a Rewards dashboard, showing total rewards to date, and the claimable amount you currently can stake or withdraw. From there, you have three options:
 
-1.Stake: You will be able to choose a pool to direct your BNT rewards to. Staking your BNT rewards allows the rewards to earn swap fees and additional rewards, while maintaining bonus multipliers on all live stakes.
+1.Stake: You will be able to choose a pool to direct your BNT rewards to. Staking your BNT rewards allows the rewards to earn swap fees and additional rewards, which can also be staked, while maintaining bonus multipliers on all live stakes.
 
 2. Hold: Holding rewards in the contract has no impact on your bonus multipliers; however, doing so will not generate additional rewards. You can stake or withdraw your rewards from the rewards contract at any time. There is no deadline to take action. 
 
-3.Withdraw: Withdrawing your BNT rewards sends the rewards directly to your wallet and **resets your multipliers to 1x** for _all_ of your existing LP positions. This temporarily reduces your earnings potential on your staked liquidity until the multipliers return.
+3.Withdraw: Withdrawing your BNT rewards sends the rewards directly to your wallet and **resets your multipliers to 1x** on _all of your existing LP positions_. This temporarily reduces your earnings potential on your staked liquidity until the multipliers return.
 
 ## What is the Bonus Rewards Multiplier?
 
-Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. Each position in a liquidity pool has its own multiplier
+Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. Each position in a liquidity pool has its own multiplier. The Bonus Rewards Multiplier \(BRM\) starts at x1 and increases by 0.25 every week. The max possible multiplier is x2, achieved after 4 weeks in a pool.
 
 {% hint style="info" %}
 Withdrawing your BNT rewards or withdrawing liquidity from any pool resets multipliers on **all your live stakes across all pools.** 
@@ -262,10 +262,10 @@ Below we’ll consider a few different scenarios & the theoretical impact on LP 
 
 I stake BNT in the LINK pool
 
-* LINK pool gets 100K BNT rewards per week
-* 70% of rewards \(or 70K BNT\) go to BNT side, 30% of rewards \(or 30K BNT\) go to LINK side 
+* The LINK pool gets 100K BNT rewards per week
+* 70% of rewards \(or 70K BNT\) go to the BNT side, 30% of rewards \(or 30K BNT\) go to the LINK side 
 * My average ownership of the BNT side is 1%
-* My average weekly reward is 1% of 70K BNT, or 700 BNT
+* My average weekly reward is therefore 1% of 70K BNT, or 700 BNT
 
 **Scenario 1**: After 3 weeks in the pool, I withdraw rewards:
 
@@ -286,7 +286,7 @@ I stake BNT in the LINK pool
 * YFI gets 10K in BNT rewards per week
 * My average ownership of the BNT side of the YFI pool is 1%, entitling me to 100 BNT earned continuously per week
 * At the start of week 5, the value of my rewards from the YFI pool is 100 BNT x 4 weeks x 2x multiplier = 800 BNT
-* The combined value of my initial stake in the YFI pool \(11,200 BNT\) + BNT rewards \(800 BNT\) = **12,000 BNT** + swap fees accrued on my initial stake in the YFI pool
+* Thus, the combined value of my initial stake in the YFI pool \(11,200 BNT\) + BNT rewards \(800 BNT\) = **12,000 BNT** \(+ swap fees accrued on my initial stake in the YFI pool\)
 
 ## Do I need to stake or withdraw the rewards on a weekly basis?
 
