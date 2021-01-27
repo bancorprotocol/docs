@@ -241,7 +241,7 @@ You will have to wait for four weeks to get the 2x multiplier into full effect a
 
 ## How does the Bonus Rewards Multiplier work?
 
-The Bonus Rewards Multiplier \(BRM\) starts at x1 and increases by 0.25 every week. The max possible multiplier is x2, achieved after 4 weeks in a pool. The BRM is applied retroactively - e.g., if the LP chooses to withdraw rewards after 4 weeks, and the base weekly reward is 100 BNT, then accumulated rewards after 4 weeks will be 100 BNT \* 2 BRM \* 4 weeks = 800 BNT.
+The Bonus Rewards Multiplier \(BRM\) starts at x1 and increases by 0.25 every week. The max possible multiplier is x2, achieved after 4 weeks in a pool. The BRM is applied retroactively - e.g., if the LP chooses to withdraw rewards after 4 weeks, and the base weekly reward is 100 BNT, then accumulated rewards at the start of week 5 will be 100 BNT \* 2 BRM \* 4 weeks = 800 BNT.
 
 Below we’ll consider a few different scenarios & the theoretical impact on LP returns. 
 
@@ -268,10 +268,10 @@ I stake BNT in the LINK pool
 
 * I take my 11,200 BNT \(rewards from the LINK pool\) and stake it in the YFI pool
 * This opens a 11,200 BNT initial stake in the YFI pool
-* YFI gets 10K rewards per week
-* My average ownership of the BNT side of the YFI pool is 1%, entitling me to 100 BNT per week
-* The value of my rewards from the YFI pool is 100 BNT x 5 weeks x 2x multiplier = 1000 BNT
-* The combined value of my initial stake in the YFI pool \(11,200 BNT\) + BNT rewards \(1000 BNT\) = **12,200 BNT** + swap fees accrued on my initial stake in the YFI pool
+* YFI gets 10K in BNT rewards per week
+* My average ownership of the BNT side of the YFI pool is 1%, entitling me to 100 BNT earned continuously per week
+* At the start of week 5, the value of my rewards from the YFI pool is 100 BNT x 4 weeks x 2x multiplier = 800 BNT
+* The combined value of my initial stake in the YFI pool \(11,200 BNT\) + BNT rewards \(800 BNT\) = **12,000 BNT** + swap fees accrued on my initial stake in the YFI pool
 
 ## Do I need to stake or withdraw the rewards on a weekly basis?
 
