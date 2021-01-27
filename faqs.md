@@ -89,7 +89,7 @@ Only pools voted into the Bancor v2.1 whitelist by Bancor governance are eligibl
 
 ## How do I stake in the Bancor protocol?
 
-You can swap or stake with Bancor protocol on bancor.network or any site integrated with Bancor smart contracts. Users connect via Web3 wallets such as MetaMask. Make sure your wallet is connected by checking the connection status in the upper right-hand corner of bancor.network.
+You can swap or stake with Bancor protocol on [bancor.network](https://app.bancor.network/eth/data) or any site integrated with Bancor smart contracts. Users connect via Web3 wallets such as MetaMask. Make sure your wallet is connected by checking the connection status in the upper right-hand corner of bancor.network.
 
 [**A video tutorial can be found here**](https://youtu.be/3P4vKIHcdas?t=477)\*\*\*\*
 
@@ -117,13 +117,28 @@ Specifically for single-asset staking of BNT \(or any impermanent loss insurance
 
 [**You can view a guide by clicking here.**](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
 
-**2. Dual-sided staking:** You provide both sides of the pair. i.e., LINK and BNT for the LINK/BNT pool. If you provide dual-sided liquidity, please make sure you protect the position via the [protection tab](https://app.bancor.network/eth/protection) “Stake” button to get impermanent loss insurance. The LINKBNT token that you received in your wallet should ultimately be sent to the pool’s protection contract.
+**2. Dual-sided staking \(available in non-whitelisted pools only\):** You provide both sides of the pair. i.e., TKN and BNT for the TKN/BNT pool. The TKNBNT token that you receive in your wallet represents your ownership of the pool, and is burned when you withdraw the associated liquidity from the pool.
+
+## How does Bancor support single-sided staking?
+
+When a user deposits single-sided liquidity into a pool, the process to support such a deposit is as follows. \("TKN" is used to represent any ERC20 token whitelisted in Bancor v2.1\).
+
+* To match user deposits of single-sided TKN, new BNT is co-invested by the protocol into the TKN pool \(e.g., a $100K deposit of LINK triggers $100K of BNT emissions into the LINK pool\).
+* Protocol-invested BNT is minted into the pools and not onto the external market.
+* The BNT remains in the pools and earns fees until the BNT and its accrued fees are eventually burned.
+* The burning of protocol-invested BNT and its associated fees happens when the TKN provider withdraws their deposit, or when a BNT holder stakes their BNT in the pool, taking over the protocol’s position.
+
+Co-investment limits, which are governed by the BancorDAO, determine the number of BNT that can be emitted by the protocol into a given pool to support single-sided TKN deposits.
+
+{% hint style="info" %}
+It should be noted that BNT emitted by the protocol doesn’t enter the open market unless prices significantly change. Instead, this BNT is sent directly into the protocol’s pools, and generally stays within the protocol earning fees until it is burned. Further analysis of these mechanics and the impact on BNT supply can be found in Bancor's [**protocol health report**](https://blog.bancor.network/bancor-v2-1-protocol-health-report-january-2020-83338c904de0) ****_\(December 2020\)_.
+{% endhint %}
 
 ## Why is there no space available for my tokens in certain pools?
 
 The option to provide single-sided liquidity is available only if there’s sufficient space on the other side of the pair, which is BNT. 
 
-If there is not enough space in a given pool for providing single-sided ERC20 liquidity, an LP has two options: provide BNT to open up space, or provide dual-sided liquidity \(BNT + ERC20\).
+If there is not enough space in a given pool for providing single-sided ERC20 liquidity, an LP has two options: provide BNT to open up space, wait until another user provides BNT to open space, or work with governance to increase the pool's BNT co-investment limit.
 
 ## How much ETH do I need to pay to stake in a Bancor pool? 
 
