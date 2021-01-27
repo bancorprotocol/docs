@@ -153,7 +153,7 @@ If you deposit dual-sided liquidity, you’ll get fees swaps in both direction. 
 
 ## How can I see how much I’ve earned?
 
-Please refer to the “Fees” column in the [**Protection tab**](https://app.bancor.network/eth/protection)**.**
+Please refer to the “Fees + Rewards” column in the [**Protection tab**](https://app.bancor.network/eth/protection)**.**
 
 ## How do pools become profitable for liquidity providers?
 
@@ -161,9 +161,13 @@ As a pool increases in size and more liquidity is added, it attracts more swaps 
 
 ## Why is APR changing & how is it calculated?
 
-The APR \(or annual percentage return\) depends on how many swaps are executed in the pool within a given time frame. The more swaps, the higher the APR will be, and vice versa. On bancor.network, these fees are measured on are measured within a given time frame \(1-day, 7-day and 1-month\), divided by current liquidity in the pool, and then annualized. For example if there are $30,000 worth of fees in a pool with $10M liquidity over the course of 7 days. The APR is $30,000 / $10,000,000 \* 100 \* 52 weeks = 15.6%. 
+APR in the [Data table](https://app.bancor.network/eth/data/) refers to annual percentage returns specifically from swap fees.
 
-APR from BNT Liquidity Mining is measured similarly. BNT distributed to the pool in a given week, divided by liquidity, and then annualized.
+The APR depends on how many swaps are executed in the pool within a given time frame. The more swaps, the higher the APR will be, and vice versa. On bancor.network, these fees are measured within a given time frame \(1-day, 7-day and 1-month\), divided by current liquidity in the pool, and then annualized. For example if there are $30,000 worth of fees in a pool with $10M liquidity over the course of 7 days. The APR is $30,000 / $10,000,000 \* 100 \* 52 weeks = 15.6%. 
+
+APR from BNT Liquidity Mining is measured similarly. BNT distributed to the pool in a given week, divided by liquidity, and then annualized. This metric can be viewed in the "Rewards" column in the Data table.
+
+
 
 ## 3. BNT Liquidity Mining
 
@@ -217,19 +221,63 @@ The rewards from the LM program are provided in BNT only. This is unrelated to t
 
 ## How can I see, stake or withdraw BNT rewards?
 
-First, visit the[ Protection Tab](https://app.bancor.network/eth/protection). At the top right side you will see a Rewards dashboard, showing total rewards to date, and the claimable amount you currently can stake or withdraw. From there, you have two options:
+First, visit the[ Protection Tab](https://app.bancor.network/eth/protection). At the top right side you will see a Rewards dashboard, showing total rewards to date, and the claimable amount you currently can stake or withdraw. From there, you have three options:
 
 1.Stake: You will be able to choose a pool to direct your BNT rewards to. Staking your BNT rewards allows the rewards to earn swap fees and additional rewards, while maintaining bonus multipliers on all live stakes.
 
-2.Withdraw: Withdrawing your BNT rewards sends the rewards directly to your wallet and **resets your multipliers to 1x** for _all_ of your existing LP positions. This temporarily reduces your earnings potential on your staked liquidity until the multipliers return.
+2. Hold: Holding rewards in the contract has no impact on your bonus multipliers; however, doing so will not generate additional rewards. You can stake or withdraw your rewards from the rewards contract at any time. There is no deadline to take action. 
 
-## What is the rewards “multiplier”?
+3.Withdraw: Withdrawing your BNT rewards sends the rewards directly to your wallet and **resets your multipliers to 1x** for _all_ of your existing LP positions. This temporarily reduces your earnings potential on your staked liquidity until the multipliers return.
 
-Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. Withdrawing your BNT rewards or withdrawing liquidity from any pool resets multipliers on all your live stakes across all pools You will have to wait for four weeks to get the 2x multiplier into full effect again \(0.25x added each week\).
+## What is the Bonus Rewards Multiplier?
+
+Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. Each position in a liquidity pool has its own multiplier
+
+{% hint style="info" %}
+Withdrawing your BNT rewards or withdrawing liquidity from any pool resets multipliers on **all your live stakes across all pools.** 
+
+You will have to wait for four weeks to get the 2x multiplier into full effect again \(0.25x added each week\).
+{% endhint %}
+
+## How does the Bonus Rewards Multiplier work?
+
+The Bonus Rewards Multiplier \(BRM\) starts at x1 and increases by 0.25 every week. The max possible multiplier is x2, achieved after 4 weeks in a pool. The BRM is applied retroactively - e.g., if the LP chooses to withdraw rewards after 4 weeks, and the base weekly reward is 100 BNT, then accumulated rewards after 4 weeks will be 100 BNT \* 2 BRM \* 4 weeks = 800 BNT.
+
+Below we’ll consider a few different scenarios & the theoretical impact on LP returns. 
+
+I stake BNT in the LINK pool
+
+* LINK pool gets 100K BNT rewards per week
+* 70% of rewards \(or 70K BNT\) go to BNT side, 30% of rewards \(or 30K BNT\) go to LINK side 
+* My average ownership of the BNT side is 1%
+* My average weekly reward is 1% of 70K BNT, or 700 BNT
+
+**Scenario 1**: After 3 weeks in the pool, I withdraw rewards:
+
+* I’m entitled to 3wks x 700 BNT = 2,100 BNT
+* Since I was in the pool for 3 weeks, I get a 1.75x multiplier on my rewards
+* I'm entitled withdraw 2,100 BNT rewards x 1.75 multiplier = **3,675 BNT**
+
+**Scenario 2:** After 8 weeks, I withdraw rewards:
+
+* I’m entitled to 8wks x 700 BNT = 5,600 BNT
+* Since I was in the pool for more than 4 weeks, I get a 2x multiplier on my rewards
+* I'm entitled to withdraw 5,600 BNT rewards x 2 multiplier = **11,200 BNT**
+
+**Scenario 3**: After 8 weeks in the LINK pool, I stake my earned BNT rewards to the YFI pool for 5 weeks:
+
+* I take my 11,200 BNT \(rewards from the LINK pool\) and stake it in the YFI pool
+* This opens a 11,200 BNT initial stake in the YFI pool
+* YFI gets 10K rewards per week
+* My average ownership of the BNT side of the YFI pool is 1%, entitling me to 100 BNT per week
+* The value of my rewards from the YFI pool is 100 BNT x 5 weeks x 2x multiplier = 1000 BNT
+* The combined value of my initial stake in the YFI pool \(11,200 BNT\) + BNT rewards \(1000 BNT\) = **12,200 BNT** + swap fees accrued on my initial stake in the YFI pool
 
 ## Do I need to stake or withdraw the rewards on a weekly basis?
 
-No, the rewards are earned continuously on your initial stake. You can stake or withdraw your rewards from the rewards contract at any time. There is no deadline to take action. Holding rewards in the contract has no impact on your bonus multipliers. However, simply holding rewards in the contract and not staking them does not generate compounded yield / additional rewards.
+No, the rewards are earned continuously on your initial stake per block. You can stake or withdraw your rewards from the rewards contract at any time. There is no deadline to take action. 
+
+Keep in mind holding rewards in the contract has no impact on your bonus multipliers; however, simply holding rewards in the contract and not staking them means you are not earning compounded yield / additional rewards.
 
 ## 4. Pool management
 
