@@ -209,27 +209,27 @@ _AAVE, ALEPH, ANT, BAL, BAND, BAT, BNB, BUSD, BZRX, CEL, CHERRY, COMP, CRO, CRV,
 
 ## How are BNT liquidity mining rewards distributed?
 
-BNT liquidity mining rewards will be distributed as follows: 70% to the BNT side of the liquidity pool and 30% to the base ERC20 token side of the pool. Rewards are distributed continuously since January.
+BNT liquidity mining rewards will be distributed as follows: 70% to the BNT side of the liquidity pool and 30% to the base ERC20 token side of the pool. Rewards are distributed continuously per block.
 
 ## What token do I receive the rewards in?
 
-The rewards from the LM program are provided in BNT only. This is unrelated to the swap fees, which comes from trading activity on that pool.
+The rewards from the LM program are provided in BNT only. This is unrelated to the swap fees, which comes from trading activity on that pool and may be received in the staked token.
 
-## How can I claim the rewards?
+## How can I see, stake or withdraw BNT rewards?
 
-First, visit the[ Protection Tab](https://app.bancor.network/eth/protection). At the top right side you will see a Rewards dashboard, showing total rewards to date, and the claimable amount you currently can re-stake or withdraw. From there, you have two options:
+First, visit the[ Protection Tab](https://app.bancor.network/eth/protection). At the top right side you will see a Rewards dashboard, showing total rewards to date, and the claimable amount you currently can stake or withdraw. From there, you have two options:
 
-1.Re-stake: You will be able to choose a pool to direct your BNT rewards to. Re-staking your BNT rewards allow the rewards to earn swap fees and additional rewards, while maintaining the **2x multiplier**.
+1.Stake: You will be able to choose a pool to direct your BNT rewards to. Staking your BNT rewards allows the rewards to earn swap fees and additional rewards, while maintaining bonus multipliers on all live stakes.
 
-2.Withdraw: Withdrawing the rewards directly to your wallet, **resetting your multiplier** for all of your existing LP positions, cutting your APY% by half.
+2.Withdraw: Withdrawing your BNT rewards sends the rewards directly to your wallet and **resets your multipliers to 1x** for _all_ of your existing LP positions. This temporarily reduces your earnings potential on your staked liquidity until the multipliers return.
 
 ## What is the rewards “multiplier”?
 
-Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. If you reset your multiplier by withdrawing your BNT rewards or by withdrawing your LP position, you will have to wait for four weeks to get the 2x multiplier into full effect again \(0.25x added each week\).
+Liquidity providers who keep their rewards staked to the protocol receive a “Bonus Rewards Multiplier”, which increases their BNT rewards by up to x2 per week. Withdrawing your BNT rewards or withdrawing liquidity from any pool resets multipliers on all your live stakes across all pools You will have to wait for four weeks to get the 2x multiplier into full effect again \(0.25x added each week\).
 
-## Do I must restake or withdraw the rewards on a weekly basis?
+## Do I need to stake or withdraw the rewards on a weekly basis?
 
-No, the rewards are earned continuously. You can leave them untouched and continue receiving rewards and bonuses for the duration of the rewards program. The purpose of re-staking is to compound your gains. Re-staking your BNT rewards allows the rewards them to earn swap fees and additional rewards, without having any impact on the bonus multipliers of your live stakes.
+No, the rewards are earned continuously on your initial stake. You can stake or withdraw your rewards from the rewards contract at any time. There is no deadline to take action. Holding rewards in the contract has no impact on your bonus multipliers. However, simply holding rewards in the contract and not staking them does not generate compounded yield / additional rewards.
 
 ## 4. Pool management
 
