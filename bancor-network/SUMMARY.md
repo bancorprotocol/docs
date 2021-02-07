@@ -100,6 +100,11 @@
   * [XTransferRerouter](../eos-contracts/eos-api-reference/xtransferrerouter/README.md)
     * [Settings Table](../eos-contracts/eos-api-reference/xtransferrerouter/settings-table.md)
 
+## REST API
+
+* [Overview](../rest-api/overview.md)
+* [API Reference](../rest-api/api-reference.md)
+
 ## SDK
 
 * [Using the Bancor SDK](../sdk/using-the-bancor-sdk.md)
@@ -117,9 +122,4 @@
     * [Token](../sdk/sdk-api-reference/interfaces/token.md)
   * [Enums](../sdk/sdk-api-reference/enums/README.md)
     * [BlockchainType](../sdk/sdk-api-reference/enums/blockchaintype.md)
-
-## REST API
-
-* [Overview](../rest-api/overview.md)
-* [API Reference](../rest-api/api-reference.md)
 
