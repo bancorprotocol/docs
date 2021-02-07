@@ -6,7 +6,7 @@ Tokens
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Returns all tradable tokens in the Bancor Network.  
+Returns all tradable tokens in the Bancor Network, along with their metadata, liquidity, volume and pricing info.  
 You can provide an optional filter in order to only receive data for a specific token.
 {% endapi-method-description %}
 
@@ -65,7 +65,7 @@ Pools
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Returns all pools in the Bancor Network.  
+Returns all pools in the Bancor Network, along with their metadata, liquidity, volume and pricing info.  
 You can provide an optional filter in order to only receive data for a specific pool.
 {% endapi-method-description %}
 
