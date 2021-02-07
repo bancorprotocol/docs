@@ -59,7 +59,7 @@ token id \(address\)
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://api-v2.bancor.network/Pools" path="" %}
+{% api-method method="get" host="https://api-v2.bancor.network" path="/tokens" %}
 {% api-method-summary %}
 Pools
 {% endapi-method-summary %}
