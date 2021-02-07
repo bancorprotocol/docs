@@ -6,6 +6,14 @@
 
 - [`isPoolWhitelisted(contract IConverterAnchor _poolAnchor)`](#ILiquidityProtectionSettings-isPoolWhitelisted-contract-IConverterAnchor-)
 
+- [`poolWhitelist()`](#ILiquidityProtectionSettings-poolWhitelist--)
+
+- [`addSubscriber(contract ILiquidityProtectionEventsSubscriber _subscriber)`](#ILiquidityProtectionSettings-addSubscriber-contract-ILiquidityProtectionEventsSubscriber-)
+
+- [`removeSubscriber(contract ILiquidityProtectionEventsSubscriber _subscriber)`](#ILiquidityProtectionSettings-removeSubscriber-contract-ILiquidityProtectionEventsSubscriber-)
+
+- [`subscribers()`](#ILiquidityProtectionSettings-subscribers--)
+
 - [`isPoolSupported(contract IConverterAnchor _poolAnchor)`](#ILiquidityProtectionSettings-isPoolSupported-contract-IConverterAnchor-)
 
 - [`minNetworkTokenLiquidityForMinting()`](#ILiquidityProtectionSettings-minNetworkTokenLiquidityForMinting--)
@@ -14,11 +22,9 @@
 
 - [`networkTokenMintingLimits(contract IConverterAnchor _poolAnchor)`](#ILiquidityProtectionSettings-networkTokenMintingLimits-contract-IConverterAnchor-)
 
-- [`networkTokensMinted(contract IConverterAnchor _poolAnchor)`](#ILiquidityProtectionSettings-networkTokensMinted-contract-IConverterAnchor-)
+- [`addLiquidityDisabled(contract IConverterAnchor _poolAnchor, contract IERC20Token _reserveToken)`](#ILiquidityProtectionSettings-addLiquidityDisabled-contract-IConverterAnchor-contract-IERC20Token-)
 
-- [`incNetworkTokensMinted(contract IConverterAnchor _poolAnchor, uint256 _amount)`](#ILiquidityProtectionSettings-incNetworkTokensMinted-contract-IConverterAnchor-uint256-)
-
-- [`decNetworkTokensMinted(contract IConverterAnchor _poolAnchor, uint256 _amount)`](#ILiquidityProtectionSettings-decNetworkTokensMinted-contract-IConverterAnchor-uint256-)
+- [`disableAddLiquidity(contract IConverterAnchor _poolAnchor, contract IERC20Token _reserveToken, bool _disable)`](#ILiquidityProtectionSettings-disableAddLiquidity-contract-IConverterAnchor-contract-IERC20Token-bool-)
 
 - [`minProtectionDelay()`](#ILiquidityProtectionSettings-minProtectionDelay--)
 
@@ -50,6 +56,22 @@ No description
 
 No description
 
+## Function `poolWhitelist() → address[]` {#ILiquidityProtectionSettings-poolWhitelist--}
+
+No description
+
+## Function `addSubscriber(contract ILiquidityProtectionEventsSubscriber _subscriber)` {#ILiquidityProtectionSettings-addSubscriber-contract-ILiquidityProtectionEventsSubscriber-}
+
+No description
+
+## Function `removeSubscriber(contract ILiquidityProtectionEventsSubscriber _subscriber)` {#ILiquidityProtectionSettings-removeSubscriber-contract-ILiquidityProtectionEventsSubscriber-}
+
+No description
+
+## Function `subscribers() → address[]` {#ILiquidityProtectionSettings-subscribers--}
+
+No description
+
 ## Function `isPoolSupported(contract IConverterAnchor _poolAnchor) → bool` {#ILiquidityProtectionSettings-isPoolSupported-contract-IConverterAnchor-}
 
 No description
@@ -66,15 +88,11 @@ No description
 
 No description
 
-## Function `networkTokensMinted(contract IConverterAnchor _poolAnchor) → uint256` {#ILiquidityProtectionSettings-networkTokensMinted-contract-IConverterAnchor-}
+## Function `addLiquidityDisabled(contract IConverterAnchor _poolAnchor, contract IERC20Token _reserveToken) → bool` {#ILiquidityProtectionSettings-addLiquidityDisabled-contract-IConverterAnchor-contract-IERC20Token-}
 
 No description
 
-## Function `incNetworkTokensMinted(contract IConverterAnchor _poolAnchor, uint256 _amount)` {#ILiquidityProtectionSettings-incNetworkTokensMinted-contract-IConverterAnchor-uint256-}
-
-No description
-
-## Function `decNetworkTokensMinted(contract IConverterAnchor _poolAnchor, uint256 _amount)` {#ILiquidityProtectionSettings-decNetworkTokensMinted-contract-IConverterAnchor-uint256-}
+## Function `disableAddLiquidity(contract IConverterAnchor _poolAnchor, contract IERC20Token _reserveToken, bool _disable)` {#ILiquidityProtectionSettings-disableAddLiquidity-contract-IConverterAnchor-contract-IERC20Token-bool-}
 
 No description
 

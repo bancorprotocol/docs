@@ -80,7 +80,7 @@ optimized for a liquidity pool that has 2 reserves with 50%/50% weights.
 
 - [`LiquidityRemoved(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)`](#StandardPoolConverter-LiquidityRemoved-address-contract-IERC20Token-uint256-uint256-uint256-)
 
-# Function `constructor(contract IConverterAnchor _anchor, contract IContractRegistry _registry, uint32 _maxConversionFee)` {#StandardPoolConverter-constructor-contract-IConverterAnchor-contract-IContractRegistry-uint32-}
+## Function `constructor(contract IConverterAnchor _anchor, contract IContractRegistry _registry, uint32 _maxConversionFee)` {#StandardPoolConverter-constructor-contract-IConverterAnchor-contract-IContractRegistry-uint32-}
 
 initializes a new StandardPoolConverter instance
 
@@ -92,7 +92,7 @@ initializes a new StandardPoolConverter instance
 
 - `_maxConversionFee`:   maximum conversion fee, represented in ppm
 
-# Function `converterType() → uint16` {#StandardPoolConverter-converterType--}
+## Function `converterType() → uint16` {#StandardPoolConverter-converterType--}
 
 returns the converter type
 
@@ -100,13 +100,13 @@ returns the converter type
 
 - see the converter types in the the main contract doc
 
-# Function `receive()` {#StandardPoolConverter-receive--}
+## Function `receive()` {#StandardPoolConverter-receive--}
 
 deposits ether
 
 can only be called if the converter has an ETH reserve
 
-# Function `withdrawETH(address payable _to)` {#StandardPoolConverter-withdrawETH-address-payable-}
+## Function `withdrawETH(address payable _to)` {#StandardPoolConverter-withdrawETH-address-payable-}
 
 withdraws ether
 
@@ -120,7 +120,7 @@ can only be called if the converter has an ETH reserve
 
 - `_to`:  address to send the ETH to
 
-# Function `isV28OrHigher() → bool` {#StandardPoolConverter-isV28OrHigher--}
+## Function `isV28OrHigher() → bool` {#StandardPoolConverter-isV28OrHigher--}
 
 checks whether or not the converter version is 28 or higher
 
@@ -128,7 +128,7 @@ checks whether or not the converter version is 28 or higher
 
 - since the converter version is 28 or higher
 
-# Function `isActive() → bool` {#StandardPoolConverter-isActive--}
+## Function `isActive() → bool` {#StandardPoolConverter-isActive--}
 
 returns true if the converter is active, false otherwise
 
@@ -136,7 +136,7 @@ returns true if the converter is active, false otherwise
 
 - true if the converter is active, false otherwise
 
-# Function `transferAnchorOwnership(address _newOwner)` {#StandardPoolConverter-transferAnchorOwnership-address-}
+## Function `transferAnchorOwnership(address _newOwner)` {#StandardPoolConverter-transferAnchorOwnership-address-}
 
 transfers the anchor ownership
 
@@ -150,7 +150,7 @@ note that prior to version 28, you should use 'transferAnchorOwnership' instead
 
 - `_newOwner`:    new token owner
 
-# Function `acceptAnchorOwnership()` {#StandardPoolConverter-acceptAnchorOwnership--}
+## Function `acceptAnchorOwnership()` {#StandardPoolConverter-acceptAnchorOwnership--}
 
 accepts ownership of the anchor after an ownership transfer
 
@@ -160,7 +160,7 @@ can only be called by the contract owner
 
 note that prior to version 28, you should use 'acceptTokenOwnership' instead
 
-# Function `setConversionFee(uint32 _conversionFee)` {#StandardPoolConverter-setConversionFee-uint32-}
+## Function `setConversionFee(uint32 _conversionFee)` {#StandardPoolConverter-setConversionFee-uint32-}
 
 updates the current conversion fee
 
@@ -170,7 +170,7 @@ can only be called by the contract owner
 
 - `_conversionFee`: new conversion fee, represented in ppm
 
-# Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#StandardPoolConverter-withdrawTokens-contract-IERC20Token-address-uint256-}
+## Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#StandardPoolConverter-withdrawTokens-contract-IERC20Token-address-uint256-}
 
 withdraws tokens held by the converter and sends them to an account
 
@@ -188,7 +188,7 @@ unless the owner is the converter upgrader contract
 
 - `_amount`:  amount to withdraw
 
-# Function `upgrade()` {#StandardPoolConverter-upgrade--}
+## Function `upgrade()` {#StandardPoolConverter-upgrade--}
 
 upgrades the converter to the latest version
 
@@ -196,7 +196,7 @@ can only be called by the owner
 
 note that the owner needs to call acceptOwnership on the new converter after the upgrade
 
-# Function `reserveTokenCount() → uint16` {#StandardPoolConverter-reserveTokenCount--}
+## Function `reserveTokenCount() → uint16` {#StandardPoolConverter-reserveTokenCount--}
 
 returns the number of reserve tokens
 
@@ -206,7 +206,7 @@ note that prior to version 17, you should use 'connectorTokenCount' instead
 
 - number of reserve tokens
 
-# Function `reserveTokens() → contract IERC20Token[]` {#StandardPoolConverter-reserveTokens--}
+## Function `reserveTokens() → contract IERC20Token[]` {#StandardPoolConverter-reserveTokens--}
 
 returns the array of reserve tokens
 
@@ -214,7 +214,7 @@ returns the array of reserve tokens
 
 - array of reserve tokens
 
-# Function `addReserve(contract IERC20Token _token, uint32 _weight)` {#StandardPoolConverter-addReserve-contract-IERC20Token-uint32-}
+## Function `addReserve(contract IERC20Token _token, uint32 _weight)` {#StandardPoolConverter-addReserve-contract-IERC20Token-uint32-}
 
 defines a new reserve token for the converter
 
@@ -226,7 +226,7 @@ can only be called by the owner while the converter is inactive
 
 - `_weight`:  reserve weight, represented in ppm, 1-1000000
 
-# Function `reserveWeight(contract IERC20Token _reserveToken) → uint32` {#StandardPoolConverter-reserveWeight-contract-IERC20Token-}
+## Function `reserveWeight(contract IERC20Token _reserveToken) → uint32` {#StandardPoolConverter-reserveWeight-contract-IERC20Token-}
 
 returns the reserve's weight
 
@@ -240,7 +240,7 @@ added in version 28
 
 - reserve weight
 
-# Function `reserveBalance(contract IERC20Token _reserveToken) → uint256` {#StandardPoolConverter-reserveBalance-contract-IERC20Token-}
+## Function `reserveBalance(contract IERC20Token _reserveToken) → uint256` {#StandardPoolConverter-reserveBalance-contract-IERC20Token-}
 
 returns the balance of a given reserve token
 
@@ -252,7 +252,7 @@ returns the balance of a given reserve token
 
 - the balance of the given reserve token
 
-# Function `reserveBalances() → uint256, uint256` {#StandardPoolConverter-reserveBalances--}
+## Function `reserveBalances() → uint256, uint256` {#StandardPoolConverter-reserveBalances--}
 
 returns the balances of both reserve tokens
 
@@ -260,7 +260,7 @@ returns the balances of both reserve tokens
 
 - the balances of both reserve tokens
 
-# Function `convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary) → uint256` {#StandardPoolConverter-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-}
+## Function `convert(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, address _trader, address payable _beneficiary) → uint256` {#StandardPoolConverter-convert-contract-IERC20Token-contract-IERC20Token-uint256-address-address-payable-}
 
 converts a specific amount of source tokens to target tokens
 
@@ -282,7 +282,7 @@ can only be called by the bancor network contract
 
 - amount of tokens received (in units of the target token)
 
-# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#StandardPoolConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
+## Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#StandardPoolConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
 
 returns the expected target amount of converting one reserve to another along with the fee
 
@@ -300,7 +300,7 @@ returns the expected target amount of converting one reserve to another along wi
 
 - expected fee
 
-# Function `recentAverageRate(contract IERC20Token _token) → uint256, uint256` {#StandardPoolConverter-recentAverageRate-contract-IERC20Token-}
+## Function `recentAverageRate(contract IERC20Token _token) → uint256, uint256` {#StandardPoolConverter-recentAverageRate-contract-IERC20Token-}
 
 returns the recent average rate of 1 `_token` in the other reserve token units
 
@@ -314,7 +314,7 @@ returns the recent average rate of 1 `_token` in the other reserve token units
 
 - recent average rate between the reserves (denominator)
 
-# Function `addLiquidity(uint256 _reserve1Amount, uint256 _reserve2Amount, uint256 _minReturn) → uint256` {#StandardPoolConverter-addLiquidity-uint256-uint256-uint256-}
+## Function `addLiquidity(uint256 _reserve1Amount, uint256 _reserve2Amount, uint256 _minReturn) → uint256` {#StandardPoolConverter-addLiquidity-uint256-uint256-uint256-}
 
 increases the pool's liquidity and mints new shares in the pool to the caller
 
@@ -332,7 +332,7 @@ this version receives the two reserve amounts as separate args
 
 - amount of pool tokens issued
 
-# Function `addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn) → uint256` {#StandardPoolConverter-addLiquidity-contract-IERC20Token---uint256---uint256-}
+## Function `addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn) → uint256` {#StandardPoolConverter-addLiquidity-contract-IERC20Token---uint256---uint256-}
 
 increases the pool's liquidity and mints new shares in the pool to the caller
 
@@ -348,7 +348,7 @@ increases the pool's liquidity and mints new shares in the pool to the caller
 
 - amount of pool tokens issued
 
-# Function `removeLiquidity(uint256 _amount, uint256 _reserve1MinReturn, uint256 _reserve2MinReturn) → uint256, uint256` {#StandardPoolConverter-removeLiquidity-uint256-uint256-uint256-}
+## Function `removeLiquidity(uint256 _amount, uint256 _reserve1MinReturn, uint256 _reserve2MinReturn) → uint256, uint256` {#StandardPoolConverter-removeLiquidity-uint256-uint256-uint256-}
 
 decreases the pool's liquidity and burns the caller's shares in the pool
 
@@ -368,7 +368,7 @@ this version receives the two minimum return amounts as separate args
 
 - the second reserve amount returned
 
-# Function `removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts) → uint256[]` {#StandardPoolConverter-removeLiquidity-uint256-contract-IERC20Token---uint256---}
+## Function `removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts) → uint256[]` {#StandardPoolConverter-removeLiquidity-uint256-contract-IERC20Token---uint256---}
 
 decreases the pool's liquidity and burns the caller's shares in the pool
 
@@ -384,7 +384,7 @@ decreases the pool's liquidity and burns the caller's shares in the pool
 
 - the amount of each reserve token granted for the given amount of pool tokens
 
-# Function `addLiquidityCost(contract IERC20Token[] _reserveTokens, uint256 _reserveTokenIndex, uint256 _reserveAmount) → uint256[]` {#StandardPoolConverter-addLiquidityCost-contract-IERC20Token---uint256-uint256-}
+## Function `addLiquidityCost(contract IERC20Token[] _reserveTokens, uint256 _reserveTokenIndex, uint256 _reserveAmount) → uint256[]` {#StandardPoolConverter-addLiquidityCost-contract-IERC20Token---uint256-uint256-}
 
 given the amount of one of the reserve tokens to add liquidity of,
 
@@ -406,7 +406,7 @@ this function assumes that the pool is not empty (has already been funded)
 
 - the required amount of each one of the reserve tokens
 
-# Function `addLiquidityReturn(contract IERC20Token _reserveToken, uint256 _reserveAmount) → uint256` {#StandardPoolConverter-addLiquidityReturn-contract-IERC20Token-uint256-}
+## Function `addLiquidityReturn(contract IERC20Token _reserveToken, uint256 _reserveAmount) → uint256` {#StandardPoolConverter-addLiquidityReturn-contract-IERC20Token-uint256-}
 
 given the amount of one of the reserve tokens to add liquidity of,
 
@@ -426,7 +426,7 @@ this function assumes that the pool is not empty (has already been funded)
 
 - the amount of pool tokens entitled
 
-# Function `removeLiquidityReturn(uint256 _amount, contract IERC20Token[] _reserveTokens) → uint256[]` {#StandardPoolConverter-removeLiquidityReturn-uint256-contract-IERC20Token---}
+## Function `removeLiquidityReturn(uint256 _amount, contract IERC20Token[] _reserveTokens) → uint256[]` {#StandardPoolConverter-removeLiquidityReturn-uint256-contract-IERC20Token---}
 
 returns the amount of each reserve token entitled for a given amount of pool tokens
 
@@ -440,39 +440,39 @@ returns the amount of each reserve token entitled for a given amount of pool tok
 
 - the amount of each reserve token entitled for the given amount of pool tokens
 
-# Function `token() → contract IConverterAnchor` {#StandardPoolConverter-token--}
+## Function `token() → contract IConverterAnchor` {#StandardPoolConverter-token--}
 
 deprecated since version 28, backward compatibility - use only for earlier versions
 
-# Function `transferTokenOwnership(address _newOwner)` {#StandardPoolConverter-transferTokenOwnership-address-}
+## Function `transferTokenOwnership(address _newOwner)` {#StandardPoolConverter-transferTokenOwnership-address-}
 
 deprecated, backward compatibility
 
-# Function `acceptTokenOwnership()` {#StandardPoolConverter-acceptTokenOwnership--}
+## Function `acceptTokenOwnership()` {#StandardPoolConverter-acceptTokenOwnership--}
 
 deprecated, backward compatibility
 
-# Function `connectors(contract IERC20Token _address) → uint256, uint32, bool, bool, bool` {#StandardPoolConverter-connectors-contract-IERC20Token-}
+## Function `connectors(contract IERC20Token _address) → uint256, uint32, bool, bool, bool` {#StandardPoolConverter-connectors-contract-IERC20Token-}
 
 deprecated, backward compatibility
 
-# Function `connectorTokens(uint256 _index) → contract IERC20Token` {#StandardPoolConverter-connectorTokens-uint256-}
+## Function `connectorTokens(uint256 _index) → contract IERC20Token` {#StandardPoolConverter-connectorTokens-uint256-}
 
 deprecated, backward compatibility
 
-# Function `connectorTokenCount() → uint16` {#StandardPoolConverter-connectorTokenCount--}
+## Function `connectorTokenCount() → uint16` {#StandardPoolConverter-connectorTokenCount--}
 
 deprecated, backward compatibility
 
-# Function `getConnectorBalance(contract IERC20Token _connectorToken) → uint256` {#StandardPoolConverter-getConnectorBalance-contract-IERC20Token-}
+## Function `getConnectorBalance(contract IERC20Token _connectorToken) → uint256` {#StandardPoolConverter-getConnectorBalance-contract-IERC20Token-}
 
 deprecated, backward compatibility
 
-# Function `getReturn(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#StandardPoolConverter-getReturn-contract-IERC20Token-contract-IERC20Token-uint256-}
+## Function `getReturn(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#StandardPoolConverter-getReturn-contract-IERC20Token-contract-IERC20Token-uint256-}
 
 deprecated, backward compatibility
 
-# Event `LiquidityAdded(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` {#StandardPoolConverter-LiquidityAdded-address-contract-IERC20Token-uint256-uint256-uint256-}
+## Event `LiquidityAdded(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` {#StandardPoolConverter-LiquidityAdded-address-contract-IERC20Token-uint256-uint256-uint256-}
 
 triggered after liquidity is added
 
@@ -488,7 +488,7 @@ triggered after liquidity is added
 
 - `_newSupply`:      pool token new supply
 
-# Event `LiquidityRemoved(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` {#StandardPoolConverter-LiquidityRemoved-address-contract-IERC20Token-uint256-uint256-uint256-}
+## Event `LiquidityRemoved(address _provider, contract IERC20Token _reserveToken, uint256 _amount, uint256 _newBalance, uint256 _newSupply)` {#StandardPoolConverter-LiquidityRemoved-address-contract-IERC20Token-uint256-uint256-uint256-}
 
 triggered after liquidity is removed
 

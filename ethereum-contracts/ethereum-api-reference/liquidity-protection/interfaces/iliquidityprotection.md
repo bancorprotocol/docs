@@ -6,6 +6,10 @@
 
 - [`settings()`](#ILiquidityProtection-settings--)
 
+- [`systemStore()`](#ILiquidityProtection-systemStore--)
+
+- [`wallet()`](#ILiquidityProtection-wallet--)
+
 - [`addLiquidityFor(address owner, contract IConverterAnchor poolAnchor, contract IERC20Token reserveToken, uint256 amount)`](#ILiquidityProtection-addLiquidityFor-address-contract-IConverterAnchor-contract-IERC20Token-uint256-)
 
 - [`addLiquidity(contract IConverterAnchor poolAnchor, contract IERC20Token reserveToken, uint256 amount)`](#ILiquidityProtection-addLiquidity-contract-IConverterAnchor-contract-IERC20Token-uint256-)
@@ -21,6 +25,14 @@ No description
 No description
 
 ## Function `settings() → contract ILiquidityProtectionSettings` {#ILiquidityProtection-settings--}
+
+No description
+
+## Function `systemStore() → contract ILiquidityProtectionSystemStore` {#ILiquidityProtection-systemStore--}
+
+No description
+
+## Function `wallet() → contract ITokenHolder` {#ILiquidityProtection-wallet--}
 
 No description
 

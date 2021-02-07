@@ -16,7 +16,7 @@ Liquid tokens usually have fractional reserve (reserve ratio smaller than 100%).
 
 - [`targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount)`](#LiquidTokenConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-)
 
-# Function `constructor(contract IDSToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)` {#LiquidTokenConverter-constructor-contract-IDSToken-contract-IContractRegistry-uint32-}
+## Function `constructor(contract IDSToken _token, contract IContractRegistry _registry, uint32 _maxConversionFee)` {#LiquidTokenConverter-constructor-contract-IDSToken-contract-IContractRegistry-uint32-}
 
 initializes a new LiquidTokenConverter instance
 
@@ -28,7 +28,7 @@ initializes a new LiquidTokenConverter instance
 
 - `_maxConversionFee`:   maximum conversion fee, represented in ppm
 
-# Function `converterType() → uint16` {#LiquidTokenConverter-converterType--}
+## Function `converterType() → uint16` {#LiquidTokenConverter-converterType--}
 
 returns the converter type
 
@@ -36,7 +36,7 @@ returns the converter type
 
 - see the converter types in the the main contract doc
 
-# Function `acceptAnchorOwnership()` {#LiquidTokenConverter-acceptAnchorOwnership--}
+## Function `acceptAnchorOwnership()` {#LiquidTokenConverter-acceptAnchorOwnership--}
 
 accepts ownership of the anchor after an ownership transfer
 
@@ -46,7 +46,7 @@ can only be called by the contract owner
 
 note that prior to version 28, you should use 'acceptTokenOwnership' instead
 
-# Function `addReserve(contract IERC20Token _token, uint32 _weight)` {#LiquidTokenConverter-addReserve-contract-IERC20Token-uint32-}
+## Function `addReserve(contract IERC20Token _token, uint32 _weight)` {#LiquidTokenConverter-addReserve-contract-IERC20Token-uint32-}
 
 defines the reserve token for the converter
 
@@ -60,7 +60,7 @@ reserve wasn't defined yet
 
 - `_weight`:  reserve weight, represented in ppm, 1-1000000
 
-# Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#LiquidTokenConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
+## Function `targetAmountAndFee(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount) → uint256, uint256` {#LiquidTokenConverter-targetAmountAndFee-contract-IERC20Token-contract-IERC20Token-uint256-}
 
 returns the expected target amount of converting the source token to the
 

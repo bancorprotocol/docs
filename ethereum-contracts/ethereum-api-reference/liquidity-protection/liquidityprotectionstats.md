@@ -30,7 +30,7 @@ This contract aggregates the statistics of the liquidity protection mechanism.
 
 increases the total amounts
 
-can only be executed only by an owner
+can be executed only by an owner
 
 ## Parameters:
 
@@ -48,7 +48,7 @@ can only be executed only by an owner
 
 decreases the total amounts
 
-can only be executed only by an owner
+can be executed only by an owner
 
 ## Parameters:
 
@@ -66,7 +66,7 @@ can only be executed only by an owner
 
 adds a pool to the list of pools of a liquidity provider
 
-can only be executed only by an owner
+can be executed only by an owner
 
 ## Parameters:
 
@@ -78,7 +78,7 @@ can only be executed only by an owner
 
 removes a pool from the list of pools of a liquidity provider
 
-can only be executed only by an owner
+can be executed only by an owner
 
 ## Parameters:
 
@@ -144,7 +144,7 @@ returns the list of pools of a liquidity provider
 
 seeds the total amount of protected pool tokens
 
-can only be executed only by a seeder
+can be executed only by a seeder
 
 ## Parameters:
 
@@ -156,7 +156,7 @@ can only be executed only by a seeder
 
 seeds the total amount of protected reserve tokens
 
-can only be executed only by a seeder
+can be executed only by a seeder
 
 ## Parameters:
 
@@ -170,7 +170,7 @@ can only be executed only by a seeder
 
 seeds the total amount of protected reserve tokens per liquidity provider
 
-can only be executed only by a seeder
+can be executed only by a seeder
 
 ## Parameters:
 
@@ -186,7 +186,7 @@ can only be executed only by a seeder
 
 seeds the list of pools per liquidity provider
 
-can only be executed only by a seeder
+can be executed only by a seeder
 
 ## Parameters:
 
