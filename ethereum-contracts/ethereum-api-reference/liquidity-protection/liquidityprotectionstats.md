@@ -1,195 +1,167 @@
+# LiquidityProtectionStats
+
 This contract aggregates the statistics of the liquidity protection mechanism.
 
-# Functions:
+## Functions:
 
-- [`increaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)`](#LiquidityProtectionStats-increaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-)
+* [`increaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)`](liquidityprotectionstats.md#LiquidityProtectionStats-increaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-)
+* [`decreaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)`](liquidityprotectionstats.md#LiquidityProtectionStats-decreaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-)
+* [`addProviderPool(address provider, contract IDSToken poolToken)`](liquidityprotectionstats.md#LiquidityProtectionStats-addProviderPool-address-contract-IDSToken-)
+* [`removeProviderPool(address provider, contract IDSToken poolToken)`](liquidityprotectionstats.md#LiquidityProtectionStats-removeProviderPool-address-contract-IDSToken-)
+* [`totalPoolAmount(contract IDSToken poolToken)`](liquidityprotectionstats.md#LiquidityProtectionStats-totalPoolAmount-contract-IDSToken-)
+* [`totalReserveAmount(contract IDSToken poolToken, contract IERC20Token reserveToken)`](liquidityprotectionstats.md#LiquidityProtectionStats-totalReserveAmount-contract-IDSToken-contract-IERC20Token-)
+* [`totalProviderAmount(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken)`](liquidityprotectionstats.md#LiquidityProtectionStats-totalProviderAmount-address-contract-IDSToken-contract-IERC20Token-)
+* [`providerPools(address provider)`](liquidityprotectionstats.md#LiquidityProtectionStats-providerPools-address-)
+* [`seedPoolAmounts(contract IDSToken[] poolTokens, uint256[] poolAmounts)`](liquidityprotectionstats.md#LiquidityProtectionStats-seedPoolAmounts-contract-IDSToken---uint256---)
+* [`seedReserveAmounts(contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)`](liquidityprotectionstats.md#LiquidityProtectionStats-seedReserveAmounts-contract-IDSToken---contract-IERC20Token---uint256---)
+* [`seedProviderAmounts(address[] providers, contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)`](liquidityprotectionstats.md#LiquidityProtectionStats-seedProviderAmounts-address---contract-IDSToken---contract-IERC20Token---uint256---)
+* [`seedProviderPools(address[] providers, contract IDSToken[] poolTokens)`](liquidityprotectionstats.md#LiquidityProtectionStats-seedProviderPools-address---contract-IDSToken---)
 
-- [`decreaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)`](#LiquidityProtectionStats-decreaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-)
-
-- [`addProviderPool(address provider, contract IDSToken poolToken)`](#LiquidityProtectionStats-addProviderPool-address-contract-IDSToken-)
-
-- [`removeProviderPool(address provider, contract IDSToken poolToken)`](#LiquidityProtectionStats-removeProviderPool-address-contract-IDSToken-)
-
-- [`totalPoolAmount(contract IDSToken poolToken)`](#LiquidityProtectionStats-totalPoolAmount-contract-IDSToken-)
-
-- [`totalReserveAmount(contract IDSToken poolToken, contract IERC20Token reserveToken)`](#LiquidityProtectionStats-totalReserveAmount-contract-IDSToken-contract-IERC20Token-)
-
-- [`totalProviderAmount(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken)`](#LiquidityProtectionStats-totalProviderAmount-address-contract-IDSToken-contract-IERC20Token-)
-
-- [`providerPools(address provider)`](#LiquidityProtectionStats-providerPools-address-)
-
-- [`seedPoolAmounts(contract IDSToken[] poolTokens, uint256[] poolAmounts)`](#LiquidityProtectionStats-seedPoolAmounts-contract-IDSToken---uint256---)
-
-- [`seedReserveAmounts(contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)`](#LiquidityProtectionStats-seedReserveAmounts-contract-IDSToken---contract-IERC20Token---uint256---)
-
-- [`seedProviderAmounts(address[] providers, contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)`](#LiquidityProtectionStats-seedProviderAmounts-address---contract-IDSToken---contract-IERC20Token---uint256---)
-
-- [`seedProviderPools(address[] providers, contract IDSToken[] poolTokens)`](#LiquidityProtectionStats-seedProviderPools-address---contract-IDSToken---)
-
-## Function `increaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#LiquidityProtectionStats-increaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
+### Function `increaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` <a id="LiquidityProtectionStats-increaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-"></a>
 
 increases the total amounts
 
 can be executed only by an owner
 
-## Parameters:
+### Parameters:
 
-- `provider`:          liquidity provider address
+* `provider`: liquidity provider address
+* `poolToken`: pool token address
+* `reserveToken`: reserve token address
+* `poolAmount`: pool token amount
+* `reserveAmount`: reserve token amount
 
-- `poolToken`:         pool token address
-
-- `reserveToken`:      reserve token address
-
-- `poolAmount`:        pool token amount
-
-- `reserveAmount`:     reserve token amount
-
-## Function `decreaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#LiquidityProtectionStats-decreaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-}
+### Function `decreaseTotalAmounts(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` <a id="LiquidityProtectionStats-decreaseTotalAmounts-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-"></a>
 
 decreases the total amounts
 
 can be executed only by an owner
 
-## Parameters:
+### Parameters:
 
-- `provider`:          liquidity provider address
+* `provider`: liquidity provider address
+* `poolToken`: pool token address
+* `reserveToken`: reserve token address
+* `poolAmount`: pool token amount
+* `reserveAmount`: reserve token amount
 
-- `poolToken`:         pool token address
-
-- `reserveToken`:      reserve token address
-
-- `poolAmount`:        pool token amount
-
-- `reserveAmount`:     reserve token amount
-
-## Function `addProviderPool(address provider, contract IDSToken poolToken) → bool` {#LiquidityProtectionStats-addProviderPool-address-contract-IDSToken-}
+### Function `addProviderPool(address provider, contract IDSToken poolToken) → bool` <a id="LiquidityProtectionStats-addProviderPool-address-contract-IDSToken-"></a>
 
 adds a pool to the list of pools of a liquidity provider
 
 can be executed only by an owner
 
-## Parameters:
+### Parameters:
 
-- `provider`:  liquidity provider address
+* `provider`: liquidity provider address
+* `poolToken`: pool token address
 
-- `poolToken`: pool token address
-
-## Function `removeProviderPool(address provider, contract IDSToken poolToken) → bool` {#LiquidityProtectionStats-removeProviderPool-address-contract-IDSToken-}
+### Function `removeProviderPool(address provider, contract IDSToken poolToken) → bool` <a id="LiquidityProtectionStats-removeProviderPool-address-contract-IDSToken-"></a>
 
 removes a pool from the list of pools of a liquidity provider
 
 can be executed only by an owner
 
-## Parameters:
+### Parameters:
 
-- `provider`:  liquidity provider address
+* `provider`: liquidity provider address
+* `poolToken`: pool token address
 
-- `poolToken`: pool token address
-
-## Function `totalPoolAmount(contract IDSToken poolToken) → uint256` {#LiquidityProtectionStats-totalPoolAmount-contract-IDSToken-}
+### Function `totalPoolAmount(contract IDSToken poolToken) → uint256` <a id="LiquidityProtectionStats-totalPoolAmount-contract-IDSToken-"></a>
 
 returns the total amount of protected pool tokens
 
-## Parameters:
+### Parameters:
 
-- `poolToken`: pool token address
+* `poolToken`: pool token address
 
-## Return Values:
+### Return Values:
 
-- total amount of protected pool tokens
+* total amount of protected pool tokens
 
-## Function `totalReserveAmount(contract IDSToken poolToken, contract IERC20Token reserveToken) → uint256` {#LiquidityProtectionStats-totalReserveAmount-contract-IDSToken-contract-IERC20Token-}
+### Function `totalReserveAmount(contract IDSToken poolToken, contract IERC20Token reserveToken) → uint256` <a id="LiquidityProtectionStats-totalReserveAmount-contract-IDSToken-contract-IERC20Token-"></a>
 
 returns the total amount of protected reserve tokens
 
-## Parameters:
+### Parameters:
 
-- `poolToken`:     pool token address
+* `poolToken`: pool token address
+* `reserveToken`: reserve token address
 
-- `reserveToken`:  reserve token address
+### Return Values:
 
-## Return Values:
+* total amount of protected reserve tokens
 
-- total amount of protected reserve tokens
-
-## Function `totalProviderAmount(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken) → uint256` {#LiquidityProtectionStats-totalProviderAmount-address-contract-IDSToken-contract-IERC20Token-}
+### Function `totalProviderAmount(address provider, contract IDSToken poolToken, contract IERC20Token reserveToken) → uint256` <a id="LiquidityProtectionStats-totalProviderAmount-address-contract-IDSToken-contract-IERC20Token-"></a>
 
 returns the total amount of a liquidity provider's protected reserve tokens
 
-## Parameters:
+### Parameters:
 
-- `provider`:      liquidity provider address
+* `provider`: liquidity provider address
+* `poolToken`: pool token address
+* `reserveToken`: reserve token address
 
-- `poolToken`:     pool token address
+### Return Values:
 
-- `reserveToken`:  reserve token address
+* total amount of the liquidity provider's protected reserve tokens
 
-## Return Values:
-
-- total amount of the liquidity provider's protected reserve tokens
-
-## Function `providerPools(address provider) → contract IDSToken[]` {#LiquidityProtectionStats-providerPools-address-}
+### Function `providerPools(address provider) → contract IDSToken[]` <a id="LiquidityProtectionStats-providerPools-address-"></a>
 
 returns the list of pools of a liquidity provider
 
-## Parameters:
+### Parameters:
 
-- `provider`:  liquidity provider address
+* `provider`:  liquidity provider address
 
-## Return Values:
+### Return Values:
 
-- pool tokens
+* pool tokens
 
-## Function `seedPoolAmounts(contract IDSToken[] poolTokens, uint256[] poolAmounts)` {#LiquidityProtectionStats-seedPoolAmounts-contract-IDSToken---uint256---}
+### Function `seedPoolAmounts(contract IDSToken[] poolTokens, uint256[] poolAmounts)` <a id="LiquidityProtectionStats-seedPoolAmounts-contract-IDSToken---uint256---"></a>
 
 seeds the total amount of protected pool tokens
 
 can be executed only by a seeder
 
-## Parameters:
+### Parameters:
 
-- `poolTokens`:    pool token addresses
+* `poolTokens`: pool token addresses
+* `poolAmounts`: pool token amounts
 
-- `poolAmounts`:   pool token amounts
-
-## Function `seedReserveAmounts(contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)` {#LiquidityProtectionStats-seedReserveAmounts-contract-IDSToken---contract-IERC20Token---uint256---}
+### Function `seedReserveAmounts(contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)` <a id="LiquidityProtectionStats-seedReserveAmounts-contract-IDSToken---contract-IERC20Token---uint256---"></a>
 
 seeds the total amount of protected reserve tokens
 
 can be executed only by a seeder
 
-## Parameters:
+### Parameters:
 
-- `poolTokens`:        pool token addresses
+* `poolTokens`: pool token addresses
+* `reserveTokens`: reserve token addresses
+* `reserveAmounts`: reserve token amounts
 
-- `reserveTokens`:     reserve token addresses
-
-- `reserveAmounts`:    reserve token amounts
-
-## Function `seedProviderAmounts(address[] providers, contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)` {#LiquidityProtectionStats-seedProviderAmounts-address---contract-IDSToken---contract-IERC20Token---uint256---}
+### Function `seedProviderAmounts(address[] providers, contract IDSToken[] poolTokens, contract IERC20Token[] reserveTokens, uint256[] reserveAmounts)` <a id="LiquidityProtectionStats-seedProviderAmounts-address---contract-IDSToken---contract-IERC20Token---uint256---"></a>
 
 seeds the total amount of protected reserve tokens per liquidity provider
 
 can be executed only by a seeder
 
-## Parameters:
+### Parameters:
 
-- `providers`:         liquidity provider addresses
+* `providers`: liquidity provider addresses
+* `poolTokens`: pool token addresses
+* `reserveTokens`: reserve token addresses
+* `reserveAmounts`: reserve token amounts
 
-- `poolTokens`:        pool token addresses
-
-- `reserveTokens`:     reserve token addresses
-
-- `reserveAmounts`:    reserve token amounts
-
-## Function `seedProviderPools(address[] providers, contract IDSToken[] poolTokens)` {#LiquidityProtectionStats-seedProviderPools-address---contract-IDSToken---}
+### Function `seedProviderPools(address[] providers, contract IDSToken[] poolTokens)` <a id="LiquidityProtectionStats-seedProviderPools-address---contract-IDSToken---"></a>
 
 seeds the list of pools per liquidity provider
 
 can be executed only by a seeder
 
-## Parameters:
+### Parameters:
 
-- `providers`:     liquidity provider addresses
+* `providers`: liquidity provider addresses
+* `poolTokens`: pool token addresses
 
-- `poolTokens`:    pool token addresses

@@ -118,3 +118,8 @@
   * [Enums](../sdk/sdk-api-reference/enums/README.md)
     * [BlockchainType](../sdk/sdk-api-reference/enums/blockchaintype.md)
 
+## REST API
+
+* [Overview](../rest-api/overview.md)
+* [API Reference](../rest-api/api-reference.md)
+
