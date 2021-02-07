@@ -35,5 +35,5 @@ Many API endpoints support DLT identifiers. These define the target blockchain a
 
 ```
 
-\*\*\*\*
+For all available endpoints and responses, see the [API Reference](api-reference.md).
 
