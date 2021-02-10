@@ -89,59 +89,65 @@ pool id \(pool token address\)
 {% endapi-method-response-example-description %}
 
 ```text
-[{
-    "data": [{
-        "reserves": [{
-            "dlt_id": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
-            "symbol": "BNT",
-            "name": "Bancor Network Token",
-            "balance": {
-                "usd": "16850566.984558724465641618"
-            },
-            "weight": 500000,
-            "price": {
-                "usd": "2.370500"
-            },
-            "price_24h_ago": {
-                "usd": "2.502500"
-            }
-        }, {
-            "dlt_id": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
-            "symbol": "ETH",
-            "name": "",
-            "balance": {
-                "usd": "19729.125454948233055202"
-            },
-            "weight": 500000,
-            "price": {
-                "usd": "2018.655878"
-            },
-            "price_24h_ago": {
-                "usd": "2148.301887"
-            }
-        }],
-        "dlt_type": "ethereum",
-        "dlt_id": "0xb1CD6e4153B2a390Cf00A6556b0fC1458C4A5533",
-        "type": 3,
-        "version": 44,
-        "symbol": "ETHBNT",
-        "name": "ETH/BNT",
-        "supply": "26631304.427665387148466071",
-        "converter_dlt_id": "0xe24C8bbDBA150aa3Cb13C785d3A19D012dDC1e86",
-        "conversion_fee": "0.1",
-        "liquidity": {
-            "usd": "79652630.136009"
-        },
-        "volume_24h": {
-            "usd": "8412041.183004"
-        },
-        "fees_24h": {
-            "usd": "8420.461472"
-        }
-    }]
-},
-...
-]
+{
+	"data": [{
+		"reserves": [{
+			"dlt_id": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
+			"symbol": "BNT",
+			"name": "Bancor Network Token",
+			"balance": {
+				"usd": "17552731.135069373164339744"
+			},
+			"weight": 500000,
+			"price": {
+				"usd": "2.736000"
+			},
+			"price_24h_ago": {
+				"usd": "2.746000"
+			},
+			"volume_24h": {
+				"usd": "18064772.829577",
+				"base": "5422266.457796686492994259"
+			}
+		}, {
+			"dlt_id": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+			"symbol": "ETH",
+			"name": "",
+			"balance": {
+				"usd": "19729.125454948233055202"
+			},
+			"weight": 500000,
+			"price": {
+				"usd": "2437.295411"
+			},
+			"price_24h_ago": {
+				"usd": "2460.918815"
+			},
+			"volume_24h": {
+				"usd": "18064772.829577",
+				"base": "8565.256376663367063464"
+			}
+		}],
+		"dlt_type": "ethereum",
+		"dlt_id": "0xb1CD6e4153B2a390Cf00A6556b0fC1458C4A5533",
+		"type": 3,
+		"version": 44,
+		"symbol": "ETHBNT",
+		"name": "ETH/BNT",
+		"supply": "28569728.028646077727740944",
+		"converter_dlt_id": "0xe24C8bbDBA150aa3Cb13C785d3A19D012dDC1e86",
+		"conversion_fee": "0.1",
+		"liquidity": {
+			"usd": "96136308.426774"
+		},
+		"volume_24h": {
+			"usd": "18064772.829577"
+		},
+		"fees_24h": {
+			"usd": "18082.855422"
+		}
+	}]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
