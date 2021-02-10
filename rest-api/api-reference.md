@@ -30,29 +30,28 @@ token id \(address\)
 {% endapi-method-response-example-description %}
 
 ```text
-[{
-    "data": [{
-        "dlt_type": "ethereum",
-        "dlt_id": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
-        "symbol": "BNT",
-        "name": "Bancor Network Token",
-        "decimals": 18,
-        "liquidity": {
-            "usd": "178502745.931707"
-        },
-        "price": {
-            "usd": "2.369000"
-        },
-        "price_24h_ago": {
-            "usd": "2.496500"
-        },
-        "volume_24h": {
-            "usd": "20393956.486161"
-        }
-    }]
-},
-...
-]
+{
+	"data": [{
+		"dlt_type": "ethereum",
+		"dlt_id": "0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C",
+		"symbol": "BNT",
+		"name": "Bancor Network Token",
+		"decimals": 18,
+		"liquidity": {
+			"usd": "208974925.739873"
+		},
+		"price": {
+			"usd": "2.742000"
+		},
+		"price_24h_ago": {
+			"usd": "2.748000"
+		},
+		"volume_24h": {
+			"usd": "2689789.534580",
+			"base": "13067302.363768235719295110"
+		}
+	}]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
