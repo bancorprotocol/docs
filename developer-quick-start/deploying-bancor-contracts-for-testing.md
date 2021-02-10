@@ -8,7 +8,7 @@ description: >-
 
 ### Prerequisites
 
-* `node 10.16.0`
+* `node 12.xx`
 * `npm 6.9.0`
 * `python 3.7.3`
 * `web3.py 4.9.2`
@@ -17,6 +17,8 @@ description: >-
 
 * Clone the [Contracts Repo](https://github.com/bancorprotocol/contracts)
 * Run `npm install` 
+* Run `npm run build`
+* Run `npm run export`
 * Run `npm test 1` to ensure contracts are operating as expected
 * Optional: run `npm test 2` for more thorough testing
 * Run `cd solidity/utils` 
