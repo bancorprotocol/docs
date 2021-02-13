@@ -53,6 +53,14 @@ After this period, any impermanent loss that occurred in the first 100 days or a
 
 Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view) and [**economic analysis**](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view).
 
+## Why is limited space in Bancor whitelisted pools?
+
+To support single-sided, non-BNT deposits, the protocol invests BNT into whitelisted pools. For example, a $100K deposit of LINK triggers $100K of BNT emissions into the LINK pool.
+
+Protocol-supplied BNT generally remains in the pool earning fees for the protocol until the BNT and its accrued fees are eventually burned. The amount of insurance offered by the protocol is governed the DAO and determined by BNT holders.
+
+Each pool has a limit on the amount of BNT that can be provided by the protocol \(“co-investment limit”\). When this limit is reached, BNT must be provided by users in order for the pool to expand, or governance can vote to increase the limit.
+
 ## **Could I lose profits before I reach the 30-day cliff**?
 
 Only if you withdraw your tokens before 30 days in the pool. Impermanent loss insurance starts vesting immediately when you deposit. But you must be in the pool for at least 30 days until the cliff is reached and before the insurance can be utilized.
