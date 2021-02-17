@@ -153,3 +153,46 @@ pool id \(pool token address\)
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="get" host="https://api-v2.bancor.network" path="/stats" %}
+{% api-method-summary %}
+Stats
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Returns global stats of the Bancor Network.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+	"data": {
+		"num_tokens": 264,
+		"num_pools": 286,
+		"volume_24h": {
+			"usd": "70700321.566346"
+		},
+		"volume_7d": {
+			"usd": "404181182.167546"
+		},
+		"fees_24h": {
+			"usd": "112835.290829"
+		},
+		"fees_7d": {
+			"usd": "636353.956783"
+		}
+	}
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
