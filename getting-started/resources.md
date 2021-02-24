@@ -28,6 +28,7 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 * [Bancor Dune Analytics Dashboard](https://duneanalytics.com/ashachaf/bancor_1)
 * [Bancor revenue analytics \(Cryptofees.info\)](https://cryptofees.info/)
+* [Bancor APIs](https://docs.bancor.network/rest-api/api-reference)
 
 ### Papers
 
