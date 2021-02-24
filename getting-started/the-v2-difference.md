@@ -17,6 +17,8 @@ With the interests of both traders and LPs in mind, Bancor v2.1 offers solutions
 
 Contrary to other AMM protocols, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the v2.1 protocol co-invests in pools alongside LPs to support single-sided AMM exposure and to cover the cost of impermanent loss with swap fees earned from its co-investments. 
 
+[_**Bancor v2.1 Economic Analysis**_](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) _**\(**_[_**TopazeBlue**_](https://topaze.blue/)_**\)**_
+
 ### Single-Sided Exposure <a id="single-token-staking"></a>
 
 Most first generation AMMs require LPs to contribute equal or determinate parts of each asset represented in the pool. This is both an inconvenience and a liability for many LPs who may hold only one of the assets and/or are only interested in exposure to that single asset. Bancor v2.1 breaks this paradigm, allowing LPs to contribute and maintain 100% exposure in a single token.
@@ -43,5 +45,5 @@ First, v2.1 only works for two-asset pools. Developers are still able to deploy 
 
 Second, v2.1 currently DOES NOT support dynamically adjusting supply tokens \(i.e., "rebase" tokens\) that can control and adjust the token balances in users' wallets.
 
-Third, when being withdrawn from the system, BNTs are locked for a pre-set time \(default 24 hr.\) to prevent panic liquidation.
+Third, when being withdrawn from the system, BNTs are locked for a pre-set time \(default 24 hr\) to prevent panic liquidation.
 
