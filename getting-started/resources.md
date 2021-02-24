@@ -8,18 +8,20 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 * \*\*\*\*[**Bancor Developers Telegram Group**](https://t.me/BancorDevelopers): Chat with the team and developer community about integrations or ask a technical question about building on the protocol.
 * \*\*\*\*[**Bancor Blog**](https://blog.bancor.network/): Read updates from the team on protocol initiatives, product development and partnerships. 
 * \*\*\*\*[**Bancor App**](https://www.bancor.network/): A simple, full-featured dashboard from the developers of Bancor Protocol where you can swap tokens, provide liquidity and view market data.
+* [**Bancor Governance**](http://gov.bancor.network/): Propose upgrades to the protocol and discuss new proposals.
 
 ### Videos
 
 * [Bancor Protocol explainer video](https://twitter.com/Bancor/status/1359455683939356674?s=20) \([DeFiFrog](https://twitter.com/DeFiFrog)\)
 * [Bancor v2.1 staking tutorial](https://www.youtube.com/watch?v=3P4vKIHcdas) \([CryptoOneShop](https://www.youtube.com/channel/UCNgGAqSgBp8-qxY51u1-_MA)\)
 
-### Written Tutorials
+### Blog Posts
 
 * [Bancor Staking Guide](https://blog.bancor.network/how-to-stake-earn-snx-on-bancor-v2-1-e2311bcaa235)
 * [How to Stake BNT Rewards & Compound Yield](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
 * [Helpful Twitter threads](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
+* [Proposing Bancor v2.1: Single-Sided AMMs with Impermanent Loss Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
 
 ### Analytics
 
