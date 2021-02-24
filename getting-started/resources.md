@@ -14,6 +14,7 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 * [Bancor Protocol explainer video](https://twitter.com/Bancor/status/1359455683939356674?s=20) \([DeFiFrog](https://twitter.com/DeFiFrog)\)
 * [Bancor v2.1 staking tutorial](https://www.youtube.com/watch?v=3P4vKIHcdas) \([CryptoOneShop](https://www.youtube.com/channel/UCNgGAqSgBp8-qxY51u1-_MA)\)
+* [Bancor Protocol Overview](https://www.youtube.com/watch?v=sdd5TToLv9o&feature=youtu.be) \([Blocks of Finance](https://www.youtube.com/channel/UClepfVEmfavep2bxQFckT0A)\)
 
 ### Blog Posts
 
