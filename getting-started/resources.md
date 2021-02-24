@@ -23,6 +23,8 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
 * [Helpful Twitter threads](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
 * [Proposing Bancor v2.1: Single-Sided AMMs with Impermanent Loss Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
+* [How to Vote in Bancor Governance](https://blog.bancor.network/how-to-vote-using-vbnt-c205f011db1e)
+* [How to Whitelist a Token in Bancor v2.1](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)
 
 ### Analytics
 
