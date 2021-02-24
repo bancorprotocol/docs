@@ -5,9 +5,11 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 # Resources
 
 * \*\*\*\*[**Bancor Telegram Group**](https://t.me/bancor): Chat with the team and community about the project.
+* [**Bancor Liquidity Providers Telegram Group**](https://t.me/bancortraders): Chat with Bancor LPs about yield farming strategies
 * \*\*\*\*[**Bancor Developers Telegram Group**](https://t.me/BancorDevelopers): Chat with the team and developer community about integrations or ask a technical question about building on the protocol.
-* \*\*\*\*[**Bancor Blog**](https://blog.bancor.network/): Read updates from the team on protocol initiatives, product development and partnerships. 
-* \*\*\*\*[**Bancor App**](https://www.bancor.network/): A simple, full-featured dashboard from the developers of Bancor Protocol where you can swap tokens, provide liquidity and view market data.
+* \*\*\*\*[**Bancor Discord**](https://discord.com/invite/pe7EfaR)**:** General Bancor chat on Discord
+* \*\*\*\*[**Bancor Blog**](https://blog.bancor.network/): Read updates from the team on protocol initiatives and product development.
+* \*\*\*\*[**Bancor App**](https://www.bancor.network/): A simple, full-featured dashboard from the developers of Bancor Protocol where you can swap tokens, provide liquidity, analyze returns and view market data.
 * [**Bancor Governance**](http://gov.bancor.network/): Propose upgrades to the protocol and discuss new proposals.
 
 ### Videos
