@@ -4,35 +4,40 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 # Resources
 
-* \*\*\*\*[**Bancor Telegram Group**](https://t.me/bancor): Chat with the team and community about the project.
-* [**Bancor Liquidity Providers Telegram Group**](https://t.me/bancortraders): Chat with Bancor LPs about yield farming strategies
-* \*\*\*\*[**Bancor Developers Telegram Group**](https://t.me/BancorDevelopers): Chat with the team and developer community about integrations or ask a technical question about building on the protocol.
-* \*\*\*\*[**Bancor Discord**](https://discord.com/invite/pe7EfaR)**:** General Bancor chat on Discord
-* \*\*\*\*[**Bancor Blog**](https://blog.bancor.network/): Read updates from the team on protocol initiatives and product development.
 * \*\*\*\*[**Bancor App**](https://www.bancor.network/): A simple, full-featured dashboard from the developers of Bancor Protocol where you can swap tokens, provide liquidity, analyze returns and view market data.
+* \*\*\*\*[**Bancor Telegram Group**](https://t.me/bancor): Chat with the Bancor community about the project
+* [**Bancor Liquidity Providers Telegram Group**](https://t.me/bancortraders): Chat with Bancor LPs about yield farming strategies
+* \*\*\*\*[**Bancor Developers Telegram Group**](https://t.me/BancorDevelopers): Chat with the Bancor developer community about integrations or ask technical questions about the protocol
+* \*\*\*\*[**Bancor Discord**](https://discord.com/invite/pe7EfaR)**:** Official Bancor chat on Discord
+* \*\*\*\*[**Bancor Blog**](https://blog.bancor.network/): Read updates on protocol initiatives and development
 * [**Bancor Governance**](http://gov.bancor.network/): Propose upgrades to the protocol and discuss new proposals.
+* [**BNTee.shop**](http://bntee.shop/): real-world Bancor t-shirts based on Bonding Curve tokens
 
 ### Videos
 
-* [Bancor Protocol explainer video](https://twitter.com/Bancor/status/1359455683939356674?s=20) \([DeFiFrog](https://twitter.com/DeFiFrog)\)
-* [Bancor v2.1 staking tutorial](https://www.youtube.com/watch?v=3P4vKIHcdas) \([CryptoOneShop](https://www.youtube.com/channel/UCNgGAqSgBp8-qxY51u1-_MA)\)
-* [Bancor Protocol Overview](https://www.youtube.com/watch?v=sdd5TToLv9o&feature=youtu.be) \([Blocks of Finance](https://www.youtube.com/channel/UClepfVEmfavep2bxQFckT0A)\)
+* [Bancor Protocol explainer video](https://twitter.com/Bancor/status/1359455683939356674?s=20) \(DeFiFrog**\)**
+* [Bancor v2.1 staking tutorial](https://www.youtube.com/watch?v=3P4vKIHcdas) \(CryptoOneShop**\)**
+* [Bancor Protocol Overview](https://www.youtube.com/watch?v=sdd5TToLv9o&feature=youtu.be) \(Blocks of Finance**\)**
 
 ### Blog Posts
 
 * [Bancor Staking Guide](https://blog.bancor.network/how-to-stake-earn-snx-on-bancor-v2-1-e2311bcaa235)
 * [How to Stake BNT Rewards & Compound Yield](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
-* [Helpful Twitter threads](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
+* Helpful Twitter threads: 
+  * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
+  * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
 * [Proposing Bancor v2.1: Single-Sided AMMs with Impermanent Loss Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
 * [How to Vote in Bancor Governance](https://blog.bancor.network/how-to-vote-using-vbnt-c205f011db1e)
 * [How to Whitelist a Token in Bancor v2.1](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)
+* [Introducing BNTee.shop](https://blog.bancor.network/introducing-bntees-eb5d5558a1b5) 
 
 ### Analytics
 
 * [Bancor Dune Analytics Dashboard](https://duneanalytics.com/ashachaf/bancor_1)
-* [Bancor revenue analytics \(Cryptofees.info\)](https://cryptofees.info/)
+* [Bancor revenue stats \(Cryptofees.info\)](https://cryptofees.info/)
 * [Bancor APIs](https://docs.bancor.network/rest-api/api-reference)
+* [Bancor Vortex Twitter bot](https://twitter.com/BntVortex)
 
 ### Papers
 
