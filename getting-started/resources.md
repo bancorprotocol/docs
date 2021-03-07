@@ -15,18 +15,21 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 ### Videos
 
-* [Bancor Protocol explainer video](https://twitter.com/Bancor/status/1359455683939356674?s=20) \(DeFiFrog**\)**
+* [Bancor Protocol overview ](https://twitter.com/Bancor/status/1359455683939356674?s=20)\(DeFiFrog**\)**
+* [Single-sided liquidity](https://twitter.com/DeFiFrog/status/1368623215673626625?s=20) \(DeFiFrog\)
 * [Bancor v2.1 staking tutorial](https://www.youtube.com/watch?v=3P4vKIHcdas) \(CryptoOneShop**\)**
 * [Bancor Protocol Overview](https://www.youtube.com/watch?v=sdd5TToLv9o&feature=youtu.be) \(Blocks of Finance**\)**
 
-### Blog Posts
+### Writing
 
 * [Bancor Staking Guide](https://blog.bancor.network/how-to-stake-earn-snx-on-bancor-v2-1-e2311bcaa235)
 * [How to Stake BNT Rewards & Compound Yield](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
 * Helpful Twitter threads: 
-  * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
+  * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
   * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
+  * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
+  * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
 * [Proposing Bancor v2.1: Single-Sided AMMs with Impermanent Loss Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
 * [How to Vote in Bancor Governance](https://blog.bancor.network/how-to-vote-using-vbnt-c205f011db1e)
 * [How to Whitelist a Token in Bancor v2.1](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)

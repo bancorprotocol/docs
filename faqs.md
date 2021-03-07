@@ -329,6 +329,7 @@ Currently, pool owners determine the pool's fee, however this is subject to chan
 
 ## 6. Further Resources
 
+* [Bancor Wiki](https://docs.bancor.network/getting-started/resources)
 * [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view): 
 * [Bancor v2.1 Technical Explainer](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view)
 * [GUIDE: Single-Sided Staking on Bancor V2.1](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
