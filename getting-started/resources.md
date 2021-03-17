@@ -25,9 +25,11 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 * [Bancor Staking Guide](https://blog.bancor.network/how-to-stake-earn-snx-on-bancor-v2-1-e2311bcaa235)
 * [How to Stake BNT Rewards & Compound Yield](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
+* [Deribit Insights Market Research: BNT](https://insights.deribit.com/market-research/bancor-the-world-token/)
+* [March 2021 Progress Update](https://blog.bancor.network/bancor-progress-update-march-2020-73007ed5a03a?source=collection_home---4------0-----------------------)
 * Helpful Twitter threads: 
   * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
-  * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
+  * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20) ; [Progress Update](https://twitter.com/korpi87/status/1370740679450714116?s=20)
   * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
   * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
 * [Proposing Bancor v2.1: Single-Sided AMMs with Impermanent Loss Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
