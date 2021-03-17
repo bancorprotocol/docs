@@ -25,7 +25,7 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 * [Bancor Staking Guide](https://blog.bancor.network/how-to-stake-earn-snx-on-bancor-v2-1-e2311bcaa235)
 * [How to Stake BNT Rewards & Compound Yield](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
-* [Deribit Insights Market Research: BNT](https://insights.deribit.com/market-research/bancor-the-world-token/)
+* [Deribit Insights Market Research: BNT Tokenomics](https://insights.deribit.com/market-research/bancor-the-world-token/)
 * [March 2021 Progress Update](https://blog.bancor.network/bancor-progress-update-march-2020-73007ed5a03a?source=collection_home---4------0-----------------------)
 * Helpful Twitter threads: 
   * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
