@@ -6,12 +6,14 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 * \*\*\*\*[**Bancor App**](https://www.bancor.network/): A simple, full-featured dashboard from the developers of Bancor Protocol where you can swap tokens, provide liquidity, analyze returns and view market data.
 * \*\*\*\*[**Bancor Telegram Group**](https://t.me/bancor): Chat with the Bancor community about the project
-* [**Bancor Liquidity Providers Telegram Group**](https://t.me/bancortraders): Chat with Bancor LPs about yield farming strategies
-* \*\*\*\*[**Bancor Developers Telegram Group**](https://t.me/BancorDevelopers): Chat with the Bancor developer community about integrations or ask technical questions about the protocol
+* [**Bancor Liquidity Providers Telegram**](https://t.me/bancortraders): Chat with Bancor LPs about yield farming strategies
+* \*\*\*\*[**Bancor Developers Telegram**](https://t.me/BancorDevelopers): Chat with the Bancor developer community about integrations or ask technical questions about the protocol
 * \*\*\*\*[**Bancor Discord**](https://discord.com/invite/pe7EfaR)**:** Official Bancor chat on Discord
 * \*\*\*\*[**Bancor Blog**](https://blog.bancor.network/): Read updates on protocol initiatives and development
-* [**Bancor Governance**](http://gov.bancor.network/): Propose upgrades to the protocol and discuss new proposals.
-* [**BNTee.shop**](http://bntee.shop/): real-world Bancor t-shirts based on Bonding Curve tokens
+* \*\*\*\*[**Bancor Dune Analytics**](https://duneanalytics.com/Bancor/bancor_1)**:** See statistics on Bancor protocol
+* [**Bancor Governance**](http://gov.bancor.network/): Discuss upgrades to the protocol and discuss new proposals
+* Bancor Voting Portal: Vote on Bancor Improvement Proposals \(BIPs\)
+* [**BNTee.shop**](http://bntee.shop/): Swap $BNTEE tokens, Bancor t-shirts based on Bonding Curve tokens
 
 ### Videos
 
@@ -39,10 +41,10 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 ### Analytics
 
-* [Bancor Dune Analytics Dashboard](https://duneanalytics.com/ashachaf/bancor_1)
-* [Bancor revenue stats \(Cryptofees.info\)](https://cryptofees.info/)
+* [Bancor Dune Analytics Dashboard](https://duneanalytics.com/Bancor/bancor_1)
+* [Bancor daily fees stats \(Cryptofees.info\)](https://cryptofees.info/)
 * [Bancor APIs](https://docs.bancor.network/rest-api/api-reference)
-* [Bancor Vortex Twitter bot](https://twitter.com/BntVortex)
+* Bancor Vortex Twitter bots: [BancorVortex](https://twitter.com/BancorVortex) \(LP deposits + space openings\) + [BNTVortex](https://twitter.com/BntVortex) \(BNT holders, BNTEEs, network stats\)
 
 ### Papers
 
