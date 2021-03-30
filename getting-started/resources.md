@@ -25,6 +25,7 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 ### Writing
 
 * [Bancor Staking Guide](https://blog.bancor.network/how-to-stake-earn-snx-on-bancor-v2-1-e2311bcaa235)
+* [How Bancor v2.1 works](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e)
 * [How to Stake BNT Rewards & Compound Yield](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
 * [Deribit Insights Market Research: BNT Tokenomics](https://insights.deribit.com/market-research/bancor-the-world-token/)
@@ -44,7 +45,7 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 * [Bancor Dune Analytics Dashboard](https://duneanalytics.com/Bancor/bancor_1)
 * [Bancor daily fees stats \(Cryptofees.info\)](https://cryptofees.info/)
 * [Bancor APIs](https://docs.bancor.network/rest-api/api-reference)
-* Bancor Vortex Twitter bots: [BancorVortex](https://twitter.com/BancorVortex) \(LP deposits + space openings\) + [BNTVortex](https://twitter.com/BntVortex) \(BNT holders, BNTEEs, network stats\)
+* Twitter bots: [BancorVortex](https://twitter.com/BancorVortex) \(LP deposits + space openings\) + [BNTVortex](https://twitter.com/BntVortex) \(BNT holders, BNTEEs, network stats\)
 
 ### Papers
 
