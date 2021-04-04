@@ -25,6 +25,7 @@
 ## Other Guides <a id="guides"></a>
 
 * [Trading on Bancor - General](../guides/trading-on-bancor-general.md)
+* [Triggering the Bancor Vortex Burner](../guides/triggering-the-bancor-vortex-burner.md)
 * [Deploying a Liquidity Pool for Testing](../guides/deploying-a-liquidity-pool-testing.md)
 * [Liquidity Provision - General](../guides/general-liquidity-provision.md)
 * [Managing Ownership of Liquidity Pools](../guides/accepting-ownership-of-liquidity-pools.md)
