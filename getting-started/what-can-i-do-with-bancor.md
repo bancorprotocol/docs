@@ -1,11 +1,11 @@
 # What Can I Do With Bancor?
 
-* Trade tokens on Ethereum or EOS
-* Deploy a BNT-token liquidity pool
-* Deploy a custom liquidity pool
-* Contribute liquidity to a deployed pool
+* Trade tokens on Ethereum and other blockchains
+* Provide liquidity to a liquidity pool
+* Borrow against a liquidity position in a liquidity pool 
+* Deploy a liquidity pool
+* Propose a liquidity pool for whitelisting \(single-sided exposure & impermanent loss protection\)
 * Integrate Bancor liquidity and trading into my smart contract
-* Earn affiliate fees by integrating Bancor into my smart contract or dApp
 
 
 
