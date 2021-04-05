@@ -28,12 +28,12 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 ### Writing
 
-* [Bancor Staking Guide](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e)
+* [Bancor Staking Guide](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)
+* [How Bancor Staking Works](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e)
 * [How to Earn BNT Rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002) 
 * [Deribit Insights Market Research: BNT](https://insights.deribit.com/market-research/bancor-the-world-token/)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
 * [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
-* [March 2021 Progress](https://blog.bancor.network/bancor-progress-update-march-2020-73007ed5a03a?source=collection_home---4------0-----------------------)
 * Twitter threads: 
   * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
   * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20) ; [Bancor Vortex](https://twitter.com/korpi87/status/1379171427761414155?s=20),[ Progress Update](https://twitter.com/korpi87/status/1370740679450714116?s=20)
@@ -45,10 +45,16 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 * [How to Vote in the BancorDAO](https://blog.bancor.network/how-to-vote-using-vbnt-c205f011db1e)
 * [Introducing BNTee.shop](https://blog.bancor.network/introducing-bntees-eb5d5558a1b5) 
 
+_**Progress Reports**:_ 
+
+* [March 221](https://blog.bancor.network/bancor-progress-update-march-2020-73007ed5a03a)
+* [February 2021](https://blog.bancor.network/bancor-monthly-progress-update-february-2021-685e174f6537)
+* [January 2021](https://blog.bancor.network/bancor-v2-1-protocol-health-report-january-2020-83338c904de0)
+
 ### Analytics
 
-* [Bancor Dune Analytics Dashboard](https://duneanalytics.com/Bancor/bancor_1)
-* [Bancor daily fees stats \(Cryptofees.info\)](https://cryptofees.info/)
+* [Bancor Dune Analytics](https://duneanalytics.com/Bancor/bancor_1)
+* [Bancor daily fees \(Cryptofees.info\)](https://cryptofees.info/)
 * [Bancor APIs](https://docs.bancor.network/rest-api/api-reference)
 * Twitter bots: [BancorVortex](https://twitter.com/BancorVortex) \(LP deposits, space openings\) + [BNTVortex](https://twitter.com/BntVortex) \(daily BNT holder count, network stats\)
 
