@@ -4,16 +4,16 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 # Resources
 
-* \*\*\*\*[**Bancor App**](https://www.bancor.network/): A simple, full-featured dashboard from the developers of Bancor Protocol where you can swap tokens, provide liquidity, analyze returns and view market data.
+* \*\*\*\*[**Bancor App**](https://www.bancor.network/): A simple, full-featured interface where you can swap tokens, provide liquidity, manage liquidity positions and view market data.
 * \*\*\*\*[**Bancor Telegram Group**](https://t.me/bancor): Chat with the Bancor community about the project
-* [**Bancor Liquidity Providers Telegram**](https://t.me/bancortraders): Chat with Bancor LPs about yield farming strategies
-* \*\*\*\*[**Bancor Developers Telegram**](https://t.me/BancorDevelopers): Chat with the Bancor developer community about integrations or ask technical questions about the protocol
+* [**Bancor Liquidity Providers Telegram**](https://t.me/bancortraders): Chat with LPs about staking in Bancor pools
+* \*\*\*\*[**Bancor Developers Telegram**](https://t.me/BancorDevelopers): Chat with the Bancor developer community about integrations or ask technical questions
 * \*\*\*\*[**Bancor Discord**](https://discord.com/invite/pe7EfaR)**:** Official Bancor chat on Discord
-* \*\*\*\*[**Bancor Blog**](https://blog.bancor.network/): Read updates on protocol initiatives and development
-* \*\*\*\*[**Bancor Dune Analytics**](https://duneanalytics.com/Bancor/bancor_1)**:** Live protocol statistics
+* \*\*\*\*[**Bancor Blog**](https://blog.bancor.network/): Updates on protocol initiatives & features
 * \*\*\*\*[**Bancor Governance**](http://gov.bancor.network/)**:** Discuss protocol upgrades & proposals
-* [**BancorDAO Voting Portal**](https://vote.bancor.network/)**:** Create & vote on Bancor Improvement Proposals \(BIPs\)
-* [**BNTee.shop**](http://bntee.shop/): Bancor t-shirts based on Bonding Curve tokens \($BNTEE tokens\) 
+* [**BancorDAO Voting Portal**](https://vote.bancor.network/)**:** Submit & vote on Bancor Improvement Proposals \(BIPs\)
+* [**Bancor Dune Analytics**](https://duneanalytics.com/Bancor/bancor_1)**:** View live protocol statistics
+* [**BNTee.shop**](http://bntee.shop/): Bancor t-shirts based on Bonding Curves \($BNTEE tokens\) 
 
 ### Videos
 
@@ -63,4 +63,9 @@ _**Progress Reports**:_
 * [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) \([TopazeBlue](https://topaze.blue/)\)
 * [Bancor v2.1 Protocol Health Report \(January 2020\)](https://blog.bancor.network/bancor-v2-1-protocol-health-report-january-2020-83338c904de0)
 * [Bancor Whitepaper](https://storage.googleapis.com/website-bancor/2018/04/01ba8253-bancor_protocol_whitepaper_en.pdf) \(2018\)
+
+### Podcasts
+
+* [Cryptotesters](https://twitter.com/cryptotesters/status/1372606017477955592?s=20)
+* [Blockcrunch](https://podcasts.apple.com/us/podcast/alpha-leak-how-bancor-solves-impermanent-loss-nate/id1350649166?i=1000513405411)
 
