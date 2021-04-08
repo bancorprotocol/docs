@@ -8,23 +8,28 @@ This a living document continuously updated by the community and therefore a wor
 
 FAQs below are divided into the following sections:
 
-1. \*\*\*\*[**Impermanent Loss**](faqs.md#1-impermanent-loss)
-2. \*\*\*\*[**Depositing / Withdrawing Liquidity**](faqs.md#2-depositing-withdrawing-liquidity)
-3. \*\*\*\*[**BNT Liquidity Mining**](faqs.md#3-bnt-liquidity-mining)
-4. \*\*\*\*[**Pool Management**](faqs.md#4-pool-management)
-5. \*\*\*\*[**Trading**](faqs.md#5-trading)\*\*\*\*
-6. \*\*\*\*[**Further Resources**](faqs.md#6-further-resources)
-7. \*\*\*\*[**Helpful Links**](faqs.md#7-helpful-links)\*\*\*\*
+1. \*\*\*\*[**Liquidity Pools**](faqs.md#1-liquidity-pools)\*\*\*\*
+2. \*\*\*\*[**Impermanent Loss**](faqs.md#2-impermanent-loss)\*\*\*\*
+3. \*\*\*\*[**Depositing / Withdrawing Liquidity**](faqs.md#2-depositing-withdrawing-liquidity)
+4. \*\*\*\*[**BNT Liquidity Mining**](faqs.md#3-bnt-liquidity-mining)
+5. \*\*\*\*[**Pool Management**](faqs.md#4-pool-management)
+6. \*\*\*\*[**Trading**](faqs.md#5-trading)\*\*\*\*
+7. \*\*\*\*[**Further Resources**](faqs.md#6-further-resources)
+8. \*\*\*\*[**Helpful Links**](faqs.md#7-helpful-links)\*\*\*\*
 
-## **1. Impermanent Loss**
+## **1. Liquidity Pools**
+
+Liquidity pools are automated market-maker **\(AMM\)** smart contracts that exchange assets algorithmically using on-chain reserves. They turn pooled market-maker liquidity into an asset class \(“liquidity positions”\), allowing for broader, more competitive involvement in market-making.
+
+## **2. Impermanent Loss**
 
 ## **What is impermanent loss?**
 
-Simply put, impermanent loss is the difference between holding tokens in an automated market maker \(AMM\) liquidity pool and holding them in your wallet.
+Simply put, impermanent loss is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.
 
 It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the impermanent loss.
 
-Why “impermanent”? Because as long as the relative prices of tokens in the AMM return to their original state when you entered the AMM, the loss disappears and you earn 100% of the trading fees. However, this is rarely the case. More often than not, impermanent loss becomes _permanent_, eating into your trade income or leaving you with negative returns. 
+Why “impermanent”? Because as long as the relative prices of tokens in the AMM return to their original state when you entered the AMM, the loss disappears and you earn 100% of the trading fees. However, this is rarely the case. Impermanent loss often becomes _permanent_, eating into your trade income & liquidity mining rewards or leaving you with negative returns. 
 
 ## What causes impermanent loss?
 
