@@ -19,13 +19,15 @@ FAQs below are divided into the following sections:
 
 ## **1. Liquidity Pools**
 
+## **What are liquidity pools?**
+
 Liquidity pools are automated market-maker **\(AMM\)** smart contracts that exchange assets algorithmically using on-chain reserves. They turn pooled market-maker liquidity into an asset class \(“liquidity positions”\), allowing for broader, more competitive involvement in market-making.
 
 ## **2. Impermanent Loss**
 
 ## **What is impermanent loss?**
 
-Simply put, impermanent loss is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.
+Impermanent loss is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.
 
 It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the impermanent loss.
 
@@ -35,11 +37,11 @@ Why “impermanent”? Because as long as the relative prices of tokens in the A
 
 Liquidity pools consist of multiple tokens paired together in a pool. If one of the tokens changes in price relative to its paired token, an arbitrage opportunity emerges, incentivizing re-balancing of the pool \(and resulting in a loss for liquidity providers\). 
 
-As one token’s price is rising relative to its paired asset, the pool is re-balancing by selling the rising token while buying the token whose price is falling. Once you withdraw your liquidity, you’re left holding less of the token that mooned, and more of the token that dumped.
+As one token’s price is rising relative to its paired asset, the pool re-balances by selling the rising token while buying the token whose price is falling. Once you withdraw your liquidity, you are left holding less of the token that mooned, and more of the token that dumped.
 
-## What is Impermanent Loss Insurance?
+## What is Impermanent Loss Protection?
 
-Bancor v2.1 is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited \(as if they HODL'd the tokens in their wallet\) plus swap fees using a novel mechanism called **Impermanent Loss Insurance**.
+Bancor v2.1 is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited \(as if they held the tokens in their wallet\) using a novel mechanism called **Impermanent Loss Protection**.
 
 Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection. In other words, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back, plus trading fees/rewards.
 
@@ -47,29 +49,29 @@ Even if a token moons, an LP is entitled to withdraw the full value of the token
 
 Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the protocol is able to co-invest in pools alongside liquidity providers and pay for the cost of impermanent loss with swap fees earned from its co-investments.
 
-The cost of IL insurance may be less than fees earned from BNT co-invested by the protocol, allowing the protocol to offset an LP’s IL without emitting new BNT.   
+If fees earned by the protocol from its co-invested BNT are greater than IL compensation, the protocol is able to offset IL for LPs without emitting new BNT.   
   
-If there are not sufficient tokens in the pool to fully compensate the LP for impermanent loss in the staked ERC20 token, part of the insurance may be paid out in an equal value of BNT. 
+If there are not sufficient tokens in a pool to fully compensate an LP for IL in the staked ERC20 token, part of the protection may be paid out in an equal value of BNT. 
 
 ![](.gitbook/assets/v21diagram.jpeg)
 
-By design, the insurance policies offered by Bancor are earned over time. When a user makes a new deposit, the cover offered by their insurance policy increases at a rate of 1% each day the stake remains live, and matures to full coverage after 100 days. 
+By design, the protection offered by Bancor is earned by LPs over time. When a user makes a new deposit, the cover offered by the protocol increases at a rate of 1% each day the stake remains live, and matures to full protection after 100 days. 
 
 After this period, any impermanent loss that occurred in the first 100 days or any time thereafter is covered by the protocol at the time of withdrawal. Withdrawals prior to the 100-day maturity are only eligible for partial compensation. For example, withdrawals after 60 days in the pool receive 60% compensation on any impermanent loss incurred. Also, there is no compensation offered at all for stakes withdrawn within the first 30 days.
 
 Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view) and [**economic analysis**](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view).
 
-## Why is limited space in Bancor whitelisted pools?
+## Why is there limited space in Bancor whitelisted pools?
 
 To support single-sided, non-BNT deposits, the protocol invests BNT into whitelisted pools. For example, a $100K deposit of LINK triggers $100K of BNT emissions into the LINK pool.
 
-Protocol-supplied BNT generally remains in the pool earning fees for the protocol until the BNT and its accrued fees are eventually burned. The amount of insurance offered by the protocol is governed the DAO and determined by BNT holders.
+Protocol-supplied BNT generally remains in the pool earning fees for the protocol until the BNT \(and its accrued fees\) are eventually burned. The amount of protection offered by the protocol is governed the DAO and determined by BNT holders.
 
 Each pool has a limit on the amount of BNT that can be provided by the protocol \(“co-investment limit”\). When this limit is reached, BNT must be provided by users in order for the pool to expand, or governance can vote to increase the limit.
 
-## **Could I lose profits before I reach the 30-day cliff**?
+## **Can I underperform a basic buy and hold strategy**?
 
-Only if you withdraw your tokens before 30 days in the pool. Impermanent loss insurance starts vesting immediately when you deposit. But you must be in the pool for at least 30 days until the cliff is reached and before the insurance can be utilized.
+Only if you withdraw your tokens before 30 days in the pool. Impermanent loss protection starts vesting immediately when you deposit. But you must be in the pool for at least 30 days until the cliff is reached and before the insurance can be utilized.
 
 ## **Where can I track returns and see the current coverage on my liquidity pool position?**
 
@@ -99,7 +101,7 @@ Only pools voted into the Bancor v2.1 whitelist by Bancor governance are eligibl
 
 [_**Instructions on how to whitelist a token**_](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)_**.**_
 
-## 2. Depositing / Withdrawing Liquidity
+## 3. Depositing / Withdrawing Liquidity
 
 ## How do I stake in the Bancor protocol?
 
@@ -198,7 +200,7 @@ APR from BNT Liquidity Mining is measured similarly. BNT distributed to the pool
 
 
 
-## 3. BNT Liquidity Mining
+## 4. BNT Liquidity Mining
 
 ## What is the Liquidity Mining \(LM\) program?
 
@@ -304,7 +306,7 @@ No, the rewards are earned continuously on your initial stake per block. You can
 
 Keep in mind holding rewards in the contract has no impact on your bonus multipliers; however, simply holding rewards in the contract and not staking them means you are not earning compounded yield / additional rewards.
 
-## 4. Pool management
+## 5. Pool management
 
 ## How to create a new pool to Bancor?
 
@@ -318,7 +320,7 @@ Please check out this guide: [https://medium.com/@bancor/how-to-whitelist-a-toke
 
 Currently, pool owners determine the pool's fee, however this is subject to change via governance, with the introduction of a standardized fee that is dynamic or the introduction of LP voting on each pool's fees. More information can be found in Bancor's Discord and Governance forum.
 
-## 5. Trading
+## 6. Trading
 
 ## Which fees are associated with swapping?
 
@@ -330,7 +332,7 @@ Besides the ETH gas fees, there's a fee for each trade and it depends on the poo
 
 In order to swap tokens, you will need to first approve allowance for the relevant tokens. You can choose Unlimited approval in case you do not want to approve each time you trade these tokens, or Limited Approval if you do not want the contracts to keep ownership of moving these tokens on your behalf. 
 
-## 6. Further Resources
+## 7. Further Resources
 
 * [Bancor Wiki](https://docs.bancor.network/getting-started/resources)
 * [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view): 
@@ -344,7 +346,7 @@ In order to swap tokens, you will need to first approve allowance for the releva
 * [Bancor February 2021 progress update](https://blog.bancor.network/bancor-monthly-progress-update-february-2021-685e174f6537)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
 
-## 7. Helpful Links
+## 8. Helpful Links
 
 * Telegram groups: [Bancor Protocol](https://t.me/bancor), [Bancor Devs](https://t.me/BancorDevelopers), [Bancor Traders](https://t.me/bancortraders)
 * [Bancor Discord](https://discord.gg/pe7EfaR)
