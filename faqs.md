@@ -19,19 +19,15 @@ FAQs below are divided into the following sections:
 
 ## **1. Liquidity Pools**
 
-## **What are liquidity pools?**
-
 Liquidity pools are automated market-maker **\(AMM\)** smart contracts that exchange assets algorithmically using on-chain reserves. They turn pooled market-maker liquidity into an asset class \(“liquidity positions”\), allowing for broader, more competitive involvement in market-making.
 
 ## **2. Impermanent Loss**
-
-## **What is impermanent loss?**
 
 Impermanent loss is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.
 
 It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the impermanent loss.
 
-Why “impermanent”? Because as long as the relative prices of tokens in the AMM return to their original state when you entered the AMM, the loss disappears and you earn 100% of the trading fees. However, this is rarely the case. Impermanent loss often becomes _permanent_, eating into your trade income & liquidity mining rewards or leaving you with negative returns. 
+Why “impermanent”? As long as the relative prices of tokens in the AMM return to their original state when you entered the AMM, the loss is reduced and you earn a higher share of trading fees. However, this is rarely the case. Impermanent loss often becomes _permanent_, reducing profits from trading fees & liquidity mining rewards, or leaving you with negative returns. 
 
 ## What causes impermanent loss?
 
