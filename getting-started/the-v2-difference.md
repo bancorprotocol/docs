@@ -47,3 +47,34 @@ Second, v2.1 currently DOES NOT support dynamically adjusting supply tokens \(i.
 
 Third, when being withdrawn from the system, BNTs are locked for a pre-set time \(default 24 hr\) to prevent panic liquidation.
 
+## **Whitelisting Requirements**
+
+### **Transparency**
+
+1. The token contract needs to be verified on Etherscan.
+2. The token contract should have an audit from a known security auditor or explain why it wasn’t audited \(for example, if it’s a standard token from the OpenZeppelin library\).
+3. The project should have a publicly visible test suite with decent test coverage.
+
+### **Administrative Risk**
+
+Administrative privileges over the protocol \(ownership, upgradability, emergency powers, etc.\) should be restricted:
+
+1. They should not be owned by EOA.
+2. They can be governed by multisigs.
+3. They can enforce timelock or similar restrictions.
+
+**Protocols that don’t comply with this should provide an explanation why.**
+
+### **Technical**
+
+1. The token contract should not be upgradable. 
+2. Only the token holders themselves can burn their tokens. It shouldn’t be possible for any other account \(including owners/admins\) to burn tokens.
+3. Minting of new tokens should be restricted and conform to the whitepaper and the security audit. 
+4. Rebasing tokens or tokens with elastic supply aren’t currently supported.
+5. Tokens that apply transfer fees aren’t currently supported. Please note that tokens that have the fee mechanism in place but haven’t activated it yet are exempt. 
+6. Token transfers shouldn’t be pausable unless a reasonable explanation is provided.
+
+### **Economic Requirements**
+
+1. The token should be fairly distributed \(e.g., it can’t be concentrated in a few addresses\). 
+
