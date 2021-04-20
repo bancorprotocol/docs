@@ -17,9 +17,10 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 ### Videos
 
+* [How to Provide Liquidity on Bancor](https://www.youtube.com/watch?v=2Mz7wh3hm8Y) **\(**Jeffrey Zirlin - Axie Infinity\)
+* [Staking tutorial ](https://youtu.be/3P4vKIHcdas)\(CryptoOneShop**\)**
 * [Bancor Protocol overview ](https://twitter.com/Bancor/status/1359455683939356674?s=20)\(DeFiFrog**\)**
-* [Single-sided liquidity](https://twitter.com/DeFiFrog/status/1368623215673626625?s=20) \(DeFiFrog\)
-* [Bancor staking tutorial](https://www.youtube.com/watch?v=3P4vKIHcdas) \(CryptoOneShop**\)**
+* \*\*\*\*[Single-sided liquidity](https://twitter.com/DeFiFrog/status/1368623215673626625?s=20) \(DeFiFrog\)
 * [Bancor Protocol Overview](https://www.youtube.com/watch?v=sdd5TToLv9o&feature=youtu.be) \(Blocks of Finance**\)**
 * [Bancor Vortex ](https://www.youtube.com/watch?v=SbUqcbNqQ-Y)\(MBR\)
 * [Bancor Protocol ELI5](https://www.youtube.com/watch?v=MQa8_4s9wMo) \(MBR\)
