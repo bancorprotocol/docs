@@ -1,10 +1,10 @@
 # Functions:
 
-- [`systemBalance(contract IERC20Token poolToken)`](#ILiquidityProtectionSystemStore-systemBalance-contract-IERC20Token-)
+- [`systemBalance(contract IERC20 poolToken)`](#ILiquidityProtectionSystemStore-systemBalance-contract-IERC20-)
 
-- [`incSystemBalance(contract IERC20Token poolToken, uint256 poolAmount)`](#ILiquidityProtectionSystemStore-incSystemBalance-contract-IERC20Token-uint256-)
+- [`incSystemBalance(contract IERC20 poolToken, uint256 poolAmount)`](#ILiquidityProtectionSystemStore-incSystemBalance-contract-IERC20-uint256-)
 
-- [`decSystemBalance(contract IERC20Token poolToken, uint256 poolAmount)`](#ILiquidityProtectionSystemStore-decSystemBalance-contract-IERC20Token-uint256-)
+- [`decSystemBalance(contract IERC20 poolToken, uint256 poolAmount)`](#ILiquidityProtectionSystemStore-decSystemBalance-contract-IERC20-uint256-)
 
 - [`networkTokensMinted(contract IConverterAnchor poolAnchor)`](#ILiquidityProtectionSystemStore-networkTokensMinted-contract-IConverterAnchor-)
 
@@ -12,15 +12,15 @@
 
 - [`decNetworkTokensMinted(contract IConverterAnchor poolAnchor, uint256 amount)`](#ILiquidityProtectionSystemStore-decNetworkTokensMinted-contract-IConverterAnchor-uint256-)
 
-## Function `systemBalance(contract IERC20Token poolToken) → uint256` {#ILiquidityProtectionSystemStore-systemBalance-contract-IERC20Token-}
+## Function `systemBalance(contract IERC20 poolToken) → uint256` {#ILiquidityProtectionSystemStore-systemBalance-contract-IERC20-}
 
 No description
 
-## Function `incSystemBalance(contract IERC20Token poolToken, uint256 poolAmount)` {#ILiquidityProtectionSystemStore-incSystemBalance-contract-IERC20Token-uint256-}
+## Function `incSystemBalance(contract IERC20 poolToken, uint256 poolAmount)` {#ILiquidityProtectionSystemStore-incSystemBalance-contract-IERC20-uint256-}
 
 No description
 
-## Function `decSystemBalance(contract IERC20Token poolToken, uint256 poolAmount)` {#ILiquidityProtectionSystemStore-decSystemBalance-contract-IERC20Token-uint256-}
+## Function `decSystemBalance(contract IERC20 poolToken, uint256 poolAmount)` {#ILiquidityProtectionSystemStore-decSystemBalance-contract-IERC20-uint256-}
 
 No description
 

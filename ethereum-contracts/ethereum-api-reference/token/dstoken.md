@@ -6,6 +6,8 @@ The owner of the token can mint/burn tokens to/from any account.
 
 - [`constructor(string _name, string _symbol, uint8 _decimals)`](#DSToken-constructor-string-string-uint8-)
 
+- [`decimals()`](#DSToken-decimals--)
+
 - [`issue(address _to, uint256 _amount)`](#DSToken-issue-address-uint256-)
 
 - [`destroy(address _from, uint256 _amount)`](#DSToken-destroy-address-uint256-)
@@ -27,6 +29,10 @@ initializes a new DSToken instance
 - `_symbol`:     token short symbol, minimum 1 character
 
 - `_decimals`:   for display purposes only
+
+## Function `decimals() → uint8` {#DSToken-decimals--}
+
+No description
 
 ## Function `issue(address _to, uint256 _amount)` {#DSToken-issue-address-uint256-}
 

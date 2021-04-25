@@ -2,7 +2,7 @@ This contract is an integral part of the converter registry,
 
 and it serves as the database contract that holds all registry data.
 
-The registry is separated into two different contracts for upgradability - the data contract
+The registry is separated into two different contracts for upgradeability - the data contract
 
 is harder to upgrade as it requires migrating all registry data into a new contract, while
 
@@ -24,9 +24,9 @@ access utilities that it exposes.
 
 - [`removeLiquidityPool(contract IConverterAnchor _liquidityPoolAnchor)`](#ConverterRegistryData-removeLiquidityPool-contract-IConverterAnchor-)
 
-- [`addConvertibleToken(contract IERC20Token _convertibleToken, contract IConverterAnchor _anchor)`](#ConverterRegistryData-addConvertibleToken-contract-IERC20Token-contract-IConverterAnchor-)
+- [`addConvertibleToken(contract IReserveToken _convertibleToken, contract IConverterAnchor _anchor)`](#ConverterRegistryData-addConvertibleToken-contract-IReserveToken-contract-IConverterAnchor-)
 
-- [`removeConvertibleToken(contract IERC20Token _convertibleToken, contract IConverterAnchor _anchor)`](#ConverterRegistryData-removeConvertibleToken-contract-IERC20Token-contract-IConverterAnchor-)
+- [`removeConvertibleToken(contract IReserveToken _convertibleToken, contract IConverterAnchor _anchor)`](#ConverterRegistryData-removeConvertibleToken-contract-IReserveToken-contract-IConverterAnchor-)
 
 - [`getSmartTokenCount()`](#ConverterRegistryData-getSmartTokenCount--)
 
@@ -52,13 +52,13 @@ access utilities that it exposes.
 
 - [`isConvertibleToken(address _value)`](#ConverterRegistryData-isConvertibleToken-address-)
 
-- [`getConvertibleTokenSmartTokenCount(contract IERC20Token _convertibleToken)`](#ConverterRegistryData-getConvertibleTokenSmartTokenCount-contract-IERC20Token-)
+- [`getConvertibleTokenSmartTokenCount(contract IReserveToken _convertibleToken)`](#ConverterRegistryData-getConvertibleTokenSmartTokenCount-contract-IReserveToken-)
 
-- [`getConvertibleTokenSmartTokens(contract IERC20Token _convertibleToken)`](#ConverterRegistryData-getConvertibleTokenSmartTokens-contract-IERC20Token-)
+- [`getConvertibleTokenSmartTokens(contract IReserveToken _convertibleToken)`](#ConverterRegistryData-getConvertibleTokenSmartTokens-contract-IReserveToken-)
 
-- [`getConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, uint256 _index)`](#ConverterRegistryData-getConvertibleTokenSmartToken-contract-IERC20Token-uint256-)
+- [`getConvertibleTokenSmartToken(contract IReserveToken _convertibleToken, uint256 _index)`](#ConverterRegistryData-getConvertibleTokenSmartToken-contract-IReserveToken-uint256-)
 
-- [`isConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, address _value)`](#ConverterRegistryData-isConvertibleTokenSmartToken-contract-IERC20Token-address-)
+- [`isConvertibleTokenSmartToken(contract IReserveToken _convertibleToken, address _value)`](#ConverterRegistryData-isConvertibleTokenSmartToken-contract-IReserveToken-address-)
 
 ## Function `constructor(contract IContractRegistry _registry)` {#ConverterRegistryData-constructor-contract-IContractRegistry-}
 
@@ -100,7 +100,7 @@ removes a liquidity pool
 
 - `_liquidityPoolAnchor`: liquidity pool
 
-## Function `addConvertibleToken(contract IERC20Token _convertibleToken, contract IConverterAnchor _anchor)` {#ConverterRegistryData-addConvertibleToken-contract-IERC20Token-contract-IConverterAnchor-}
+## Function `addConvertibleToken(contract IReserveToken _convertibleToken, contract IConverterAnchor _anchor)` {#ConverterRegistryData-addConvertibleToken-contract-IReserveToken-contract-IConverterAnchor-}
 
 adds a convertible token
 
@@ -110,7 +110,7 @@ adds a convertible token
 
 - `_anchor`:              associated anchor
 
-## Function `removeConvertibleToken(contract IERC20Token _convertibleToken, contract IConverterAnchor _anchor)` {#ConverterRegistryData-removeConvertibleToken-contract-IERC20Token-contract-IConverterAnchor-}
+## Function `removeConvertibleToken(contract IReserveToken _convertibleToken, contract IConverterAnchor _anchor)` {#ConverterRegistryData-removeConvertibleToken-contract-IReserveToken-contract-IConverterAnchor-}
 
 removes a convertible token
 
@@ -216,7 +216,7 @@ returns the list of convertible tokens
 
 - list of convertible tokens
 
-## Function `getConvertibleToken(uint256 _index) → contract IERC20Token` {#ConverterRegistryData-getConvertibleToken-uint256-}
+## Function `getConvertibleToken(uint256 _index) → contract IReserveToken` {#ConverterRegistryData-getConvertibleToken-uint256-}
 
 returns the convertible token at a given index
 
@@ -240,7 +240,7 @@ checks whether or not a given value is a convertible token
 
 - true if the given value is a convertible token, false if not
 
-## Function `getConvertibleTokenSmartTokenCount(contract IERC20Token _convertibleToken) → uint256` {#ConverterRegistryData-getConvertibleTokenSmartTokenCount-contract-IERC20Token-}
+## Function `getConvertibleTokenSmartTokenCount(contract IReserveToken _convertibleToken) → uint256` {#ConverterRegistryData-getConvertibleTokenSmartTokenCount-contract-IReserveToken-}
 
 returns the number of anchors associated with a given convertible token
 
@@ -252,7 +252,7 @@ returns the number of anchors associated with a given convertible token
 
 - number of anchors
 
-## Function `getConvertibleTokenSmartTokens(contract IERC20Token _convertibleToken) → address[]` {#ConverterRegistryData-getConvertibleTokenSmartTokens-contract-IERC20Token-}
+## Function `getConvertibleTokenSmartTokens(contract IReserveToken _convertibleToken) → address[]` {#ConverterRegistryData-getConvertibleTokenSmartTokens-contract-IReserveToken-}
 
 returns the list of anchors associated with a given convertible token
 
@@ -264,7 +264,7 @@ returns the list of anchors associated with a given convertible token
 
 - list of anchors
 
-## Function `getConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, uint256 _index) → contract IConverterAnchor` {#ConverterRegistryData-getConvertibleTokenSmartToken-contract-IERC20Token-uint256-}
+## Function `getConvertibleTokenSmartToken(contract IReserveToken _convertibleToken, uint256 _index) → contract IConverterAnchor` {#ConverterRegistryData-getConvertibleTokenSmartToken-contract-IReserveToken-uint256-}
 
 returns the anchor associated with a given convertible token at a given index
 
@@ -272,7 +272,7 @@ returns the anchor associated with a given convertible token at a given index
 
 - `_index`: index
 
-## Function `isConvertibleTokenSmartToken(contract IERC20Token _convertibleToken, address _value) → bool` {#ConverterRegistryData-isConvertibleTokenSmartToken-contract-IERC20Token-address-}
+## Function `isConvertibleTokenSmartToken(contract IReserveToken _convertibleToken, address _value) → bool` {#ConverterRegistryData-isConvertibleTokenSmartToken-contract-IReserveToken-address-}
 
 checks whether or not a given value is an anchor of a given convertible token
 

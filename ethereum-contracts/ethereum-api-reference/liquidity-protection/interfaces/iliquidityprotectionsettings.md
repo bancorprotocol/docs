@@ -14,7 +14,7 @@
 
 - [`networkTokenMintingLimits(contract IConverterAnchor poolAnchor)`](#ILiquidityProtectionSettings-networkTokenMintingLimits-contract-IConverterAnchor-)
 
-- [`addLiquidityDisabled(contract IConverterAnchor poolAnchor, contract IERC20Token reserveToken)`](#ILiquidityProtectionSettings-addLiquidityDisabled-contract-IConverterAnchor-contract-IERC20Token-)
+- [`addLiquidityDisabled(contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken)`](#ILiquidityProtectionSettings-addLiquidityDisabled-contract-IConverterAnchor-contract-IReserveToken-)
 
 - [`minProtectionDelay()`](#ILiquidityProtectionSettings-minProtectionDelay--)
 
@@ -54,7 +54,7 @@ No description
 
 No description
 
-## Function `addLiquidityDisabled(contract IConverterAnchor poolAnchor, contract IERC20Token reserveToken) → bool` {#ILiquidityProtectionSettings-addLiquidityDisabled-contract-IConverterAnchor-contract-IERC20Token-}
+## Function `addLiquidityDisabled(contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken) → bool` {#ILiquidityProtectionSettings-addLiquidityDisabled-contract-IConverterAnchor-contract-IReserveToken-}
 
 No description
 

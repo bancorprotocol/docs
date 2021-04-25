@@ -4,6 +4,8 @@
 
 - [`ceilSqrtTest(uint256 _num)`](#TestMathEx-ceilSqrtTest-uint256-)
 
+- [`poweredRatioTest(uint256 _n, uint256 _d, uint256 _exp)`](#TestMathEx-poweredRatioTest-uint256-uint256-uint256-)
+
 - [`reducedRatioTest(uint256 _n, uint256 _d, uint256 _max)`](#TestMathEx-reducedRatioTest-uint256-uint256-uint256-)
 
 - [`normalizedRatioTest(uint256 _a, uint256 _b, uint256 _scale)`](#TestMathEx-normalizedRatioTest-uint256-uint256-uint256-)
@@ -23,6 +25,10 @@
 No description
 
 ## Function `ceilSqrtTest(uint256 _num) → uint256` {#TestMathEx-ceilSqrtTest-uint256-}
+
+No description
+
+## Function `poweredRatioTest(uint256 _n, uint256 _d, uint256 _exp) → uint256, uint256` {#TestMathEx-poweredRatioTest-uint256-uint256-uint256-}
 
 No description
 

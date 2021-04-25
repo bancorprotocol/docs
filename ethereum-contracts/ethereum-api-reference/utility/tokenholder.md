@@ -1,5 +1,3 @@
-# TokenHolder
-
 This contract provides a safety mechanism for allowing the owner to
 
 send tokens that were sent to the contract by mistake back to the sender.
@@ -8,25 +6,42 @@ We consider every contract to be a 'token holder' since it's currently not possi
 
 for a contract to deny receiving tokens.
 
-Note that we use the non standard ERC-20 interface which has no return value for transfer
+# Functions:
 
-in order to support both non standard as well as standard token contracts.
+- [`receive()`](#TokenHolder-receive--)
 
-see [https://github.com/ethereum/solidity/issues/4116](https://github.com/ethereum/solidity/issues/4116)
+- [`withdrawTokens(contract IReserveToken reserveToken, address payable to, uint256 amount)`](#TokenHolder-withdrawTokens-contract-IReserveToken-address-payable-uint256-)
 
-## Functions:
+- [`withdrawTokensMultiple(contract IReserveToken[] reserveTokens, address payable to, uint256[] amounts)`](#TokenHolder-withdrawTokensMultiple-contract-IReserveToken---address-payable-uint256---)
 
-* [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](tokenholder.md#TokenHolder-withdrawTokens-contract-IERC20Token-address-uint256-)
+## Function `receive()` {#TokenHolder-receive--}
 
-### Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` <a id="TokenHolder-withdrawTokens-contract-IERC20Token-address-uint256-"></a>
+No description
 
-withdraws tokens held by the contract and sends them to an account
+## Function `withdrawTokens(contract IReserveToken reserveToken, address payable to, uint256 amount)` {#TokenHolder-withdrawTokens-contract-IReserveToken-address-payable-uint256-}
+
+withdraws funds held by the contract and sends them to an account
 
 can only be called by the owner
 
-### Parameters:
+## Parameters:
 
-* `_token`: ERC20 token contract address
-* `_to`: account to receive the new amount
-* `_amount`: amount to withdraw
+- `reserveToken`: reserve token contract address
 
+- `to`: account to receive the new amount
+
+- `amount`: amount to withdraw
+
+## Function `withdrawTokensMultiple(contract IReserveToken[] reserveTokens, address payable to, uint256[] amounts)` {#TokenHolder-withdrawTokensMultiple-contract-IReserveToken---address-payable-uint256---}
+
+withdraws multiple funds held by the contract and sends them to an account
+
+can only be called by the owner
+
+## Parameters:
+
+- `reserveTokens`: reserve tokens contract addresses
+
+- `to`: account to receive the new amount
+
+- `amounts`: amounts to withdraw

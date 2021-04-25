@@ -1,19 +1,19 @@
 # Functions:
 
-- [`addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn)`](#ILiquidityPoolConverter-addLiquidity-contract-IERC20Token---uint256---uint256-)
+- [`addLiquidity(contract IReserveToken[] reserveTokens, uint256[] reserveAmounts, uint256 _minReturn)`](#ILiquidityPoolConverter-addLiquidity-contract-IReserveToken---uint256---uint256-)
 
-- [`removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts)`](#ILiquidityPoolConverter-removeLiquidity-uint256-contract-IERC20Token---uint256---)
+- [`removeLiquidity(uint256 amount, contract IReserveToken[] reserveTokens, uint256[] _reserveMinReturnAmounts)`](#ILiquidityPoolConverter-removeLiquidity-uint256-contract-IReserveToken---uint256---)
 
-- [`recentAverageRate(contract IERC20Token _reserveToken)`](#ILiquidityPoolConverter-recentAverageRate-contract-IERC20Token-)
+- [`recentAverageRate(contract IReserveToken reserveToken)`](#ILiquidityPoolConverter-recentAverageRate-contract-IReserveToken-)
 
-## Function `addLiquidity(contract IERC20Token[] _reserveTokens, uint256[] _reserveAmounts, uint256 _minReturn)` {#ILiquidityPoolConverter-addLiquidity-contract-IERC20Token---uint256---uint256-}
-
-No description
-
-## Function `removeLiquidity(uint256 _amount, contract IERC20Token[] _reserveTokens, uint256[] _reserveMinReturnAmounts)` {#ILiquidityPoolConverter-removeLiquidity-uint256-contract-IERC20Token---uint256---}
+## Function `addLiquidity(contract IReserveToken[] reserveTokens, uint256[] reserveAmounts, uint256 _minReturn)` {#ILiquidityPoolConverter-addLiquidity-contract-IReserveToken---uint256---uint256-}
 
 No description
 
-## Function `recentAverageRate(contract IERC20Token _reserveToken) → uint256, uint256` {#ILiquidityPoolConverter-recentAverageRate-contract-IERC20Token-}
+## Function `removeLiquidity(uint256 amount, contract IReserveToken[] reserveTokens, uint256[] _reserveMinReturnAmounts)` {#ILiquidityPoolConverter-removeLiquidity-uint256-contract-IReserveToken---uint256---}
+
+No description
+
+## Function `recentAverageRate(contract IReserveToken reserveToken) → uint256, uint256` {#ILiquidityPoolConverter-recentAverageRate-contract-IReserveToken-}
 
 No description

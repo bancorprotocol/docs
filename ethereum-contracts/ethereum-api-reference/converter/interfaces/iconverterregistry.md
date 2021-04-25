@@ -24,13 +24,15 @@
 
 - [`isConvertibleToken(address _value)`](#IConverterRegistry-isConvertibleToken-address-)
 
-- [`getConvertibleTokenAnchorCount(contract IERC20Token _convertibleToken)`](#IConverterRegistry-getConvertibleTokenAnchorCount-contract-IERC20Token-)
+- [`getConvertibleTokenAnchorCount(contract IReserveToken _convertibleToken)`](#IConverterRegistry-getConvertibleTokenAnchorCount-contract-IReserveToken-)
 
-- [`getConvertibleTokenAnchors(contract IERC20Token _convertibleToken)`](#IConverterRegistry-getConvertibleTokenAnchors-contract-IERC20Token-)
+- [`getConvertibleTokenAnchors(contract IReserveToken _convertibleToken)`](#IConverterRegistry-getConvertibleTokenAnchors-contract-IReserveToken-)
 
-- [`getConvertibleTokenAnchor(contract IERC20Token _convertibleToken, uint256 _index)`](#IConverterRegistry-getConvertibleTokenAnchor-contract-IERC20Token-uint256-)
+- [`getConvertibleTokenAnchor(contract IReserveToken _convertibleToken, uint256 _index)`](#IConverterRegistry-getConvertibleTokenAnchor-contract-IReserveToken-uint256-)
 
-- [`isConvertibleTokenAnchor(contract IERC20Token _convertibleToken, address _value)`](#IConverterRegistry-isConvertibleTokenAnchor-contract-IERC20Token-address-)
+- [`isConvertibleTokenAnchor(contract IReserveToken _convertibleToken, address _value)`](#IConverterRegistry-isConvertibleTokenAnchor-contract-IReserveToken-address-)
+
+- [`getLiquidityPoolByConfig(uint16 _type, contract IReserveToken[] _reserveTokens, uint32[] _reserveWeights)`](#IConverterRegistry-getLiquidityPoolByConfig-uint16-contract-IReserveToken---uint32---)
 
 ## Function `getAnchorCount() → uint256` {#IConverterRegistry-getAnchorCount--}
 
@@ -72,7 +74,7 @@ No description
 
 No description
 
-## Function `getConvertibleToken(uint256 _index) → contract IERC20Token` {#IConverterRegistry-getConvertibleToken-uint256-}
+## Function `getConvertibleToken(uint256 _index) → contract IReserveToken` {#IConverterRegistry-getConvertibleToken-uint256-}
 
 No description
 
@@ -80,18 +82,22 @@ No description
 
 No description
 
-## Function `getConvertibleTokenAnchorCount(contract IERC20Token _convertibleToken) → uint256` {#IConverterRegistry-getConvertibleTokenAnchorCount-contract-IERC20Token-}
+## Function `getConvertibleTokenAnchorCount(contract IReserveToken _convertibleToken) → uint256` {#IConverterRegistry-getConvertibleTokenAnchorCount-contract-IReserveToken-}
 
 No description
 
-## Function `getConvertibleTokenAnchors(contract IERC20Token _convertibleToken) → address[]` {#IConverterRegistry-getConvertibleTokenAnchors-contract-IERC20Token-}
+## Function `getConvertibleTokenAnchors(contract IReserveToken _convertibleToken) → address[]` {#IConverterRegistry-getConvertibleTokenAnchors-contract-IReserveToken-}
 
 No description
 
-## Function `getConvertibleTokenAnchor(contract IERC20Token _convertibleToken, uint256 _index) → contract IConverterAnchor` {#IConverterRegistry-getConvertibleTokenAnchor-contract-IERC20Token-uint256-}
+## Function `getConvertibleTokenAnchor(contract IReserveToken _convertibleToken, uint256 _index) → contract IConverterAnchor` {#IConverterRegistry-getConvertibleTokenAnchor-contract-IReserveToken-uint256-}
 
 No description
 
-## Function `isConvertibleTokenAnchor(contract IERC20Token _convertibleToken, address _value) → bool` {#IConverterRegistry-isConvertibleTokenAnchor-contract-IERC20Token-address-}
+## Function `isConvertibleTokenAnchor(contract IReserveToken _convertibleToken, address _value) → bool` {#IConverterRegistry-isConvertibleTokenAnchor-contract-IReserveToken-address-}
+
+No description
+
+## Function `getLiquidityPoolByConfig(uint16 _type, contract IReserveToken[] _reserveTokens, uint32[] _reserveWeights) → contract IConverterAnchor` {#IConverterRegistry-getLiquidityPoolByConfig-uint16-contract-IReserveToken---uint32---}
 
 No description

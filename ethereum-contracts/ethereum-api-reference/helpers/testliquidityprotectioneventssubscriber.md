@@ -2,56 +2,32 @@ Liquidity protection events subscriber interface
 
 # Functions:
 
-- [`onAddingLiquidity(address provider, contract IConverterAnchor poolAnchor, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)`](#TestLiquidityProtectionEventsSubscriber-onAddingLiquidity-address-contract-IConverterAnchor-contract-IERC20Token-uint256-uint256-)
+- [`onAddingLiquidity(address provider, contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 poolAmount, uint256 reserveAmount)`](#TestLiquidityProtectionEventsSubscriber-onAddingLiquidity-address-contract-IConverterAnchor-contract-IReserveToken-uint256-uint256-)
 
-- [`onRemovingLiquidity(uint256 id, address provider, contract IConverterAnchor poolAnchor, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)`](#TestLiquidityProtectionEventsSubscriber-onRemovingLiquidity-uint256-address-contract-IConverterAnchor-contract-IERC20Token-uint256-uint256-)
+- [`onRemovingLiquidity(uint256 id, address provider, contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 poolAmount, uint256 reserveAmount)`](#TestLiquidityProtectionEventsSubscriber-onRemovingLiquidity-uint256-address-contract-IConverterAnchor-contract-IReserveToken-uint256-uint256-)
 
-- [`id()`](#TestLiquidityProtectionEventsSubscriber-id--)
+- [`reset()`](#TestLiquidityProtectionEventsSubscriber-reset--)
 
-- [`provider()`](#TestLiquidityProtectionEventsSubscriber-provider--)
+- [`events(uint256 id)`](#TestLiquidityProtectionEventsSubscriber-events-uint256-)
 
-- [`poolAnchor()`](#TestLiquidityProtectionEventsSubscriber-poolAnchor--)
+- [`eventCount()`](#TestLiquidityProtectionEventsSubscriber-eventCount--)
 
-- [`reserveToken()`](#TestLiquidityProtectionEventsSubscriber-reserveToken--)
-
-- [`poolAmount()`](#TestLiquidityProtectionEventsSubscriber-poolAmount--)
-
-- [`reserveAmount()`](#TestLiquidityProtectionEventsSubscriber-reserveAmount--)
-
-- [`adding()`](#TestLiquidityProtectionEventsSubscriber-adding--)
-
-## Function `onAddingLiquidity(address provider, contract IConverterAnchor poolAnchor, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#TestLiquidityProtectionEventsSubscriber-onAddingLiquidity-address-contract-IConverterAnchor-contract-IERC20Token-uint256-uint256-}
+## Function `onAddingLiquidity(address provider, contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#TestLiquidityProtectionEventsSubscriber-onAddingLiquidity-address-contract-IConverterAnchor-contract-IReserveToken-uint256-uint256-}
 
 No description
 
-## Function `onRemovingLiquidity(uint256 id, address provider, contract IConverterAnchor poolAnchor, contract IERC20Token reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#TestLiquidityProtectionEventsSubscriber-onRemovingLiquidity-uint256-address-contract-IConverterAnchor-contract-IERC20Token-uint256-uint256-}
+## Function `onRemovingLiquidity(uint256 id, address provider, contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 poolAmount, uint256 reserveAmount)` {#TestLiquidityProtectionEventsSubscriber-onRemovingLiquidity-uint256-address-contract-IConverterAnchor-contract-IReserveToken-uint256-uint256-}
 
 No description
 
-## Function `id() → uint256` {#TestLiquidityProtectionEventsSubscriber-id--}
+## Function `reset()` {#TestLiquidityProtectionEventsSubscriber-reset--}
 
 No description
 
-## Function `provider() → address` {#TestLiquidityProtectionEventsSubscriber-provider--}
+## Function `events(uint256 id) → uint256, address, contract IConverterAnchor, contract IReserveToken, uint256, uint256, bool` {#TestLiquidityProtectionEventsSubscriber-events-uint256-}
 
 No description
 
-## Function `poolAnchor() → contract IConverterAnchor` {#TestLiquidityProtectionEventsSubscriber-poolAnchor--}
-
-No description
-
-## Function `reserveToken() → contract IERC20Token` {#TestLiquidityProtectionEventsSubscriber-reserveToken--}
-
-No description
-
-## Function `poolAmount() → uint256` {#TestLiquidityProtectionEventsSubscriber-poolAmount--}
-
-No description
-
-## Function `reserveAmount() → uint256` {#TestLiquidityProtectionEventsSubscriber-reserveAmount--}
-
-No description
-
-## Function `adding() → bool` {#TestLiquidityProtectionEventsSubscriber-adding--}
+## Function `eventCount() → uint256` {#TestLiquidityProtectionEventsSubscriber-eventCount--}
 
 No description

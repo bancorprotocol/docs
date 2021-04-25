@@ -6,7 +6,7 @@
 
 - [`getXTransferAmount(uint256 _xTransferId, address _for)`](#IBancorX-getXTransferAmount-uint256-address-)
 
-## Function `token() → contract IERC20Token` {#IBancorX-token--}
+## Function `token() → contract IERC20` {#IBancorX-token--}
 
 No description
 

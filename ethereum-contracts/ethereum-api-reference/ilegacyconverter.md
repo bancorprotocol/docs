@@ -1,7 +1,7 @@
 # Functions:
 
-- [`change(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, uint256 _minReturn)`](#ILegacyConverter-change-contract-IERC20Token-contract-IERC20Token-uint256-uint256-)
+- [`change(contract IReserveToken _sourceToken, contract IReserveToken _targetToken, uint256 _amount, uint256 _minReturn)`](#ILegacyConverter-change-contract-IReserveToken-contract-IReserveToken-uint256-uint256-)
 
-## Function `change(contract IERC20Token _sourceToken, contract IERC20Token _targetToken, uint256 _amount, uint256 _minReturn) → uint256` {#ILegacyConverter-change-contract-IERC20Token-contract-IERC20Token-uint256-uint256-}
+## Function `change(contract IReserveToken _sourceToken, contract IReserveToken _targetToken, uint256 _amount, uint256 _minReturn) → uint256` {#ILegacyConverter-change-contract-IReserveToken-contract-IReserveToken-uint256-uint256-}
 
 No description

@@ -1,10 +1,10 @@
 # Functions:
 
-- [`withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)`](#ILiquidityProtectionStore-withdrawTokens-contract-IERC20Token-address-uint256-)
+- [`withdrawTokens(contract IReserveToken _token, address _to, uint256 _amount)`](#ILiquidityProtectionStore-withdrawTokens-contract-IReserveToken-address-uint256-)
 
 - [`protectedLiquidity(uint256 _id)`](#ILiquidityProtectionStore-protectedLiquidity-uint256-)
 
-- [`addProtectedLiquidity(address _provider, contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _poolAmount, uint256 _reserveAmount, uint256 _reserveRateN, uint256 _reserveRateD, uint256 _timestamp)`](#ILiquidityProtectionStore-addProtectedLiquidity-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-uint256-uint256-uint256-)
+- [`addProtectedLiquidity(address _provider, contract IDSToken _poolToken, contract IReserveToken _reserveToken, uint256 _poolAmount, uint256 _reserveAmount, uint256 _reserveRateN, uint256 _reserveRateD, uint256 _timestamp)`](#ILiquidityProtectionStore-addProtectedLiquidity-address-contract-IDSToken-contract-IReserveToken-uint256-uint256-uint256-uint256-uint256-)
 
 - [`updateProtectedLiquidityAmounts(uint256 _id, uint256 _poolNewAmount, uint256 _reserveNewAmount)`](#ILiquidityProtectionStore-updateProtectedLiquidityAmounts-uint256-uint256-uint256-)
 
@@ -18,21 +18,21 @@
 
 - [`removeLockedBalance(address _provider, uint256 _index)`](#ILiquidityProtectionStore-removeLockedBalance-address-uint256-)
 
-- [`systemBalance(contract IERC20Token _poolToken)`](#ILiquidityProtectionStore-systemBalance-contract-IERC20Token-)
+- [`systemBalance(contract IReserveToken _poolToken)`](#ILiquidityProtectionStore-systemBalance-contract-IReserveToken-)
 
-- [`incSystemBalance(contract IERC20Token _poolToken, uint256 _poolAmount)`](#ILiquidityProtectionStore-incSystemBalance-contract-IERC20Token-uint256-)
+- [`incSystemBalance(contract IReserveToken _poolToken, uint256 _poolAmount)`](#ILiquidityProtectionStore-incSystemBalance-contract-IReserveToken-uint256-)
 
-- [`decSystemBalance(contract IERC20Token _poolToken, uint256 _poolAmount)`](#ILiquidityProtectionStore-decSystemBalance-contract-IERC20Token-uint256-)
+- [`decSystemBalance(contract IReserveToken _poolToken, uint256 _poolAmount)`](#ILiquidityProtectionStore-decSystemBalance-contract-IReserveToken-uint256-)
 
-## Function `withdrawTokens(contract IERC20Token _token, address _to, uint256 _amount)` {#ILiquidityProtectionStore-withdrawTokens-contract-IERC20Token-address-uint256-}
-
-No description
-
-## Function `protectedLiquidity(uint256 _id) → address, contract IDSToken, contract IERC20Token, uint256, uint256, uint256, uint256, uint256` {#ILiquidityProtectionStore-protectedLiquidity-uint256-}
+## Function `withdrawTokens(contract IReserveToken _token, address _to, uint256 _amount)` {#ILiquidityProtectionStore-withdrawTokens-contract-IReserveToken-address-uint256-}
 
 No description
 
-## Function `addProtectedLiquidity(address _provider, contract IDSToken _poolToken, contract IERC20Token _reserveToken, uint256 _poolAmount, uint256 _reserveAmount, uint256 _reserveRateN, uint256 _reserveRateD, uint256 _timestamp) → uint256` {#ILiquidityProtectionStore-addProtectedLiquidity-address-contract-IDSToken-contract-IERC20Token-uint256-uint256-uint256-uint256-uint256-}
+## Function `protectedLiquidity(uint256 _id) → address, contract IDSToken, contract IReserveToken, uint256, uint256, uint256, uint256, uint256` {#ILiquidityProtectionStore-protectedLiquidity-uint256-}
+
+No description
+
+## Function `addProtectedLiquidity(address _provider, contract IDSToken _poolToken, contract IReserveToken _reserveToken, uint256 _poolAmount, uint256 _reserveAmount, uint256 _reserveRateN, uint256 _reserveRateD, uint256 _timestamp) → uint256` {#ILiquidityProtectionStore-addProtectedLiquidity-address-contract-IDSToken-contract-IReserveToken-uint256-uint256-uint256-uint256-uint256-}
 
 No description
 
@@ -60,14 +60,14 @@ No description
 
 No description
 
-## Function `systemBalance(contract IERC20Token _poolToken) → uint256` {#ILiquidityProtectionStore-systemBalance-contract-IERC20Token-}
+## Function `systemBalance(contract IReserveToken _poolToken) → uint256` {#ILiquidityProtectionStore-systemBalance-contract-IReserveToken-}
 
 No description
 
-## Function `incSystemBalance(contract IERC20Token _poolToken, uint256 _poolAmount)` {#ILiquidityProtectionStore-incSystemBalance-contract-IERC20Token-uint256-}
+## Function `incSystemBalance(contract IReserveToken _poolToken, uint256 _poolAmount)` {#ILiquidityProtectionStore-incSystemBalance-contract-IReserveToken-uint256-}
 
 No description
 
-## Function `decSystemBalance(contract IERC20Token _poolToken, uint256 _poolAmount)` {#ILiquidityProtectionStore-decSystemBalance-contract-IERC20Token-uint256-}
+## Function `decSystemBalance(contract IReserveToken _poolToken, uint256 _poolAmount)` {#ILiquidityProtectionStore-decSystemBalance-contract-IReserveToken-uint256-}
 
 No description

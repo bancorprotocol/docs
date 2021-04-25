@@ -12,7 +12,7 @@ callers are required to report a transfer before tokens are released to the targ
 
 # Functions:
 
-- [`constructor(uint256 _maxLockLimit, uint256 _maxReleaseLimit, uint256 _minLimit, uint256 _limitIncPerBlock, uint8 _minRequiredReports, contract IContractRegistry _registry, contract IERC20Token _token)`](#BancorX-constructor-uint256-uint256-uint256-uint256-uint8-contract-IContractRegistry-contract-IERC20Token-)
+- [`constructor(uint256 _maxLockLimit, uint256 _maxReleaseLimit, uint256 _minLimit, uint256 _limitIncPerBlock, uint8 _minRequiredReports, contract IContractRegistry _registry, contract IERC20 _token)`](#BancorX-constructor-uint256-uint256-uint256-uint256-uint8-contract-IContractRegistry-contract-IERC20-)
 
 - [`setMaxLockLimit(uint256 _maxLockLimit)`](#BancorX-setMaxLockLimit-uint256-)
 
@@ -56,7 +56,7 @@ callers are required to report a transfer before tokens are released to the targ
 
 - [`XTransferComplete(address _to, uint256 _id)`](#BancorX-XTransferComplete-address-uint256-)
 
-## Function `constructor(uint256 _maxLockLimit, uint256 _maxReleaseLimit, uint256 _minLimit, uint256 _limitIncPerBlock, uint8 _minRequiredReports, contract IContractRegistry _registry, contract IERC20Token _token)` {#BancorX-constructor-uint256-uint256-uint256-uint256-uint8-contract-IContractRegistry-contract-IERC20Token-}
+## Function `constructor(uint256 _maxLockLimit, uint256 _maxReleaseLimit, uint256 _minLimit, uint256 _limitIncPerBlock, uint8 _minRequiredReports, contract IContractRegistry _registry, contract IERC20 _token)` {#BancorX-constructor-uint256-uint256-uint256-uint256-uint8-contract-IContractRegistry-contract-IERC20-}
 
 initializes a new BancorX instance
 
