@@ -13,7 +13,7 @@
     "postinstall": "doxygen --download"
   },
   "devDependencies": {
-    "@bancor/contracts-solidity": "bancorprotocol/contracts#0.6.36",
+    "@bancor/contracts-solidity": "^0.6.36",
     "download-git-repo": "3.0.2",
     "doxygen": "0.3.2",
     "solc": "0.6.12",

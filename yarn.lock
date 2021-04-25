@@ -2,14 +2,15 @@
 # yarn lockfile v1
 
 
-"@bancor/contracts-solidity@bancorprotocol/contracts#0.6.36":
-  version "0.6.35"
-  resolved "https://codeload.github.com/bancorprotocol/contracts/tar.gz/d6f8f2b51ea17f7aaae83ad0d97c7044865f6d7f"
+"@bancor/contracts-solidity@^0.6.36":
+  version "0.6.36"
+  resolved "https://registry.yarnpkg.com/@bancor/contracts-solidity/-/contracts-solidity-0.6.36.tgz#852d088cf1afd056ead427ae55cc7279c4252c10"
+  integrity sha512-A50Tcg4DQ+IcWRAgLx4xt5fvPphgjMMxc046HJVl7PYHluMY4y1C/FEdVQDzPg5/e86pfc/gxAXX9L+VPyabEA==
   dependencies:
     "@bancor/token-governance" bancorprotocol/token-governance
     "@openzeppelin/contracts" "3.4.0"
 
-"@bancor/token-governance@bancorprotocol/token-governance":
+"@bancor/token-governance@github:bancorprotocol/token-governance":
   version "0.1.0"
   resolved "https://codeload.github.com/bancorprotocol/token-governance/tar.gz/72c40f70149cbd4b294556ee253bb0afd9620098"
 
