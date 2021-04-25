@@ -10,7 +10,7 @@
     "@bancor/token-governance" bancorprotocol/token-governance
     "@openzeppelin/contracts" "3.4.0"
 
-"@bancor/token-governance@github:bancorprotocol/token-governance":
+"@bancor/token-governance@bancorprotocol/token-governance":
   version "0.1.0"
   resolved "https://codeload.github.com/bancorprotocol/token-governance/tar.gz/72c40f70149cbd4b294556ee253bb0afd9620098"
 
