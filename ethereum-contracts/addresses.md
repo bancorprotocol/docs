@@ -36,7 +36,7 @@ Follow the "[Working with Bancor Network](../developer-quick-start/working-with-
 
 # Other Addresses
 
-Other addresses can be obtained via the [ContractRegistry](../ethereum-api-reference/utility/contractregistry.md) contract, using the following IDs:
+Other addresses can be obtained via the [ContractRegistry](../ethereum-contracts/ethereum-api-reference/utility/contractregistry.md) contract, using the following IDs:
 
 | **Contract Name** | Contract ID |
 | :--- | :--- |
