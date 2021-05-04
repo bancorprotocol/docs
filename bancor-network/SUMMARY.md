@@ -55,9 +55,9 @@
     * [ConverterRegistry](../ethereum-contracts/ethereum-api-reference/converter/converterregistry.md)
     * [ConverterUpgrader](../ethereum-contracts/ethereum-api-reference/converter/converterupgrader.md)
     * [BancorFormula](../ethereum-contracts/ethereum-api-reference/converter/bancorformula.md)
-  * [Token \(ETH\)](../ethereum-contracts/ethereum-api-reference/token/README.md)
-    * [ERC20Token](../ethereum-contracts/ethereum-api-reference/token/reservetoken.md)
-    * [DSToken](../ethereum-contracts/ethereum-api-reference/token/dstoken.md)
+  * [Token \(ETH\)](../ethereum-contracts/ethereum-api-reference/token-eth/README.md)
+    * [ERC20Token](../ethereum-contracts/ethereum-api-reference/token-eth/reservetoken.md)
+    * [DSToken](../ethereum-contracts/ethereum-api-reference/token-eth/dstoken.md)
   * [Liquidity Protection](../ethereum-contracts/ethereum-api-reference/liquidity-protection/README.md)
     * [LiquidityProtection](../ethereum-contracts/ethereum-api-reference/liquidity-protection/liquidityprotection.md)
     * [LiquidityProtectionSettings](../ethereum-contracts/ethereum-api-reference/liquidity-protection/liquidityprotectionsettings.md)
@@ -72,7 +72,7 @@
     * [TokenHolder](../ethereum-contracts/ethereum-api-reference/utility/tokenholder.md)
     * [Utils](../ethereum-contracts/ethereum-api-reference/utility/utils.md)
     * [Whitelist](../ethereum-contracts/ethereum-api-reference/utility/whitelist.md)
-  * [BancorX \(ETH\)](../ethereum-contracts/ethereum-api-reference/bancorx/bancorx.md)
+  * [BancorX \(ETH\)](../ethereum-contracts/ethereum-api-reference/bancorx.md)
 * [Security](../ethereum-contracts/security.md)
 
 ## EOS Contracts

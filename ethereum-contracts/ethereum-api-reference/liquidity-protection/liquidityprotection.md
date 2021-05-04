@@ -1,198 +1,168 @@
+# LiquidityProtection
+
 This contract implements the liquidity protection mechanism.
 
-# Functions:
+## Functions:
 
-- [`constructor(contract ILiquidityProtectionSettings settings, contract ILiquidityProtectionStore store, contract ILiquidityProtectionStats stats, contract ILiquidityProtectionSystemStore systemStore, contract ITokenHolder wallet, contract ITokenGovernance networkTokenGovernance, contract ITokenGovernance govTokenGovernance, contract ICheckpointStore lastRemoveCheckpointStore)`](#LiquidityProtection-constructor-contract-ILiquidityProtectionSettings-contract-ILiquidityProtectionStore-contract-ILiquidityProtectionStats-contract-ILiquidityProtectionSystemStore-contract-ITokenHolder-contract-ITokenGovernance-contract-ITokenGovernance-contract-ICheckpointStore-)
+* [`constructor(contract ILiquidityProtectionSettings settings, contract ILiquidityProtectionStore store, contract ILiquidityProtectionStats stats, contract ILiquidityProtectionSystemStore systemStore, contract ITokenHolder wallet, contract ITokenGovernance networkTokenGovernance, contract ITokenGovernance govTokenGovernance, contract ICheckpointStore lastRemoveCheckpointStore)`](liquidityprotection.md#LiquidityProtection-constructor-contract-ILiquidityProtectionSettings-contract-ILiquidityProtectionStore-contract-ILiquidityProtectionStats-contract-ILiquidityProtectionSystemStore-contract-ITokenHolder-contract-ITokenGovernance-contract-ITokenGovernance-contract-ICheckpointStore-)
+* [`store()`](liquidityprotection.md#LiquidityProtection-store--)
+* [`stats()`](liquidityprotection.md#LiquidityProtection-stats--)
+* [`settings()`](liquidityprotection.md#LiquidityProtection-settings--)
+* [`systemStore()`](liquidityprotection.md#LiquidityProtection-systemStore--)
+* [`wallet()`](liquidityprotection.md#LiquidityProtection-wallet--)
+* [`receive()`](liquidityprotection.md#LiquidityProtection-receive--)
+* [`transferStoreOwnership(address newOwner)`](liquidityprotection.md#LiquidityProtection-transferStoreOwnership-address-)
+* [`acceptStoreOwnership()`](liquidityprotection.md#LiquidityProtection-acceptStoreOwnership--)
+* [`transferWalletOwnership(address newOwner)`](liquidityprotection.md#LiquidityProtection-transferWalletOwnership-address-)
+* [`acceptWalletOwnership()`](liquidityprotection.md#LiquidityProtection-acceptWalletOwnership--)
+* [`addLiquidityFor(address owner, contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 amount)`](liquidityprotection.md#LiquidityProtection-addLiquidityFor-address-contract-IConverterAnchor-contract-IReserveToken-uint256-)
+* [`addLiquidity(contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 amount)`](liquidityprotection.md#LiquidityProtection-addLiquidity-contract-IConverterAnchor-contract-IReserveToken-uint256-)
+* [`poolAvailableSpace(contract IConverterAnchor poolAnchor)`](liquidityprotection.md#LiquidityProtection-poolAvailableSpace-contract-IConverterAnchor-)
+* [`removeLiquidityReturn(uint256 id, uint32 portion, uint256 removeTimestamp)`](liquidityprotection.md#LiquidityProtection-removeLiquidityReturn-uint256-uint32-uint256-)
+* [`removeLiquidity(uint256 id, uint32 portion)`](liquidityprotection.md#LiquidityProtection-removeLiquidity-uint256-uint32-)
+* [`transferPosition(uint256 id, address newProvider)`](liquidityprotection.md#LiquidityProtection-transferPosition-uint256-address-)
+* [`transferPositionAndCall(uint256 id, address newProvider, address target, bytes data)`](liquidityprotection.md#LiquidityProtection-transferPositionAndCall-uint256-address-address-bytes-)
+* [`claimBalance(uint256 startIndex, uint256 endIndex)`](liquidityprotection.md#LiquidityProtection-claimBalance-uint256-uint256-)
+* [`poolROI(contract IDSToken poolToken, contract IReserveToken reserveToken, uint256 reserveAmount, uint256 poolRateN, uint256 poolRateD, uint256 reserveRateN, uint256 reserveRateD)`](liquidityprotection.md#LiquidityProtection-poolROI-contract-IDSToken-contract-IReserveToken-uint256-uint256-uint256-uint256-uint256-)
 
-- [`store()`](#LiquidityProtection-store--)
-
-- [`stats()`](#LiquidityProtection-stats--)
-
-- [`settings()`](#LiquidityProtection-settings--)
-
-- [`systemStore()`](#LiquidityProtection-systemStore--)
-
-- [`wallet()`](#LiquidityProtection-wallet--)
-
-- [`receive()`](#LiquidityProtection-receive--)
-
-- [`transferStoreOwnership(address newOwner)`](#LiquidityProtection-transferStoreOwnership-address-)
-
-- [`acceptStoreOwnership()`](#LiquidityProtection-acceptStoreOwnership--)
-
-- [`transferWalletOwnership(address newOwner)`](#LiquidityProtection-transferWalletOwnership-address-)
-
-- [`acceptWalletOwnership()`](#LiquidityProtection-acceptWalletOwnership--)
-
-- [`addLiquidityFor(address owner, contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 amount)`](#LiquidityProtection-addLiquidityFor-address-contract-IConverterAnchor-contract-IReserveToken-uint256-)
-
-- [`addLiquidity(contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 amount)`](#LiquidityProtection-addLiquidity-contract-IConverterAnchor-contract-IReserveToken-uint256-)
-
-- [`poolAvailableSpace(contract IConverterAnchor poolAnchor)`](#LiquidityProtection-poolAvailableSpace-contract-IConverterAnchor-)
-
-- [`removeLiquidityReturn(uint256 id, uint32 portion, uint256 removeTimestamp)`](#LiquidityProtection-removeLiquidityReturn-uint256-uint32-uint256-)
-
-- [`removeLiquidity(uint256 id, uint32 portion)`](#LiquidityProtection-removeLiquidity-uint256-uint32-)
-
-- [`transferPosition(uint256 id, address newProvider)`](#LiquidityProtection-transferPosition-uint256-address-)
-
-- [`transferPositionAndCall(uint256 id, address newProvider, address target, bytes data)`](#LiquidityProtection-transferPositionAndCall-uint256-address-address-bytes-)
-
-- [`claimBalance(uint256 startIndex, uint256 endIndex)`](#LiquidityProtection-claimBalance-uint256-uint256-)
-
-- [`poolROI(contract IDSToken poolToken, contract IReserveToken reserveToken, uint256 reserveAmount, uint256 poolRateN, uint256 poolRateD, uint256 reserveRateN, uint256 reserveRateD)`](#LiquidityProtection-poolROI-contract-IDSToken-contract-IReserveToken-uint256-uint256-uint256-uint256-uint256-)
-
-## Function `constructor(contract ILiquidityProtectionSettings settings, contract ILiquidityProtectionStore store, contract ILiquidityProtectionStats stats, contract ILiquidityProtectionSystemStore systemStore, contract ITokenHolder wallet, contract ITokenGovernance networkTokenGovernance, contract ITokenGovernance govTokenGovernance, contract ICheckpointStore lastRemoveCheckpointStore)` {#LiquidityProtection-constructor-contract-ILiquidityProtectionSettings-contract-ILiquidityProtectionStore-contract-ILiquidityProtectionStats-contract-ILiquidityProtectionSystemStore-contract-ITokenHolder-contract-ITokenGovernance-contract-ITokenGovernance-contract-ICheckpointStore-}
+### Function `constructor(contract ILiquidityProtectionSettings settings, contract ILiquidityProtectionStore store, contract ILiquidityProtectionStats stats, contract ILiquidityProtectionSystemStore systemStore, contract ITokenHolder wallet, contract ITokenGovernance networkTokenGovernance, contract ITokenGovernance govTokenGovernance, contract ICheckpointStore lastRemoveCheckpointStore)` <a id="LiquidityProtection-constructor-contract-ILiquidityProtectionSettings-contract-ILiquidityProtectionStore-contract-ILiquidityProtectionStats-contract-ILiquidityProtectionSystemStore-contract-ITokenHolder-contract-ITokenGovernance-contract-ITokenGovernance-contract-ICheckpointStore-"></a>
 
 initializes a new LiquidityProtection contract
 
-## Parameters:
+### Parameters:
 
-- `settings`: liquidity protection settings
+* `settings`: liquidity protection settings
+* `store`: liquidity protection store
+* `stats`: liquidity protection stats
+* `systemStore`: liquidity protection system store
+* `wallet`: liquidity protection wallet
+* `networkTokenGovernance`: network token governance
+* `govTokenGovernance`: governance token governance
+* `lastRemoveCheckpointStore`: last liquidity removal/unprotection checkpoints store
 
-- `store`: liquidity protection store
-
-- `stats`: liquidity protection stats
-
-- `systemStore`: liquidity protection system store
-
-- `wallet`: liquidity protection wallet
-
-- `networkTokenGovernance`: network token governance
-
-- `govTokenGovernance`: governance token governance
-
-- `lastRemoveCheckpointStore`: last liquidity removal/unprotection checkpoints store
-
-## Function `store() → contract ILiquidityProtectionStore` {#LiquidityProtection-store--}
+### Function `store() → contract ILiquidityProtectionStore` <a id="LiquidityProtection-store--"></a>
 
 returns the LP store
 
-## Return Values:
+### Return Values:
 
-- the LP store
+* the LP store
 
-## Function `stats() → contract ILiquidityProtectionStats` {#LiquidityProtection-stats--}
+### Function `stats() → contract ILiquidityProtectionStats` <a id="LiquidityProtection-stats--"></a>
 
 returns the LP stats
 
-## Return Values:
+### Return Values:
 
-- the LP stats
+* the LP stats
 
-## Function `settings() → contract ILiquidityProtectionSettings` {#LiquidityProtection-settings--}
+### Function `settings() → contract ILiquidityProtectionSettings` <a id="LiquidityProtection-settings--"></a>
 
 returns the LP settings
 
-## Return Values:
+### Return Values:
 
-- the LP settings
+* the LP settings
 
-## Function `systemStore() → contract ILiquidityProtectionSystemStore` {#LiquidityProtection-systemStore--}
+### Function `systemStore() → contract ILiquidityProtectionSystemStore` <a id="LiquidityProtection-systemStore--"></a>
 
 returns the LP system store
 
-## Return Values:
+### Return Values:
 
-- the LP system store
+* the LP system store
 
-## Function `wallet() → contract ITokenHolder` {#LiquidityProtection-wallet--}
+### Function `wallet() → contract ITokenHolder` <a id="LiquidityProtection-wallet--"></a>
 
 returns the LP wallet
 
-## Return Values:
+### Return Values:
 
-- the LP wallet
+* the LP wallet
 
-## Function `receive()` {#LiquidityProtection-receive--}
+### Function `receive()` <a id="LiquidityProtection-receive--"></a>
 
 accept ETH
 
-## Function `transferStoreOwnership(address newOwner)` {#LiquidityProtection-transferStoreOwnership-address-}
+### Function `transferStoreOwnership(address newOwner)` <a id="LiquidityProtection-transferStoreOwnership-address-"></a>
 
 transfers the ownership of the store
 
 can only be called by the contract owner
 
-## Parameters:
+### Parameters:
 
-- `newOwner`: the new owner of the store
+* `newOwner`: the new owner of the store
 
-## Function `acceptStoreOwnership()` {#LiquidityProtection-acceptStoreOwnership--}
+### Function `acceptStoreOwnership()` <a id="LiquidityProtection-acceptStoreOwnership--"></a>
 
 accepts the ownership of the store
 
 can only be called by the contract owner
 
-## Function `transferWalletOwnership(address newOwner)` {#LiquidityProtection-transferWalletOwnership-address-}
+### Function `transferWalletOwnership(address newOwner)` <a id="LiquidityProtection-transferWalletOwnership-address-"></a>
 
 transfers the ownership of the wallet
 
 can only be called by the contract owner
 
-## Parameters:
+### Parameters:
 
-- `newOwner`: the new owner of the wallet
+* `newOwner`: the new owner of the wallet
 
-## Function `acceptWalletOwnership()` {#LiquidityProtection-acceptWalletOwnership--}
+### Function `acceptWalletOwnership()` <a id="LiquidityProtection-acceptWalletOwnership--"></a>
 
 accepts the ownership of the wallet
 
 can only be called by the contract owner
 
-## Function `addLiquidityFor(address owner, contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 amount) → uint256` {#LiquidityProtection-addLiquidityFor-address-contract-IConverterAnchor-contract-IReserveToken-uint256-}
+### Function `addLiquidityFor(address owner, contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 amount) → uint256` <a id="LiquidityProtection-addLiquidityFor-address-contract-IConverterAnchor-contract-IReserveToken-uint256-"></a>
 
 adds protected liquidity to a pool for a specific recipient
 
 also mints new governance tokens for the caller if the caller adds network tokens
 
-## Parameters:
+### Parameters:
 
-- `owner`: position owner
+* `owner`: position owner
+* `poolAnchor`: anchor of the pool
+* `reserveToken`: reserve token to add to the pool
+* `amount`: amount of tokens to add to the pool
 
-- `poolAnchor`: anchor of the pool
+### Return Values:
 
-- `reserveToken`: reserve token to add to the pool
+* new position id
 
-- `amount`: amount of tokens to add to the pool
-
-## Return Values:
-
-- new position id
-
-## Function `addLiquidity(contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 amount) → uint256` {#LiquidityProtection-addLiquidity-contract-IConverterAnchor-contract-IReserveToken-uint256-}
+### Function `addLiquidity(contract IConverterAnchor poolAnchor, contract IReserveToken reserveToken, uint256 amount) → uint256` <a id="LiquidityProtection-addLiquidity-contract-IConverterAnchor-contract-IReserveToken-uint256-"></a>
 
 adds protected liquidity to a pool
 
 also mints new governance tokens for the caller if the caller adds network tokens
 
-## Parameters:
+### Parameters:
 
-- `poolAnchor`: anchor of the pool
+* `poolAnchor`: anchor of the pool
+* `reserveToken`: reserve token to add to the pool
+* `amount`: amount of tokens to add to the pool
 
-- `reserveToken`: reserve token to add to the pool
+### Return Values:
 
-- `amount`: amount of tokens to add to the pool
+* new position id
 
-## Return Values:
-
-- new position id
-
-## Function `poolAvailableSpace(contract IConverterAnchor poolAnchor) → uint256, uint256` {#LiquidityProtection-poolAvailableSpace-contract-IConverterAnchor-}
+### Function `poolAvailableSpace(contract IConverterAnchor poolAnchor) → uint256, uint256` <a id="LiquidityProtection-poolAvailableSpace-contract-IConverterAnchor-"></a>
 
 returns the single-side staking limits of a given pool
 
-## Parameters:
+### Parameters:
 
-- `poolAnchor`: anchor of the pool
+* `poolAnchor`: anchor of the pool
 
-## Return Values:
+### Return Values:
 
-- maximum amount of base tokens that can be single-side staked in the pool
+* maximum amount of base tokens that can be single-side staked in the pool
+* maximum amount of network tokens that can be single-side staked in the pool
 
-- maximum amount of network tokens that can be single-side staked in the pool
-
-## Function `removeLiquidityReturn(uint256 id, uint32 portion, uint256 removeTimestamp) → uint256, uint256, uint256` {#LiquidityProtection-removeLiquidityReturn-uint256-uint32-uint256-}
+### Function `removeLiquidityReturn(uint256 id, uint32 portion, uint256 removeTimestamp) → uint256, uint256, uint256` <a id="LiquidityProtection-removeLiquidityReturn-uint256-uint32-uint256-"></a>
 
 returns the expected/actual amounts the provider will receive for removing liquidity
 
@@ -200,102 +170,87 @@ it's also possible to provide the remove liquidity time to get an estimation
 
 for the return at that given point
 
-## Parameters:
+### Parameters:
 
-- `id`: position id
+* `id`: position id
+* `portion`: portion of liquidity to remove, in PPM
+* `removeTimestamp`: time at which the liquidity is removed
 
-- `portion`: portion of liquidity to remove, in PPM
+### Return Values:
 
-- `removeTimestamp`: time at which the liquidity is removed
+* expected return amount in the reserve token
+* actual return amount in the reserve token
+* compensation in the network token
 
-## Return Values:
-
-- expected return amount in the reserve token
-
-- actual return amount in the reserve token
-
-- compensation in the network token
-
-## Function `removeLiquidity(uint256 id, uint32 portion)` {#LiquidityProtection-removeLiquidity-uint256-uint32-}
+### Function `removeLiquidity(uint256 id, uint32 portion)` <a id="LiquidityProtection-removeLiquidity-uint256-uint32-"></a>
 
 removes protected liquidity from a pool
 
 also burns governance tokens from the caller if the caller removes network tokens
 
-## Parameters:
+### Parameters:
 
-- `id`: position id
+* `id`: position id
+* `portion`: portion of liquidity to remove, in PPM
 
-- `portion`: portion of liquidity to remove, in PPM
-
-## Function `transferPosition(uint256 id, address newProvider) → uint256` {#LiquidityProtection-transferPosition-uint256-address-}
+### Function `transferPosition(uint256 id, address newProvider) → uint256` <a id="LiquidityProtection-transferPosition-uint256-address-"></a>
 
 transfers a position to a new provider
 
-## Parameters:
+### Parameters:
 
-- `id`: position id
+* `id`: position id
+* `newProvider`: the new provider
 
-- `newProvider`: the new provider
+### Return Values:
 
-## Return Values:
+* new position id
 
-- new position id
-
-## Function `transferPositionAndCall(uint256 id, address newProvider, address target, bytes data) → uint256` {#LiquidityProtection-transferPositionAndCall-uint256-address-address-bytes-}
+### Function `transferPositionAndCall(uint256 id, address newProvider, address target, bytes data) → uint256` <a id="LiquidityProtection-transferPositionAndCall-uint256-address-address-bytes-"></a>
 
 transfers a position to a new provider and optionally notifies another contract
 
-## Parameters:
+### Parameters:
 
-- `id`: position id
+* `id`: position id
+* `newProvider`: the new provider
+* `target`: the contract to notify
+* `data`: the data to call the contract with
 
-- `newProvider`: the new provider
+### Return Values:
 
-- `target`: the contract to notify
+* new position id
 
-- `data`: the data to call the contract with
-
-## Return Values:
-
-- new position id
-
-## Function `claimBalance(uint256 startIndex, uint256 endIndex)` {#LiquidityProtection-claimBalance-uint256-uint256-}
+### Function `claimBalance(uint256 startIndex, uint256 endIndex)` <a id="LiquidityProtection-claimBalance-uint256-uint256-"></a>
 
 allows the caller to claim network token balance that is no longer locked
 
 note that the function can revert if the range is too large
 
-## Parameters:
+### Parameters:
 
-- `startIndex`: start index in the caller's list of locked balances
+* `startIndex`: start index in the caller's list of locked balances
+* `endIndex`: end index in the caller's list of locked balances \(exclusive\)
 
-- `endIndex`: end index in the caller's list of locked balances (exclusive)
-
-## Function `poolROI(contract IDSToken poolToken, contract IReserveToken reserveToken, uint256 reserveAmount, uint256 poolRateN, uint256 poolRateD, uint256 reserveRateN, uint256 reserveRateD) → uint256` {#LiquidityProtection-poolROI-contract-IDSToken-contract-IReserveToken-uint256-uint256-uint256-uint256-uint256-}
+### Function `poolROI(contract IDSToken poolToken, contract IReserveToken reserveToken, uint256 reserveAmount, uint256 poolRateN, uint256 poolRateD, uint256 reserveRateN, uint256 reserveRateD) → uint256` <a id="LiquidityProtection-poolROI-contract-IDSToken-contract-IReserveToken-uint256-uint256-uint256-uint256-uint256-"></a>
 
 returns the ROI for removing liquidity in the current state after providing liquidity with the given args
 
 the function assumes full protection is in effect
 
-return value is in PPM and can be larger than PPM_RESOLUTION for positive ROI, 1M = 0% ROI
+return value is in PPM and can be larger than PPM\_RESOLUTION for positive ROI, 1M = 0% ROI
 
-## Parameters:
+### Parameters:
 
-- `poolToken`: pool token
+* `poolToken`: pool token
+* `reserveToken`: reserve token
+* `reserveAmount`: reserve token amount that was added
+* `poolRateN`: rate of 1 pool token in reserve token units when the liquidity was added \(numerator\)
+* `poolRateD`: rate of 1 pool token in reserve token units when the liquidity was added \(denominator\)
+* `reserveRateN`: rate of 1 reserve token in the other reserve token units when the liquidity was added \(numerator\)
+* `reserveRateD`: rate of 1 reserve token in the other reserve token units when the liquidity was added \(denominator\)
 
-- `reserveToken`: reserve token
+### Return Values:
 
-- `reserveAmount`: reserve token amount that was added
+* ROI in PPM
 
-- `poolRateN`: rate of 1 pool token in reserve token units when the liquidity was added (numerator)
-
-- `poolRateD`: rate of 1 pool token in reserve token units when the liquidity was added (denominator)
-
-- `reserveRateN`: rate of 1 reserve token in the other reserve token units when the liquidity was added (numerator)
-
-- `reserveRateD`: rate of 1 reserve token in the other reserve token units when the liquidity was added (denominator)
-
-## Return Values:
-
-- ROI in PPM

@@ -49,6 +49,8 @@ Third, when being withdrawn from the system, BNTs are locked for a pre-set time 
 
 ## **Whitelisting Requirements**
 
+\*\*\*\*[**See the most up to date technical requirements for whitelisting.**](https://gov.bancor.network/t/whitelisting-requirements/1849)\*\*\*\*
+
 ### **Transparency**
 
 1. The token contract needs to be verified on Etherscan.

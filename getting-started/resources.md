@@ -41,14 +41,15 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
   * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
   * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
 * [Proposing Bancor v2.1: Single-Sided AMMs with Impermanent Loss Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
-* [How to Submit Proposals in the BancorDAO](https://blog.bancor.network/a-guide-to-bancordao-due-process-d958ceade75d)
+* [How to Submit Proposals in the BancorDAO](https://blog.bancor.network/a-guide-to-bancordao-due-process-d958ceade75)
 * [How to Whitelist a Token in Bancor v2.1](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)
 * [How to Vote in the BancorDAO](https://blog.bancor.network/how-to-vote-using-vbnt-c205f011db1e)
 * [Introducing BNTee.shop](https://blog.bancor.network/introducing-bntees-eb5d5558a1b5) 
 
 _**Progress Reports**:_ 
 
-* [March 221](https://blog.bancor.network/bancor-progress-update-march-2020-73007ed5a03a)
+* [April 2021](https://blog.bancor.network/bancor-progress-update-april-2021-35fb95656267)
+* [March 2021](https://blog.bancor.network/bancor-progress-update-march-2020-73007ed5a03a)
 * [February 2021](https://blog.bancor.network/bancor-monthly-progress-update-february-2021-685e174f6537)
 * [January 2021](https://blog.bancor.network/bancor-v2-1-protocol-health-report-january-2020-83338c904de0)
 
