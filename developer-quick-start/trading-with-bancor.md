@@ -175,7 +175,7 @@ Copy and paste `ContractRegistry` ABI from [**here**](https://raw.githubusercont
 ### Step \#2: Trade on Bancor
 
 ```text
-const BancorSDK = require('bancor-sdk').SDK;
+const BancorSDK = require('@bancor/sdk').SDK;
 
 const ContractRegistryABI = require('./ContractRegistryABI.json');
 const BancorNetworkABI = require('./BancorNetworkABI.json');
