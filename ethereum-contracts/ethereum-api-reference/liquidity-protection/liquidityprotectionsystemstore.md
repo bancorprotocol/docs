@@ -1,106 +1,117 @@
-# LiquidityProtectionSystemStore
-
 This contract aggregates the system balances of the liquidity protection mechanism.
 
-## Functions:
+# Functions:
 
-* [`systemBalance(contract IERC20 token)`](liquidityprotectionsystemstore.md#LiquidityProtectionSystemStore-systemBalance-contract-IERC20-)
-* [`incSystemBalance(contract IERC20 token, uint256 amount)`](liquidityprotectionsystemstore.md#LiquidityProtectionSystemStore-incSystemBalance-contract-IERC20-uint256-)
-* [`decSystemBalance(contract IERC20 token, uint256 amount)`](liquidityprotectionsystemstore.md#LiquidityProtectionSystemStore-decSystemBalance-contract-IERC20-uint256-)
-* [`networkTokensMinted(contract IConverterAnchor poolAnchor)`](liquidityprotectionsystemstore.md#LiquidityProtectionSystemStore-networkTokensMinted-contract-IConverterAnchor-)
-* [`incNetworkTokensMinted(contract IConverterAnchor poolAnchor, uint256 amount)`](liquidityprotectionsystemstore.md#LiquidityProtectionSystemStore-incNetworkTokensMinted-contract-IConverterAnchor-uint256-)
-* [`decNetworkTokensMinted(contract IConverterAnchor poolAnchor, uint256 amount)`](liquidityprotectionsystemstore.md#LiquidityProtectionSystemStore-decNetworkTokensMinted-contract-IConverterAnchor-uint256-)
+- [`systemBalance(contract IERC20 token)`](#LiquidityProtectionSystemStore-systemBalance-contract-IERC20-)
 
-## Events:
+- [`incSystemBalance(contract IERC20 token, uint256 amount)`](#LiquidityProtectionSystemStore-incSystemBalance-contract-IERC20-uint256-)
 
-* [`SystemBalanceUpdated(contract IERC20 token, uint256 prevAmount, uint256 newAmount)`](liquidityprotectionsystemstore.md#LiquidityProtectionSystemStore-SystemBalanceUpdated-contract-IERC20-uint256-uint256-)
-* [`NetworkTokensMintedUpdated(contract IConverterAnchor poolAnchor, uint256 prevAmount, uint256 newAmount)`](liquidityprotectionsystemstore.md#LiquidityProtectionSystemStore-NetworkTokensMintedUpdated-contract-IConverterAnchor-uint256-uint256-)
+- [`decSystemBalance(contract IERC20 token, uint256 amount)`](#LiquidityProtectionSystemStore-decSystemBalance-contract-IERC20-uint256-)
 
-### Function `systemBalance(contract IERC20 token) → uint256` <a id="LiquidityProtectionSystemStore-systemBalance-contract-IERC20-"></a>
+- [`networkTokensMinted(contract IConverterAnchor poolAnchor)`](#LiquidityProtectionSystemStore-networkTokensMinted-contract-IConverterAnchor-)
+
+- [`incNetworkTokensMinted(contract IConverterAnchor poolAnchor, uint256 amount)`](#LiquidityProtectionSystemStore-incNetworkTokensMinted-contract-IConverterAnchor-uint256-)
+
+- [`decNetworkTokensMinted(contract IConverterAnchor poolAnchor, uint256 amount)`](#LiquidityProtectionSystemStore-decNetworkTokensMinted-contract-IConverterAnchor-uint256-)
+
+# Events:
+
+- [`SystemBalanceUpdated(contract IERC20 token, uint256 prevAmount, uint256 newAmount)`](#LiquidityProtectionSystemStore-SystemBalanceUpdated-contract-IERC20-uint256-uint256-)
+
+- [`NetworkTokensMintedUpdated(contract IConverterAnchor poolAnchor, uint256 prevAmount, uint256 newAmount)`](#LiquidityProtectionSystemStore-NetworkTokensMintedUpdated-contract-IConverterAnchor-uint256-uint256-)
+
+## Function `systemBalance(contract IERC20 token) → uint256` {#LiquidityProtectionSystemStore-systemBalance-contract-IERC20-}
 
 returns the system balance for a given token
 
-### Parameters:
+## Parameters:
 
-* `token`: token address
+- `token`: token address
 
-### Return Values:
+## Return Values:
 
-* system balance
+- system balance
 
-### Function `incSystemBalance(contract IERC20 token, uint256 amount)` <a id="LiquidityProtectionSystemStore-incSystemBalance-contract-IERC20-uint256-"></a>
+## Function `incSystemBalance(contract IERC20 token, uint256 amount)` {#LiquidityProtectionSystemStore-incSystemBalance-contract-IERC20-uint256-}
 
 increases the system balance for a given token
 
 can be executed only by an owner
 
-### Parameters:
+## Parameters:
 
-* `token`: token address
-* `amount`: token amount
+- `token`: token address
 
-### Function `decSystemBalance(contract IERC20 token, uint256 amount)` <a id="LiquidityProtectionSystemStore-decSystemBalance-contract-IERC20-uint256-"></a>
+- `amount`: token amount
+
+## Function `decSystemBalance(contract IERC20 token, uint256 amount)` {#LiquidityProtectionSystemStore-decSystemBalance-contract-IERC20-uint256-}
 
 decreases the system balance for a given token
 
 can be executed only by an owner
 
-### Parameters:
+## Parameters:
 
-* `token`: token address
-* `amount`: token amount
+- `token`: token address
 
-### Function `networkTokensMinted(contract IConverterAnchor poolAnchor) → uint256` <a id="LiquidityProtectionSystemStore-networkTokensMinted-contract-IConverterAnchor-"></a>
+- `amount`: token amount
+
+## Function `networkTokensMinted(contract IConverterAnchor poolAnchor) → uint256` {#LiquidityProtectionSystemStore-networkTokensMinted-contract-IConverterAnchor-}
 
 returns the amount of network tokens minted into a specific pool
 
-### Parameters:
+## Parameters:
 
-* `poolAnchor`:    pool anchor
+- `poolAnchor`:    pool anchor
 
-### Return Values:
+## Return Values:
 
-* amount of network tokens
+- amount of network tokens
 
-### Function `incNetworkTokensMinted(contract IConverterAnchor poolAnchor, uint256 amount)` <a id="LiquidityProtectionSystemStore-incNetworkTokensMinted-contract-IConverterAnchor-uint256-"></a>
+## Function `incNetworkTokensMinted(contract IConverterAnchor poolAnchor, uint256 amount)` {#LiquidityProtectionSystemStore-incNetworkTokensMinted-contract-IConverterAnchor-uint256-}
 
 increases the amount of network tokens minted into a specific pool
 
 can be executed only by an owner
 
-### Parameters:
+## Parameters:
 
-* `poolAnchor`: pool anchor
-* `amount`: amount to increase the minted tokens by
+- `poolAnchor`:    pool anchor
 
-### Function `decNetworkTokensMinted(contract IConverterAnchor poolAnchor, uint256 amount)` <a id="LiquidityProtectionSystemStore-decNetworkTokensMinted-contract-IConverterAnchor-uint256-"></a>
+- `amount`:        amount to increase the minted tokens by
+
+## Function `decNetworkTokensMinted(contract IConverterAnchor poolAnchor, uint256 amount)` {#LiquidityProtectionSystemStore-decNetworkTokensMinted-contract-IConverterAnchor-uint256-}
 
 decreases the amount of network tokens minted into a specific pool
 
 can be executed only by an owner
 
-### Parameters:
+## Parameters:
 
-* `poolAnchor`: pool anchor
-* `amount`: amount to decrease the minted tokens by
+- `poolAnchor`:    pool anchor
 
-### Event `SystemBalanceUpdated(contract IERC20 token, uint256 prevAmount, uint256 newAmount)` <a id="LiquidityProtectionSystemStore-SystemBalanceUpdated-contract-IERC20-uint256-uint256-"></a>
+- `amount`:        amount to decrease the minted tokens by
+
+## Event `SystemBalanceUpdated(contract IERC20 token, uint256 prevAmount, uint256 newAmount)` {#LiquidityProtectionSystemStore-SystemBalanceUpdated-contract-IERC20-uint256-uint256-}
 
 triggered when the system balance for a given token is updated
 
-### Parameters:
+## Parameters:
 
-* `token`: token address
-* `prevAmount`: previous amount
-* `newAmount`: new amount
+- `token`:         token address
 
-### Event `NetworkTokensMintedUpdated(contract IConverterAnchor poolAnchor, uint256 prevAmount, uint256 newAmount)` <a id="LiquidityProtectionSystemStore-NetworkTokensMintedUpdated-contract-IConverterAnchor-uint256-uint256-"></a>
+- `prevAmount`:    previous amount
+
+- `newAmount`:     new amount
+
+## Event `NetworkTokensMintedUpdated(contract IConverterAnchor poolAnchor, uint256 prevAmount, uint256 newAmount)` {#LiquidityProtectionSystemStore-NetworkTokensMintedUpdated-contract-IConverterAnchor-uint256-uint256-}
 
 triggered when the amount of network tokens minted into a specific pool is updated
 
-### Parameters:
+## Parameters:
 
-* `poolAnchor`: pool anchor
-* `prevAmount`: previous amount
-* `newAmount`: new amount
+- `poolAnchor`:    pool anchor
 
+- `prevAmount`:    previous amount
+
+- `newAmount`:     new amount

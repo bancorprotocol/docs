@@ -1,26 +1,25 @@
-# ContractRegistryClient
-
 This is the base contract for ContractRegistry clients.
 
-## Functions:
+# Functions:
 
-* [`updateRegistry()`](contractregistryclient.md#ContractRegistryClient-updateRegistry--)
-* [`restoreRegistry()`](contractregistryclient.md#ContractRegistryClient-restoreRegistry--)
-* [`restrictRegistryUpdate(bool _onlyOwnerCanUpdateRegistry)`](contractregistryclient.md#ContractRegistryClient-restrictRegistryUpdate-bool-)
+- [`updateRegistry()`](#ContractRegistryClient-updateRegistry--)
 
-### Function `updateRegistry()` <a id="ContractRegistryClient-updateRegistry--"></a>
+- [`restoreRegistry()`](#ContractRegistryClient-restoreRegistry--)
+
+- [`restrictRegistryUpdate(bool _onlyOwnerCanUpdateRegistry)`](#ContractRegistryClient-restrictRegistryUpdate-bool-)
+
+## Function `updateRegistry()` {#ContractRegistryClient-updateRegistry--}
 
 updates to the new contract-registry
 
-### Function `restoreRegistry()` <a id="ContractRegistryClient-restoreRegistry--"></a>
+## Function `restoreRegistry()` {#ContractRegistryClient-restoreRegistry--}
 
 restores the previous contract-registry
 
-### Function `restrictRegistryUpdate(bool _onlyOwnerCanUpdateRegistry)` <a id="ContractRegistryClient-restrictRegistryUpdate-bool-"></a>
+## Function `restrictRegistryUpdate(bool _onlyOwnerCanUpdateRegistry)` {#ContractRegistryClient-restrictRegistryUpdate-bool-}
 
 restricts the permission to update the contract-registry
 
-### Parameters:
+## Parameters:
 
-* `_onlyOwnerCanUpdateRegistry`:  indicates whether or not permission is restricted to owner only
-
+- `_onlyOwnerCanUpdateRegistry`:  indicates whether or not permission is restricted to owner only
