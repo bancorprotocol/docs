@@ -24,7 +24,7 @@ Bancor contracts are regularly upgraded so the `BancorNetwork` address may chang
 
 * Navigate to the [ContractRegistry contract on Etherscan](https://etherscan.io/address/0x52ae12abe5d8bd778bd5397f99ca900624cfadd4#readContract)
 * In the `Read Contract` section, execute the **getAddress** function with the following parameter:
-  * `_contractName`: **0x42616e636f724e6574776f726b**. This is the bytes32 representation of "BancorNetwork"
+  * `contractName`: **0x42616e636f724e6574776f726b**. This is the bytes32 representation of "BancorNetwork"
 * This return value is the address of the `BancorNetwork` contract. Save this value for Step \#3
 
 ### Step \#2: Generate Conversion Path
@@ -40,7 +40,7 @@ If you'd like to generate a conversion path on-chain, the `conversionPath` funct
 * Navigate to the Etherscan page of the contract address we queried for in Step \#1 and head to the `Write Contract` view
 * If you're exchanging ether for another token, you'll be using the `convert` function \(\#25\)
 * If you're exchanging one token for another token, you'll be using the `claimAndConvert` function \(\#19\)
-* You have the `_path` parameter from Step \#2 and you can use the `rate` return value from `getPathAndRate` as a reference point for how to determine the `minReturn` argument
+* You have the `path` parameter from Step \#2 and you can use the `rate` return value from `getPathAndRate` as a reference point for how to determine the `minReturn` argument
 * Execute the correct function with the relevant inputs
 
 

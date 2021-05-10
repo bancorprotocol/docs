@@ -186,7 +186,7 @@ const ContractRegistry = new web3.eth.Contract(ContractRegistryABI, contractRegi
 const ETH_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";
 
 const getBancorNetworkAddress = async() => {
-    const bancorNetworkName = web3.utils.fromAscii('BancorNetwork');
+    const bancorNetworkName = web3.utils.asciiToHex('BancorNetwork');
     const address = await ContractRegistry.methods.addressOf(bancorNetworkName).call();
     return address;
 }
@@ -219,7 +219,7 @@ const trade = async(amount) => {
     const sdk = await initializeSDK();
     const path = await sdk.pricing.getPathAndRate(sourceToken, targetToken, '1.0');
 
-    const minReturn = await BancorNetworkContract.methods.rateByPath(path, amount);
+    const minReturn = await BancorNetworkContract.methods.rateByPath(path, amount).call();
     const modifiedMinReturn = 
 
     const returnAmount = await BancorNetworkContract.methods.convert(

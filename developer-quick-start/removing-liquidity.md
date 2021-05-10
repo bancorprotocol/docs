@@ -15,7 +15,7 @@ Bancor is a fast-moving protocol, while at the same time remaining permissionles
 We recommend that you use the Bancor SDK to query for the converter version.
 
 ```text
-const BancorSDK = require('bancor-sdk').SDK;​
+const BancorSDK = require('@bancor/sdk').SDK;​
 
 const settings = {    
     // optional, mandatory when interacting with the ethereum mainnet    
@@ -66,7 +66,7 @@ Bancor V2 applies a variety of incentives in order to maintain the full staked t
 
 ```text
 function liquidationLimit(    
-    address _poolToken
+    address poolToken
 ) public view returns (uint256);​
 ```
 
@@ -78,8 +78,8 @@ It is advised for LPs to wait until the arbitrage opportunity is closed \(which 
 
 ```text
 function removeLiquidityReturn(    
-    address _poolToken,     
-    uint256 _amount
+    address poolToken,     
+    uint256 amount
 ) public view returns (uint256);​
 ```
 
@@ -103,23 +103,23 @@ Once the liquidation amount available is known and the pool is confirmed to be b
 ```text
 contract IConverter {    
     function removeLiquidity(        
-        ISmartToken _poolToken         
-        uint256 _amount,         
-        uint256 _minReturn    
+        ISmartToken poolToken         
+        uint256 amount,         
+        uint256 minReturn    
     ) external;    
 }
 
 contract MyContract {    
     IConverter converter = IContractRegistry(<your converter address>);        
     function removeLiquidity(        
-        ISmartToken _poolToken,
-        uint256 _poolAmount,         
-        uint256 _minReturn    
+        ISmartToken poolToken,
+        uint256 poolAmount,         
+        uint256 minReturn    
     ) external {        
         converter.removeLiquidity(            
-            _poolToken,            
-            _poolAmount,            
-            _minReturn        
+            poolToken,            
+            poolAmount,            
+            minReturn        
         ); 
     }   
 }
@@ -135,11 +135,11 @@ Removing liquidity will result in the emission of an event:
 
 ```text
 event LiquidityRemoved(    
-    address indexed _provider, // provider address    
-    address indexed _reserve, // token added    
-    uint256 _amount, // amount added    
-    uint256 _newBalance, // new balance of reserve    
-    uint256 _newSupply // new supply of reserve
+    address indexed provider, // provider address    
+    address indexed reserve, // token added    
+    uint256 amount, // amount added    
+    uint256 newBalance, // new balance of reserve    
+    uint256 newSupply // new supply of reserve
     )
 ```
 
@@ -148,27 +148,26 @@ event LiquidityRemoved(
 You'll find the newer interface for removing liquidity below.1
 
 ```text
-contract IConverter {    
-    function removeLiquidity(        
-    uint256 _amount,         
-    IERC20Token[] memory _reserveTokens,         
-    uint256[] memory _reserveMinReturnAmounts    
-    ) 
-    external;
+contract IConverter {
+    function removeLiquidity(
+        uint256 amount,
+        IERC20Token[] memory reserveTokens,
+        uint256[] memory reserveMinReturnAmounts
+    ) external;
 }​
 
-contract MyContract {    
-    IConverter converter = IContractRegistry(<your converter address>);    
-    function removeLiquidityFromPool(        
-        uint256 _amount,         
-        IERC20Token[] memory _reserveTokens,         
-        uint256[] memory _reserveMinReturnAmounts    
-    ) external {        
-        converter.removeLiquidity(            
-            _amount,            
-            _reserveTokens,            
-            _reserveMinReturnAmounts        
-        );    
+contract MyContract {
+    IConverter converter = IContractRegistry(<your converter address>);
+    function removeLiquidityFromPool(
+        uint256 amount,
+        IERC20Token[] memory reserveTokens,
+        uint256[] memory reserveMinReturnAmounts
+    ) external {
+        converter.removeLiquidity(
+            amount,
+            reserveTokens,
+            reserveMinReturnAmounts
+        );
     }
 }‌
 ```
@@ -176,34 +175,34 @@ contract MyContract {
 Removing liquidity will result in the emission of an event for each token reserve:
 
 ```text
-event LiquidityRemoved(    
-    address indexed _provider, // provider address    
-    address indexed _reserve, // token removed    
-    uint256 _amount, // amount removed    
-    uint256 _newBalance, // new balance of reserve    
-    uint256 _newSupply // new supply of reserve
-    )
+event LiquidityRemoved(
+    address indexed provider, // provider address
+    address indexed reserve, // token removed
+    uint256 amount, // amount removed
+    uint256 newBalance, // new balance of reserve
+    uint256 newSupply // new supply of reserve
+)
 ```
 
 ### Step \#3c: Removing Liquidity \(version &lt; 28\) <a id="step-3-c-removing-liquidity-version-less-than-28"></a>
 
 When we push a new version, each converter needs to be manually upgraded by its owner. For that reason, many active converters are still using earlier versions of our code.‌
 
-The `_amount` value in the **liquidate** functions is the number of liquidity tokens _expected_ or _requested_ on removal. This may require some math in your smart contract or Web3 code.‌
+The `amount` value in the **liquidate** functions is the number of liquidity tokens _expected_ or _requested_ on removal. This may require some math in your smart contract or Web3 code.‌
 
-Based on the liquidity token `_amount` value, the contract will transfer the requisite amount of tokens of each reserve corresponding to the token figure. This call is made directly on the pool converter contract, unlike conversion which is triggered on the `BancorNetwork` contract.1
+Based on the liquidity token `amount` value, the contract will transfer the requisite amount of tokens of each reserve corresponding to the token figure. This call is made directly on the pool converter contract, unlike conversion which is triggered on the `BancorNetwork` contract.
 
 ```text
-contract IConverter {    
-    function liquidate(uint256 _amount) external;
-    }​
-    
-contract MyContract {    
+contract IConverter {
+    function liquidate(uint256 amount) external;
+}​
+
+contract MyContract {
     IConverter converter = IConverter(<your converter address>);
-    function removeLiquidity(uint _amount) external {        
-        converter.liquidate(_amount);    
-        }
+    function removeLiquidity(uint amount) external {
+        converter.liquidate(amount);
     }
+}
 ```
 
 ## Removing Liquidity via Web3 <a id="removing-liquidity-via-web3"></a>

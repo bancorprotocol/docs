@@ -9,7 +9,7 @@ Bancor's new SDK allows you to interact with the Bancor Network using JavaScript
 To **initialize** the Bancor SDK in your JavaScript code:
 
 ```text
-const BancorSDK = require('bancor-sdk').SDK;
+const BancorSDK = require('@bancor/sdk').SDK;
 
 const settings = {
     // optional, mandatory when interacting with the ethereum mainnet

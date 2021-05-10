@@ -9,25 +9,25 @@ While many users benefit from the Bancor Network by using the Bancor App or a Ba
 ### Adding/Removing Liquidity
 
 {% hint style="info" %}
-If you're drawing liquidity from users, note that adding liquidity to Bancor pools requires ERC20 approvals of the underlying token reserves. You'll need to have the user submit an approval transaction for each reserve \(e.g. BNT or DAI\) previously with your Converter contract address as the `_spender` field and the amount they would like to contribute __in the __`_amount` field .
+If you're drawing liquidity from users, note that adding liquidity to Bancor pools requires ERC20 approvals of the underlying token reserves. You'll need to have the user submit an approval transaction for each reserve \(e.g. BNT or DAI\) previously with your Converter contract address as the `spender` field and the amount they would like to contribute __in the __`amount` field .
 {% endhint %}
 
-This is the Converter interface for adding \(fund\) or removing \(liquidate\) liquidity. In the case of adding liquidity, the `_amount` value is the number of pool tokens that you want to create. Based on the contributor's token reserves and the current state of the liquidity pool, you'll have to calculate this value either on-chain or off-chain. This number is capped by the reserves owned by the contributor and the amount of ERC20 approved for transfer. 
+This is the Converter interface for adding \(fund\) or removing \(liquidate\) liquidity. In the case of adding liquidity, the `amount` value is the number of pool tokens that you want to create. Based on the contributor's token reserves and the current state of the liquidity pool, you'll have to calculate this value either on-chain or off-chain. This number is capped by the reserves owned by the contributor and the amount of ERC20 approved for transfer. 
 
-In the case of removing liquidity, the `_amount` value is the number of pool tokens to burn for the underlying liquidity reserves. This number is capped by the number of tokens owned by the contributor's address.
+In the case of removing liquidity, the `amount` value is the number of pool tokens to burn for the underlying liquidity reserves. This number is capped by the number of tokens owned by the contributor's address.
 
 ```text
 contract IBancorConverter {
-    function fund(uint256 _amount) external;
-    function liquidate(uint256 _amount) external;
+    function fund(uint256 amount) external;
+    function liquidate(uint256 amount) external;
 }
 
 contract MyContract {
     IBancorConverter converter = IBancorConverter(<converter-address>);
     
-    function addLiquidity(uint _tokensToMint) public {
+    function addLiquidity(uint tokensToMint) public {
         ...
-        converter.fund(_tokensToMint);
+        converter.fund(tokensToMint);
         ...
     }
 }
@@ -35,29 +35,29 @@ contract MyContract {
 
 ### Trading With Bancor
 
-* `_path`: Network path between sourceToken and toToken
+* `path`: Network path between sourceToken and toToken
 
   * The `getPathAndRate` function on the [Bancor SDK](https://github.com/bancorprotocol/bancor-sdk) will generate the optimal path for this parameter
 
-* `_amount`: Source token input amount
-* `_minReturn`: To token minimum return
-* `_affiliateAccount`: Address to direct affiliate fees
-* `_affiliateFee`: Fee amount \(1000 would be equal to 0.1%\)
+* `amount`: Source token input amount
+* `minReturn`: To token minimum return
+* `affiliateAccount`: Address to direct affiliate fees
+* `affiliateFee`: Fee amount \(1000 would be equal to 0.1%\)
 
 ```text
 contract IBancorNetwork {
     // call when sending eth
     function convert(
-        IERC20Token[] _path, 
-        uint256 _amount, 
-        uint256 _minReturn
+        IERC20Token[] path,
+        uint256 amount,
+        uint256 minReturn
     ) external payable returns(uint256 returnAmount);
-    
+
     // call when sending tokens
     function claimAndConvert(
-        IERC20Token[] _path,
-        uint256 _amount, 
-        uint256 _minReturn
+        IERC20Token[] path,
+        uint256 amount,
+        uint256 minReturn
     ) external returns(uint256 returnAmount);
 }
 
@@ -66,32 +66,28 @@ contract IContractRegistry {
 }
 
 contract MyContract {
-    address contractRegistryAddress = 0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4;
-    bytes32 contractName = 0x42616e636f724e6574776f726b; // "BancorNetwork"
-        
+    address private constant CONTRACT_REGISTRY_ADDRESS = 0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4;
+    bytes32 private constant BANCOR_NETWORK = "BancorNetwork";
+
     function trade(
-        IERC20Token[] _path,
-        uint256 _minReturn
+        IERC20Token[] path,
+        uint256 minReturn
     ) external payable {
-        IContractRegistry contractRegistry = IContractRegistry(contractRegistryAddress);
-        address bancorNetworkAddress = IContractRegistry.addressOf(contractName);
+        IContractRegistry contractRegistry = IContractRegistry(CONTRACT_REGISTRY_ADDRESS);
+        address bancorNetworkAddress = IContractRegistry.addressOf(BANCOR_NETWORK);
         IBancorNetwork bancorNetwork = IBancorNetwork(bancorNetworkAddress);
-        
-        bancorNetwork.convert(_path, msg.value, _minReturn);
-    }    
-    
+        bancorNetwork.convert(path, msg.value, minReturn);
+    }
+
     function tradeToken(
-        IERC20Token[] _path,
-        uint256 _amount, 
-        uint256 _minReturn
+        IERC20Token[] path,
+        uint256 amount,
+        uint256 minReturn
     ) external payable {
-        IContractRegistry contractRegistry = IContractRegistry(contractRegistryAddress);
-        address bancorNetworkAddress = IContractRegistry.addressOf(contractName);
+        IContractRegistry contractRegistry = IContractRegistry(CONTRACT_REGISTRY_ADDRESS);
+        address bancorNetworkAddress = IContractRegistry.addressOf(BANCOR_NETWORK);
         IBancorNetwork bancorNetwork = IBancorNetwork(bancorNetworkAddress);
-        
-        bancorNetwork.convert(_path, _amount, _minReturn);
-    }   
-    
+        bancorNetwork.convert(path, amount, minReturn);
+    }
 }
 ```
-

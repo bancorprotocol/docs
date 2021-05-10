@@ -19,7 +19,7 @@ Bancor is a fast-moving protocol, while at the same time remaining permissionles
 We recommend that you use the [Bancor SDK](../sdk/using-the-bancor-sdk.md) to query for the converter version.
 
 ```text
-const BancorSDK = require('bancor-sdk').SDK;
+const BancorSDK = require('@bancor/sdk').SDK;
 
 const settings = {
     // optional, mandatory when interacting with the ethereum mainnet

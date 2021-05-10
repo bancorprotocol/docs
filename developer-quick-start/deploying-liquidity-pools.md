@@ -100,10 +100,8 @@ const ContractRegistryContract = new web3.eth.Contract(
 )
     
 const getConverterRegistryAddress = async() => {
-    const converterRegistryName = web3.utils.fromAscii('ConverterRegistry');
-    const address = await ContractRegistryContract.methods.addressOf(
-        converterRegistryName
-    ).call();
+    const converterRegistryName = web3.utils.asciiToHex('ConverterRegistry');
+    const address = await ContractRegistryContract.methods.addressOf(converterRegistryName).call();
     return address;
 } 
 
