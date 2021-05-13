@@ -61,7 +61,7 @@ Estimate Gas cost is roughly 0.03 ETH
 2. Click “Contracts” in the top navigation menu ![pic\_5.png](https://support.bancor.network/hc/article_attachments/360006559899/pic_5.png)
 3. Paste the following:
    1. Enter the “ConverterUpgrader” contract address under **Contract Address**: **\[ConverterUpgrader\]**
-   2. **ABI / JSON Interface:** Copy/paste the ABI from this URL: [build/ConverterUpgrader.abi](build/ConverterUpgrader.abi)
+   2. **ABI / JSON Interface:** Copy/paste the ABI from this URL: [build/ConverterUpgrader.abi](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/ConverterUpgrader.abi)
    3. Click “**Access**”
 4. Scroll down and you will see the next step
 5. Select the “**upgradeOld**” function from the drop down
@@ -106,7 +106,7 @@ Address will be: 0x836c1b5ad499b0ff00d9ec13cc0ad97a1dba25d1
 1. Go back to mycrypto.com
 2. Open contract tab
 3. Enter the  **\[Original Converter Address\]**
-4. ABI from this URL: [build/ConverterBase.abi](build/ConverterBase.abi)
+4. ABI from this URL: [build/ConverterBase.abi](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/ConverterBase.abi)
 5. Click “Access”
 6. In the drop down menu, select “acceptOwnership”
 7. Click “Write”

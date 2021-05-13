@@ -166,11 +166,11 @@ Note that this demo assumes you've configured a Web3 connection via your preferr
 
 #### BancorNetwork ABI
 
-Copy and paste `BancorNetwork` ABI from [**here**](build/BancorNetwork.abi).
+Copy and paste `BancorNetwork` ABI from [**here**](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/BancorNetwork.abi).
 
 **ContractRegistry ABI**
 
-Copy and paste `ContractRegistry` ABI from [**here**](build/ContractRegistry.abi).
+Copy and paste `ContractRegistry` ABI from [**here**](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/ContractRegistry.abi).
 
 ### Step \#2: Trade on Bancor
 

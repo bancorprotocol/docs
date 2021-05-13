@@ -44,8 +44,8 @@ The Smart Relay Token is the contract that will connect your pool's liquidity to
 * Navigate to [MyEtherWallet](https://www.myetherwallet.com/)
 * Connect your wallet
 * Select `Deploy Contract` from the **Contract** section on the left navigation panel
-* Copy and paste the **Byte Code** [here](build/SmartToken.bin) \(make sure to add "0x" at the beginning of the string\)
-* Copy and paste the **ABI/JSON Interface** [here](build/SmartToken.abi)
+* Copy and paste the **Byte Code** [here](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/SmartToken.bin) \(make sure to add "0x" at the beginning of the string\)
+* Copy and paste the **ABI/JSON Interface** [here](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/SmartToken.abi)
 * Input your three parameters:
   * `_name`:  **YYYBNT Pool Token**" would work, for example, for a liquidity pool with YYY and BNT reserves, but there are no constraints on this param.
   * `_symbol` : Using the symbol **YYYBNT"** would be standard practice for a pool with 

@@ -24,7 +24,7 @@ Please paste the following data into the relevant fields:
 
 This will enable you to perform the “accept ownership” function on the converter address.
 
-[build/ConverterBase.abi](build/ConverterBase.abi)
+[build/ConverterBase.abi](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/ConverterBase.abi)
 
 ```text
  d. Access - once the above information was entered, click the “access” button. 

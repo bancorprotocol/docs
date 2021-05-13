@@ -215,7 +215,7 @@ await LiquidityPoolV2ConverterContract.methods.addLiquidity(
 
 First, copy the `LiquidityPoolV1Converter` ABI into your project. Note that converters of the `LiquidTokenConverter` type are not eligible for liquidity provision \(as outlined in Step \#2\). 
 
-Find the `LiquidityPoolV1Converter` ABI [**here**](build/LiquidityPoolConverter.abi).
+Find the `LiquidityPoolV1Converter` ABI [**here**](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/LiquidityPoolConverter.abi).
 
 Your Web3 code will look something like this:
 
@@ -242,7 +242,7 @@ await LiquidityPoolV1ConverterContract.methods.addLiquidity(
 
 #### Versions Lower than 28
 
-First, copy the `ConverterBase` ABI into your project. Found [**here**](build/ConverterBase.abi).
+First, copy the `ConverterBase` ABI into your project. Found [**here**](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/ConverterBase.abi).
 
 Your Web3 code will look something like this:
 
