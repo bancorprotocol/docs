@@ -52,7 +52,7 @@ First, you'll need to find your current **Converter** contract address.
 * Navigate to your **Pool Token** contract on Etherscan
 * Under the `Read Contract` tab, find the return value under the `owner` function. This is your converter address
 
-Next, you'll need to find the current address of the **BancorConverterUpgrader** contract.
+Next, you'll need to find the current address of the **ConverterUpgrader** contract.
 
 * Navigate to our **ContractRegistry** contract [here](https://etherscan.io/address/0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4#readContract)
 * Enter **0x42616e636f72436f6e7665727465725570677261646572** in the `getAddress` function to find the Upgrader address. This input is the bytes32 representation of "BancorConverterUpgrader". Save this returned address for Step \#2. 
@@ -60,7 +60,7 @@ Next, you'll need to find the current address of the **BancorConverterUpgrader**
 Finally, navigate to your **Converter** contract on Etherscan and find the `WriteContract` section.
 
 * Execute the `transferOwnership` function with the following parameter:
-  * `_newOwner`: This is the address of the **BancorConverterUpgrader** contract you found above
+  * `_newOwner`: This is the address of the **ConverterUpgrader** contract you found above
 
 This step transfers ownership of the contract briefly to Bancor in order to run the upgrade process.
 
@@ -68,7 +68,7 @@ This step transfers ownership of the contract briefly to Bancor in order to run 
 
 Rest assured that all the token weight, pool balance and conversion fee details will remain the same post-upgrade. Additionally, your converter will experience zero downtime. Your users will not be affected in any way.
 
-* Navigate to the Etherscan `Write Contract` page of the **BancorConverterUpgrader**. This is the addresses you queried for in the previous step.
+* Navigate to the Etherscan `Write Contract` page of the **ConverterUpgrader**. This is the addresses you queried for in the previous step.
 * Execute the `upgradeOld` function with the following parameters:
   * `_converter`: This is your converter's old address, i.e., the address you just transferred ownership of.
   * `_version`: **0x0**
@@ -79,7 +79,7 @@ At this stage, you'll need to accept the ownership over the new converter from t
 
 First, let's find the address of your new converter.
 
-* On the **BancorConverterUpgrader** Etherscan page, navigate to the `Events` tab
+* On the **ConverterUpgrader** Etherscan page, navigate to the `Events` tab
 * You should see the `ConverterUpgrade` event from your recent transaction \(if you're unsure which belongs to you, find the log with a **topic1** value that includes your old converter address
 * Your new address is in **topic2** in the event log. To extract the address currently from the topic value, copy the rightmost 40 characters and add "0x" to the beginning
 

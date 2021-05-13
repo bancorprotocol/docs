@@ -26,7 +26,7 @@ Please paste the following data into the relevant fields:
 
 This is the raw source code for any Bancor Smart Token ABI.
 
-[https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/contracts/build/SmartToken.abi](https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/contracts/build/SmartToken.abi) d. Access - once the above information was entered, click the “access” button.  
+[contracts/build/SmartToken.abi](contracts/build/SmartToken.abi) d. Access - once the above information was entered, click the “access” button.  
 ![Screen\_Shot\_2018-11-27\_at\_17.20.27.png](https://support.bancor.network/hc/article_attachments/360015997292/Screen_Shot_2018-11-27_at_17.20.27.png)
 
 ## Step 2:

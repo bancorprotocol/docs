@@ -44,8 +44,8 @@ The Smart Relay Token is the contract that will connect your pool's liquidity to
 * Navigate to [MyEtherWallet](https://www.myetherwallet.com/)
 * Connect your wallet
 * Select `Deploy Contract` from the **Contract** section on the left navigation panel
-* Copy and paste the **Byte Code** [here](https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/build/SmartToken.bin) \(make sure to add "0x" at the beginning of the string\)
-* Copy and paste the **ABI/JSON Interface** [here](https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/build/SmartToken.abi)
+* Copy and paste the **Byte Code** [here](build/SmartToken.bin) \(make sure to add "0x" at the beginning of the string\)
+* Copy and paste the **ABI/JSON Interface** [here](build/SmartToken.abi)
 * Input your three parameters:
   * `_name`:  **YYYBNT Pool Token**" would work, for example, for a liquidity pool with YYY and BNT reserves, but there are no constraints on this param.
   * `_symbol` : Using the symbol **YYYBNT"** would be standard practice for a pool with 
@@ -59,7 +59,7 @@ The Smart Relay Token is the contract that will connect your pool's liquidity to
 Now that the smart token is deployed, we can connect it to the larger Bancor Network. We can use the Bancor Converter Factory to deploy the converter: the exchange contract for your pool.
 
 * Navigate to Bancor's [verified factory contract on Etherscan](https://etherscan.io/address/0x5ed8c09f98b2b3ed37d07414bb8c3f065bbb802b#writeContract)
-* Deploy the BancorConverter contract with these parameters:
+* Deploy the ConverterBase contract with these parameters:
   * `_token` : The address of the pool token created in the previous step.
   * `_registry`: **0x52ae12abe5d8bd778bd5397f99ca900624cfadd4**
   * `_maxConversionFee` : **30000** \(3%\) - recommended value. Note that this is _not_ your converter's trading fee.

@@ -48,4 +48,9 @@ fix("ethereum-contracts/ethereum-api-reference");
 clear("ethereum-contracts/ethereum-api-reference");
 
 fs.copyFileSync("node_modules/@bancor/contracts-solidity/README.md", "ethereum-contracts/ethereum-api-reference/README.md");
+fs.copyFileSync("node_modules/@bancor/contracts-solidity/solidity/build/BancorNetwork.abi", "ethereum-contracts/build/BancorNetwork.abi");
+fs.copyFileSync("node_modules/@bancor/contracts-solidity/solidity/build/ContractRegistry.abi", "ethereum-contracts/build/ContractRegistry.abi");
+fs.copyFileSync("node_modules/@bancor/contracts-solidity/solidity/build/ConverterBase.abi", "ethereum-contracts/build/ConverterBase.abi");
+fs.copyFileSync("node_modules/@bancor/contracts-solidity/solidity/build/ConverterUpgrader.abi", "ethereum-contracts/build/ConverterUpgrader.abi");
+fs.copyFileSync("node_modules/@bancor/contracts-solidity/solidity/build/LiquidityPoolConverter.abi", "ethereum-contracts/build/LiquidityPoolConverter.abi");
 //fs.copyFileSync("node_modules/bancor-contracts/solidity/utils/README.md", "ethereum-contracts/ethereum-api-reference/utils/README.md");

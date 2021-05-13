@@ -8,7 +8,7 @@ Any developer can now generate revenue \(up to 3% on each transaction\) by addin
 
 The guide below will cover how to add Bancor's affiliate widget to your app.
 
-You can also embed Bancor's [pre-built affiliate widget](https://support.bancor.network/hc/en-us/articles/360010667060), or integrate affiliate fees directly on the blockchain, using Bancor's [blockchain conversion widget](https://github.com/nionis/bancor-conversion-widget) or in code by calling [Bancor's quickConvert function](https://docs.bancorfoundation.org/contracts/converter/bancorconverter#BancorConverter-quickConvert2-contract-IERC20Token---uint256-uint256-address-uint256-).
+You can also embed Bancor's [pre-built affiliate widget](https://support.bancor.network/hc/en-us/articles/360010667060), or integrate affiliate fees directly on the blockchain, using Bancor's [blockchain conversion widget](https://github.com/nionis/bancor-conversion-widget) or in code by calling [Bancor's quickConvert function](https://docs.bancorfoundation.org/contracts/converter/bancorconverter#ConverterBase-quickConvert2-contract-IERC20Token---uint256-uint256-address-uint256-).
 
 ## How can you create a custom affiliate widget?
 

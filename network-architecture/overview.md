@@ -22,7 +22,7 @@ At the heart of the network is the **BNT** token, which acts as a hub that conne
 
 Every liquidity pool on Bancor Network aggregates liquidity for a discrete set of tokens on the network. Anyone can provide liquidity to a pool and, in return, receive conversion fees from trades that pass through the pool. Liquidity providers receive pool tokens proportional to their share of assets in the pool.
 
-Every liquidity pool is managed by a **BancorConverter** contract, and liquidity providers can create new instances of the converter contract to create new liquidity pools. Anyone can call the `fund` or `liquidate` function to add or remove liquidity from a pool.
+Every liquidity pool is managed by a **ConverterBase** contract, and liquidity providers can create new instances of the converter contract to create new liquidity pools. Anyone can call the `fund` or `liquidate` function to add or remove liquidity from a pool.
 
 ### Tokens / Liquidity Pools Registry
 

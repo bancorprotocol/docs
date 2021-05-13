@@ -23,5 +23,5 @@ In some cases, you may want to transfer ownership of your **Converter** contract
 
 * Navigate to the converter contract on Etherscan
 * In the `WriteContract` section, execute the `transferOwnership` function with the following parameter:
-  * `_newOwner`: This is the address of the new owner or the **BancorConverterUpgrader** contract in the case of an upgrade
+  * `_newOwner`: This is the address of the new owner or the **ConverterUpgrader** contract in the case of an upgrade
 

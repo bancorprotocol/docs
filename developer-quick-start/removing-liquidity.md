@@ -246,7 +246,7 @@ await LiquidityPoolV2ConverterContract.methods.removeLiquidity(
 
 First, copy the `LiquidityPoolV1Converter` ABI into your project. Note that converters of the `LiquidTokenConverter` type are not eligible for liquidity provision \(as outlined in Step \#2\).‌
 
-Find the `LiquidityPoolV1Converter` ABI [**here**](https://raw.githubusercontent.com/bancorprotocol/contracts/0.6.0/solidity/build/LiquidityPoolConverter.abi).‌
+Find the `LiquidityPoolV1Converter` ABI [**here**](build/LiquidityPoolConverter.abi).‌
 
 Your Web3 code will look something like this:
 
@@ -273,7 +273,7 @@ await LiquidityPoolV1ConverterContract.methods.removeLiquidity(
 
 #### Versions Lower than 28 <a id="versions-lower-than-28"></a>
 
-First, copy the `BancorConverter` ABI into your project. Found [**here**](https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/build/BancorConverter.abi).‌
+First, copy the `ConverterBase` ABI into your project. Found [**here**](build/ConverterBase.abi).‌
 
 Your Web3 code will look something like this:
 

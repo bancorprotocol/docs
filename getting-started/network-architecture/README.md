@@ -30,7 +30,7 @@ Liquidity pools on Bancor Network provide liquidity to specific tokens in the ne
 
 Anyone can be a liquidity provider and receive conversion fees in the pools they have contributed liquidity to. When a user contributes liquidity, he/she receives pool tokens proportional to his/her holdings in the pool.
 
-Each liquidity pool is managed by a BancorConverter contract.
+Each liquidity pool is managed by a ConverterBase contract.
 
 Liquidity providers can create new instances of the converter contract to create new liquidity pools, as well as call the “fund”/”liquidate” function to add or remove liquidity from a pool.
 

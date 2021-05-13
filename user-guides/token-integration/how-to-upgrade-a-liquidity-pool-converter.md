@@ -17,7 +17,7 @@ New converter upgrades will be announced in the [Bancor Developers Telegram Grou
 * This is the address of the converter currently used and the one we would like to upgrade.
 * ![gif\_1\_.gif](https://support.bancor.network/hc/article_attachments/360006559599/gif_1_.gif)
 * Access to the wallet that owns the original converter
-* \[BancorConverterUpgrader\] contract address
+* \[ConverterUpgrader\] contract address
 * Go to our registry [https://etherscan.io/address/0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4\#readContract](https://etherscan.io/address/0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4#readContract)
 * Scroll to point 3 and enter “0x42616e636f72436f6e7665727465725570677261646572” \(bytes32 representation of 'BancorConverterUpgrader'\) to receive the latest address to use:
 
@@ -25,7 +25,7 @@ New converter upgrades will be announced in the [Bancor Developers Telegram Grou
 
 ## Step 1 - Transfer Converter Ownership
 
-First step is to transfer the converter ownership to the BancorConverterUpgrader smart contract. This will then allow you to execute the entire upgrade process with a single transaction.
+First step is to transfer the converter ownership to the ConverterUpgrader smart contract. This will then allow you to execute the entire upgrade process with a single transaction.
 
 1. Go to mycrypto.com \(always use a trusted endpoint to execute transactions\)
 2. Click “Contracts” in the top navigation menu![pic\_3.png](https://support.bancor.network/hc/article_attachments/360006541400/pic_3.png)
@@ -51,7 +51,7 @@ First step is to transfer the converter ownership to the BancorConverterUpgrader
 3. Transfers pool token ownership to the new converter \(this will assure all transactions of the pool tokens will work with the new converter\)
 4. Transfer the old and new converter ownership to the original owner
 
-**Important - when using the BancorConverterUpgrader, your users will experience NO down time!**
+**Important - when using the ConverterUpgrader, your users will experience NO down time!**
 
 Estimate Gas cost is roughly 0.03 ETH
 
@@ -60,8 +60,8 @@ Estimate Gas cost is roughly 0.03 ETH
 1. Go to mycrypto.com \(always use a trusted endpoint to execute transactions\)
 2. Click “Contracts” in the top navigation menu ![pic\_5.png](https://support.bancor.network/hc/article_attachments/360006559899/pic_5.png)
 3. Paste the following:
-   1. Enter the “BancorConverterUpgrader” contract address under **Contract Address**: **\[BancorConverterUpgrader\]**
-   2. **ABI / JSON Interface:** Copy/paste the ABI from this URL: [https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/build/BancorConverterUpgrader.abi](https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/build/BancorConverterUpgrader.abi)
+   1. Enter the “ConverterUpgrader” contract address under **Contract Address**: **\[ConverterUpgrader\]**
+   2. **ABI / JSON Interface:** Copy/paste the ABI from this URL: [build/ConverterUpgrader.abi](build/ConverterUpgrader.abi)
    3. Click “**Access**”
 4. Scroll down and you will see the next step
 5. Select the “**upgradeOld**” function from the drop down
@@ -106,7 +106,7 @@ Address will be: 0x836c1b5ad499b0ff00d9ec13cc0ad97a1dba25d1
 1. Go back to mycrypto.com
 2. Open contract tab
 3. Enter the  **\[Original Converter Address\]**
-4. ABI from this URL: [https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/build/BancorConverter.abi](https://raw.githubusercontent.com/bancorprotocol/contracts/master/solidity/build/BancorConverter.abi)
+4. ABI from this URL: [build/ConverterBase.abi](build/ConverterBase.abi)
 5. Click “Access”
 6. In the drop down menu, select “acceptOwnership”
 7. Click “Write”

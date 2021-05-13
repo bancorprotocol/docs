@@ -41,7 +41,7 @@ The SmartToken contract is used to deploy the Pool Token. For the name/symbol, i
 
 Next step is to deploy the converter that will handle the actual conversions.
 
-* Deploy a BancorConverter contract, args:
+* Deploy a ConverterBase contract, args:
   * \_token - address of the pool token created in the previous step.
   * \_registry - address of the token registry contract.
   * \_maxConversionFee - 30000 \(3%\) - recommended value.

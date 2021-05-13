@@ -10,7 +10,7 @@ Main contract that serves as an easy mapping for all key addresses.
 
 From time to time, a new verified pool converter is introduced and is being referenced as the latest version you should use in any pool creation process.
 
-### BancorConverterUpgrader
+### ConverterUpgrader
 
 This will always indicate the most relevant pool upgrader contract and will know to upgrade to the latest pool converter showing in BancorConverterFactory.
 
