@@ -16,6 +16,10 @@
 
 - [`removeLiquidity(uint256 id, uint32 portion)`](#ILiquidityProtection-removeLiquidity-uint256-uint32-)
 
+- [`transferPosition(uint256 id, address newProvider)`](#ILiquidityProtection-transferPosition-uint256-address-)
+
+- [`transferPositionAndNotify(uint256 id, address newProvider, contract ITransferPositionCallback callback, bytes data)`](#ILiquidityProtection-transferPositionAndNotify-uint256-address-contract-ITransferPositionCallback-bytes-)
+
 ## Function `store() → contract ILiquidityProtectionStore` {#ILiquidityProtection-store--}
 
 No description
@@ -45,5 +49,13 @@ No description
 No description
 
 ## Function `removeLiquidity(uint256 id, uint32 portion)` {#ILiquidityProtection-removeLiquidity-uint256-uint32-}
+
+No description
+
+## Function `transferPosition(uint256 id, address newProvider) → uint256` {#ILiquidityProtection-transferPosition-uint256-address-}
+
+No description
+
+## Function `transferPositionAndNotify(uint256 id, address newProvider, contract ITransferPositionCallback callback, bytes data) → uint256` {#ILiquidityProtection-transferPositionAndNotify-uint256-address-contract-ITransferPositionCallback-bytes-}
 
 No description

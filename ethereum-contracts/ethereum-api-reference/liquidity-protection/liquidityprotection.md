@@ -36,7 +36,7 @@ This contract implements the liquidity protection mechanism.
 
 - [`transferPosition(uint256 id, address newProvider)`](#LiquidityProtection-transferPosition-uint256-address-)
 
-- [`transferPositionAndCall(uint256 id, address newProvider, address target, bytes data)`](#LiquidityProtection-transferPositionAndCall-uint256-address-address-bytes-)
+- [`transferPositionAndNotify(uint256 id, address newProvider, contract ITransferPositionCallback callback, bytes data)`](#LiquidityProtection-transferPositionAndNotify-uint256-address-contract-ITransferPositionCallback-bytes-)
 
 - [`claimBalance(uint256 startIndex, uint256 endIndex)`](#LiquidityProtection-claimBalance-uint256-uint256-)
 
@@ -242,7 +242,7 @@ transfers a position to a new provider
 
 - new position id
 
-## Function `transferPositionAndCall(uint256 id, address newProvider, address target, bytes data) → uint256` {#LiquidityProtection-transferPositionAndCall-uint256-address-address-bytes-}
+## Function `transferPositionAndNotify(uint256 id, address newProvider, contract ITransferPositionCallback callback, bytes data) → uint256` {#LiquidityProtection-transferPositionAndNotify-uint256-address-contract-ITransferPositionCallback-bytes-}
 
 transfers a position to a new provider and optionally notifies another contract
 
@@ -252,9 +252,9 @@ transfers a position to a new provider and optionally notifies another contract
 
 - `newProvider`: the new provider
 
-- `target`: the contract to notify
+- `callback`: the callback contract to notify
 
-- `data`: the data to call the contract with
+- `data`: custom data provided to the callback
 
 ## Return Values:
 

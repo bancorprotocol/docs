@@ -32,9 +32,9 @@ Liquidity Protection Settings contract
 
 - [`poolWhitelist()`](#LiquidityProtectionSettings-poolWhitelist--)
 
-- [`addSubscriber(contract ILiquidityProtectionEventsSubscriber subscriber)`](#LiquidityProtectionSettings-addSubscriber-contract-ILiquidityProtectionEventsSubscriber-)
+- [`addSubscriber(contract ILiquidityProvisionEventsSubscriber subscriber)`](#LiquidityProtectionSettings-addSubscriber-contract-ILiquidityProvisionEventsSubscriber-)
 
-- [`removeSubscriber(contract ILiquidityProtectionEventsSubscriber subscriber)`](#LiquidityProtectionSettings-removeSubscriber-contract-ILiquidityProtectionEventsSubscriber-)
+- [`removeSubscriber(contract ILiquidityProvisionEventsSubscriber subscriber)`](#LiquidityProtectionSettings-removeSubscriber-contract-ILiquidityProvisionEventsSubscriber-)
 
 - [`subscribers()`](#LiquidityProtectionSettings-subscribers--)
 
@@ -60,7 +60,7 @@ Liquidity Protection Settings contract
 
 - [`PoolWhitelistUpdated(contract IConverterAnchor poolAnchor, bool added)`](#LiquidityProtectionSettings-PoolWhitelistUpdated-contract-IConverterAnchor-bool-)
 
-- [`SubscriberUpdated(contract ILiquidityProtectionEventsSubscriber subscriber, bool added)`](#LiquidityProtectionSettings-SubscriberUpdated-contract-ILiquidityProtectionEventsSubscriber-bool-)
+- [`SubscriberUpdated(contract ILiquidityProvisionEventsSubscriber subscriber, bool added)`](#LiquidityProtectionSettings-SubscriberUpdated-contract-ILiquidityProvisionEventsSubscriber-bool-)
 
 - [`MinNetworkTokenLiquidityForMintingUpdated(uint256 prevMin, uint256 newMin)`](#LiquidityProtectionSettings-MinNetworkTokenLiquidityForMintingUpdated-uint256-uint256-)
 
@@ -218,7 +218,7 @@ returns pools whitelist
 
 - pools whitelist
 
-## Function `addSubscriber(contract ILiquidityProtectionEventsSubscriber subscriber)` {#LiquidityProtectionSettings-addSubscriber-contract-ILiquidityProtectionEventsSubscriber-}
+## Function `addSubscriber(contract ILiquidityProvisionEventsSubscriber subscriber)` {#LiquidityProtectionSettings-addSubscriber-contract-ILiquidityProvisionEventsSubscriber-}
 
 adds a subscriber
 
@@ -228,7 +228,7 @@ can only be called by the contract owner
 
 - `subscriber`: subscriber address
 
-## Function `removeSubscriber(contract ILiquidityProtectionEventsSubscriber subscriber)` {#LiquidityProtectionSettings-removeSubscriber-contract-ILiquidityProtectionEventsSubscriber-}
+## Function `removeSubscriber(contract ILiquidityProvisionEventsSubscriber subscriber)` {#LiquidityProtectionSettings-removeSubscriber-contract-ILiquidityProvisionEventsSubscriber-}
 
 removes a subscriber
 
@@ -360,7 +360,7 @@ triggered when the pool whitelist is updated
 
 - `added`: true if the pool was added to the whitelist, false if it was removed
 
-## Event `SubscriberUpdated(contract ILiquidityProtectionEventsSubscriber subscriber, bool added)` {#LiquidityProtectionSettings-SubscriberUpdated-contract-ILiquidityProtectionEventsSubscriber-bool-}
+## Event `SubscriberUpdated(contract ILiquidityProvisionEventsSubscriber subscriber, bool added)` {#LiquidityProtectionSettings-SubscriberUpdated-contract-ILiquidityProvisionEventsSubscriber-bool-}
 
 triggered when a subscriber is added or removed
 
