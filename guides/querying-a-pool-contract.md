@@ -19,9 +19,8 @@ To query for the **address of a reserve token**, read from the `connectorTokens`
 
 To query for the **balances of a reserve token**, read from the `getConnectorBalance` function on the converter contract. The `_connectorToken` argument is the address of the token. 
 
-To query for the **weight of a token in a pool**, read from the `getReserveRatio` function on the converter contract. The `_reserveToken` argument is the address of the token. A return value of **500000** for example signals that the reserve token makes up 50% of the weight of the contract's assets.
+To query for the **weight of a token in a pool**, read from the `getReserveRatio` function on the converter contract. The `_reserveToken` argument is the address of the token. A return value of **500000**, for example, signals that the reserve token makes up 50% of the weight of the contract's assets.
 
 To query for the **expected return from a trade**, read from the `getReturn` function on the converter contract. The fromToken and toToken arguments must be addresses of tokens in the pool. The `_amount` is the input value of the trade. The first return value is the expected return in the destination token and the second return value is the fee a trader should expect to pay. 
 
-
-
+To query for the **conversion fee in a pool**, read from the `conversionFee` function on the converter contract. A return value of **30000**, for example, signals that the conversion fee is 3% of the amount returned to the user upon conversion.
