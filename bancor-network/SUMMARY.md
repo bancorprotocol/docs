@@ -13,6 +13,7 @@
 
 * [Working with Bancor Network](../developer-quick-start/working-with-bancor-network.md)
 * [Trading with Bancor](../developer-quick-start/trading-with-bancor.md)
+* [Adding Single-Sided Liquidity](../developer-quick-start/adding-single-side-liquidity.md)
 * [Adding Liquidity](../developer-quick-start/adding-and-removing-liquidity.md)
 * [Removing Liquidity](../developer-quick-start/removing-liquidity.md)
 * [Deploying Liquidity Pools](../developer-quick-start/deploying-liquidity-pools.md)

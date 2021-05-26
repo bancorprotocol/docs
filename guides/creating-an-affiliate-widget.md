@@ -4,11 +4,11 @@ description: This guide outlines how to add Bancor's affiliate widget to your ap
 
 # Creating an Affiliate Widget
 
-Any developer can generate revenue \(up to 3% on each transaction\) by adding Bancor trading into their product. 
+Any developer can generate revenue \(up to 3% on each transaction\) by adding Bancor trading into their product.
 
-This guide will discuss how to create an affiliate widget, but you can also embed Bancor's [pre-built affiliate widget](https://github.com/nionis/bancor-conversion-widget) into your app to earn affiliate fees directly on the blockchain, or in code by calling [Bancor's quickConvert function](https://docs.bancorfoundation.org/contracts/converter/bancorconverter#ConverterBase-quickConvert2-contract-IERC20Token---uint256-uint256-address-uint256-). 
+This guide will discuss how to create an affiliate widget, but you can also embed Bancor's [pre-built affiliate widget](https://github.com/nionis/bancor-conversion-widget) into your app to earn affiliate fees directly on the blockchain, or in code by calling [Bancor's quickConvert function](https://docs.bancorfoundation.org/contracts/converter/bancorconverter#ConverterBase-quickConvert2-contract-IERC20Token---uint256-uint256-address-uint256-).
 
-### Step \#1: Configure Your Widget
+## Step \#1: Configure Your Widget
 
 * Navigate to the Bancor Convert Widget [site](https://widget-convert.bancor.network/)
 * Configure the widget settings as you wish:
@@ -22,7 +22,7 @@ This guide will discuss how to create an affiliate widget, but you can also embe
     * `ethereum` : Limit to Ethereum tokens
     * `eos` : Limit to EOS tokens
     * `poa` : Limit to PoA
-    *  You can select more than 1 option if you'd like to support partial list of blockchains.
+    * You can select more than 1 option if you'd like to support partial list of blockchains.
   * **baseCurrencyId:** This is the default token that will be visible in the toToken \(the destination token\)
   * **pairCurrencyId:** This is the default token that will be visible in the fromToken \(the origin token you would like to start with or convert out of\)
   * **primaryColor:** This is the main color of the widget. It will be used for all call-to-action items and text
@@ -37,7 +37,7 @@ This guide will discuss how to create an affiliate widget, but you can also embe
   * **Hide Volume:** Select this checkbox if you wish to hide volume generated from the widget. This is only relevant for the "**default**" widget Type
   * **Unlock Base Currency:** Select this checkbox if you wish to enable the user to change both `fromToken` and `toToken`. If you leave this empty, the user will limited to convert from and to the token indicated in the `toToken`. For example, if you select `toToken` to be **BNT**, the widget will support any token-to-BNT or BNT-to-token conversions.
 
-### Step \#2: Embed Your Widget
+## Step \#2: Embed Your Widget
 
 Time to copy and paste the code into your site.
 
@@ -71,8 +71,6 @@ To open the popup programmatically, run this snippet: \([Click Here](javascript:
 widgetInstance.showConvertPopup('')x
 ```
 
-[  
+[    
 ](https://docs.bancor.network/user-guides/token-integration/how-to-upgrade-a-liquidity-pool-converter)
-
-
 

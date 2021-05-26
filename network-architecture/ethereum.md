@@ -44,7 +44,7 @@ Each liquidity pool is managed by a specific converter contract. The converter h
 
 ### Upgradability
 
-Converters can be upgraded to the latest official version in the network by their owners using the `upgrade` call. This results in a new converter contract with some upgraded logic; however, all reserve and fee settings remain the same. At this point, the previous contract is decommissioned. 
+Converters can be upgraded to the latest official version in the network by their owners using the `upgrade` call. This results in a new converter contract with some upgraded logic; however, all reserve and fee settings remain the same. At this point, the previous contract is decommissioned.
 
 ### **Contract Registry**
 

@@ -30,7 +30,7 @@ const converter = {
     // or 'eos'    
     blockchainId: '<your converter address>'
     }​
-    
+
 const version = await bancorSDK.utils.getConverterVersion(converter);
 ```
 
@@ -90,10 +90,10 @@ How to calculate the exit fee?
 ![](../.gitbook/assets/image.png)
 
 Where:  
-`XYZ staked balance amp =   
-    XYZ staked balance * liquidity amplification  
-XYZ current balance amp =   
-    XYZ staked balance amp - (XYZ staked balance - XYZ current balance)`
+`XYZ staked balance amp =    
+XYZ staked balance * liquidity amplification    
+XYZ current balance amp =    
+XYZ staked balance amp - (XYZ staked balance - XYZ current balance)`
 {% endhint %}
 
 #### Step \#3a.3 - Remove liquidity <a id="step-3-a-3-remove-liquidity"></a>
@@ -292,6 +292,6 @@ await BancorConverterContract.methods.fund(
 );
 ```
 
-**​**[  
+**​**[    
 ](https://app.gitbook.com/@bancor-network/s/bancor-network/~/drafts/-MAQrbUpPFLOEJt0lXNj/developer-quick-start/adding-and-removing-liquidity/@archived)
 

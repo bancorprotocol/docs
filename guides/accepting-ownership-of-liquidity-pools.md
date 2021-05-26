@@ -6,20 +6,20 @@ description: >-
 
 # Managing Ownership of Liquidity Pools
 
-### Accepting Ownership
+## Accepting Ownership
 
 {% hint style="info" %}
 Note that only the address that has been transferred ownership will be able to accept.
 {% endhint %}
 
-From time to time, you may need to upgrade your **Converter** contract. In order to upgrade, you'll need to transfer ownership from the wallet that previously deployed the token contract. Once ownership has been transferred, the target address will have to accept it. 
+From time to time, you may need to upgrade your **Converter** contract. In order to upgrade, you'll need to transfer ownership from the wallet that previously deployed the token contract. Once ownership has been transferred, the target address will have to accept it.
 
 * Navigate to the converter contract on Etherscan
 * Execute the `acceptOwnership` function
 
-### Transferring Ownership
+## Transferring Ownership
 
-In some cases, you may want to transfer ownership of your **Converter** contract. Most likely, you'll be doing this during the converter upgrade process. 
+In some cases, you may want to transfer ownership of your **Converter** contract. Most likely, you'll be doing this during the converter upgrade process.
 
 * Navigate to the converter contract on Etherscan
 * In the `WriteContract` section, execute the `transferOwnership` function with the following parameter:

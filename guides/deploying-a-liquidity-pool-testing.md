@@ -64,15 +64,14 @@ Remember, the sum of the reserve ratios of your assets must equal **100%** or **
 
 ### Step \#3: Define Token Reserves
 
-We've added the first token reserve in your liquidity pool \(e.g., ZZZ\). Now let's add the second \(e.g., DAI\). 
+We've added the first token reserve in your liquidity pool \(e.g., ZZZ\). Now let's add the second \(e.g., DAI\).
 
 * Navigate to the address of your new contract on Etherscan. It should have been automatically verified. 
 * Execute the **addReserve** function with the following parameters:
-
   * `_token` : Address of the ERC20 token you want to add \(ex: DAI\).
   * `_ratio` : Share of the pool allocated to this token \(ex: 600000 / 60%\)
 
-Repeat this step until you've added all the remaining assets. If you're deploying a pool with three assets, you'll have to repeat this step once to add the third asset. 
+Repeat this step until you've added all the remaining assets. If you're deploying a pool with three assets, you'll have to repeat this step once to add the third asset.
 
 ### Step \#4: Set Trading Fees
 
@@ -80,12 +79,11 @@ One of Bancor's powerful features is the ability to set custom trading fees for 
 
 * Once again, navigate to your new Converter contract on Etherscan. 
 * Execute the **setConversionFee** function with the following parameters:
-
   * `_conversionFee`: 1000 \(equal to 0.1%\) is a common input for this param, but the value is up to you. Recall, that the `maxConversionFee` we set in Step \#2 was 30000 or 3% so this would be the theoretical maximum. Most pools set fees between 0 and 0.3%. 
 
 ### Step \#5: Fund Pool with Initial Token Reserves
 
-In this step you'll need to transfer an initial value of each of the tokens in your pool to your newly created Converter contract. You can use MetaMask or any other wallet of your choice to execute these simple ERC20 transfers. Ensure that each of the token values you transfer are roughly in-line in USD terms with the proportion you defined in your reserve ratios \(e.g. ZZZ: 20%, DAI: 60%, YYY: 20%\). Otherwise, you'll be opening an arbitrage opportunity for a future trader. 
+In this step you'll need to transfer an initial value of each of the tokens in your pool to your newly created Converter contract. You can use MetaMask or any other wallet of your choice to execute these simple ERC20 transfers. Ensure that each of the token values you transfer are roughly in-line in USD terms with the proportion you defined in your reserve ratios \(e.g. ZZZ: 20%, DAI: 60%, YYY: 20%\). Otherwise, you'll be opening an arbitrage opportunity for a future trader.
 
 * Transfer each ERC20 token in correct proportionate value to the contract
 
@@ -102,14 +100,8 @@ In this step, we'll circle back to the Smart Token we deployed in Step \#1. Navi
 Now that the system is configured, it’s time to activate it. Activation means transferring the pool token ownership to the converter.
 
 * On the `Smart Token` contract on Etherscan, execute the **transferOwnership** function with the following parameters:
-
   * `_newOwner`: This is the address of the Converter contract we deployed earlier
-
 * On the `Converter` contract on Etherscan, execute the **acceptTokenOwnership** function
 
 Congrats! Your new liquidity pool is active, registered and ready for trading.
-
-
-
-
 

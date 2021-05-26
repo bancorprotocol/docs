@@ -6,7 +6,7 @@ description: General guide for users on converting assets using the Bancor Netwo
 
 Trading is the core value proposition to users of Bancor Network. The easiest way to trade is to use the [Bancor Dapp](https://www.bancor.network/). This is the recommended entry point to trading on Bancor for new users.
 
-Bancor is also integrated with several decentralized exchange aggregators like [1inch](https://1inch.exchange/#/), [X Nation](http://xnation.io/), [Paraswap](https://paraswap.io/#/) and [DEX.AG](http://dex.ag/). When you use these platforms, your trades may be routed through Bancor. 
+Bancor is also integrated with several decentralized exchange aggregators like [1inch](https://1inch.exchange/#/), [X Nation](http://xnation.io/), [Paraswap](https://paraswap.io/#/) and [DEX.AG](http://dex.ag/). When you use these platforms, your trades may be routed through Bancor.
 
 Other ways to trade via Bancor include the Bancor Widget, which can be embedded by third parties on their sites, and via smart contract interface, where a third party developer has integrated Bancor into their smart contract.
 
@@ -42,6 +42,4 @@ If you'd like to generate a conversion path on-chain, the `conversionPath` funct
 * If you're exchanging one token for another token, you'll be using the `claimAndConvert` function \(\#19\)
 * You have the `path` parameter from Step \#2 and you can use the `rate` return value from `getPathAndRate` as a reference point for how to determine the `minReturn` argument
 * Execute the correct function with the relevant inputs
-
-
 

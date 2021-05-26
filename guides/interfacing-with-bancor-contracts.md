@@ -6,13 +6,13 @@ description: Access Bancor features from your smart contract
 
 While many users benefit from the Bancor Network by using the Bancor App or a Bancor Widget, developers can also access Bancor's many features from their own smart contracts. The API reference section provides a detailed look into the full functionality of each contract in the system. This section will provide a quick look into some more common features and should contain sufficient information for most use cases.
 
-### Adding/Removing Liquidity
+## Adding/Removing Liquidity
 
 {% hint style="info" %}
-If you're drawing liquidity from users, note that adding liquidity to Bancor pools requires ERC20 approvals of the underlying token reserves. You'll need to have the user submit an approval transaction for each reserve \(e.g. BNT or DAI\) previously with your Converter contract address as the `spender` field and the amount they would like to contribute __in the __`amount` field .
+If you're drawing liquidity from users, note that adding liquidity to Bancor pools requires ERC20 approvals of the underlying token reserves. You'll need to have the user submit an approval transaction for each reserve \(e.g. BNT or DAI\) previously with your Converter contract address as the `spender` field and the amount they would like to contribute **in the** `amount` field .
 {% endhint %}
 
-This is the Converter interface for adding \(fund\) or removing \(liquidate\) liquidity. In the case of adding liquidity, the `amount` value is the number of pool tokens that you want to create. Based on the contributor's token reserves and the current state of the liquidity pool, you'll have to calculate this value either on-chain or off-chain. This number is capped by the reserves owned by the contributor and the amount of ERC20 approved for transfer. 
+This is the Converter interface for adding \(fund\) or removing \(liquidate\) liquidity. In the case of adding liquidity, the `amount` value is the number of pool tokens that you want to create. Based on the contributor's token reserves and the current state of the liquidity pool, you'll have to calculate this value either on-chain or off-chain. This number is capped by the reserves owned by the contributor and the amount of ERC20 approved for transfer.
 
 In the case of removing liquidity, the `amount` value is the number of pool tokens to burn for the underlying liquidity reserves. This number is capped by the number of tokens owned by the contributor's address.
 
@@ -24,7 +24,7 @@ contract IBancorConverter {
 
 contract MyContract {
     IBancorConverter converter = IBancorConverter(<converter-address>);
-    
+
     function addLiquidity(uint tokensToMint) public {
         ...
         converter.fund(tokensToMint);
@@ -33,12 +33,10 @@ contract MyContract {
 }
 ```
 
-### Trading With Bancor
+## Trading With Bancor
 
 * `path`: Network path between sourceToken and toToken
-
   * The `getPathAndRate` function on the [Bancor SDK](https://github.com/bancorprotocol/bancor-sdk) will generate the optimal path for this parameter
-
 * `amount`: Source token input amount
 * `minReturn`: To token minimum return
 * `affiliateAccount`: Address to direct affiliate fees
@@ -91,3 +89,4 @@ contract MyContract {
     }
 }
 ```
+
