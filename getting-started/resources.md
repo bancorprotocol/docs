@@ -27,24 +27,28 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 * [BNT Liquidity Mining](https://www.youtube.com/watch?v=X22Dr2zYW2M) \(DeFiFrog\)
 * [vBNT Burning](https://www.youtube.com/watch?v=cWg-oTm5OM8&t=3s) \(Taiki Maeda\)
 
-### Writing
+### Guides
 
 * [Bancor Staking Guide](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)
 * [How Bancor Staking Works](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e)
 * [How to Earn BNT Rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002) 
-* [Deribit Insights Market Research: BNT](https://insights.deribit.com/market-research/bancor-the-world-token/)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
-* [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
-* Twitter threads: 
-  * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
-  * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20) ; [Bancor Vortex](https://twitter.com/korpi87/status/1379171427761414155?s=20),[ Progress Update](https://twitter.com/korpi87/status/1370740679450714116?s=20)
-  * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
-  * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
-* [Proposing Bancor v2.1: Single-Sided AMMs with Impermanent Loss Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
 * [How to Submit Proposals in the BancorDAO](https://blog.bancor.network/a-guide-to-bancordao-due-process-d958ceade75)
 * [How to Whitelist a Token in Bancor v2.1](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)
 * [How to Vote in the BancorDAO](https://blog.bancor.network/how-to-vote-using-vbnt-c205f011db1e)
 * [Introducing BNTee.shop](https://blog.bancor.network/introducing-bntees-eb5d5558a1b5) 
+
+### Protocol Tokenomics
+
+* [Proposing Bancor v2.1: Single-Sided AMMs with Impermanent Loss Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
+* [Deribit Insights Market Research: BNT](https://insights.deribit.com/market-research/bancor-the-world-token/)
+* [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
+* [Understanding BNT Supply](https://korpi.medium.com/understand-bancor-the-truth-about-bnt-supply-and-why-bnt-market-cap-is-overstated-671d3f680465)
+* Twitter threads: 
+  * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
+  * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
+  * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
+  * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
 
 _**Progress Reports**:_ 
 
@@ -58,7 +62,7 @@ _**Progress Reports**:_
 * [Bancor Dune Analytics](https://duneanalytics.com/Bancor/bancor_1)
 * [Bancor daily fees \(Cryptofees.info\)](https://cryptofees.info/)
 * [Bancor APIs](https://docs.bancor.network/rest-api/api-reference)
-* Twitter bots: [BancorVortex](https://twitter.com/BancorVortex) \(LP deposits, space openings\) + [BNTVortex](https://twitter.com/BntVortex) \(daily BNT holder count, network stats\)
+* Twitter bots: [BancorVortex](https://twitter.com/BancorVortex) \(pool space openings\) + [BNTVortex](https://twitter.com/BntVortex) \(network stats\)
 
 ### Papers
 
