@@ -34,7 +34,6 @@
 * [Interfacing with Bancor Contracts](../guides/interfacing-with-bancor-contracts.md)
 * [Querying a Pool Contract](../guides/querying-a-pool-contract.md)
 * [Measuring Trading Volume](../guides/measuring-trading-volume.md)
-* [Creating an Affiliate Widget](../guides/creating-an-affiliate-widget.md)
 
 ## Network Architecture
 
