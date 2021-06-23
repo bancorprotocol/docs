@@ -587,3 +587,86 @@ data interval \(minute/15minutes/hour/day/week\)
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="get" host="https://api-v2.bancor.network" path="/transactions/swap" %}
+{% api-method-summary %}
+Swap Transaction Creation
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Creates a swap transaction, ready to be signed by the user wallet.  
+Note that if approval is required, the API will also return the necessary approval transactions.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="source\_dlt\_type" type="string" required=true %}
+source token blockchain type \(ethereum\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="source\_dlt\_id" type="string" required=true %}
+source id \(address\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="target\_dlt\_type" type="string" required=true %}
+target token blockchain type \(ethereum\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="target\_dlt\_id" type="string" required=true %}
+target id \(address\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="amount" type="number" required=true %}
+source amount - decimal, may include decimal point
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="min\_return" type="number" required=true %}
+the transaction will fail if the swap returns a value smaller than this one
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="user\_source\_dlt\_id" type="string" required=true %}
+user wallet/account \(address\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="nonce" type="number" required=false %}
+default: node default
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="gas\_price" type="number" required=false %}
+gas price in wei. default: node default
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+WBTC -&gt; ETH swap transaction creation request:  
+`https://api-v2.bancor.network/transactions/swap?source_dlt_type=ethereum&source_dlt_id=0x2260fac5e5542a773aa44fbcfedf7c193bc2c599&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=2.5&min_return=9&user_source_dlt_id=0xe1d66536b09b6f99e0d5510da0a6dea4ab66cd13`  
+The response includes 2 transactions - the first one is an approve transaction, while the second one is the actual swap transaction.
+{% endapi-method-response-example-description %}
+
+```
+[{
+	"dlt_type": "ethereum",
+	"transaction": {
+		"data": "0x095ea7b30000000000000000000000002f9ec37d6ccfff1cab21733bdadede11c823ccb0000000000000000000000000000000000000000000000000000000000ee6b280",
+		"to": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+		"nonce": 0,
+		"from": "0xe1d66536b09b6f99e0d5510da0a6dea4ab66cd13"
+	}
+}, {
+	"dlt_type": "ethereum",
+	"transaction": {
+		"data": "0xb77d239b00000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000000000000ee6b2800000000000000000000000000000000000000000000000007facf7419d98000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000050000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599000000000000000000000000fee7eeaa0c2f3f7c7e6301751a8de55ce4d059ec0000000000000000000000001f573d6fb3f13d689ff844b4ce37794d79a7ff1c000000000000000000000000b1cd6e4153b2a390cf00a6556b0fc1458c4a5533000000000000000000000000eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+		"to": "0x2F9EC37d6CcFFf1caB21733BdaDEdE11c823cCB0",
+		"nonce": 1,
+		"from": "0xe1d66536b09b6f99e0d5510da0a6dea4ab66cd13"
+	}
+}]
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
