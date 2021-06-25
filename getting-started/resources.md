@@ -18,6 +18,7 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 ### Videos
 
 * [How to Provide Liquidity on Bancor](https://www.youtube.com/watch?v=2Mz7wh3hm8Y) **\(**Jeffrey Zirlin - Axie Infinity\)
+* [Lazy Yield Hacking with Bancor](https://www.youtube.com/watch?v=8YpNh27HD0Y) \(Amadeo Brands\)
 * [Staking tutorial ](https://youtu.be/3P4vKIHcdas)\(CryptoOneShop**\)**
 * [Bancor Protocol overview ](https://twitter.com/Bancor/status/1359455683939356674?s=20)\(DeFiFrog**\)**
 * \*\*\*\*[Single-sided liquidity](https://twitter.com/DeFiFrog/status/1368623215673626625?s=20) \(DeFiFrog\)
