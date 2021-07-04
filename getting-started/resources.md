@@ -45,6 +45,7 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 * [Deribit Insights Market Research: BNT](https://insights.deribit.com/market-research/bancor-the-world-token/)
 * [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
 * [Understanding BNT Supply](https://korpi.medium.com/understand-bancor-the-truth-about-bnt-supply-and-why-bnt-market-cap-is-overstated-671d3f680465)
+* [Comparing Bancor & Uniswap Staking ROI](https://twitter.com/korpi87/status/1409449804703440897?s=20)
 * Twitter threads: 
   * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
   * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
