@@ -4,83 +4,83 @@ description: The v0.6 release makes trading on Bancor simpler than ever
 
 # Trading with Bancor
 
-As of the June 2020 v0.6 release, trading on Bancor Network has been significantly simplified. Let's walk through an example in code -- first in Solidity and then using Web3 -- to demonstrate the streamlined developer experience.
-
-{% hint style="info" %}
-The v0.6 upgrade won't be deployed until mid-June. Until then, please refer to the Trading section in the **Interfacing with Bancor Contracts** guide found [**here**](https://docs.bancor.network/guides/interfacing-with-bancor-contracts)**.**
-{% endhint %}
+This document provides you with a walk through example in code -- first in Solidity and then using Web3 -- to demonstrate the streamlined developer experience.
 
 ## Trading from your Smart Contract
 
 ### Step \#1: Add Contract Interfaces
 
-You'll need to interface with two of Bancor's smart contracts from your code. Copy the two interfaces below into your project.
+You'll need to interface with two of Bancor's smart contracts from your code.
+You can copy the following code into your project or you can download [Bancor's npm package](https://www.npmjs.com/package/@bancor/contracts-solidity).
 
-```text
-contract IContractRegistry {
-    function addressOf(
-        bytes32 contractName
-    ) external returns(address);
+```solidity
+ pragma solidity 0.6.12;
+ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+
+interface IContractRegistry {
+    function addressOf(bytes32 _contractName) external view returns (address);
 }
 
-contract IBancorNetwork {
+interface IBancorNetwork {
+
+function rateByPath(address[] memory path, uint256 amount) external view returns (uint256);
+
     function convertByPath(
-        address[] memory _path,
-        uint256 _amount,
-        uint256 _minReturn,
-        address _beneficiary,
-        address _affiliateAccount,
-        uint256 _affiliateFee
+        address[] memory path,
+        uint256 amount,
+        uint256 minReturn,
+        address payable beneficiary,
+        address affiliateAccount,
+        uint256 affiliateFee
     ) external payable returns (uint256);
 
-    function rateByPath(
-        address[] memory _path,
-        uint256 _amount
-    ) external view returns (uint256);
 
     function conversionPath(
-        IERC20Token _sourceToken,
-        IERC20Token _targetToken
+        IERC20 _sourceToken,
+        IERC20 _targetToken
     ) external view returns (address[]);
 }
 ```
 
-### addressOf
+Here is an explanation for the function arguments in detail :
+
+### `addressOf`
 
 - **parameters**:
-  - `contractName`: bytes32 representation of the Bancor contract's name
+  - `_contractName`: bytes32 representation of the Bancor contract's name
 - **return values**_:_
+
   - `address`: contract's address
 
-### convertByPath
+  ### `rateByPath`
 
 - **parameters**:
-  - `_path`: an array of IERC20 addresses originating with the source token and terminating with the destination token
-  - `_amount`: the amount of the source token to trade
-  - `_minReturn`: the minimum amount of the destination token you expect to receive. The trade will fail if the return value is less than this. You must input a value greater than zero but you may want to pass a value slightly below the value returned by `getPathAndRate` on the SDK to allow for normal movement in spot prices.
-  - `_beneficiary`: the address that will receive the destination token from the conversion. If the beneficiary should be the sender of the transaction, use **0x0** here.
-  - `_affiliateAccount`: the address that will receive the affiliate fee. If no affiliate fee should be paid out, use **0x0** here.
-  - `_affiliateFee`: the affiliate fee in parts per million. **30000** or 0.03% is the maximum allowed.
+  - `path`: an array of IERC20 addresses originating with the source token and terminating with the destination token
+  - `amount`: the amount of the source token
+- **return values**:
+  - `uint256`: the expected conversion rate
+
+### `convertByPath`
+
+- **parameters**:
+  - `path`: an array of IERC20 addresses originating with the source token and terminating with the destination token
+  - `amount`: the amount of the source token to trade
+  - `minReturn`: the minimum amount of the destination token you expect to receive. The trade will fail if the return value is less than this. You must input a value greater than zero but you may want to pass a value slightly below the value returned by `getPathAndRate` on the SDK to allow for normal movement in spot prices.
+  - `beneficiary`: the address that will receive the destination token from the conversion. If the beneficiary should be the sender of the transaction, use **0x0** here.
+  - `affiliateAccount`: the address that will receive the affiliate fee. If no affiliate fee should be paid out, use **0x0** here.
+  - `affiliateFee`: the affiliate fee in parts per million. **30000** or 0.03% is the maximum allowed.
 - **return values**:
   - `uint256`: return amount in destination token
 
 {% hint style="info" %}
-Note that when sending Ether value with this function, your `msg.value` must be exactly equal to your `_amount` value.
+Note that when sending Ether value with this function, your `msg.value` must be exactly equal to your `amount` value.
 {% endhint %}
 
 {% hint style="info" %}
 Note that the example snippets below work both with trades that send Ether and trades that send ERC20s. The `msg.value` property will be passed with zero for ERC20 trades.
 {% endhint %}
 
-### rateByPath
-
-- **parameters**:
-  - `_path`: an array of IERC20 addresses originating with the source token and terminating with the destination token
-  - `_amount`: the amount of the source token
-- **return values**:
-  - `uint256`: the expected conversion rate
-
-### conversionPath
+### `conversionPath`
 
 - **parameters**:
   - `_sourceToken`: the IERC20 address of the source token
@@ -96,12 +96,15 @@ Note that we recommend using the `getPathAndRate` function on the Bancor SDK for
 
 The Bancor **ContractRegistry** is the entry point to the network of contracts and you should be using the `addressOf` function to identify the right interface address.
 
+The `BancorNetwork` address may change over time.
+To find the latest updated version you can follow the [Trading with Bancor General Guide](https://docs.bancor.network/guides/trading-on-bancor-general).
+
 | Network   | ContractRegistry Address                     |
 | :-------- | :------------------------------------------- |
 | `Mainnet` | `0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4` |
 | `Ropsten` | `0xFD95E724962fCfC269010A0c6700Aa09D5de3074` |
 
-```text
+```solidity
 contract MyContract {
     IContractRegistry contractRegistry = IContractRegistry(0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4);
     bytes32 bancorNetworkName = 0x42616e636f724e6574776f726b; // "BancorNetwork"
@@ -156,16 +159,25 @@ contract MyContract {
 }
 ```
 
+## Trading ETH
+
+In previous versions of Bancor, traders needed to use `Ether Token` to be able to trade with Ether. Starting with v0.6, traders can transact directly in Ether using the designated ETH address:
+
+`0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE`
+
+The Bancor contracts recognize this address internally, allowing the developer to apply the same ERC20 flow to Ether transactions \(sending Ether with the value property\) without the abstraction of an additional token.
+
 ## Trading with Web3
 
 {% hint style="info" %}
-Note that this demo assumes you've configured a Web3 connection via your preferred method
+Note that this demo assumes you've configured a Web3 connection via your preferred method.
 {% endhint %}
 
 ### Step \#1: Copy Bancor ABIs into your Project
 
 #### BancorNetwork ABI
 
+You can find the ABIs in the docs or use the ones from here:
 Copy and paste `BancorNetwork` ABI from [**here**](https://raw.githubusercontent.com/bancorprotocol/docs/master/ethereum-contracts/build/BancorNetwork.abi).
 
 **ContractRegistry ABI**
@@ -174,7 +186,11 @@ Copy and paste `ContractRegistry` ABI from [**here**](https://raw.githubusercont
 
 ### Step \#2: Trade on Bancor
 
-```text
+Bancor's new SDK allows you to interact with the `Bancor Network`using JavaScript.
+
+If you want to know more about [Bancor SDK](https://docs.bancor.network/sdk/using-the-bancor-sdk) you can visit this section in our documentation.
+
+```solidity
 const BancorSDK = require('@bancor/sdk').SDK;
 
 const ContractRegistryABI = require('./ContractRegistryABI.json');
@@ -236,11 +252,3 @@ const trade = async(amount) => {
     return returnAmount;
 }
 ```
-
-## A Note on Trading ETH
-
-In previous versions of Bancor, traders needed to use `Ether Token` to be able to trade with Ether. Starting with v0.6, traders can transact directly in Ether using the designated ETH address:
-
-`0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE`
-
-The Bancor contracts recognize this address internally, allowing the developer to apply the same ERC20 flow to Ether transactions \(sending Ether with the value property\) without the abstraction of an additional token.
