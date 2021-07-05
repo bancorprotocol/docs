@@ -17,6 +17,8 @@ You can copy the following code into your project or you can download [Bancor's 
  pragma solidity 0.6.12;
  import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
+ import "./IBancorNetwork.sol";
+
 interface IContractRegistry {
     function addressOf(bytes32 _contractName) external view returns (address);
 }
@@ -34,11 +36,11 @@ function rateByPath(address[] memory path, uint256 amount) external view returns
         uint256 affiliateFee
     ) external payable returns (uint256);
 
+    // @Zsofie - comment : This is the original conversionPath function from BancorNetwork.sol with this comment: * note that this method is quite expensive in terms of gas and should generally be called off-chain * --> we need to know if this function is actually needed here. //
 
-    function conversionPath(
-        IERC20 _sourceToken,
-        IERC20 _targetToken
-    ) external view returns (address[]);
+   function conversionPath(IERC20 _sourceToken, IERC20 _targetToken) public view returns (address[] memory) {
+        IConversionPathFinder pathFinder = IConversionPathFinder(addressOf(CONVERSION_PATH_FINDER));
+        return pathFinder.findPath(_sourceToken, _targetToken);
 }
 ```
 
@@ -90,6 +92,7 @@ Note that the example snippets below work both with trades that send Ether and t
 
 {% hint style="info" %}
 Note that we recommend using the `getPathAndRate` function on the Bancor SDK for determining the best conversion path. However, if you must calculate the path on chain, `conversionPath` is the correct approach.
+// @Zsofie - comment: do we still need converisionPath then? referring back to the previous comment in the code. //
 {% endhint %}
 
 ### Step \#2: Link Interfaces to your Contract
@@ -105,6 +108,12 @@ To find the latest updated version you can follow the [Trading with Bancor Gener
 | `Ropsten` | `0xFD95E724962fCfC269010A0c6700Aa09D5de3074` |
 
 ```solidity
+
+ pragma solidity 0.6.12;
+ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+ import "./IBancorNetwork.sol";
+ import "BancorNetwork.sol";
+
 contract MyContract {
     IContractRegistry contractRegistry = IContractRegistry(0x52Ae12ABe5D8BD778BD5397F99cA900624CfADD4);
     bytes32 bancorNetworkName = 0x42616e636f724e6574776f726b; // "BancorNetwork"
@@ -236,6 +245,8 @@ const trade = async(amount) => {
     const path = await sdk.pricing.getPathAndRate(sourceToken, targetToken, '1.0');
 
     const minReturn = await BancorNetworkContract.methods.rateByPath(path, amount).call();
+
+   //  @Zsofie - comment : unfinished variable down below also we have questions about the affiliate account and fee in returnAmount too
     const modifiedMinReturn =
 
     const returnAmount = await BancorNetworkContract.methods.convert(
