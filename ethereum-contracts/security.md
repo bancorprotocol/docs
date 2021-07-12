@@ -13,5 +13,5 @@
 
 ### Bancor Bug Bounty
 
-Bancor has an open and ongoing [bug bounty program](https://blog.bancor.network/bancor-v2-bug-bounty-5bbb970d0097).
+Bancor has an open and ongoing [bug bounty program](https://immunefi.com/bounty/bancor/).
 
