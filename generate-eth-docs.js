@@ -53,4 +53,13 @@ fs.copyFileSync("node_modules/@bancor/contracts-solidity/solidity/build/Contract
 fs.copyFileSync("node_modules/@bancor/contracts-solidity/solidity/build/ConverterBase.abi", "ethereum-contracts/build/ConverterBase.abi");
 fs.copyFileSync("node_modules/@bancor/contracts-solidity/solidity/build/ConverterUpgrader.abi", "ethereum-contracts/build/ConverterUpgrader.abi");
 fs.copyFileSync("node_modules/@bancor/contracts-solidity/solidity/build/LiquidityPoolConverter.abi", "ethereum-contracts/build/LiquidityPoolConverter.abi");
-//fs.copyFileSync("node_modules/bancor-contracts/solidity/utils/README.md", "ethereum-contracts/ethereum-api-reference/utils/README.md");
+
+fs.writeFileSync(
+    "ethereum-contracts/ethereum-api-reference/README.md",
+    fs.readFileSync(
+        "ethereum-contracts/ethereum-api-reference/README.md",
+        { encoding: "utf8" }
+    )
+    .split("](solidity/")
+    .join("](https://github.com/bancorprotocol/contracts-solidity/blob/master/solidity/")
+);
