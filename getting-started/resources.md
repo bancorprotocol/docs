@@ -19,10 +19,11 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 _**Staking:**_
 
-* [How to Provide Liquidity on Bancor](https://www.youtube.com/watch?v=2Mz7wh3hm8Y) **\(**Jeffrey Zirlin - Axie Infinity\)
+* [How to Stake & Earn on Bancor](https://www.youtube.com/watch?v=vpNuyjS9grM&t=3s) \(DeFi Alliance Demo\)
+* [How to Stake AXS on Bancor](https://www.youtube.com/watch?v=2Mz7wh3hm8Y) **\(**Jeffrey Zirlin - Axie Infinity\)
 * [How to Earn Great Rewards Without the Risk of Impermanent Loss!](https://youtu.be/Xal2xVUoW1U?t=203) \(Breakout Solutions\)
-* [Staking tutorial ](https://youtu.be/3P4vKIHcdas)\(CryptoOneShop\)
-* [DeFi Alliance Demo: Staking on bancor.network](https://www.loom.com/share/1108843af08a4924bd12a0b70517448a) \(Nate Hindman\)
+* [Bancor Platform & BNT Overview](https://www.youtube.com/watch?v=sdd5TToLv9o) \(Blocks of Finance\)
+* [Staking Tutorial ](https://youtu.be/3P4vKIHcdas)\(CryptoOneShop\)
 
 _**Protocol:**_
 
@@ -31,7 +32,6 @@ _**Protocol:**_
 * [Bancor Protocol overview ](https://twitter.com/Bancor/status/1359455683939356674?s=20)\(DeFiFrog**\)**
 * \*\*\*\*[Single-sided liquidity](https://twitter.com/DeFiFrog/status/1368623215673626625?s=20) \(DeFiFrog\)
 * [BNT Liquidity Mining](https://www.youtube.com/watch?v=X22Dr2zYW2M) \(DeFiFrog\)
-* [Bancor Protocol Overview](https://www.youtube.com/watch?v=sdd5TToLv9o&feature=youtu.be) \(Blocks of Finance**\)**
 * [Bancor Vortex ](https://www.youtube.com/watch?v=SbUqcbNqQ-Y)\(MBR\)
 * [vBNT Burning](https://www.youtube.com/watch?v=cWg-oTm5OM8&t=3s) \(Taiki Maeda\)
 
@@ -56,7 +56,7 @@ _**Swapping:**_
 
 * [How to Perform Gas-Free Limit Orders on Bancor](https://blog.bancor.network/guide-to-bancor-limit-orders-3021219ed2f1)
 
-### Tokenomics
+### Protocol Mechanics
 
 * [Proposing Bancor v2.1: Single-Sided AMMs with Impermanent Loss Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
 * [Deribit: BNT Insights Market Research](https://insights.deribit.com/market-research/bancor-the-world-token/)
