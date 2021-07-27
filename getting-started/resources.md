@@ -35,6 +35,10 @@ _**Protocol:**_
 * [Bancor Vortex ](https://www.youtube.com/watch?v=SbUqcbNqQ-Y)\(MBR\)
 * [vBNT Burning](https://www.youtube.com/watch?v=cWg-oTm5OM8&t=3s) \(Taiki Maeda\)
 
+_**Trading:**_
+
+* [How to Connect Your Wallet & Trade on Bancor](https://www.youtube.com/watch?v=-bqI7IsC6c0&t=117s)
+
 ### Written Guides
 
 _**Staking:**_
@@ -52,7 +56,7 @@ _**Governance:**_
 * [BancorDAO Template for Token Whitelist Proposals](https://docs.google.com/document/d/1PE39vDz6uefxvibEtESGTdU2pUnqfmT0wpiqZscbf3w/edit)
 * [How to Delegate Voting Power in the BancorDAO](https://blog.bancor.network/how-to-delegate-voting-power-in-the-bancordao-b82df46be416)
 
-_**Swapping:**_
+_**Trading:**_
 
 * [How to Perform Gas-Free Limit Orders on Bancor](https://blog.bancor.network/guide-to-bancor-limit-orders-3021219ed2f1)
 
@@ -71,7 +75,7 @@ _**Swapping:**_
 
 _**Progress Reports**:_ 
 
-* Latest updates on[ blog.bancor.network](https://blog.bancor.network/)
+* Weekly updates on[ blog.bancor.network](https://blog.bancor.network/)
 * [April 2021](https://blog.bancor.network/bancor-progress-update-april-2021-35fb95656267)
 * [March 2021](https://blog.bancor.network/bancor-progress-update-march-2020-73007ed5a03a)
 * [February 2021](https://blog.bancor.network/bancor-monthly-progress-update-february-2021-685e174f6537)
