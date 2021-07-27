@@ -19,10 +19,10 @@ description: 'Learn about Bancor, build on the protocol, and engage with the com
 
 _**Staking:**_
 
-* [How to Stake & Earn on Bancor](https://www.youtube.com/watch?v=vpNuyjS9grM&t=3s) \(DeFi Alliance Demo\)
+* [How to Stake Tokens & Earn on Bancor](https://www.youtube.com/watch?v=vpNuyjS9grM&t=3s) \(DeFi Alliance Demo\)
 * [How to Stake AXS on Bancor](https://www.youtube.com/watch?v=2Mz7wh3hm8Y) **\(**Jeffrey Zirlin - Axie Infinity\)
-* [How to Earn Great Rewards Without the Risk of Impermanent Loss!](https://youtu.be/Xal2xVUoW1U?t=203) \(Breakout Solutions\)
-* [Bancor Platform & BNT Overview](https://www.youtube.com/watch?v=sdd5TToLv9o) \(Blocks of Finance\)
+* [How to Earn Rewards Without the Risk of Impermanent Loss!](https://youtu.be/Xal2xVUoW1U?t=203) \(Breakout Solutions\)
+* [Bancor Platform Overview](https://www.youtube.com/watch?v=sdd5TToLv9o) \(Blocks of Finance\)
 * [Staking Tutorial ](https://youtu.be/3P4vKIHcdas)\(CryptoOneShop\)
 
 _**Protocol:**_
@@ -37,7 +37,7 @@ _**Protocol:**_
 
 _**Trading:**_
 
-* [How to Connect Your Wallet & Trade on Bancor](https://www.youtube.com/watch?v=-bqI7IsC6c0&t=117s)
+* [How to Connect Your Wallet on Bancor](https://www.youtube.com/watch?v=-bqI7IsC6c0&t=117s)
 
 ### Written Guides
 
