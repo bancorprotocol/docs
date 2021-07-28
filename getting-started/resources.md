@@ -43,10 +43,11 @@ _**Trading:**_
 
 _**Staking:**_
 
-* [Bancor Staking Guide](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)
+* [Quickstart Guide: Bancor Staking Guide](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1) 
+* [In-depth Guide: How to Stake on Bancor](https://medium.com/harvest-finance/how-to-stake-farm-on-bancor-in-a-single-sided-manner-in-depth-tutorial-ff573e0756de) \(Harvest Finance\)
 * [How Bancor Staking Works](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e)
-* [How to Farm on Bancor \(The Simple Guide\)](https://chainbulletin.com/how-to-farm-bnt-on-bancor-the-simple-guide/)
-* [How to Earn BNT Rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
+* [How to Farm on Bancor \(Chain Bulletin\)](https://chainbulletin.com/how-to-farm-bnt-on-bancor-the-simple-guide/)
+* [How to Earn & Re-Stake BNT Rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
 
 _**Governance:**_
@@ -67,7 +68,7 @@ _**Trading:**_
 * [Comparing Bancor & Uniswap Staking ROI](https://twitter.com/korpi87/status/1409449804703440897?s=20)
 * [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
 * [Understanding BNT Supply](https://korpi.medium.com/understand-bancor-the-truth-about-bnt-supply-and-why-bnt-market-cap-is-overstated-671d3f680465)
-* Twitter threads: 
+* **Twitter threads:**
   * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
   * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
   * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
