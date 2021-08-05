@@ -74,7 +74,8 @@ Administrative privileges over the protocol \(ownership, upgradability, emergenc
 3. Minting of new tokens should be restricted and conform to the whitepaper and the security audit. 
 4. Rebasing tokens or tokens with elastic supply aren’t currently supported.
 5. Tokens that apply transfer fees aren’t currently supported. Please note that tokens that have the fee mechanism in place but haven’t activated it yet are exempt. 
-6. Token transfers shouldn’t be pausable unless a reasonable explanation is provided.
+6. Token transfers shouldn’t be pausable or subjected to a whitelist unless a reasonable explanation is provided.
+7. There should not be any restrictions on transferring or trading \(e.g., restricting how many blocks you have to hold a token before you can transfer it, fees/taxes on transfers, including to/from trading pools, etc.\)
 
 ### **Economic Requirements**
 
