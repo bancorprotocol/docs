@@ -589,11 +589,11 @@ data interval \(minute/15minutes/hour/day/week\)
 
 {% api-method method="get" host="https://api-v2.bancor.network" path="/transactions/swap" %}
 {% api-method-summary %}
-Swap Transaction Creation
+Trade Transaction Creation
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Creates a swap transaction, ready to be signed by the user wallet.  
+Creates a trade transaction, ready to be signed by the user wallet.  
 Note that if approval is required, the API will also return the necessary approval transactions.
 {% endapi-method-description %}
 
@@ -621,7 +621,7 @@ source amount - decimal, may include decimal point
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="min\_return" type="number" required=true %}
-the transaction will fail if the swap returns a value smaller than this one
+the transaction will fail if the trade returns a value smaller than this one
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="user\_source\_dlt\_id" type="string" required=true %}
