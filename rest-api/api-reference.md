@@ -763,7 +763,9 @@ To get the required amount of BNT that will return 1 ETH:
 {% endapi-method-response-example-description %}
 
 ```
-{"amount":"755.722900317536461992"}
+{
+	"amount": "755.722900317536461992"
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
