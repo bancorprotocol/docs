@@ -74,28 +74,6 @@
   * [BancorX \(ETH\)](../ethereum-contracts/ethereum-api-reference/bancorx.md)
 * [Security](../ethereum-contracts/security.md)
 
-## EOS Contracts
-
-* [Converter List](../eos-contracts/converter-list.md)
-* [API Reference](../eos-contracts/eos-api-reference/README.md)
-  * [BancorConverter](../eos-contracts/eos-api-reference/bancorconverter/README.md)
-    * [Converters Table](../eos-contracts/eos-api-reference/bancorconverter/converters-table.md)
-    * [Reserves Table](../eos-contracts/eos-api-reference/bancorconverter/reserves-table.md)
-    * [Settings Table](../eos-contracts/eos-api-reference/bancorconverter/settings-table.md)
-    * [Accounts Table](../eos-contracts/eos-api-reference/bancorconverter/accounts-table.md)
-  * [BancorNetwork](../eos-contracts/eos-api-reference/bancornetwork/README.md)
-    * [Settings Table](../eos-contracts/eos-api-reference/bancornetwork/settings-table.md)
-  * [Token](../eos-contracts/eos-api-reference/token/README.md)
-    * [Currency Stats Table](../eos-contracts/eos-api-reference/token/currency-stats-table.md)
-    * [Accounts Table](../eos-contracts/eos-api-reference/token/accounts-table.md)
-  * [BancorX](../eos-contracts/eos-api-reference/bancorx/README.md)
-    * [Amounts Table](../eos-contracts/eos-api-reference/bancorx/amounts-table.md)
-    * [Reporters Table](../eos-contracts/eos-api-reference/bancorx/reporters-table.md)
-    * [Transfers Table](../eos-contracts/eos-api-reference/bancorx/transfers-table.md)
-    * [Settings Table](../eos-contracts/eos-api-reference/bancorx/settings-table.md)
-  * [XTransferRerouter](../eos-contracts/eos-api-reference/xtransferrerouter/README.md)
-    * [Settings Table](../eos-contracts/eos-api-reference/xtransferrerouter/settings-table.md)
-
 ## REST API
 
 * [Overview](../rest-api/overview.md)
