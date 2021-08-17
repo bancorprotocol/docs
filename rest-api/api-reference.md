@@ -641,9 +641,9 @@ gas price in wei. default: node default
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-WBTC -&gt; ETH swap transaction creation request:  
+WBTC -&gt; ETH trade transaction creation request:  
 `https://api-v2.bancor.network/transactions/swap?source_dlt_type=ethereum&source_dlt_id=0x2260fac5e5542a773aa44fbcfedf7c193bc2c599&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=2.5&min_return=9&user_source_dlt_id=0xe1d66536b09b6f99e0d5510da0a6dea4ab66cd13`  
-The response includes 2 transactions - the first one is an approve transaction, while the second one is the actual swap transaction.
+The response includes 2 transactions - the first one is an approve transaction, while the second one is the actual trade transaction.
 {% endapi-method-response-example-description %}
 
 ```
@@ -664,6 +664,106 @@ The response includes 2 transactions - the first one is an approve transaction, 
 		"from": "0xe1d66536b09b6f99e0d5510da0a6dea4ab66cd13"
 	}
 }]
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api-v2.bancor.network" path="/pricing/target-amount" %}
+{% api-method-summary %}
+Expected Target Amount
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Returns the expected target amount, given source/target tokens and source amount.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="source\_dlt\_type" type="string" required=true %}
+source token blockchain type \(ethereum\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="source\_dlt\_id" type="string" required=true %}
+source id \(address\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="target\_dlt\_type" type="string" required=true %}
+target token blockchain type \(ethereum\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="target\_dlt\_id" type="string" required=true %}
+target id \(address\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="amount" type="number" required=true %}
+source amount
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+To get the expected ETH amount for trading 1 BNT:  
+`https://api-v2.bancor.network/pricing/target-amount?source_dlt_type=ethereum&source_dlt_id=0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=1`
+{% endapi-method-response-example-description %}
+
+```
+{
+	"amount": "0.001318822674619802"
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api-v2.bancor.network" path="/pricing/source-amount" %}
+{% api-method-summary %}
+Expected Source Amount
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Returns the expected source amount, given source/target tokens and target amount.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="source\_dlt\_type" type="string" required=true %}
+source token blockchain type \(ethereum\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="source\_dlt\_id" type="string" required=true %}
+source id \(address\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="target\_dlt\_type" type="string" required=true %}
+target token blockchain type \(ethereum\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="target\_dlt\_id" type="string" required=true %}
+target id \(address\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="amount" type="number" required=true %}
+target amount
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+To get the required amount of BNT that will return 1 ETH:  
+`https://api-v2.bancor.network/pricing/source-amount?source_dlt_type=ethereum&source_dlt_id=0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=1`
+{% endapi-method-response-example-description %}
+
+```
+{"amount":"755.722900317536461992"}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
