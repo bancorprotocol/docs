@@ -29,6 +29,7 @@ _**Protocol:**_
 
 * [Lazy Yield Hacking with Bancor](https://www.youtube.com/watch?v=8YpNh27HD0Y) \(Amadeo Brands\)
 * [Bancor Protocol ELI5](https://www.youtube.com/watch?v=MQa8_4s9wMo) \(MBR\)
+* [How Bancor's Impermanent Loss Protection Works](https://www.youtube.com/watch?v=6YA61LeJqE8) \(Economics Design\)
 * [Bancor Protocol overview ](https://twitter.com/Bancor/status/1359455683939356674?s=20)\(DeFiFrog**\)**
 * \*\*\*\*[Single-sided liquidity](https://twitter.com/DeFiFrog/status/1368623215673626625?s=20) \(DeFiFrog\)
 * [BNT Liquidity Mining](https://www.youtube.com/watch?v=X22Dr2zYW2M) \(DeFiFrog\)
