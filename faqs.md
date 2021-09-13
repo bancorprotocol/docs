@@ -61,7 +61,7 @@ Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com
 
 To support single-sided, non-BNT deposits, the protocol invests BNT into whitelisted pools. For example, a $100K deposit of LINK triggers $100K of BNT emissions into the LINK pool.
 
-Protocol-supplied BNT generally remains in the pool earning fees for the protocol until the BNT \(and its accrued fees\) are eventually burned. The amount of protection offered by the protocol is governed the DAO and determined by BNT holders.
+Protocol-supplied BNT generally remains in the pool earning fees for the protocol until the BNT \(and its accrued fees\) are eventually burned. The amount of protection offered by the protocol is governed by the DAO and determined by BNT holders.
 
 Each pool has a limit on the amount of BNT that can be provided by the protocol \(“co-investment limit”\). When this limit is reached, BNT must be provided by users in order for the pool to expand, or governance can vote to increase the limit.
 
