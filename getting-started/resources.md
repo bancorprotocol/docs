@@ -27,6 +27,7 @@ _**Staking:**_
 
 _**Protocol:**_
 
+* [Bancor: the Crypto Passive Income Powerhouse](https://www.youtube.com/watch?v=4clRscC9BR0&t=2s) \(DeFi Donut\)
 * [Lazy Yield Hacking with Bancor](https://www.youtube.com/watch?v=8YpNh27HD0Y) \(Amadeo Brands\)
 * [Bancor Protocol ELI5](https://www.youtube.com/watch?v=MQa8_4s9wMo) \(MBR\)
 * [How Bancor's Impermanent Loss Protection Works](https://www.youtube.com/watch?v=6YA61LeJqE8) \(Economics Design\)
@@ -60,6 +61,7 @@ _**Governance:**_
 
 _**Trading:**_
 
+* [How to Buy & Earn ETH on Bancor](https://medium.com/@definavigator/how-to-buy-and-earn-eth-on-bancor-e156c67f32ab)
 * [How to Perform Gas-Free Limit Orders on Bancor](https://blog.bancor.network/guide-to-bancor-limit-orders-3021219ed2f1)
 
 ### Protocol Mechanics
