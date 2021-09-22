@@ -699,7 +699,7 @@ target id \(address\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="amount" type="number" required=true %}
-source amount
+source amount - decimal, may include decimal point
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -750,7 +750,7 @@ target id \(address\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="amount" type="number" required=true %}
-target amount
+target amount - decimal, may include decimal point
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
