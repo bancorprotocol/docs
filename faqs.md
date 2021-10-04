@@ -335,7 +335,7 @@ In order to swap tokens, you will need to first approve allowance for the releva
 * [Bancor v2.1 Technical Explainer](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view)
 * [GUIDE: Single-Sided Staking on Bancor V2.1](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
 * [Bankless: How Bancor v2.1 protects LPs from impermanent loss](https://bankless.substack.com/p/how-to-protect-yourself-from-impermanent)
-* [How to submit a BIP in Bancor Goverance](https://medium.com/@bancor/how-to-launch-a-bip-vote-with-bancor-governance-bc0887d8c923)
+* [How to submit a BIP in Bancor Governance](https://bancor.medium.com/how-to-launch-a-bip-vote-with-bancor-governance-bc0887d8c923)
 * [How to Whitelist a Token on Bancor v2.1](https://medium.com/@bancor/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)
 * [Bancor November 2020 progress update](https://blog.bancor.network/bancor-progress-update-november-2020-2a32db170c8c)
 * [Staking BNT liquidity mining rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
