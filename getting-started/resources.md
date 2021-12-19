@@ -40,7 +40,7 @@ _**Protocol:**_
 _**Trading:**_
 
 * [How to Connect Your Wallet](https://www.youtube.com/watch?v=-bqI7IsC6c0\&t=117s)
-* [How to Buy Tokens](https://www.youtube.com/watch?v=QlqDlZAHSLg\&t=4s)
+* [How to Trade Tokens](https://www.youtube.com/watch?v=QlqDlZAHSLg\&t=4s)
 * [How to Perform Gas-Free Limit Orders](https://www.youtube.com/watch?v=KaU3ssaK4N8\&t=7s)
 
 ### Written Guides
