@@ -100,7 +100,8 @@ _**Progress Reports**:_&#x20;
 
 ### Papers:
 
-* [Bancor 3 Technical Primer](https://drive.google.com/drive/folders/1TUNF7gOFitTkl52-PGqS4m28edp-eyst) (December 2021)
+* [Bancor 3 Technical Primer](https://drive.google.com/drive/folders/1TUNF7gOFitTkl52-PGqS4m28edp-eyst) (December, 2021)
+* [Study: Impermanent Loss in Leveraged AMMs](https://arxiv.org/abs/2111.09192) (November, 2021)
 * [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) ([TopazeBlue](https://topaze.blue))
 * [Bancor v2.1 Protocol Health Report (January 2021)](https://blog.bancor.network/bancor-v2-1-protocol-health-report-january-2020-83338c904de0)
 * [Bancor Whitepaper](https://storage.googleapis.com/website-bancor/2018/04/01ba8253-bancor\_protocol\_whitepaper\_en.pdf) (2018)
