@@ -8,9 +8,9 @@ The Pricing module provides access to pricing and rates logic for tokens in the 
 
 ### Hierarchy
 
-* SDKModule
+*   SDKModule
 
-  ↳ **Pricing**
+    ↳ **Pricing**
 
 ### Index
 
@@ -31,14 +31,14 @@ The Pricing module provides access to pricing and rates logic for tokens in the 
 
 #### constructor
 
-+ **new Pricing**\(`core`: Core\): [_Pricing_](pricing.md)
+\+ **new Pricing**(`core`: Core): [_Pricing_](pricing.md)
 
 _Inherited from_ [_History_](history.md)_._[_constructor_](history.md#constructor)
 
 **Parameters:**
 
-| Name | Type |
-| :--- | :--- |
+| Name   | Type |
+| ------ | ---- |
 | `core` | Core |
 
 **Returns:** [_Pricing_](pricing.md)
@@ -55,17 +55,17 @@ _Inherited from_ [_History_](history.md)_._[_core_](history.md#core)
 
 #### getPathAndRate
 
-▸ **getPathAndRate**\(`sourceToken`: [Token](../interfaces/token.md), `targetToken`: [Token](../interfaces/token.md), `amount`: string\): _Promise‹object›_
+▸ **getPathAndRate**(`sourceToken`: [Token](../interfaces/token.md), `targetToken`: [Token](../interfaces/token.md), `amount`: string): _Promise‹object›_
 
 returns the best conversion path and rate for a given pair of tokens in the bancor network
 
 **Parameters:**
 
-| Name | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `sourceToken` | [Token](../interfaces/token.md) | - | source token |
-| `targetToken` | [Token](../interfaces/token.md) | - | target token |
-| `amount` | string | "1" | input amount |
+| Name          | Type                            | Default | Description  |
+| ------------- | ------------------------------- | ------- | ------------ |
+| `sourceToken` | [Token](../interfaces/token.md) | -       | source token |
+| `targetToken` | [Token](../interfaces/token.md) | -       | target token |
+| `amount`      | string                          | "1"     | input amount |
 
 **Returns:** _Promise‹object›_
 
@@ -73,18 +73,17 @@ the best path and rate between the source token and the target token
 
 #### getRateByPath
 
-▸ **getRateByPath**\(`path`: [Token](../interfaces/token.md)\[\], `amount`: string\): _Promise‹string›_
+▸ **getRateByPath**(`path`: [Token](../interfaces/token.md)\[], `amount`: string): _Promise‹string›_
 
 returns the rate for a given conversion path in the bancor network
 
 **Parameters:**
 
-| Name | Type | Default | Description |
-| :--- | :--- | :--- | :--- |
-| `path` | [Token](../interfaces/token.md)\[\] | - | conversion path |
-| `amount` | string | "1" | input amount |
+| Name     | Type                               | Default | Description     |
+| -------- | ---------------------------------- | ------- | --------------- |
+| `path`   | [Token](../interfaces/token.md)\[] | -       | conversion path |
+| `amount` | string                             | "1"     | input amount    |
 
 **Returns:** _Promise‹string›_
 
 output amount for a conversion on the given path
-

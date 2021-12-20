@@ -19,11 +19,11 @@
 * [Deploying Liquidity Pools](../developer-quick-start/deploying-liquidity-pools.md)
 * [Deploying Bancor Contracts for Testing](../developer-quick-start/deploying-bancor-contracts-for-testing.md)
 
-## Bancor v2.1 <a id="v2-liquidity-pools"></a>
+## Bancor v2.1 <a href="#v2-liquidity-pools" id="v2-liquidity-pools"></a>
 
 * [Overview](../v2-liquidity-pools/overview.md)
 
-## Other Guides <a id="guides"></a>
+## Other Guides <a href="#guides" id="guides"></a>
 
 * [Trading on Bancor - General](../guides/trading-on-bancor-general.md)
 * [Triggering the Bancor Vortex Burner](../guides/triggering-the-bancor-vortex-burner.md)
@@ -54,7 +54,7 @@
     * [ConverterRegistry](../ethereum-contracts/ethereum-api-reference/converter/converterregistry.md)
     * [ConverterUpgrader](../ethereum-contracts/ethereum-api-reference/converter/converterupgrader.md)
     * [BancorFormula](../ethereum-contracts/ethereum-api-reference/converter/bancorformula.md)
-  * [Token \(ETH\)](../ethereum-contracts/ethereum-api-reference/token-eth/README.md)
+  * [Token (ETH)](../ethereum-contracts/ethereum-api-reference/token-eth/README.md)
     * [ERC20Token](../ethereum-contracts/ethereum-api-reference/token-eth/reservetoken.md)
     * [DSToken](../ethereum-contracts/ethereum-api-reference/token-eth/dstoken.md)
   * [Liquidity Protection](../ethereum-contracts/ethereum-api-reference/liquidity-protection/README.md)
@@ -71,7 +71,7 @@
     * [TokenHolder](../ethereum-contracts/ethereum-api-reference/utility/tokenholder.md)
     * [Utils](../ethereum-contracts/ethereum-api-reference/utility/utils.md)
     * [Whitelist](../ethereum-contracts/ethereum-api-reference/utility/whitelist.md)
-  * [BancorX \(ETH\)](../ethereum-contracts/ethereum-api-reference/bancorx.md)
+  * [BancorX (ETH)](../ethereum-contracts/ethereum-api-reference/bancorx.md)
 * [Security](../ethereum-contracts/security.md)
 
 ## REST API
@@ -97,3 +97,8 @@
   * [Enums](../sdk/sdk-api-reference/enums/README.md)
     * [BlockchainType](../sdk/sdk-api-reference/enums/blockchaintype.md)
 
+## Marketing
+
+* [Messaging](../marketing/messaging.md)
+* [Logo](../marketing/logo.md)
+* [Colors](../marketing/colors.md)

@@ -1,35 +1,25 @@
 # API Reference
 
-{% api-method method="get" host="https://api-v2.bancor.network" path="/tokens" %}
-{% api-method-summary %}
-Tokens
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api-v2.bancor.network" path="/tokens" method="get" summary="Tokens" %}
+{% swagger-description %}
+Returns all tradable tokens in the Bancor Network, along with their metadata, liquidity, volume and pricing info.
 
-{% api-method-description %}
-Returns all tradable tokens in the Bancor Network, along with their metadata, liquidity, volume and pricing info.  
+\
+
+
 You can provide an optional filter in order to only receive data for a specific token.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="dlt\_type" type="string" %}
-blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="dlt_type" type="string" %}
+blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="dlt\_id" type="string" %}
-token id \(address\)
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="query" name="dlt_id" type="string" %}
+token id (address)
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
 	"data": [{
 		"dlt_type": "ethereum",
@@ -53,41 +43,29 @@ token id \(address\)
 	}]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://api-v2.bancor.network" path="/pools" %}
-{% api-method-summary %}
-Pools
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api-v2.bancor.network" path="/pools" method="get" summary="Pools" %}
+{% swagger-description %}
+Returns all pools in the Bancor Network, along with their metadata, liquidity, volume and pricing info.
 
-{% api-method-description %}
-Returns all pools in the Bancor Network, along with their metadata, liquidity, volume and pricing info.  
+\
+
+
 You can provide an optional filter in order to only receive data for a specific pool.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="dlt\_type" type="string" required=false %}
-blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="dlt_type" type="string" %}
+blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="dlt\_id" type="string" required=false %}
-pool id \(pool token address\)
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="query" name="dlt_id" type="string" %}
+pool id (pool token address)
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="" %}
+```
 {
 	"data": [{
 		"reserves": [{
@@ -148,29 +126,15 @@ pool id \(pool token address\)
 	}]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://api-v2.bancor.network" path="/stats" %}
-{% api-method-summary %}
-Stats
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api-v2.bancor.network" path="/stats" method="get" summary="Stats" %}
+{% swagger-description %}
 Returns global stats of the Bancor Network.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
 	"data": {
@@ -191,52 +155,40 @@ Returns global stats of the Bancor Network.
 	}
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://api-v2.bancor.network" path="/history/liquidity-depth" %}
-{% api-method-summary %}
-Liquidity Depth History
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api-v2.bancor.network" path="/history/liquidity-depth" method="get" summary="Liquidity Depth History" %}
+{% swagger-description %}
+Returns the global liquidity depth history in the network.
 
-{% api-method-description %}
-Returns the global liquidity depth history in the network.  
+\
+
+
 You can provide an optional filter in order to receive the liquidity depth for a specific token.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="dlt\_type" type="string" required=false %}
-blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="dlt_type" type="string" %}
+blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="token\_dlt\_id" type="string" required=false %}
-token id \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="token_dlt_id" type="string" %}
+token id (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="start\_date" type="integer" required=true %}
+{% swagger-parameter in="query" name="start_date" type="integer" %}
 unix time
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="end\_date" type="integer" required=true %}
+{% swagger-parameter in="query" name="end_date" type="integer" %}
 unix time
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="interval" type="string" required=true %}
-data interval \(minute/15minutes/hour/day/week\)
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="query" name="interval" type="string" %}
+data interval (minute/15minutes/hour/day/week)
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
 	"data": [{
@@ -298,54 +250,42 @@ data interval \(minute/15minutes/hour/day/week\)
 	}]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 
 
-{% api-method method="get" host="https://api-v2.bancor.network" path="/history/volume" %}
-{% api-method-summary %}
-Volume History
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api-v2.bancor.network" path="/history/volume" method="get" summary="Volume History" %}
+{% swagger-description %}
+Returns the global volume history in the network.
 
-{% api-method-description %}
-Returns the global volume history in the network.  
+\
+
+
 You can provide an optional filter in order to receive the volume for a specific token.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="dlt\_type" type="string" required=false %}
-blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="dlt_type" type="string" %}
+blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="token\_dlt\_id" type="string" required=false %}
-token id \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="token_dlt_id" type="string" %}
+token id (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="start\_date" type="integer" required=true %}
+{% swagger-parameter in="query" name="start_date" type="integer" %}
 unix time
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="end\_date" type="integer" required=true %}
+{% swagger-parameter in="query" name="end_date" type="integer" %}
 unix time
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="interval" type="string" required=true %}
-data interval \(minute/15minutes/hour/day/week\)
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="query" name="interval" type="string" %}
+data interval (minute/15minutes/hour/day/week)
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
 	"data": [{
@@ -456,55 +396,39 @@ data interval \(minute/15minutes/hour/day/week\)
 	}]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://api-v2.bancor.network" path="/history/price" %}
-{% api-method-summary %}
-Price History
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api-v2.bancor.network" path="/history/price" method="get" summary="Price History" %}
+{% swagger-description %}
 Returns the price history for a given token in the network.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="dlt\_type" type="string" required=true %}
-blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="dlt_type" type="string" %}
+blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="token\_dlt\_id" type="string" required=true %}
-token id \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="token_dlt_id" type="string" %}
+token id (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="quote\_symbol" type="string" required=true %}
-currency to return the result in \(bnt/eth/eos/usd/eur\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="quote_symbol" type="string" %}
+currency to return the result in (bnt/eth/eos/usd/eur)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="start\_date" type="integer" required=true %}
+{% swagger-parameter in="query" name="start_date" type="integer" %}
 unix time
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="end\_date" type="integer" required=true %}
+{% swagger-parameter in="query" name="end_date" type="integer" %}
 unix time
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="interval" type="string" required=true %}
-data interval \(minute/15minutes/hour/day/week\)
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="query" name="interval" type="string" %}
+data interval (minute/15minutes/hour/day/week)
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {
 	"data": [{
@@ -582,70 +506,58 @@ data interval \(minute/15minutes/hour/day/week\)
 	}]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://api-v2.bancor.network" path="/transactions/swap" %}
-{% api-method-summary %}
-Trade Transaction Creation
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api-v2.bancor.network" path="/transactions/swap" method="get" summary="Trade Transaction Creation" %}
+{% swagger-description %}
+Creates a trade transaction, ready to be signed by the user wallet.
 
-{% api-method-description %}
-Creates a trade transaction, ready to be signed by the user wallet.  
+\
+
+
 Note that if approval is required, the API will also return the necessary approval transactions.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="source\_dlt\_type" type="string" required=true %}
-source token blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="source_dlt_type" type="string" %}
+source token blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="source\_dlt\_id" type="string" required=true %}
-source id \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="source_dlt_id" type="string" %}
+source id (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="target\_dlt\_type" type="string" required=true %}
-target token blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="target_dlt_type" type="string" %}
+target token blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="target\_dlt\_id" type="string" required=true %}
-target id \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="target_dlt_id" type="string" %}
+target id (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="amount" type="number" required=true %}
+{% swagger-parameter in="query" name="amount" type="number" %}
 source amount - decimal, may include decimal point
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="min\_return" type="number" required=true %}
+{% swagger-parameter in="query" name="min_return" type="number" %}
 the transaction will fail if the trade returns a value smaller than this one
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="user\_source\_dlt\_id" type="string" required=true %}
-user wallet/account \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="user_source_dlt_id" type="string" %}
+user wallet/account (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="nonce" type="number" required=false %}
+{% swagger-parameter in="query" name="nonce" type="number" %}
 default: node default
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="gas\_price" type="number" required=false %}
+{% swagger-parameter in="query" name="gas_price" type="number" %}
 gas price in wei. default: node default
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-WBTC -&gt; ETH trade transaction creation request:  
-`https://api-v2.bancor.network/transactions/swap?source_dlt_type=ethereum&source_dlt_id=0x2260fac5e5542a773aa44fbcfedf7c193bc2c599&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=2.5&min_return=9&user_source_dlt_id=0xe1d66536b09b6f99e0d5510da0a6dea4ab66cd13`  
-The response includes 2 transactions - the first one is an approve transaction, while the second one is the actual trade transaction.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="WBTC -> ETH trade transaction creation request:
+https://api-v2.bancor.network/transactions/swap?source_dlt_type=ethereum&source_dlt_id=0x2260fac5e5542a773aa44fbcfedf7c193bc2c599&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=2.5&min_return=9&user_source_dlt_id=0xe1d66536b09b6f99e0d5510da0a6dea4ab66cd13
+The response includes 2 transactions - the first one is an approve transaction, while the second one is the actual trade transaction." %}
 ```
 [{
 	"dlt_type": "ethereum",
@@ -665,110 +577,75 @@ The response includes 2 transactions - the first one is an approve transaction, 
 	}
 }]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://api-v2.bancor.network" path="/pricing/target-amount" %}
-{% api-method-summary %}
-Expected Target Amount
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api-v2.bancor.network" path="/pricing/target-amount" method="get" summary="Expected Target Amount" %}
+{% swagger-description %}
 Returns the expected target amount, given source/target tokens and source amount.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="source\_dlt\_type" type="string" required=true %}
-source token blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="source_dlt_type" type="string" %}
+source token blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="source\_dlt\_id" type="string" required=true %}
-source id \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="source_dlt_id" type="string" %}
+source id (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="target\_dlt\_type" type="string" required=true %}
-target token blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="target_dlt_type" type="string" %}
+target token blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="target\_dlt\_id" type="string" required=true %}
-target id \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="target_dlt_id" type="string" %}
+target id (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="amount" type="number" required=true %}
+{% swagger-parameter in="query" name="amount" type="number" %}
 source amount - decimal, may include decimal point
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-To get the expected ETH amount for trading 1 BNT:  
-`https://api-v2.bancor.network/pricing/target-amount?source_dlt_type=ethereum&source_dlt_id=0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=1`
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="To get the expected ETH amount for trading 1 BNT:
+https://api-v2.bancor.network/pricing/target-amount?source_dlt_type=ethereum&source_dlt_id=0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=1" %}
 ```
 {
 	"amount": "0.001318822674619802"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="get" host="https://api-v2.bancor.network" path="/pricing/source-amount" %}
-{% api-method-summary %}
-Expected Source Amount
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api-v2.bancor.network" path="/pricing/source-amount" method="get" summary="Expected Source Amount" %}
+{% swagger-description %}
 Returns the expected source amount, given source/target tokens and target amount.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="source\_dlt\_type" type="string" required=true %}
-source token blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="source_dlt_type" type="string" %}
+source token blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="source\_dlt\_id" type="string" required=true %}
-source id \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="source_dlt_id" type="string" %}
+source id (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="target\_dlt\_type" type="string" required=true %}
-target token blockchain type \(ethereum\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="target_dlt_type" type="string" %}
+target token blockchain type (ethereum)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="target\_dlt\_id" type="string" required=true %}
-target id \(address\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="target_dlt_id" type="string" %}
+target id (address)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="amount" type="number" required=true %}
+{% swagger-parameter in="query" name="amount" type="number" %}
 target amount - decimal, may include decimal point
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-To get the required amount of BNT that will return 1 ETH:  
-`https://api-v2.bancor.network/pricing/source-amount?source_dlt_type=ethereum&source_dlt_id=0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=1`
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="To get the required amount of BNT that will return 1 ETH:
+https://api-v2.bancor.network/pricing/source-amount?source_dlt_type=ethereum&source_dlt_id=0x1F573D6Fb3F13d689FF844B4cE37794d79a7FF1C&target_dlt_type=ethereum&target_dlt_id=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&amount=1" %}
 ```
 {
 	"amount": "755.722900317536461992"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}
