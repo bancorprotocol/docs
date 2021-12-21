@@ -43,9 +43,9 @@ Even if a token moons, an LP is entitled to withdraw the full value of the token
 
 ## How does Impermanent Loss Insurance work?
 
-Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the protocol is able to co-invest in pools alongside liquidity providers and pay for the cost of impermanent loss with swap fees earned from its co-investments.
+Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the protocol is able to provide liquidity in pools alongside liquidity providers and pay for the cost of impermanent loss with swap fees earned from its co-investments.
 
-If fees earned by the protocol from its co-invested BNT are greater than IL compensation, the protocol is able to offset IL for LPs without emitting new BNT. \
+If fees earned from protocol-provisioned BNT are greater than IL compensation, the protocol is able to offset IL for LPs without emitting new BNT. \
 \
 If there are not sufficient tokens in a pool to fully compensate an LP for IL in the staked ERC20 token, part of the protection may be paid out in an equal value of BNT.&#x20;
 
@@ -59,11 +59,11 @@ Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com
 
 ## Why is there limited space in Bancor whitelisted pools?
 
-To support single-sided, non-BNT deposits, the protocol invests BNT into whitelisted pools. For example, a $100K deposit of LINK triggers $100K of BNT emissions into the LINK pool.
+To support single-sided, non-BNT deposits, the protocol provides BNT into whitelisted pools. For example, a $100K deposit of LINK triggers $100K of BNT emissions into the LINK pool.
 
 Protocol-supplied BNT generally remains in the pool earning fees for the protocol until the BNT (and its accrued fees) are eventually burned. The amount of protection offered by the protocol is governed by the DAO and determined by BNT holders.
 
-Each pool has a limit on the amount of BNT that can be provided by the protocol (“co-investment limit”). When this limit is reached, BNT must be provided by users in order for the pool to expand, or governance can vote to increase the limit.
+Each pool has a limit on the amount of BNT that can be provided by the protocol. When this limit is reached, BNT must be provided by users in order for the pool to expand, or governance can vote to increase the limit.
 
 ## **Can I underperform a basic buy and hold strategy**?
 
@@ -85,7 +85,7 @@ No. There’s no relation nor correlation between different liquidity providers 
 
 ## **I withdrew my position and got compensated partially with BNT. Why?**
 
-The protocol co-invests BNT and these BNTs accrue fees. These fees are used to compensate any possible IL. In cases where the trading fees accrued by the co-invested BNT does not outweigh the IL, BNT equivalent (calculated at the current pool rate) will be minted from the protocol as compensation.
+The protocol provides BNT to its pools and these BNTs accrue fees from trading. These fees are used to compensate any possible IL. In cases where the trading fees accrued by protocol-owned BNT does not outweigh the IL, BNT equivalent (calculated at the current pool rate) will be minted from the protocol as compensation.
 
 ## **Can I lose my IL insurance somehow?**
 
@@ -131,12 +131,12 @@ Specifically for single-asset staking of BNT (or any impermanent loss insurance 
 
 When a user deposits single-sided liquidity into a pool, the process to support such a deposit is as follows. ("TKN" is used to represent any ERC20 token whitelisted in Bancor v2.1).
 
-* To match user deposits of single-sided TKN, new BNT is co-invested by the protocol into the TKN pool (e.g., a $100K deposit of LINK triggers $100K of BNT emissions into the LINK pool).
-* Protocol-invested BNT is minted into the pools and not onto the external market.
+* To match user deposits of single-sided TKN, new BNT is provided by the protocol into the TKN pool (e.g., a $100K deposit of LINK triggers $100K of BNT emissions into the LINK pool).
+* Protocol-owned BNT is minted into the pools and not onto the external market.
 * The BNT remains in the pools and earns fees until the BNT and its accrued fees are eventually burned.
-* The burning of protocol-invested BNT and its associated fees happens when the TKN provider withdraws their deposit, or when a BNT holder stakes their BNT in the pool, taking over the protocol’s position.
+* The burning of protocol-owned BNT and its associated fees happens when the TKN provider withdraws their deposit, or when a BNT holder stakes their BNT in the pool, taking over the protocol’s position.
 
-Co-investment limits, which are governed by the BancorDAO, determine the number of BNT that can be emitted by the protocol into a given pool to support single-sided TKN deposits.
+The BancorDAO determines the number of BNT that can be emitted by the protocol into a given pool to support single-sided TKN deposits.
 
 {% hint style="info" %}
 It should be noted that BNT emitted by the protocol doesn’t enter the open market unless prices significantly change. Instead, this BNT is sent directly into the protocol’s pools, and generally stays within the protocol earning fees until it is burned. Further analysis of these mechanics and the impact on BNT supply can be found in Bancor's [**protocol health report**](https://blog.bancor.network/bancor-v2-1-protocol-health-report-january-2020-83338c904de0) **** _(December 2020)_.
@@ -146,7 +146,7 @@ It should be noted that BNT emitted by the protocol doesn’t enter the open mar
 
 The option to provide single-sided liquidity is available only if there’s sufficient space on the other side of the pair, which is BNT.&#x20;
 
-If there is not enough space in a given pool for providing single-sided ERC20 liquidity, an LP has two options: provide BNT to open up space, wait until another user provides BNT to open space, or work with governance to increase the pool's BNT co-investment limit.
+If there is not enough space in a given pool for providing single-sided ERC20 liquidity, an LP has two options: provide BNT to open up space, wait until another user provides BNT to open space, or work with governance to increase the limit of protocol-owned BNT that can be provided to the pool.
 
 ## How much ETH do I need to pay to stake in a Bancor pool?&#x20;
 
@@ -170,7 +170,7 @@ Governance ERC20 address: 0x48Fb253446873234F2fEBbF9BdeAA72d9d387f94
 
 ## I’ve added liquidity, now where can I keep track of my liquidity pool positions and returns?
 
-Please check the [**protection tab**](https://app.bancor.network/eth/protection) to see all metrics for the different LP positions you have, such as how many fees you’ve earned, your ROI (return on investment), daily/weekly APR (annual percentage rate) and more.
+Click "Portfolio" under the "Earn" tab in [app.bancor.network](https://app.bancor.network/pools) to see all metrics for the different LP positions you have, such as how many fees you’ve earned, your ROI (return on investment), daily/weekly APR (annual percentage rate) and more.
 
 ## What kind of fees can you earn?
 
