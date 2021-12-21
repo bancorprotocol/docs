@@ -71,7 +71,7 @@ Only if you withdraw your tokens before 30 days in the pool. Impermanent loss pr
 
 ## **Where can I track returns and see the current coverage on my liquidity pool position?**
 
-This information can be viewed in the [”Protection” tab](https://app.bancor.network/eth/protection) of bancor.network, on the right side (where you can also find a countdown timer for complete elimination of impermanent loss). Each liquidity position has its own separate coverage, depending on when you deposited. Within the same pairs, there is no relation between different liquidity positions.
+This information can be viewed in the "Earn > Portfolio" tab of [app.bancor.network](https://app.bancor.network), on the right side (where you can also find a countdown timer for complete elimination of impermanent loss). Each liquidity position has its own separate coverage, depending on when you deposited. Within the same pairs, there is no relation between different liquidity positions.
 
 ## **What is the difference between “protected” and “claimable” value?**
 
