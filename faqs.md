@@ -8,16 +8,16 @@ This a living document continuously updated by the community and therefore a wor
 
 FAQs below are divided into the following sections:
 
-1. ****[**Liquidity Pools**](faqs.md#1-liquidity-pools)****
-2. ****[**Impermanent Loss**](faqs.md#2-impermanent-loss)****
-3. ****[**Depositing / Withdrawing Liquidity**](faqs.md#2-depositing-withdrawing-liquidity)
-4. ****[**BNT Liquidity Mining**](faqs.md#3-bnt-liquidity-mining)
-5. ****[**Pool Management**](faqs.md#4-pool-management)
-6. ****[**Trading**](faqs.md#5-trading)****
-7. ****[**Further Resources**](faqs.md#6-further-resources)
-8. ****[**Helpful Links**](faqs.md#7-helpful-links)****
+1. ****[**Liquidity Pools**](faqs.md#1.-liquidity-pools)****
+2. ****[**Impermanent Loss**](faqs.md#2.-impermanent-loss)****
+3. ****[**Depositing / Withdrawing Liquidity**](faqs.md#3.-depositing-withdrawing-liquidity)****
+4. ****[**BNT Liquidity Mining**](faqs.md#4.-bnt-liquidity-mining)****
+5. ****[**Pool Management**](faqs.md#5.-pool-management)****
+6. ****[**Trading**](faqs.md#6.-trading)****
+7. ****[**Further Resources**](faqs.md#7.-further-resources)****
+8. ****[**Helpful Links**](faqs.md#8.-helpful-links)****
 
-## **1. Liquidity Pools**
+## **1. Liquidity Pools** <a href="#liquiditypools" id="liquiditypools"></a>
 
 Liquidity pools are automated market-maker **(AMM)** smart contracts that exchange assets algorithmically using on-chain reserves. They turn pooled market-maker liquidity into an asset class (“liquidity positions”), allowing for broader, more competitive involvement in market-making.
 
