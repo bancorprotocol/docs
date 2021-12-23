@@ -21,7 +21,7 @@ _Introducing Bancor 3 (December 2021):_
 
 {% embed url="https://www.youtube.com/watch?t=4s&v=qi1geks1n8A" %}
 
-_**Staking:**_
+_**Staking Guides:**_
 
 * [How to Stake Tokens & Earn on Bancor](https://www.youtube.com/watch?v=vpNuyjS9grM\&t=3s) (DeFi Alliance Demo)
 * [How to Stake AXS on Bancor](https://www.youtube.com/watch?v=2Mz7wh3hm8Y) **(**Jeffrey Zirlin - Axie Infinity)
@@ -29,35 +29,36 @@ _**Staking:**_
 * [Bancor Platform Overview](https://www.youtube.com/watch?v=sdd5TToLv9o) (Blocks of Finance)
 * [Staking Tutorial ](https://youtu.be/3P4vKIHcdas)(CryptoOneShop)
 
-_**Trading:**_
+_**Trading Guides:**_
 
 * [Connect Your Wallet](https://www.youtube.com/watch?v=-bqI7IsC6c0\&t=117s)
 * [Trade Tokens](https://www.youtube.com/watch?v=QlqDlZAHSLg\&t=4s)
 * [Perform Gas-Free Limit Orders](https://www.youtube.com/watch?v=KaU3ssaK4N8\&t=7s)
 * [Buy ETH with Fiat on Bancor](https://www.youtube.com/watch?v=x\_usnvlIu7g)
 
-_**Protocol:**_
+_**Protocol Mechanics:**_
 
 * [Bancor: the Crypto Passive Income Powerhouse](https://www.youtube.com/watch?v=4clRscC9BR0\&t=2s) (DeFi Donut)
-* [Lazy Yield Hacking with Bancor](https://www.youtube.com/watch?v=8YpNh27HD0Y) (Amadeo Brands)
+* [Say Adios to Impermanent Loss with Bancor](https://www.youtube.com/watch?v=dJYjx9\_OK6A) (The Defiant)
 * [Bancor Protocol ELI5](https://www.youtube.com/watch?v=MQa8\_4s9wMo) (MBR)
 * [How Bancor's Impermanent Loss Protection Works](https://www.youtube.com/watch?v=6YA61LeJqE8) (Economics Design)
 * [Bancor Protocol overview ](https://twitter.com/Bancor/status/1359455683939356674?s=20)(DeFiFrog**)**
 * ****[Single-sided liquidity](https://twitter.com/DeFiFrog/status/1368623215673626625?s=20) (DeFiFrog)
 * [BNT Liquidity Mining](https://www.youtube.com/watch?v=X22Dr2zYW2M) (DeFiFrog)
 * [Bancor Vortex ](https://www.youtube.com/watch?v=SbUqcbNqQ-Y)(MBR)
+* [Lazy Yield Hacking with Bancor](https://www.youtube.com/watch?v=8YpNh27HD0Y) (Amadeo Brands)
 * [vBNT Burning](https://www.youtube.com/watch?v=cWg-oTm5OM8\&t=3s) (Taiki Maeda)
 
 ### Written Guides
 
 _**Staking:**_
 
-* [How to Stake on Bancor](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)&#x20;
+* [How to Stake on Bancor](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1) (Bancor blog)
 * [In-depth Guide to Staking on Bancor](https://medium.com/harvest-finance/how-to-stake-farm-on-bancor-in-a-single-sided-manner-in-depth-tutorial-ff573e0756de) (Harvest Finance)
-* [How Bancor Staking Works](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e)
+* [How Bancor Staking Works](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e) (Bancor blog)
 * [How to Farm on Bancor (Chain Bulletin)](https://chainbulletin.com/how-to-farm-bnt-on-bancor-the-simple-guide/)
-* [How to Earn & Re-Stake BNT Rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
-* [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
+* [How to Earn & Re-Stake BNT Rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002) (Bancor blog)
+* [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9) (Bancor blog)
 
 _**Governance:**_
 
