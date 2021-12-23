@@ -36,7 +36,7 @@ _**Trading Guides:**_
 * [Perform Gas-Free Limit Orders](https://www.youtube.com/watch?v=KaU3ssaK4N8\&t=7s)
 * [Buy ETH with Fiat on Bancor](https://www.youtube.com/watch?v=x\_usnvlIu7g)
 
-_**Protocol Mechanics:**_
+_**Protocol:**_
 
 * [Bancor: the Crypto Passive Income Powerhouse](https://www.youtube.com/watch?v=4clRscC9BR0\&t=2s) (DeFi Donut)
 * [Say Adios to Impermanent Loss with Bancor](https://www.youtube.com/watch?v=dJYjx9\_OK6A) (The Defiant)
@@ -79,7 +79,6 @@ _**Trading:**_
 * [Deribit: BNT Insights Market Research](https://insights.deribit.com/market-research/bancor-the-world-token/)
 * [Comparing Bancor Staking ROI to Competitors](https://twitter.com/korpi87/status/1409449804703440897?s=20)
 * [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
-* [Understanding BNT Supply](https://korpi.medium.com/understand-bancor-the-truth-about-bnt-supply-and-why-bnt-market-cap-is-overstated-671d3f680465)
 * **Twitter threads:**
   * [Bancor 3](https://twitter.com/Bancor/status/1465445447292571657?s=20)
   * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
@@ -104,7 +103,6 @@ _**Progress Reports**:_&#x20;
 * [Bancor 3 Technical Primer](https://drive.google.com/drive/folders/1TUNF7gOFitTkl52-PGqS4m28edp-eyst) (December, 2021)
 * [Study: Impermanent Loss in Leveraged AMMs](https://arxiv.org/abs/2111.09192) (November, 2021)
 * [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) ([TopazeBlue](https://topaze.blue))
-* [Bancor v2.1 Protocol Health Report (January 2021)](https://blog.bancor.network/bancor-v2-1-protocol-health-report-january-2020-83338c904de0)
 * [Bancor Whitepaper](https://storage.googleapis.com/website-bancor/2018/04/01ba8253-bancor\_protocol\_whitepaper\_en.pdf) (2018)
 
 ### Podcasts
