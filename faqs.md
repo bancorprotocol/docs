@@ -10,9 +10,9 @@ FAQs below are divided into the following sections:
 
 1. ****[**Liquidity Pools**](faqs.md#1.-liquidity-pools)****
 2. ****[**Impermanent Loss/Divergence Loss**](faqs.md#2.-impermanent-loss)****
-3. ****[**Bancor Safe Staking** ](faqs.md#what-is-impermanent-loss-protection)****
+3. ****[**Bancor Safe Staking** ](faqs.md#3.-bancor-safe-staking)****
 4. ****[**Depositing & Withdrawing Liquidity**](faqs.md#3.-depositing-withdrawing-liquidity)****
-5. ****[**Liquidity Mining Rewards**](faqs.md#4.-bnt-liquidity-mining)****
+5. ****[**Liquidity Mining Rewards**](faqs.md#5.-liquidity-mining-rewards)****
 6. ****[**Pool Management**](faqs.md#5.-pool-management)****
 7. ****[**Trading**](faqs.md#6.-trading)****
 8. ****[**Further Resources**](faqs.md#7.-further-resources)****
