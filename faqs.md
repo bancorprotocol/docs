@@ -9,8 +9,8 @@ This a living document continuously updated by the community and therefore a wor
 FAQs below are divided into the following sections:
 
 1. ****[**Liquidity Pools**](faqs.md#1.-liquidity-pools)****
-2. ****[**Impermanent Loss**](faqs.md#2.-impermanent-loss)****
-3. ****[**Depositing / Withdrawing Liquidity**](faqs.md#3.-depositing-withdrawing-liquidity)****
+2. ****[**Impermanent Loss/Divergence Loss**](faqs.md#2.-impermanent-loss)****
+3. ****[**Depositing & Withdrawing Liquidity**](faqs.md#3.-depositing-withdrawing-liquidity)****
 4. ****[**BNT Liquidity Mining**](faqs.md#4.-bnt-liquidity-mining)****
 5. ****[**Pool Management**](faqs.md#5.-pool-management)****
 6. ****[**Trading**](faqs.md#6.-trading)****
@@ -25,21 +25,23 @@ They turn pooled market-maker liquidity into an asset class (“liquidity positi
 
 Whereas access to safe and reliable yields from asset exchange previously required specialized tools and access, today the act of earning from decentralized crypto trading can be accessed by everyday users and passive liquidity providers.
 
-## **2. Impermanent / Divergence Loss**
+## **2. Impermanent Loss / Divergence Loss**
 
 Impermanent loss or "divergence loss" is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.&#x20;
 
 It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the risk of losses.
 
-Why “impermanent”? This refers to the fact that losses are only realized when a liquidity withdraws from a pool. If the relative prices of tokens in the AMM return to their original state when you entered the AMM, the loss is erased and you earn 100% of trading fees. However, this is rarely the case. Impermanent loss often becomes _permanent_, reducing profits from trading fees & liquidity mining rewards, and often leaving LPs with negative returns.
+The “impermanent” part is largely misnomer and refers to the fact that losses are only realized when a liquidity withdraws from a pool. If the relative prices of tokens in the AMM return to their original state when you entered the AMM, the cost of divergence loss is reduced.
 
-On-chain research indicates that up to 50% of liquidity providers suffer negative returns from divergence loss in unprotected AMM pools.
+However, this is rarely the case. Impermanent loss is often made _permanent_, reducing profits from trading fees & liquidity mining rewards or leaving LPs with negative returns. [On-chain research](https://arxiv.org/abs/2111.09192) suggests that divergence loss causes LPs in legacy AMM pools to suffer negative returns up to 50% of the time and higher.
 
-## What causes impermanent loss?
+## What causes Impermanent Loss?
 
 Liquidity pools consist of multiple tokens paired together in a pool. If one of the tokens changes in price relative to its paired token, an arbitrage opportunity emerges, incentivizing re-balancing of the pool (and resulting in a loss of value for liquidity providers).&#x20;
 
 As one token’s price is rising relative to its paired asset, the pool re-balances by selling the rising token at a discount while buying the token whose price is falling at a premium. Once you withdraw your liquidity, you are left holding less of the token that mooned, and more of the token that dumped.
+
+[Beginner's Guide to Impermanent Loss](https://blog.bancor.network/beginners-guide-to-getting-rekt-by-impermanent-loss-7c9510cb2f22#:\~:text=Simply%20put%2C%20impermanent%20loss%20is,the%20greater%20the%20impermanent%20loss.)
 
 ## What is Impermanent Loss Protection?
 
@@ -57,7 +59,7 @@ A continuous burning mechanism puts deflationary pressure on the BNT token suppl
 
 ![](.gitbook/assets/v21diagram.jpeg)
 
-### IL Protection Vesting
+### Impermanent Loss Insurance Vesting
 
 When a user makes a new deposit, the cover offered by the protocol increases at a rate of 1% each day the stake remains live, and matures to full protection after 100 days.&#x20;
 
@@ -75,11 +77,21 @@ The amount of Trading Liquidity offered by the protocol per token is governed by
 
 In [Bancor 3](https://blog.bancor.network/introducing-bancor-3-962a3c601c25), non-trading liquidity may be used by the protocol to generate additional fee-earning strategies that are native and external to the Bancor protocol.
 
-****
+## **Where can I track returns on my liquidity pool positions?**
 
-## **Where can I track returns and see the current coverage on my liquidity pool position?**
+This information can be viewed in the "Portfolio" tab under the "Earn" section of [app.bancor.network](https://app.bancor.network).&#x20;
 
-This information can be viewed in the "Earn > Portfolio" tab of [app.bancor.network](https://app.bancor.network), on the right side (where you can also find a countdown timer for complete elimination of impermanent loss). Each liquidity position has its own separate coverage, depending on when you deposited. Within the same pairs, there is no relation between different liquidity positions.
+For each individual stake in a pool, the Portfolio page displays:
+
+* “**Initial Stake**” — the total number of tokens initially staked
+* “**Protected**” — the value of your position with full 100% protection
+* “**Claimable**” — value available for withdrawal. If IL has occurred, and the stake is less than 100 days old, Claimable will be lower than Protected.
+* **"Fees & Rewards"** — total fees (paid in BNT or non-BNT tokens, depending on whether you're staking BNT or non-BNT tokens) and total rewards (BNT mining rewards) paid on a given pool position. Rewards multiplier accrued weekly with a max at X2 after 4 weeks, and resets across all liquidity positions whenever an LP withdraws from any Bancor pool.
+* **ROI** — Protected Stake Value-Initial Stake Value/Initial Stake Value\*100)&#x20;
+
+[How to Provide Liquidity on Bancor](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)
+
+![](<.gitbook/assets/Screen Shot 2021-12-25 at 4.20.17 PM.png>)
 
 ## **What is the difference between “protected” and “claimable” value?**
 
@@ -93,7 +105,9 @@ No. There’s no relation or correlation between different liquidity providers p
 
 ## **I withdrew my position and got compensated partially with BNT. Why?**
 
-The protocol provides BNT to its pools and these BNTs accrue fees from trading. These fees are used to compensate any possible IL. In cases where the trading fees accrued by protocol-owned BNT does not outweigh the IL, BNT equivalent (calculated at the current pool rate) will be minted from the protocol as compensation.
+The protocol provides BNT to its pools and these BNTs accrue fees from trading. These fees are used to compensate any possible IL. In cases where the trading fees accrued by protocol-owned BNT does not outweigh the IL, BNT equivalent (calculated at the current pool rate) will be emitted from the protocol as compensation.&#x20;
+
+Note: BNT withdrawn from the system is subject to a 24-hour lock-up.
 
 ## **Can I lose my IL insurance somehow?**
 
