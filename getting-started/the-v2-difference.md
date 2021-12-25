@@ -8,22 +8,24 @@ description: How Bancor's V2 Update Takes AMMs to the Next Level‌
 
 When Bancor introduced the first Automated Market Maker (AMM) on Ethereum in 2017, the notion of an on-chain, order-book-less exchange was novel and experimental. Bancor v1 was designed to solve the `liquidity problem` where sparse order books struggled to guarantee liquidity to investors on both sides of the trade. Just a few years later, v1 has spurred an ecosystem of innovative AMMs which have generated billions of dollars in trading volume.‌
 
-But the success of the first generation of AMMs has exposed several key downsides of the initial model, affecting both traders and liquidity providers (LPs):‌
+But the success of legacy AMMs exposed key downsides of the initial model, affecting both traders and liquidity providers (LPs):‌
 
 * `Involuntary Token Exposure`
 * `Impermanent Loss`
 
 With the interests of both traders and LPs in mind, Bancor v2.1 offers solutions to these problems.‌
 
-Contrary to other AMM protocols, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the v2.1 protocol co-invests in pools alongside LPs to support single-sided AMM exposure and to cover the cost of impermanent loss with swap fees earned from its co-investments.&#x20;
+Contrary to other AMM protocols, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the v2.1 protocol is able to provide liquidity in pools alongside LPs to support single-sided token exposure and to cover the cost of impermanent loss incurred by LPs using swap fees earned from protocol-provisioned liquidity.&#x20;
 
 [_**Bancor v2.1 Economic Analysis**_](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) _**(**_[_**TopazeBlue**_](https://topaze.blue)_**)**_
 
 ### Single-Sided Exposure <a href="#single-token-staking" id="single-token-staking"></a>
 
-Most first generation AMMs require LPs to contribute equal or determinate parts of each asset represented in the pool. This is both an inconvenience and a liability for many LPs who may hold only one of the assets and/or are only interested in exposure to that single asset. Bancor v2.1 breaks this paradigm, allowing LPs to contribute and maintain 100% exposure in a single token.
+Most first generation AMMs require LPs to contribute two tokens representing the component parts of legacy liquidity pools. This is both an inconvenience and a liability for many LPs who may hold only one of the assets and/or are only interested in exposure to that single asset.&#x20;
 
-LPs can provide liquidity to a pool with single-sided exposure, either in an ERC20 token (“TKN”) or in BNT.
+**Bancor v2.1 breaks this paradigm, allowing LPs to contribute and maintain 100% exposure in a single token.**
+
+LPs can provide liquidity to a pool with single-sided exposure, either entirely in a specific ERC20 token (“TKN”) or entirely in BNT. This mimics the experience of HODL'ing the asset in your wallet, while allow the LP to earn trading fees and rewards.
 
 ### Impermanent Loss Insurance <a href="#mitigating-impermanent-loss" id="mitigating-impermanent-loss"></a>
 
@@ -41,15 +43,15 @@ If there are not sufficient tokens in the pool to fully pay out IL compensation 
 
 In order to allow for the special properties of Bancor v2.1, there are a few limitations.‌
 
-First, v2.1 only works for two-asset pools. Developers are still able to deploy legacy v1 pools with more than two assets and custom weights.‌
+First, v2.1 currently DOES NOT support dynamically adjusting supply tokens (i.e., "rebase" tokens) that can control and adjust the token balances in users' wallets.
 
-Second, v2.1 currently DOES NOT support dynamically adjusting supply tokens (i.e., "rebase" tokens) that can control and adjust the token balances in users' wallets.
-
-Third, when being withdrawn from the system, BNTs are locked for a pre-set time (default 24 hr) to prevent panic liquidation.
+Second, when BNT is being withdrawn from the system, it is locked for a pre-set time (default 24 hr) to mitigate security vulnerabilities.
 
 ## **Whitelisting Requirements**
 
 ****[**See the most up to date technical requirements for whitelisting.**](https://gov.bancor.network/t/whitelisting-requirements/1849)****
+
+_**Requirements:**_
 
 ### Transparency&#x20;
 
