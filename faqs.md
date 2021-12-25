@@ -10,12 +10,13 @@ FAQs below are divided into the following sections:
 
 1. ****[**Liquidity Pools**](faqs.md#1.-liquidity-pools)****
 2. ****[**Impermanent Loss/Divergence Loss**](faqs.md#2.-impermanent-loss)****
-3. ****[**Depositing & Withdrawing Liquidity**](faqs.md#3.-depositing-withdrawing-liquidity)****
-4. ****[**BNT Liquidity Mining**](faqs.md#4.-bnt-liquidity-mining)****
-5. ****[**Pool Management**](faqs.md#5.-pool-management)****
-6. ****[**Trading**](faqs.md#6.-trading)****
-7. ****[**Further Resources**](faqs.md#7.-further-resources)****
-8. ****[**Helpful Links**](faqs.md#8.-helpful-links)****
+3. ****[**Bancor Safe Staking** ](faqs.md#what-is-impermanent-loss-protection)****
+4. ****[**Depositing & Withdrawing Liquidity**](faqs.md#3.-depositing-withdrawing-liquidity)****
+5. ****[**Liquidity Mining Rewards**](faqs.md#4.-bnt-liquidity-mining)****
+6. ****[**Pool Management**](faqs.md#5.-pool-management)****
+7. ****[**Trading**](faqs.md#6.-trading)****
+8. ****[**Further Resources**](faqs.md#7.-further-resources)****
+9. ****[**Helpful Links**](faqs.md#8.-helpful-links)****
 
 ## **1. Liquidity Pools** <a href="#liquiditypools" id="liquiditypools"></a>
 
@@ -43,9 +44,9 @@ As one token’s price is rising relative to its paired asset, the pool re-balan
 
 Reading: [Beginner's Guide to Impermanent Loss](https://blog.bancor.network/beginners-guide-to-getting-rekt-by-impermanent-loss-7c9510cb2f22#:\~:text=Simply%20put%2C%20impermanent%20loss%20is,the%20greater%20the%20impermanent%20loss.)
 
-Tracking tools: If you've provided liquidity to a legacy pool, **you can check your wallet's net earnings on** [**IL.wtf**](https://il.wtf) **- where can you see your fee earnings minus the cost of IL, to reveal your net returns from providing to legacy pools.**
+Tracking IL: If you've provided liquidity to a legacy pool, **you can check your wallet's net earnings on** [**IL.wtf**](https://il.wtf)**.** Plug in a wallet address to see an LP's historical fee earnings across legacy pools minus the cost of IL, to reveal whether the wallet has positive returns or has been rekt by IL.
 
-## What is Bancor's Impermanent Loss Protection?
+## 3. Bancor Safe Staking
 
 Bancor's IL Protection is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
 
@@ -125,7 +126,7 @@ Only pools voted into the Bancor v2.1 whitelist by Bancor governance are eligibl
 
 [_**Instructions on how to whitelist a token**_](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)_**.**_
 
-## 3. Depositing / Withdrawing Liquidity
+## 4. Depositing / Withdrawing Liquidity
 
 ## How do I stake in the Bancor protocol?
 
@@ -224,9 +225,9 @@ APR from BNT Liquidity Mining is measured similarly. BNT distributed to the pool
 
 
 
-## 4. BNT Liquidity Mining
+## 5. Liquidity Mining Rewards
 
-## What is the Liquidity Mining (LM) program?
+## What is the BNT Liquidity Mining (LM) program?
 
 BNT Liquidity Mining (LM) program started at November 16 and aims at achieving two primary goals:
 
