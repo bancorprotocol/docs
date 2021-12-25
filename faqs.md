@@ -51,9 +51,9 @@ Even if a token moons, an LP is entitled to withdraw the full value of the token
 
 Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the protocol is able to provide liquidity in pools alongside LPs and compensate users for any IL with swap fees earned from protocol-owned LP tokens.
 
-If fees earned from protocol-owned LP tokens are greater than the cost of IL compensation, the protocol is able to offset IL for LPs with no new BNT emitted. If there are ever an insufficient number of tokens to fully compensate an LP for their IL, part of the protocol's IL protection may be paid out in an equal value of minted BNT.
+If fees earned from protocol-owned LP tokens are greater than the cost of IL compensation, the protocol is able to offset IL for LPs without emitting new BNT. If there are ever an insufficient number of protocol-earned fees to fully compensate an LP for their IL, the protocol's IL insurance may be paid out in an equal value of emitted BNT.&#x20;
 
-A continuous fee burning mechanism puts deflationary pressure on the BNT supply based on transaction fees generated on the network.
+A continuous burning mechanism puts deflationary pressure on the BNT token supply based. Protocol-provisioned BNT is burned when LPs withdraw and a portion of transaction fees generated on the network are used to burn BNT and vBNT tokens.
 
 ![](.gitbook/assets/v21diagram.jpeg)
 
@@ -67,7 +67,7 @@ Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com
 
 ## How Single-Sided Liquidity Works
 
-To support single-sided non-BNT liquidity (i.e., TKN deposits), the protocol offers Trading Liquidity to tokens that are whitelisted by the BancorDAO. In whitelisted pools, a $100,000 deposit of TKN may trigger $100,000 of Trading Liquidity provisioned by the protocol in the TKN pool.
+To support Single-Sided Liquidity, the protocol offers Trading Liquidity to tokens that are whitelisted by the BancorDAO. In whitelisted pools, a $100,000 deposit of TKN may trigger $100,000 of Trading Liquidity provisioned by the protocol to match the user's TKN deposit in the pool.
 
 Trading Liquidity earns TKN and BNT fees for the protocol which are burned for vBNT or used to compensate for IL incurred by depositors when they withdraw from the protocol.
 
