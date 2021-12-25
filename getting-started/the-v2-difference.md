@@ -15,15 +15,15 @@ But the success of legacy AMMs exposed key downsides of the initial model, affec
 
 With the interests of both traders and LPs in mind, Bancor v2.1 offers solutions to these problems.‌
 
-Contrary to other AMM protocols, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the v2.1 protocol is able to provide liquidity in pools alongside LPs to support single-sided token exposure and to cover the cost of impermanent loss incurred by LPs using swap fees earned from protocol-provisioned liquidity.&#x20;
+Contrary to other AMMs, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the v2.1 protocol is able to provide liquidity in pools alongside LPs to support single-sided token exposure and to cover the cost of impermanent loss using swap fees earned from protocol-owned liquidity.
 
 [_**Bancor v2.1 Economic Analysis**_](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) _**(**_[_**TopazeBlue**_](https://topaze.blue)_**)**_
 
 ### Single-Sided Exposure <a href="#single-token-staking" id="single-token-staking"></a>
 
-Most first generation AMMs require LPs to contribute two tokens representing the component parts of legacy liquidity pools. This is both an inconvenience and a liability for many LPs who may hold only one of the assets and/or are only interested in exposure to that single asset.&#x20;
+Most first generation AMMs require LPs to contribute two tokens representing the component parts of 50/50 liquidity pools. This is both an inconvenience and a liability for many LPs who may hold only one of the assets and/or are only interested in exposure to that single asset.&#x20;
 
-**Bancor v2.1 breaks this paradigm, allowing LPs to contribute and maintain 100% exposure in a single token.**
+Bancor v2.1 breaks this paradigm, allowing LPs to contribute and maintain 100% exposure in a single token.
 
 LPs can provide liquidity to a pool with single-sided exposure, either entirely in a specific ERC20 token (“TKN”) or entirely in BNT. This mimics the experience of HODL'ing the asset in your wallet, while allow the LP to earn trading fees and rewards.
 
