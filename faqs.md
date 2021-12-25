@@ -156,9 +156,9 @@ Only if you withdraw. If you withdrew before the 30 day cliff, you are not eligi
 
 ## **Are all pools eligible for Impermanent Loss Protection?**
 
-Only pools voted into the Bancor v2.1 whitelist by Bancor governance are eligible to receive impermanent loss protection and single-sided exposure. Currently roughly 60 tokens are listed in the Bancor v2.1 whitelist.&#x20;
+Only pools voted into the Bancor v2.1 whitelist by Bancor governance are eligible to receive impermanent loss protection and single-sided exposure. At the time of this writing, there are over 85 tokens whitelisted in Bancor v2.1.&#x20;
 
-[_**Instructions on how to whitelist a token**_](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)_**.**_
+_**Instructions on how to whitelist a token.**_
 
 ## I have a hardware wallet. Can that be used as well?
 
