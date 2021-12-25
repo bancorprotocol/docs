@@ -6,26 +6,26 @@ description: How Bancor's V2 Update Takes AMMs to the Next Level‌
 
 ## A New Kind of AMM <a href="#a-new-kind-of-amm" id="a-new-kind-of-amm"></a>
 
-When Bancor introduced the first Automated Market Maker (AMM) on Ethereum in 2017, the notion of an on-chain, order-book-less exchange was novel and experimental. Bancor v1 was designed to solve the `liquidity problem` where sparse order books struggled to guarantee liquidity to investors on both sides of the trade. Just a few years later, v1 has spurred an ecosystem of innovative AMMs which have generated billions of dollars in trading volume.‌
+When Bancor introduced the first Automated Market Maker (AMM) on Ethereum in 2017, the notion of an on-chain, order-book-less exchange was novel and experimental. Bancor v1 was designed to solve the `liquidity problem` where sparse order books struggled to guarantee liquidity to investors on both sides of a trade. Just a few years later, Bancor has inspired a new form of automated asset exchange which generates billions of dollars in cryptocurrency trading volume per day.‌
 
-But the success of legacy AMMs exposed key downsides of the initial model, affecting both traders and liquidity providers (LPs):‌
+But the success of legacy AMMs has exposed key downsides of the initial model, affecting both traders and liquidity providers (LPs):‌
 
 * `Involuntary Token Exposure`
 * `Impermanent Loss`
 
 With the interests of both traders and LPs in mind, Bancor v2.1 offers solutions to these problems.‌
 
-Contrary to other AMMs, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the v2.1 protocol is able to provide liquidity in pools alongside LPs to support single-sided token exposure and to cover the cost of impermanent loss using swap fees earned from protocol-owned liquidity.
+Contrary to other AMMs, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the v2.1 protocol is able to provide liquidity in its pools to support single-sided token deposits and to cover the cost of impermanent loss incurred by depositors using swap fees earned from protocol-provisioned liquidity.
 
 [_**Bancor v2.1 Economic Analysis**_](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) _**(**_[_**TopazeBlue**_](https://topaze.blue)_**)**_
 
 ### Single-Sided Exposure <a href="#single-token-staking" id="single-token-staking"></a>
 
-Most first generation AMMs require LPs to contribute two tokens representing the component parts of 50/50 liquidity pools. This is both an inconvenience and a liability for many LPs who may hold only one of the assets and/or are only interested in exposure to that single asset.&#x20;
+Most first generation AMMs require LPs to contribute two tokens (e.g., LINK and ETH) representing the component parts of the liquidity pool. This is both an inconvenience and a liability for many LPs who may hold only one of the assets and/or are only interested in exposure to that single asset.&#x20;
 
-Bancor v2.1 breaks this paradigm, allowing LPs to contribute and maintain 100% exposure in a single token.
+Bancor v2.1 breaks this paradigm, allowing LPs to contribute and maintain 100% exposure in a single token (e.g., LINK). As an LP, the user remains 100% exposed to the price of the token they deposited, while accruing yield from fees (paid in the token staked) and, when active, liquidity mining rewards (which can be paid in just BNT in Bancor v2.1, but in Bancor 3, can also be paid in non-BNT tokens).
 
-LPs can provide liquidity to a pool with single-sided exposure, either entirely in a specific ERC20 token (“TKN”) or entirely in BNT. This mimics the experience of HODL'ing the asset in your wallet, while allow the LP to earn trading fees and rewards.
+LPs can provide liquidity to Bancor either entirely in their preferred asset or entirely in BNT.
 
 ### Impermanent Loss Insurance <a href="#mitigating-impermanent-loss" id="mitigating-impermanent-loss"></a>
 
@@ -33,9 +33,9 @@ Impermanent loss is a well-known side-effect of AMMs that are subject to arbitra
 
 Swap fees may offset impermanent loss; however in many cases impermanent loss can exceed swap fees earned by an LP, leading to negative returns realized by a liquidity provider upon withdrawing their tokens from the pool.
 
-Bancor v2.1 is designed so that a liquidity provider always gets back the same value he/she originally deposits plus trading fees through a novel concept called Impermanent Loss Insurance.
+Bancor v2.1 is designed so that a liquidity provider always gets back the same value originally deposited (plus trading fees and rewards) through a novel concept called Impermanent Loss Insurance.
 
-Impermanent Loss Insurance accrues over time, by 1% each day, until 100% protection is achieved after 100 days in the pool. There is a 30-day cliff, which means that if a liquidity provider decides to withdraw their position before 30 days passes, they’d incur the same IL loss experienced in a normal, unprotected AMM. If an LP withdraws any time after 100 days, they receive 100% compensation for any loss that occurred in the first 100 days, or anytime thereafter.&#x20;
+Impermanent Loss Insurance accrues over time, by 1% each day, until 100% protection is achieved after 100 days in the pool. There is a 30-day cliff, which means that if a liquidity provider decides to withdraw their position before 30 days passes, they incur the same IL loss experienced in a normal, unprotected AMM. If an LP holds their liquidity in the pool for 100 days or more, they receive 100% compensation for any loss incurred in the first 100 days, or anytime thereafter.&#x20;
 
 If there are not sufficient tokens in the pool to fully pay out IL compensation in the staked token, part of the insurance may be paid out in an equivalent value of BNT.
 
@@ -45,9 +45,9 @@ In order to allow for the special properties of Bancor v2.1, there are a few lim
 
 First, v2.1 currently DOES NOT support dynamically adjusting supply tokens (i.e., "rebase" tokens) that can control and adjust the token balances in users' wallets.
 
-Second, when BNT is being withdrawn from the system, it is locked for a pre-set time (default 24 hr) to mitigate security vulnerabilities.
+Second, when BNT is being withdrawn from the system (included BNT paid out as part of IL compensation), it is locked for a pre-set time (default 24 hr) as a means of preventing protocol abuse.
 
-## **Whitelisting Requirements**
+## **Token Whitelisting Requirements**
 
 ****[**See the most up to date technical requirements for whitelisting.**](https://gov.bancor.network/t/whitelisting-requirements/1849)****
 
