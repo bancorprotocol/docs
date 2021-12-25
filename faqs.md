@@ -27,13 +27,13 @@ Whereas access to safe and reliable yields from asset exchange previously requir
 
 ## **2. Impermanent Loss / Divergence Loss**
 
-Impermanent loss or "divergence loss" is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.&#x20;
+Impermanent or divergence loss is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.&#x20;
 
-It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the risk of losses.
+It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the risk of losses - hence the name "Divergence Loss".
 
-The “impermanent” part is largely misnomer and refers to the fact that losses are only realized when a liquidity withdraws from a pool. If the relative prices of tokens in the AMM return to their original state when you entered the AMM, the cost of divergence loss is reduced.
+The “impermanent” part is this risk refers to the fact that losses are only realized when a liquidity withdraws from a pool, and if the relative prices of tokens in the AMM return to their original state when an LP entered the AMM, the cost of divergence loss is reduced.
 
-However, this is rarely the case. Impermanent loss is often made _permanent_, reducing profits from trading fees & liquidity mining rewards or leaving LPs with negative returns. [On-chain research](https://arxiv.org/abs/2111.09192) suggests that divergence loss causes LPs in legacy AMM pools to suffer negative returns up to 50% of the time and higher.
+However, this is rarely the case. The losses incurred by LPs reduce profits from trading fees & liquidity mining rewards and often leave LPs suffering negative returns vs. simply holding their assets. [On-chain research](https://arxiv.org/abs/2111.09192) suggests divergence loss causes up to 50-70% of LPs in certain pools to suffer negative in legacy AMM pools.
 
 ## What causes Impermanent Loss?
 
@@ -41,27 +41,31 @@ Liquidity pools consist of multiple tokens paired together in a pool. If one of 
 
 As one token’s price is rising relative to its paired asset, the pool re-balances by selling the rising token at a discount while buying the token whose price is falling at a premium. Once you withdraw your liquidity, you are left holding less of the token that mooned, and more of the token that dumped.
 
-[Beginner's Guide to Impermanent Loss](https://blog.bancor.network/beginners-guide-to-getting-rekt-by-impermanent-loss-7c9510cb2f22#:\~:text=Simply%20put%2C%20impermanent%20loss%20is,the%20greater%20the%20impermanent%20loss.)
+Reading: [Beginner's Guide to Impermanent Loss](https://blog.bancor.network/beginners-guide-to-getting-rekt-by-impermanent-loss-7c9510cb2f22#:\~:text=Simply%20put%2C%20impermanent%20loss%20is,the%20greater%20the%20impermanent%20loss.)
 
-## What is Impermanent Loss Protection?
+Tracking tools: If you've provided liquidity to a legacy pool, **you can check your wallet's net earnings on** [**IL.wtf**](https://il.wtf) **- where can you see your fee earnings minus the cost of IL, to reveal your net returns from providing to legacy pools.**
 
-Bancor v2.1 is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
+## What is Bancor's Impermanent Loss Protection?
 
-Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection. In other words, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back plus trading fees and rewards.
+Bancor's IL Protection is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
 
-## How does Impermanent Loss Insurance work?
+Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection.
+
+In other words, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back plus trading fees and rewards.
+
+## How does Impermanent Loss Protection work?
 
 Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the protocol is able to provide liquidity in pools alongside LPs and compensate users for any IL with swap fees earned from protocol-owned LP tokens.
 
-If fees earned from protocol-owned LP tokens are greater than the cost of IL compensation, the protocol is able to offset IL for LPs without emitting new BNT. If there are ever an insufficient number of protocol-earned fees to fully compensate an LP for their IL, the protocol's IL insurance may be paid out in an equal value of emitted BNT.&#x20;
+If fees earned from protocol-owned LP tokens are greater than the cost of IL compensation, the protocol is able to entirely offset IL for LPs without emitting new BNT. If there are ever insufficient protocol-earned fees to fully compensate an LP for their IL, the protocol's IL insurance may be paid out in an equal value of emitted BNT.&#x20;
 
-A continuous burning mechanism puts deflationary pressure on the BNT token supply based. Protocol-provisioned BNT is burned when LPs withdraw and a portion of transaction fees generated on the network are used to burn BNT and vBNT tokens.
+Continuous burning mechanisms put deflationary pressure on the BNT token supply. Protocol-provisioned BNT is burned when LPs withdraw and a portion of transaction fees generated on the network are used to burn vBNT tokens.
 
 ![](.gitbook/assets/v21diagram.jpeg)
 
 ### Impermanent Loss Insurance Vesting
 
-When a user makes a new deposit, the cover offered by the protocol increases at a rate of 1% each day the stake remains live, and matures to full protection after 100 days.&#x20;
+When a user makes a new deposit, the IL Insurance offered by the protocol increases at a rate of 1% each day the stake remains live, and matures to full protection after 100 days.&#x20;
 
 After a period of 100 days, any impermanent loss incurred in the first 100 days or any time thereafter is covered by the protocol at the time of withdrawal. Withdrawals prior to the 100-day maturity are only eligible for partial compensation. For example, withdrawals after 60 days in the pool receive 60% compensation on any impermanent loss incurred. Also, there is no compensation offered at all for stakes withdrawn within the first 30 days.
 
@@ -81,17 +85,19 @@ In [Bancor 3](https://blog.bancor.network/introducing-bancor-3-962a3c601c25), no
 
 This information can be viewed in the "Portfolio" tab under the "Earn" section of [app.bancor.network](https://app.bancor.network).&#x20;
 
+![An LP can track their individual returns from Bancor pools in the Portfolio tab  of the Bancor "Earn" tab.](.gitbook/assets/portfoliuo.png)
+
 For each individual stake in a pool, the Portfolio page displays:
 
 * “**Initial Stake**” — the total number of tokens initially staked
 * “**Protected**” — the value of your position with full 100% protection
 * “**Claimable**” — value available for withdrawal. If IL has occurred, and the stake is less than 100 days old, Claimable will be lower than Protected.
-* **"Fees & Rewards"** — total fees (paid in BNT or non-BNT tokens, depending on whether you're staking BNT or non-BNT tokens) and total rewards (BNT mining rewards) paid on a given pool position. Rewards multiplier accrued weekly with a max at X2 after 4 weeks, and resets across all liquidity positions whenever an LP withdraws from any Bancor pool.
-* **ROI** — Protected Stake Value-Initial Stake Value/Initial Stake Value\*100)&#x20;
+* **"Fees & Rewards"**
+  * total fees (paid in BNT or non-BNT tokens, depending on whether you've staked BNT or non-BNT tokens)
+  * total rewards (BNT mining rewards) paid on a given pool position. Rewards multiplier accrues weekly with a max at X2 after 4 weeks. Multipliers on all active LP positions resets upon an LP withdrawing liquidity from any Bancor pool.
+* **ROI** — Protected Stake Value-Initial Stake Value/Initial Stake Value\*100
 
 [How to Provide Liquidity on Bancor](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)
-
-![](<.gitbook/assets/Screen Shot 2021-12-25 at 4.20.17 PM.png>)
 
 ## **What is the difference between “protected” and “claimable” value?**
 
