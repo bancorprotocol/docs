@@ -22,19 +22,17 @@ FAQs below are divided into the following sections:
 
 Liquidity pools are automated market-maker **(AMM)** smart contracts that exchange assets algorithmically using on-chain reserves.&#x20;
 
-They turn pooled market-maker liquidity into an asset class (“liquidity positions”), allowing for broader, more competitive involvement in decentralized liquidity markets.&#x20;
-
-Whereas access to safe and reliable yields from asset exchange previously required specialized tools and access, today the act of earning from decentralized crypto trading can be accessed by everyday users and passive liquidity providers.
+AMMs allow for a broad and diverse range of users to passively earn from decentralized exchanges (**DEXs**). More competitive involvement in liquidity provision is crucial to maintaining a DEX's resilience to manipulation and censorship.
 
 ## **2. Impermanent Loss / Divergence Loss**
 
-Impermanent or divergence loss is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.&#x20;
+Impermanent loss (or "divergence loss") is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.
 
-It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the risk of losses - hence the name "Divergence Loss".
+It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the risk of losses.
 
-The “impermanent” part is this risk refers to the fact that losses are only realized when a liquidity withdraws from a pool, and if the relative prices of tokens in the AMM return to their original state when an LP entered the AMM, the cost of divergence loss is reduced.
+Divergence loss is only realized when an LP withdraws from a pool. If the relative prices of tokens in the AMM trend towards their original state when an LP entered the pool, the cost of divergence loss is reduced.
 
-However, this is rarely the case. The losses incurred by LPs reduce profits from trading fees & liquidity mining rewards and often leave LPs suffering negative returns vs. simply holding their assets. [On-chain research](https://arxiv.org/abs/2111.09192) suggests divergence loss causes up to 50-70% of LPs in certain pools to suffer negative in legacy AMM pools.
+However, losses incurred can often wipe out an LP's entire profits, and make their assets worth less than if they had just held them in a wallet. Divergence loss reduces earnings from trading fees & rewards and when it exceeds fee revenue it means the act of liquidity provision was unprofitable for the LP. [On-chain data](https://arxiv.org/abs/2111.09192) over a 6-month period showed around a 50% risk of divergence loss exceeding fee income in unprotected, legacy pools, resulting in LPs earning negative returns roughly half the time.
 
 ## What causes Impermanent Loss?
 
