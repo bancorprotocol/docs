@@ -46,7 +46,7 @@ Tracking IL: If you've provided liquidity to a legacy pool, **you can check your
 
 ## 3. Bancor Safe Staking
 
-Bancor's IL Protection is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
+Bancor Safe Staking allows for users to provide liquidity with single-token exposure and zero risk of impermanent loss. The protocol is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
 
 Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection.
 
@@ -72,13 +72,11 @@ Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com
 
 ## How Single-Sided Liquidity Works
 
-To support Single-Sided Liquidity, the protocol offers Trading Liquidity to tokens that are whitelisted by the BancorDAO. In whitelisted pools, a $100,000 deposit of TKN may trigger $100,000 of Trading Liquidity provisioned by the protocol to match the user's TKN deposit in the pool.
+To support Single-Sided Liquidity, the protocol uses it own liquidity to co-fund pools whitelisted by the BancorDAO. A $100,000 deposit of a supported token ("TKN") may trigger $100,000 of BNT provisioned by the protocol to match the user's TKN deposit.
 
-Trading Liquidity earns TKN and BNT fees for the protocol which are burned for vBNT or used to compensate for IL incurred by depositors when they withdraw from the protocol.
+Protocol-provisioned BNT earns both TKN and BNT fees for the protocol which are burned for vBNT or used to compensate for IL incurred by depositors when they withdraw from the protocol.
 
-The amount of Trading Liquidity offered by the protocol per token is governed by the Bancor DAO. The decision to offer Trading Liquidity to a given token and/or adjust its available Trading Liquidity may be influenced by the token's trading revenue the cost of providing IL compensation to its liquidity providers.
-
-In [Bancor 3](https://blog.bancor.network/introducing-bancor-3-962a3c601c25), non-trading liquidity may be used by the protocol to generate additional fee-earning strategies that are native and external to the Bancor protocol.
+The amount of BNT offered by the protocol to a given pool is governed by the Bancor DAO. The DAO aims to provide its liquidity to tokens that might be profitable for the network in terms of trading income vs. the cost of IL compensation.
 
 ## 4. Depositing / Withdrawing Liquidity
 
