@@ -20,9 +20,11 @@ FAQs below are divided into the following sections:
 
 ## **1. Liquidity Pools** <a href="#liquiditypools" id="liquiditypools"></a>
 
-Liquidity pools are automated market-maker **(AMM)** smart contracts that exchange assets algorithmically using on-chain reserves.&#x20;
+Liquidity pools are automated market-maker **** (AMM) smart contracts that exchange assets algorithmically using on-chain reserves.&#x20;
 
-AMMs allow for a broad and diverse range of users to passively earn from decentralized exchanges (**DEXs**). More competitive involvement in liquidity provision is crucial to maintaining a DEX's resilience to manipulation and censorship.
+Launched in June 2017, Bancor was the inventor of AMMs on the blockchain. Since then, AMM liquidity pools have evolved into a core building block of decentralized finance (DeFi), attracting over $30 billion in staked funds across numerous blockchains.
+
+The innovation of “community-sourced liquidity” powered by AMM pools cannot be understated. A financial system is only as decentralized as its liquidity, and AMMs allow for permissionless blockchain ecosystems to emerge where liquidity is spread across a broad range of participants.
 
 ## **2. Impermanent Loss / Divergence Loss**
 
@@ -30,27 +32,31 @@ Impermanent loss (or "divergence loss") is the difference between holding tokens
 
 It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the risk of losses.
 
-Divergence loss is only realized when an LP withdraws from a pool. If the relative prices of tokens in the AMM trend towards their original state when an LP entered the pool, the cost of divergence loss is reduced.
+Impermanent loss is referred to as "impermanent" since the loss is only realized when an LP withdraws from a pool. If the relative prices of tokens in the AMM return to their original state when the LP entered the pool, the losses are reduced or eliminated.
 
-However, losses incurred can often wipe out an LP's entire profits, and make their assets worth less than if they had just held them in a wallet. Divergence loss reduces earnings from trading fees & rewards and when it exceeds fee revenue it means the act of liquidity provision was unprofitable for the LP. [On-chain data](https://arxiv.org/abs/2111.09192) over a 6-month period showed around a 50% risk of divergence loss exceeding fee income in unprotected, legacy pools, resulting in LPs earning negative returns roughly half the time.
+However, this is rarely case. More often, the losses become _permanent_ when an LP withdraws from a pool, reducing their returns from trading fees and rewards, or wiping out their returns entirely and leaving the LP with negative returns. [On-chain data](https://arxiv.org/abs/2111.09192) over a 6-month period showed that LPs earned negative returns in unprotected AMM pools roughly 50% of the time.
 
-## What causes Impermanent Loss?
+## What Causes Impermanent Loss?
 
 Liquidity pools consist of multiple tokens paired together in a pool. If one of the tokens changes in price relative to its paired token, an arbitrage opportunity emerges, incentivizing re-balancing of the pool (and resulting in a loss of value for liquidity providers).&#x20;
 
 As one token’s price is rising relative to its paired asset, the pool re-balances by selling the rising token at a discount while buying the token whose price is falling at a premium. Once you withdraw your liquidity, you are left holding less of the token that mooned, and more of the token that dumped.
 
-Reading: [Beginner's Guide to Impermanent Loss](https://blog.bancor.network/beginners-guide-to-getting-rekt-by-impermanent-loss-7c9510cb2f22#:\~:text=Simply%20put%2C%20impermanent%20loss%20is,the%20greater%20the%20impermanent%20loss.)
+Read: [Beginner's Guide to Impermanent Loss](https://blog.bancor.network/beginners-guide-to-getting-rekt-by-impermanent-loss-7c9510cb2f22#:\~:text=Simply%20put%2C%20impermanent%20loss%20is,the%20greater%20the%20impermanent%20loss.)
 
-Tracking IL: If you've provided liquidity to a legacy pool, **you can check your wallet's net earnings on** [**IL.wtf**](https://il.wtf)**.** Plug in a wallet address to see an LP's historical fee earnings across legacy pools minus the cost of IL, to reveal whether the wallet has positive returns or has been rekt by IL.
+Track your IL: If you've provided liquidity to AMM pools in the past, you can see if you've been rekt by impermanent loss on [**IL.wtf**](https://il.wtf).
 
 ## 3. Bancor Safe Staking
 
-Bancor Safe Staking allows for users to provide liquidity with single-token exposure and zero risk of impermanent loss. The protocol is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
+Bancor Safe Staking allows for users to deposit tokens they're holding and passively earn yield with single-token exposure and zero risk of impermanent loss.
+
+The protocol is designed to ensure that a liquidity provider gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
 
 Even if a token moons, an LP is entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection.
 
-In other words, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back plus trading fees and rewards.
+For example, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back plus trading fees and rewards. This offers a safer and more reliable way for users to passively earn on their favorite tokens.
+
+[**Learn more about Bancor Safe Staking**](https://earn.bancor.network/safe-staking/)****
 
 ## How does Impermanent Loss Protection work?
 
@@ -72,21 +78,21 @@ Learn more in the Bancor v2.1 [**technical explainer**](https://drive.google.com
 
 ## How Single-Sided Liquidity Works
 
-To support Single-Sided Liquidity, the protocol uses it own liquidity to co-fund pools whitelisted by the BancorDAO. A $100,000 deposit of a supported token ("TKN") may trigger $100,000 of BNT provisioned by the protocol to match the user's TKN deposit.
+To support Single-Sided Liquidity across 100+ supported tokens, the Bancor protocol uses it own liquidity to jointly fund pools alongside users who provide liquidity. In this case, a $100,000 deposit of a supported token ("TKN") triggers $100,000 of BNT provisioned by the protocol to match the user's TKN deposit.
 
-Protocol-provisioned BNT earns both TKN and BNT fees for the protocol which are burned for vBNT or used to compensate for IL incurred by depositors when they withdraw from the protocol.
+Protocol-provisioned BNT earns both TKN and BNT fees for the protocol which are burned for BNT and vBNT, and used to compensate for IL incurred by depositors when they withdraw their tokens from the protocol.
 
-The amount of BNT offered by the protocol to a given pool is governed by the Bancor DAO. The DAO aims to provide its liquidity to tokens that might be profitable for the network in terms of trading income vs. the cost of IL compensation.
+BNT offered by the protocol to support trading in a given token is governed by the Bancor DAO. The DAO aims to provide protocol liquidity to tokens in amounts that are profitable for the network, i.e., where trading fee income exceeds the cost of IL protection.
 
 ## 4. Depositing / Withdrawing Liquidity
 
 ## How do I stake in the Bancor protocol?
 
-You can swap or stake with Bancor protocol on [bancor.network](https://app.bancor.network/eth/data) or any site integrated with Bancor smart contracts. Users connect via Web3 wallets such as MetaMask. Make sure your wallet is connected by checking the connection status in the upper right-hand corner of bancor.network.
+You can stake in the Bancor protocol on [bancor.network](https://app.bancor.network/eth/data) or any site integrated with Bancor smart contracts. Users connect via Web3 wallets such as MetaMask ([video tutorial](faqs.md#liquiditypools)). Make sure your wallet is connected by checking the connection status in the upper right-hand corner of bancor.network.
 
-****[**Video tutorial**](https://www.youtube.com/watch?v=2Mz7wh3hm8Y)****
+**Watch:** [**Staking tutorial**](https://www.youtube.com/watch?v=2Mz7wh3hm8Y)****
 
-[**Step-by-step written guide**](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
+**Read:** [**Step-by-step guide**](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)****
 
 ## **Where can I track returns on my liquidity pool positions?**
 
@@ -102,9 +108,10 @@ For each individual stake in a pool, the Portfolio page displays:
 * **"Fees & Rewards"**
   * total fees (paid in BNT or non-BNT tokens, depending on whether you've staked BNT or non-BNT tokens)
   * total rewards (BNT mining rewards) paid on a given pool position. Rewards multiplier accrues weekly with a max at X2 after 4 weeks. Multipliers on all active LP positions resets upon an LP withdrawing liquidity from any Bancor pool.
-* **ROI** — Protected Stake Value-Initial Stake Value/Initial Stake Value\*100
+* **ROI** — ROI is calculated as follows:&#x20;
+  * `Protected Stake Value-Initial Stake Value/Initial Stake Value*100`
 
-[How to Provide Liquidity on Bancor](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)
+Read: [**How to Provide Liquidity on Bancor**](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)****
 
 ## What is vBNT?
 
