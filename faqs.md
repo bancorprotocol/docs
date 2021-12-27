@@ -30,17 +30,17 @@ Launched in June 2017, Bancor created the first-ever AMMs on the blockchain. Sin
 
 Impermanent loss (or divergence loss) is a risk faced by users who depositor their tokens in AMM liquidity pools. It is measured by calculating the difference in value between holding tokens in an AMM liquidity pool and holding them in a wallet.
 
-Liquidity pools consist of multiple tokens paired together in a pool. IL occurs when the price of tokens inside the pool diverge in any direction. The greater divergence between a pool's composite tokens, the greater the risk of the pool generating negative returns.
+Liquidity pools consist of multiple tokens (usually two) paired together in a pool. IL occurs when the price of tokens inside the pool diverge in any direction. The greater divergence between the tokens, the greater the risk of the pool generating negative returns for its depositors.
 
 The risk is referred to as "impermanent" because the loss is only realized when you withdraw your tokens from the pool. If the relative prices of tokens in the pool return to their original state when you deposited your tokens, the loss is minimized or eliminated.
 
-However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens. These losses reduce your profits from trading fees and rewards, and can wipe out your entire share of profits, leaving you with negative returns versus simply holding your tokens in your wallet.
+However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens. These losses reduce your earnings from trading fees and rewards, and can wipe out your entire share of profits, leaving you with negative returns versus simply holding your tokens in your wallet.
 
 ### What Causes Impermanent Loss?
 
-When the prices of tokens paired together in a pool change in price relative, an arbitrage opportunity emerges, incentivizing re-balancing of the pool by third-party automated trading bots.&#x20;
+When the prices of tokens paired together in a pool change in price relative to one another, an arbitrage opportunity emerges, incentivizing re-balancing of the pool by third-party automated trading bots (arbitrageurs).&#x20;
 
-During re-balancing, liquidity pools automatically liquidate the rising token at a discount and purchase the token whose price is falling at a premium. As a depositor, you are left holding less of the token that increased, and more of the token that dropped. Over time, this "toxic order flow" causes the cumulative value of your pool holdings to be worth less than if you simply held the two assets in your wallet.
+During re-balancing, liquidity pools automatically liquidate the rising token at a discount and purchase the token whose price is falling at a premium. As a depositor, you are left holding less of the token that increased in price, and more of the token that decreased in price. Over time, this order flow causes the cumulative value of your pool holdings to be worth less than if you simply held the two assets in your wallet.
 
 * _**Check if you've been rekt by IL on**_ [_**IL.wtf**_](https://il.wtf)
 * _****_[_**Learn more about IL**_](https://earn.bancor.network/impermanent-loss)_****_
@@ -58,9 +58,9 @@ Bancor Safe Staking allows users to deposit their tokens in a liquidity pool and
 
 The protocol is designed to ensure that a depositor ("LP") gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
 
-Even if a token moons, the LP is protected and entitled to withdraw the full value of the tokens they staked, so long as they have accrued full protection (see "IL Protection Vesting" below).
+IL Protection tracks the HODL value of your deposited tokens. Even if a token moons, you are protected and entitled to withdraw the full value of the tokens you staked, so long as you have accrued full protection (see "IL Protection Vesting" below).
 
-For example, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back plus trading fees (earned in ETH) and rewards (earned in BNT).
+For example, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back. Plus you will earn trading fees (paid in ETH) and rewards (paid in BNT).
 
 ## How Does Impermanent Loss Protection Work?
 
