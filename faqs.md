@@ -323,15 +323,15 @@ Please check out this guide: [https://medium.com/@bancor/how-to-whitelist-a-toke
 
 ## Who manages the pool’s fee?
 
-Currently, pool owners determine the pool's fee, however this is subject to change via governance, with the introduction of a standardized fee that is dynamic or the introduction of LP voting on each pool's fees.
+Currently, pool owners set the pool's initial fee The fee can then be updated via on-chain voting in Bancor governance.
 
 ## 6. Trading
 
 ## Which fees are associated with swapping?
 
-As the AMM uses Ethereum network, all transactions will incur gas costs, which are unrelated to Bancor. Different wallets such as MetaMask will show you gas estimates. You can also track the current gas prices in sites like [https://ethgasstation.info/](https://ethgasstation.info) to choose the best time to swap.
+As Bancor exists on the Ethereum network, all transactions will incur ETH gas costs, which are unrelated to Bancor. Different wallets such as MetaMask will show you gas estimates. You can also track the current gas prices in sites like [https://ethgasstation.info/](https://ethgasstation.info) to choose the best time to swap.
 
-Besides the ETH gas fees, there's a fee for each trade and it depends on the pool. You can see the pool's fee under "Fees" [here](https://app.bancor.network/eth/data).
+Besides the ETH gas fees, each pool is set with a percentage fee on each trade, which is sent to liquidity providers in the pool. For example, an ETH to LINK trade on Bancor generates a fee distributed to users providing LINK on Bancor.
 
 ## What is the difference between "Unlimited Approval" and "Limited Approval"?
 
@@ -339,16 +339,13 @@ In order to swap tokens, you will need to first approve allowance for the releva
 
 ## 7. Further Resources
 
-* [Bancor Wiki](https://docs.bancor.network/getting-started/resources)
-* [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view):&#x20;
+* [Bancor Resources page](https://docs.bancor.network/getting-started/resources)
 * [Bancor v2.1 Technical Explainer](https://drive.google.com/file/d/16EY7FUeS4MXnFjSf-KCgdE-Xyj4re27G/view)
 * [GUIDE: Single-Sided Staking on Bancor V2.1](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
 * [Bankless: How Bancor v2.1 protects LPs from impermanent loss](https://bankless.substack.com/p/how-to-protect-yourself-from-impermanent)
 * [How to submit a BIP in Bancor Governance](https://bancor.medium.com/how-to-launch-a-bip-vote-with-bancor-governance-bc0887d8c923)
 * [How to Whitelist a Token on Bancor v2.1](https://medium.com/@bancor/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)
-* [Bancor November 2020 progress update](https://blog.bancor.network/bancor-progress-update-november-2020-2a32db170c8c)
 * [Staking BNT liquidity mining rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002)
-* [Bancor February 2021 progress update](https://blog.bancor.network/bancor-monthly-progress-update-february-2021-685e174f6537)
 * [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)
 
 ## 8. Helpful Links
@@ -356,8 +353,5 @@ In order to swap tokens, you will need to first approve allowance for the releva
 * Telegram groups: [Bancor Protocol](https://t.me/bancor), [Bancor Devs](https://t.me/BancorDevelopers), [Bancor Traders](https://t.me/bancortraders)
 * [Bancor Discord](https://discord.gg/pe7EfaR)
 * Governance: [http://gov.bancor.network/](http://gov.bancor.network)
-* Bancor blog: [https://medium.com/@bancor/](https://medium.com/@bancor/)
+* Bancor blog: [blog.bancor.network](https://blog.bancor.network)
 * Bancor.network customer support: [ban.cr/support](https://www.ban.cr/support)
-* [BNT/REN telegram staking support](https://t.me/joinchat/BFCB\_VbQ\_fRI8SoNH7GpQw)
-* [BNT/OCEAN telegram staking support](https://t.me/joinchat/FBrMHUs2dBSuPSalm6ZntQ)
-* [BNT Liquidity Mining telegram support](https://t.me/joinchat/Rd10hRzdd0hRSdySGhNk7Q)
