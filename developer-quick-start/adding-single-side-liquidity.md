@@ -1,6 +1,6 @@
 # Adding Single-Sided Liquidity
 
-One of the innovations of Bancor 2.1 was the Liquidity Protection contract. This contract allows liquidity providers to provide liquidity even by providing only one asset in a pool \(single-side\), and also provides protection from impermanent loss, mitigating the largest risk liquidity providers today face.
+One of the innovations of Bancor 2.1 was the Liquidity Protection contract. This contract allows liquidity providers to provide liquidity by providing only one asset to a pool (single-sided), and also provides protection from impermanent loss.
 
 **This guide is meant for developers** looking to tap into the Bancor liquidity network from their dApps or smart contracts. If you are a non-developer looking to add single-side liquidity using Bancor's interface, [here is a step-by-step guide](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e).
 
@@ -18,11 +18,11 @@ You'll need a few addresses in order to make use of adding liquidity through the
 
 * the address of the token you wish to add
 * the address of the `LiquidityProtection` contract
-* the pool anchor address \(explained below\)
+* the pool anchor address (explained below)
 
-We'll walk through how to get the pool anchor and liquidity protection addresses. For the token address, if you're having trouble finding it, go to [Etherscan](https://etherscan.io) and input the symbol of the token \(DAI, for example\).
+We'll walk through how to get the pool anchor and liquidity protection addresses. For the token address, if you're having trouble finding it, go to [Etherscan](https://etherscan.io) and input the symbol of the token (DAI, for example).
 
-You'll need the ABIs of the contracts in order to interact with them. You can find the full ABIs on Etherscan as you find the addresses for the contracts you need in this guide by inputting the address of the contract you are looking for, and then clicking on the "Contract" tab \(underneath the contract source code\) on the contract's page.
+You'll need the ABIs of the contracts in order to interact with them. You can find the full ABIs on Etherscan as you find the addresses for the contracts you need in this guide by inputting the address of the contract you are looking for, and then clicking on the "Contract" tab (underneath the contract source code) on the contract's page.
 
 If you're writing a smart contract that will add liquidity through the Liquidity Protection contract, then you'll also need interfaces for the `LiquidityProtection`, `ConverterAnchor` and `ReserveToken` contracts. These are available through Bancor's contract package [@bancor/contracts-solidity](https://www.npmjs.com/package/@bancor/contracts-solidity), and the imports in the Solidity code snippets will assume you're using this package.
 
@@ -92,18 +92,18 @@ console.log(`Converter Registry address: ${converterRegistryAddress}`);
 {% endtab %}
 {% endtabs %}
 
-Once you have the Liquidity Protection and Contract Registry addresses, get their ABIs from [Etherscan](https://etherscan.io) by clicking on the "Contract" tab \(underneath the contract source code\). You'll need them to connect with these contracts further on.
+Once you have the Liquidity Protection and Contract Registry addresses, get their ABIs from [Etherscan](https://etherscan.io) by clicking on the "Contract" tab (underneath the contract source code). You'll need them to connect with these contracts further on.
 
 #### Step 1b: Getting the Pool Anchor Address
 
-Each Converter \(liquidity pool\) has a pool anchor - these are the tokens you receive for adding liquidity to a Converter. Pool addresses can change over time, and do at every upgrade. The anchor for that pool is permanent, which is why it's called an anchor. As such, knowing the address of a pool anchor is often a fundamental piece of knowledge.
+Each Converter (liquidity pool) has a pool anchor - these are the tokens you receive for adding liquidity to a Converter. Pool addresses can change over time, and do at every upgrade. The anchor for that pool is permanent, which is why it's called an anchor. As such, knowing the address of a pool anchor is often a fundamental piece of knowledge.
 
-In order to get a specific pool anchor address, you'll first need to query the Converter Registry \(the method for obtaining the Converter Registry's address is detailed above\). Once we have that, you can get a list of _all_ pool anchor addresses for the asset being provided, which can then be filtered for the specific pool the asset is being added to. This snippet will use the DAIBNT Converter as an example, and can be easily modified for any Converter on the Bancor network.
+In order to get a specific pool anchor address, you'll first need to query the Converter Registry (the method for obtaining the Converter Registry's address is detailed above). Once we have that, you can get a list of _all_ pool anchor addresses for the asset being provided, which can then be filtered for the specific pool the asset is being added to. This snippet will use the DAIBNT Converter as an example, and can be easily modified for any Converter on the Bancor network.
 
-You will need the Converter Registry ABI for this. You retrieved the address of the Converter Registry above, and can retrieve the ABI from [Etherscan](https://etherscan.io) using the address by clicking on the "Contract" tab \(underneath the contract source code\).
+You will need the Converter Registry ABI for this. You retrieved the address of the Converter Registry above, and can retrieve the ABI from [Etherscan](https://etherscan.io) using the address by clicking on the "Contract" tab (underneath the contract source code).
 
 {% hint style="info" %}
-This snippet assumes you have a working Web3 or Ethers provider \(see above if you don't\)
+This snippet assumes you have a working Web3 or Ethers provider (see above if you don't)
 {% endhint %}
 
 {% hint style="info" %}
@@ -159,9 +159,9 @@ Now that you have all the addresses you need, you can add single-sided liquidity
 
 #### 2a: via Smart Contract
 
-You'll need the interfaces for the liquidity protection contract \(`LiquidityProtection`\), the pool anchor \(`IConverterAnchor`\) and the token being added \(`IReserveToken`\). Both are in the [@bancor/contracts-solidity](https://www.npmjs.com/package/@bancor/contracts-solidity) package, and the code here assumes that package is being used. A more lightweight interface could be made by making interfaces containing only the necessary functions, this method was selected for its simplicity.
+You'll need the interfaces for the liquidity protection contract (`LiquidityProtection`), the pool anchor (`IConverterAnchor`) and the token being added (`IReserveToken`). Both are in the [@bancor/contracts-solidity](https://www.npmjs.com/package/@bancor/contracts-solidity) package, and the code here assumes that package is being used. A more lightweight interface could be made by making interfaces containing only the necessary functions, this method was selected for its simplicity.
 
-```text
+```
 pragma solidity ^0.8.4;
 
 import "@bancor/contracts-solidity/contracts/liquidity-protection/interfaces/ILiquidityProtection.sol";
@@ -187,7 +187,7 @@ contract LiquidityAdder {
 
 #### 2b: via web3
 
-This snippet assumes that in addition to the addresses provided by the previous steps \(and their ABIs\), you have the ABIs for a `ConverterAnchor` contract and a token \(ERC20\) contract. If you do not have the ABIs, they can be found on [Etherscan](https://etherscan.io) using the address of the contract you wish to find the ABI of by clicking on the "Contract" tab \(underneath the contract source code\).
+This snippet assumes that in addition to the addresses provided by the previous steps (and their ABIs), you have the ABIs for a `ConverterAnchor` contract and a token (ERC20) contract. If you do not have the ABIs, they can be found on [Etherscan](https://etherscan.io) using the address of the contract you wish to find the ABI of by clicking on the "Contract" tab (underneath the contract source code).
 
 {% hint style="info" %}
 Since this snippet sends a transaction to the blockchain, you must have a working Web3 or Ethers provider with access to a signer that in turn has the necessary tokens and gas for this transaction
@@ -245,9 +245,9 @@ addLiquidity();
 
 #### Event
 
-Whether interacting via contract or web3, the transaction should trigger an event from the `LiquidityProtectionStore` contract. \(This is not the same contract as the `LiquidityProtection` contract, though its address can be found in a similar manner to the addresses above, by querying the contract registry for the address of `"LiquidityProtectionStore"`.\) The event is of the following structure:
+Whether interacting via contract or web3, the transaction should trigger an event from the `LiquidityProtectionStore` contract. (This is not the same contract as the `LiquidityProtection` contract, though its address can be found in a similar manner to the addresses above, by querying the contract registry for the address of `"LiquidityProtectionStore"`.) The event is of the following structure:
 
-```text
+```
 event ProtectionAdded(
     address indexed _provider,
     IDSToken indexed _poolToken,
@@ -269,5 +269,4 @@ These parameters are:
 
 Whether the liquidity was added using web3 or through a smart contract, you won't be able to see the balance of the liquidity deposited through the Liquidity Protection contract. This is because the funds are not deposited _in_ the Liquidity Protection contract. Rather, the Liquidity Protection contract deposits them in the pool.
 
-How to view a balance in a particular pool \(whether it is deposited through the Liquidity Protection contract or by other means\), along with how to withdraw from a pool, will be explained in detail in another section.
-
+How to view a balance in a particular pool (whether it is deposited through the Liquidity Protection contract or by other means), along with how to withdraw from a pool, will be explained in detail in another section.
