@@ -28,29 +28,29 @@ Launched in June 2017, Bancor created the first-ever AMMs on the blockchain. Sin
 
 ## **2. Impermanent Loss / Divergence Loss**
 
-Impermanent loss (or "divergence loss") is the difference between holding tokens in an AMM liquidity pool and holding them in your wallet.
+Impermanent loss (or divergence loss) is a risk faced by users who depositor their tokens in AMM liquidity pools. It is measured by calculating the difference in value between holding tokens in an AMM liquidity pool and holding them in a wallet.
 
-It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the risk of negative returns.
+Liquidity pools consist of multiple tokens paired together in a pool. IL occurs when the price of tokens inside the pool diverge in any direction. The greater divergence between a pool's composite tokens, the greater the risk of the pool generating negative returns.
 
-It is referred to as "impermanent" because the loss is only realized when you withdraw from a pool. If the relative prices of tokens in the AMM return to their original state when you deposited your tokens, the loss is minimized or eliminated.
+The risk is referred to as "impermanent" because the loss is only realized when you withdraw your tokens from the pool. If the relative prices of tokens in the pool return to their original state when you deposited your tokens, the loss is minimized or eliminated.
 
-However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens from a pool. These losses reduce your income from trading fees and rewards, and can wipe out your entire share of profits, leaving you with negative returns versus simply holding your tokens in your wallet.
+However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens. These losses reduce your profits from trading fees and rewards, and can wipe out your entire share of profits, leaving you with negative returns versus simply holding your tokens in your wallet.
 
 ### What Causes Impermanent Loss?
 
-Liquidity pools consist of multiple tokens paired together in a pool. If one of the tokens changes in price relative to its paired token, an arbitrage opportunity emerges, incentivizing re-balancing of the pool by third-party arbitrage traders.&#x20;
+When the prices of tokens paired together in a pool change in price relative, an arbitrage opportunity emerges, incentivizing re-balancing of the pool by third-party automated trading bots.&#x20;
 
-During re-balancing, the pool automatically sells the rising token at a discount and buys the token whose price is falling at a premium. As an LP, you are left holding less of the token that mooned, and more of the token that dumped. Over time, the effect causes the cumulative value of your pool holdings to be worth less than if you simply held the two assets in your wallet.
+During re-balancing, liquidity pools automatically liquidate the rising token at a discount and purchase the token whose price is falling at a premium. As a depositor, you are left holding less of the token that increased, and more of the token that dropped. Over time, this "toxic order flow" causes the cumulative value of your pool holdings to be worth less than if you simply held the two assets in your wallet.
 
 * _**Check if you've been rekt by IL on**_ [_**IL.wtf**_](https://il.wtf)
 * _****_[_**Learn more about IL**_](https://earn.bancor.network/impermanent-loss)_****_
-* _**A technical explanation of IL can be found in the section "Impermanent Loss in a Traditional AMM" in**_ [_**this paper**_](https://arxiv.org/pdf/2111.09192.pdf)_**.**_
+* _**A technical explanation of IL can be found in**_ [_**this paper (section: "Impermanent Loss in a Traditional AMM")**_](https://arxiv.org/pdf/2111.09192.pdf)_**.**_
 
 ### What's the Risk of Impermanent Loss?
 
-Recent [on-chain research](https://arxiv.org/abs/2111.09192) analyzing over 20,000 liquidity provider positions and over $100 billion in trading volume shows that users providing liquidity to unprotected AMM pools suffered negative returns **roughly 50% of the time**.
+Recent [on-chain research](https://arxiv.org/abs/2111.09192) analyzing over 20,000 liquidity provider wallets and $100b+ in trading volume shows that users providing liquidity to unprotected AMM pools suffered negative returns **roughly 50% of the time**.
 
-We consider this risk to be intolerable for most users, which is why we designed a safer and simpler way to earn on your favorite tokens called "[Bancor Safe Staking](https://earn.bancor.network/safe-staking/)".
+We consider this risk to be intolerable for many users, which is why we designed a safer and simpler way to earn on your favorite tokens called "[Bancor Safe Staking](https://earn.bancor.network/safe-staking/)".
 
 ## 3. Bancor Safe Staking
 
