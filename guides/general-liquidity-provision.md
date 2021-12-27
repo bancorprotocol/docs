@@ -6,15 +6,9 @@ description: >-
 
 # Liquidity Provision - General
 
-Liquidity providers are the foundation of any Bancor liquidity pool. The Bancor team and the DeFi community at large have developed a number of ways to make the liquidity provision process as simple as possible.
+If you are not a developer, see this [step by step guide to adding / removing liquidity](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1) from the bancor.network front-end.&#x20;
 
-* [**Add liquidity to any type of pool using 1inch**](https://blog.bancor.network/bancor-zaps-%EF%B8%8F-b038eb425e02). All you need is some ETH. 
-* [**Add liquidity with the component assets of a pool using Zerion**](https://app.zerion.io/). 
-* \*\*\*\*[**Add to various pools using Paraswap**](https://paraswap.io/#/earn).
-
-The team wrote a helpful guide to adding and removing liquidity. Check it out [here](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1). 
-
-Alternatively, developers can interact with the Bancor contracts directly.
+Alternatively, developers can interact with the Bancor contracts directly using the below guide.
 
 {% hint style="info" %}
 Developers are encouraged to use the guide in the **Developer Quick Start** section.
@@ -22,7 +16,7 @@ Developers are encouraged to use the guide in the **Developer Quick Start** sect
 
 ### Adding Liquidity via Etherscan
 
-The first required piece of information is the **Converter** contract address for the liquidity pool. 
+The first required piece of information is the **Converter** contract address for the liquidity pool.&#x20;
 
 * Find the SmartToken for the relevant pool on Etherscan and navigate to the `Read` tab in the contract view.
 * Find the address in the return value for the `owner` function
@@ -33,7 +27,7 @@ For each ERC20 token that you contribute to a liquidity pool, you'll need to app
 * Find the `_approve` function in the `Write` section of the contract page
 * Execute the `_approve` function with the following parameters:
   * `_spender`: This should be the converter address you found above
-  * `_amount`: This is the number of tokens of this kind of you plan to contribute. Remember to consider the ERC20 decimals \(.e.g. 200 DAI would equal 200 ^ 10\*\*18\)
+  * `_amount`: This is the number of tokens of this kind of you plan to contribute. Remember to consider the ERC20 decimals (.e.g. 200 DAI would equal 200 ^ 10\*\*18)
 
 Repeat this step for all the relevant tokens.
 
@@ -46,8 +40,6 @@ Now, find the **Converter** contract on Etherscan. Execute the `fund` function w
 * Find the token contract on Etherscan
 * Execute the `liquidate` function with the following parameter:
   * `_amount`: The number of liquidity tokens you would like to redeem for the underlying reserves
-
-
 
 
 
