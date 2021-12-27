@@ -1,8 +1,8 @@
 # Adding Liquidity
 
-To add/remove liquidity using a front-end interface, **\*\*\[**here is a step-by-step guide\*\*]\([https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)).
+To add/remove liquidity using a front-end interface [here is a step-by-step guide](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1).
 
-**The remainder of the guide below is for developers** looking to tap into the Bancor liquidity network from their dApps or smart contracts.
+**The remainder of the guide below is for developers** looking to tap into the Bancor liquidity network from their apps or smart contracts.
 
 ## Liquidity Provision for Developers
 
