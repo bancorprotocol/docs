@@ -20,7 +20,9 @@ This a living document continuously updated by the community and therefore a wor
 
 Liquidity pools are automated market-maker **** (AMM) smart contracts that exchange assets algorithmically using on-chain reserves.
 
-Whereas liquidity provision to legacy exchanges has historically required specialized skills and access, liquidity pools dramatically lower the technical barrier to decentralized market-making. A financial system is only as decentralized as its liquidity, and liquidity pools allow for permissionless blockchain ecosystems to emerge where liquidity is spread across countless participants.
+Liquidity on traditional asset exchanges has historically been controlled by a small handful of professional trading firms or “market makers”. These market makers can choose to suddenly withdraw their liquidity during periods of volatility, restricting the trading an asset when users need it the most.
+
+In contrast, AMM pools allow liquidity to flow from an unlimited number of everyday users, lowering the barrier to token creation and yield generation, and increasing resistance to market manipulation and censorship.
 
 Launched in June 2017, Bancor created the first-ever AMMs on the blockchain. Since then, AMM liquidity pools have evolved into a core building block of decentralized finance (DeFi), attracting over $30 billion in total locked value across numerous blockchains.
 
@@ -30,21 +32,23 @@ Impermanent loss (or "divergence loss") is the difference between holding tokens
 
 It occurs when the price of tokens inside an AMM diverge in any direction. The more divergence, the greater the risk of negative returns.
 
-Impermanent loss is referred to as "impermanent" because the loss is only realized when a depositor withdraws from a pool. If the relative prices of tokens in the AMM return to their original state when the user deposited their tokens, the loss is minimized or eliminated.
+Impermanent loss is referred to as "impermanent" because the loss is only realized when a depositor (or "LP") withdraws from a pool. If the relative prices of tokens in the AMM return to their original state when the LP deposited their tokens, the loss is minimized or eliminated.
 
-However, this is rarely case. More often, the losses become _permanent_ when a user withdraws their tokens from a pool. IL reduces income from trading fees and rewards, and frequently wipes out an LP's entire share of profits, leaving them with negative returns versus simply holding their tokens in their wallet.
+However, this is rarely case. More often, the losses become _permanent_ the moment a user withdraws their liquidity from a pool. These losses reduce an LP's income from trading fees and rewards, and can wipe out an LP's entire share of profits, leaving them with negative returns versus simply holding their tokens in their wallet.
 
 ### What Causes Impermanent Loss?
 
 Liquidity pools consist of multiple tokens paired together in a pool. If one of the tokens changes in price relative to its paired token, an arbitrage opportunity emerges, incentivizing re-balancing of the pool.&#x20;
 
-As one of the token’s price rises relative to its paired asset, the pool re-balances by selling the rising token at a discount and buying the token whose price is falling at a premium. Once you withdraw your liquidity, you are left holding less of the token that mooned, and more of the token that dumped.
+During re-balancing, the pool automatically sells the rising token at a discount and buys the token whose price is falling at a premium. As an LP, you are left holding less of the token that mooned, and more of the token that dumped. Over time, the effect causes the cumulative value of your pool holdings to be worth less than if you simply held the two assets in your wallet.
 
-_**Have you provided liquidity to an AMM pool? Check if you've been REKT on**_ [_**IL.wtft**_](https://il.wtf) _**or**_ [_**learn more about IL**_](https://earn.bancor.network/impermanent-loss)_**.**_
+* _**Have you provided liquidity to an AMM pool? Check if you've been rekt by IL on**_ [_**IL.wtf**_](https://il.wtf)_**.**_&#x20;
+* _****_[_**Learn more about IL**_](https://earn.bancor.network/impermanent-loss)_****_
+* _**A more technical explanation of IL can be found in the section "Impermanent Loss in a traditional AMM" in**_ [_**this paper**_](https://arxiv.org/pdf/2111.09192.pdf)_**.**_
 
-### What's the Risk of Impermanent Loss?
+### What's the Risk of Impermanent Loss Causing Negative Returns?
 
-Recent [on-chain research](https://arxiv.org/abs/2111.09192) shows that users providing liquidity to unprotected AMM pools suffered negative returns roughly 50% of the time.
+Recent [on-chain research](https://arxiv.org/abs/2111.09192) shows that users providing liquidity to unprotected AMM pools suffered negative returns roughly 50% of the time. The study analyzed over 20,000 liquidity provider positions and over $100 billion in trading volume.
 
 We consider this risk to be intolerable for most users, which is why we designed a safer and simpler way to earn on your favorite tokens called **Bancor Safe Staking**.
 
