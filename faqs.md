@@ -54,7 +54,7 @@ We consider this risk to be intolerable for most users, which is why we designed
 
 ## 3. Bancor Safe Staking
 
-Bancor Safe Staking allows users to deposit their tokens in a liquidity pool and passively earn yield with **single-token exposure** and **zero risk of impermanent loss**.
+Bancor Safe Staking allows users to deposit their tokens in a liquidity pool and passively earn yield with **zero risk of impermanent loss** and **single-token exposure**.
 
 The protocol is designed to ensure that a depositor ("LP") gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
 
@@ -82,11 +82,11 @@ After a period of 100 days, any impermanent loss incurred in the first 100 days 
 
 _Note that in Bancor v3, IL Protection Vesting will be replaced with "Instant IL Protection" (100% protection from day one) with a 7-day cool-down period._ [_More info_](https://twitter.com/Bancor/status/1469013464010137602?s=20)_._
 
-## How Single-Sided Liquidity Works
+## How Single-Token Exposure Works
 
-Single-sided liquidity means you can provide a single token (instead of two) to a liquidity pool and maintain 100% exposure to the price movements of that token during the staking period. Bancor's IL Protection is a required feature to enable single-sided liquidity provision.
+Single-token exposure means you can provide a single token (instead of two) to a liquidity pool and earn yield while maintaining 100% exposure to the price that token during the staking period as if it was sitting in your wallet.
 
-To support single-sided liquidity across 100+ whitelisted tokens, the Bancor protocol uses its protocol-owned liquidity to jointly fund pools alongside users. In other words, when a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 in BNT to the pool.
+To support single-token exposure across 100+ tokens, the Bancor protocol uses its protocol-owned liquidity to jointly fund pools alongside users. In other words, when a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 in BNT to the pool.
 
 Protocol-provisioned BNT earns fees from trading the same way user deposits do. These fees are burned for BNT and vBNT, and used to compensate for any IL incurred by users when they withdraw their tokens from the protocol.
 
