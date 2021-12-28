@@ -20,41 +20,41 @@ This a living document continuously updated by the community and therefore a wor
 
 Liquidity pools are automated market-maker **** (AMM) smart contracts that exchange assets algorithmically using on-chain reserves.
 
-Liquidity on traditional asset exchanges has historically been controlled by a small handful of professional trading firms or “market makers”. These market makers can choose to suddenly withdraw their liquidity during periods of volatility, restricting the trading of an asset when users need it the most.
+Liquidity on traditional asset exchanges has historically been controlled by a small handful of professional trading firms with permissioned access and specialized tools to make markets. These so-called "market-makers" can choose to suddenly withdraw their liquidity or extract high fees during periods of volatility, restricting the trading of an asset when users need it the most.
 
 In contrast, AMM pools allow liquidity to flow from an unlimited number of everyday users, lowering the barrier to token creation and yield generation, and increasing resistance to market manipulation and censorship.
 
-Launched in June 2017, Bancor created the first-ever AMMs on the blockchain. Since then, AMM liquidity pools have evolved into a core building block of decentralized finance (DeFi), attracting over $30 billion in locked value across numerous blockchains.
+Launched in June 2017, Bancor created the first-ever network of AMMs on the blockchain. Since then, AMM liquidity pools have evolved into a core building block of decentralized finance (DeFi), attracting over $30 billion in locked value across numerous blockchains.
 
 ## **2. Impermanent Loss / Divergence Loss**
 
-Impermanent loss (or divergence loss) is a risk faced by users who depositor their tokens in AMM liquidity pools. It is measured by calculating the difference in value between holding tokens in an AMM liquidity pool and holding them in a wallet.
+Impermanent loss (or divergence loss) is a risk faced by users who deposit their tokens in AMM liquidity pools. It is calculated as the difference between holding tokens in an AMM liquidity pool and holding them in a wallet.
 
-Liquidity pools consist of multiple tokens (usually two) paired together in a pool. IL occurs when the price of tokens inside the pool diverge in any direction. The greater divergence between the tokens, the greater the risk of the pool generating negative returns for its depositors.
+Liquidity pools consist of multiple tokens (usually two) paired together in a pool. IL occurs when the prices of tokens inside the pool diverge. The greater the divergence, the greater the risk of negative returns for the pool's depositors ("LPs").
 
-The risk is referred to as "impermanent" because the loss is only realized when you withdraw your tokens from the pool. If the relative prices of tokens in the pool return to their original state when you deposited your tokens, the loss is minimized or eliminated.
+The risk is referred to as "impermanent" because the loss is only realized when the LP withdraws their tokens from the pool. If the relative prices of tokens in the pool return to their original state when the LP deposited your tokens, the loss is minimized or eliminated.
 
-However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens. These losses reduce your earnings from trading fees and rewards, and can wipe out your entire share of profits, leaving you with negative returns versus simply holding your tokens in your wallet.
+However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens. These losses reduce earnings from trading fees and rewards, and can wipe out your entire share of profits, leaving you with negative returns versus simply holding your tokens in a wallet.
 
 ### What Causes Impermanent Loss?
 
-When the prices of tokens paired together in a pool change in price relative to one another, an arbitrage opportunity emerges, incentivizing re-balancing of the pool by third-party automated trading bots (arbitrageurs).&#x20;
+When tokens paired together in a pool change in price relative to one another, an arbitrage opportunity emerges, incentivizing re-balancing of the pool by third-party trading bots known as arbitrageurs.&#x20;
 
-During re-balancing, liquidity pools automatically liquidate the rising token at a discount and purchase the token whose price is falling at a premium. As a depositor, you are left holding less of the token that increased in price, and more of the token that decreased in price. Over time, this order flow causes the cumulative value of your pool holdings to be worth less than if you simply held the two assets in your wallet.
+Re-balancing causes the liquidity pool to automatically liquidate the rising token at a discount and purchase the token whose price is falling at a premium. As a depositor, you are left holding less of the token that increased in price, and more of the token that decreased in price. Over time, this causes the cumulative value of your pool holdings to be worth less than if you simply held the two assets in your wallet.
 
-* _**Check if you've been rekt by IL on**_ [_**IL.wtf**_](https://il.wtf)
+* _**Check your wallet on**_ [_**IL.wtf**_](https://il.wtf) _**to see if you've been rekt by IL.**_
 * _****_[_**Learn more about IL**_](https://earn.bancor.network/impermanent-loss)_****_
-* _**A technical explanation of IL can be found in**_ [_**this paper (section: "Impermanent Loss in a Traditional AMM")**_](https://arxiv.org/pdf/2111.09192.pdf)_**.**_
+* _**A deeper explanation of IL can be found in**_ [_**this paper (section: "Impermanent Loss in a Traditional AMM")**_](https://arxiv.org/pdf/2111.09192.pdf)_**.**_
 
 ### What's the Risk of Impermanent Loss?
 
-Recent [on-chain research](https://arxiv.org/abs/2111.09192) analyzing over 20,000 liquidity provider wallets and $100b+ in trading volume shows that users providing liquidity to unprotected AMM pools suffered negative returns **roughly 50% of the time**.
+Recent [on-chain data](https://arxiv.org/abs/2111.09192) analyzing over $100b+ in trading volume and 20,000 liquidity provider wallets shows that users providing liquidity to unprotected AMM pools suffered negative returns **roughly 50% of the time**.
 
-We consider this risk to be intolerable for many users, which is why we designed a safer and simpler way to earn on your favorite tokens called "[Bancor Safe Staking](https://earn.bancor.network/safe-staking/)".
+We consider this risk to be intolerable for many users — which is why we designed a safer and simpler way to earn on your favorite tokens with zero IL risk called "[Bancor Safe Staking](https://earn.bancor.network/safe-staking/)".
 
 ## 3. Bancor Safe Staking
 
-Bancor Safe Staking allows users to deposit their tokens in a liquidity pool and passively earn yield with **zero risk of impermanent loss** and **single-token exposure**.
+Bancor Safe Staking allows you to deposit your tokens in a liquidity pool and passively earn yield with **zero risk of impermanent loss** and **single-token exposure**.
 
 The protocol is designed to ensure that a depositor ("LP") gets back the same value of tokens originally deposited (as if they held the tokens in their wallet) using a novel mechanism called **Impermanent Loss Protection**.
 
@@ -80,11 +80,11 @@ When a user makes a new deposit, the IL Protection offered by the protocol incre
 
 After a period of 100 days, any impermanent loss incurred in the first 100 days or any time thereafter is covered by the protocol at the time of withdrawal. Withdrawals prior to the 100-day maturity are only eligible for partial compensation. For example, withdrawals after 60 days in the pool receive 60% compensation on any impermanent loss incurred. Also, there is no compensation offered at all for stakes withdrawn within the first 30 days.
 
-_Note that in Bancor v3, IL Protection Vesting will be replaced with "Instant IL Protection" (100% protection from day one) with a 7-day cool-down period._ [_More info_](https://twitter.com/Bancor/status/1469013464010137602?s=20)_._
+_Note that in Bancor v3 proposes that IL Protection Vesting be replaced with "Instant IL Protection" (100% protection from day one) with a 7-day cool-down period._ [_More info_](https://twitter.com/Bancor/status/1469013464010137602?s=20)_._
 
 ## How Single-Token Exposure Works
 
-Single-token exposure means you can provide a single token (instead of two) to a liquidity pool and earn yield while maintaining 100% exposure to the price that token during the staking period as if it was sitting in your wallet.
+Single-token exposure means you can deposit a single kind of token (just LINK, instead of LINK and ETH) into a liquidity pool and earn yield while maintaining 100% exposure to the price of the tokens during the staking period as if they were sitting in your wallet.
 
 To support single-token exposure across 100+ tokens, the Bancor protocol uses its protocol-owned liquidity to jointly fund pools alongside users. In other words, when a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 in BNT to the pool.
 
