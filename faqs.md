@@ -20,7 +20,7 @@ This a living document continuously updated by the community and therefore a wor
 
 Liquidity pools are automated market-maker **** (AMM) smart contracts that exchange assets algorithmically using on-chain reserves.
 
-Liquidity on traditional asset exchanges has historically been controlled by a small handful of professional trading firms with permissioned access and specialized tools to make markets. These so-called "market-makers" can choose to suddenly withdraw their liquidity or extract high fees during periods of volatility, restricting the trading of an asset when users need it the most.
+Liquidity on traditional asset exchanges has historically been controlled by a small handful of professional trading firms with permissioned access and specialized tools. These so-called "market-makers" can choose to suddenly withdraw their liquidity in an asset during periods of volatility, restricting trading of an asset when users need it the most.
 
 In contrast, AMM pools allow liquidity to flow from an unlimited number of everyday users, lowering the barrier to token creation and yield generation, and increasing resistance to market manipulation and censorship.
 
@@ -28,13 +28,13 @@ Launched in June 2017, Bancor created the first-ever network of AMMs on the bloc
 
 ## **2. Impermanent Loss / Divergence Loss**
 
-Impermanent loss (or divergence loss) is a risk faced by users who deposit their tokens in AMM liquidity pools. It is calculated as the difference between holding tokens in an AMM liquidity pool and holding them in a wallet.
+Impermanent loss (or divergence loss) is a risk faced by users who deposit their tokens in AMM liquidity pools. It is calculated by measuring the difference in value between holding tokens in an AMM liquidity pool and holding them in your wallet.
 
-Liquidity pools consist of multiple tokens (usually two) paired together in a pool. IL occurs when the prices of tokens inside the pool diverge. The greater the divergence, the greater the risk of negative returns for the pool's depositors ("LPs").
+Liquidity pools consist of multiple tokens (usually two) paired together in a pool. IL occurs when the prices of tokens inside the pool diverge. The greater the divergence, the greater the risk of negative returns for the pool's depositors.
 
-The risk is referred to as "impermanent" because the loss is only realized when the LP withdraws their tokens from the pool. If the relative prices of tokens in the pool return to their original state when the LP deposited your tokens, the loss is minimized or eliminated.
+The risk is referred to as "impermanent" because the loss is only realized when you withdraw your tokens from the pool. If the relative prices of tokens in the pool return to their original state when you deposited tokens, the loss is minimized or eliminated.
 
-However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens. These losses reduce earnings from trading fees and rewards, and can wipe out your entire share of profits, leaving you with negative returns versus simply holding your tokens in a wallet.
+However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens. These losses reduce your earnings from trading fees and rewards, and can wipe out your entire share of profits, leaving you with negative returns versus simply holding your tokens in your wallet.
 
 ### What Causes Impermanent Loss?
 
@@ -50,7 +50,7 @@ Re-balancing causes the liquidity pool to automatically liquidate the rising tok
 
 Recent [on-chain data](https://arxiv.org/abs/2111.09192) analyzing over $100b+ in trading volume and 20,000 liquidity provider wallets shows that users providing liquidity to unprotected AMM pools suffered negative returns **roughly 50% of the time**.
 
-We consider this risk to be intolerable for many users — which is why we designed a safer and simpler way to earn on your favorite tokens with zero IL risk called "[Bancor Safe Staking](https://earn.bancor.network/safe-staking/)".
+We consider this risk to be intolerable for many users — which is why we designed a safer and simpler way to earn on your favorite tokens with zero IL risk, called "[Bancor Safe Staking](https://earn.bancor.network/safe-staking/)".
 
 ## 3. Bancor Safe Staking
 
@@ -66,9 +66,9 @@ For example, if you stake 1 ETH, even if the ETH price doubles, you will still g
 
 Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the protocol is able to provide liquidity alongside an LP and compensate them for any IL with swap fees earned from protocol-owned LP tokens.
 
-If fees earned from protocol-owned LP tokens are greater than the cost of IL compensation, the protocol is able to entirely offset IL for the LP without emitting new BNT. If there are ever insufficient protocol-earned fees to fully compensate an LP for their IL, the protocol's IL protection may be paid out in an equal value of emitted BNT.&#x20;
+If fees earned from protocol-owned LP tokens are greater than the cost of IL compensation, the protocol is able to entirely offset IL for LPs without emitting new BNT. If there are ever insufficient protocol-earned fees to fully compensate an LP for their IL, the protocol's IL protection may be paid out in an equal value of emitted BNT.&#x20;
 
-Bancor's continuous burning mechanisms put deflationary pressure on the BNT token supply. The initial BNT provided by the protocol, in addition to the fees it earns (less any IL compensation), are burned when an LP withdraws from the system.&#x20;
+Bancor's continuous burning mechanisms put deflationary pressure on the BNT token supply. The initial BNT provided by the protocol in addition to the fees it earns (less any IL compensation) are burned when an LP withdraws from the system.&#x20;
 
 In addition, a portion of transaction fees generated on the network are used to burn vBNT (which represents staked BNT) via the [Bancor Vortex](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa).
 
@@ -80,15 +80,15 @@ When a user makes a new deposit, the IL Protection offered by the protocol incre
 
 After a period of 100 days, any impermanent loss incurred in the first 100 days or any time thereafter is covered by the protocol at the time of withdrawal. Withdrawals prior to the 100-day maturity are only eligible for partial compensation. For example, withdrawals after 60 days in the pool receive 60% compensation on any impermanent loss incurred. Also, there is no compensation offered at all for stakes withdrawn within the first 30 days.
 
-_Note that in Bancor v3 proposes that IL Protection Vesting be replaced with "Instant IL Protection" (100% protection from day one) with a 7-day cool-down period._ [_More info_](https://twitter.com/Bancor/status/1469013464010137602?s=20)_._
+_Note that in Bancor v3 proposes that IL Protection Vesting be replaced with "Instant IL Protection" (100% protection from day one)._ [_More info_](https://twitter.com/Bancor/status/1469013464010137602?s=20)_._
 
 ## How Single-Token Exposure Works
 
-Single-token exposure means you can deposit a single kind of token (just LINK, instead of LINK and ETH) into a liquidity pool and earn yield while maintaining 100% exposure to the price of the tokens during the staking period as if they were sitting in your wallet.
+Single-token exposure means you can deposit a single token into a liquidity pool and maintain 100% exposure to its price while earning yield. For example, deposit LINK and earn yield paid in LINK while maintaining 100% exposure to the price of LINK, as if your LINK was sitting in your wallet.
 
-To support single-token exposure across 100+ tokens, the Bancor protocol uses its protocol-owned liquidity to jointly fund pools alongside users. In other words, when a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 in BNT to the pool.
+To support single-token exposure, the Bancor protocol uses its protocol-owned liquidity to jointly fund pools alongside user deposits. In other words, when a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 worth of BNT to the pool.
 
-Protocol-provisioned BNT earns fees from trading the same way user deposits do. These fees are burned for BNT and vBNT, and used to compensate for any IL incurred by users when they withdraw their tokens from the protocol.
+Protocol-provisioned BNT earns fees from trading the same way user deposits do. These fees are burned for BNT and vBNT, and used to compensate for any IL incurred by users when they ultimately withdraw their tokens from the protocol.
 
 The amount of BNT offered by the protocol to support trading in a given token is governed by the Bancor DAO. The DAO aims to offer protocol liquidity in amounts that are profitable for the network, i.e., where trading fee income exceeds the cost of IL protection.
 
