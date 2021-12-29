@@ -271,40 +271,6 @@ Withdrawing your BNT rewards or withdrawing liquidity from any pool resets multi
 You will have to wait for four weeks to get the 2x multiplier into full effect again (0.25x added each week).
 {% endhint %}
 
-## How does the Bonus Rewards Multiplier work?
-
-The Bonus Rewards Multiplier (BRM) starts at x1 and increases by 0.25 every week. The max possible multiplier is x2, achieved after 4 weeks in a pool. The BRM is applied retroactively - e.g., if the LP chooses to withdraw rewards after 4 weeks, and the base weekly reward is 100 BNT, then accumulated rewards at the start of week 5 will be 100 BNT \* 2 BRM \* 4 weeks = 800 BNT.
-
-Below we’ll consider a few different scenarios & the theoretical impact on LP returns.&#x20;
-
-I stake BNT in the LINK pool
-
-* The LINK pool gets 100K BNT rewards per week
-* 70% of rewards (or 70K BNT) go to the BNT side, 30% of rewards (or 30K BNT) go to the LINK side&#x20;
-* My average ownership of the BNT side is 1%
-* My average weekly reward is therefore 1% of 70K BNT, or 700 BNT
-
-**Scenario 1**: After 3 weeks in the pool, I withdraw rewards:
-
-* I’m entitled to 3wks x 700 BNT = 2,100 BNT
-* Since I was in the pool for 3 weeks, I get a 1.75x multiplier on my rewards
-* I'm entitled withdraw 2,100 BNT rewards x 1.75 multiplier = **3,675 BNT**
-
-**Scenario 2:** After 8 weeks, I withdraw rewards:
-
-* I’m entitled to 8wks x 700 BNT = 5,600 BNT
-* Since I was in the pool for more than 4 weeks, I get a 2x multiplier on my rewards
-* I'm entitled to withdraw 5,600 BNT rewards x 2 multiplier = **11,200 BNT**
-
-**Scenario 3**: After 8 weeks in the LINK pool, I stake my earned BNT rewards to the YFI pool for 5 weeks:
-
-* I take my 11,200 BNT (rewards from the LINK pool) and stake it in the YFI pool
-* This opens a 11,200 BNT initial stake in the YFI pool
-* YFI gets 10K in BNT rewards per week
-* My average ownership of the BNT side of the YFI pool is 1%, entitling me to 100 BNT earned continuously per week
-* At the start of week 5, the value of my rewards from the YFI pool is 100 BNT x 4 weeks x 2x multiplier = 800 BNT
-* Thus, the combined value of my initial stake in the YFI pool (11,200 BNT) + BNT rewards (800 BNT) = **12,000 BNT** (+ swap fees accrued on my initial stake in the YFI pool)
-
 ## Do I need to stake or withdraw the rewards on a weekly basis?
 
 No, the rewards are earned continuously on your initial stake per block. You can stake or withdraw your rewards from the rewards contract at any time. There is no deadline to take action.&#x20;
