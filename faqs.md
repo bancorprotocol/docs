@@ -20,7 +20,7 @@ This a living document continuously updated by the community and therefore a wor
 
 Liquidity pools are automated market-maker **** (AMM) smart contracts that exchange assets algorithmically using on-chain reserves.
 
-Liquidity on traditional asset exchanges has historically been controlled by a small handful of professional trading firms with permissioned access and specialized tools. These so-called "market-makers" can choose to suddenly withdraw their liquidity in an asset during periods of volatility, restricting trading of an asset when users need it the most.
+Liquidity on traditional asset exchanges has historically been provided by a small handful of professional trading firms with permissioned access and specialized tools. This concentrates liquidity in the hands of a few actors who can withdraw their assets during periods of volatility and restrict trading of an asset when users need it the most.
 
 In contrast, AMM pools allow liquidity to flow from an unlimited number of everyday users, lowering the barrier to token creation and yield generation, and increasing resistance to market manipulation and censorship.
 
