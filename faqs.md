@@ -28,13 +28,13 @@ Launched in June 2017, Bancor created the first-ever network of AMMs on the bloc
 
 ## **2. Impermanent Loss / Divergence Loss**
 
-Impermanent loss (or divergence loss) is a risk faced by users who deposit their tokens in AMM liquidity pools. It is calculated by measuring the difference in value between holding tokens in an AMM liquidity pool and holding them in your wallet.
+Impermanent loss (or divergence loss) is a risk faced by users who deposit their tokens in AMM liquidity pools. It is the difference in value between holding tokens in an AMM liquidity pool and holding them in your wallet.
 
-Liquidity pools consist of multiple tokens (usually two) paired together in a pool. IL occurs when the prices of tokens inside the pool diverge. The greater the divergence, the greater the risk of negative returns for the pool's depositors.
+Liquidity pools consist of multiple tokens (usually two) paired together in a pool. IL occurs when the tokens inside the pool diverge in price. The greater the divergence, the greater the risk of negative returns for the pool's LPs.
 
 The risk is referred to as "impermanent" because the loss is only realized when you withdraw your tokens from the pool. If the relative prices of tokens in the pool return to their original state when you deposited tokens, the loss is minimized or eliminated.
 
-However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens. These losses reduce your earnings from trading fees and rewards, and can wipe out your entire share of profits, leaving you with negative returns versus simply holding your tokens in your wallet.
+However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens, reducing your earnings and sometimes wiping out your entire share of profits. Even when accounting for fees and rewards, you suffer negative returns are financially harmed from the act of staking versus simply holding your tokens in your wallet.
 
 ### What Causes Impermanent Loss?
 
