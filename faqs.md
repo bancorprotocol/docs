@@ -7,14 +7,15 @@ description: Frequently asked questions about Bancor Protocol
 This a living document continuously updated by the community and therefore a work in progress. It is divided into the following sections:
 
 1. ****[**Liquidity Pools**](faqs.md#1.-liquidity-pools)****
-2. ****[**Impermanent Loss/Divergence Loss**](faqs.md#2.-impermanent-loss)****
-3. ****[**Bancor Safe Staking** ](faqs.md#3.-bancor-safe-staking)****
-4. ****[**Depositing & Withdrawing Liquidity**](faqs.md#3.-depositing-withdrawing-liquidity)****
-5. ****[**Liquidity Mining Rewards**](faqs.md#5.-liquidity-mining-rewards)****
-6. ****[**Pool Management**](faqs.md#5.-pool-management)****
-7. ****[**Trading**](faqs.md#6.-trading)****
-8. ****[**Further Resources**](faqs.md#7.-further-resources)****
-9. ****[**Helpful Links**](faqs.md#8.-helpful-links)****
+2. ****[**Why Use Bancor?**](faqs.md#undefined)****
+3. ****[**What Causes Impermanent Loss?**](faqs.md#2.-impermanent-loss-divergence-loss)****
+4. ****[**Bancor Safe Staking** ](faqs.md#3.-bancor-safe-staking)****
+5. ****[**Depositing & Withdrawing Liquidity**](faqs.md#3.-depositing-withdrawing-liquidity)****
+6. ****[**Liquidity Mining Rewards**](faqs.md#5.-liquidity-mining-rewards)****
+7. ****[**Pool Management**](faqs.md#5.-pool-management)****
+8. ****[**Trading**](faqs.md#6.-trading)****
+9. ****[**Further Resources**](faqs.md#7.-further-resources)****
+10. ****[**Helpful Links**](faqs.md#8.-helpful-links)****
 
 ## **1. Liquidity Pools** <a href="#liquiditypools" id="liquiditypools"></a>
 
@@ -26,7 +27,19 @@ In contrast, AMM pools allow liquidity to flow from an unlimited number of every
 
 Launched in June 2017, Bancor created the first-ever network of AMMs on the blockchain. Since then, AMM liquidity pools have evolved into a core building block of decentralized finance (DeFi), attracting over $30 billion in locked value across numerous blockchains.
 
-## **2. Impermanent Loss / Divergence Loss**
+## 2. Why Use Bancor?
+
+So you want to make money on the tokens you own. You look for a place to stake them. You hold the token inside a liquidity pool, and your money facilitates trading and generates fees from traders. Your tokens may go up or down in price - that volatility encourages trading which generates fees. But that same volatility can also incur massive value loss in your holdings, because as your tokens move in price, they can be automatically sold at a discount or bought at an inflated price, which results in you losing money instead of earning.&#x20;
+
+On Bancor, we designed a system called "[Safe Staking](faqs.md#3.-bancor-safe-staking)". It protects your holdings no matter how your token moves, so you can earn high yield with much less risk.
+
+• **Stake the token you love:** no more 50**/**50 split to anything else: earn with 100% upside exposure, single sided.
+
+• **Protect your money:** Get full protection from impermanent loss for your staked tokens.
+
+• **Auto-Compounding**: Fees earned on Bancor are automatically re-added to the pool, compounding your gains.
+
+## **3. What Causes Impermanent Loss in Legacy Liquidity Pools?**
 
 Impermanent loss (or divergence loss) is a risk faced by users who deposit their tokens in AMM liquidity pools. It is the difference in value between holding tokens in an AMM liquidity pool and holding them in your wallet.
 
@@ -36,7 +49,7 @@ The risk is referred to as "impermanent" because the loss is only realized when 
 
 However, this is rarely case. More often, the losses become _permanent_ the moment you withdraw your tokens, reducing your earnings and sometimes wiping out your entire share of profits. Even when accounting for fees and rewards, you suffer negative returns are financially harmed from the act of staking versus simply holding your tokens in your wallet.
 
-### What Causes Impermanent Loss?
+### Arbitrageurs
 
 When tokens paired together in a pool change in price relative to one another, an arbitrage opportunity emerges, incentivizing re-balancing of the pool by third-party trading bots known as arbitrageurs.&#x20;
 
@@ -46,7 +59,7 @@ Re-balancing causes the liquidity pool to automatically liquidate the rising tok
 * _****_[_**Learn more about IL**_](https://earn.bancor.network/impermanent-loss)_****_
 * _**A deeper explanation of IL can be found in**_ [_**this paper (section: "Impermanent Loss in a Traditional AMM")**_](https://arxiv.org/pdf/2111.09192.pdf)_**.**_
 
-### What's the Risk of Impermanent Loss?
+### The Risk
 
 Recent [on-chain data](https://arxiv.org/abs/2111.09192) analyzing over $100b+ in trading volume and 20,000 liquidity provider wallets shows that users providing liquidity to unprotected AMM pools suffered negative returns **roughly 50% of the time**.
 
@@ -62,7 +75,7 @@ IL Protection tracks the HODL value of your deposited tokens. Even if a token mo
 
 For example, if you stake 1 ETH, even if the ETH price doubles, you will still get the equivalent value of 1 ETH back. Plus you will earn trading fees (paid in ETH) and rewards (paid in BNT).
 
-## How Does Impermanent Loss Protection Work?
+## How Does Bancor's Impermanent Loss Protection Work?
 
 Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the protocol is able to provide liquidity alongside an LP and compensate them for any IL with swap fees earned from protocol-owned LP tokens.
 
@@ -94,7 +107,7 @@ The amount of BNT offered by the protocol to support trading in a given token is
 
 ## 4. Depositing / Withdrawing Liquidity
 
-## How do I stake in the Bancor Protocol?
+## How do I Stake in the Bancor Protocol?
 
 You can stake and earn on 100+ tokens in the Bancor protocol on [bancor.network](https://app.bancor.network/eth/data) or any site integrated with Bancor smart contracts. Users connect via Web3 wallets such as MetaMask.
 
@@ -127,18 +140,6 @@ For each individual stake in a pool, the Portfolio page displays:
 
 Read: [**How to Provide Liquidity on Bancor**](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1)****
 
-## What is vBNT?
-
-vBNT is the governance token of Bancor. Users who stake BNT in any whitelisted pool receive vBNT in return representing their % ownership of the pool. This makes vBNT similar to an LP token, except you can also use it to vote in Bancor governance via [https://app.bancor.network/eth/vote/](https://app.bancor.network/eth/vote/).
-
-When using vBNT to vote, you will need to stake your vBNT in the governance contract as a first step. Once staked, there’s a 72-hour lockup period to un-stake vBNT from the governance contract. [**Voting Guide**](https://blog.bancor.network/bancor-v2-1-staking-guide-749e5cc4326a)
-
-Per the[ **vBNT Burner Proposal**](https://gov.bancor.network/t/bancor-vortex-part-2-vbnt-whitelist-proposal/537)**,** a 5-20% share of network trading fee revenue can be used to buy and burn vBNT, reducing the circulating supply of BNT tokens and locking BNT in the protocol permanently.
-
-To withdraw staked BNT from a pool, you must have the same number of vBNT in your wallet, though not necessarily the same vBNT tokens. In other words, you can trade your vBNT for other tokens while your BNT is staked, and buy vBNT back if/when you want to withdraw your BNT from Bancor. Only your wallet can withdraw your staked BNT using the necessary number of vBNT.
-
-**Make sure you** [**understand the risks of trading your vBNT** ](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)**before doing so.**
-
 ## What kind of fees can you earn from Bancor pools?
 
 When you deposit your tokens on Bancor, you earn a percentage fee from trades that occur in the token you've staked. For example, if you deposit LINK, you will earn a fee from trades that occur in LINK. The estimated annual percentage return (APR) is dependent on trading and other network activity, and fluctuates accordingly, as well as liquidity mining rewards that Bancor governance approves per pool.
@@ -162,6 +163,18 @@ The bancor.network front-end measures estimated APR from these two sources:&#x20
 
 In Bancor v2.1, trading fees automatically accrue in the pool, compounding the LP's gains. Liquidity mining rewards, on the other hand, accrue in a separate rewards contract, requiring an individual LP to manually re-add their earned rewards to the pool. In Bancor v3, both trading fees and liquidity mining rewards are **auto-compounding** ([more info](https://twitter.com/Bancor/status/1474026588190744581?s=20)).
 
+## What is vBNT?
+
+vBNT is the governance token of Bancor. Users who stake BNT in any whitelisted pool receive vBNT in return representing their % ownership of the pool. This makes vBNT similar to an LP token, except you can also use it to vote in Bancor governance via [https://app.bancor.network/eth/vote/](https://app.bancor.network/eth/vote/).
+
+When using vBNT to vote, you will need to stake your vBNT in the governance contract as a first step. Once staked, there’s a 72-hour lockup period to un-stake vBNT from the governance contract. [**Voting Guide**](https://blog.bancor.network/bancor-v2-1-staking-guide-749e5cc4326a)
+
+Per the[ **vBNT Burner Proposal**](https://gov.bancor.network/t/bancor-vortex-part-2-vbnt-whitelist-proposal/537)**,** a 5-20% share of network trading fee revenue can be used to buy and burn vBNT, reducing the circulating supply of BNT tokens and locking BNT in the protocol permanently.
+
+To withdraw staked BNT from a pool, you must have the same number of vBNT in your wallet, though not necessarily the same vBNT tokens. In other words, you can trade your vBNT for other tokens while your BNT is staked, and buy vBNT back if/when you want to withdraw your BNT from Bancor. Only your wallet can withdraw your staked BNT using the necessary number of vBNT.
+
+**Make sure you** [**understand the risks of trading your vBNT** ](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9)**before doing so.**
+
 ## **If I have staked liquidity to a pool multiple times, will withdrawing one of my stakes cancel the other stake’s IL Protection?**
 
 No. There’s no relation or correlation between different liquidity providers positions. You can view returns on each of your individual liquidity pool positions in "Portfolio" section under the "Earn" tab in [app.bancor.network](https://app.bancor.network/pools).
@@ -172,7 +185,7 @@ The protocol provides BNT to its pools and these BNTs accrue fees from trading. 
 
 Note: BNT withdrawn from the system is subject to a 24-hour lock-up.
 
-## **Can I lose my IL insurance somehow?**
+## **Can I lose my IL Protection somehow?**
 
 Only if you withdraw. If you withdrew before the 30 day cliff, you are not eligible for any insurance. Withdrawing between 30 and 100 days qualifies you for the achieved percentage - for instance, if after 60 days in the pool you withdraw and there is $100 USD worth of IL, you’ll receive compensation for 60% (or $60 USD) of the loss.
 
