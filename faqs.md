@@ -29,15 +29,14 @@ Launched in June 2017, Bancor created the first-ever network of AMMs on the bloc
 
 ## 2. Why Use Bancor?
 
-So you want to make money on the tokens you own. You look for a place to stake them. You hold the token inside a liquidity pool, and your money facilitates trading and generates fees from traders. Your tokens may go up or down in price - that volatility encourages trading which generates fees. But that same volatility can also incur massive value loss in your holdings, because as your tokens move in price, they can be automatically sold at a discount or bought at an inflated price, which results in you losing money instead of earning.&#x20;
+So you want to make money on the tokens you own. You stake the tokens inside a liquidity pool, and your money facilitates trading and generates fees from traders. Your tokens may go up or down in price - that volatility encourages trading which generates fees. But that same volatility can also incur value loss in your holdings ("impermanent loss"). Because as your tokens move in price, they can be automatically sold at a discount or bought at an inflated price, which results in you losing money instead of earning.&#x20;
 
 On Bancor, we designed a system called "[Safe Staking](faqs.md#3.-bancor-safe-staking)". It protects your holdings no matter how your token moves, so you can earn high yield with much less risk.
 
-• **Stake the token you love:** no more 50**/**50 split to anything else: earn with 100% upside exposure, single sided.
-
-• **Protect your money:** Get full protection from impermanent loss for your staked tokens.
-
-• **Auto-Compounding**: Fees earned on Bancor are automatically re-added to the pool, compounding your gains.
+* **Stake the token you love:** no more 50**/**50 split: earn with 100% upside exposure, single sided.
+* **Protect your money:** Get full protection from impermanent loss.
+* **Auto-Compounding Fees**: Fees earned on Bancor are automatically re-added to the pool, compounding your gains.
+* **Rewards**: Earn liquidity mining rewards, fully protected from impermanent loss.
 
 ## **3. What Causes Impermanent Loss in Legacy Liquidity Pools?**
 
