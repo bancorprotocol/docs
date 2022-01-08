@@ -31,18 +31,18 @@ Launched in June 2017, Bancor created the first-ever network of AMMs on the bloc
 
 So you want to make money on the tokens you own. You stake the tokens in a liquidity pool, and your money facilitates trading and earns fees from traders. Your tokens may go up or down in price - that volatility encourages trading which generates fees. But that same volatility can also incur value loss in your holdings ("impermanent loss"). Because as your tokens move in price, they can be automatically sold at a discount or bought at an inflated price, which results in you losing money instead of earning.
 
-On Bancor, we designed a system called "[Safe Staking](faqs.md#3.-bancor-safe-staking)". It protects your holdings no matter how your token moves, so you can earn high yield with much less risk.
+On Bancor, we designed a system called "[Safe Staking](faqs.md#3.-bancor-safe-staking)". It protects your holdings no matter how your token moves, so you can earn high yield with much less risk. Zero impermanent loss means higher profits from trading fees and rewards.
 
-* **Stake the token you love:** no more 50**/**50 split: earn with 100% upside exposure, single sided.
-* **Protect your money:** Get full protection from impermanent loss.
-* **Auto-Compounding Fees**: Fees earned on Bancor are automatically re-added to the pool, compounding your gains.
-* **Rewards**: Earn liquidity mining rewards - also protected from impermanent loss.
+* **Stake the token you love:** no more 50**/**50 split; earn with 100% upside exposure, single sided.
+* **Protect your money:** full protection from impermanent loss
+* **Auto-Compounding Fees**: fees earned on Bancor are automatically re-added to the pool, compounding your yield
+* **Rewards**: earn rewards that are also protected from impermanent loss
 
 ## 3. Bancor Safe Staking
 
 Safe Staking allows you to deposit your tokens in a liquidity pool and earn passive yield with **zero risk of impermanent loss** and **single-token exposure**.
 
-The protocol is designed to ensure a depositor ("LP") gets back the same value of tokens deposited (as if they held the tokens in their wallet) plus trading fees & rewards, using a novel mechanism called **Impermanent Loss Protection (IL Protection)**.
+The protocol is designed to ensure a depositor ("LP") gets back the same value of tokens deposited (as if they held the tokens in their wallet) plus trading fees & rewards, using a novel mechanism called Impermanent Loss Protection (IL Protection).
 
 IL Protection tracks the HODL value of your deposited tokens. Even if a token moons, you are protected and entitled to withdraw the full value of the tokens you staked, so long as you have accrued full protection (see "IL Protection Vesting" below).
 
@@ -50,7 +50,7 @@ For example, if you stake 1 ETH, even if the ETH price doubles, you will still g
 
 ## How Safe Staking Works
 
-To support Safe Staking, the Bancor protocol uses protocol-owned BNT to jointly fund pools alongside user deposits. In other words, when a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 worth of BNT to the pool. In return, both the user and the protocol receive fee-accruing LP tokens.
+To support Safe Staking, the Bancor protocol uses its protocol-owned BNT to jointly fund pools alongside user deposits. In other words, when a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 worth of BNT to the pool. In return, both the user and the protocol receive fee-accruing LP tokens.
 
 During the staking period both the user and the protocol's LP tokens earn fees. When the user withdraws their liquidity, the user's and protocol's LP tokens are burned. If the user has suffered any IL, fees earned by the protocol's LP tokens are used to compensate them, and the remainder is burned for BNT.
 
