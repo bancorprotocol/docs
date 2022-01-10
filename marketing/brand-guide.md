@@ -118,3 +118,17 @@ We have four secondary colors, with blue being the default accent color.
 
 ![](<../.gitbook/assets/Bancor Colors.png>)
 
+### Font
+
+Our brand font is "Euclid - Circular A" by Swiss typeface
+
+{% embed url="https://www.swisstypefaces.com/fonts/euclid#font" %}
+
+#### Primary font weights
+
+* Regular
+* Medium
+* Light
+
+
+
