@@ -116,7 +116,7 @@ When you deposit your tokens on Bancor, you earn a percentage fee from trades th
 
 The [bancor.network](https://app.bancor.network/eth/data) front-end estimates APR based off the past 24h of trading fees. The APR also includes mining rewards (if they are listed as "Active" in the "Rewards" column). Trading fees are paid in the token you've staked, whereas rewards can be paid out in the tokens you've staked or BNT.
 
-![Estimated APRs displayed in the bancor.network front-end](<.gitbook/assets/image (6).png>)
+![Estimated APRs displayed in the bancor.network front-end](<.gitbook/assets/image (6) (1).png>)
 
 ## **4. Impermanent Loss 101**
 

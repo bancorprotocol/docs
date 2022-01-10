@@ -99,6 +99,4 @@
 
 ## Marketing
 
-* [Messaging](../marketing/messaging.md)
-* [Logo](../marketing/logo.md)
-* [Colors](../marketing/colors.md)
+* [Brand Guide](../marketing/brand-guide.md)
