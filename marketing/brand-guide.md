@@ -110,11 +110,11 @@ A collection of official Bancor brand assets
 
 #### Animated Logo
 
-{% embed url="https://media.giphy.com/media/WpabJ5K9P5lQMDXxsu/giphy.gif" %}
-
-{% embed url="https://media.giphy.com/media/U8OLbH2iyNaBjKSrgg/giphy.gif" %}
-
 {% embed url="https://www.dropbox.com/sh/bdl5x3mxkv39oeo/AACChHl7VQMh8TGf7mqXZlJ3a?dl=0" %}
+
+![Logo reveal](https://media0.giphy.com/media/WpabJ5K9P5lQMDXxsu/giphy.gif)
+
+![Icon loop](https://media1.giphy.com/media/U8OLbH2iyNaBjKSrgg/giphy.gif)
 
 
 
