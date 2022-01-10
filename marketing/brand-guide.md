@@ -108,7 +108,15 @@ A collection of official Bancor brand assets
 
 {% file src="../.gitbook/assets/Bancor Icon - Black.svg" %}
 
-###
+#### Animated Logo
+
+{% embed url="https://media.giphy.com/media/WpabJ5K9P5lQMDXxsu/giphy.gif" %}
+
+{% embed url="https://media.giphy.com/media/U8OLbH2iyNaBjKSrgg/giphy.gif" %}
+
+{% embed url="https://www.dropbox.com/sh/bdl5x3mxkv39oeo/AACChHl7VQMh8TGf7mqXZlJ3a?dl=0" %}
+
+
 
 ### Colors
 
