@@ -29,14 +29,14 @@ Launched in June 2017, Bancor created the first-ever network of AMMs on the bloc
 
 ## 2. Why Use Bancor?
 
-So you want to make money on the tokens you own. You stake the tokens in a liquidity pool, and your money facilitates trading and earns fees from traders. Your tokens may go up or down in price - that volatility encourages trading which generates fees. But that same volatility can also incur value loss in your holdings ("impermanent loss"). Because as your tokens move in price, they can be automatically sold at a discount or bought at an inflated price, which results in you losing money instead of earning.
+DeFi lets you make money on the tokens you're holding. You stake the tokens in a liquidity pool, and your money facilitates trading and earns fees from each trade. Your tokens may go up or down in price - that volatility encourages trading which generates fees. But that same volatility can also incur value loss in your holdings ("impermanent loss"). Because as your tokens move in price, they can be automatically sold at a discount or bought at an inflated price, which results in you losing money instead of earning.
 
-On Bancor, we designed a system called "[Safe Staking](faqs.md#3.-bancor-safe-staking)". It protects your holdings no matter how your token moves, so you can earn higher yield with much less risk. With zero Impermanent loss costs, users are able to collect greater profits from trading fees and rewards.
+On Bancor, we designed a system called "[Safe Staking](faqs.md#3.-bancor-safe-staking)". It protects your holdings no matter how your token moves, so you can earn higher yield with less risk.
 
-* **Stake the token you love:** no more 50**/**50 split; earn with 100% upside exposure, single sided.
-* **Protect your money:** full protection from impermanent loss
-* **Auto-Compounding Fees**: fees are automatically re-added to your stake, compounding your yield
-* **Rewards**: earn rewards which also protected from impermanent loss
+* **Stake the token you love:** no more 50/50 split; earn with 100% upside exposure, single sided.
+* **Protect your money:** 100% protection from impermanent loss
+* **Auto-compounding fees**: fees are automatically re-added to your stake, compounding your gains
+* **Rewards**: earn BNT rewards which are also protected from impermanent loss
 
 ## 3. Bancor Safe Staking
 
