@@ -81,10 +81,12 @@ _**Governance:**_
 * [Comparing ROI: Bancor Staking vs. Other AMMs](https://twitter.com/korpi87/status/1409449804703440897?s=20)
 * [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
 * **Twitter threads:**
-  * [Bancor 3](https://twitter.com/Bancor/status/1465445447292571657?s=20)
+  * Bancor 3&#x20;
+    * [Bancor 3 Intro](https://twitter.com/Bancor/status/1465445447292571657?s=20)
     * [Omnipool](https://twitter.com/Bancor/status/1471230669644869632?s=20)
     * [Instant IL Protection](https://twitter.com/Bancor/status/1469013464010137602?s=20)
     * [Auto-Compounding Rewards](https://twitter.com/Bancor/status/1474026588190744581?s=20)
+    * [Dual-Sided Rewards](https://twitter.com/Bancor/status/1479500114255306761?s=20)
   * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
   * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
   * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
