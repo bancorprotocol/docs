@@ -9,7 +9,7 @@
 * Bancor v2 audit by Consensys Due Diligence [**here**](https://drive.google.com/file/d/1NaUEy29L5vk6lcBn0L4DRv3cWgdpAGQu/view?usp=sharing)**.**  (July, 2020)
 * Bancor v1 audit can be found [**here**](https://gist.github.com/Arachnid/c65fd1bd61a8e0294aef95a4808edc78). (May, 2017)
 
-### [DeFi Safety Score](https://defisafety.com/2020/10/26/bancor/)
+### [DeFi Safety Score →](https://www.defisafety.com/pqrs/36)
 
 ### Bancor Bug Bounty
 
