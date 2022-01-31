@@ -29,18 +29,24 @@ Launched in June 2017, Bancor created the first-ever network of AMMs on the bloc
 
 ## 2. Why Use Bancor?
 
-DeFi lets you make money on the tokens you're holding. You stake the tokens in a liquidity pool, and your money facilitates trading and earns fees from each trade. Your tokens may go up or down in price - that volatility encourages trading which generates fees. But that same volatility can also incur value loss in your holdings ("impermanent loss"). Because as your tokens move in price, they can be automatically sold at a discount or bought at an inflated price, which results in you losing money instead of earning.
+The normal user experience staking on DEXs is as follows: You want to earn yield on the tokens you own. You stake the tokens in a liquidity pool, and your money facilitates trading and earns fees from traders. Your tokens may go up or down in price - that volatility encourages trading which generates fees. But that same volatility can also incur value loss in your holdings ("impermanent loss"). Because as your tokens move in price, they can be automatically sold at a discount or bought at an inflated price, which results in you losing money instead of earning.
 
-On Bancor, we designed a system called "[Safe Staking](faqs.md#3.-bancor-safe-staking)". It protects your holdings no matter how your token moves, so you can earn higher yield with less risk.
+On Bancor, we designed a system called "[Safe Staking](faqs.md#3.-bancor-safe-staking)" which protects your holdings no matter how your token moves, so you can earn higher yield on your staked tokens with less risk.
 
 * **Stake the token you love:** no more 50/50 split; earn with 100% upside exposure, single sided.
-* **Protect your money:** 100% protection from impermanent loss
-* **Auto-compounding fees**: fees are automatically re-added to your stake, compounding your gains
-* **Rewards**: earn BNT rewards which are also protected from impermanent loss
+* **Protect your money:** 100% protection from impermanent loss.
+* **Auto-compounding fees**: fees are automatically re-added to your stake, compounding your gains.
+* **Rewards**: earn BNT rewards which are also protected from impermanent loss.
 
 ## 3. Bancor Safe Staking
 
+{% embed url="https://www.youtube.com/watch?v=2Mz7wh3hm8Y" %}
+The co-founder of Axie Infinity demos staking AXS single-sided on Bancor.
+{% endembed %}
+
 Safe Staking allows you to deposit your tokens in a liquidity pool and earn passive yield with **zero risk of impermanent loss** and **single-token exposure**.
+
+This means users only need to deposit a single token in Bancor instead of pairing tokens 50/50 with another asset (like ETH or USDC). Depositors then earn trading fees that auto-compound and are paid in the token they've staked.
 
 The protocol is designed to ensure a depositor ("LP") gets back the same value of the tokens deposited (as if they held the tokens in their wallet) plus trading fees & rewards, using a novel mechanism called Impermanent Loss Protection (IL Protection).
 
@@ -54,16 +60,16 @@ When a user withdraws their liquidity, the user's and protocol's LP tokens are b
 
 The amount of BNT offered by the protocol to support trading in a given token is governed by the Bancor DAO. The DAO aims to offer protocol liquidity in amounts that are profitable for the network, i.e., where trading fee income exceeds the cost of IL protection.
 
-## Network Design
+## Protocol Design
 
-Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the protocol is able to provide BNT liquidity alongside an LP and compensate them for any IL with swap fees earned from protocol-owned LP tokens.
+Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the protocol is able to provide BNT liquidity alongside an LP and compensate them for any IL with swap fees earned from the protocol's pool tokens.
 
-If fees earned from protocol-owned LP tokens are greater than the cost of IL compensation, the protocol is able to entirely offset IL for LPs without emitting new BNT. If there are ever insufficient protocol fees to fully compensate an LP for their IL, the protocol's IL protection may be paid out in an equal value of emitted BNT.
+If fees earned from protocol-owned pool tokens are greater than the cost of IL compensation, the protocol is able to entirely offset IL for LPs without emitting new BNT. If there are ever insufficient protocol fees to fully compensate an LP for their IL, the protocol's IL protection may be paid out in an equal value of emitted BNT.
 
 Two burning mechanisms place deflationary pressure on the BNT token:&#x20;
 
-1. **When an LP withdraws**: the initial BNT provided by the protocol in addition to the fees it earns (less any IL compensation) are burned when an LP withdraws from the system
-2. **Continuous vBNT Burning**: a percentage of every transaction on the network is used to burn vBNT (staked BNT) via the [Bancor Vortex](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
+1. **LP withdrawal**: The initial BNT provided by the protocol, in addition to the fees it earned (less any IL compensation), are burned when an LP withdraws from the system.
+2. **Continuous vBNT Burning**: A percentage of every transaction on the network is used to burn vBNT (which represents staked BNT) via the [Bancor Vortex](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa), locking BNT in the protocol forever.
 
 ![](.gitbook/assets/v21diagram.jpeg)
 
@@ -80,8 +86,6 @@ _Note that in the proposed Bancor v3, IL Protection is offered instantly (100% p
 ## How to deposit tokens in the Bancor Protocol
 
 You can stake and earn on 100+ tokens in the Bancor protocol on [bancor.network](https://app.bancor.network/eth/data) or any site integrated with Bancor smart contracts. Users connect via Web3 wallets such as MetaMask.
-
-([video tutorial](faqs.md#liquiditypools)).
 
 Watch the founder of Axie Infinity walk through staking in Bancor:
 
