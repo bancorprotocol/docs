@@ -29,17 +29,17 @@ LPs can provide liquidity to Bancor either entirely in their preferred asset or 
 
 ### Impermanent Loss Insurance <a href="#mitigating-impermanent-loss" id="mitigating-impermanent-loss"></a>
 
-Impermanent loss is a well-known side-effect of AMMs that are subject to arbitrage opportunities. When two assets are paired in a constant-product AMM (for example, with a 50:50 ratio), the product of the cardinal values of each asset reserve in the AMM is kept constant. So reserve(TKN) \* reserve(BNT) = Constant. This means that price variations lead to liquidating the asset that rises in value into the asset that drops in value.&#x20;
+Impermanent or divergence loss is a well-known side-effect of AMMs that are subject to arbitrage opportunities. When two assets are paired in a constant-product AMM (for example, with a 50:50 ratio), the product of the cardinal values of each asset reserve in the AMM is kept constant. So reserve(TKN) \* reserve(BNT) = Constant. This means that price variations lead to liquidating the asset that rises in value into the asset that drops in value.&#x20;
 
-Swap fees may offset impermanent loss; however in many cases impermanent loss can exceed swap fees earned by an LP, leading to negative returns realized by a liquidity provider upon withdrawing their tokens from the pool.
+Swap fees earned by liquidity providers may offset impermanent loss; however in many cases impermanent loss can exceed swap fees earned, leading to negative returns realized by a liquidity provider upon withdrawing their tokens from the pool.
 
 On Bancor, we designed a system that fully protects liquidity providers against the risk of impermanent loss.
 
-Bancor protocol uses its dynamic supply of BNT to jointly fund pools alongside user deposits. In other words, when a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 worth of BNT to the pool. In return, both the user and the protocol receive fee-accruing LP tokens (pool tokens).
+Bancor uses its dynamic supply of BNT to jointly fund pools alongside user deposits. When a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 worth of BNT to the pool. In return, both the user and the protocol receive fee-accruing LP tokens (pool tokens).
 
-When a user withdraws their liquidity, the user's pool tokens and protocol's pool tokens are both burned. If the user has suffered any IL, fees earned by the protocol's pool tokens are used to compensate for the user's impermanent loss, and the remainder are burned for BNT.
+When a user withdraws their liquidity, the user's pool tokens and protocol's pool tokens are both burned. If the user has suffered any impermanent loss, fees earned by the protocol's pool tokens are used to compensate for the user's loss, and the remaining pool tokens are burned for BNT.
 
-The amount of BNT offered by the protocol to support trading in a given token is governed by the Bancor DAO. The DAO aims to offer protocol liquidity in amounts that are profitable for the network, i.e., where trading fee income exceeds the cost of IL protection.
+The amount of BNT offered by the protocol to support trading in a given token is governed by the Bancor DAO. The DAO aims to offer protocol liquidity in amounts that are profitable for the network, i.e., where trading fee income exceeds the cost of impermanent loss compensation.
 
 ## Limitations <a href="#limitations" id="limitations"></a>
 
