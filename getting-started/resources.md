@@ -20,7 +20,7 @@ _Introducing Bancor 3 (December 2021):_
 
 {% embed url="https://www.youtube.com/watch?t=4s&v=qi1geks1n8A" %}
 
-### _**Video:**_
+### _**Videos:**_
 
 _**Staking:**_
 
@@ -77,7 +77,8 @@ _**Governance:**_
 
 * [Introducing Bancor 3](https://blog.bancor.network/introducing-bancor-3-962a3c601c25)
 * [Proposing Bancor v2.1: Single-Side Liquidity With IL Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
-* [Deribit: BNT Insights Market Research](https://insights.deribit.com/market-research/bancor-the-world-token/)
+* [What is BNT?](https://learn.bybit.com/altcoins/what-is-bancor-bnt/)
+* [BNT Insights Market Research (Deribit)](https://insights.deribit.com/market-research/bancor-the-world-token/)
 * [Comparing ROI: Bancor Staking vs. Other AMMs](https://twitter.com/korpi87/status/1409449804703440897?s=20)
 * [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
 * **Twitter threads:**
@@ -88,28 +89,29 @@ _**Governance:**_
     * [Auto-Compounding Rewards](https://twitter.com/Bancor/status/1474026588190744581?s=20)
     * [Dual-Sided Rewards](https://twitter.com/Bancor/status/1479500114255306761?s=20)
   * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
-  * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
   * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
   * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
+  * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
 
 _**Progress Reports**:_&#x20;
 
-* Weekly updates on[ blog.bancor.network](https://blog.bancor.network)
+* Bi-weekly community updates on[ blog.bancor.network](https://blog.bancor.network)
 
 ### Analytics
 
 * [Bancor Dune Analytics](https://duneanalytics.com/Bancor/bancor\_1)
 * [Bancor daily fees (Cryptofees.info)](https://cryptofees.info)
-* Twitter Alerts: vBNT Burn Rate & Pool Alerts ([BancorVortex](https://twitter.com/BancorVortex)) +  [BNTVortex](https://twitter.com/BntVortex) (network stats)
+* Twitter Alerts: vBNT Burning & Pool Alerts ([BancorVortex](https://twitter.com/BancorVortex)) +  [BNTVortex](https://twitter.com/BntVortex) (network stats)
 * [Bancor APIs](https://docs.bancor.network/rest-api/api-reference)
 * [Token Terminal](https://www.tokenterminal.com/terminal/projects/bancor)
 
 ### Papers:
 
-* [Bancor 3 Technical Primer](https://drive.google.com/drive/folders/1TUNF7gOFitTkl52-PGqS4m28edp-eyst) (December, 2021)
+* [Bancor 3 Proposal](https://gov.bancor.network/t/bip15-proposing-bancor-3/3445) (March, 2021)
+* [Bancor 3 Primer](https://drive.google.com/drive/folders/1TUNF7gOFitTkl52-PGqS4m28edp-eyst) (December, 2021)
 * [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) ([TopazeBlue](https://topaze.blue))
 * [Study: Impermanent Loss in Leveraged AMMs](https://arxiv.org/abs/2111.09192) (November, 2021)
-* [Bancor Whitepaper](https://storage.googleapis.com/website-bancor/2018/04/01ba8253-bancor\_protocol\_whitepaper\_en.pdf) (2018)
+* [Bancor V1 Whitepaper](https://storage.googleapis.com/website-bancor/2018/04/01ba8253-bancor\_protocol\_whitepaper\_en.pdf) (2018)
 
 ### Speaking
 
