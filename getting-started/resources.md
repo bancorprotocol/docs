@@ -76,7 +76,7 @@ _**Governance:**_
 ### Protocol Mechanics
 
 * [Introducing Bancor 3](https://blog.bancor.network/introducing-bancor-3-962a3c601c25)
-* [Proposing Bancor v2.1: Single-Side Liquidity With IL Protection](https://blog.bancor.network/proposing-bancor-v2-1-single-sided-amm-with-elastic-bnt-supply-bcac9fe655b)
+* [Bancor 3 Improvement Proposal Summary](https://blog.bancor.network/bancor-v3-phase-1-governance-proposal-summary-b5b31bbc687d)
 * [What is BNT?](https://learn.bybit.com/altcoins/what-is-bancor-bnt/)
 * [BNT Insights Market Research (Deribit)](https://insights.deribit.com/market-research/bancor-the-world-token/)
 * [Comparing ROI: Bancor Staking vs. Other AMMs](https://twitter.com/korpi87/status/1409449804703440897?s=20)
