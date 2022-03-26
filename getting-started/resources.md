@@ -14,17 +14,28 @@ description: Learn about Bancor, use the protocol, and engage with the community
 * [**BancorDAO Voting Portal**](https://vote.bancor.network)**:** Vote on Bancor Improvement Proposals
 * [**Bancor Dune Analytics**](https://duneanalytics.com/Bancor/bancor\_1)**:** Network statistics
 
-### Guides
+
 
 _Introducing Bancor 3 (December 2021):_
 
 {% embed url="https://www.youtube.com/watch?t=4s&v=qi1geks1n8A" %}
 
-### _**Videos:**_
+### _**Bancor 3:**_&#x20;
 
-_**Staking:**_
+* [Bancor 3 Phase I Summary](https://blog.bancor.network/bancor-v3-phase-1-governance-proposal-summary-b5b31bbc687d)
+* Bancor 3 Explainer Videos: [Part I](https://www.youtube.com/watch?v=vplyoEbM83I) & [Part 2](https://www.youtube.com/watch?v=ZGQU-4geDLU)
+* [Bancor 3 Governance Proposal (BIP 15)](https://gov.bancor.network/t/bip15-proposing-bancor-3/3445)
+* [Complete Guide to Bancor 3](https://blocmates.com/blogmates/a-complete-guide-to-bancor-3-dawn/) (Blocmates)
 
-* [How to Stake AXS on Bancor](https://www.youtube.com/watch?v=2Mz7wh3hm8Y) **(**Jeffrey Zirlin - Axie Infinity)
+### _**Guides**_
+
+* _****_[_**Staking guide (Bancor**_](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba) _**V2.1)**_
+* _****_[_**Trading guide**_](https://blog.bancor.network/how-to-buy-and-earn-snx-on-bancor-345c5625174f) _**(Bancor V2.1)**_
+
+### _**Other Videos:**_
+
+#### _**Staking:**_
+
 * [How to Stake Tokens & Earn on Bancor](https://www.youtube.com/watch?v=vpNuyjS9grM\&t=3s) (DeFi Alliance Demo)
 * [How to Earn Rewards With No Risk of Impermanent Loss!](https://youtu.be/Xal2xVUoW1U?t=203) (Breakout Solutions)
 * [Bancor Platform Overview](https://www.youtube.com/watch?v=sdd5TToLv9o) (Blocks of Finance)
@@ -33,7 +44,7 @@ _**Staking:**_
 _**Trading:**_
 
 * [Connecting Your Wallet](https://www.youtube.com/watch?v=-bqI7IsC6c0\&t=117s)
-* [Trading Tokens](https://www.youtube.com/watch?v=QlqDlZAHSLg\&t=4s)
+* [Trading Tokens](https://www.youtube.com/watch?v=QlqDlZAHSLg\&t=15s)
 * [Gas-Free Limit Orders](https://www.youtube.com/watch?v=KaU3ssaK4N8\&t=7s)
 * [Buy ETH with Fiat on Bancor](https://www.youtube.com/watch?v=x\_usnvlIu7g)
 
@@ -50,7 +61,7 @@ _**Protocol:**_
 * [Lazy Yield Hacking with Bancor](https://www.youtube.com/watch?v=8YpNh27HD0Y) (Amadeo Brands)
 * [vBNT Burning](https://www.youtube.com/watch?v=cWg-oTm5OM8\&t=3s) (Taiki Maeda)
 
-### Written:
+### Other Blog Posts:
 
 _**Staking:**_
 
@@ -88,10 +99,11 @@ _**Governance:**_
     * [Instant IL Protection](https://twitter.com/Bancor/status/1469013464010137602?s=20)
     * [Auto-Compounding Rewards](https://twitter.com/Bancor/status/1474026588190744581?s=20)
     * [Dual-Sided Rewards](https://twitter.com/Bancor/status/1479500114255306761?s=20)
-  * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
-  * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
-  * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
-  * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
+  * General explainer threads:
+    * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
+    * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
+    * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
+    * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
 
 _**Progress Reports**:_&#x20;
 
@@ -107,16 +119,16 @@ _**Progress Reports**:_&#x20;
 
 ### Papers:
 
-* [Bancor 3 Proposal](https://gov.bancor.network/t/bip15-proposing-bancor-3/3445) (March, 2021)
-* [Bancor 3 Primer](https://drive.google.com/drive/folders/1TUNF7gOFitTkl52-PGqS4m28edp-eyst) (December, 2021)
+* [Bancor V3 Proposal](https://gov.bancor.network/t/bip15-proposing-bancor-3/3445) (March, 2021)
 * [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) ([TopazeBlue](https://topaze.blue))
-* [Study: Impermanent Loss in Leveraged AMMs](https://arxiv.org/abs/2111.09192) (November, 2021)
+* [Study: Impermanent Loss in "Concentrated Liquidity" AMMs](https://arxiv.org/abs/2111.09192) (November, 2021)
 * [Bancor V1 Whitepaper](https://storage.googleapis.com/website-bancor/2018/04/01ba8253-bancor\_protocol\_whitepaper\_en.pdf) (2018)
 
-### Speaking
+### Speaking / Podcasts
 
 * [Cryptotesters](https://twitter.com/cryptotesters/status/1372606017477955592?s=20)
 * [Blockcrunch](https://podcasts.apple.com/us/podcast/alpha-leak-how-bancor-solves-impermanent-loss-nate/id1350649166?i=1000513405411)
 * [DeFiYield](https://www.youtube.com/watch?v=U\_I1vWvI9r4\&t=239s)
 * [Saffron Academy](https://www.youtube.com/watch?v=TjOeUd\_BRNQ)
 * [Crypto Valley Conference: What Are Liquidity Pools & What is IL?](https://www.youtube.com/watch?v=zI\_NFEH1xsQ)
+* [Community Call Recordings on Bancor's Youtube](https://www.youtube.com/c/BancorProtocol/videos)
