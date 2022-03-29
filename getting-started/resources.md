@@ -27,12 +27,12 @@ _Introducing Bancor 3 (December 2021):_
 * [Bancor 3 Governance Proposal (BIP 15)](https://gov.bancor.network/t/bip15-proposing-bancor-3/3445)
 * [Complete Guide to Bancor 3](https://blocmates.com/blogmates/a-complete-guide-to-bancor-3-dawn/) (Blocmates)
 
-### _**Guides**_
+### _**Guides (V2.1):**_
 
-* _****_[_**Staking guide (Bancor**_](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba) _**V2.1)**_
-* _****_[_**Trading guide**_](https://blog.bancor.network/how-to-buy-and-earn-snx-on-bancor-345c5625174f) _**(Bancor V2.1)**_
+* _****_[_**Staking guide**_](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
+* _****_[_**Trading guide**_](https://blog.bancor.network/how-to-buy-and-earn-snx-on-bancor-345c5625174f)
 
-### _**Other Videos:**_
+### _**Videos:**_
 
 #### _**Staking:**_
 
@@ -61,7 +61,7 @@ _**Protocol:**_
 * [Lazy Yield Hacking with Bancor](https://www.youtube.com/watch?v=8YpNh27HD0Y) (Amadeo Brands)
 * [vBNT Burning](https://www.youtube.com/watch?v=cWg-oTm5OM8\&t=3s) (Taiki Maeda)
 
-### Other Blog Posts:
+### Blog Posts:
 
 _**Staking:**_
 
