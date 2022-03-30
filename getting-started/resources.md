@@ -32,6 +32,55 @@ _Introducing Bancor 3 (December 2021):_
 * _****_[_**Staking guide**_](https://blog.bancor.network/guide-single-sided-amm-staking-on-bancor-v2-1-93e6839959ba)
 * _****_[_**Trading guide**_](https://blog.bancor.network/how-to-buy-and-earn-snx-on-bancor-345c5625174f)
 
+### Blog Posts:
+
+_**Staking:**_
+
+* [How to Stake on Bancor](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1) (Bancor blog)
+* [In-depth Guide to Staking on Bancor](https://medium.com/harvest-finance/how-to-stake-farm-on-bancor-in-a-single-sided-manner-in-depth-tutorial-ff573e0756de) (Harvest Finance)
+* [How Bancor V2.1 Staking Works](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e) (Bancor blog)
+* [How to Farm on Bancor ](https://chainbulletin.com/how-to-farm-bnt-on-bancor-the-simple-guide/)(Chain Bulletin)
+* [How to Earn & Compound BNT Rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002) (Bancor blog)
+* [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9) (Bancor blog)
+
+_**Trading:**_
+
+* [Buy & Earn ETH on Bancor](https://medium.com/@definavigator/how-to-buy-and-earn-eth-on-bancor-e156c67f32ab)
+* [Perform Gas-Free Limit Orders on Bancor](https://blog.bancor.network/guide-to-bancor-limit-orders-3021219ed2f1)
+
+_**Governance:**_
+
+* [How to Whitelist a Token in Bancor v2.1](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)
+* [Template for Token Whitelist Proposals](https://docs.google.com/document/d/1PE39vDz6uefxvibEtESGTdU2pUnqfmT0wpiqZscbf3w/edit)
+* [How to Submit Proposals in the BancorDAO](https://blog.bancor.network/a-guide-to-bancordao-due-process-d958ceade75)
+* [How to Delegate Voting Power in the BancorDAO](https://blog.bancor.network/how-to-delegate-voting-power-in-the-bancordao-b82df46be416)
+
+### Protocol Mechanics
+
+* [Introducing Bancor 3](https://blog.bancor.network/introducing-bancor-3-962a3c601c25)
+* [Bancor History (The TIE)](https://research.thetie.io/bancor-history/)
+* [Bancor 3 Improvement Proposal Summary](https://blog.bancor.network/bancor-v3-phase-1-governance-proposal-summary-b5b31bbc687d)
+* [What is BNT?](https://learn.bybit.com/altcoins/what-is-bancor-bnt/)
+* [BNT Insights Market Research (Deribit)](https://insights.deribit.com/market-research/bancor-the-world-token/)
+* [Comparing ROI: Bancor Staking vs. Other AMMs](https://twitter.com/korpi87/status/1409449804703440897?s=20)
+* [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
+* **Twitter threads:**
+  * Bancor 3&#x20;
+    * [Bancor 3 Intro](https://twitter.com/Bancor/status/1465445447292571657?s=20)
+    * [Omnipool](https://twitter.com/Bancor/status/1471230669644869632?s=20)
+    * [Instant IL Protection](https://twitter.com/Bancor/status/1469013464010137602?s=20)
+    * [Auto-Compounding Rewards](https://twitter.com/Bancor/status/1474026588190744581?s=20)
+    * [Dual-Sided Rewards](https://twitter.com/Bancor/status/1479500114255306761?s=20)
+  * General explainer threads:
+    * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
+    * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
+    * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
+    * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
+
+_**Progress Reports**:_&#x20;
+
+* Bi-weekly community updates on[ blog.bancor.network](https://blog.bancor.network)
+
 ### _**Videos:**_
 
 #### _**Staking:**_
@@ -60,54 +109,6 @@ _**Protocol:**_
 * [Bancor Vortex ](https://www.youtube.com/watch?v=SbUqcbNqQ-Y)(MBR)
 * [Lazy Yield Hacking with Bancor](https://www.youtube.com/watch?v=8YpNh27HD0Y) (Amadeo Brands)
 * [vBNT Burning](https://www.youtube.com/watch?v=cWg-oTm5OM8\&t=3s) (Taiki Maeda)
-
-### Blog Posts:
-
-_**Staking:**_
-
-* [How to Stake on Bancor](https://blog.bancor.network/how-to-stake-liquidity-earn-fees-on-bancor-bff8369274a1) (Bancor blog)
-* [In-depth Guide to Staking on Bancor](https://medium.com/harvest-finance/how-to-stake-farm-on-bancor-in-a-single-sided-manner-in-depth-tutorial-ff573e0756de) (Harvest Finance)
-* [How Bancor V2.1 Staking Works](https://blog.bancor.network/bancor-v2-1-staking-for-defi-dummies-f104a6a8281e) (Bancor blog)
-* [How to Farm on Bancor ](https://chainbulletin.com/how-to-farm-bnt-on-bancor-the-simple-guide/)(Chain Bulletin)
-* [How to Earn & Compound BNT Rewards](https://blog.bancor.network/how-to-stake-bnt-liquidity-mining-rewards-compound-yield-2ad40b45c002) (Bancor blog)
-* [Using Bancor Vortex](https://blog.bancor.network/using-bancor-vortex-46974a1c14f9) (Bancor blog)
-
-_**Trading:**_
-
-* [Buy & Earn ETH on Bancor](https://medium.com/@definavigator/how-to-buy-and-earn-eth-on-bancor-e156c67f32ab)
-* [Perform Gas-Free Limit Orders on Bancor](https://blog.bancor.network/guide-to-bancor-limit-orders-3021219ed2f1)
-
-_**Governance:**_
-
-* [How to Whitelist a Token in Bancor v2.1](https://bancor.medium.com/how-to-whitelist-a-token-on-bancor-v2-1-c867b82675d4)
-* [Template for Token Whitelist Proposals](https://docs.google.com/document/d/1PE39vDz6uefxvibEtESGTdU2pUnqfmT0wpiqZscbf3w/edit)
-* [How to Submit Proposals in the BancorDAO](https://blog.bancor.network/a-guide-to-bancordao-due-process-d958ceade75)
-* [How to Delegate Voting Power in the BancorDAO](https://blog.bancor.network/how-to-delegate-voting-power-in-the-bancordao-b82df46be416)
-
-### Protocol Mechanics
-
-* [Introducing Bancor 3](https://blog.bancor.network/introducing-bancor-3-962a3c601c25)
-* [Bancor 3 Improvement Proposal Summary](https://blog.bancor.network/bancor-v3-phase-1-governance-proposal-summary-b5b31bbc687d)
-* [What is BNT?](https://learn.bybit.com/altcoins/what-is-bancor-bnt/)
-* [BNT Insights Market Research (Deribit)](https://insights.deribit.com/market-research/bancor-the-world-token/)
-* [Comparing ROI: Bancor Staking vs. Other AMMs](https://twitter.com/korpi87/status/1409449804703440897?s=20)
-* [vBNT Burning](https://blog.bancor.network/vbnt-burning-is-live-cd814c2b07fa)
-* **Twitter threads:**
-  * Bancor 3&#x20;
-    * [Bancor 3 Intro](https://twitter.com/Bancor/status/1465445447292571657?s=20)
-    * [Omnipool](https://twitter.com/Bancor/status/1471230669644869632?s=20)
-    * [Instant IL Protection](https://twitter.com/Bancor/status/1469013464010137602?s=20)
-    * [Auto-Compounding Rewards](https://twitter.com/Bancor/status/1474026588190744581?s=20)
-    * [Dual-Sided Rewards](https://twitter.com/Bancor/status/1479500114255306761?s=20)
-  * General explainer threads:
-    * [Wangarian](https://twitter.com/Wangarian1/status/1367087459255738370)
-    * [CryptoDragonite](https://twitter.com/CryptoDragonite/status/1359299751921938436?s=20)
-    * [Fiskantes](https://twitter.com/Fiskantes/status/1368660305153318912?s=20)
-    * [Korpi](https://twitter.com/korpi87/status/1366483481367351300?s=20)
-
-_**Progress Reports**:_&#x20;
-
-* Bi-weekly community updates on[ blog.bancor.network](https://blog.bancor.network)
 
 ### Analytics
 
