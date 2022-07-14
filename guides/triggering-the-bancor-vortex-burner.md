@@ -8,7 +8,7 @@ _**TLDR;**_
 
 * A portion of swap fees from across the network is accumulated in a dedicated wallet. For simplicity, we will call this wallet the "Network Fee Wallet".&#x20;
 * The Network Fee Wallet ([view on Etherscan](https://etherscan.io/address/0xeBcC959479634EEC5A4d7162e36f8B8cc763f491)) grants permission to withdraw its tokens to a second contract, the `VortexBurner`.
-* The `VortexBurner` contract ([view on Etherscan](https://etherscan.io/address/0x2f87b1fca1769bc3361700078e1985b2dc0f1142)) is triggered externally via its burn function, which withdraws the specified tokens from the Network Fee Wallet. &#x20;
+* The `VortexBurner` contract ([view on Etherscan](https://etherscan.io/address/0x8843f65f11b2367bb05a6e120c44780088976748#code)) is triggered externally via its burn function, which withdraws the specified tokens from the Network Fee Wallet. &#x20;
 * When activated, the contract performs two actions:
   * 10% (100,000 ppm) of the available fees or 100 BNT (whichever is lower), is distributed to the address that initiates the relevant transaction, as a reward for their service.
   * The remaining funds are swapped via the network’s liquidity pools for vBNT, and the vBNT is burned.&#x20;
@@ -18,7 +18,7 @@ _**TLDR;**_
 
 The BancorDAO has previously approved [BIP9](https://gov.bancor.network/t/bip9-proposing-the-bancor-vortex/354), and its [addendum](https://gov.bancor.network/t/bip9-addendum-the-bancor-vortex-vbnt-burner-proposal-to-switch-to-a-flat-burn-rate/1015), which introduce a value capture mechanism of the protocol, and which is put to use in management of the BNT token supply. The `VortexBurner` contract is the realization of this policy. The following notes detail the discrete contract functions and their purpose.&#x20;
 
-View the `VortexBurner` contract on [Etherscan](https://etherscan.io/address/0x2f87b1fca1769bc3361700078e1985b2dc0f1142).
+View the `VortexBurner` contract on [Etherscan](https://etherscan.io/address/0x8843f65f11b2367bb05a6e120c44780088976748#code).
 
 ## **`burnReward` | Determine the Value of Initiating a Burn**
 

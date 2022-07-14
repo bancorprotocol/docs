@@ -1,3 +1,7 @@
+---
+description: 'In a sentence: Innovating simple and safe solutions to earn money in crypto.'
+---
+
 # Brand Guide
 
 ### Messaging
