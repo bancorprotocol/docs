@@ -98,9 +98,7 @@ _**Trading:**_
 _**Protocol:**_
 
 * [Bancor: the Crypto Passive Income Powerhouse](https://www.youtube.com/watch?v=4clRscC9BR0\&t=2s) (DeFi Donut)
-* [Say Adios to Impermanent Loss with Bancor](https://www.youtube.com/watch?v=dJYjx9\_OK6A) (The Defiant)
 * [Bancor Protocol ELI5](https://www.youtube.com/watch?v=MQa8\_4s9wMo) (MBR)
-* [How Bancor's Impermanent Loss Protection Works](https://www.youtube.com/watch?v=6YA61LeJqE8) (Economics Design)
 * [Bancor Protocol overview ](https://twitter.com/Bancor/status/1359455683939356674?s=20)(DeFiFrog**)**
 * ****[Single-sided liquidity](https://twitter.com/DeFiFrog/status/1368623215673626625?s=20) (DeFiFrog)
 * [BNT Liquidity Mining](https://www.youtube.com/watch?v=X22Dr2zYW2M) (DeFiFrog)
@@ -129,5 +127,5 @@ _**Protocol:**_
 * [Blockcrunch](https://podcasts.apple.com/us/podcast/alpha-leak-how-bancor-solves-impermanent-loss-nate/id1350649166?i=1000513405411)
 * [DeFiYield](https://www.youtube.com/watch?v=U\_I1vWvI9r4\&t=239s)
 * [Saffron Academy](https://www.youtube.com/watch?v=TjOeUd\_BRNQ)
-* [Crypto Valley Conference: What Are Liquidity Pools & What is IL?](https://www.youtube.com/watch?v=zI\_NFEH1xsQ)
+* [Crypto Valley Conference: What Are Liquidity Pools](https://www.youtube.com/watch?v=zI\_NFEH1xsQ)
 * [Community Call Recordings on Bancor's Youtube](https://www.youtube.com/c/BancorProtocol/videos)
