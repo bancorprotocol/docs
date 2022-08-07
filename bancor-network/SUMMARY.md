@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Bancor Versions](README.md)
-* [Introduction](README.md)
+* [Introduction](<README (1).md>)
 * [Bancor Basics](../faqs.md)
 
 ## Getting Started

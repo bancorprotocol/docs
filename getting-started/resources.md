@@ -4,14 +4,14 @@ description: Learn about Bancor, use the protocol, and engage with the community
 
 # Resources
 
-* ****[**Bancor App**](https://www.bancor.network): A simple, full-featured interface where you can swap tokens, provide liquidity, manage liquidity positions and view market data.
+* ****[**Bancor App**](https://www.bancor.network/): A simple, full-featured interface where you can swap tokens, provide liquidity, manage liquidity positions and view market data.
 * ****[**Bancor Telegram Group**](https://t.me/bancor): Chat with the Bancor community about the project
 * [**Bancor Liquidity Providers Telegram**](https://t.me/bancortraders): Chat with LPs about staking in Bancor pools
 * ****[**Bancor Developers Telegram**](https://t.me/BancorDevelopers): Chat with the Bancor developer community about integrations or ask technical questions
 * ****[**Bancor Discord**](https://discord.com/invite/pe7EfaR)**:** Official Bancor chat on Discord
-* ****[**Bancor Blog**](https://blog.bancor.network): Protocol updates & new feature announcements
-* ****[**BancorDAO Governance**](http://gov.bancor.network)**:** Submit Improvement Proposals and discussion forum for upgrades
-* [**BancorDAO Voting Portal**](https://vote.bancor.network)**:** Vote on Bancor Improvement Proposals
+* ****[**Bancor Blog**](https://blog.bancor.network/): Protocol updates & new feature announcements
+* ****[**BancorDAO Governance**](http://gov.bancor.network/)**:** Submit Improvement Proposals and discussion forum for upgrades
+* [**BancorDAO Voting Portal**](https://vote.bancor.network/)**:** Vote on Bancor Improvement Proposals
 * [**Bancor Dune Analytics**](https://duneanalytics.com/Bancor/bancor\_1)**:** Network statistics
 
 
@@ -25,7 +25,7 @@ _Introducing Bancor 3 (December 2021):_
 * [Bancor 3 Phase I Summary](https://blog.bancor.network/bancor-v3-phase-1-governance-proposal-summary-b5b31bbc687d)
 * Bancor 3 Explainer Videos: [Part I](https://www.youtube.com/watch?v=vplyoEbM83I) & [Part 2](https://www.youtube.com/watch?v=ZGQU-4geDLU)
 * [Bancor 3 Governance Proposal (BIP 15)](https://gov.bancor.network/t/bip15-proposing-bancor-3/3445)
-* [Complete Guide to Bancor 3](https://blocmates.com/blogmates/a-complete-guide-to-bancor-3-dawn/) (Blocmates)
+* [Complete Guide to Bancor 3](https://blocmates.com/blogmates/a-complete-guide-to-bancor-3-dawn/?utm\_source=newsletter\&utm\_medium=email\&utm\_campaign=bancor\_3\_updates\&utm\_term=2022-03-25) (Blocmates)
 
 ### _**Guides (V2.1):**_
 
@@ -68,7 +68,6 @@ _**Governance:**_
   * Bancor 3&#x20;
     * [Bancor 3 Intro](https://twitter.com/Bancor/status/1465445447292571657?s=20)
     * [Omnipool](https://twitter.com/Bancor/status/1471230669644869632?s=20)
-    * [Instant IL Protection](https://twitter.com/Bancor/status/1469013464010137602?s=20)
     * [Auto-Compounding Rewards](https://twitter.com/Bancor/status/1474026588190744581?s=20)
     * [Dual-Sided Rewards](https://twitter.com/Bancor/status/1479500114255306761?s=20)
   * General explainer threads:
@@ -79,14 +78,13 @@ _**Governance:**_
 
 _**Progress Reports**:_&#x20;
 
-* Bi-weekly community updates on[ blog.bancor.network](https://blog.bancor.network)
+* Bi-weekly community updates on[ blog.bancor.network](https://blog.bancor.network/)
 
 ### _**Videos:**_
 
 #### _**Staking:**_
 
 * [How to Stake Tokens & Earn on Bancor](https://www.youtube.com/watch?v=vpNuyjS9grM\&t=3s) (DeFi Alliance Demo)
-* [How to Earn Rewards With No Risk of Impermanent Loss!](https://youtu.be/Xal2xVUoW1U?t=203) (Breakout Solutions)
 * [Bancor Platform Overview](https://www.youtube.com/watch?v=sdd5TToLv9o) (Blocks of Finance)
 * [Staking on Bancor](https://youtu.be/3P4vKIHcdas) (CryptoOneShop)
 
@@ -113,7 +111,7 @@ _**Protocol:**_
 ### Analytics
 
 * [Bancor Dune Analytics](https://duneanalytics.com/Bancor/bancor\_1)
-* [Bancor daily fees (Cryptofees.info)](https://cryptofees.info)
+* [Bancor daily fees (Cryptofees.info)](https://cryptofees.info/)
 * Twitter Alerts: vBNT Burning & Pool Alerts ([BancorVortex](https://twitter.com/BancorVortex)) +  [BNTVortex](https://twitter.com/BntVortex) (network stats)
 * [Bancor APIs](https://docs.bancor.network/rest-api/api-reference)
 * [Token Terminal](https://www.tokenterminal.com/terminal/projects/bancor)
@@ -121,7 +119,7 @@ _**Protocol:**_
 ### Papers:
 
 * [Bancor V3 Proposal](https://gov.bancor.network/t/bip15-proposing-bancor-3/3445) (March, 2021)
-* [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) ([TopazeBlue](https://topaze.blue))
+* [Bancor v2.1 Economic Analysis](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) ([TopazeBlue](https://topaze.blue/))
 * [Study: Impermanent Loss in "Concentrated Liquidity" AMMs](https://arxiv.org/abs/2111.09192) (November, 2021)
 * [Bancor V1 Whitepaper](https://storage.googleapis.com/website-bancor/2018/04/01ba8253-bancor\_protocol\_whitepaper\_en.pdf) (2018)
 

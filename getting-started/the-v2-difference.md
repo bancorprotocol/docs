@@ -11,13 +11,12 @@ When Bancor introduced the first Automated Market Maker (AMM) on Ethereum in 201
 But the success of legacy AMMs has exposed key downsides of the initial model, affecting both traders and liquidity providers (LPs):‌
 
 * `Involuntary Token Exposure`
-* `Impermanent Loss`
 
-With the interests of both traders and LPs in mind, Bancor v2.1 offers solutions to these problems.‌
+With the interests of both traders and LPs in mind, Bancor v2.1 offers solutions to this problem.‌
 
-Contrary to other AMMs, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the v2.1 protocol is able to provide liquidity in its pools to support single-sided token deposits and to cover the cost of impermanent loss incurred by depositors using swap fees earned from protocol-provisioned liquidity.
+Contrary to other AMMs, Bancor uses its protocol token, BNT, as the counterpart asset in every pool. Using an elastic BNT supply, the v2.1 protocol is able to provide liquidity in its pools to support single-sided token deposits.
 
-[_**Bancor v2.1 Economic Analysis**_](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) _**(**_[_**TopazeBlue**_](https://topaze.blue)_**)**_
+[_**Bancor v2.1 Economic Analysis**_](https://drive.google.com/file/d/1en044m2wchn85aQBcoVx2elmxEYd5kEA/view) _**(**_[_**TopazeBlue**_](https://topaze.blue/)_**)**_
 
 ### Single-Sided Exposure <a href="#single-token-staking" id="single-token-staking"></a>
 
@@ -27,35 +26,9 @@ Bancor v2.1 breaks this paradigm, allowing LPs to contribute and maintain 100% e
 
 LPs can provide liquidity to Bancor either entirely in their preferred asset or entirely in BNT.
 
-### Impermanent Loss Insurance <a href="#mitigating-impermanent-loss" id="mitigating-impermanent-loss"></a>
-
-Impermanent or divergence loss is a well-known side-effect of AMMs that are subject to arbitrage opportunities. When two assets are paired in a constant-product AMM (for example, with a 50:50 ratio), the product of the cardinal values of each asset reserve in the AMM is kept constant. So reserve(TKN) \* reserve(BNT) = Constant. This means that price variations lead to liquidating the asset that rises in value into the asset that drops in value.&#x20;
-
-Swap fees earned by liquidity providers may offset impermanent loss; however in many cases impermanent loss can exceed swap fees earned, leading to negative returns realized by a liquidity provider upon withdrawing their tokens from the pool.
-
-On Bancor, we designed a system that fully protects liquidity providers against the risk of impermanent loss.
-
-Bancor uses its dynamic supply of BNT to jointly fund pools alongside user deposits. When a user deposits $100,000 in a supported token ("TKN"), the protocol matches the user's deposit by providing $100,000 worth of BNT to the pool. In return, both the user and the protocol receive fee-accruing LP tokens (pool tokens).
-
-When a user withdraws their liquidity, the user's pool tokens and protocol's pool tokens are both burned. If the user has suffered any impermanent loss, fees earned by the protocol's pool tokens are used to compensate for the user's loss, and the remaining pool tokens are burned for BNT.
-
-The amount of BNT offered by the protocol to support trading in a given token is governed by the Bancor DAO. The DAO aims to offer protocol liquidity in amounts that are profitable for the network, i.e., where trading fee income exceeds the cost of impermanent loss compensation.
-
 ## Limitations <a href="#limitations" id="limitations"></a>
 
 In order to allow for the special properties of Bancor v2.1, there are a few limitations.‌
-
-**100-Day Impermanent Loss Protection Vesting**
-
-Impermanent Loss Insurance accrues over time, by 1% each day, until 100% protection is achieved after 100 days in the pool. There is a 30-day cliff, which means that if a liquidity provider decides to withdraw their position before 30 days passes, they incur the same IL loss experienced in a normal, unprotected AMM. If an LP holds their liquidity in the pool for 100 days or more, they receive 100% compensation for any loss incurred in the first 100 days, or anytime thereafter.&#x20;
-
-In Bancor 3,  it is proposed that [100% Impermanent Loss Protection be offered instantly from day one](https://gov.bancor.network/t/bip15-proposing-bancor-3/3445), with a 7-day cool down, adjustable by the DAO.
-
-**Withdrawn stakes may be received partially in BNT, subject to a 24-hour lockup**
-
-If there are not sufficient tokens in the pool to fully pay out the impermanent loss compensation in the staked token, part of the insurance may be paid out in an equivalent value of BNT.
-
-When BNT is being withdrawn from the system (included BNT paid out as part of IL compensation), it is locked for a pre-set time (default 24 hr) as a means of preventing protocol abuse.
 
 **No Rebase Tokens**
 
